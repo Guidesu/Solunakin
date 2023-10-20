@@ -7,6 +7,99 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 /datum/unit_test/create_and_destroy/Run()
 	//We'll spawn everything here
 	var/turf/spawn_at = run_loc_floor_bottom_left
+	var/list/ignore = list(
+		//Never meant to be created, errors out the ass for mobcode reasons
+		/mob/living/carbon,
+		//Nother template type, doesn't like being created with no seed
+		/obj/item/food/grown,
+		//And another
+		/obj/item/slimecross/recurring,
+		//This should be obvious
+		/obj/machinery/doomsday_device,
+		//Yet more templates
+		/obj/machinery/restaurant_portal,
+		//Template type
+		/obj/effect/mob_spawn,
+		//Template type
+		/obj/structure/holosign/robot_seat,
+		//Singleton
+		/mob/dview,
+		//Requires a circuit url
+		/obj/effect/mapping_helpers/circuit_spawner,
+	)
+	//Say it with me now, type template
+	ignore += typesof(/obj/effect/mapping_helpers/atom_injector)
+	//This turf existing is an error in and of itself
+	ignore += typesof(/turf/baseturf_skipover)
+	ignore += typesof(/turf/baseturf_bottom)
+	//This demands a borg, so we'll let if off easy
+	ignore += typesof(/obj/item/modular_computer/tablet/integrated)
+	//This one demands a computer, ditto
+	ignore += typesof(/obj/item/modular_computer/processor)
+	//Very finiky, blacklisting to make things easier
+	ignore += typesof(/obj/item/poster/wanted)
+	//We can't pass a mind into this
+	ignore += typesof(/obj/item/phylactery)
+	//This expects a seed, we can't pass it
+	ignore += typesof(/obj/item/food/grown)
+	//Nothing to hallucinate if there's nothing to hallicinate
+	ignore += typesof(/obj/effect/hallucination)
+	//These want fried food to take on the shape of, we can't pass that in
+	ignore += typesof(/obj/item/food/deepfryholder)
+	//Can't pass in a thing to glow
+	ignore += typesof(/obj/effect/abstract/eye_lighting)
+	//We don't have a pod
+	ignore += typesof(/obj/effect/pod_landingzone_effect)
+	ignore += typesof(/obj/effect/pod_landingzone)
+	//It's a trapdoor to nowhere
+	ignore += typesof(/obj/effect/mapping_helpers/trapdoor_placer)
+	//There's no shapeshift to hold
+	ignore += typesof(/obj/shapeshift_holder)
+	//No tauma to pass in
+	ignore += typesof(/mob/camera/imaginary_friend)
+	//No pod to gondola
+	ignore += typesof(/mob/living/simple_animal/pet/gondola/gondolapod)
+	//No heart to give
+	ignore += typesof(/obj/structure/ethereal_crystal)
+	//No linked console
+	ignore += typesof(/mob/camera/ai_eye/remote/base_construction)
+	//See above
+	ignore += typesof(/mob/camera/ai_eye/remote/shuttle_docker)
+	//Hangs a ref post invoke async, which we don't support. Could put a qdeleted check but it feels hacky
+	ignore += typesof(/obj/effect/anomaly/grav/high)
+	//See above
+	ignore += typesof(/obj/effect/timestop)
+	//Invoke async in init, skippppp
+	ignore += typesof(/mob/living/silicon/robot/model)
+	//This lad also sleeps
+	ignore += typesof(/obj/item/hilbertshotel)
+	//this boi spawns turf changing stuff, and it stacks and causes pain. Let's just not
+	ignore += typesof(/obj/effect/sliding_puzzle)
+	//Stacks baseturfs, can't be tested here
+	ignore += typesof(/obj/effect/temp_visual/lava_warning)
+	//Stacks baseturfs, can't be tested here
+	ignore += typesof(/obj/effect/landmark/ctf)
+	//Our system doesn't support it without warning spam from unregister calls on things that never registered
+	ignore += typesof(/obj/docking_port)
+	//Asks for a shuttle that may not exist, let's leave it alone
+	ignore += typesof(/obj/item/pinpointer/shuttle)
+	//This spawns beams as a part of init, which can sleep past an async proc. This hangs a ref, and fucks us. It's only a problem here because the beam sleeps with CHECK_TICK
+	ignore += typesof(/obj/structure/alien/resin/flower_bud)
+	//Needs a linked mecha
+	ignore += typesof(/obj/effect/skyfall_landingzone)
+	//Expects a mob to holderize, we have nothing to give
+	ignore += typesof(/obj/item/clothing/head/mob_holder)
+
+	//SKYRAT EDIT ADDITION - OUR IGNORES DOWN HERE
+	//Not designed to be spawned without a turf.
+	ignore += typesof(/obj/effect/abstract/liquid_turf)
+	//Not designed to be spawned individually.
+	ignore += typesof(/obj/structure/biohazard_blob)
+	//Unused - not supposed to be spawned without SSliquids
+	ignore += typesof(/turf/open/openspace/ocean)
+	//Fireplumes delete themselves, not supposed to be deleted. Causes runtimes.
+	ignore += typesof(/obj/effect/abstract/fireplume)
+	//SKYRAT EDIT END
 
 	var/list/cached_contents = spawn_at.contents.Copy()
 	var/original_turf_type = spawn_at.type

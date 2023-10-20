@@ -1,3 +1,4 @@
+/* SKYRAT EDIT REMOVAL - MOVED TO MODULAR
 /**
  * Causes weather to occur on a z level in certain area types
  *
@@ -226,6 +227,7 @@
  *
  */
 /datum/weather/proc/update_areas()
+
 	var/list/new_overlay_cache = generate_overlay_cache()
 	for(var/area/impacted as anything in impacted_areas)
 		if(length(overlay_cache))
@@ -268,3 +270,25 @@
 		gen_overlay_cache += weather_overlay
 
 	return gen_overlay_cache
+
+	for(var/V in impacted_areas)
+		var/area/N = V
+		N.layer = overlay_layer
+		N.plane = overlay_plane
+		N.icon = 'modular_skyrat/modules/overmap/icons/weather_effects.dmi'
+		N.color = weather_color
+		switch(stage)
+			if(STARTUP_STAGE)
+				N.icon_state = telegraph_overlay
+			if(MAIN_STAGE)
+				N.icon_state = weather_overlay
+			if(WIND_DOWN_STAGE)
+				N.icon_state = end_overlay
+			if(END_STAGE)
+				N.color = null
+				N.icon_state = ""
+				N.icon = 'icons/turf/areas.dmi'
+				N.layer = initial(N.layer)
+				N.plane = initial(N.plane)
+				N.set_opacity(FALSE)
+*/

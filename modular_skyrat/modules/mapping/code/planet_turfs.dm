@@ -1,7 +1,7 @@
 // Put tiles here if you want planet ones!
 
-/turf/open/misc/dirt/planet
-	baseturfs = /turf/open/misc/dirt/planet
+/turf/open/floor/planetary/dirt/planet
+	baseturfs = /turf/open/floor/planetary/dirt/planet
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	planetary_atmos = TRUE
 	footstep = FOOTSTEP_SAND
@@ -27,7 +27,7 @@
 /turf/open/misc/sandy_dirt/planet
 	planetary_atmos = TRUE
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
-	baseturfs = /turf/open/misc/dirt/planet
+	baseturfs = /turf/open/floor/planetary/dirt/planet
 
 /*
 *	SNOW

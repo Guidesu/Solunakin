@@ -1,7 +1,15 @@
+
 //This file is used to contain unique properties of every map, and how we wish to alter them on a per-map basis.
 //Use JSON files that match the datum layout and you should be set from there.
 //Right now, we default to MetaStation to ensure something does indeed load by default.
 //  -san7890 (with regards to Cyberboss)
+
+/* SKYRAT EDIT REMOVAL - MOVED TO MODULAR OVERMAPS
+//used for holding information about unique properties of maps
+//feed it json files that match the datum layout
+//defaults to box
+//  -Cyberboss
+>>>> upstream/overmaps-and-traders
 
 /datum/map_config
 	// Metadata
@@ -233,3 +241,4 @@
 
 /datum/map_config/proc/MakeNextMap()
 	return config_filename == PATH_TO_NEXT_MAP_JSON || fcopy(config_filename, PATH_TO_NEXT_MAP_JSON)
+*/

@@ -8,6 +8,7 @@ SUBSYSTEM_DEF(parallax)
 	priority = FIRE_PRIORITY_PARALLAX
 	runlevels = RUNLEVEL_LOBBY | RUNLEVELS_DEFAULT
 	var/list/currentrun
+
 	var/planet_x_offset = 128
 	var/planet_y_offset = 128
 	/// A random parallax layer that we sent to every player
@@ -18,15 +19,28 @@ SUBSYSTEM_DEF(parallax)
 		/atom/movable/screen/parallax_layer/random/asteroids = 35,
 		PARALLAX_NONE = 30,
 	)
+	//var/planet_x_offset = 128 SKYRAT EDTI REMOVAL
+	//var/planet_y_offset = 128 SKYRAT EDTI REMOVAL
+	var/random_layer
+	var/random_parallax_color
+
 
 //These are cached per client so needs to be done asap so people joining at roundstart do not miss these.
 /datum/controller/subsystem/parallax/PreInit()
 	. = ..()
 
+
 	set_random_parallax_layer(pick_weight(random_parallax_weights))
 
 	planet_y_offset = rand(100, 160)
 	planet_x_offset = rand(100, 160)
+
+	if(prob(70)) //70% chance to pick a special extra layer
+		random_layer = pick(/atom/movable/screen/parallax_layer/random/space_gas, /atom/movable/screen/parallax_layer/random/asteroids)
+		random_parallax_color = pick(COLOR_TEAL, COLOR_GREEN, COLOR_SILVER, COLOR_YELLOW, COLOR_CYAN, COLOR_ORANGE, COLOR_PURPLE)//Special color for random_layer1. Has to be done here so everyone sees the same color.
+	//planet_y_offset = rand(100, 160) SKYRAT EDTI REMOVAL
+	//planet_x_offset = rand(100, 160) SKYRAT EDTI REMOVAL
+
 
 /datum/controller/subsystem/parallax/fire(resumed = FALSE)
 	if (!resumed)

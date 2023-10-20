@@ -39,7 +39,13 @@
 	///are we registered in SSshuttles?
 	var/registered = FALSE
 
-///register to SSshuttles
+	//SKYRAT EDIT ADDITION
+	var/datum/overmap_object/shuttle/my_overmap_object
+	var/possible_destinations
+	var/obj/docking_port/stationary/freeform_port
+	//SKYRAT EDIT END
+
+	///register to SSshuttles
 /obj/docking_port/proc/register()
 	if(registered)
 		WARNING("docking_port registered multiple times")
@@ -329,6 +335,7 @@
 	var/area/shuttle/transit/assigned_area
 	/// The mobile port that owns this transit port
 	var/obj/docking_port/mobile/owner
+	var/datum/transit_instance/transit_instance //SKYRAT EDIT ADDITION
 
 /obj/docking_port/stationary/transit/Initialize(mapload)
 	. = ..()
@@ -338,6 +345,10 @@
 	if(force)
 		if(get_docked())
 			log_world("A transit dock was destroyed while something was docked to it.")
+		//SKYRAT EDIT ADDITION
+		if(transit_instance)
+			QDEL_NULL(transit_instance)
+		//SKYRAT EDIT END
 		SSshuttle.transit_docking_ports -= src
 		if(owner)
 			if(owner.assigned_transit == src)
@@ -489,80 +500,6 @@
 	///if this shuttle can move docking ports other than the one it is docked at
 	var/can_move_docking_ports = FALSE
 	var/list/hidden_turfs = list()
-	///List of shuttle events that can run or are running
-	var/list/datum/shuttle_event/event_list = list()
-
-	var/admin_forced = FALSE //SKYRAT EDIT ADDITION
-
-#define WORLDMAXX_CUTOFF (world.maxx + 1)
-#define WORLDMAXY_CUTOFF (world.maxx + 1)
-/**
- * Calculated and populates the information used for docking and some internal vars.
- * This can also be used to calculate from shuttle_areas so that you can expand/shrink shuttles!
- *
- * Arguments:
- * * loading_from - The template that the shuttle was loaded from, if not given we iterate shuttle_areas to calculate information instead
- */
-/obj/docking_port/mobile/proc/calculate_docking_port_information(datum/map_template/shuttle/loading_from)
-	var/port_x_offset = loading_from?.port_x_offset
-	var/port_y_offset = loading_from?.port_y_offset
-	var/width = loading_from?.width
-	var/height = loading_from?.height
-	if(!loading_from)
-		if(!length(shuttle_areas))
-			CRASH("Attempted to calculate a docking port's information without a template before it was assigned any areas!")
-		// no template given, use shuttle_areas to calculate width and height
-		var/min_x = -1
-		var/min_y = -1
-		var/max_x = WORLDMAXX_CUTOFF
-		var/max_y = WORLDMAXY_CUTOFF
-		for(var/area/area as anything in shuttle_areas)
-			for(var/turf/turf in area)
-				min_x = max(turf.x, min_x)
-				max_x = min(turf.x, max_x)
-				min_y = max(turf.y, min_y)
-				max_y = min(turf.y, max_y)
-			CHECK_TICK
-
-		if(min_x == -1 || max_x == WORLDMAXX_CUTOFF)
-			CRASH("Failed to locate shuttle boundaries when iterating through shuttle areas, somehow.")
-		if(min_y == -1 || max_y == WORLDMAXY_CUTOFF)
-			CRASH("Failed to locate shuttle boundaries when iterating through shuttle areas, somehow.")
-
-		width = (max_x - min_x) + 1
-		height = (max_y - min_y) + 1
-		port_x_offset = min_x - x
-		port_y_offset = min_y - y
-
-	if(dir in list(EAST, WEST))
-		src.width = height
-		src.height = width
-	else
-		src.width = width
-		src.height = height
-
-	switch(dir)
-		if(NORTH)
-			dwidth = port_x_offset - 1
-			dheight = port_y_offset - 1
-		if(EAST)
-			dwidth = height - port_y_offset
-			dheight = port_x_offset - 1
-		if(SOUTH)
-			dwidth = width - port_x_offset
-			dheight = height - port_y_offset
-		if(WEST)
-			dwidth = port_y_offset - 1
-			dheight = width - port_x_offset
-#undef WORLDMAXX_CUTOFF
-#undef WORLDMAXY_CUTOFF
-
-/**
- * Actions to be taken after shuttle is loaded but before it has been moved out of transit z-level to its final location
- *
- * Arguments:
- * * replace - TRUE if this shuttle is replacing an existing one. FALSE by default.
- */
 /obj/docking_port/mobile/register(replace = FALSE)
 	. = ..()
 	if(!shuttle_id)
@@ -579,11 +516,12 @@
 			shuttle_id = "[shuttle_id]_[counter]"
 			name = "[name] [counter]"
 			//Re link machinery to new shuttle id
-			linkup()
+			//linkup() SKYRAT EDIT REMOVAL
 		else
 			SSshuttle.assoc_mobile[shuttle_id] = 1
 
 	SSshuttle.mobile_docking_ports += src
+
 
 /**
  * Actions to be taken after shuttle is loaded and has been moved to its final location
@@ -593,6 +531,10 @@
  */
 /obj/docking_port/mobile/proc/postregister(replace = FALSE)
 	return
+
+	//Link machinery to new shuttle
+	linkup()
+
 
 /obj/docking_port/mobile/unregister()
 	. = ..()
@@ -608,6 +550,28 @@
 	shuttle_areas = null
 	remove_ripples()
 	return ..()
+
+	if(force)
+		unregister()
+		//SKYRAT EDIT ADDITION
+		for(var/i in all_extensions)
+			var/datum/shuttle_extension/extension = i
+			extension.RemoveFromShuttle()
+		engine_extensions = null
+		all_extensions = null
+		//SKYRAT EDIT END
+		destination = null
+		previous = null
+		QDEL_NULL(assigned_transit) //don't need it where we're goin'!
+		shuttle_areas = null
+		remove_ripples()
+		//SKYRAT EDIT ADDITION
+		if(freeform_port)
+			qdel(freeform_port, TRUE)
+			freeform_port = null
+		//SKYRAT EDIT END
+	. = ..()
+
 
 /obj/docking_port/mobile/Initialize(mapload)
 	. = ..()
@@ -654,7 +618,12 @@
 	if(stationary_dock.override_can_dock_checks)
 		return SHUTTLE_CAN_DOCK
 
+
 	if(dwidth > stationary_dock.dwidth)
+
+	/* SKYRAT EDIT REMOVAl - TEMPORARY
+	if(dwidth > S.dwidth)
+
 		return SHUTTLE_DWIDTH_TOO_LARGE
 
 	if(width-dwidth > stationary_dock.width-stationary_dock.dwidth)
@@ -665,7 +634,7 @@
 
 	if(height-dheight > stationary_dock.height-stationary_dock.dheight)
 		return SHUTTLE_HEIGHT_TOO_LARGE
-
+	*/
 	//check the dock isn't occupied
 	var/currently_docked = stationary_dock.get_docked()
 	if(currently_docked)
@@ -751,7 +720,35 @@
 		mode = SHUTTLE_IDLE
 		return
 	previous = null
-	if(!destination)
+	//SKYRAT EDIT ADDITION
+	if(freeform_port)
+		qdel(freeform_port, TRUE)
+		freeform_port = null
+	if(destination == "overmap")
+		destination = null
+		timer = INFINITY
+		var/datum/space_level/S = SSmapping.get_level(z)
+		var/datum/overmap_object/current_overmap_object = S.related_overmap_object
+		var/spawn_x_coord
+		var/spawn_y_coord
+		var/datum/overmap_sun_system/system_to_spawn_in
+		if(!current_overmap_object)
+			WARNING("NO CURRENT OVERMAP OBJECT WHEN ATTEMPT TO GO TO OVERMAP.")
+			//Fallback to not ruin gameplay
+			spawn_x_coord = 1
+			spawn_y_coord = 1
+			system_to_spawn_in = SSovermap.main_system
+		else
+			spawn_x_coord = current_overmap_object.x
+			spawn_y_coord = current_overmap_object.y
+			system_to_spawn_in = current_overmap_object.current_system
+
+		var/datum/overmap_object/shuttle/spawned_shuttle = new overmap_shuttle_type(system_to_spawn_in, spawn_x_coord, spawn_y_coord) //SKYRAT EDIT CHANGE
+		spawned_shuttle.RegisterToShuttle(src)
+		if(my_overmap_object.shuttle_controller)
+			my_overmap_object.shuttle_controller.busy = FALSE
+	else if(!destination)
+	//SKYRAT EDIT END
 		// sent to transit with no destination -> unlimited timer
 		timer = INFINITY
 	var/obj/docking_port/stationary/S0 = get_docked()

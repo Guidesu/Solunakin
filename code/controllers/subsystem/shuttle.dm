@@ -143,7 +143,20 @@ SUBSYSTEM_DEF(shuttle)
 	/// Did the supermatter start a cascade event?
 	var/supermatter_cascade = FALSE
 
+
 /datum/controller/subsystem/shuttle/Initialize()
+
+	//SKYRAT EDIT ADDITION
+	/// List of all transit instances
+	var/list/transit_instances = list()
+	/// List of all sold shuttles for consoles to buy them
+	var/list/sold_shuttles = list()
+	/// Assoc list of "[dock_id]-[shuttle_types]" to a list of possible sold shuttles for those
+	var/list/sold_shuttles_cache = list()
+	//SKYRAT EDIT END
+
+/datum/controller/subsystem/shuttle/Initialize(timeofday)
+
 	order_number = rand(1, 9000)
 
 	var/list/pack_processing = subtypesof(/datum/supply_pack)
@@ -190,7 +203,13 @@ SUBSYSTEM_DEF(shuttle)
 		log_mapping("No /obj/docking_port/mobile/emergency/backup placed on the map!")
 	if(!supply)
 		log_mapping("No /obj/docking_port/mobile/supply placed on the map!")
+
 	return SS_INIT_SUCCESS
+
+
+	init_sold_shuttles()//SKYRAT EDIT ADDITON
+	return ..()
+
 
 /datum/controller/subsystem/shuttle/proc/setup_shuttles(list/stationary)
 	for(var/obj/docking_port/stationary/port as anything in stationary)
@@ -672,7 +691,11 @@ SUBSYSTEM_DEF(shuttle)
 	// Proposals use 2 extra hidden tiles of space, from the cordons that surround them
 	transit_utilized += (proposal.width + 2) * (proposal.height + 2)
 	M.assigned_transit = new_transit_dock
+
 	RegisterSignal(proposal, COMSIG_QDELETING, PROC_REF(transit_space_clearing))
+
+
+	new /datum/transit_instance(proposal, new_transit_dock) //SKYRAT EDIT ADDITION
 
 	return new_transit_dock
 
@@ -1125,6 +1148,7 @@ SUBSYSTEM_DEF(shuttle)
 			has_purchase_shuttle_access |= shuttle_template.who_can_purchase
 
 	return has_purchase_shuttle_access
+
 
 #undef MAX_TRANSIT_REQUEST_RETRIES
 #undef MAX_TRANSIT_TILE_COUNT

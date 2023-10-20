@@ -36,9 +36,26 @@
 	var/hand_mine_speed = 15 SECONDS
 
 
+	/// Whether the rock will turn to the rock_color of its level //SKYRAT EDIT ADDITION
+	var/turn_to_level_color = TRUE //SKYRAT EDIT ADDITION
+
 /turf/closed/mineral/Initialize(mapload)
+
 	var/static/list/smoothing_groups = SMOOTH_GROUP_CLOSED_TURFS + SMOOTH_GROUP_MINERAL_WALLS
 	var/static/list/canSmoothWith = SMOOTH_GROUP_MINERAL_WALLS
+
+	. = ..()
+	var/matrix/M = new
+	M.Translate(-4, -4)
+	transform = M
+	icon = smooth_icon
+	//SKYRAT EDIT ADDITION
+	if(!color && turn_to_level_color)
+		var/datum/space_level/level = SSmapping.z_list[z]
+		color = level.rock_color
+	//SKYRAT EDIT END
+
+
 
 	// The cost of the list() being in the type def is very large for something as common as minerals
 	src.smoothing_groups = smoothing_groups
@@ -357,6 +374,8 @@
 	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
 	weak_turf = TRUE
 
+	turn_to_level_color = FALSE //SKYRAT EDIT ADDITION
+
 /turf/closed/mineral/random/snow/Change_Ore(ore_type, random = 0)
 	. = ..()
 	if(mineralType)
@@ -644,10 +663,13 @@
 	icon = MAP_SWITCH('icons/turf/walls/red_wall.dmi', 'icons/turf/mining.dmi')
 	base_icon_state = "red_wall"
 
+	turn_to_level_color = FALSE //SKYRAT EDIT ADDITION
+
 /turf/closed/mineral/random/stationside/asteroid
 	name = "iron rock"
 	icon = MAP_SWITCH('icons/turf/walls/red_wall.dmi', 'icons/turf/mining.dmi')
 	base_icon_state = "red_wall"
+	turn_to_level_color = FALSE //SKYRAT EDIT ADDITION
 
 /turf/closed/mineral/random/stationside/asteroid/porus
 	name = "porous iron rock"
@@ -689,7 +711,11 @@
 /turf/closed/mineral/gibtonite/proc/explosive_reaction(mob/user = null)
 	if(stage == GIBTONITE_UNSTRUCK)
 		activated_overlay = mutable_appearance('icons/turf/smoothrocks.dmi', "rock_Gibtonite_inactive", ON_EDGED_TURF_LAYER) //shows in gaps between pulses if there are any
+
 		SET_PLANE(activated_overlay, WALL_PLANE_UPPER, src)
+
+		activated_overlay.appearance_flags = RESET_COLOR //SKYRAT EDIT ADDITION
+
 		add_overlay(activated_overlay)
 		name = "gibtonite deposit"
 		desc = "An active gibtonite reserve. Run!"

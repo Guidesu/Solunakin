@@ -120,6 +120,23 @@ GLOBAL_LIST_INIT(admin_verbs_fun, list(
 // Client procs
 	/client/proc/admin_away,
 	/client/proc/add_marked_mob_ability,
+	/client/proc/one_click_antag, // SKYRAT EDIT ADDITION - ONE CLICK ANTAG
+	/client/proc/spawn_mob_spawner, // SKYRAT EDIT ADDITION
+	/client/proc/fire_bsa, // SKYRAT EDIT ADDITION
+	/client/proc/request_more_opfor, //SKYRAT EDIT ADDITION
+	/client/proc/cmd_select_equipment,
+	/client/proc/cmd_admin_gib_self,
+	/client/proc/drop_bomb,
+	/client/proc/set_dynex_scale,
+	/client/proc/drop_dynex_bomb,
+	/client/proc/cinematic,
+	/client/proc/summon_ert,
+	/client/proc/cmd_admin_add_freeform_ai_law,
+	/client/proc/object_say,
+	/client/proc/toggle_random_events,
+	/client/proc/set_ooc,
+	/client/proc/reset_ooc,
+	/client/proc/forceEvent,
 	/client/proc/admin_change_sec_level,
 	/client/proc/cinematic,
 	/client/proc/cmd_admin_add_freeform_ai_law,

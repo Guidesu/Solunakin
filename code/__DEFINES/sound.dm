@@ -152,6 +152,8 @@
 #define ANNOUNCER_OUTBREAK6 "announcer_outbreak6"
 #define ANNOUNCER_DEPARTMENTAL "announcer_departmental"
 #define ANNOUNCER_SHUTTLE "announcer_shuttle"
+#define ANNOUNCER_BLUESPACEARTY_2 "announcer_bluespacearty_2"
+#define ANNOUNCER_CME "announcer_cme"
 //SKYRAT EDIT END
 
 
@@ -198,6 +200,8 @@ GLOBAL_LIST_INIT(announcer_keys, list(
 	ANNOUNCER_ICARUS,
 	ANNOUNCER_NRI_RAIDERS,
 	ANNOUNCER_OUTBREAK6,
+	ANNOUNCER_BLUESPACEARTY_2,
+	ANNOUNCER_CME,
 	//SKYRAT EDIT END
 ))
 

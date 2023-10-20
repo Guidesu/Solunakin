@@ -1101,7 +1101,11 @@
 /area/centcom/holding/cafe)
 "aqP" = (
 /obj/structure/spacevine,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "aqQ" = (
 /obj/structure/flora/bush/reed,
@@ -1199,7 +1203,11 @@
 /area/centcom/holding/cafepark)
 "asp" = (
 /obj/machinery/hydroponics/constructable,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafe)
 "asv" = (
 /obj/machinery/door/poddoor/ert,
@@ -1367,7 +1375,11 @@
 /obj/structure/healingfountain{
 	time_between_uses = 600
 	},
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "auH" = (
 /obj/machinery/light/directional/south,
@@ -1399,8 +1411,13 @@
 /area/centcom/holding/cafepark)
 "auU" = (
 /obj/machinery/hydroponics/constructable,
+<<<<<<< HEAD
 /obj/machinery/light/directional/south,
 /turf/open/misc/dirt/planet,
+=======
+/obj/machinery/light,
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafe)
 "avb" = (
 /obj/structure/flora/grass/green{
@@ -1450,7 +1467,11 @@
 /area/centcom/holding/cafe)
 "awk" = (
 /obj/structure/fans/tiny/invisible,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "awm" = (
 /obj/machinery/light/directional/east,
@@ -1707,7 +1728,11 @@
 /obj/structure/flora/bush/fullgrass{
 	icon_state = "fullgrass_3"
 	},
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "ayt" = (
 /obj/structure/table/wood/fancy/blue,
@@ -1742,7 +1767,11 @@
 /turf/open/indestructible/cobble/side,
 /area/centcom/holding/cafepark)
 "ayI" = (
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "ayQ" = (
 /obj/effect/turf_decal/tile/neutral{
@@ -1800,15 +1829,24 @@
 /turf/open/indestructible/hotelwood,
 /area/centcom/holding/cafe)
 "azs" = (
+<<<<<<< HEAD
 /obj/structure/flora/bush/fullgrass,
 /turf/open/misc/dirt/planet,
+=======
+/obj/structure/flora/ausbushes/fullgrass,
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "azB" = (
 /turf/open/floor/plating,
 /area/centcom/holding/cafevox)
 "azC" = (
 /obj/structure/barricade/wooden,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "azR" = (
 /obj/structure/fluff/tram_rail{
@@ -2104,8 +2142,15 @@
 /area/centcom/holding/cafedorms)
 "aBW" = (
 /obj/machinery/hydroponics/constructable,
+<<<<<<< HEAD
 /obj/machinery/light/directional/north,
 /turf/open/misc/dirt/planet,
+=======
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafe)
 "aCa" = (
 /obj/structure/flora/tree/jungle/small{
@@ -2128,7 +2173,11 @@
 /obj/structure/flora/bush/fullgrass{
 	icon_state = "fullgrass_2"
 	},
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "aCo" = (
 /obj/machinery/light/directional/east,
@@ -2627,7 +2676,11 @@
 "aHX" = (
 /obj/machinery/door/airlock/vault,
 /obj/structure/fans/tiny/invisible,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "aHY" = (
 /obj/effect/turf_decal/bot,
@@ -3120,7 +3173,11 @@
 /area/centcom/holding/cafedorms)
 "aNU" = (
 /obj/structure/closet/crate/wooden/toy,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "aNY" = (
 /turf/open/floor/iron/showroomfloor,
@@ -3599,7 +3656,11 @@
 /area/centcom/holding/cafe)
 "aRP" = (
 /obj/structure/flora/tree/jungle/small,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "aRS" = (
 /turf/open/misc/beach/coast/corner{
@@ -3821,7 +3882,11 @@
 	opacity = 1
 	},
 /obj/structure/alien/weeds,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "aTS" = (
 /obj/machinery/light/directional/east,
@@ -4043,7 +4108,11 @@
 	name = "thick vines";
 	opacity = 1
 	},
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "aWp" = (
 /obj/machinery/light/directional/east,
@@ -4573,6 +4642,7 @@
 /obj/effect/mapping_helpers/airlock/access/any/cent_com/rep_or_captain,
 /turf/open/floor/iron,
 /area/centcom/interlink)
+<<<<<<< HEAD
 "bEI" = (
 /obj/machinery/light/directional/north,
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -4584,6 +4654,13 @@
 /turf/open/misc/beach/coast{
 	dir = 10
 	},
+=======
+"bGx" = (
+/obj/item/clothing/suit/xenos,
+/obj/item/clothing/head/xenos,
+/obj/structure/alien/weeds,
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "bFy" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner{
@@ -4810,7 +4887,11 @@
 "cfs" = (
 /obj/structure/alien/weeds,
 /obj/effect/decal/remains/xeno/larva,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "cfu" = (
 /turf/open/floor/grass,
@@ -4859,7 +4940,11 @@
 "ckY" = (
 /obj/structure/alien/weeds,
 /obj/structure/alien/weeds/node,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "cmV" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -5007,7 +5092,11 @@
 "cBT" = (
 /obj/structure/spacevine,
 /obj/structure/alien/weeds,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "cCZ" = (
 /obj/effect/turf_decal/siding/wood,
@@ -5702,9 +5791,60 @@
 "esx" = (
 /obj/effect/decal/cleanable/xenoblood,
 /obj/structure/alien/weeds,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
 /area/centcom/holding/cafepark)
 "esD" = (
+=======
+/turf/open/floor/planetary/dirt,
+/area/centcom/holding/cafepark)
+"exH" = (
+/obj/effect/turf_decal/stripes/asteroid/line{
+	dir = 8
+	},
+/obj/structure/flora/ausbushes/pointybush,
+/turf/open/floor/plating/asteroid,
+/area/space)
+"eLV" = (
+/obj/effect/turf_decal/trimline/darkblue/line{
+	dir = 9
+	},
+/obj/structure/window/reinforced/spawner/east,
+/turf/open/floor/iron/white,
+/area/centcom/interlink)
+"eOB" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/sign/painting/library{
+	pixel_y = 32
+	},
+/turf/open/floor/plating,
+/area/centcom/interlink)
+"eXz" = (
+/obj/structure/transit_tube/curved/flipped{
+	dir = 8
+	},
+/obj/effect/turf_decal/sand/plating,
+/turf/open/floor/plating,
+/area/centcom/interlink)
+"eYZ" = (
+/obj/structure/table/wood,
+/obj/item/coin/antagtoken,
+/obj/item/toy/figure/captain{
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/item/toy/balloon/arrest{
+	pixel_x = -9
+	},
+/turf/open/floor/carpet/executive,
+/area/centcom/interlink)
+"eZb" = (
+/obj/structure/alien/weeds,
+/obj/effect/decal/remains/human,
+/turf/open/floor/planetary/dirt,
+/area/centcom/holding/cafepark)
+"feq" = (
+>>>>>>> upstream/overmaps-and-traders
 /obj/structure/table,
 /turf/open/floor/iron/cafeteria,
 /area/centcom/interlink)
@@ -7668,7 +7808,11 @@
 "jFn" = (
 /obj/structure/alien/weeds,
 /obj/structure/alien/egg/burst,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "jGh" = (
 /obj/machinery/light/very_dim/directional/west,
@@ -10556,7 +10700,11 @@
 /area/centcom/interlink)
 "qJm" = (
 /obj/structure/alien/weeds,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "qJA" = (
 /obj/machinery/light/small/directional/north,
@@ -11018,7 +11166,11 @@
 /area/centcom/holding/cafe)
 "rUA" = (
 /obj/machinery/vending/ashclothingvendor,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "rUT" = (
 /obj/structure/chair/sofa/corp/left,
@@ -12050,12 +12202,16 @@
 /obj/effect/decal/remains/xeno,
 /obj/structure/alien/weeds,
 /obj/structure/alien/weeds/node,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
 /area/centcom/holding/cafepark)
 "uCw" = (
 /obj/effect/turf_decal/sand,
 /obj/effect/turf_decal/stripes/asteroid/line,
 /turf/open/misc/beach/sand,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "uCW" = (
 /obj/machinery/light/directional/west,
@@ -12138,7 +12294,11 @@
 "uIh" = (
 /obj/structure/alien/weeds,
 /obj/structure/bed/nest,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "uIp" = (
 /obj/machinery/deepfryer,
@@ -13152,7 +13312,11 @@
 /obj/structure/alien/weeds,
 /obj/structure/alien/weeds/node,
 /obj/structure/alien/egg/burst,
+<<<<<<< HEAD
 /turf/open/misc/dirt/planet,
+=======
+/turf/open/floor/planetary/dirt,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/holding/cafepark)
 "xDE" = (
 /turf/open/floor/iron/dark/textured_large,
@@ -13428,11 +13592,25 @@
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/iron/white,
 /area/centcom/holding/cafe)
+<<<<<<< HEAD
 "ycL" = (
 /obj/structure/table/optable,
 /obj/item/surgery_tray/full,
 /obj/effect/turf_decal/bot_blue,
 /turf/open/floor/iron/white,
+=======
+"ycT" = (
+/obj/machinery/vending/wardrobe/sec_wardrobe,
+/obj/structure/spacevine{
+	name = "thick vines";
+	opacity = 1
+	},
+/turf/open/floor/planetary/dirt,
+/area/centcom/holding/cafepark)
+"yjR" = (
+/obj/structure/mineral_door/wood,
+/turf/open/indestructible/hotelwood,
+>>>>>>> upstream/overmaps-and-traders
 /area/centcom/interlink)
 "ydt" = (
 /obj/effect/landmark/latejoin,

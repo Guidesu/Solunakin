@@ -1,4 +1,14 @@
+
 /// Used for all kinds of weather, ex. lavaland ash storms.
+
+
+#define STARTUP_STAGE 1
+#define MAIN_STAGE 2
+#define WIND_DOWN_STAGE 3
+#define END_STAGE 4
+/* SKYRAT EDIT REMOVAL
+//Used for all kinds of weather, ex. lavaland ash storms.
+
 SUBSYSTEM_DEF(weather)
 	name = "Weather"
 	flags = SS_BACKGROUND
@@ -85,3 +95,5 @@ SUBSYSTEM_DEF(weather)
 ///Returns an active storm by its type
 /datum/controller/subsystem/weather/proc/get_weather_by_type(type)
 	return locate(type) in processing
+
+*/

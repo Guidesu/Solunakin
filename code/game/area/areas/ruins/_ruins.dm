@@ -5,7 +5,12 @@
 	icon = 'icons/area/areas_ruins.dmi'
 	icon_state = "ruins"
 	has_gravity = STANDARD_GRAVITY
+
 	area_flags = HIDDEN_AREA | BLOBS_ALLOWED | UNIQUE_AREA
+
+	area_flags = HIDDEN_AREA | BLOBS_ALLOWED | NO_ALERTS //SKYRAT EDIT CHANGE
+	static_lighting = TRUE
+
 	ambience_index = AMBIENCE_RUINS
 	flags_1 = CAN_BE_DIRTY_1
 	sound_environment = SOUND_ENVIRONMENT_STONEROOM

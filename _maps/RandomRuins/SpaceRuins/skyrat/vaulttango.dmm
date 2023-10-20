@@ -45,16 +45,6 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/vaulttango)
-"bF" = (
-/obj/effect/turf_decal/trimline/yellow/filled/line{
-	dir = 6
-	},
-/obj/structure/closet/crate,
-/obj/effect/spawner/random/entertainment/money,
-/obj/effect/spawner/random/entertainment/money,
-/obj/effect/spawner/random/entertainment/money,
-/turf/open/floor/iron/dark,
-/area/ruin/space/has_grav/vaulttango)
 "bZ" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	dir = 1
@@ -505,6 +495,14 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/vaulttango)
+"pd" = (
+/obj/effect/turf_decal/trimline/yellow/filled/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/delivery,
+/obj/vehicle/sealed/mecha/working/ripley/mk2,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/vaulttango)
 "pe" = (
@@ -1168,6 +1166,7 @@
 /obj/machinery/door/firedoor/heavy,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/vaulttango)
+<<<<<<< HEAD
 "OJ" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 4
@@ -1176,6 +1175,8 @@
 /obj/vehicle/sealed/mecha/ripley/mk2,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/vaulttango)
+=======
+>>>>>>> upstream/overmaps-and-traders
 "OL" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	dir = 6
@@ -1209,6 +1210,16 @@
 /obj/machinery/firealarm/directional/north,
 /obj/effect/decal/cleanable/cobweb,
 /obj/item/ammo_box/magazine/m9mm,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/vaulttango)
+"Qe" = (
+/obj/effect/turf_decal/trimline/yellow/filled/line{
+	dir = 6
+	},
+/obj/structure/closet/crate,
+/obj/effect/spawner/random/entertainment/money,
+/obj/effect/spawner/random/entertainment/money,
+/obj/effect/spawner/random/entertainment/money,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/vaulttango)
 "Qg" = (
@@ -3004,12 +3015,12 @@ xI
 ai
 HM
 vj
-OJ
+pd
 RC
 TW
 TW
 Jm
-bF
+Qe
 ai
 xI
 ai

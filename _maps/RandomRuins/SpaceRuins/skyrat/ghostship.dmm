@@ -116,6 +116,22 @@
 /obj/structure/grille,
 /turf/template_noop,
 /area/ruin/unpowered)
+"jh" = (
+/obj/structure/window/reinforced/shuttle/spaceship{
+	color = "#8ab1ec"
+	},
+/turf/open/floor/plating,
+/area/ruin/unpowered)
+"js" = (
+/obj/structure/closet,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/fakelattice,
+/obj/machinery/light/dim/directional/west,
+/turf/open/floor/plating,
+/area/ruin/unpowered)
 "jx" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -232,6 +248,7 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
+<<<<<<< HEAD
 "mx" = (
 /obj/structure/table,
 /obj/item/stock_parts/cell/hyper{
@@ -246,6 +263,8 @@
 /obj/item/disk/design_disk/bepis,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
+=======
+>>>>>>> upstream/overmaps-and-traders
 "mW" = (
 /obj/effect/decal/cleanable/greenglow,
 /obj/effect/decal/cleanable/dirt,
@@ -418,6 +437,20 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
+"ym" = (
+/obj/structure/table,
+/obj/item/stock_parts/cell/hyper{
+	pixel_x = -3;
+	pixel_y = -2
+	},
+/obj/item/stock_parts/cell/hyper{
+	pixel_y = 7
+	},
+/obj/item/stack/cable_coil,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/disk/tech_disk/spaceloot,
+/turf/open/floor/plating,
+/area/ruin/unpowered)
 "yG" = (
 /obj/machinery/door_buttons/access_button{
 	pixel_x = 9;
@@ -497,6 +530,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
+<<<<<<< HEAD
 "Ga" = (
 /obj/machinery/portable_atmospherics/canister/plasma{
 	desc = "Plasma gas. Highly fuel efficient. Highly volatile. Highly toxic.";
@@ -509,6 +543,8 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
+=======
+>>>>>>> upstream/overmaps-and-traders
 "Gq" = (
 /turf/closed/wall/mineral/titanium/spaceship{
 	color = "#8ab1ec"
@@ -573,6 +609,11 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
+"KV" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/random/structure/crate_loot,
+/turf/open/floor/plating,
+/area/ruin/unpowered)
 "KZ" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -589,6 +630,18 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/layer2{
 	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/unpowered)
+"LA" = (
+/obj/machinery/portable_atmospherics/canister/plasma{
+	desc = "Plasma gas. Highly fuel efficient. Highly volatile. Highly toxic.";
+	name = "Fuel canister"
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 4;
+	piping_layer = 1
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
@@ -621,6 +674,16 @@
 /obj/machinery/light/small/red/directional/south,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
+"MH" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/closet,
+/obj/effect/decal/fakelattice,
+/obj/effect/spawner/random/maintenance/three,
+/turf/open/floor/plating,
+/area/ruin/unpowered)
 "MQ" = (
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/dirt,
@@ -636,6 +699,7 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
+<<<<<<< HEAD
 "Oj" = (
 /obj/structure/window/reinforced/shuttle/spaceship{
 	color = "#8ab1ec"
@@ -647,6 +711,8 @@
 /obj/effect/spawner/random/structure/crate_loot,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
+=======
+>>>>>>> upstream/overmaps-and-traders
 "Qc" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -689,6 +755,7 @@
 	},
 /turf/template_noop,
 /area/ruin/unpowered)
+<<<<<<< HEAD
 "SR" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -697,6 +764,18 @@
 /obj/structure/closet,
 /obj/effect/decal/fakelattice/passthru,
 /obj/effect/spawner/random/maintenance/three,
+=======
+"SS" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/portable_atmospherics/canister/plasma{
+	desc = "Plasma gas. Highly fuel efficient. Highly volatile. Highly toxic.";
+	name = "Fuel canister"
+	},
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 4;
+	piping_layer = 1
+	},
+>>>>>>> upstream/overmaps-and-traders
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "Ta" = (
@@ -745,6 +824,7 @@
 	color = "#7a9ee0"
 	},
 /area/ruin/unpowered)
+<<<<<<< HEAD
 "Vv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/portable_atmospherics/canister/plasma{
@@ -757,6 +837,8 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
+=======
+>>>>>>> upstream/overmaps-and-traders
 "WH" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -780,6 +862,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
+<<<<<<< HEAD
 "YN" = (
 /obj/structure/closet,
 /obj/effect/turf_decal/stripes/line{
@@ -790,6 +873,8 @@
 /obj/machinery/light/dim/directional/west,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
+=======
+>>>>>>> upstream/overmaps-and-traders
 "YT" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -859,8 +944,8 @@ TW
 TW
 Gq
 tz
-Oj
-Oj
+jh
+jh
 tz
 Gq
 TW
@@ -928,7 +1013,7 @@ ct
 xs
 He
 He
-YN
+js
 tz
 Kt
 xP
@@ -950,7 +1035,7 @@ Kj
 MY
 Lk
 Ta
-SR
+MH
 tz
 fo
 ja
@@ -1186,14 +1271,14 @@ Gq
 tz
 ja
 fo
-Ga
+LA
 tz
 LV
 hn
 He
 hp
 tz
-Vv
+SS
 fo
 ja
 tz
@@ -1258,7 +1343,7 @@ wH
 xF
 Lk
 He
-mx
+ym
 Xr
 fo
 ja
@@ -1297,7 +1382,7 @@ RQ
 TW
 tz
 Xr
-Pr
+KV
 He
 ER
 wN

@@ -11,7 +11,9 @@
 #define TECH_RESTRICTED_QUIRKS "Chunky Fingers" = TRUE
 #define GUARD_RESTRICTED_QUIRKS "Blind" = TRUE, "Deaf" = TRUE, "Foreigner" = TRUE, "Pacifist" = TRUE, "Nerve Stapled" = TRUE
 
-#define RESTRICTED_QUIRKS_EXCEPTIONS list("Mute" = "Signer")
 
+#define RESTRICTED_QUIRKS_EXCEPTIONS list("Mute" = "Signer")
 #define HEAD_RESTRICTED_AUGMENTS /obj/item/bodypart/arm/left/self_destruct, /obj/item/bodypart/arm/right/self_destruct, /obj/item/bodypart/leg/left/self_destruct, /obj/item/bodypart/leg/right/self_destruct
 #define SEC_RESTRICTED_AUGMENTS /obj/item/bodypart/arm/left/self_destruct, /obj/item/bodypart/arm/right/self_destruct, /obj/item/bodypart/leg/left/self_destruct, /obj/item/bodypart/leg/right/self_destruct
+#define FACTION_TRADERSHIP "Tradership"
+#define FLAVOR_TEXT_CHAR_REQUIREMENT 150
