@@ -109,11 +109,6 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	var/area/underlying_area
 	//SKYRAT EDIT END
 
-	//SKYRAT EDIT ADDITION
-	/// Reference to an underlying area in a turf. Used by shuttles to restore original areas back
-	var/area/underlying_area
-	//SKYRAT EDIT END
-
 /turf/vv_edit_var(var_name, new_value)
 	var/static/list/banned_edits = list(NAMEOF_STATIC(src, x), NAMEOF_STATIC(src, y), NAMEOF_STATIC(src, z))
 	if(var_name in banned_edits)

@@ -1,4 +1,3 @@
-/* SKYRAT EDIT REMOVAL - MOVED TO MODULAR
 #define DEFAULT_METEOR_LIFETIME 1800
 #define MAP_EDGE_PAD 5
 
@@ -387,4 +386,3 @@ GLOBAL_LIST_INIT(meteorsSPOOKY, list(/obj/effect/meteor/pumpkin))
 //////////////////////////
 #undef DEFAULT_METEOR_LIFETIME
 #undef MAP_EDGE_PAD
-*/

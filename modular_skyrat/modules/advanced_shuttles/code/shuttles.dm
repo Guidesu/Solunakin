@@ -105,8 +105,6 @@
 
 	uses_overmap = FALSE
 
-	uses_overmap = FALSE
-
 /obj/machinery/computer/shuttle/arrivals/recall
 	name = "arrivals shuttle recall terminal"
 	desc = "Use this if your friends left you behind."

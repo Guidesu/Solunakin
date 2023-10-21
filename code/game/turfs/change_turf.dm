@@ -123,8 +123,6 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 
 	W.underlying_area = old_underlying_area //SKYRAT EDIT ADDITION
 
-	W.underlying_area = old_underlying_area //SKYRAT EDIT ADDITION
-
 	if(new_baseturfs)
 		new_turf.baseturfs = baseturfs_string_list(new_baseturfs, new_turf)
 	else
