@@ -24,6 +24,8 @@
 	barometer_predictable = FALSE
 	perpetual = TRUE
 
+	multiply_blend_on_main_stage = TRUE//SKYRAT EDIT CHANGE
+
 
 	/// List of areas that were once impacted areas but are not anymore. Used for updating the weather overlay based whether the ascended heretic is in the area.
 	var/list/former_impacted_areas = list()

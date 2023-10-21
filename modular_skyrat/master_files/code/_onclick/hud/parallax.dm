@@ -1,4 +1,5 @@
 
+/* SKYRAT EDIT REMOVAL - MOVED TO MODULAR
 /datum/hud/proc/create_parallax(mob/viewmob)
 	var/mob/screenmob = viewmob || mymob
 	var/client/C = screenmob.client
@@ -316,3 +317,24 @@
 
 /atom/movable/screen/parallax_layer/random/asteroids
 	icon_state = "asteroids"
+<<<<<<<< HEAD:modular_skyrat/master_files/code/_onclick/hud/parallax.dm
+========
+
+/atom/movable/screen/parallax_layer/planet
+	icon_state = "planet"
+	blend_mode = BLEND_OVERLAY
+	absolute = TRUE //Status of seperation
+	speed = 3
+	layer = 30
+
+/atom/movable/screen/parallax_layer/planet/update_status(mob/M)
+	var/client/C = M.client
+	var/turf/posobj = get_turf(C.eye)
+	if(!posobj)
+		return
+	invisibility = is_station_level(posobj.z) ? 0 : INVISIBILITY_ABSTRACT
+
+/atom/movable/screen/parallax_layer/planet/update_o()
+	return //Shit won't move
+*/
+>>>>>>>> origin/overmaps-and-traders:code/_onclick/hud/parallax.dm
