@@ -68,7 +68,6 @@
 /obj/effect/turf_decal/siding/thinplating/dark,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/powered/skyrat/smugglies)
-<<<<<<< HEAD
 "w" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/marker_beacon/burgundy,
@@ -80,8 +79,6 @@
 /obj/effect/spawner/random/entertainment/money,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/powered/skyrat/smugglies)
-=======
->>>>>>> upstream/overmaps-and-traders
 "z" = (
 /turf/closed/mineral/random,
 /area/ruin/unpowered/no_grav)

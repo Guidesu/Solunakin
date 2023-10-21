@@ -3,7 +3,6 @@
 /obj/item/stack/sheet/iron,
 /turf/template_noop,
 /area/ruin)
-<<<<<<< HEAD
 "aR" = (
 /obj/machinery/light/broken/directional/north,
 /turf/open/floor/iron/airless,
@@ -113,22 +112,10 @@
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/waypoint)
 "gy" = (
-=======
-"az" = (
-/obj/structure/table,
-/turf/open/floor/iron/airless,
-/area/ruin/space/has_grav/waypoint)
-"aH" = (
-/obj/effect/decal/cleanable/blood/gibs/down,
-/turf/open/floor/iron/dark,
-/area/ruin/space/has_grav/waypoint)
-"aU" = (
->>>>>>> upstream/overmaps-and-traders
 /obj/effect/decal/cleanable/blood,
 /obj/effect/mob_spawn/corpse/human/clown,
 /turf/open/floor/iron/airless,
 /area/ruin/space/has_grav/waypoint)
-<<<<<<< HEAD
 "gH" = (
 /obj/machinery/light/broken/directional/south,
 /turf/open/floor/iron/airless,
@@ -554,9 +541,6 @@
 /turf/open/floor/iron/airless,
 /area/ruin/space/has_grav/waypoint)
 "BQ" = (
-=======
-"bf" = (
->>>>>>> upstream/overmaps-and-traders
 /obj/item/pen/fountain/captain,
 /turf/open/floor/carpet/royalblue/airless,
 /area/ruin/space/has_grav/waypoint)
@@ -568,7 +552,6 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/waypoint)
-<<<<<<< HEAD
 "Cn" = (
 /obj/effect/decal/cleanable/blood/footprints,
 /turf/open/floor/iron/airless,
@@ -599,9 +582,6 @@
 /turf/open/floor/carpet/royalblue/airless,
 /area/ruin/space/has_grav/waypoint)
 "Ec" = (
-=======
-"bq" = (
->>>>>>> upstream/overmaps-and-traders
 /obj/item/shard{
 	pixel_x = 6;
 	pixel_y = -8
@@ -612,7 +592,6 @@
 	},
 /turf/open/floor/carpet/royalblue/airless,
 /area/ruin/space/has_grav/waypoint)
-<<<<<<< HEAD
 "Ek" = (
 /obj/item/spear,
 /obj/structure/alien/weeds,
@@ -723,10 +702,6 @@
 	pixel_y = 9
 	},
 /obj/item/ammo_casing/shotgun/frag12,
-=======
-"bt" = (
-/obj/item/stack/tile/iron,
->>>>>>> upstream/overmaps-and-traders
 /turf/open/floor/iron/airless,
 /area/ruin/space/has_grav/waypoint)
 "bP" = (
@@ -787,7 +762,6 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/iron/airless,
 /area/ruin/space/has_grav/waypoint)
-<<<<<<< HEAD
 "LG" = (
 /obj/effect/decal/cleanable/blood/footprints,
 /obj/machinery/light/small/broken/directional/east,
@@ -857,13 +831,6 @@
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/waypoint)
 "Pg" = (
-=======
-"gx" = (
-/obj/item/stack/sheet/iron,
-/turf/open/floor/iron/airless,
-/area/ruin/space/has_grav/waypoint)
-"gI" = (
->>>>>>> upstream/overmaps-and-traders
 /obj/item/clothing/head/helmet/swat{
 	pixel_x = 6;
 	pixel_y = 3
@@ -884,7 +851,6 @@
 /obj/machinery/light/small/broken/directional/south,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/waypoint)
-<<<<<<< HEAD
 "Pj" = (
 /turf/open/floor/iron/airless,
 /area/ruin/space/has_grav/waypoint)
@@ -893,9 +859,6 @@
 /turf/open/floor/iron/airless,
 /area/ruin/space/has_grav/waypoint)
 "Pv" = (
-=======
-"gK" = (
->>>>>>> upstream/overmaps-and-traders
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/decal/cleanable/blood/innards,
 /turf/open/floor/iron/airless,
@@ -914,70 +877,14 @@
 /obj/structure/frame/computer,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/waypoint)
-<<<<<<< HEAD
 "Qt" = (
 /obj/item/bodypart/arm/right{
-=======
-"ht" = (
-/obj/item/stack/tile/iron,
-/obj/structure/lattice,
-/turf/template_noop,
-/area/ruin)
-"hz" = (
-/obj/item/shard{
-	pixel_x = -6;
-	pixel_y = 3
-	},
-/turf/open/floor/carpet/royalblue/airless,
-/area/ruin/space/has_grav/waypoint)
-"ih" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/iron/goonplaque,
-/area/ruin/space/has_grav/waypoint)
-"it" = (
-/obj/effect/decal/cleanable/xenoblood/xgibs/limb,
-/obj/effect/decal/cleanable/xenoblood/xsplatter,
-/turf/open/floor/iron/airless,
-/area/ruin/space/has_grav/waypoint)
-"iI" = (
-/obj/effect/decal/cleanable/blood/footprints,
-/obj/structure/alien/weeds,
-/turf/open/floor/iron/airless,
-/area/ruin/space/has_grav/waypoint)
-"jf" = (
-/obj/machinery/light/broken,
-/turf/open/floor/iron/airless,
-/area/ruin/space/has_grav/waypoint)
-"jj" = (
-/obj/structure/chair/sofa/corp/right,
-/turf/open/floor/iron/airless,
-/area/ruin/space/has_grav/waypoint)
-"ju" = (
-/obj/structure/lattice,
-/turf/template_noop,
-/area/ruin)
-"jw" = (
-/turf/closed/wall/r_wall/syndicate,
-/area/ruin/space/has_grav/waypoint)
-"jL" = (
-/mob/living/simple_animal/hostile/alien,
-/obj/structure/alien/weeds,
-/turf/open/floor/iron/airless,
-/area/ruin/space/has_grav/waypoint)
-"jP" = (
-/obj/machinery/door/airlock/command/glass,
-/turf/open/floor/iron/airless,
-/area/ruin/space/has_grav/waypoint)
-"jX" = (
-/obj/item/bodypart/r_arm{
->>>>>>> upstream/overmaps-and-traders
 	pixel_x = 8;
 	pixel_y = 5
 	},
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/waypoint)
-<<<<<<< HEAD
 "Qw" = (
 /obj/item/shard,
 /turf/template_noop,
@@ -1027,9 +934,6 @@
 /turf/open/floor/iron/airless,
 /area/ruin/space/has_grav/waypoint)
 "Tq" = (
-=======
-"kj" = (
->>>>>>> upstream/overmaps-and-traders
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/iron/airless,
 /area/ruin/space/has_grav/waypoint)
@@ -1162,7 +1066,6 @@
 	},
 /turf/open/floor/carpet/royalblue/airless,
 /area/ruin/space/has_grav/waypoint)
-<<<<<<< HEAD
 "Wg" = (
 /mob/living/simple_animal/hostile/alien/drone,
 /turf/open/floor/plating/airless,
@@ -1171,19 +1074,6 @@
 /obj/item/bodypart/leg/left{
 	pixel_x = 9;
 	pixel_y = 7
-=======
-"rH" = (
-/obj/item/stack/rods,
-/turf/template_noop,
-/area/template_noop)
-"sc" = (
-/obj/item/bodypart/r_leg,
-/turf/template_noop,
-/area/template_noop)
-"sd" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	dir = 8
->>>>>>> upstream/overmaps-and-traders
 	},
 /turf/open/floor/iron/airless,
 /area/ruin/space/has_grav/waypoint)
@@ -1926,7 +1816,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/waypoint)
-<<<<<<< HEAD
 "Zt" = (
 /obj/structure/table,
 /turf/open/floor/iron/dark,
@@ -1935,8 +1824,6 @@
 /obj/item/stack/tile/iron/base,
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/waypoint)
-=======
->>>>>>> upstream/overmaps-and-traders
 
 (1,1,1) = {"
 eP
@@ -2311,7 +2198,6 @@ eP
 eP
 "}
 (7,1,1) = {"
-<<<<<<< HEAD
 OC
 oa
 Pj
@@ -2326,22 +2212,6 @@ rh
 pB
 ka
 bG
-=======
-wP
-MF
-oJ
-oJ
-oJ
-sm
-oJ
-oJ
-oJ
-pe
-pL
-gx
-pe
-uz
->>>>>>> upstream/overmaps-and-traders
 dQ
 Ke
 Ke
@@ -2390,7 +2260,6 @@ eP
 eP
 "}
 (8,1,1) = {"
-<<<<<<< HEAD
 OC
 Jq
 Pj
@@ -2404,21 +2273,6 @@ ka
 ka
 Pj
 bG
-=======
-wP
-RW
-oJ
-fb
-oJ
-JS
-oJ
-kz
-vo
-pe
-pe
-oJ
-Xg
->>>>>>> upstream/overmaps-and-traders
 ju
 Ke
 Ke
@@ -2530,7 +2384,6 @@ eP
 eP
 "}
 (10,1,1) = {"
-<<<<<<< HEAD
 hl
 hl
 Oy
@@ -2545,22 +2398,6 @@ qh
 yn
 zu
 bG
-=======
-UP
-UP
-CG
-oJ
-oJ
-vo
-kz
-vo
-vo
-KU
-vo
-gT
-it
-uz
->>>>>>> upstream/overmaps-and-traders
 ju
 Ke
 Ke
@@ -2688,11 +2525,7 @@ Yd
 Yd
 kY
 ju
-<<<<<<< HEAD
 bG
-=======
-Xg
->>>>>>> upstream/overmaps-and-traders
 Ke
 Yd
 Lc
@@ -2757,7 +2590,6 @@ sP
 pe
 ju
 ay
-<<<<<<< HEAD
 bG
 ka
 Pj
@@ -2796,52 +2628,11 @@ gy
 cV
 Pj
 OC
-=======
-uz
-pe
-oJ
-oJ
-oJ
-um
-VR
-oJ
-oJ
-oJ
-oJ
-QN
-oJ
-yl
-oJ
-oJ
-oJ
-Lv
-oJ
-GE
-oJ
-oJ
-oJ
-oJ
-sQ
-kj
-AI
-pe
-pe
-kj
-kj
-Yd
-kj
-DA
-aU
-sm
-oJ
-wP
->>>>>>> upstream/overmaps-and-traders
 eP
 eP
 "}
 (14,1,1) = {"
 eP
-<<<<<<< HEAD
 OC
 na
 qh
@@ -2899,71 +2690,11 @@ CC
 Ml
 Pj
 OC
-=======
-wP
-xs
-vo
-za
-iI
-gL
-uu
-Ne
-vo
-vo
-So
-vo
-pe
-om
-pe
-UP
-oJ
-pe
-oJ
-oJ
-Xg
-oJ
-Yd
-oJ
-Xf
-oJ
-sm
-oJ
-oJ
-oJ
-oJ
-oJ
-oJ
-oJ
-oJ
-Hj
-ih
-oJ
-oJ
-sm
-oJ
-oJ
-oJ
-oJ
-oJ
-oJ
-Yd
-oJ
-pe
-zN
-WD
-oJ
-Yd
-zN
-WD
-oJ
-wP
->>>>>>> upstream/overmaps-and-traders
 eP
 eP
 "}
 (15,1,1) = {"
 eP
-<<<<<<< HEAD
 OC
 na
 qh
@@ -3013,57 +2744,6 @@ Pj
 Pj
 QC
 bG
-=======
-wP
-xs
-vo
-Lm
-So
-vo
-gm
-vo
-vo
-vo
-So
-vo
-vo
-oJ
-om
-jP
-PM
-XA
-pe
-Yd
-XO
-pe
-PM
-Lv
-ti
-oJ
-oJ
-oJ
-sm
-oJ
-oJ
-oJ
-BB
-oJ
-qZ
-oJ
-oJ
-wy
-oJ
-oJ
-oJ
-oJ
-oJ
-oJ
-qN
-oJ
-oJ
-Wz
-Xg
->>>>>>> upstream/overmaps-and-traders
 ju
 pe
 Yd
@@ -3192,13 +2872,8 @@ Jj
 eP
 eP
 ju
-<<<<<<< HEAD
 bG
 OC
-=======
-Xg
-wP
->>>>>>> upstream/overmaps-and-traders
 eP
 eP
 eP
@@ -3260,11 +2935,7 @@ eP
 eP
 ju
 ju
-<<<<<<< HEAD
 bG
-=======
-uz
->>>>>>> upstream/overmaps-and-traders
 eP
 eP
 eP
@@ -3974,15 +3645,9 @@ eP
 eP
 eP
 eP
-<<<<<<< HEAD
 bG
 IC
 bG
-=======
-Yd
-Mp
-Xg
->>>>>>> upstream/overmaps-and-traders
 ju
 wP
 eP
@@ -3997,13 +3662,8 @@ eP
 wP
 Yd
 ju
-<<<<<<< HEAD
 bG
 OC
-=======
-Xg
-wP
->>>>>>> upstream/overmaps-and-traders
 eP
 eP
 eP
@@ -4123,11 +3783,7 @@ Rk
 eP
 eP
 eP
-<<<<<<< HEAD
 bG
-=======
-uz
->>>>>>> upstream/overmaps-and-traders
 ju
 Ke
 dQ

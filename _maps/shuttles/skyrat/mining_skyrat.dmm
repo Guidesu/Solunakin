@@ -25,8 +25,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/shuttle/mining/advanced)
 "v" = (
-<<<<<<< HEAD
-=======
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
@@ -148,7 +146,6 @@
 	},
 /area/shuttle/mining/advanced)
 "S" = (
->>>>>>> upstream/overmaps-and-traders
 /obj/item/clothing/suit/hazardvest{
 	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
 	name = "emergency lifejacket"

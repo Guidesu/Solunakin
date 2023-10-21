@@ -21,14 +21,11 @@
 	},
 /turf/open/misc/asteroid,
 /area/ruin/space/has_grav/powered/skyrat/blackmarket)
-<<<<<<< HEAD
 "dm" = (
 /obj/structure/sink/kitchen/directional/south,
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/powered/skyrat/blackmarket)
-=======
->>>>>>> upstream/overmaps-and-traders
 "en" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 4
@@ -376,32 +373,6 @@
 /turf/open/floor/iron/smooth_large,
 /area/ruin/space/has_grav/powered/skyrat/blackmarket)
 "zu" = (
-<<<<<<< HEAD
-=======
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/dark/side{
-	dir = 1
-	},
-/area/ruin/space/has_grav/powered/skyrat/blackmarket)
-"zw" = (
-/obj/structure/rack,
-/obj/effect/turf_decal/tile/brown{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/brown{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 8
-	},
-/obj/effect/spawner/random/contraband/prison,
-/obj/effect/spawner/random/contraband/armory,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/ruin/space/has_grav/powered/skyrat/blackmarket)
-"AD" = (
->>>>>>> upstream/overmaps-and-traders
 /obj/structure/table,
 /obj/effect/spawner/random/food_or_drink/dinner{
 	pixel_y = 5
@@ -444,49 +415,7 @@
 /obj/structure/deployable_barricade/guardrail{
 	dir = 8
 	},
-<<<<<<< HEAD
 /obj/effect/turf_decal/siding/thinplating_new/dark{
-=======
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/ruin/space/has_grav/powered/skyrat/blackmarket)
-"Fa" = (
-/obj/structure/table,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/dark/side{
-	dir = 4
-	},
-/area/ruin/space/has_grav/powered/skyrat/blackmarket)
-"Fe" = (
-/obj/structure/table,
-/obj/machinery/firealarm/directional/south{
-	dir = 1
-	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/ruin/space/has_grav/powered/skyrat/blackmarket)
-"Fq" = (
-/obj/structure/rack,
-/obj/item/blackmarket_uplink,
-/turf/open/floor/iron,
-/area/ruin/space/has_grav/powered/skyrat/blackmarket)
-"Hq" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/ruin/space/has_grav/powered/skyrat/blackmarket)
-"IS" = (
-/obj/effect/turf_decal/tile/brown,
-/obj/item/kirbyplants/random,
-/turf/open/floor/iron,
-/area/ruin/space/has_grav/powered/skyrat/blackmarket)
-"IZ" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/dark/side{
->>>>>>> upstream/overmaps-and-traders
 	dir = 9
 	},
 /obj/machinery/light/red/dim/directional/south,
@@ -555,7 +484,6 @@
 /obj/structure/trash_pile,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/powered/skyrat/blackmarket)
-<<<<<<< HEAD
 "Hq" = (
 /obj/structure/trash_pile,
 /obj/effect/turf_decal/stripes/asteroid/line{
@@ -670,8 +598,6 @@
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/powered/skyrat/blackmarket)
-=======
->>>>>>> upstream/overmaps-and-traders
 "Py" = (
 /obj/effect/turf_decal/delivery/white,
 /obj/machinery/door/airlock/bathroom{
@@ -755,7 +681,6 @@
 "YG" = (
 /turf/open/misc/asteroid/airless,
 /area/ruin/space/has_grav/powered/skyrat/blackmarket)
-<<<<<<< HEAD
 "YH" = (
 /obj/structure/cable,
 /turf/open/misc/asteroid/airless,
@@ -771,8 +696,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/powered/skyrat/blackmarket)
-=======
->>>>>>> upstream/overmaps-and-traders
 "Zh" = (
 /turf/closed/wall,
 /area/ruin/space/has_grav/powered/skyrat/blackmarket)
@@ -899,11 +822,6 @@ hO
 Zh
 Zh
 Zh
-<<<<<<< HEAD
-=======
-lr
-Rv
->>>>>>> upstream/overmaps-and-traders
 Zh
 Zh
 hk
@@ -1139,98 +1057,6 @@ Hq
 Zh
 Zh
 SI
-<<<<<<< HEAD
-=======
-Mc
-Zh
-YG
-YG
-"}
-(9,1,1) = {"
-lp
-YG
-YG
-YG
-Zh
-AX
-fi
-Zh
-af
-Yn
-nE
-zw
-PG
-LL
-vj
-Zh
-YG
-lp
-"}
-(10,1,1) = {"
-lp
-YG
-YG
-YG
-Zh
-me
-oV
-Zh
-en
-Hq
-Hq
-jb
-Hq
-fi
-gf
-Zh
-YG
-YG
-"}
-(11,1,1) = {"
-lp
-YG
-YG
-YG
-Zh
-iY
-MN
-WN
-UJ
-MN
-eV
-Hq
-jb
-Hq
-LZ
-Zh
-YG
-YG
-"}
-(12,1,1) = {"
-lp
-lp
-YG
-YG
-Zh
-cH
-ng
-Zh
-qe
-De
-kE
-Bm
-gj
-KV
-AG
-Zh
-YG
-YG
-"}
-(13,1,1) = {"
-lp
-lp
-YG
->>>>>>> upstream/overmaps-and-traders
 Zh
 Zh
 hO
@@ -1239,7 +1065,6 @@ hO
 hO
 "}
 (14,1,1) = {"
-<<<<<<< HEAD
 hO
 hO
 hO
@@ -1247,18 +1072,6 @@ hO
 hO
 hO
 hO
-=======
-lp
-Zh
-Zh
-Zh
-Qm
-ss
-qA
-Bp
-mb
-De
->>>>>>> upstream/overmaps-and-traders
 Fq
 oV
 oV
@@ -1354,16 +1167,6 @@ oV
 oV
 QV
 Zh
-<<<<<<< HEAD
-=======
-qe
-De
-De
-OA
-De
-MN
-Fe
->>>>>>> upstream/overmaps-and-traders
 Zh
 qD
 Zh

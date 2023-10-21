@@ -140,24 +140,9 @@
 /turf/open/floor/iron/smooth,
 /area/shuttle/labor/advanced)
 "Q" = (
-<<<<<<< HEAD
 /obj/machinery/computer/security,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark/textured_large,
-=======
-/obj/structure/table/reinforced,
-/obj/item/folder/red,
-/obj/item/restraints/handcuffs,
-/turf/open/floor/iron/shuttle/exploration/corner{
-	dir = 8
-	},
-/area/shuttle/labor/advanced)
-"R" = (
-/obj/structure/shuttle/engine/propulsion/burst,
-/turf/closed/wall/mineral/titanium/shuttle_wall/window/mining_labor{
-	icon_state = "1,0"
-	},
->>>>>>> upstream/overmaps-and-traders
 /area/shuttle/labor/advanced)
 "T" = (
 /obj/machinery/power/shuttle_engine/propulsion,
@@ -168,16 +153,10 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/labor/advanced)
 "V" = (
-<<<<<<< HEAD
 /obj/machinery/power/shuttle_engine/propulsion,
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/fluff/metalpole/end{
 	pixel_y = -32
-=======
-/obj/structure/shuttle/engine/propulsion/burst,
-/turf/closed/wall/mineral/titanium/shuttle_wall/window/mining_labor{
-	icon_state = "3,0"
->>>>>>> upstream/overmaps-and-traders
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/labor/advanced)

@@ -11,7 +11,6 @@
 	},
 	"traits": [
 		{
-<<<<<<< HEAD
 			"Up": true,
 			"Baseturf": "/turf/open/misc/asteroid/airless",
 			"Linkage": "Cross"
@@ -20,14 +19,6 @@
 			"Down": true,
 			"Baseturf": "/turf/open/openspace",
 			"Linkage": "Cross"
-=======
-			"Up": 1,
-			"Baseturf": "/turf/open/floor/plating/asteroid/airless"
-		},
-		{
-			"Down": -1,
-			"Baseturf": "/turf/open/openspace"
->>>>>>> upstream/overmaps-and-traders
 		}
 	],
 	"job_changes": {

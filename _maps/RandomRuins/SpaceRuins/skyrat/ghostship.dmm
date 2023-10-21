@@ -248,7 +248,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
-<<<<<<< HEAD
 "mx" = (
 /obj/structure/table,
 /obj/item/stock_parts/cell/hyper{
@@ -263,8 +262,6 @@
 /obj/item/disk/design_disk/bepis,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
-=======
->>>>>>> upstream/overmaps-and-traders
 "mW" = (
 /obj/effect/decal/cleanable/greenglow,
 /obj/effect/decal/cleanable/dirt,
@@ -530,7 +527,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
-<<<<<<< HEAD
 "Ga" = (
 /obj/machinery/portable_atmospherics/canister/plasma{
 	desc = "Plasma gas. Highly fuel efficient. Highly volatile. Highly toxic.";
@@ -543,8 +539,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
-=======
->>>>>>> upstream/overmaps-and-traders
 "Gq" = (
 /turf/closed/wall/mineral/titanium/spaceship{
 	color = "#8ab1ec"
@@ -699,7 +693,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
-<<<<<<< HEAD
 "Oj" = (
 /obj/structure/window/reinforced/shuttle/spaceship{
 	color = "#8ab1ec"
@@ -711,8 +704,6 @@
 /obj/effect/spawner/random/structure/crate_loot,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
-=======
->>>>>>> upstream/overmaps-and-traders
 "Qc" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -755,7 +746,6 @@
 	},
 /turf/template_noop,
 /area/ruin/unpowered)
-<<<<<<< HEAD
 "SR" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -764,18 +754,6 @@
 /obj/structure/closet,
 /obj/effect/decal/fakelattice/passthru,
 /obj/effect/spawner/random/maintenance/three,
-=======
-"SS" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/portable_atmospherics/canister/plasma{
-	desc = "Plasma gas. Highly fuel efficient. Highly volatile. Highly toxic.";
-	name = "Fuel canister"
-	},
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 4;
-	piping_layer = 1
-	},
->>>>>>> upstream/overmaps-and-traders
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "Ta" = (
@@ -824,7 +802,6 @@
 	color = "#7a9ee0"
 	},
 /area/ruin/unpowered)
-<<<<<<< HEAD
 "Vv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/portable_atmospherics/canister/plasma{
@@ -837,8 +814,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
-=======
->>>>>>> upstream/overmaps-and-traders
 "WH" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -862,7 +837,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
-<<<<<<< HEAD
 "YN" = (
 /obj/structure/closet,
 /obj/effect/turf_decal/stripes/line{
@@ -873,8 +847,6 @@
 /obj/machinery/light/dim/directional/west,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
-=======
->>>>>>> upstream/overmaps-and-traders
 "YT" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
