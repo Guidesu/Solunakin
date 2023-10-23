@@ -272,7 +272,7 @@
   - code_imp: Implosion compressor renamed to anomaly refinery.
   - code_imp: Created a new program tab "Science" for the downloader app. Removed
       Robotics.
-  - refactor: Reworked the code for bombspawner (used in the cuban pete arcade game)
+  - refactor: Reworked the code for bombspawner (used in the 
   - rscadd: Right-clicking to splash reagents requires combat mode
   - rscadd: 'Remember the above qol: You now right-click the janitorial cart to wet
       mops and left-click to put them away qol: You can right-click the janitorial
