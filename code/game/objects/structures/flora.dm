@@ -985,6 +985,9 @@
 /obj/structure/flora/lunar_plant/style_3
 	icon_state = "lunar_plant3"
 
+/obj/structure/flora/bush/goldenbush
+	icon_state = "goldenbush"
+
 /*********
  * Rocks *
  *********/

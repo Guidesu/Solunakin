@@ -35,4 +35,4 @@
 		GLOB.station_turfs += src
 
 /turf/open/misc/grass/lavaland
-	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
+	initial_gas_mix = PLANETARY_ATMOS

@@ -39,8 +39,6 @@ Always compile, always use that verb, and always make sure that it works for wha
 
 // helpers for modifying jobs, used in various job_changes.dm files
 
-#define MAP_CURRENT_VERSION 1
-
 #define SPACERUIN_MAP_EDGE_PAD 15
 
 /// Distance from edge to move to another z-level
@@ -84,11 +82,6 @@ Always compile, always use that verb, and always make sure that it works for wha
 #define ZTRAIT_ICE_RUINS_UNDERGROUND "Ice Ruins Underground"
 #define ZTRAIT_ISOLATED_RUINS "Isolated Ruins" //Placing ruins on z levels with this trait will use turf reservation instead of usual placement.
 
-// boolean - weather types that occur on the level
-#define ZTRAIT_SNOWSTORM "Weather_Snowstorm"
-#define ZTRAIT_ASHSTORM "Weather_Ashstorm"
-#define ZTRAIT_VOIDSTORM "Weather_Voidstorm"
-
 /// boolean - does this z prevent ghosts from observing it
 #define ZTRAIT_SECRET "Secret"
 
@@ -124,17 +117,13 @@ Always compile, always use that verb, and always make sure that it works for wha
 #define ZTRAIT_NOPARALLAX "No Parallax"
 
 // default trait definitions, used by SSmapping
-///Z level traits for CentCom
-#define ZTRAITS_CENTCOM list(ZTRAIT_CENTCOM = TRUE, ZTRAIT_NOPHASE = TRUE)
-///Z level traits for Space Station 13
-#define ZTRAITS_STATION list(ZTRAIT_LINKAGE = CROSSLINKED, ZTRAIT_STATION = TRUE)
-///Z level traits for Deep Space
-#define ZTRAITS_SPACE list(ZTRAIT_LINKAGE = CROSSLINKED, ZTRAIT_SPACE_RUINS = TRUE)
+#define ZTRAITS_CENTCOM list(ZTRAIT_CENTCOM = TRUE)
+#define ZTRAITS_STATION list(ZTRAIT_LINKAGE = UNAFFECTED, ZTRAIT_STATION = TRUE)
+#define ZTRAITS_SPACE list(ZTRAIT_LINKAGE = UNAFFECTED, ZTRAIT_SPACE_RUINS = TRUE)
 ///Z level traits for Lavaland
 #define ZTRAITS_LAVALAND list(\
 	ZTRAIT_MINING = TRUE, \
 	ZTRAIT_NOPARALLAX = TRUE, \
-	ZTRAIT_ASHSTORM = TRUE, \
 	ZTRAIT_LAVA_RUINS = TRUE, \
 	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
 	ZTRAIT_BASETURF = /turf/open/lava/smooth/lava_land_surface)

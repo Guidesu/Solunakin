@@ -27,6 +27,7 @@
 
 	/// The turf type the reservation is initially made with
 	var/turf_type = /turf/open/space
+	var/edge_type
 
 	///Distance away from the cordon where we can put a "sort-cordon" and run some extra code (see make_repel). 0 makes nothing happen
 	var/pre_cordon_distance = 0
@@ -34,6 +35,7 @@
 /datum/turf_reservation/transit
 	turf_type = /turf/open/space/transit
 	pre_cordon_distance = 7
+	edge_type = /turf/open/space/transit/edge
 
 /datum/turf_reservation/proc/Release()
 	bottom_left_turfs.Cut()
@@ -138,6 +140,35 @@
 /datum/turf_reservation/proc/_reserve_area(width, height, zlevel)
 	src.width = width
 	src.height = height
+/datum/turf_reservation/proc/IsInBounds(atom/atom_check)
+	var/low_x = bottom_left_coords[1]
+	var/high_x = top_right_coords[1]
+	var/low_y = bottom_left_coords[2]
+	var/high_y = top_right_coords[2]
+	if(atom_check.x >= low_x && atom_check.x <= high_x && atom_check.y >= low_y && atom_check.y <= high_y)
+		return TRUE
+	return FALSE
+
+/datum/turf_reservation/proc/IsAtEdge(atom/atom_check)
+	var/low_x = bottom_left_coords[1]
+	var/high_x = top_right_coords[1]
+	var/low_y = bottom_left_coords[2]
+	var/high_y = top_right_coords[2]
+	if((atom_check.x == low_x || atom_check.x == high_x) || (atom_check.y == low_y || atom_check.y == high_y))
+		return TRUE
+	return FALSE
+
+//Hate me for this one but I'll be finding it real useful
+/datum/turf_reservation/proc/IsAdjacentToEdgeOrOutOfBounds(atom/atom_check)
+	var/low_x = bottom_left_coords[1] + 1
+	var/high_x = top_right_coords[1] - 1
+	var/low_y = bottom_left_coords[2] + 1
+	var/high_y = top_right_coords[2] - 1
+	if((atom_check.x <= low_x || atom_check.x >= high_x) || (atom_check.y <= low_y || atom_check.y >= high_y))
+		return TRUE
+	return FALSE
+
+/datum/turf_reservation/proc/Reserve(width, height, zlevel)
 	if(width > world.maxx || height > world.maxy || width < 1 || height < 1)
 		return FALSE
 	var/list/avail = SSmapping.unused_turfs["[zlevel]"]
@@ -177,6 +208,9 @@
 		SSmapping.unused_turfs["[T.z]"] -= T
 		SSmapping.used_turfs[T] = src
 		T.turf_flags = (T.turf_flags | RESERVATION_TURF) & ~UNUSED_RESERVATION_TURF
+		if(edge_type && IsAtEdge(T))
+			T.ChangeTurf(edge_type, edge_type)
+			continue
 		T.ChangeTurf(turf_type, turf_type)
 
 	bottom_left_turfs += BL

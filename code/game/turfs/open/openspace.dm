@@ -169,7 +169,7 @@
 /turf/open/openspace/icemoon
 	name = "ice chasm"
 	baseturfs = /turf/open/openspace/icemoon
-	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
+	initial_gas_mix = PLANETARY_ATMOS
 	planetary_atmos = TRUE
 	/// Replaces itself with replacement_turf if the turf has the no ruins allowed flag (usually ruins themselves)
 	var/protect_ruin = TRUE

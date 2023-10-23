@@ -20,6 +20,34 @@
 
 	return ..()
 
+/turf/open/space/transit/Initialize()
+	. = ..()
+	RegisterSignal(src, COMSIG_ATOM_INITIALIZED_ON, PROC_REF(CreatedOnTransit)) //Why isn't this a turf proc too..
+
+/turf/open/space/transit/Destroy()
+	UnregisterSignal(src, COMSIG_ATOM_INITIALIZED_ON)
+	return ..()
+
+/turf/open/space/transit/proc/CreatedOnTransit(datum/source, atom/movable/AM)
+	SIGNAL_HANDLER
+	EnterTransitTurf(AM)
+
+/turf/open/space/transit/Entered(atom/movable/entered)
+	. = ..()
+	EnterTransitTurf(entered)
+
+/turf/open/space/transit/proc/EnterTransitTurf(atom/movable/entered)
+	if(istype(entered, /obj/effect/abstract) || entered.invisibility == INVISIBILITY_ABSTRACT)
+		return
+	if(entered.GetComponent(/datum/component/transit_handler))
+		return
+	if(entered.loc != src || src.loc.type != /area/shuttle/transit)
+		return
+	var/datum/transit_instance/this_transit = SSshuttle.get_transit_instance(src)
+	if(!this_transit)
+		return
+	entered.AddComponent(/datum/component/transit_handler, this_transit)
+
 /turf/open/space/transit/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	. = ..()
 	underlay_appearance.icon_state = "speedspace_ns_[get_transit_state(asking_turf)]"
@@ -98,6 +126,21 @@
 /turf/open/space/transit/east
 	dir = EAST
 
+/turf/open/space/transit/CanBuildHere()
+	return SSshuttle.is_in_shuttle_bounds(src)
+
+/turf/open/space/transit/Initialize(mapload)
+	. = ..()
+	update_appearance()
+
+/turf/open/space/transit/update_icon()
+	. = ..()
+	transform = turn(matrix(), get_transit_angle(src))
+
+/turf/open/space/transit/update_icon_state()
+	icon_state = "speedspace_ns_[get_transit_state(src)]"
+	return ..()
+
 /proc/get_transit_state(turf/T)
 	var/p = 9
 	. = 1
@@ -124,3 +167,8 @@
 			. = 90
 		if(WEST)
 			. = -90
+
+//Because I can't use a closed turfs because that makes something weird with the generation
+/turf/open/space/transit/edge
+	opacity = TRUE
+	density = TRUE

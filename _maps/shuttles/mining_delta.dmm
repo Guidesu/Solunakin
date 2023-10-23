@@ -103,14 +103,13 @@
 /turf/open/floor/iron,
 /area/shuttle/mining)
 "o" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/machinery/atmospherics/components/unary/portables_connector/visible,
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/open/floor/iron,
 /area/shuttle/mining)
 "p" = (
@@ -208,12 +207,18 @@
 /turf/open/floor/iron,
 /area/shuttle/mining)
 "r" = (
+<<<<<<< HEAD
 /obj/machinery/power/shuttle_engine/heater,
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/west,
+=======
+/obj/structure/shuttle/engine/heater,
+>>>>>>> 9b06e3c7986 ([PORT] [WIP-NEEDS-TESTING] [AAAAA] Overmap Part 1 (#56))
 /obj/effect/turf_decal/stripes/line,
-/turf/open/floor/plating/airless,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
+/turf/open/floor/iron,
 /area/shuttle/mining)
 "s" = (
 /obj/structure/ore_box,
@@ -223,11 +228,8 @@
 /turf/open/floor/iron,
 /area/shuttle/mining)
 "t" = (
-/obj/machinery/power/shuttle_engine/propulsion/burst,
-/obj/structure/window/reinforced/spawner/directional/north{
-	layer = 2.9
-	},
 /obj/effect/turf_decal/stripes/line,
+/obj/machinery/atmospherics/components/unary/engine,
 /turf/open/floor/plating/airless,
 /area/shuttle/mining)
 

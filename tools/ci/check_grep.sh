@@ -215,6 +215,16 @@ do
         fi
     done < <(jq -r '[.map_file] | flatten | .[]' $json)
 done
+if grep -i '/obj/effect/mapping_helpers/custom_icon' _maps/**/*.dmm; then
+	echo
+    echo -e "${RED}ERROR: Custom icon helper found. Please include DMI files as standard assets instead for repository maps.${NC}"
+    st=1
+fi;
+if grep -P '^/obj/docking_port/mobile.*\{\n[^}]*(width|height|dwidth|dheight)[^}]*\}' _maps/**/*.dmm; then
+	echo
+	echo -e "${RED}ERROR: Custom mobile docking_port sizes detected. This is done automatically and should not be varedits.${NC}"
+	st=1
+fi;
 
 part "updatepaths validity"
 missing_txt_lines=$(find tools/UpdatePaths/Scripts -type f ! -name "*.txt" | wc -l)

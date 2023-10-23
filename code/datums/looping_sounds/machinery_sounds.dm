@@ -151,3 +151,20 @@
 		'sound/machines/terminal_button08.ogg' = 1,
 	)
 	mid_length = 0.3 SECONDS
+
+/datum/looping_sound/drill
+	start_sound = 'sound/machines/drill/drill_start.ogg'
+	start_length = 1 SECONDS
+	mid_sounds = list('sound/machines/drill/drill_loop.ogg'=1)
+	mid_length = 1 SECONDS
+	end_sound = 'sound/machines/drill/drill_end.ogg'
+	volume = 40
+
+/datum/looping_sound/engine
+	start_sound = 'sound/machines/engine/enginestart.ogg'
+	start_length = 1.4 SECONDS
+	mid_sounds = list('sound/machines/engine/engineloop.ogg'=1)
+	mid_length = 1.4 SECONDS
+	end_sound = 'sound/machines/engine/engineend.ogg'
+	volume = 10
+	falloff_distance = 5

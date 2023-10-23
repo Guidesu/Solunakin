@@ -214,6 +214,8 @@
 #define DEPARTMENT_CAPTAIN "Captain"
 #define DEPARTMENT_BITFLAG_CENTRAL_COMMAND (1<<10) //SKYRAT EDIT CHANGE
 #define DEPARTMENT_CENTRAL_COMMAND "Central Command" //SKYRAT EDIT CHANGE
+#define DEPARTMENT_BITFLAG_CIVILLIAN (1<<11)
+#define DEPARTMENT_BITFLAG_MISC (1<<12)
 
 /* Job datum job_flags */
 /// Whether the mob is announced on arrival.

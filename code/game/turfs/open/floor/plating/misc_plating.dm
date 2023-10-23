@@ -8,7 +8,7 @@
 
 /turf/open/floor/plating/icemoon
 	icon_state = "plating"
-	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
+	initial_gas_mix = PLANETARY_ATMOS
 
 /turf/open/floor/plating/abductor
 	name = "alien floor"
@@ -58,7 +58,7 @@
 	initial_gas_mix = BURNING_COLD
 
 /turf/open/floor/plating/snowed/icemoon
-	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
+	initial_gas_mix = PLANETARY_ATMOS
 
 /turf/open/floor/plating/snowed/smoothed
 	icon = 'icons/turf/floors/snow_turf.dmi'
@@ -83,12 +83,12 @@
 	temperature = 180
 
 /turf/open/floor/plating/snowed/smoothed/icemoon
-	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
+	initial_gas_mix = PLANETARY_ATMOS
 
 /turf/open/floor/plating/lavaland_atmos
 	planetary_atmos = TRUE
 	baseturfs = /turf/open/lava/smooth/lava_land_surface
-	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
+	initial_gas_mix = PLANETARY_ATMOS
 
 /turf/open/floor/plating/elevatorshaft
 	name = "elevator shaft"

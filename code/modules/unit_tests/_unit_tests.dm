@@ -95,6 +95,7 @@
 #include "area_contents.dm"
 #include "armor_verification.dm"
 #include "atmospherics_sanity.dm"
+#include "atmosphere.dm"
 #include "autowiki.dm"
 #include "barsigns.dm"
 #include "baseturfs.dm"

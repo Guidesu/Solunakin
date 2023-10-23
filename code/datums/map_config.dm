@@ -36,6 +36,10 @@
 		"whiteship" = "whiteship_meta",
 		"emergency" = "emergency_skyrat") //SKYRAT EDIT CHANGE
 
+	var/job_faction = FACTION_STATION
+
+	var/overflow_job = /datum/job/assistant
+
 	/// Dictionary of job sub-typepath to template changes dictionary
 	var/job_changes = list()
 	/// List of additional areas that count as a part of the library
@@ -46,13 +50,46 @@
 
 	/// Boolean that tells SSmapping to load all away missions in the codebase.
 	var/load_all_away_missions = FALSE
+	/// Type of the global trading hub that will be created
+	var/global_trading_hub_type = /datum/trade_hub/worldwide
+	/// A lazylist of types of trading hubs to be spawned
+	var/localized_trading_hub_types = list(/datum/trade_hub/randomname, /datum/trade_hub/randomname)
+
+	/// The type of the overmap object the station will act as on the overmap
+	var/overmap_object_type = /datum/overmap_object/shuttle/station
+	/// The weather controller the station levels will have
+	var/weather_controller_type = /datum/weather_controller
+	/// Type of the atmosphere that will be loaded on station
+	var/atmosphere_type
+	/// Possible rock colors of the loaded map
+	var/list/rock_color
+	/// Possible plant colors of the loaded map
+	var/list/plant_color
+	/// Possible grass colors of the loaded map
+	var/list/grass_color
+	/// Possible water colors of the loaded map
+	var/list/water_color
+
+	var/amount_of_planets_spawned = 4
+
+	var/ore_node_seeder_type
+
+/datum/map_config/New()
+	//Make sure that all levels in station do have this z trait
+	. = ..()
+	if(islist(traits))
+		for(var/level in traits)
+			var/list/level_traits = level
+			level_traits[ZTRAIT_STATION] = TRUE
+
+/datum/map_config/proc/get_map_info()
+	return "You're on board the <b>[map_name]</b>, a top of the class NanoTrasen resesearch station."
 
 /**
  * Proc that simply loads the default map config, which should always be functional.
  */
 /proc/load_default_map_config()
-	return new /datum/map_config
-
+	return new /datum/map_config/metastation
 
 /**
  * Proc handling the loading of map configs. Will return the default map config using [/proc/load_default_map_config] if the loading of said file fails for any reason whatsoever, so we always have a working map for the server to run.
@@ -64,7 +101,6 @@
  * Returns the config for the map to load.
  */
 /proc/load_map_config(filename = null, directory = null, error_if_missing = TRUE)
-	var/datum/map_config/config = load_default_map_config()
 
 	if(filename) // If none is specified, then go to look for next_map.json, for map rotation purposes.
 
@@ -72,7 +108,7 @@
 		if(directory)
 			if(!(directory in MAP_DIRECTORY_WHITELIST))
 				log_world("map directory not in whitelist: [directory] for map [filename]")
-				return config
+				return load_default_map_config()
 		else
 			directory = MAP_DIRECTORY_MAPS
 
@@ -80,16 +116,14 @@
 	else
 		filename = PATH_TO_NEXT_MAP_JSON
 
-
-	if (!config.LoadConfig(filename, error_if_missing))
-		qdel(config)
+	var/datum/map_config/config = LoadConfig(filename, error_if_missing)
+	if (!config)
 		return load_default_map_config()
+
 	return config
 
-
 #define CHECK_EXISTS(X) if(!istext(json[X])) { log_world("[##X] missing from json!"); return; }
-
-/datum/map_config/proc/LoadConfig(filename, error_if_missing)
+/proc/LoadConfig(filename, error_if_missing)
 	if(!fexists(filename))
 		if(error_if_missing)
 			log_world("map_config not found: [filename]")
@@ -110,10 +144,8 @@
 		log_world("map_config is not json: [filename]")
 		return
 
-	config_filename = filename
-
-	if(!json["version"])
-		log_world("map_config missing version!")
+	if(!json["map_type"])
+		log_world("map_config doesn't have a map_type to point to its config datum!")
 		return
 
 	if(json["version"] != MAP_CURRENT_VERSION)
@@ -222,6 +254,12 @@
 
 	defaulted = FALSE
 	return TRUE
+	CHECK_EXISTS("map_type")
+	var/type_to_load = text2path(json["map_type"])
+	var/datum/map_config/config = new type_to_load()
+	config.defaulted = FALSE
+	config.config_filename = filename
+	return config
 #undef CHECK_EXISTS
 
 /datum/map_config/proc/GetFullMapPaths()

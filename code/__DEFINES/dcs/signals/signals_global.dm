@@ -100,3 +100,11 @@
 
 /// Global signal sent when narsie summon count is updated: (new count)
 #define COMSIG_NARSIE_SUMMON_UPDATE "!narsie_summon_update"
+/// Global signal sent when a light mechanism is completed (try_id)
+#define COMSIG_GLOB_LIGHT_MECHANISM_COMPLETED "!light_mechanism_completed"
+/// Global Signal sent when the crew wins the revolution (No arguments).
+#define COMSIG_GLOB_REVOLUTION_VICTORY "!revolution_victory"
+
+///from base of mob/clickon(): (atom/A, params)
+#define COMSIG_CLICKON "any_clickon"
+	#define COMSIG_CANCEL_CLICKON 1

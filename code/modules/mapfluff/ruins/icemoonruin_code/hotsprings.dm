@@ -15,6 +15,8 @@
 	planetary_atmos = TRUE
 	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
 /* SKYRAT EDIT REMOVAL
+	initial_gas_mix = PLANETARY_ATMOS
+
 /turf/open/water/cursed_spring/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	. = ..()
 	if(!isliving(arrived))

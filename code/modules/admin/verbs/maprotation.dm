@@ -109,13 +109,15 @@
 						continue
 					virtual_map.shuttles[s] = shuttle
 
-			json_value = list(
-				"version" = MAP_CURRENT_VERSION,
-				"map_name" = virtual_map.map_name,
-				"map_path" = CUSTOM_MAP_PATH,
-				"map_file" = "[map_file]",
-				"shuttles" = virtual_map.shuttles,
-			)
+		VM.map_path = CUSTOM_MAP_PATH
+		VM.map_file = "[map_file]"
+		VM.config_filename = PATH_TO_NEXT_MAP_JSON
+		var/json_value = list(
+			"map_name" = VM.map_name,
+			"map_path" = VM.map_path,
+			"map_file" = VM.map_file,
+			"shuttles" = VM.shuttles
+		)
 
 		// If the file isn't removed text2file will just append.
 		if(fexists(PATH_TO_NEXT_MAP_JSON))

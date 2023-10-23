@@ -1,22 +1,16 @@
 /// Used for all kinds of weather, ex. lavaland ash storms.
 SUBSYSTEM_DEF(weather)
 	name = "Weather"
-	flags = SS_BACKGROUND
+	flags = SS_BACKGROUND | SS_NO_INIT
 	wait = 10
 	runlevels = RUNLEVEL_GAME
-	var/list/processing = list()
-	var/list/eligible_zlevels = list()
-	var/list/next_hit_by_zlevel = list() //Used by barometers to know when the next storm is coming
+	var/list/weather_controllers = list()
 
 /datum/controller/subsystem/weather/fire()
-	// process active weather
-	for(var/V in processing)
-		var/datum/weather/our_event = V
-		if(our_event.aesthetic || our_event.stage != MAIN_STAGE)
-			continue
-		for(var/mob/act_on as anything in GLOB.mob_living_list)
-			if(our_event.can_weather_act(act_on))
-				our_event.weather_act(act_on)
+	// process active weather controllers
+	for(var/i in weather_controllers)
+		var/datum/weather_controller/iterated_controller = i
+		iterated_controller.process()
 
 	// start random weather on relevant levels
 	for(var/z in eligible_zlevels)
@@ -85,3 +79,11 @@ SUBSYSTEM_DEF(weather)
 ///Returns an active storm by its type
 /datum/controller/subsystem/weather/proc/get_weather_by_type(type)
 	return locate(type) in processing
+/datum/controller/subsystem/weather/proc/GetAllCurrentWeathers()
+	var/list/returned_weathers = list()
+	for(var/i in weather_controllers)
+		var/datum/weather_controller/iterated_controller = i
+		if(iterated_controller.current_weathers)
+			for(var/b in iterated_controller.current_weathers)
+				returned_weathers += iterated_controller.current_weathers[b]
+	return returned_weathers

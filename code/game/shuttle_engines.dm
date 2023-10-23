@@ -21,7 +21,9 @@
 	///How well the engine affects the ship's speed.
 	var/engine_power = 1
 	///Construction state of the Engine.
-	var/engine_state = ENGINE_WELDED //welding shmelding //i love welding
+	var/engine_state = ENGINE_WELDED //welding shmelding
+	var/extension_type = /datum/shuttle_extension/engine/burst
+	var/datum/shuttle_extension/engine/extension
 
 	///The mobile ship we are connected to.
 	var/datum/weakref/connected_ship_ref
@@ -50,7 +52,10 @@
 /obj/machinery/power/shuttle_engine/Destroy()
 	if(engine_state == ENGINE_WELDED)
 		alter_engine_power(-engine_power)
+		RemoveExtension()
 	unsync_ship()
+	if(extension)
+		qdel(extension)
 	return ..()
 
 /obj/machinery/power/shuttle_engine/examine(mob/user)
@@ -83,6 +88,34 @@
 		port.engine_list -= src
 		port.current_engine_power -= initial(engine_power)
 	connected_ship_ref = null
+
+/obj/structure/shuttle/engine/Initialize()
+	. = ..()
+	if(engine_state == ENGINE_WELDED)
+		AddComponent(/datum/component/engine_effect)
+		if(extension_type)
+			extension = new extension_type()
+			ApplyExtension()
+
+/obj/structure/shuttle/engine/proc/DrawThrust()
+	SEND_SIGNAL(src, COMSIG_ENGINE_DRAWN_POWER)
+
+/obj/structure/shuttle/engine/proc/ApplyExtension()
+	if(!extension)
+		return
+	if(SSshuttle.is_in_shuttle_bounds(src))
+		var/obj/docking_port/mobile/M = SSshuttle.get_containing_shuttle(src)
+		if(M)
+			extension.AddToShuttle(M)
+	else
+		var/datum/space_level/level = SSmapping.z_list[z]
+		if(level && level.related_overmap_object && level.is_overmap_controllable)
+			extension.AddToZLevel(level)
+
+/obj/structure/shuttle/engine/proc/RemoveExtension()
+	if(!extension)
+		return
+	extension.RemoveExtension()
 
 //Ugh this is a lot of copypasta from emitters, welding need some boilerplate reduction
 /obj/machinery/power/shuttle_engine/can_be_unfasten_wrench(mob/user, silent)
@@ -124,6 +157,7 @@
 				engine_state = ENGINE_WELDED
 				to_chat(user, span_notice("You weld \the [src] to the floor."))
 				alter_engine_power(engine_power)
+				ApplyExtension()
 
 		if(ENGINE_WELDED)
 			if(!tool.tool_start_check(user, amount=round(ENGINE_WELDTIME / 5)))
@@ -137,6 +171,7 @@
 				engine_state = ENGINE_WRENCHED
 				to_chat(user, span_notice("You cut \the [src] free from the floor."))
 				alter_engine_power(-engine_power)
+				RemoveExtension()
 	return TRUE
 
 //Propagates the change to the shuttle.
@@ -153,8 +188,16 @@
 	icon_state = "heater"
 	circuit = /obj/item/circuitboard/machine/engine/heater
 	engine_power = 0 // todo make these into 2x1 parts
+	extension_type = null
 
-/obj/machinery/power/shuttle_engine/propulsion
+/obj/structure/shuttle/engine/platform
+	name = "engine platform"
+	icon_state = "platform"
+	desc = "A platform for engine components."
+	engine_power = 0
+	extension_type = null
+
+/obj/structure/shuttle/engine/propulsion
 	name = "propulsion engine"
 	icon_state = "propulsion"
 	desc = "A standard reliable bluespace engine used by many forms of shuttles."
@@ -186,6 +229,13 @@
 	icon_state = "burst_r"
 
 /obj/machinery/power/shuttle_engine/large
+/obj/structure/shuttle/engine/router
+	name = "engine router"
+	icon_state = "router"
+	desc = "Redirects around energized particles in engine structures."
+	extension_type = null
+
+/obj/structure/shuttle/engine/large
 	name = "engine"
 	icon = 'icons/obj/fluff/2x2.dmi'
 	icon_state = "large_engine"

@@ -66,7 +66,7 @@
 	return
 
 /turf/open/floor/glass/icemoon
-	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
+	initial_gas_mix = PLANETARY_ATMOS
 
 /turf/open/floor/glass/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -81,7 +81,7 @@
 	alpha_to_leave = 206
 
 /turf/open/floor/glass/reinforced/icemoon
-	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
+	initial_gas_mix = PLANETARY_ATMOS
 
 /turf/open/floor/glass/reinforced/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -97,7 +97,7 @@
 	alpha_to_leave = 255
 
 /turf/open/floor/glass/plasma/icemoon
-	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
+	initial_gas_mix = PLANETARY_ATMOS
 
 /turf/open/floor/glass/plasma/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -113,7 +113,7 @@
 	alpha_to_leave = 206
 
 /turf/open/floor/glass/reinforced/plasma/icemoon
-	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
+	initial_gas_mix = PLANETARY_ATMOS
 
 /turf/open/floor/glass/reinforced/plasma/airless
 	initial_gas_mix = AIRLESS_ATMOS

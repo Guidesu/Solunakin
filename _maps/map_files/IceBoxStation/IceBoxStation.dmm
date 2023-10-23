@@ -1366,7 +1366,7 @@
 	dir = 6
 	},
 /turf/open/misc/dirt{
-	initial_gas_mix = "ICEMOON_ATMOS"
+	initial_gas_mix = "PLANETARY_ATMOS"
 	},
 /area/icemoon/underground/explored)
 "awz" = (
@@ -9875,7 +9875,7 @@
 "cSj" = (
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/open/misc/dirt{
-	initial_gas_mix = "ICEMOON_ATMOS"
+	initial_gas_mix = "PLANETARY_ATMOS"
 	},
 /area/icemoon/underground/explored)
 "cSu" = (
@@ -13698,7 +13698,7 @@
 /area/station/maintenance/starboard/aft)
 "ebB" = (
 /turf/open/misc/dirt{
-	initial_gas_mix = "ICEMOON_ATMOS"
+	initial_gas_mix = "PLANETARY_ATMOS"
 	},
 /area/icemoon/underground/explored)
 "ebC" = (
@@ -13960,7 +13960,7 @@
 "efM" = (
 /obj/structure/closet/crate/grave,
 /turf/open/misc/dirt{
-	initial_gas_mix = "ICEMOON_ATMOS"
+	initial_gas_mix = "PLANETARY_ATMOS"
 	},
 /area/icemoon/underground/explored)
 "efV" = (
@@ -35241,7 +35241,7 @@
 	dir = 9
 	},
 /turf/open/misc/dirt{
-	initial_gas_mix = "ICEMOON_ATMOS"
+	initial_gas_mix = "PLANETARY_ATMOS"
 	},
 /area/icemoon/underground/explored)
 "kOk" = (
@@ -41134,7 +41134,7 @@
 	pixel_y = 32
 	},
 /turf/open/misc/dirt{
-	initial_gas_mix = "ICEMOON_ATMOS"
+	initial_gas_mix = "PLANETARY_ATMOS"
 	},
 /area/icemoon/underground/explored)
 "mFU" = (
@@ -49613,7 +49613,7 @@
 	dir = 10
 	},
 /turf/open/misc/dirt{
-	initial_gas_mix = "ICEMOON_ATMOS"
+	initial_gas_mix = "PLANETARY_ATMOS"
 	},
 /area/icemoon/underground/explored)
 "pgw" = (
@@ -56010,7 +56010,7 @@
 	dir = 8
 	},
 /turf/open/misc/dirt{
-	initial_gas_mix = "ICEMOON_ATMOS"
+	initial_gas_mix = "PLANETARY_ATMOS"
 	},
 /area/icemoon/underground/explored)
 "rcj" = (
@@ -63473,7 +63473,7 @@
 "tuk" = (
 /obj/structure/closet/crate/grave,
 /turf/open/misc/dirt/dark{
-	initial_gas_mix = "ICEMOON_ATMOS"
+	initial_gas_mix = "PLANETARY_ATMOS"
 	},
 /area/icemoon/underground/explored)
 "tur" = (
@@ -64512,7 +64512,7 @@
 	dir = 5
 	},
 /turf/open/misc/dirt/dark{
-	initial_gas_mix = "ICEMOON_ATMOS"
+	initial_gas_mix = "PLANETARY_ATMOS"
 	},
 /area/icemoon/underground/explored)
 "tJE" = (
@@ -68236,7 +68236,7 @@
 /area/station/science/ordnance/office)
 "uXk" = (
 /turf/open/misc/dirt/dark{
-	initial_gas_mix = "ICEMOON_ATMOS"
+	initial_gas_mix = "PLANETARY_ATMOS"
 	},
 /area/icemoon/underground/explored)
 "uXm" = (
@@ -78332,7 +78332,7 @@
 	dir = 4
 	},
 /turf/open/misc/dirt{
-	initial_gas_mix = "ICEMOON_ATMOS"
+	initial_gas_mix = "PLANETARY_ATMOS"
 	},
 /area/icemoon/underground/explored)
 "yaD" = (

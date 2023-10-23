@@ -44,27 +44,33 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/mining)
 "j" = (
-/obj/machinery/power/shuttle_engine/heater,
-/obj/structure/window/reinforced/spawner/directional/north{
-	layer = 2.9
-	},
-/obj/structure/window/reinforced/spawner/directional/west,
-/obj/structure/window/reinforced/spawner/directional/east,
-/turf/open/floor/plating,
+/obj/structure/shuttle/engine/heater,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
+/turf/open/floor/mineral/titanium/blue,
 /area/shuttle/mining)
 "k" = (
 /obj/structure/ore_box,
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/mining)
 "l" = (
-/obj/machinery/power/shuttle_engine/propulsion/burst,
-/turf/open/floor/plating/airless,
+/obj/machinery/atmospherics/components/unary/engine,
+/turf/open/floor/plating,
+/area/shuttle/mining)
+"P" = (
+/obj/structure/table,
+/obj/item/wrench,
+/turf/open/floor/mineral/titanium/blue,
 /area/shuttle/mining)
 "Q" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
 /turf/open/floor/mineral/titanium,
+/area/shuttle/mining)
+"W" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible,
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/turf/open/floor/mineral/titanium/blue,
 /area/shuttle/mining)
 
 (1,1,1) = {"
@@ -78,7 +84,7 @@ a
 "}
 (2,1,1) = {"
 a
-c
+P
 e
 g
 f
@@ -90,7 +96,7 @@ b
 d
 Q
 e
-f
+W
 j
 l
 "}

@@ -47,8 +47,8 @@
 	icon_state = "wasteland"
 	base_icon_state = "wasteland"
 	baseturfs = /turf/open/misc/asteroid/basalt/wasteland
-	dig_result = /obj/item/stack/ore/glass/basalt
-	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
+	digResult = /obj/item/stack/ore/glass/basalt
+	initial_gas_mix = PLANETARY_ATMOS
 	slowdown = 0.5
 	floor_variance = 30
 

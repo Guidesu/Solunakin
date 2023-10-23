@@ -32,10 +32,27 @@
 	if(!isnull(lab_rat.internal))
 		TEST_ASSERT(source.toggle_internals(lab_rat) && isnull(lab_rat.internal), "toggle_internals() failed to close internals")
 
-	// Empty internals suffocation.
-	lab_rat = allocate(/mob/living/carbon/human/consistent)
-	source = equip_labrat_internals(lab_rat, /obj/item/tank/internals/emergency_oxygen/empty)
-	TEST_ASSERT(source.toggle_internals(lab_rat) && !isnull(lab_rat.internal), "Plasmaman toggle_internals() failed to toggle internals")
+	TEST_ASSERT(!lab_rat.has_alert(ALERT_NOT_ENOUGH_PLASMA), "Plasmamen can't get a full breath from a standard plasma tank")
+	lab_rat.clear_alert(ALERT_NOT_ENOUGH_PLASMA)
+
+	//Prep the mob
+	source.toggle_internals(lab_rat)
+	TEST_ASSERT(!lab_rat.internal, "Plasmaman toggle_internals() failed to toggle internals")
+
+/// Tests to make sure ashwalkers can breath from the lavaland air
+/datum/unit_test/breath_sanity_ashwalker
+
+/datum/unit_test/breath_sanity_ashwalker/Run()
+	var/mob/living/carbon/human/species/lizard/ashwalker/lab_rat = allocate(/mob/living/carbon/human/species/lizard/ashwalker)
+
+	//Prep the mob
+	lab_rat.forceMove(run_loc_floor_bottom_left)
+
+	var/turf/open/to_fill = run_loc_floor_bottom_left
+	//Prep the floor
+	to_fill.initial_gas_mix = PLANETARY_ATMOS
+	to_fill.air = to_fill.create_gas_mixture()
+
 	lab_rat.breathe()
 	TEST_ASSERT(lab_rat.failed_last_breath && lab_rat.has_alert(ALERT_NOT_ENOUGH_OXYGEN), "Humans should suffocate from empty o2 tanks")
 
