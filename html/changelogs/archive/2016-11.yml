@@ -455,7 +455,7 @@
   - bugfix: Roundstart airlock electronics now properly generate the correct accesses
   - bugfix: tgui windows will now close on round end
   Gun Hog:
-  - bugfix: Syndicate Medical Cyborg hyposprays now properly work through Operative
+  - bugfix: Symphionia Medical Cyborg hyposprays now properly work through Operative
       hardsuits and other thick clothing.
   Joan:
   - tweak: Cogscarabs will once again convert metal, rods, and plasteel directly to

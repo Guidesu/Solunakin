@@ -1409,7 +1409,7 @@
 "kN" = (
 /obj/machinery/porta_turret/syndicate{
 	dir = 6;
-	faction = list("Syndicate","neutral")
+	faction = list("Symphionia","neutral")
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ruin/syndicate_lava_base/main)
@@ -2185,7 +2185,7 @@
 "sE" = (
 /obj/machinery/porta_turret/syndicate{
 	dir = 5;
-	faction = list("Syndicate","neutral")
+	faction = list("Symphionia","neutral")
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ruin/syndicate_lava_base/main)
@@ -2565,7 +2565,7 @@
 "wn" = (
 /obj/machinery/porta_turret/syndicate{
 	dir = 10;
-	faction = list("Syndicate","neutral")
+	faction = list("Symphionia","neutral")
 	},
 /turf/closed/wall/r_wall/syndicate,
 /area/ruin/syndicate_lava_base/main)
@@ -4286,7 +4286,7 @@
 "Mk" = (
 /obj/machinery/porta_turret/syndicate{
 	dir = 10;
-	faction = list("Syndicate","neutral")
+	faction = list("Symphionia","neutral")
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ruin/syndicate_lava_base/main)
@@ -4389,7 +4389,7 @@
 	},
 /mob/living/carbon/human/species/monkey{
 	ai_controller = null;
-	faction = list("neutral","Syndicate")
+	faction = list("neutral","Symphionia")
 	},
 /obj/structure/chair/office/light,
 /turf/open/floor/iron/white,
@@ -5041,7 +5041,7 @@
 "Tv" = (
 /obj/machinery/porta_turret/syndicate{
 	dir = 9;
-	faction = list("Syndicate","neutral")
+	faction = list("Symphionia","neutral")
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ruin/syndicate_lava_base/main)

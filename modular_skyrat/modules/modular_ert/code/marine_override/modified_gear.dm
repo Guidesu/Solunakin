@@ -10,7 +10,7 @@
 
 /obj/item/storage/box/survival/engineer/marine
 	name = "military survival box"
-	desc = "A box issued to Nanotrasen space marines, containing field essentials. This one is labelled to contain an extended-capacity tank."
+	desc = "A box issued to Symphionia space marines, containing field essentials. This one is labelled to contain an extended-capacity tank."
 	illustration = "extendedtank"
 	internal_type = /obj/item/tank/internals/emergency_oxygen/engi
 

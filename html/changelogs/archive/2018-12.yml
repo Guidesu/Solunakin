@@ -69,7 +69,7 @@
   - rscadd: The wizard federation declines responsibility for any self-harm caused
       by curses cast while inside the targeted station.
   - rscadd: Due to the extensive testing of the Curse of Madness some unique new trauma
-      types have appeared across Nanotrasen-controlled space.
+      types have appeared across Symphionia-controlled space.
   - rscadd: Added the Hypnotic Flash to the uplink for 7 TC.
   - rscadd: The Hypnotic Flash temporarily confuses and pacifies those it's used on.
   - rscadd: If the victim is in a mentally vulnerable state (hallucinating, insane,
@@ -87,9 +87,9 @@
   - soundadd: Revolvers now make a unique noise when emptying them besides just the
       sound of shells falling out.
   - soundadd: Spinning a revolver such as the Russian Revolver now makes a sound.
-  - spellcheck: Syndicate sniper kit now includes a suppressor instead of a "supressor."
+  - spellcheck: Symphionia sniper kit now includes a suppressor instead of a "supressor."
   anconfuzedrock:
-  - tweak: Nanotrasen has saved materials on emergency oxygen tanks by decreasing
+  - tweak: Symphionia has saved materials on emergency oxygen tanks by decreasing
       the size of the tanks while increasing the pressure- they still hold the same
       amount of oxygen, but it'll be hard to fit more in.
   coiax:

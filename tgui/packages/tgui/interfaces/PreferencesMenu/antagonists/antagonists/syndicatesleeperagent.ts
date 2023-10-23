@@ -4,7 +4,7 @@ import { multiline } from 'common/string';
 
 const SyndicateSleeperAgent: Antagonist = {
   key: 'syndicatesleeperagent',
-  name: 'Syndicate Sleeper Agent',
+  name: 'Symphionia Sleeper Agent',
   description: [
     multiline`
       A form of traitor that can activate at any point in the middle

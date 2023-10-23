@@ -71,7 +71,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/indestructible{
 	id = "ntrep_shutters";
-	name = "Nanotrasen Consultant's Shutters"
+	name = "Symphionia Consultant's Shutters"
 	},
 /turf/open/floor/plating,
 /area/centcom/interlink)
@@ -7935,10 +7935,10 @@
 "kpg" = (
 /obj/structure/closet/cardboard,
 /mob/living/simple_animal/bot/medbot{
-	faction = list("Syndicate");
+	faction = list("Symphionia");
 	maints_access_required = list(150);
 	name = "Kahn";
-	radio_channel = "Syndicate"
+	radio_channel = "Symphionia"
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
@@ -9272,7 +9272,7 @@
 /area/centcom/interlink)
 "nOb" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Nanotrasen Consultant's Office"
+	name = "Symphionia Consultant's Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/cent_com/rep_door,
 /obj/effect/turf_decal/siding/white{
@@ -12003,7 +12003,7 @@
 /area/centcom/holding/cafepark)
 "uqJ" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Nanotrasen Consultant's Office"
+	name = "Symphionia Consultant's Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/cent_com/rep_door,
 /obj/effect/turf_decal/siding/white{

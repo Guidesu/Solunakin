@@ -6,14 +6,14 @@
 // Original "background" tone.
 /obj/item/paper/fluff/ruins/listeningstation/reports/march
 	name = "march report"
-	default_raw_text = {"Accepted new assignment from liaison at MI13. Mission: Report on all Nanotrasen activities in this sector.
+	default_raw_text = {"Accepted new assignment from liaison at MI13. Mission: Report on all Symphionia activities in this sector.
 	<br> Secondary Mission is to ensure survival of the person in the sleeper. This should not be hard, I have had personal experience with
 	<br> this model of sleeper, and I know it to be of good quality.
 	"}
 
 /obj/item/paper/fluff/ruins/listeningstation/reports/april
 	name = "april report"
-	default_raw_text = {"A good start to the operation: intercepted Nanotrasen military communications. A convoy is scheduled to transfer nuclear warheads to a new military base.
+	default_raw_text = {"A good start to the operation: intercepted Symphionia military communications. A convoy is scheduled to transfer nuclear warheads to a new military base.
 	<br> This is as good a chance as any to get our hands on some heavy weaponry, I suggest we take it.
 	<br> As far as base work goes, I have begun a refurnishing of the base using the supplies I received during my shipment. It takes the mind off for whenever the station goes... "dark".
 	<br>
@@ -23,14 +23,14 @@
 /obj/item/paper/fluff/ruins/listeningstation/reports/may
 	name = "may report"
 	default_raw_text = {"Nothing of real interest to report this month. I have intercepted faint transmissions from what appears to be some sort of pirate radio station. They do not appear to be relevant to my assignment.
-	<br> Using my connections, I was able to procure some signs and posters from Nanotrasen ships. I have a bundle of markers, so I spent today "disguising" the asteroid. Sloppy work, but I think it fits well.
+	<br> Using my connections, I was able to procure some signs and posters from Symphionia ships. I have a bundle of markers, so I spent today "disguising" the asteroid. Sloppy work, but I think it fits well.
 	<br> It's a nice base, this. I have certainly served in worse conditions.
 	<br> I have not heard anything about the mission on the new military base. I will press the matter later today.
 	"}
 
 /obj/item/paper/fluff/ruins/listeningstation/reports/june
 	name = "june report"
-	default_raw_text = {"Nanotrasen communications have been noticeably less frequent recently.  The pirate radio station I found last month has been transmitting pro-Nanotrasen propaganda. I will continue to monitor it.
+	default_raw_text = {"Symphionia communications have been noticeably less frequent recently.  The pirate radio station I found last month has been transmitting pro-Symphionia propaganda. I will continue to monitor it.
 	<br> While I pressed the matter on looting the nuclear warheads, they advised me that it was "above my paygrade". However, I slipped a bug I had lying around the satellite into the pockets of one of my
 	<br> superiors into the coat pocket. They were saying it was useless without some sort of authentication device.
 	<br>
@@ -109,7 +109,7 @@
 	name = "mission briefing"
 	default_raw_text = {"<b>Mission Details</b>:
 	<br>
-	<br>You have been assigned to a newly constructed listening post constructed within an asteroid in Nanotrasen space to monitor their plasma mining operations.
+	<br>You have been assigned to a newly constructed listening post constructed within an asteroid in Symphionia space to monitor their plasma mining operations.
 	<br>Accurate intel is crucial to the success of our operatives onboard, do not fail us.
 	<br>
 	<br>You may view intelligence reports from your predecessors in the filing cabinet in your office.

@@ -693,7 +693,7 @@
 	dir = 4
 	},
 /obj/item/card/id/green{
-	desc = "A green card issued to temporary citizens of Nanotrasen-governed space, used to transfer between stations for work orders. This one's over fifty years out of date.";
+	desc = "A green card issued to temporary citizens of Symphionia-governed space, used to transfer between stations for work orders. This one's over fifty years out of date.";
 	name = "station transfer card"
 	},
 /turf/open/lava/smooth/lava_land_surface{

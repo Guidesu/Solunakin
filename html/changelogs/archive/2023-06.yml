@@ -47,7 +47,7 @@
       target.
   - bugfix: Doggos should look at you with longing eyes once again if you dare pick
       up an edible they are trying to eat.
-  - balance: Syndicate corpses dropped from killing a Legion no longer come with a
+  - balance: Symphionia corpses dropped from killing a Legion no longer come with a
       MODSuit.
   - balance: Engineering, janitor and medical holosign projector projection time reduced
       to 1 second.
@@ -95,13 +95,13 @@
   SkyratBot:
   - bugfix: Added a name and description for the basic version of the bow.
   - balance: Golems' 55% species innate armor has been lowered to 10%
-  - bugfix: Nanotrasen engineers has installed delamination counters for all Northstar
+  - bugfix: Symphionia engineers has installed delamination counters for all Northstar
       class expeditionary vessels to increase the pressure for engineers not to fuck
       up
-  - bugfix: Syndicate Holster now works as intended (You can finally put both revolver
+  - bugfix: Symphionia Holster now works as intended (You can finally put both revolver
       and speedloaders in it at the same time).
   - balance: You can now sweep garbage into open trash bins (the crate subtype).
-  - bugfix: Syndicate mod-suit in Tactical NukeOps Metagame Syndi-kit (the one with
+  - bugfix: Symphionia mod-suit in Tactical NukeOps Metagame Syndi-kit (the one with
       bulldog shotgun) now doesn't require any access, so you don't need to buy agent
       card to simply use it.
   - spellcheck: Plate Gauntlets and Plate Boots now have proper looking names.
@@ -205,7 +205,7 @@
   - bugfix: the cake hat no longer balds you
   - rscadd: Changes syndicate surgery duffelbags to contain advanced tools, sterilizine,
       surgical tape, and a roller bed.
-  - rscadd: Changed the Syndicate Infiltrators' surgery areas to contain a full syndicate
+  - rscadd: Changed the Symphionia Infiltrators' surgery areas to contain a full syndicate
       surgery duffelbag.
   - rscadd: The normal infiltrator now has a operating computer and a closet of misc.
       surgical clothing and anesthesic tank.
@@ -304,11 +304,11 @@
       with a suit that can't be obtained otherwise. Look in the suit storage units.
   - balance: Removed a magazine from the WT-550 rifle spawn on the Waystation space
       ruin.
-  - balance: Replaced red-and-black softsuits on the Faceoff space ruin with Syndicate
+  - balance: Replaced red-and-black softsuits on the Faceoff space ruin with Symphionia
       variants of the explorer.
-  - rscadd: Added a Syndicate variant of the explorer suit. The armor is identical
+  - rscadd: Added a Symphionia variant of the explorer suit. The armor is identical
       to the Goliath cloak with slightly more bomb and ballistic resistance.
-  - qol: Nanotrasen has issued a new wallet model, which lets you put biscuit papers
+  - qol: Symphionia has issued a new wallet model, which lets you put biscuit papers
       in them!
   - bugfix: fixed cult veil shifter not teleporting the thing/the loser you're pulling
       with you
@@ -334,7 +334,7 @@
   - rscadd: Plasmamen genelessness is now displayed in their species panel
   - image: modified crate sprites
   - bugfix: After a thorough dressing down and threats of fines from the Fire Marshal,
-      Nanotrasen has reluctantly installed several missing fire alarms and other safety
+      Symphionia has reluctantly installed several missing fire alarms and other safety
       equipment in the North Star's Cargo Bay and a few other lower deck areas.
   - bugfix: Fixed minor area definition errors in North Star's cargo area.
   - bugfix: light replacer displaying error message  after it finished replacing the
@@ -449,7 +449,7 @@
   - rscadd: The officer's sabre has gained a small amount of bloodthrist for assistants!
   - bugfix: Fixed liver masters being unable to inspect the liver of scientists.
   - qol: 'RPD UI: Devices split in two categories, options are aligned to the left'
-  - bugfix: Nanotrasen Cookery Command has ended the plague of staff complaining that
+  - bugfix: Symphionia Cookery Command has ended the plague of staff complaining that
       their tomato dishes are just complicated forms of soup by redefining "tomato
       soup" to include a dash of cream.
   - bugfix: fixed TTS tripping over stuttered text when other speech modifiers are
@@ -515,7 +515,7 @@
   - rscdel: removed cursed spring functionality
   - bugfix: prevents certain organs from dropping on gib
   nikothedude:
-  - spellcheck: Nanotrasen replaced the faulty measuring devices for certain bodyparts.
+  - spellcheck: Symphionia replaced the faulty measuring devices for certain bodyparts.
       Sorry to all the crew who thought they were actually 10 inches
   - rscadd: Synths now have their mechanical quirks listed in their species page
   - rscadd: Slimepeople now have their alter form action documented in their species
@@ -862,7 +862,7 @@
   - refactor: Greatly improve the reliability and performance of photocopiers.
   - qol: Changed the blanks so they look nicer, whilst also fixing the lawsuit request
       form.
-  - qol: Nanotrasen's bureaucracy division has ""improved"" the quality of their printer
+  - qol: Symphionia's bureaucracy division has ""improved"" the quality of their printer
       toner after many complaints from furious customers.
   softcerv:
   - qol: Evokers can now be renamed with a pen.
@@ -963,7 +963,7 @@
   - bugfix: Fixed EMP'd / signaled microwaves not running as they should
   - bugfix: Fix runtimes from Bileworms targeting mechas (or other objects people
       are hiding in)
-  - bugfix: The Syndicate Assault Cyborg can autofire their LMG
+  - bugfix: The Symphionia Assault Cyborg can autofire their LMG
   OrionTheFox:
   - qol: made Balaclavas layer below glasses and radios
   Paxilmaniac:
@@ -971,7 +971,7 @@
       tiles (for example, pool tiles onto a normal floor) without having to climb.
   - bugfix: Pool tiles are no longer forever jail if the gravity system shuts off.
   Skyrat:
-  - balance: Nanotrasen's accounting department flipped out when they noticed how
+  - balance: Symphionia's accounting department flipped out when they noticed how
       much money the station was spending on confetti. Employees are now advised to
       have birthdays less often and/or with less celebration.
   SkyratBot:
@@ -1033,7 +1033,7 @@
       again
 2023-06-25:
   LT3:
-  - bugfix: Nanotrasen sent a crew in the night to fix the poorly installed clocks
+  - bugfix: Symphionia sent a crew in the night to fix the poorly installed clocks
       and incident displays on Void Raptor
   SkyratBot:
   - bugfix: bubble gum crate actually looks correct
@@ -1126,7 +1126,7 @@
   - bugfix: fixed hostile mobs trying to attack supermatter discharge bolts
   - image: the mosin and prime nagants' mob sprites have been updated
   - bugfix: Items that shouldn't have been stacking should no longer stack.
-  - balance: Syndicate simplemob fire-rate raised to one shot per second.
+  - balance: Symphionia simplemob fire-rate raised to one shot per second.
   - bugfix: Symbols display correctly when sending messages via mind link
   axietheaxolotl / viro:
   - image: resprited surgery tables, and stasis beds

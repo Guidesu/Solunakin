@@ -2695,7 +2695,7 @@
 "VE" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "SBC_corvette_bolt";
-	name = "Syndicate Corvette Airlock"
+	name = "Symphionia Corvette Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium,

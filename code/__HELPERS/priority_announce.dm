@@ -60,7 +60,7 @@
 			header = MAJOR_ANNOUNCEMENT_TITLE("Captain's Announcement")
 			GLOB.news_network.submit_article(text, "Captain's Announcement", "Station Announcements", null)
 		if(ANNOUNCEMENT_TYPE_SYNDICATE)
-			header = MAJOR_ANNOUNCEMENT_TITLE("Syndicate Captain's Announcement")
+			header = MAJOR_ANNOUNCEMENT_TITLE("Symphionia Captain's Announcement")
 		else
 			header += generate_unique_announcement_header(title, sender_override)
 

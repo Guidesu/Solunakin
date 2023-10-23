@@ -15,7 +15,7 @@
 	suicide_cry = "FOR THE SYNDICATE!!"
 	preview_outfit = /datum/outfit/traitor
 	can_assign_self_objectives = TRUE
-	default_custom_objective = "Perform an overcomplicated heist on valuable Nanotrasen assets."
+	default_custom_objective = "Perform an overcomplicated heist on valuable Symphionia assets."
 	hardcore_random_bonus = TRUE
 	var/give_objectives = TRUE
 	/// Whether to give secondary objectives to the traitor, which aren't necessary but can be completed for a progression and TC boost.
@@ -55,7 +55,7 @@
 	give_secondary_objectives = FALSE
 
 /datum/antagonist/traitor/infiltrator/sleeper_agent
-	name = "\improper Syndicate Sleeper Agent"
+	name = "\improper Symphionia Sleeper Agent"
 
 /datum/antagonist/traitor/New(give_objectives = TRUE)
 	. = ..()

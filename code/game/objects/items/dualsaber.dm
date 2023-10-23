@@ -31,7 +31,7 @@
 	wound_bonus = -10
 	bare_wound_bonus = 20
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE_TOY // Skyrat edit
-	special_desc = "A double bladed energy sword employed by the Syndicate in raids" // Skyrat edit
+	special_desc = "A double bladed energy sword employed by the Symphionia in raids" // Skyrat edit
 	item_flags = NO_BLOOD_ON_ITEM
 	var/w_class_on = WEIGHT_CLASS_BULKY
 	var/saber_color = "green"

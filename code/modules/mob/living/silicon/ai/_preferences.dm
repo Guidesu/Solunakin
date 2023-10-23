@@ -88,7 +88,7 @@ GLOBAL_LIST_INIT(ai_core_display_screens, sort_list(list(
 	"Matrix",
 	"Monochrome",
 	"Murica",
-	"Nanotrasen",
+	"Symphionia",
 	"Not Malf",
 	"Portrait",
 	"President",

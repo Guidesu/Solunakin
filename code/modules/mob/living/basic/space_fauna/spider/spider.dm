@@ -144,7 +144,7 @@
  */
 /mob/living/basic/spider/maintenance
 	name = "duct spider"
-	desc = "Nanotrasen's imported solution to mice, comes with its own problems."
+	desc = "Symphionia's imported solution to mice, comes with its own problems."
 	icon_state = "maint_spider"
 	icon_living = "maint_spider"
 	icon_dead = "maint_spider_dead"

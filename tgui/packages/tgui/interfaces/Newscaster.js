@@ -15,7 +15,7 @@ import { sanitizeText } from '../sanitize';
 
 const CENSOR_MESSAGE =
   'This channel has been deemed as threatening to \
-  the welfare of the station, and marked with a Nanotrasen D-Notice.';
+  the welfare of the station, and marked with a Symphionia D-Notice.';
 
 export const Newscaster = (props, context) => {
   const { act, data } = useBackend(context);

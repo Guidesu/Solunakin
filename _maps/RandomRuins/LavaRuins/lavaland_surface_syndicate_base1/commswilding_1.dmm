@@ -81,7 +81,7 @@
 /obj/structure/table/reinforced,
 /obj/item/radio/intercom{
 	freerange = 1;
-	name = "Syndicate Radio Intercom"
+	name = "Symphionia Radio Intercom"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,

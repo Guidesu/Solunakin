@@ -4,7 +4,7 @@
       removed as a mission. It is now present in normal deep space.
   neersighted:
   - tweak: Attack animations are now directional!
-  - rscadd: Nanotrasen brand Airlock Electronics now sport our latest NanoUI interface!
+  - rscadd: Symphionia brand Airlock Electronics now sport our latest NanoUI interface!
       Upgrade your electronics today!
   - bugfix: Cryo now knocks you out.
   - bugfix: Resisting out of cryo has a delay.
@@ -15,12 +15,12 @@
   - tweak: Switches cloak usage to overclothing slot
 2015-12-02:
   GunHog:
-  - bugfix: Nanotrasen has discovered a flaw in the weapon recharging station's design
+  - bugfix: Symphionia has discovered a flaw in the weapon recharging station's design
       that makes it incompatible with the Rapid Part Exchange Device. This has been
       corrected.
   neersighted:
   - tweak: You can now stop pulling by trying to pull the same object again.
-  - rscadd: Nanotrasen is proud to announce that even the dead can use our state of
+  - rscadd: Symphionia is proud to announce that even the dead can use our state of
       the art NanoUI technology.
 2015-12-03:
   Joan:
@@ -49,7 +49,7 @@
   - rscdel: Magic missiles no longer do damage.
 2015-12-06:
   Gun Hog:
-  - rscadd: Nanotrasen is proud to announce that it has improved its Diagnostic HUD
+  - rscadd: Symphionia is proud to announce that it has improved its Diagnostic HUD
       firmware to include the station's automated robot population! New features include
       integrity tracking, Off/On status, and mode tracking! If your little robot friend
       suddenly manages to acquire free will, you will be able to track that as well!
@@ -88,7 +88,7 @@
   - rscadd: Admins can now click entries in the MC tab to debug.
 2015-12-09:
   GunHog:
-  - tweak: Nanotrasen has discovered new strains of Xenomorph which resist penetration
+  - tweak: Symphionia has discovered new strains of Xenomorph which resist penetration
       by known injection devices, including syringes. This seems to only extend to
       the large 'Royal' strains, designed 'Queen' and 'Praetorian'. Extreme caution
       is advised should these specimens escape containment.
@@ -206,7 +206,7 @@
       randomizes your name and appearance.
   - rscadd: The spy bundle now includes a switchblade and Mulligan.
   MMMiracles:
-  - rscadd: A set of coordinates have recently reappeared on the Nanotrasen gateway
+  - rscadd: A set of coordinates have recently reappeared on the Symphionia gateway
       project. Ask your local central official about participation.
   MrStonedOne:
   - tweak: 'Ghosts can now double click on ANY movable thing (ie: not a turf) to orbit
@@ -250,7 +250,7 @@
   bgobandit:
   - rscadd: Lizard tails can now be severed by surgeons with a circular saw and cautery,
       and attached the same way augmented limbs are.
-  - rscadd: The Animal Rights Consortium is horrified by Nanotrasen stations' sudden
+  - rscadd: The Animal Rights Consortium is horrified by Symphionia stations' sudden
       rise of illegal lizard tail trade, with such atrocities as lizardskin hats,
       lizard whips, lizard clubs and even lizard kebab!
   neersighted:
@@ -275,7 +275,7 @@
       to select any area on the station as its landing zone. The pod is one way, so
       don't forget your nuke.
   - rscdel: The teleporter board is no longer available for purchase in the uplink.
-  - rscdel: After finding absolutely nothing of value, Nanotrasen away teams placed
+  - rscdel: After finding absolutely nothing of value, Symphionia away teams placed
       charges and scuttled the abandoned space hotel.
   - rscadd: Metastation now has xenobiology computers.
   - rscadd: Metastation now has escape pod computers.
@@ -392,7 +392,7 @@
   - soundadd: Spacemen now announce when they are changing magazines.
   - rscadd: Command headsets now have a toggle to let you have larger radio speech.
   LanCartwright:
-  - rscdel: The Syndicate Ship no longer spawns with Bulldog shotguns, operative have
+  - rscdel: The Symphionia Ship no longer spawns with Bulldog shotguns, operative have
       been given 10 extra telecrystals instead.
   MrStonedOne:
   - bugfix: Flashes that were emp'ed were incorrectly flashing people in range of
@@ -424,9 +424,9 @@
   - bugfix: Lots of other NanoUI bugs.
 2015-12-31:
   Bawhoppen:
-  - rscadd: Nanotrasen has opened the availability of tactical SWAT gear to station's
+  - rscadd: Symphionia has opened the availability of tactical SWAT gear to station's
       cargo department
-  - rscadd: Due to a new trade agreement with Chinese space suit manufacturers, Nanotrasen
+  - rscadd: Due to a new trade agreement with Chinese space suit manufacturers, Symphionia
       can now obtain basic space suits much cheaper; This has been reflected in the
       cargo prices
   - rscadd: Amateur medieval enthusiasts have found a quick way to easily make wooden

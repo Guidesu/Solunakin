@@ -276,7 +276,7 @@
 /area/shuttle/pirate)
 "aO" = (
 /obj/machinery/porta_turret/syndicate/energy/heavy{
-	faction = list("pirate","Syndicate")
+	faction = list("pirate","Symphionia")
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/shuttle/pirate)
@@ -808,7 +808,7 @@
 /area/shuttle/pirate)
 "Tr" = (
 /obj/machinery/porta_turret/syndicate/energy/heavy{
-	faction = list("pirate","Syndicate");
+	faction = list("pirate","Symphionia");
 	max_integrity = 10000
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,

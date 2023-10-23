@@ -3,7 +3,7 @@
  */
 /datum/techweb/science
 	id = "SCIENCE"
-	organization = "Nanotrasen"
+	organization = "Symphionia"
 	should_generate_points = TRUE
 
 /datum/techweb/science/research_node(datum/techweb_node/node, force = FALSE, auto_adjust_cost = TRUE, get_that_dosh = TRUE)
@@ -13,7 +13,7 @@
 
 /datum/techweb/oldstation
 	id = "CHARLIE"
-	organization = "Nanotrasen"
+	organization = "Symphionia"
 	should_generate_points = TRUE
 
 /datum/techweb/oldstation/New()

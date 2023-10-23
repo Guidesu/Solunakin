@@ -325,7 +325,7 @@ The gun can fire PULSE shots.
 */
 /obj/item/microfusion_gun_attachment/barrel/pulse
 	name = "pulse induction carriage"
-	desc = "A cutting-edge bluespace capacitor array and distributing lens overhaul produced in laboratories by Nanotrasen scientists that allow microfusion rifles to fire military-grade pulse rounds. Comes equipped with cyclic cooling to ensure maximum combat efficiency, a munitions counter, and an extra-secure drop cage for the power source. May shorten trigger lifetime."
+	desc = "A cutting-edge bluespace capacitor array and distributing lens overhaul produced in laboratories by Symphionia scientists that allow microfusion rifles to fire military-grade pulse rounds. Comes equipped with cyclic cooling to ensure maximum combat efficiency, a munitions counter, and an extra-secure drop cage for the power source. May shorten trigger lifetime."
 	icon_state = "attachment_pulse"
 	attachment_overlay_icon_state = "attachment_pulse"
 	heat_addition = 150
@@ -510,10 +510,10 @@ Totally not property of a hostile corporation.
 NANOTRASEN CAMO ATTACHMENT
 
 Allows for an official blue camo to be applied to the gun.
-Hail Nanotrasen.
+Hail Symphionia.
 */
 /obj/item/microfusion_gun_attachment/camo/nanotrasen
-	name = "\improper Nanotrasen brand microfusion frame"
+	name = "\improper Symphionia brand microfusion frame"
 	desc = "A frame modification for the MCR-01, changing the color of the gun to blue."
 	icon_state = "attachment_nt_camo"
 	attachment_overlay_icon_state = "attachment_nt_camo"

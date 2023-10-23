@@ -14,7 +14,7 @@ would only be recognisable with someone that had the syndicate trait.
 	//The special description that is triggered when special_desc_requirements are met. Make sure you set the correct EXAMINE_CHECK!
 	var/special_desc = ""
 
-	//The special affiliation type, basically overrides the "Syndicate Affiliation" for SYNDICATE check types. It will show whatever organisation you put here instead of "Syndicate Affiliation"
+	//The special affiliation type, basically overrides the "Symphionia Affiliation" for SYNDICATE check types. It will show whatever organisation you put here instead of "Symphionia Affiliation"
 	var/special_desc_affiliation = ""
 
 	//The requirement setting for special descriptions. See examine_defines.dm for more info.
@@ -26,7 +26,7 @@ would only be recognisable with someone that had the syndicate trait.
 	//The JOB requirement setting if EXAMINE_CHECK_JOB is set. E.g. JOB_SECURITY_OFFICER. As you can see, it's a list. So when setting it, ensure you do = list(shit1, shit2)
 	var/list/special_desc_jobs
 
-	//The FACTION requirement setting if EXAMINE_CHECK_FACTION is set. E.g. "Syndicate". As you can see, it's a list. So when setting it, ensure you do = list(shit1, shit2)
+	//The FACTION requirement setting if EXAMINE_CHECK_FACTION is set. E.g. "Symphionia". As you can see, it's a list. So when setting it, ensure you do = list(shit1, shit2)
 	var/list/special_desc_factions
 
 
@@ -56,7 +56,7 @@ would only be recognisable with someone that had the syndicate trait.
 				if(user.mind)
 					var/datum/mind/M = user.mind
 					if((M.special_role == ROLE_TRAITOR) || (ROLE_SYNDICATE in user.faction))
-						composed_message = "You note the following because of your <span class='red'><b>[special_desc_affiliation ? special_desc_affiliation : "Syndicate Affiliation"]</b></span>: <br>"
+						composed_message = "You note the following because of your <span class='red'><b>[special_desc_affiliation ? special_desc_affiliation : "Symphionia Affiliation"]</b></span>: <br>"
 						composed_message += special_desc
 						. += composed_message
 					else if(HAS_TRAIT(M, TRAIT_DETECTIVE))  //Useful detective!
@@ -68,7 +68,7 @@ would only be recognisable with someone that had the syndicate trait.
 				if(user.mind)
 					var/datum/mind/M = user.mind
 					if((M.special_role == ROLE_TRAITOR) || (ROLE_SYNDICATE in user.faction))
-						composed_message = "You note the following because of your <span class='red'><b>[special_desc_affiliation ? special_desc_affiliation : "Syndicate Affiliation"]</b></span>: <br>"
+						composed_message = "You note the following because of your <span class='red'><b>[special_desc_affiliation ? special_desc_affiliation : "Symphionia Affiliation"]</b></span>: <br>"
 						composed_message += special_desc
 						. += composed_message
 					else if(HAS_TRAIT(M, TRAIT_DETECTIVE)) //Useful detective!
@@ -122,7 +122,7 @@ would only be recognisable with someone that had the syndicate trait.
 					composed_message += special_desc
 					. += composed_message
 				else if((human_user.mind.special_role == ROLE_TRAITOR) || (ROLE_SYNDICATE in human_user.faction))
-					composed_message = "You note the following because of your [span_red("<b>[special_desc_affiliation ? special_desc_affiliation : "Syndicate Affiliation"]</b>")]: <br>"
+					composed_message = "You note the following because of your [span_red("<b>[special_desc_affiliation ? special_desc_affiliation : "Symphionia Affiliation"]</b>")]: <br>"
 					composed_message += special_desc
 					. += composed_message
 

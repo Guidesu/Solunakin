@@ -45,40 +45,40 @@
 	area_flags = CULT_PERMITTED
 	ambience_index = AMBIENCE_SPOOKY
 
-//Syndicate lavaland base
+//Symphionia lavaland base
 
 /area/ruin/syndicate_lava_base/engineering
-	name = "Syndicate Lavaland Engineering"
+	name = "Symphionia Lavaland Engineering"
 
 /area/ruin/syndicate_lava_base/medbay
-	name = "Syndicate Lavaland Medbay"
+	name = "Symphionia Lavaland Medbay"
 
 /area/ruin/syndicate_lava_base/arrivals
-	name = "Syndicate Lavaland Arrivals"
+	name = "Symphionia Lavaland Arrivals"
 
 /area/ruin/syndicate_lava_base/bar
-	name = "\improper Syndicate Lavaland Bar"
+	name = "\improper Symphionia Lavaland Bar"
 
 /area/ruin/syndicate_lava_base/main
-	name = "\improper Syndicate Lavaland Primary Hallway"
+	name = "\improper Symphionia Lavaland Primary Hallway"
 
 /area/ruin/syndicate_lava_base/cargo
-	name = "\improper Syndicate Lavaland Cargo Bay"
+	name = "\improper Symphionia Lavaland Cargo Bay"
 
 /area/ruin/syndicate_lava_base/chemistry
-	name = "Syndicate Lavaland Chemistry"
+	name = "Symphionia Lavaland Chemistry"
 
 /area/ruin/syndicate_lava_base/virology
-	name = "Syndicate Lavaland Virology"
+	name = "Symphionia Lavaland Virology"
 
 /area/ruin/syndicate_lava_base/testlab
-	name = "\improper Syndicate Lavaland Experimentation Lab"
+	name = "\improper Symphionia Lavaland Experimentation Lab"
 
 /area/ruin/syndicate_lava_base/dormitories
-	name = "\improper Syndicate Lavaland Dormitories"
+	name = "\improper Symphionia Lavaland Dormitories"
 
 /area/ruin/syndicate_lava_base/telecomms
-	name = "\improper Syndicate Lavaland Telecommunications"
+	name = "\improper Symphionia Lavaland Telecommunications"
 
 //Xeno Nest
 

@@ -64,7 +64,7 @@
 	SIGNAL_HANDLER
 	buffer = null
 
-// Syndicate device disguised as a multitool; it will turn red when an AI camera is nearby.
+// Symphionia device disguised as a multitool; it will turn red when an AI camera is nearby.
 
 /obj/item/multitool/ai_detect
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // Skyrat edit

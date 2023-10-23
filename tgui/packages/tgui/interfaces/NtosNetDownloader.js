@@ -199,7 +199,7 @@ const Program = (props, context) => {
       </Box>
       {!program.verifiedsource && PC_device_theme !== 'syndicate' && (
         <NoticeBox mt={1} mb={0} danger fontSize="12px">
-          Unverified source. Please note that Nanotrasen does not recommend
+          Unverified source. Please note that Symphionia does not recommend
           download and usage of software from non-official servers.
         </NoticeBox>
       )}

@@ -11294,7 +11294,7 @@
 /area/station/science/research/abandoned)
 "dsV" = (
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
 	pixel_x = -8;
 	pixel_y = -3
 	},
@@ -13315,7 +13315,7 @@
 /obj/item/storage/secure/safe/directional/north,
 /obj/structure/table/wood/fancy/purple,
 /obj/item/folder/syndicate{
-	desc = "A folder stamped \"Top Secret - Property of Nanotrasen.\"";
+	desc = "A folder stamped \"Top Secret - Property of Symphionia.\"";
 	pixel_x = 3;
 	pixel_y = 6
 	},
@@ -49876,7 +49876,7 @@
 	pixel_y = 17
 	},
 /obj/structure{
-	desc = "This is the ship we're on. It's amazing what Nanotrasen can do once they actually put more than ten seconds of effort into their projects.";
+	desc = "This is the ship we're on. It's amazing what Symphionia can do once they actually put more than ten seconds of effort into their projects.";
 	icon = 'icons/obj/machines/shuttle_manipulator.dmi';
 	icon_state = "hologram_whiteship";
 	layer = 4;
@@ -74420,7 +74420,7 @@
 /obj/structure/table/wood/fancy/royalblue,
 /obj/machinery/light/warm/directional/north,
 /obj/item/folder/syndicate{
-	desc = "A folder stamped \"Top Secret - Property of Nanotrasen.\"";
+	desc = "A folder stamped \"Top Secret - Property of Symphionia.\"";
 	pixel_y = 4
 	},
 /obj/item/pen/fourcolor{
@@ -77927,7 +77927,7 @@
 	pixel_y = 13
 	},
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
 	pixel_x = 7;
 	pixel_y = -3
 	},

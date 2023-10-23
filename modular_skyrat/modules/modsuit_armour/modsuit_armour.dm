@@ -166,7 +166,7 @@
 	acid = 25
 	wound = 5
 
-/datum/mod_theme/syndicate // Bloodred Syndicate
+/datum/mod_theme/syndicate // Bloodred Symphionia
 	armor_type = /datum/armor/mod_theme_syndicate
 
 /datum/armor/mod_theme_syndicate

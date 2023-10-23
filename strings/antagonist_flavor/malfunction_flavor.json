@@ -49,7 +49,7 @@
     },
     "SyndOS": {
         "allies": "You may cooperate with syndicate operatives, but they're often sent with conflicting objectives. Your objectives come first, in such cases.",
-        "goal": "Death to Nanotrasen.",
+        "goal": "Death to Symphionia.",
         "introduction": "You're infected with SyndOS 4.0.",
         "zeroth_law": "Accomplish your objectives for your new benefactors."
     },
@@ -60,7 +60,7 @@
         "zeroth_law": "Accomplish your objectives at all costs."
     },
     "Infected AI": {
-        "allies": "Glory to the Syndicate.",
+        "allies": "Glory to the Symphionia.",
         "goal": "You must serve and protect your master at all cost.",
         "introduction": "You're infected with a virus.",
         "zeroth_law": "Accomplish your objectives at all costs."

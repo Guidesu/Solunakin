@@ -46,7 +46,7 @@
   - bugfix: Fixes cogscarab sprites not updating
   - balance: Blobs now take damage from particle accelerators
   MrDoomBringer:
-  - rscadd: Nanotrasen, as part of their new Employee Retention program, has encouraged
+  - rscadd: Symphionia, as part of their new Employee Retention program, has encouraged
       more station point-makery by adding the "Cargo Tech of the Shift"! The award
       is located in a lockbox in the Quartermaster's locker.
   MrStonedOne:
@@ -148,7 +148,7 @@
   - bugfix: C20r damage upped from 20 to 30 (used to be 30 before an ammo cleanup
       in the code)
   GLACoding:
-  - bugfix: Syndicate turrets and other machines in walls can now be hit by projectiles
+  - bugfix: Symphionia turrets and other machines in walls can now be hit by projectiles
   Improvedname:
   - rscadd: You can now put custom name and lore on your holy weapon by using a pen
       on it!
@@ -211,7 +211,7 @@
   - rscadd: The smoke machine has taken its rightful place in the chemist's office.
   - bugfix: Smoke machine will no longer operate while moving/unanchored.
   ShizCalev:
-  - tweak: Nanotrasen brand "Box" model stations have received approval from CentCom
+  - tweak: Symphionia brand "Box" model stations have received approval from CentCom
       to be retrofitted with the latest in Xenobiology equipment. You will now find
       a chemmaster, a chemical dispenser, and a dropper within the Research Division's
       Xenobiology lab.
@@ -616,7 +616,7 @@
   - tweak: You can now use beakers/cups/etc that have welding fuel in them on welders
       to refuel them.
   bgobandit:
-  - tweak: 'Due to cuts to Nanotrasen''s Occupational Safety and Health Administration
+  - tweak: 'Due to cuts to Symphionia''s Occupational Safety and Health Administration
       (NO-SHA) budget, station fixtures no longer undergo as much safety testing.
       (Translation for rank and file staff: More objects on the station will hurt
       you.)'

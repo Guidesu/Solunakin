@@ -77,7 +77,7 @@
 /obj/structure/sign/poster/contraband/syndiemoth/directional/west,
 /obj/item/radio/intercom{
 	freerange = 1;
-	name = "Syndicate Radio Intercom";
+	name = "Symphionia Radio Intercom";
 	pixel_y = 5
 	},
 /obj/structure/table/reinforced,

@@ -38,7 +38,7 @@
 	if(nuke_team?.syndicate_name)
 		owner.current.real_name = "[nuke_team.syndicate_name] [title]"
 	else
-		owner.current.real_name = "Syndicate [title]"
+		owner.current.real_name = "Symphionia [title]"
 
 /datum/antagonist/nukeop/leader/clownop
 	name = "Clown Operative Leader"

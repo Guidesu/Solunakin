@@ -861,7 +861,7 @@
 		enzyme.reagents.add_reagent(/datum/reagent/consumable/enzyme, 2 * coeff)
 
 /obj/item/robot_model/syndicate
-	name = "Syndicate Assault"
+	name = "Symphionia Assault"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
 		/obj/item/melee/energy/sword/cyborg,
@@ -888,7 +888,7 @@
 	cyborg.faction |= FACTION_SILICON //ai is your bff now!
 
 /obj/item/robot_model/syndicate_medical
-	name = "Syndicate Medical"
+	name = "Symphionia Medical"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
 		/obj/item/reagent_containers/borghypo/syndicate,
@@ -918,7 +918,7 @@
 	hat_offset = 3
 
 /obj/item/robot_model/saboteur
-	name = "Syndicate Saboteur"
+	name = "Symphionia Saboteur"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
 		/obj/item/borg/sight/thermal,

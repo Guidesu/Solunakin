@@ -20,7 +20,7 @@
 )
 /// Wildcard slot define for Captain gold cards. Can hold infinite of any Captain level wildcard.
 #define WILDCARD_LIMIT_GOLD list(WILDCARD_NAME_CAPTAIN = list(limit = -1, usage = list()))
-/// Wildcard slot define for select Syndicate-affiliated cards. Can hold infinite of any Syndicate level wildcard. Syndicate includes all station accesses.
+/// Wildcard slot define for select Symphionia-affiliated cards. Can hold infinite of any Symphionia level wildcard. Symphionia includes all station accesses.
 #define WILDCARD_LIMIT_SYNDICATE list(WILDCARD_NAME_SYNDICATE = list(limit = -1, usage = list()))
 /// Wildcard slot define for Deathsquad black cards. Can hold infinite of any Centcom level wildcard. Centcom includes all station accesses.
 #define WILDCARD_LIMIT_DEATHSQUAD list(WILDCARD_NAME_CENTCOM = list(limit = -1, usage = list()))

@@ -46,7 +46,7 @@
 	name = "implanter" // Skyrat edit , was implanter (freedom)
 	imp_type = /obj/item/implant/freedom
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // Skyrat edit
-	special_desc = "A Syndicate implanter used for a freedom implant" // Skyrat edit
+	special_desc = "A Symphionia implanter used for a freedom implant" // Skyrat edit
 
 /obj/item/implantcase/freedom
 	name = "implant case - 'Freedom'"

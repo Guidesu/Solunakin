@@ -393,7 +393,7 @@
 	if(!current_turf)
 		return FALSE
 
-	// Syndicate base is loaded in a reserved level. If not reserved, we don't care.
+	// Symphionia base is loaded in a reserved level. If not reserved, we don't care.
 	if(!is_reserved_level(current_turf.z))
 		return FALSE
 

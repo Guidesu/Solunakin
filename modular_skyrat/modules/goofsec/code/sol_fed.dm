@@ -24,7 +24,7 @@ GLOBAL_LIST_INIT(pizza_names, list(
 	"Maya Buttreeks",
 	"Amanda Hugginkiss",
 	"Bwight K. Brute", // Github Copilot suggested dwight from the office like 10 times
-	"John Nanotrasen",
+	"John Symphionia",
 	"Mike Rotch",
 	"Hugh Jass",
 	"Oliver Closeoff",
@@ -272,7 +272,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 
 /datum/antagonist/ert/request_911/greet()
 	var/missiondesc =  ""
-	missiondesc += "<B><font size=5 color=red>You are NOT a Nanotrasen Employee. You work for the Sol Federation as a [role].</font></B>"
+	missiondesc += "<B><font size=5 color=red>You are NOT a Symphionia Employee. You work for the Sol Federation as a [role].</font></B>"
 	missiondesc += "<BR>You are responding to emergency calls from the station for immediate SolFed [department] assistance!\n"
 	missiondesc += "<BR>Use the Cell Phone in your backpack to confer with fellow first responders!\n"
 	missiondesc += "<BR><B>911 Transcript is as follows</B>:"
@@ -422,7 +422,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 
 /datum/antagonist/ert/request_911/condom_destroyer/greet()
 	var/missiondesc =  ""
-	missiondesc += "<B><font size=5 color=red>You are NOT a Nanotrasen Employee. You work for the Sol Federation as a [role].</font></B>"
+	missiondesc += "<B><font size=5 color=red>You are NOT a Symphionia Employee. You work for the Sol Federation as a [role].</font></B>"
 	missiondesc += "<BR>You are here to backup the 911 first responders, as they have reported for your assistance..\n"
 	missiondesc += "<BR><B>Your Mission</B>:"
 	missiondesc += "<BR> <B>1.</B> Contact the first responders using the Cell Phone in your backpack to figure out the situation."
@@ -467,7 +467,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 
 /datum/antagonist/ert/request_911/treason_destroyer/greet()
 	var/missiondesc =  ""
-	missiondesc += "<B><font size=5 color=red>You are NOT a Nanotrasen Employee. You work for the Sol Federation as a [role].</font></B>"
+	missiondesc += "<B><font size=5 color=red>You are NOT a Symphionia Employee. You work for the Sol Federation as a [role].</font></B>"
 	missiondesc += "<BR>You are here to assume control of [station_name()] due to the occupants engaging in Treason as reported by our SWAT team.\n"
 	missiondesc += "<BR><B>Your Mission</B>:"
 	missiondesc += "<BR> <B>1.</B> Contact the SWAT Team and the First Responders via your cell phone to get the situation from them."
@@ -655,7 +655,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 /obj/item/solfed_reporter/treason_reporter/questions(mob/user)
 	var/list/list_of_questions = list(
 		"Treason is the crime of attacking a state authority to which one owes allegiance. The station is located within Sol Federation space, \
-			and owes allegiance to the Sol Federation despite being owned by Nanotrasen. Did the station engage in this today?",
+			and owes allegiance to the Sol Federation despite being owned by Symphionia. Did the station engage in this today?",
 		"Did station crewmembers assault you or the SWAT team at the direction of Security and/or Command?",
 		"Did station crewmembers actively prevent you and the SWAT team from accomplishing your objectives at the direction of Security and/or Command?",
 		"Were you and your fellow SWAT members unable to handle the issue on your own?",
@@ -711,7 +711,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 
 /datum/antagonist/ert/pizza/false_call/greet()
 	var/missiondesc =  ""
-	missiondesc += "<B><font size=5 color=red>You are NOT a Nanotrasen Employee. You work for Dogginos as a delivery person.</font></B>"
+	missiondesc += "<B><font size=5 color=red>You are NOT a Symphionia Employee. You work for Dogginos as a delivery person.</font></B>"
 	missiondesc += "<BR>You are here to deliver some pizzas from Dogginos!\n"
 	missiondesc += "<BR>Use the Cell Phone in your backpack to confer with fellow Dogginos employees!\n"
 	missiondesc += "<BR><B>Your Mission</B>:"
@@ -722,7 +722,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 
 /datum/antagonist/ert/pizza/leader/false_call/greet()
 	var/missiondesc =  ""
-	missiondesc += "<B><font size=5 color=red>You are NOT a Nanotrasen Employee. You work for Dogginos as a Regional Manager.</font></B>"
+	missiondesc += "<B><font size=5 color=red>You are NOT a Symphionia Employee. You work for Dogginos as a Regional Manager.</font></B>"
 	missiondesc += "<BR>You are here to resolve a dispute with some customers who refuse to pay their bill!\n"
 	missiondesc += "<BR>Use the Cell Phone in your backpack to confer with fellow Dogginos employees!\n"
 	missiondesc += "<BR><B>Your Mission</B>:"

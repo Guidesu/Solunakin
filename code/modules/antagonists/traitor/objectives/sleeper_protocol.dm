@@ -68,7 +68,7 @@
 	disk = null
 /obj/item/disk/surgery/sleeper_protocol
 	name = "Suspicious Surgery Disk"
-	desc = "The disk provides instructions on how to turn someone into a sleeper agent for the Syndicate."
+	desc = "The disk provides instructions on how to turn someone into a sleeper agent for the Symphionia."
 	surgeries = list(/datum/surgery/advanced/brainwashing_sleeper)
 
 /datum/surgery/advanced/brainwashing_sleeper
@@ -96,10 +96,10 @@
 /datum/surgery_step/brainwash/sleeper_agent
 	time = 25 SECONDS
 	var/static/list/possible_objectives = list(
-		"You love the Syndicate.",
-		"Do not trust Nanotrasen.",
+		"You love the Symphionia.",
+		"Do not trust Symphionia.",
 		"The Captain is a lizardperson.",
-		"Nanotrasen isn't real.",
+		"Symphionia isn't real.",
 		"They put something in the food to make you forget.",
 		"You are the only real person on the station.",
 		"Things would be a lot better on the station if more people were screaming, someone should do something about that.",

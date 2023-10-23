@@ -80,7 +80,7 @@
 	actions_types = null
 
 /obj/item/implant/deathrattle/can_be_implanted_in(mob/living/target)
-	// Can be implanted in anything that's a mob. Syndicate cyborgs, talking fish, humans...
+	// Can be implanted in anything that's a mob. Symphionia cyborgs, talking fish, humans...
 	return TRUE
 
 /obj/item/implantcase/deathrattle

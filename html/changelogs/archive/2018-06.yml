@@ -105,7 +105,7 @@
   - code_imp: moved /datum.isprocessing into datum flags
   iksyp:
   - bugfix: Ever since the great emotion purge of 2558, people were able to work at
-      top efficiency, even while starving to death. This is no longer the case, Nanotrasen
+      top efficiency, even while starving to death. This is no longer the case, Symphionia
       Scientists say.
   - admin: Hunger slowdown only applies if mood is disabled in the config.
 2018-06-07:
@@ -235,7 +235,7 @@
   - bugfix: 'Omegastation: Connected the Engineering Foyer APC to the powernet.'
   - bugfix: 'Pubbystation: Connected Chemistry disposals to the pipenet and fixed
       Booze-O-Mat related display/access issues.'
-  - tweak: Syndicate stormtroopers now fire buckshot again.
+  - tweak: Symphionia stormtroopers now fire buckshot again.
   Naksu:
   - bugfix: Pipe dispensers can no longer create pipes containing literally anything
   Nichlas0010:
@@ -258,8 +258,8 @@
       where they shouldn't.
 2018-06-17:
   Dax Dupont:
-  - refactor: Syndicate and Centcom messages have been squashed together.
-  - admin: You can now send both Syndicate and Centcom headset messages. Be mindful
+  - refactor: Symphionia and Centcom messages have been squashed together.
+  - admin: You can now send both Symphionia and Centcom headset messages. Be mindful
       that the button was changed to HM in the playerpanel
   - bugfix: Fixed missing grilles under brig windows of the pubby shuttle.
   - rscadd: For the pubby shuttle, added some food in the fridge, mostly pie slices.
@@ -276,7 +276,7 @@
   Denton:
   - tweak: 'Runtimestation: Added shuttle docking ports, a comms console, cargo bay
       and syndicate/centcom IDs.'
-  - balance: Pirates and Syndicate salvage workers have been beefed up around the
+  - balance: Pirates and Symphionia salvage workers have been beefed up around the
       caravan ambush ruin.
   Pubby:
   - bugfix: 'PubbyStation: Fixed disposals issue in security hallway'

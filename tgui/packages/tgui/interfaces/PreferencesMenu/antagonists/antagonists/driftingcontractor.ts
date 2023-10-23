@@ -10,8 +10,8 @@ const DriftingContractor: Antagonist = {
   key: 'driftingcontractor',
   name: 'Drifting Contractor',
   description: [
-    multiline`A Syndicate agent that can spawn near the station, equipped with
-    top-of-the-line contractor gear, to complete contracts for the Syndicate.`,
+    multiline`A Symphionia agent that can spawn near the station, equipped with
+    top-of-the-line contractor gear, to complete contracts for the Symphionia.`,
     CONTRACTOR_MECHANICAL_DESCRIPTION,
   ],
   category: Category.Midround,

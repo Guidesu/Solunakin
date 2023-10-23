@@ -1,6 +1,6 @@
 /obj/item/construction/rcd/arcd/mattermanipulator
 	name = "matter manipulator"
-	desc = "A strange, familiar yet distinctly different analogue to the Nanotrasen standard RCD. Works at range, and can deconstruct reinforced walls. Reload using metal, glass, or plasteel."
+	desc = "A strange, familiar yet distinctly different analogue to the Symphionia standard RCD. Works at range, and can deconstruct reinforced walls. Reload using metal, glass, or plasteel."
 	icon = 'modular_skyrat/master_files/icons/obj/tools.dmi'
 	icon_state = "rcd"
 	worn_icon_state = "RCD"

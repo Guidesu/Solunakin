@@ -1,14 +1,14 @@
 #define NANITE_SLURRY_ORGANIC_PURGE_RATE 4
 #define NANITE_SLURRY_ORGANIC_VOMIT_CHANCE 25
 
-/datum/reagent/medicine/syndicate_nanites //Used exclusively by Syndicate medical cyborgs
+/datum/reagent/medicine/syndicate_nanites //Used exclusively by Symphionia medical cyborgs
 	process_flags = REAGENT_ORGANIC | REAGENT_SYNTHETIC //Let's not cripple synth ops
 
 /datum/reagent/medicine/lesser_syndicate_nanites
 	process_flags = REAGENT_ORGANIC | REAGENT_SYNTHETIC
 
 /datum/reagent/medicine/stimulants
-	process_flags = REAGENT_ORGANIC | REAGENT_SYNTHETIC //Syndicate developed 'accelerants' for synths?
+	process_flags = REAGENT_ORGANIC | REAGENT_SYNTHETIC //Symphionia developed 'accelerants' for synths?
 
 /datum/reagent/medicine/leporazine
 	process_flags = REAGENT_ORGANIC | REAGENT_SYNTHETIC

@@ -1,36 +1,36 @@
-// Syndicate
+// Symphionia
 
 /mob/living/basic/syndicate/melee/anthro
-	name = "Syndicate Shanker"
-	desc = "An anthromorphic red panda member of the Syndicate, wielding a knife."
+	name = "Symphionia Shanker"
+	desc = "An anthromorphic red panda member of the Symphionia, wielding a knife."
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "syndiredpan"
 	icon_living = "syndiredpan"
 
 /mob/living/basic/syndicate/melee/sword/anthro
-	name = "Syndicate Sword Beast"
-	desc = "An anthromorphic fennec member of the Syndicate, wielding an energy sword and shield."
+	name = "Symphionia Sword Beast"
+	desc = "An anthromorphic fennec member of the Symphionia, wielding an energy sword and shield."
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "syndifennec"
 	icon_living = "syndifennec"
 
 /mob/living/basic/syndicate/ranged/anthro
-	name = "Syndicate Pistoleer"
-	desc = "An anthromorphic member of the Syndicate, wielding a pistol."
+	name = "Symphionia Pistoleer"
+	desc = "An anthromorphic member of the Symphionia, wielding a pistol."
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "syndisquirrel"
 	icon_living = "syndisquirrel"
 
 /mob/living/basic/syndicate/ranged/smg/anthro
-	name = "Syndicate Rapid Gunnder"
-	desc = "A moth-person member of the Syndicate, wielding an SMG."
+	name = "Symphionia Rapid Gunnder"
+	desc = "A moth-person member of the Symphionia, wielding an SMG."
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "syndimoth"
 	icon_living = "syndimoth"
 
 /mob/living/basic/syndicate/melee/space/anthro/lizard
-	name = "Syndicate Commando Lizard"
-	desc = "A reptilian member of the Syndicate!"
+	name = "Symphionia Commando Lizard"
+	desc = "A reptilian member of the Symphionia!"
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "syndilizard"
 	icon_living = "syndilizard"
@@ -39,15 +39,15 @@
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "syndicat"
 	icon_living = "syndicat"
-	name = "Syndicate Commando Feline"
-	desc = "An anthromorphic feline member of the Syndicate."
+	name = "Symphionia Commando Feline"
+	desc = "An anthromorphic feline member of the Symphionia."
 
 /mob/living/basic/syndicate/ranged/shotgun/space/stormtrooper/anthro/fox
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "syndifox"
 	icon_living = "syndifox"
-	name = "Syndicate Stormtrooper Fox"
-	desc = "An anthromorphic fox member of the Syndicate."
+	name = "Symphionia Stormtrooper Fox"
+	desc = "An anthromorphic fox member of the Symphionia."
 
 // Cult
 /mob/living/simple_animal/hostile/cult
@@ -700,8 +700,8 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 
 /mob/living/simple_animal/hostile/syndimouse
-	name = "Syndicate Mousepretive"
-	desc = "A mouse in a Syndicate combat MODsuit, built for mice!"
+	name = "Symphionia Mousepretive"
+	desc = "A mouse in a Symphionia combat MODsuit, built for mice!"
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "mouse_operative"
 	icon_living = "mouse_operative"

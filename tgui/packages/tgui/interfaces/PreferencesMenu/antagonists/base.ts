@@ -4,7 +4,7 @@
  *
  * Every file in this folder represents one antagonist.
  *
- * For example "Syndicate Sleeper Agent" -> syndicatesleeperagent.ts
+ * For example "Symphionia Sleeper Agent" -> syndicatesleeperagent.ts
  *
  * "Antagonist" in this context actually means ruleset.
  * This is an important distinction--it means that players can choose to be

@@ -90,7 +90,7 @@
 
 /obj/item/clothing/shoes/jackboots/black
 	name = "dark jackboots"
-	desc = "Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time. These are fully black."
+	desc = "Symphionia-issue Security combat boots for combat scenarios or combat situations. All combat, all the time. These are fully black."
 	icon = 'modular_skyrat/master_files/icons/obj/clothing/shoes.dmi'
 	worn_icon = 'modular_skyrat/master_files/icons/mob/clothing/feet.dmi'
 	icon_state = "blackjack"

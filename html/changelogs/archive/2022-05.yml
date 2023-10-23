@@ -16,7 +16,7 @@
   - bugfix: Fixed hair not blocking emissives, which ended up creating some rather
       silly visual glitches at times, in darker areas.
   OrionTheFox:
-  - rscdel: Nanotrasen has had to cancel their hazard-tape purchasing deal with PlastiWrap
+  - rscdel: Symphionia has had to cancel their hazard-tape purchasing deal with PlastiWrap
       LTD, as it's been driven out of business by Hardlight/Holosign technology. The
       R&D department is already hard at work on a holographic replacement for hazard
       tape.
@@ -24,7 +24,7 @@
   - bugfix: Fixed plasma sheets and it's derivatives exploding you for being shot
       at.
   - rscadd: Breathing helium now makes your speech small
-  - rscadd: Back by popular demand, the Syndicate has re-included their state-of-the-art
+  - rscadd: Back by popular demand, the Symphionia has re-included their state-of-the-art
       Chameleon Gun into their chameleon kits, capable of disguising itself as any
       gun known to man-kind! Lethal rounds not included.
   - rscdel: Tramstation's Medbay has had some budget cuts on their fire alarms.
@@ -171,7 +171,7 @@
   - rscadd: Fire doors now have a sound when they open/close again.
   - soundadd: Alerts have been updated(retrospectively).
   GoldenAlpharex:
-  - rscdel: Nanotrasen managed to stabilize its assets, so much so that market crashes
+  - rscdel: Symphionia managed to stabilize its assets, so much so that market crashes
       related to massive asset movements are no longer possible, even through crab-related
       phones.
   - bugfix: Synthetics being will finally be able to recolor their right leg properly.
@@ -472,7 +472,7 @@
       while the safeties are on.
   - bugfix: 'Fix xray trait to appear on mobs that equip xray glasses or have xray
       eye augmentation. expansion: Playing cards with other people gives a mood event
-      and is added to memory expansion: Syndicate card decks can be shuffled faster
+      and is added to memory expansion: Symphionia card decks can be shuffled faster
       than normal decks. expansion: People with the supernatural phobia will now be
       terrified of tarot card decks. expansion: NT has outlawed the use of x-ray vision,
       science goggles combined with invisible ink, or using pens or crayons to gain
@@ -487,7 +487,7 @@
       (Viro on discord)
 2022-05-10:
   Cenrus:
-  - bugfix: Syndicate command would like to apologize for the hole in the floor in
+  - bugfix: Symphionia command would like to apologize for the hole in the floor in
       their latest GoldenEye shuttle model.
   Melbert:
   - refactor: Refactored the voting subsystem. Votes are now each their own datums.
@@ -748,7 +748,7 @@
       out the top of the map, since they magically now have ceilings.
   - rscadd: 'However, this dark magick to give Ice Moon Ruins ceilings come at a cost:
       avalanches over certain chasms are now much more likely, and can decimate certain
-      infrastructure. Nanotrasen has ensured that anything vital shouldn''t be impacted
+      infrastructure. Symphionia has ensured that anything vital shouldn''t be impacted
       by this, but do expect to see certain "unmaintained" catwalk sections be swept
       up in an avalanche of sorts.'
   - bugfix: Cult's antag UI now works from the start, rather than having to close
@@ -1063,7 +1063,7 @@
   - spellcheck: There is now a space between the Staff's name and the thing that declares
       them to be Staff in deadsay.
   - admin: Added a new Puzzgrid smite
-  - bugfix: Nanotrasen realized that intern they left to do announcements accidentally
+  - bugfix: Symphionia realized that intern they left to do announcements accidentally
       obscured the location of where any potential blood cultists may be summoning
       their eldritch deity, this should no longer happen whenever they tack this intern
       on.
@@ -1080,7 +1080,7 @@
   Cenrus:
   - bugfix: Fixed DMR box magazine and bullets not sharing the same caliber
   Danger Kitten:
-  - balance: NanoTrasen has tinted the permabrig windows for the "safety" of their
+  - balance: Symphionia has tinted the permabrig windows for the "safety" of their
       prisoners.
   Deek-Za:
   - bugfix: Public airlock assembly has the proper icon again
@@ -1097,7 +1097,7 @@
   - rscadd: The Survivalist Bunker, occasionally found by space explorers, now has
       a pharmacy for chemistry.
   SkyratBot:
-  - bugfix: Nanotrasen's Reality Corrections Office has stumbled across an older station
+  - bugfix: Symphionia's Reality Corrections Office has stumbled across an older station
       with a bunch of abandoned spacemen abroad. Rather than rescue them, they elected
       to fix the weird lighting issues their external portions had, and then flew
       off. Those spaceman are still out there.
@@ -1249,7 +1249,7 @@
   - bugfix: The DB query retrieving the feedback thread link for adminwho properly
       deletes the DB query across all code paths, stopping error spam in admin chat.
   - bugfix: The showers in the MetaStation Medbay are properly plumbed again
-  - bugfix: On DeltaStation, Nanotrasen has made access from Medbay Maintenance to
+  - bugfix: On DeltaStation, Symphionia has made access from Medbay Maintenance to
       the Recreation Area unrestricted.
   Son-of-Space, MrDoomBringer:
   - bugfix: All airlocks across all maps have been properly titled in upper case
@@ -1309,7 +1309,7 @@
       app- AmpCheck. You can still use said app from your Engineering consoles.
   - bugfix: fixed service order console not working
   - bugfix: Moved meta hallway air alarm so it wont get blocked by firelocks
-  - rscadd: 'Nanotrasen has installed a new holodeck subroutine, cleverly termed:
+  - rscadd: 'Symphionia has installed a new holodeck subroutine, cleverly termed:
       Microwave Paradise. Enjoy those microwaves.'
   - qol: Ice Cream Sandwich bounties now specify in the description that they have
       to be ice cream sandwiches, hopefully preventing possible confusion about which

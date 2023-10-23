@@ -345,7 +345,7 @@
 
 /obj/item/reagent_containers/cup/bottle/hnz
 	name = "HNZ-1 bottle"
-	desc = "A small bottle of the HNZ-1 pathogen. Nanotrasen Bioweapons inc."
+	desc = "A small bottle of the HNZ-1 pathogen. Symphionia Bioweapons inc."
 	icon = 'modular_skyrat/modules/mutants/icons/extractor.dmi'
 	icon_state = "tvirus_infector"
 	list_reagents = list(/datum/reagent/hnz = 30)

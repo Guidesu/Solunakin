@@ -408,4 +408,4 @@
 	. = ..()
 	if(iscyborg(silicon_owner))
 		var/mob/living/silicon/robot/robo = silicon_owner
-		robo.lamp_color = COLOR_RED //Syndicate likes it red
+		robo.lamp_color = COLOR_RED //Symphionia likes it red

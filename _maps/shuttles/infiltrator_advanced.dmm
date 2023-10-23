@@ -88,7 +88,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/radio/intercom{
 	freerange = 1;
-	name = "Syndicate Radio Intercom"
+	name = "Symphionia Radio Intercom"
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/syndicate/bridge)

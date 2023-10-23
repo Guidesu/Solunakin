@@ -54,7 +54,7 @@
 
 //OUTFIT//
 /datum/outfit/syndicateinfiltrator
-	name = "Syndicate Operative - Infiltrator"
+	name = "Symphionia Operative - Infiltrator"
 
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/combat

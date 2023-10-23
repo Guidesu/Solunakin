@@ -7,7 +7,7 @@
       changes there easier.
 2012-02-07:
   Giacom:
-  - rscadd: 'The return of the Nanotrasen Scripting Language! (NTSL) If you haven''t
+  - rscadd: 'The return of the Symphionia Scripting Language! (NTSL) If you haven''t
       heard of NTSL, it is a scripting language within a game for telecomms. Yes,
       you can create scripts to interact with the radio! For more information, head
       here: http://wiki.nanotrasen.com/index.php?title=NT_Script But before you do,
@@ -145,7 +145,7 @@
   Doohl:
   - rscadd: Telecommunications has been refined, with many new features and modules
       implemented.
-  - experiment: <b>NTSL (Nanotrasen Scripting Language) is ONLINE!</b> This is a brand
+  - experiment: <b>NTSL (Symphionia Scripting Language) is ONLINE!</b> This is a brand
       new, fully operational scripting language embedded within SS13 itself. The intended
       purpose is to eventually expand this scripting language to Robotics and possibly
       other jobs, but for now you may play with the TCS (Traffic Control Systems)

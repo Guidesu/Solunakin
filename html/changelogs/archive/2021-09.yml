@@ -5,7 +5,7 @@
   - code_imp: Changed the Neo-Russkya and the Yangyu's typepaths to reflect their
       actual name.
   Nari Harimoto:
-  - bugfix: Nanotrasen expert roboticists have found an error in cyborg programming
+  - bugfix: Symphionia expert roboticists have found an error in cyborg programming
       which allows them to interact with things farther than they are supposed to.
       some of those errors have been squashed.
   - refactor: can_interact() now has a few less unnesscary overrides and now properly

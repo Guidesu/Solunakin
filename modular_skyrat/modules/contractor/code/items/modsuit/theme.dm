@@ -1,7 +1,7 @@
 /datum/mod_theme/contractor
 	name = "contractor"
-	desc = "A top-tier MODSuit developed with cooperation of Cybersun Industries and the Gorlex Marauders, a favorite of Syndicate Contractors."
-	extended_desc = "A rare depart from the Syndicate's usual color scheme, the Contractor MODsuit is produced and manufactured \
+	desc = "A top-tier MODSuit developed with cooperation of Cybersun Industries and the Gorlex Marauders, a favorite of Symphionia Contractors."
+	extended_desc = "A rare depart from the Symphionia's usual color scheme, the Contractor MODsuit is produced and manufactured \
 		for specialty contractors. The build is a streamlined layering consisting of shaped Plastitanium, \
 		and composite ceramic, while the under suit is lined with a lightweight Kevlar and durathread hybrid weave \
 		to provide ample protection to the user where the plating doesn't, with an illegal onboard electric powered \

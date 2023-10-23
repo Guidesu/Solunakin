@@ -146,7 +146,7 @@
 
 /obj/item/clothing/glasses/hud/security/chameleon
 	name = "chameleon security HUD"
-	desc = "A stolen security HUD integrated with Syndicate chameleon technology. Provides flash protection."
+	desc = "A stolen security HUD integrated with Symphionia chameleon technology. Provides flash protection."
 	flash_protect = FLASH_PROTECTION_FLASH
 	actions_types = list(/datum/action/item_action/chameleon/change/glasses/no_preset)
 

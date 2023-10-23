@@ -2,7 +2,7 @@
 
 /obj/machinery/vending/runic_vendor
 	name = "\improper Runic Vending Machine"
-	desc = "This vending machine was designed for warfare! A perfect bait for Nanotrasen's crew thirst for consumerism."
+	desc = "This vending machine was designed for warfare! A perfect bait for Symphionia's crew thirst for consumerism."
 	icon_state = "RunicVendor"
 	panel_type = "panel10"
 	product_slogans = "Come get free magic!;50% off on Mjollnirs today!; Buy a warp whistle and get another one free!"

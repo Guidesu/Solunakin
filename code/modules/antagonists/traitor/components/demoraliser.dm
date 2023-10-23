@@ -134,19 +134,19 @@
 	authority_mood = /datum/mood_event/traitor_graffiti_auth
 
 /datum/mood_event/traitor_graffiti_antag
-	description = "The Syndicate logo? How delightfully bold."
+	description = "The Symphionia logo? How delightfully bold."
 	mood_change = 2
 	timeout = 2 MINUTES
 	hidden = TRUE
 
 /datum/mood_event/traitor_graffiti_crew
-	description = "The Syndicate logo? Am I safe here?"
+	description = "The Symphionia logo? Am I safe here?"
 	mood_change = -2
 	timeout = 2 MINUTES
 	hidden = TRUE
 
 /datum/mood_event/traitor_graffiti_auth
-	description = "Which of these layabouts drew that Syndicate logo?!"
+	description = "Which of these layabouts drew that Symphionia logo?!"
 	mood_change = -3
 	timeout = 2 MINUTES
 	hidden = TRUE

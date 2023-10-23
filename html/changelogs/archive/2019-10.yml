@@ -67,7 +67,7 @@
   - balance: Secways have less armor and no longer move as fast as running. They're
       now 25% faster than janicarts.
   Firecage:
-  - rscadd: Syndicate Medical Cyborgs and Syndicate Saboteur Cyborgs can now receive
+  - rscadd: Symphionia Medical Cyborgs and Symphionia Saboteur Cyborgs can now receive
       certain cyborg upgrades which normal Medical Cyborgs and Engineering Cyborgs
       can receive. The Pinpointer, RPED, Circuit Manipulator, and the Surgical Processor.
   Floyd:
@@ -204,7 +204,7 @@
   Skoglol:
   - bugfix: Drones and dextrous guardians can now drop things again.
   bandit:
-  - tweak: Nanotrasen has added 0.01% more seasonal charm to their arcade machines.
+  - tweak: Symphionia has added 0.01% more seasonal charm to their arcade machines.
   carlarctg:
   - rscadd: Atmos techs now have their unique gas masks
   - rscadd: captain does too
@@ -405,7 +405,7 @@
   - balance: reflector vest covers arms, reflect chance from 40 to 50
   - imageadd: reflector vest has ARM BANDS
   ShizCalev, TheMythicGhost:
-  - rscdel: Nanotrasen's Department of Supernatural Defense fires the newly built
+  - rscdel: Symphionia's Department of Supernatural Defense fires the newly built
       Wave Motion Gun at Reebe, destroying the Clock Cult.
   - tweak: After reverse engineering technologies found after the annihilation of
       Reebe, Bronze chairs now have incorporated Ratvarian A E S T H E T I C auto-spinning
@@ -694,7 +694,7 @@
   - bugfix: Lawyer ID color changed to reflect that Lawyers report to the Head of
       Personnel
   Skoglol:
-  - bugfix: Syndicate lavaland base no longer uses gas miners, and their atmos should
+  - bugfix: Symphionia lavaland base no longer uses gas miners, and their atmos should
       now be usable every round. Some repiping done in the process, non-functional
       tank consoles gone.
   - tweak: Most input windows now have sorted lists of choices.
@@ -854,7 +854,7 @@
       have deadchat broadcasts.
   - bugfix: Humanizing a monkey no longer yeets any buried smuggler's satchels from
       the tile invisibly onto their person.
-  - bugfix: Major victory for Nanotrasen! The Space Wizard Federation is no longer
+  - bugfix: Major victory for Symphionia! The Space Wizard Federation is no longer
       turning geese into vomiting necromancers.
   cacogen:
   - tweak: Pacifists no longer crush cockroaches when stepping on them

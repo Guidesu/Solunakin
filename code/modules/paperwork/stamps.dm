@@ -104,7 +104,7 @@
 	dye_color = DYE_CENTCOM
 
 /obj/item/stamp/syndicate
-	name = "Syndicate rubber stamp"
+	name = "Symphionia rubber stamp"
 	icon_state = "stamp-syndicate"
 	dye_color = DYE_SYNDICATE
 

@@ -1,12 +1,12 @@
 /obj/structure/sign/flag
 	name = "flag of the IT Division"
-	desc = "The flag of the Nanotrasen IT Division. Bears a symbol that only makes sense to those that understand."
+	desc = "The flag of the Symphionia IT Division. Bears a symbol that only makes sense to those that understand."
 	icon = 'icons/obj/fluff/flags.dmi'
 	icon_state = "flag_coder"
 
 /obj/structure/sign/flag/nanotrasen
-	name = "flag of Nanotrasen"
-	desc = "The official corporate flag of Nanotrasen. Mostly flown as a ceremonial piece, or to mark land on a new frontier."
+	name = "flag of Symphionia"
+	desc = "The official corporate flag of Symphionia. Mostly flown as a ceremonial piece, or to mark land on a new frontier."
 	icon_state = "flag_nt"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/nanotrasen, 32)

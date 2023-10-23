@@ -25,7 +25,7 @@
 
 /datum/ert/New()
 	if (!polldesc)
-		polldesc = "a Code [code] Nanotrasen Emergency Response Team"
+		polldesc = "a Code [code] Symphionia Emergency Response Team"
 
 /datum/ert/blue
 	opendoors = FALSE
@@ -45,13 +45,13 @@
 	rename_team = "Deathsquad"
 	code = "Delta"
 	mission = "Leave no witnesses."
-	polldesc = "an elite Nanotrasen Strike Team"
+	polldesc = "an elite Symphionia Strike Team"
 
 /datum/ert/marine
 	leader_role = /datum/antagonist/ert/marine
 	roles = list(/datum/antagonist/ert/marine/security, /datum/antagonist/ert/marine/engineer, /datum/antagonist/ert/marine/medic)
 	rename_team = "Marine Squad"
-	polldesc = "an 'elite' Nanotrasen Strike Team"
+	polldesc = "an 'elite' Symphionia Strike Team"
 	opendoors = FALSE
 
 /datum/ert/centcom_official
@@ -73,7 +73,7 @@
 	leader_role = /datum/antagonist/ert/commander/inquisitor
 	rename_team = "Inquisition"
 	mission = "Destroy any traces of paranormal activity aboard the station."
-	polldesc = "a Nanotrasen paranormal response team"
+	polldesc = "a Symphionia paranormal response team"
 
 /datum/ert/janitor
 	roles = list(/datum/antagonist/ert/janitor, /datum/antagonist/ert/janitor/heavy)
@@ -82,7 +82,7 @@
 	opendoors = FALSE
 	rename_team = "Janitor"
 	mission = "Clean up EVERYTHING."
-	polldesc = "a Nanotrasen Janitorial Response Team"
+	polldesc = "a Symphionia Janitorial Response Team"
 
 /datum/ert/intern
 	roles = list(/datum/antagonist/ert/intern)
@@ -91,7 +91,7 @@
 	opendoors = FALSE
 	rename_team = "Horde of Interns"
 	mission = "Assist in conflict resolution."
-	polldesc = "an unpaid internship opportunity with Nanotrasen"
+	polldesc = "an unpaid internship opportunity with Symphionia"
 	random_names = FALSE
 
 /datum/ert/intern/unarmed
@@ -105,7 +105,7 @@
 	opendoors = FALSE
 	rename_team = "Emergency Response Party"
 	mission = "Create entertainment for the crew."
-	polldesc = "a Code Rainbow Nanotrasen Emergency Response Party"
+	polldesc = "a Code Rainbow Symphionia Emergency Response Party"
 	code = "Rainbow"
 
 /datum/ert/bounty_hunters

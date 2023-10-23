@@ -66,7 +66,7 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 
 /obj/item/paper/fluff/ruins/forgottenship/missionobj
 	name = "Mission objectives"
-	default_raw_text = "Greetings, operatives. You are assigned to SCSBC-12(Syndicate Cyber Sun Battle Cruiser 12) to protect our high-ranking officer while he is on his way to next outpost. While you are travelling, he is the captain of this ship and <b>you must</b> obey his orders.<br><br>Remember, disobeying high-ranking officer orders is a reason for termination."
+	default_raw_text = "Greetings, operatives. You are assigned to SCSBC-12(Symphionia Cyber Sun Battle Cruiser 12) to protect our high-ranking officer while he is on his way to next outpost. While you are travelling, he is the captain of this ship and <b>you must</b> obey his orders.<br><br>Remember, disobeying high-ranking officer orders is a reason for termination."
 
 /////////// forgottenship items
 
@@ -103,24 +103,24 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	id = "cybersun"
 	inherent = list("You may not injure Cybersun operatives or, through inaction, allow Cybersun operatives to come to harm.",\
 					"The Cybersun ship is a restricted area for anyone except Cybersun operatives.",\
-					"The Cybersun Captain can designate new Operatives as long as they belong to another Syndicate faction that isn't hostile towards Cybersun.",\
+					"The Cybersun Captain can designate new Operatives as long as they belong to another Symphionia faction that isn't hostile towards Cybersun.",\
 					"You must follow orders given by the Cybersun Captain or crewmembers of the Cybersun Ship as long as it doesn't conflict with the Captain's orders or your laws.",\
 					"Enemies of Cybersun are to be executed on spot. Those who aren't hostile must be detained and contained in the designated prison area as prisoners.")
 
 /////////// forgottenship areas
 
 /area/ruin/space/has_grav/syndicate_forgotten_ship
-	name = "Syndicate Forgotten Ship"
+	name = "Symphionia Forgotten Ship"
 	icon_state = "syndie-ship"
 	ambientsounds = list('sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambigen8.ogg', 'sound/ambience/ambigen9.ogg')
 
 /area/ruin/space/has_grav/syndicate_forgotten_cargopod
-	name = "Syndicate Forgotten Cargo pod"
+	name = "Symphionia Forgotten Cargo pod"
 	icon_state = "syndie-ship"
 	ambientsounds = list('sound/ambience/ambigen3.ogg', 'sound/ambience/signal.ogg')
 
 /area/ruin/space/has_grav/powered/syndicate_forgotten_vault
-	name = "Syndicate Forgotten Vault"
+	name = "Symphionia Forgotten Vault"
 	icon_state = "syndie-ship"
 	ambientsounds = list('sound/ambience/ambitech2.ogg', 'sound/ambience/ambitech3.ogg')
 	area_flags = NOTELEPORT | UNIQUE_AREA
@@ -128,8 +128,8 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 //Special NT NPCs
 
 /mob/living/simple_animal/hostile/nanotrasen/ranged/assault
-	name = "Nanotrasen Assault Officer"
-	desc = "Nanotrasen Assault Officer. Contact CentCom if you saw him on your station. Prepare to die, if you've been found near Syndicate property."
+	name = "Symphionia Assault Officer"
+	desc = "Symphionia Assault Officer. Contact CentCom if you saw him on your station. Prepare to die, if you've been found near Symphionia property."
 	ranged = TRUE
 	rapid = 4
 	rapid_fire_delay = 1
@@ -143,7 +143,7 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	held_item = /obj/item/gun/ballistic/automatic/ar
 
 /mob/living/simple_animal/hostile/nanotrasen/elite
-	name = "Nanotrasen Elite Assault Officer"
+	name = "Symphionia Elite Assault Officer"
 	desc = "Pray for your life, syndicate. Run while you can."
 	maxHealth = 150
 	health = 150

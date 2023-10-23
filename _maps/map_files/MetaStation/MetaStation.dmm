@@ -6384,7 +6384,7 @@
 	},
 /obj/structure/table/wood,
 /obj/item/toy/talking/ai{
-	name = "\improper Nanotrasen-brand toy AI";
+	name = "\improper Symphionia-brand toy AI";
 	pixel_y = 6
 	},
 /turf/open/floor/carpet,
@@ -6946,7 +6946,7 @@
 /obj/structure/table/wood,
 /obj/item/toy/plush/carpplushie{
 	greyscale_colors = "#ff5050#000000";
-	name = "\improper Nanotrasen wildlife department space carp plushie"
+	name = "\improper Symphionia wildlife department space carp plushie"
 	},
 /turf/open/floor/carpet,
 /area/station/command/corporate_showroom)
@@ -16491,7 +16491,7 @@
 "gfk" = (
 /obj/structure/table/wood,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -25256,7 +25256,7 @@
 /area/station/engineering/atmos)
 "jgy" = (
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -39996,8 +39996,8 @@
 "ory" = (
 /obj/structure/table/wood,
 /obj/item/storage/secure/briefcase{
-	desc = "A large briefcase with a digital locking system, and the Nanotrasen logo emblazoned on the sides.";
-	name = "\improper Nanotrasen-brand secure briefcase exhibit";
+	desc = "A large briefcase with a digital locking system, and the Symphionia logo emblazoned on the sides.";
+	name = "\improper Symphionia-brand secure briefcase exhibit";
 	pixel_y = 2
 	},
 /turf/open/floor/carpet,
@@ -52832,7 +52832,7 @@
 	pixel_y = 32
 	},
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -55275,8 +55275,8 @@
 	pixel_y = 32
 	},
 /obj/item/pai_card{
-	desc = "A real Nanotrasen success, these personal AIs provide all of the companionship of an AI without any law related red-tape.";
-	name = "\improper Nanotrasen-brand personal AI device exhibit"
+	desc = "A real Symphionia success, these personal AIs provide all of the companionship of an AI without any law related red-tape.";
+	name = "\improper Symphionia-brand personal AI device exhibit"
 	},
 /turf/open/floor/wood,
 /area/station/command/corporate_showroom)

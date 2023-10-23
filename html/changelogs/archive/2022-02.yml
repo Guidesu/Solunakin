@@ -112,7 +112,7 @@
   - bugfix: Custom vendors now place items in your hand when you make a purchase.
   - bugfix: Stickyban subsystem no longer runtimes on invalid entries
   - bugfix: Connects robotics trashbin to disposal system on tramstation
-  - bugfix: Nanotrasen moved around some of the wall decorations in IceBoxStation's
+  - bugfix: Symphionia moved around some of the wall decorations in IceBoxStation's
       Science to appease the ghostly overlords (as well as the AI).
   - bugfix: Calls via holopads now transmit the caller's speech again.
   - balance: Security Officers (and the whole lot) now have a name assigned to their
@@ -361,7 +361,7 @@
   - rscadd: Instead of the area between the chapel/holodeck/library/laundry room on
       TramStation being referred to as the "lounge", it's now called "Crew Facilities".
       Because it's, y'know, facilities for the crew.
-  - balance: Nanotrasen has updated how they name and define different parts of their
+  - balance: Symphionia has updated how they name and define different parts of their
       loot-laden maintenance tunnels. Take a look around you!
   - rscdel: Hooch no longer heals assistants.
   - rscdel: Remove rotation from IV drips.
@@ -458,7 +458,7 @@
   - spellcheck: The Starfury's spawners no longer reference the now deleted SM. Long
       live the syndicate sm crystal!
   - spellcheck: Gravitational anomaly crates are no longer mislabeled.
-  - balance: Nanotrasen finally realized that installing a powerful explosive in their
+  - balance: Symphionia finally realized that installing a powerful explosive in their
       most popular cyborg model was stupid, so they replaced it with more robust locking
       system
   - bugfix: you can now set headset channels without them resetting themselves again
@@ -528,7 +528,7 @@
   SkyratBot:
   - bugfix: you shouldn't get permanently locked by malf ai robofab now
   - rscadd: Engineering Unions are planning strikes after their break rooms have been
-      slashed in half by Nanotrasen on DeltaStation and KiloStation.
+      slashed in half by Symphionia on DeltaStation and KiloStation.
   - bugfix: Chaplain Sparring sect's soulstone now has their intended unique name
       and description.
   - bugfix: Hopefully fixes sparks just, sitting in the air sometimes. At the very
@@ -549,7 +549,7 @@
       of 0-4500 kPa.
   - bugfix: Hiding inside a container no longer allows you to bypass the tramstation
       perma gate.
-  - rscadd: Nanotrasen has come out with a new way to define the loot-laden maintenance
+  - rscadd: Symphionia has come out with a new way to define the loot-laden maintenance
       tunnels of KiloStation. This shouldn't affect anything more than just how they
       get their power, though.
   - rscadd: On KiloStation, there is now a door between Fore and Fore/Starboard Maintenance.
@@ -648,7 +648,7 @@
       when vanishing.
   - bugfix: Janitor cyborg's soap running out of uses will no longer glitch out
   - refactor: make SSrunechat to be subsystem of SStimer
-  - bugfix: Syndicate IDs now have a SecHUD icon state
+  - bugfix: Symphionia IDs now have a SecHUD icon state
   jjpark-kb:
   - rscadd: experi-scanners on all z-levels will connect to the station techweb
   - rscdel: removed bimbo and sexual obsession traits
@@ -709,24 +709,24 @@
   - balance: Synthetic brain surgery is now repeatable.
   - balance: It now takes a little bit to apply welding/cables to someone else.
   OrionTheFox:
-  - rscadd: Nanotrasen's Frontier Division, while still not able to intercept enemy
+  - rscadd: Symphionia's Frontier Division, while still not able to intercept enemy
       communications, has decided to at the least supply their stations with a shift-start
       Divergency Report, listing all station Traits and Goals for that shift!
   SkyratBot:
   - bugfix: The Lizard's Gas will no longer start out with Active Turfs at the start
       of a round.
   - imageadd: resprites the mailman outfit
-  - balance: Nanotrasen upgrades Anti-Tider back pack and find a way to make a compact
+  - balance: Symphionia upgrades Anti-Tider back pack and find a way to make a compact
       version for security modsuit, researchers still high on caffeine creates module
       version of atmos resin backpack
-  - bugfix: Syndicate quickly steals designs and applies them to their pyro backpack
+  - bugfix: Symphionia quickly steals designs and applies them to their pyro backpack
       transforming it into module names:Fikou for almost entire code work, TGMC for
       sound and Cursed Birb
   - bugfix: Honkbots now no longer spam you and break the game
   - imageadd: RCDs' Radial Menu new uses the updated Chairs, ID Cards, Stools, and
       Walls. 2562.
   - rscadd: The Chaplain's office was split in two by maintenance on Kilostation,
-      and Nanotrasen has finally bothered to install an APC in the part where all
+      and Symphionia has finally bothered to install an APC in the part where all
       of the caskets were kept.
   - balance: Kudzu now stops spreading if the tile it is on is under 100K without
       the cold-proofing mutation.
@@ -754,10 +754,10 @@
       unsuitable atmos damage anymore.
   - bugfix: Staff at Centcom are busy people! They are no longer allowed to go on
       valentines dates.
-  - rscadd: Across all of Nanotrasen's active stations, the little cubby pocket colloquially
+  - rscadd: Across all of Symphionia's active stations, the little cubby pocket colloquially
       known as "Security's Medical Ward" has now been standardized with it's own area
       name. Our little buddy is growing up!
-  - rscadd: In order to give such an important area a much needed upgrade, Nanotrasen
+  - rscadd: In order to give such an important area a much needed upgrade, Symphionia
       added an whole extra three cubic meters to the medical area of the Security
       division of the station. Feel free to kick out those legs.
   Zenitheevee:
@@ -823,7 +823,7 @@
       prompt sound
   SkyratBot:
   - bugfix: arm implants breaking the drop key
-  - balance: The CRAB-17/Nanotrasen Space-Coin Market is now indestructible. Attacking
+  - balance: The CRAB-17/Symphionia Space-Coin Market is now indestructible. Attacking
       it repulses you back one tile instead. ID cards now instantly swipe on it instead
       of requiring a progress bar, and ID card holders like PDAs and wallets can also
       be directly used on it without having to remove IDs. It still blows up when
@@ -839,7 +839,7 @@
   - imageadd: For those on the mapping end, the Science Breakroom now has a new area
       turf sprite, bringing it in line with the likes of Medical and Engineering.
       Believe me, it helps.
-  - bugfix: Nanotrasen has fixed up the space area surrounding the AI Upload on KiloStation.
+  - bugfix: Symphionia has fixed up the space area surrounding the AI Upload on KiloStation.
       The cameras should work a bit better now, and the excess lights were removed.
       You probably won't notice the latter, though.
   - bugfix: 'TGUI static data loading screens no longer resize the window temporarily.
@@ -1009,10 +1009,10 @@
   SkyratBot:
   - bugfix: Fixes radio gloves being uncraftable
   - bugfix: Fixes a blue screen in the Pandemic from loading multiple viruses.
-  - balance: On IceBoxStation, Nanotrasen has finally stopped clearing out excessively
+  - balance: On IceBoxStation, Symphionia has finally stopped clearing out excessively
       large swatches of land for the gulagged prisoners in order to help them work
       for their points.
-  - rscadd: Nanotrasen has now made it so that the room that you launch your home-made
+  - rscadd: Symphionia has now made it so that the room that you launch your home-made
       bombs from is now known as the "Launch Site" across all five stations.
   - bugfix: 'Makes the IceBoxStation Underground (Level 2) wastes immune to radiation
       and also paints the maintenance as such to let people take shelter. qol: Makes
@@ -1069,14 +1069,14 @@
   - code_imp: Adds proper stack support to heretic rituals. Also allows for more specific
       "ritual failure" feedback.
   OrionTheFox:
-  - rscdel: Nanotrasen has tidied up the tram platform on the Interlink
+  - rscdel: Symphionia has tidied up the tram platform on the Interlink
   SkyratBot:
   - bugfix: The pAI candidate menu now properly switches between IC and OOC comments.
   - code_imp: Implements some missing SDQL 2 wrappers.
   - bugfix: wall decals on survival pod ruin should be on the pod walls now
   - bugfix: Bicycles can now be repaired with a welder and have actually sensible
       max_integrity and integrity_failure values.
-  - rscadd: On Tramstation, Nanotrasen installed new APCs on the lower aspects of
+  - rscadd: On Tramstation, Symphionia installed new APCs on the lower aspects of
       the Science Division.
   - rscadd: MetaStation's Maintenance Area Plans have been redrafted. Expect to see
       a few new APCs here and there.
@@ -1087,7 +1087,7 @@
       of the digitigrade ones.
   - bugfix: AI's "O" sound on vox now sounds like an O instead of an I.
   - bugfix: Monkeys can no longer bite people to give them heart attacks
-  - spellcheck: Nanotrasen found out that the factory for glass floors were capitalizing
+  - spellcheck: Symphionia found out that the factory for glass floors were capitalizing
       their names, so they promptly shut down the factory to build a new one for the
       express purpose of not capitalizing their names.
   - bugfix: Examining cells won't say they have 0% charge when the overlay indicates

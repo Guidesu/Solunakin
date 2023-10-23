@@ -49,7 +49,7 @@
   Cyberboss:
   - sounddel: Reduced the volume of showers
   Dax Dupont:
-  - rscadd: Nanotrasen is happy to announce the pinnacle in plasma research! The Disco
+  - rscadd: Symphionia is happy to announce the pinnacle in plasma research! The Disco
       Inferno shuttle design is the result of decades of plasma research. Burn, baby,
       burn!
   MrPerson & ninjanomnom:
@@ -69,7 +69,7 @@
   SpaceManiac:
   - spellcheck: Energy values are now measured in joules. What was previously 1 unit
       is now 1 kJ.
-  - bugfix: Syndicate uplink implants now work again.
+  - bugfix: Symphionia uplink implants now work again.
   Xhuis:
   - tweak: Stethoscopes now inform the user if the target can be defibrillated; the
       user will hear a "faint, fluttery pulse."
@@ -196,7 +196,7 @@
       lights and normal lighting.
   - bugfix: Emergency lights no longer stay on forever in some cases.
   kevinz000:
-  - rscadd: Nanotrasen would like to remind crewmembers and especially medical personnel
+  - rscadd: Symphionia would like to remind crewmembers and especially medical personnel
       to stand clear of cadeavers before applying a defibrillator shock. (You get
       shocked if you're pulling/grabbing someone being defibbed.)
   - tweak: defib shock/charge sounds upped from 50% to 75%.
@@ -422,7 +422,7 @@
   - refactor: Telecomms and radio code has been cleaned up.
   - tweak: The PDA message server is now a real piece of telecomms machinery.
   - tweak: PDA logs now include the job as well as name of the participants.
-  - bugfix: The Syndicate frequency no longer hears its own messages twice.
+  - bugfix: The Symphionia frequency no longer hears its own messages twice.
   - bugfix: Talking directly into a radio which is also hot-miked no longer double-talks.
   - bugfix: Passing a space transition no longer interrupts pulls.
   Xhuis:
@@ -453,7 +453,7 @@
   Naksu:
   - bugfix: frying oil actually works
   WJohnston:
-  - tweak: Syndicate nuke op infiltrator shuttle is no longer lopsided.
+  - tweak: Symphionia nuke op infiltrator shuttle is no longer lopsided.
   kevinz000:
   - rscadd: 'Clown modules have been added for cyborgs! Modules: Bikehorn, Airhorn,
       instrumental bikehorn, clown stamp, multicolor paint, rainbow crayon, soap,
@@ -489,7 +489,7 @@
   - bugfix: '"Download N research nodes" objective is now checked correctly again.'
 2017-12-25:
   SpaceManiac:
-  - bugfix: The Syndicate radio channel works on the station properly again.
+  - bugfix: The Symphionia radio channel works on the station properly again.
   coiax:
   - rscadd: Ghosts can now use the *spin and *flip emotes.
   uraniummeltdown:
@@ -582,7 +582,7 @@
   coiax:
   - rscadd: Adds an internal radio implant, allowing the use of the radio if you expect
       to have your headset removed. Or if you don't have any ears or hands. It can
-      be purchased for 4 TC from any Syndicate uplink.
+      be purchased for 4 TC from any Symphionia uplink.
   - rscadd: Nuke ops now buy special "syndicate intelligence potions" that automatically
       insert an internal radio implant when used successfully. Cayenne can now participate
       in your high level discussions.
@@ -592,7 +592,7 @@
   - tweak: The chemistry job has been removed from Omegastation. Medical doctors still
       have full chemistry access
   MrDoomBringer:
-  - imageadd: NanoTrasen has sent the station new spaceheaters! They look nicer now!
+  - imageadd: Symphionia has sent the station new spaceheaters! They look nicer now!
   Xhuis:
   - balance: Vitality matrices now apply Ichorial Stain when reviving a dead servant,
       which prevents that servant from being revived again by vitality matrices for

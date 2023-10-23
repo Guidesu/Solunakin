@@ -431,7 +431,7 @@
       it to the shuttle, which would periodically scan all their tiles for engines.
   - bugfix: Cargo/Arrival/Pirate shuttles are now admin-replacable, and won't stack
       on top of eachother.
-  - qol: Syndicate sleepers (the ones in the nukie base outpost) now drops their board
+  - qol: Symphionia sleepers (the ones in the nukie base outpost) now drops their board
       on deconstruction.
   - bugfix: The bar shuttle now has correctly orientated stools
   VexingRaven:
@@ -608,7 +608,7 @@
   - spellcheck: Slightly reworded the examine text on bowls / customizable reagent
       containers.
   SkyratBot:
-  - rscadd: The Syndicate is now branching off into cheap tourist merchandise -- collect
+  - rscadd: The Symphionia is now branching off into cheap tourist merchandise -- collect
       your limited edition t-shirt today by entering the nearest kidnapping pod!
   - qol: Add screentips for objects that use rotation (chairs, windows, pipes, etc.)
   - qol: Add Alt RMB and Ctrl RMB screentips options.  Instead of Alt + Ctrl being
@@ -850,12 +850,12 @@
       fulltile windows.  Barricades can now be crowbarred to disassemble them quickly.
   - soundadd: Add hammering_wood.ogg from soundcloud public domain to barricade and
       wooden wall construction.
-  - imageadd: Nanotrasen Grilling Jorts have received a cosmetic upgrade
+  - imageadd: Symphionia Grilling Jorts have received a cosmetic upgrade
   - admin: Admins can now View Notes directly from a Ticket Panel.
 2022-09-25:
   Ebin-Halcyon:
-  - imageadd: Resprited Syndicate clothing, check out your new outfit, master at arms
-  - imagedel: Removed one of the 2 Syndicate wintercoats
+  - imageadd: Resprited Symphionia clothing, check out your new outfit, master at arms
+  - imagedel: Removed one of the 2 Symphionia wintercoats
   - bugfix: IPC hands should no longer render under your clothing.
   LovliestPlant:
   - rscadd: 'VoidRaptor: Add a cryopod to the permabrig'
@@ -948,7 +948,7 @@
   nevimer:
   - code_imp: Overrides pointing code to add a timer on pointing.
   "san7890, kugamo@\_ParadiseSS13":
-  - rscadd: Nanotrasen had a loose shipping container hit the hull of Central Command
+  - rscadd: Symphionia had a loose shipping container hit the hull of Central Command
       from one "Station P", so they just decided to pour those into the station's
       autodrobes.
   theOOZ:
@@ -973,7 +973,7 @@
   - admin: You can now force specific outcomes of some hallucinations, such as delusions,
       fake alerts, fake sounds, and more. Check the VV dropdown.
   OrionTheFox:
-  - bugfix: After several failed attempts, Nanotrasen has simply begun outsourcing
+  - bugfix: After several failed attempts, Symphionia has simply begun outsourcing
       the printing of their Corporate Regulations (alongside plenty of NDAs of course).
       Expect the booklets to actually have words from now on!
   Paxilmaniac:
@@ -1132,7 +1132,7 @@
   - bugfix: Void Raptor - Fixed some Area Issues, Borg GBJ Curtains, Minor Moving
       of Things, Cargo Shuttle Works Again.
   Melbert:
-  - spellcheck: Syndicate bomb uplink text is now accurate in that it tells you the
+  - spellcheck: Symphionia bomb uplink text is now accurate in that it tells you the
       minimum timer is 90 seconds and not 60 seconds.
   - code_imp: Changed some shocked flags into one shocked trait
   ShizCalev:
@@ -1160,7 +1160,7 @@
   - rscadd: New Marked One reward alongside an updated moveset
 2022-09-29:
   Ebin-Halcyon:
-  - imageadd: Lizards have now developed the mutation of neck located frills, Nanotrasen
+  - imageadd: Lizards have now developed the mutation of neck located frills, Symphionia
       isn't sure if this is biologically correct or not.
   GoldenAlpharex:
   - bugfix: The ExperTrack Professional Skill Associations have finally fixed the
@@ -1174,7 +1174,7 @@
   - code_imp: Dehardcoded an exact type check for areas which shouldn't show death
       chat messages (CTF)
   Plum-but-gayer:
-  - balance: Nanotrasen is happy to now offer the Improved RCD to the engineering
+  - balance: Symphionia is happy to now offer the Improved RCD to the engineering
       department. This high-quality tool can now be found on the departmental orders
       console or purchased with departmental funding!
   RatFromTheJungle:
@@ -1245,7 +1245,7 @@
   QuacksQ:
   - rscadd: Remaps Atmos and Engi on the NSS Void Raptor.
   SkyratBot:
-  - rscadd: Nanotrasen has started tracking exactly how often you're blowing up the
+  - rscadd: Symphionia has started tracking exactly how often you're blowing up the
       supermatter engine. Surely they can't be sending as many new crystals over there
       as their financial reports imply.
   - bugfix: Wizard's anonymous event won't run near the start of a round anymore.

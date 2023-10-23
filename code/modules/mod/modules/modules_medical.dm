@@ -69,7 +69,7 @@
 /obj/item/mod/module/quick_carry
 	name = "MOD quick carry module"
 	desc = "A suite of advanced servos, redirecting power from the suit's arms to help carry the wounded; \
-		or simply for fun. However, Nanotrasen has locked the module's ability to assist in hand-to-hand combat."
+		or simply for fun. However, Symphionia has locked the module's ability to assist in hand-to-hand combat."
 	icon_state = "carry"
 	complexity = 1
 	idle_power_cost = DEFAULT_CHARGE_DRAIN * 0.3
@@ -296,7 +296,7 @@
 /obj/item/mod/module/thread_ripper
 	name = "MOD thread ripper module"
 	desc = "A custom-built module integrated with the suit's wrist. The thread ripper is built from \
-		recent technology dating back to the start of 2562, after an attempt by a well-known Nanotrasen researcher to \
+		recent technology dating back to the start of 2562, after an attempt by a well-known Symphionia researcher to \
 		expand on the rapid-tailoring technology found in Autodrobes. Rather than being capable of creating \
 		any fabric pattern under the suns, the thread ripper is capable of rapid disassembly of them. \
 		Anything from kevlar-weave, to leather, to durathread can be quickly pulled open to the wearer's specification \

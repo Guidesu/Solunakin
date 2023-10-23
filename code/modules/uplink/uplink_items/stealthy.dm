@@ -44,7 +44,7 @@
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/stealthy_weapons/holster
-	name = "Syndicate Holster"
+	name = "Symphionia Holster"
 	desc = "A useful little device that allows for inconspicuous carrying of guns using chameleon technology. It also allows for badass gun-spinning."
 	item = /obj/item/storage/belt/holster/chameleon
 	cost = 1
@@ -95,7 +95,7 @@
 
 /datum/uplink_item/stealthy_weapons/contrabaton
 	name = "Contractor Baton"
-	desc = "A compact, specialised baton assigned to Syndicate contractors. Applies light electrical shocks to targets. \
+	desc = "A compact, specialised baton assigned to Symphionia contractors. Applies light electrical shocks to targets. \
 	These shocks are capable of affecting the inner circuitry of most robots as well, applying a short stun. \
 	Has the added benefit of affecting the vocal cords of your victim, causing them to slur as if inebriated."
 	item = /obj/item/melee/baton/telescopic/contractor_baton

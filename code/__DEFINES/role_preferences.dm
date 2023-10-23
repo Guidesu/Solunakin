@@ -38,7 +38,7 @@
 #define ROLE_PARADOX_CLONE "Paradox Clone"
 #define ROLE_REV_HEAD "Head Revolutionary"
 #define ROLE_SENTIENT_DISEASE "Sentient Disease"
-#define ROLE_SLEEPER_AGENT "Syndicate Sleeper Agent"
+#define ROLE_SLEEPER_AGENT "Symphionia Sleeper Agent"
 #define ROLE_SPACE_DRAGON "Space Dragon"
 #define ROLE_SPIDER "Spider"
 #define ROLE_WIZARD_MIDROUND "Wizard (Midround)"
@@ -54,7 +54,7 @@
 #define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
 #define ROLE_PROVOCATEUR "Provocateur"
 #define ROLE_STOWAWAY_CHANGELING "Stowaway Changeling"
-#define ROLE_SYNDICATE_INFILTRATOR "Syndicate Infiltrator"
+#define ROLE_SYNDICATE_INFILTRATOR "Symphionia Infiltrator"
 
 // Other roles
 #define ROLE_ANOMALY_GHOST "Ectoplasmic Anomaly Ghost"
@@ -69,14 +69,14 @@
 #define ROLE_LAZARUS_GOOD "Friendly Revived Mob"
 #define ROLE_MIND_TRANSFER "Mind Transfer Potion"
 #define ROLE_MONKEY_HELMET "Monkey Mind Magnification Helmet"
-#define ROLE_OVERTHROW "Syndicate Mutineer" //Role removed, left here for safety.
+#define ROLE_OVERTHROW "Symphionia Mutineer" //Role removed, left here for safety.
 #define ROLE_PAI "pAI"
 #define ROLE_POSIBRAIN "Posibrain"
 #define ROLE_PYROCLASTIC_SLIME "Pyroclastic Anomaly Slime"
 #define ROLE_REV "Revolutionary"
 #define ROLE_REVENANT "Revenant"
 #define ROLE_SENTIENCE "Sentience Potion Spawn"
-#define ROLE_SYNDICATE "Syndicate"
+#define ROLE_SYNDICATE "Symphionia"
 
 #define ROLE_CLOWN_OPERATIVE "Clown Operative"
 #define ROLE_FREE_GOLEM "Free Golem"
@@ -102,7 +102,7 @@
 #define ROLE_GHOST_ROLE "Ghost Role"
 #define ROLE_HERMIT "Hermit"
 #define ROLE_HOTEL_STAFF "Hotel Staff"
-#define ROLE_LAVALAND_SYNDICATE "Lavaland Syndicate"
+#define ROLE_LAVALAND_SYNDICATE "Lavaland Symphionia"
 #define ROLE_LIFEBRINGER "Lifebringer"
 #define ROLE_MAINTENANCE_DRONE "Maintenance Drone"
 #define ROLE_SKELETON "Skeleton"
@@ -110,15 +110,15 @@
 #define ROLE_SPACE_BARTENDER "Space Bartender"
 #define ROLE_SPACE_DOCTOR "Space Doctor"
 #define ROLE_SPACE_PIRATE "Space Pirate"
-#define ROLE_SPACE_SYNDICATE "Space Syndicate"
-#define ROLE_SYNDICATE_CYBERSUN "Cybersun Space Syndicate" //Ghost role syndi from Forgottenship ruin
-#define ROLE_SYNDICATE_CYBERSUN_CAPTAIN "Cybersun Space Syndicate Captain" //Forgottenship captain syndie
-#define ROLE_SYNDICATE_DRONE "Syndicate Drone"
+#define ROLE_SPACE_SYNDICATE "Space Symphionia"
+#define ROLE_SYNDICATE_CYBERSUN "Cybersun Space Symphionia" //Ghost role syndi from Forgottenship ruin
+#define ROLE_SYNDICATE_CYBERSUN_CAPTAIN "Cybersun Space Symphionia Captain" //Forgottenship captain syndie
+#define ROLE_SYNDICATE_DRONE "Symphionia Drone"
 #define ROLE_VENUSHUMANTRAP "Venus Human Trap"
 #define ROLE_ZOMBIE "Zombie"
 //SKYRAT EDIT START
 #define ROLE_BLACK_MARKET_DEALER "Black Market Dealer"
-#define ROLE_DS2 "DS2 Syndicate"
+#define ROLE_DS2 "DS2 Symphionia"
 #define ROLE_FREIGHTER_CREW "Freighter Crew"
 #define ROLE_GHOST_CAFE "Ghost Cafe Visitor"
 #define ROLE_PORT_TARKON "Port Tarkon Survivor"

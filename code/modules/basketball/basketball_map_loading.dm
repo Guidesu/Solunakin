@@ -45,9 +45,9 @@
 
 /datum/map_template/basketball/stadium
 	name = "Stadium"
-	description = "The homecourt for the Nanotrasen Basketball Department."
+	description = "The homecourt for the Symphionia Basketball Department."
 	mappath = "_maps/map_files/basketball/stadium.dmm"
-	team_name = "Nanotrasen Basketball Department"
+	team_name = "Symphionia Basketball Department"
 	home_team_uniform = /datum/outfit/basketball/nanotrasen
 
 /datum/map_template/basketball/lusty_xenomorphs

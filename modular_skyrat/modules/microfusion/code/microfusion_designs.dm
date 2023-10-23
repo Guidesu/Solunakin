@@ -255,7 +255,7 @@
 	build_path = /obj/item/microfusion_gun_attachment/camo
 
 /datum/design/microfusion/attachment/unique/camo_nanotrasen
-	name = "Nanotrasen Camo Microfusion Frame"
+	name = "Symphionia Camo Microfusion Frame"
 	desc = "A frame modification for the MCR-01, changing the color of the gun to blue."
 	id = "microfusion_gun_attachment_nt_camo"
 	materials = list(/datum/material/iron = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/plasma = SMALL_MATERIAL_AMOUNT * 5)

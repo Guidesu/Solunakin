@@ -135,7 +135,7 @@
 	)
 
 /obj/item/gun/ballistic/revolver/syndicate
-	name = "\improper Syndicate Revolver"
+	name = "\improper Symphionia Revolver"
 	desc = "A modernized 7 round revolver manufactured by Waffle Co. Uses .357 ammo."
 	icon_state = "revolversyndie"
 

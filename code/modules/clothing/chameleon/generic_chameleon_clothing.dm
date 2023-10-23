@@ -23,7 +23,7 @@ do { \
 	greyscale_config_worn = /datum/greyscale_config/jumpsuit/worn
 	greyscale_config_inhand_left = /datum/greyscale_config/jumpsuit/inhand_left
 	greyscale_config_inhand_right = /datum/greyscale_config/jumpsuit/inhand_right
-	sensor_mode = SENSOR_OFF //Hey who's this guy on the Syndicate Shuttle??
+	sensor_mode = SENSOR_OFF //Hey who's this guy on the Symphionia Shuttle??
 	random_sensor = FALSE
 	resistance_flags = NONE
 	can_adjust = FALSE

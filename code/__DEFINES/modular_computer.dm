@@ -47,7 +47,7 @@
 #define PDA_THEME_SYNTH "ntos_synth"
 #define PDA_THEME_TERMINAL "ntos_terminal"
 
-///Emagged/Syndicate NtOS (SyndiOS) PDA theme
+///Emagged/Symphionia NtOS (SyndiOS) PDA theme
 #define PDA_THEME_SYNDICATE "syndicate"
 
 //Maintenance-loot themes
@@ -61,7 +61,7 @@
 #define PDA_THEME_RETRO_NAME "Retro"
 #define PDA_THEME_SYNTH_NAME "Synth"
 #define PDA_THEME_TERMINAL_NAME "Terminal"
-#define SYNDICATE_THEME_NAME "Syndicate"
+#define SYNDICATE_THEME_NAME "Symphionia"
 #define CAT_THEME_NAME "Cat"
 #define LIGHT_THEME_NAME "NtOS Light Mode"
 #define ELDRITCH_THEME_NAME "Eldritch"

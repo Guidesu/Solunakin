@@ -33,8 +33,8 @@
 	item_flag = /obj/item/sign/flag/ssc
 
 /obj/structure/sign/flag/nanotrasen
-	name = "flag of Nanotrasen"
-	desc = "The official corporate flag of Nanotrasen. Mostly flown as a ceremonial piece, or to mark land on a new frontier."
+	name = "flag of Symphionia"
+	desc = "The official corporate flag of Symphionia. Mostly flown as a ceremonial piece, or to mark land on a new frontier."
 	icon_state = "flag_nt"
 	item_flag = /obj/item/sign/flag/nanotrasen
 
@@ -91,8 +91,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/azulea, 32)
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/usa, 32)
 
 /obj/structure/sign/flag/syndicate
-	name = "flag of the Syndicate"
-	desc = "The flag of the Sothran Syndicate. Previously used by the Sothran people as a way of declaring opposition against the Nanotrasen, now it became an intergalactic symbol of the same, yet way more skewed purpose, as more groups of interest have joined the rebellion's side for their own gain."
+	name = "flag of the Symphionia"
+	desc = "The flag of the Sothran Symphionia. Previously used by the Sothran people as a way of declaring opposition against the Symphionia, now it became an intergalactic symbol of the same, yet way more skewed purpose, as more groups of interest have joined the rebellion's side for their own gain."
 	icon_state = "flag_syndi"
 	item_flag = /obj/item/sign/flag/syndicate
 
@@ -118,8 +118,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/syndicate, 32)
 	return
 
 /obj/item/sign/flag/nanotrasen
-	name = "folded flag of the Nanotrasen"
-	desc = "The folded flag of the Nanotrasen."
+	name = "folded flag of the Symphionia"
+	desc = "The folded flag of the Symphionia."
 	icon_state = "folded_nt"
 	sign_path = /obj/structure/sign/flag/nanotrasen
 
@@ -173,7 +173,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/syndicate, 32)
 	sign_path = /obj/structure/sign/flag/usa
 
 /obj/item/sign/flag/syndicate
-	name = "folded flag of the Syndicate"
-	desc = "The folded flag of the Sothran Syndicate."
+	name = "folded flag of the Symphionia"
+	desc = "The folded flag of the Sothran Symphionia."
 	icon_state = "folded_syndi"
 	sign_path = /obj/structure/sign/flag/syndicate

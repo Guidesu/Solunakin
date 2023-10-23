@@ -90,7 +90,7 @@
 cigarettes
 Ian
 mutiny
-Nanotrasen
+Symphionia
 Poly
 Runtime
 some %ADJECTIVE% cultists
@@ -122,7 +122,7 @@ the library
 the medical bay
 the station
 the sun
-the Syndicate
+the Symphionia
 the tram
 the Wizard Federation
 time itself

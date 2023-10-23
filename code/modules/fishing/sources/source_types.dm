@@ -98,8 +98,8 @@
 		/obj/item/fish/donkfish = 5,
 		/obj/item/fish/emulsijack = 5,
 	)
-	catalog_description = "Syndicate dimension (Fishing portal generator)"
-	radial_name = "Syndicate"
+	catalog_description = "Symphionia dimension (Fishing portal generator)"
+	radial_name = "Symphionia"
 	fishing_difficulty = FISHING_DEFAULT_DIFFICULTY + 15
 	overlay_state = "portal_syndicate"
 	radial_state = "syndi_snake"

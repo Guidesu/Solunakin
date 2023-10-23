@@ -9,7 +9,7 @@
 /datum/map_template/shuttle/whiteship/meta
 	suffix = "meta"
 	name = "Salvage Ship"
-	description = "Whiteship that focuses on a large cargo bay that players can build in. Spawns with Syndicate mobs who do not drop corpses and are highly aggressive."
+	description = "Whiteship that focuses on a large cargo bay that players can build in. Spawns with Symphionia mobs who do not drop corpses and are highly aggressive."
 
 /datum/map_template/shuttle/whiteship/pubby
 	suffix = "pubby"
@@ -39,7 +39,7 @@
 /datum/map_template/shuttle/whiteship/tram
 	suffix = "tram"
 	name = "NT Long-Distance Bluespace Freighter"
-	description = "A long shuttle that starts with Nanotrasen private security corpses. DOES NOT FIT IN THE BASE DOCKS! Does fit in Deep Space's dock though."
+	description = "A long shuttle that starts with Symphionia private security corpses. DOES NOT FIT IN THE BASE DOCKS! Does fit in Deep Space's dock though."
 
 /datum/map_template/shuttle/whiteship/delta
 	suffix = "delta"

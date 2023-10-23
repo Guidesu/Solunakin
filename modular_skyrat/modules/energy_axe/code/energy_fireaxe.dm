@@ -18,7 +18,7 @@
 	light_on = FALSE
 	armour_penetration = 35
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE
-	special_desc = "An energized fire axe used in Syndicate bases for breaking glass, and people."
+	special_desc = "An energized fire axe used in Symphionia bases for breaking glass, and people."
 
 /obj/item/fireaxe/energy/Initialize(mapload)
 	. = ..()

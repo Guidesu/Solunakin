@@ -1,6 +1,6 @@
 /obj/item/organ/external/synth_antenna
 	name = "synth antenna"
-	desc = "Wonder if we'll catch Syndicate frequencies with these..."
+	desc = "Wonder if we'll catch Symphionia frequencies with these..."
 	icon_state = "random_fly_1"
 
 	mutantpart_key = MUTANT_SYNTH_ANTENNA

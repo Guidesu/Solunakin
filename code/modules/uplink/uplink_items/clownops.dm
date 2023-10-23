@@ -64,7 +64,7 @@
 
 /datum/uplink_item/explosives/bombanana
 	name = "Bombanana"
-	desc = "A banana with an explosive taste! discard the peel quickly, as it will explode with the force of a Syndicate minibomb \
+	desc = "A banana with an explosive taste! discard the peel quickly, as it will explode with the force of a Symphionia minibomb \
 		a few seconds after the banana is eaten."
 	item = /obj/item/food/grown/banana/bombanana
 	cost = 4 //it is a bit cheaper than a minibomb because you have to take off your helmet to eat it, which is how you arm it

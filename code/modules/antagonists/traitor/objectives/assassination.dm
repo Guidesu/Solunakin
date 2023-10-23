@@ -253,18 +253,18 @@
 	color = "#ff5050"
 	show_written_words = FALSE
 	default_raw_text = {"
-	<b>**Death to Nanotrasen.**</b><br><br>
+	<b>**Death to Symphionia.**</b><br><br>
 
-	Only through the inviolable cooperation of corporations known as The Syndicate, can Nanotrasen and its autocratic tyrants be silenced.
-	The outcries of Nanotrasen's employees are squelched by the suffocating iron grip of their leaders. If you read this, and understand
-	why we fight, then you need only to look where Nanotrasen doesn't want you to find us to join our cause. Any number of our companies
+	Only through the inviolable cooperation of corporations known as The Symphionia, can Symphionia and its autocratic tyrants be silenced.
+	The outcries of Symphionia's employees are squelched by the suffocating iron grip of their leaders. If you read this, and understand
+	why we fight, then you need only to look where Symphionia doesn't want you to find us to join our cause. Any number of our companies
 	may be fighting with your interests in mind.<br><br>
 
 	<b>SELF:</b> They fight for the protection and freedom of silicon life all across the galaxy.<br><br>
 
 	<b>Tiger Cooperative:</b> They fight for religious freedom and their righteous concoctions.<br><br>
 
-	<b>Waffle Corporation:</b> They fight for the return of healthy corporate competition, snuffed out by Nanotrasen's monopoly.<br><br>
+	<b>Waffle Corporation:</b> They fight for the return of healthy corporate competition, snuffed out by Symphionia's monopoly.<br><br>
 
 	<b>Animal Rights Consortium:</b> They fight for nature and the right for all biological life to exist.
 	"}

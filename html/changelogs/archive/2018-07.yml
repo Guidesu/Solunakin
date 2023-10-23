@@ -221,7 +221,7 @@
   - rscadd: A new shuttle loan event has been added. Hope you like bees!
   - tweak: The pizza delivery shuttle loan event now has some of each flavor and no
       longer pays the station for accepting it.
-  - balance: Syndicate shuttle infiltrators now carry suppressed pistols.
+  - balance: Symphionia shuttle infiltrators now carry suppressed pistols.
   - spellcheck: Added a missing period to spent bullet casing and pizza shutte loan
       text.
   - bugfix: Zealot's blindfolds now properly prevent non-cultists from using them.
@@ -293,7 +293,7 @@
   - bugfix: The Shuttle Manipulator admin verb works once more.
 2018-07-16:
   kevinz000:
-  - rscadd: 'Integrated circuit clocks now come in 3 flavors: Nanotrasen time (round
+  - rscadd: 'Integrated circuit clocks now come in 3 flavors: Symphionia time (round
       time), Station time (station time), and Bluespace time (server time, therefore
       not affected by lag/time dilation)'
   - rscadd: Integrated circuit clocks now also output a raw value for deciseconds,
@@ -492,7 +492,7 @@
   Denton:
   - balance: The Odysseus mech's movespeed has been increased.
   - tweak: 'Metastation: Spruced up the RnD circuitry lab; no gameplay changes.'
-  - tweak: Due to exemplary performance, NanoTrasen has awarded Shaft Miners with
+  - tweak: Due to exemplary performance, Symphionia has awarded Shaft Miners with
       their very own bathroom, constructed at the mining station dormitories. Construction
       costs will be deducted from their salaries.
   Mickyan:
@@ -503,7 +503,7 @@
   Tlaltecuhtli:
   - rscadd: Mouse traps are craftable from cardboard and a metal rod.
   WJohnston:
-  - balance: Syndicate and pirate simple animals should have stats that more closely
+  - balance: Symphionia and pirate simple animals should have stats that more closely
       resemble fighting a human in those suits, with appropriate health, sounds, and
       space movement limitations.
   - imageadd: Pirates in space suits have more modern space suits.
@@ -537,7 +537,7 @@
   Hate9:
   - rscadd: Added pulse multiplexer circuits, to complete the list of data transfers.
   Jared-Fogle:
-  - rscadd: NanoTrasen now officially recognizes Moth Week as a holiday.
+  - rscadd: Symphionia now officially recognizes Moth Week as a holiday.
   - rscdel: Temporarily removes canvases until someone figures out how to fix them.
   Mickyan:
   - balance: Social anxiety trigger range decreased. Stay out of my personal space!

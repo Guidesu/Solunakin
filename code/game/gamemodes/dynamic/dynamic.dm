@@ -306,7 +306,7 @@ GLOBAL_LIST_EMPTY(dynamic_forced_rulesets)
 		addtimer(CALLBACK(src, PROC_REF(send_intercept)), 10 SECONDS)
 		return
 
-	. = "<b><i>Nanotrasen Department of Intelligence Threat Advisory, Spinward Sector, TCD [time2text(world.realtime, "DDD, MMM DD")], [CURRENT_STATION_YEAR]:</i></b><hr>"
+	. = "<b><i>Symphionia Department of Intelligence Threat Advisory, Spinward Sector, TCD [time2text(world.realtime, "DDD, MMM DD")], [CURRENT_STATION_YEAR]:</i></b><hr>"
 	. += generate_advisory_level()
 
 	var/min_threat = 100
@@ -340,7 +340,7 @@ GLOBAL_LIST_EMPTY(dynamic_forced_rulesets)
 			return advisory_string
 
 		advisory_string += "Advisory Level: <b>Pulsar Star</b></center><BR>"
-		advisory_string += "Your sector's advisory level is Pulsar Star. A large unknown electromagnetic field has stormed through nearby surveillance equipment. No surveillance data has been able to be obtained showing no credible threats to Nanotrasen assets within the Spinward Sector. The Department advises maintaining high alert against potential threats, regardless of a lack of information."
+		advisory_string += "Your sector's advisory level is Pulsar Star. A large unknown electromagnetic field has stormed through nearby surveillance equipment. No surveillance data has been able to be obtained showing no credible threats to Symphionia assets within the Spinward Sector. The Department advises maintaining high alert against potential threats, regardless of a lack of information."
 		return advisory_string
 
 	switch(round(shown_threat))
@@ -354,10 +354,10 @@ GLOBAL_LIST_EMPTY(dynamic_forced_rulesets)
 
 			if (show_core_territory)
 				advisory_string += "Advisory Level: <b>Blue Star</b></center><BR>"
-				advisory_string += "Your sector's advisory level is Blue Star. At this threat advisory, the risk of attacks on Nanotrasen assets within the sector is minor, but cannot be ruled out entirely. Remain vigilant."
+				advisory_string += "Your sector's advisory level is Blue Star. At this threat advisory, the risk of attacks on Symphionia assets within the sector is minor, but cannot be ruled out entirely. Remain vigilant."
 			else
 				advisory_string += "Advisory Level: <b>Green Star</b></center><BR>"
-				advisory_string += "Your sector's advisory level is Green Star. Surveillance information shows no credible threats to Nanotrasen assets within the Spinward Sector at this time. As always, the Department advises maintaining vigilance against potential threats, regardless of a lack of known threats."
+				advisory_string += "Your sector's advisory level is Green Star. Surveillance information shows no credible threats to Symphionia assets within the Spinward Sector at this time. As always, the Department advises maintaining vigilance against potential threats, regardless of a lack of known threats."
 		if(20 to 39)
 			advisory_string += "Advisory Level: <b>Yellow Star</b></center><BR>"
 			advisory_string += "Your sector's advisory level is Yellow Star. Surveillance shows a credible risk of enemy attack against our assets in the Spinward Sector. We advise a heightened level of security, alongside maintaining vigilance against potential threats."
@@ -366,13 +366,13 @@ GLOBAL_LIST_EMPTY(dynamic_forced_rulesets)
 			advisory_string += "Your sector's advisory level is Orange Star. Upon reviewing your sector's intelligence, the Department has determined that the risk of enemy activity is moderate to severe. At this advisory, we recommend maintaining a higher degree of security and alertness, and vigilance against threats that may (or will) arise."
 		if(66 to 79)
 			advisory_string += "Advisory Level: <b>Red Star</b></center><BR>"
-			advisory_string += "Your sector's advisory level is Red Star. The Department of Intelligence has decrypted Cybersun communications suggesting a high likelihood of attacks on Nanotrasen assets within the Spinward Sector. Stations in the region are advised to remain highly vigilant for signs of enemy activity and to be on high alert."
+			advisory_string += "Your sector's advisory level is Red Star. The Department of Intelligence has decrypted Cybersun communications suggesting a high likelihood of attacks on Symphionia assets within the Spinward Sector. Stations in the region are advised to remain highly vigilant for signs of enemy activity and to be on high alert."
 		if(80 to 99)
 			advisory_string += "Advisory Level: <b>Black Orbit</b></center><BR>"
 			advisory_string += "Your sector's advisory level is Black Orbit. Your sector's local comms network is currently undergoing a blackout, and we are therefore unable to accurately judge enemy movements within the region. However, information passed to us by GDI suggests a high amount of enemy activity in the sector, indicative of an impending attack. Remain on high alert, and as always, we advise remaining vigilant against any other potential threats."
 		if(100)
 			advisory_string += "Advisory Level: <b>Midnight Sun</b></center><BR>"
-			advisory_string += "Your sector's advisory level is Midnight Sun. Credible information passed to us by GDI suggests that the Syndicate is preparing to mount a major concerted offensive on Nanotrasen assets in the Spinward Sector to cripple our foothold there. All stations should remain on high alert and prepared to defend themselves."
+			advisory_string += "Your sector's advisory level is Midnight Sun. Credible information passed to us by GDI suggests that the Symphionia is preparing to mount a major concerted offensive on Symphionia assets in the Spinward Sector to cripple our foothold there. All stations should remain on high alert and prepared to defend themselves."
 
 	return advisory_string
 

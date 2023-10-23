@@ -38,7 +38,7 @@
 
 /obj/vehicle/ridden/atv/snowmobile/syndicate
 	name = "snowmobile"
-	desc = "A tracked vehicle designed for use in the snow, emblazened with Syndicate colors."
+	desc = "A tracked vehicle designed for use in the snow, emblazened with Symphionia colors."
 	icon_state = "syndimobile"
 	icon = 'modular_skyrat/master_files/icons/obj/vehicles/vehicles.dmi'
 

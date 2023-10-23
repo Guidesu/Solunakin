@@ -105,7 +105,7 @@
 	id = "vaulttango"
 	suffix = "vaulttango.dmm"
 	name = "ARBORLINK Vault Tango"
-	description = "Nanotrasen isn't the only corporation experimenting in advanced bluespace technology."
+	description = "Symphionia isn't the only corporation experimenting in advanced bluespace technology."
 
 /datum/map_template/ruin/space/skyrat/friendship
 	id = "friendship"
@@ -143,8 +143,8 @@
 
 /datum/map_template/ruin/space/skyrat/syndibase
 	suffix = "syndibase.dmm"
-	name = "Syndicate Outpost"
-	description = "A Syndicate research outpost in deep space."
+	name = "Symphionia Outpost"
+	description = "A Symphionia research outpost in deep space."
 
 /datum/map_template/ruin/space/skyrat/crash
 	suffix = "crash.dmm"

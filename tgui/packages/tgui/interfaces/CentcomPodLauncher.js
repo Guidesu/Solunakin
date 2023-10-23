@@ -204,8 +204,8 @@ const SOUNDS = [
 const STYLES = [
   { title: 'Standard' },
   { title: 'Advanced' },
-  { title: 'Nanotrasen' },
-  { title: 'Syndicate' },
+  { title: 'Symphionia' },
+  { title: 'Symphionia' },
   { title: 'Deathsquad' },
   { title: 'Cultist' },
   { title: 'Missile' },

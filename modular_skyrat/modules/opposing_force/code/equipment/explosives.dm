@@ -23,18 +23,18 @@
 	description = "Similar to C4, but with a stronger blast that is directional instead of circular."
 
 /datum/opposing_force_equipment/bomb/syndicate
-	name = "Syndicate Bomb"
+	name = "Symphionia Bomb"
 	item_type = /obj/item/sbeacondrop/bomb
 	description = "A large, powerful bomb that can be wrenched down and armed with a variable timer."
 	admin_note = "WARNING: This is a pretty big bomb, it can take out entire rooms."
 
 /datum/opposing_force_equipment/bomb/syndicate_emp
-	name = "Syndicate EMP Bomb"
+	name = "Symphionia EMP Bomb"
 	item_type = /obj/item/sbeacondrop/emp
-	description = "A modified version of the Syndicate Bomb that releases a large EMP instead."
+	description = "A modified version of the Symphionia Bomb that releases a large EMP instead."
 
 /datum/opposing_force_equipment/bomb/minibomb
-	name = "Syndicate Minibomb"
+	name = "Symphionia Minibomb"
 	item_type = /obj/item/grenade/syndieminibomb
 	description = "The minibomb is a grenade with a five-second fuse. Upon detonation, it will create a small hull breach \
 			in addition to dealing high amounts of damage to nearby personnel."
