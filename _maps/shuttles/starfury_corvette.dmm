@@ -68,7 +68,7 @@
 "aj" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "SBC_corvette_bolt";
-	name = "Symphionia Corvette Airlock"
+	name = "Syndicate Corvette Airlock"
 	},
 /obj/docking_port/mobile/syndicate_corvette,
 /obj/structure/fans/tiny,
@@ -227,7 +227,7 @@
 "aE" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "SBC_corvette_bolt";
-	name = "Symphionia Corvette Airlock"
+	name = "Syndicate Corvette Airlock"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
@@ -274,7 +274,7 @@
 /area/shuttle/sbc_corvette)
 "aK" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Symphionia Corvette Ready Room"
+	name = "Syndicate Corvette Ready Room"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/iron/dark/textured_large,
@@ -298,7 +298,7 @@
 /area/shuttle/sbc_corvette)
 "aP" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Symphionia Corvette Cockpit"
+	name = "Syndicate Corvette Cockpit"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/iron/dark/textured_large,

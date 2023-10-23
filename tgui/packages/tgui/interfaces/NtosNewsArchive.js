@@ -10,7 +10,7 @@ export const NtosNewsArchive = (props, context) => {
     <NtosWindow width={600} height={800}>
       <NtosWindow.Content scrollable>
         <Section textAlign="center">
-          Archives from the Symphionia News Network!
+          Archives from the Nanotrasen News Network!
         </Section>
         {stories.map((story) => (
           <Collapsible

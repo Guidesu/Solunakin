@@ -2,7 +2,7 @@
 #define REQUEST_PRAYER "request_prayer"
 /// Requests for Centcom
 #define REQUEST_CENTCOM "request_centcom"
-/// Requests for the Symphionia
+/// Requests for the Syndicate
 #define REQUEST_SYNDICATE "request_syndicate"
 /// Requests for the nuke code
 #define REQUEST_NUKE "request_nuke"
@@ -80,7 +80,7 @@ GLOBAL_DATUM_INIT(requests, /datum/request_manager, new)
 	request_for_client(C, REQUEST_CENTCOM, message)
 
 /**
- * Creates a request for a Symphionia message
+ * Creates a request for a Syndicate message
  *
  * Arguments:
  * * C - The client who is sending the request

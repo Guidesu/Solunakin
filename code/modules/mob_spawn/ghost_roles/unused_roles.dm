@@ -8,14 +8,14 @@
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	outfit = /datum/outfit/lavalandprisoner
-	you_are_text = "You're a prisoner, sentenced to hard work in one of Symphionia's labor camps, but it seems as \
+	you_are_text = "You're a prisoner, sentenced to hard work in one of Nanotrasen's labor camps, but it seems as \
 	though fate has other plans for you."
 	flavour_text = "Good. It seems as though your ship crashed. You remember that you were convicted of "
 	spawner_job_path = /datum/job/escaped_prisoner
 
 /obj/effect/mob_spawn/ghost_role/human/prisoner_transport/Initialize(mapload)
 	. = ..()
-	var/list/crimes = list("murder", "larceny", "embezzlement", "unionization", "dereliction of duty", "kidnapping", "gross incompetence", "grand theft", "collaboration with the Symphionia", \
+	var/list/crimes = list("murder", "larceny", "embezzlement", "unionization", "dereliction of duty", "kidnapping", "gross incompetence", "grand theft", "collaboration with the Syndicate", \
 	"worship of a forbidden deity", "interspecies relations", "mutiny")
 	flavour_text += "[pick(crimes)]. but regardless of that, it seems like your crime doesn't matter now. You don't know where you are, but you know that it's out to kill you, and you're not going \
 	to lose this opportunity. Find a way to get out of this mess and back to where you rightfully belong - your [pick("house", "apartment", "spaceship", "station")]."
@@ -26,7 +26,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human/prisoner_transport/special(mob/living/carbon/human/spawned_human)
 	. = ..()
-	spawned_human.fully_replace_character_name(null, "NTP #LL-0[rand(111,999)]") //Symphionia Prisoner #Lavaland-(numbers)
+	spawned_human.fully_replace_character_name(null, "NTP #LL-0[rand(111,999)]") //Nanotrasen Prisoner #Lavaland-(numbers)
 
 /datum/outfit/lavalandprisoner
 	name = "Lavaland Prisoner"
@@ -86,17 +86,17 @@
 	return ..()
 
 /obj/effect/mob_spawn/ghost_role/human/syndicate
-	name = "Symphionia Operative"
+	name = "Syndicate Operative"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	prompt_name = "a syndicate operative"
 	you_are_text = "You are a syndicate operative."
-	flavour_text = "You have awoken, without instruction. Death to Symphionia! If there are some clues around as to what you're supposed to be doing, you best follow those."
+	flavour_text = "You have awoken, without instruction. Death to Nanotrasen! If there are some clues around as to what you're supposed to be doing, you best follow those."
 	outfit = /datum/outfit/syndicate_empty
 	spawner_job_path = /datum/job/space_syndicate
 
 /datum/outfit/syndicate_empty
-	name = "Symphionia Operative Empty"
+	name = "Syndicate Operative Empty"
 	id = /obj/item/card/id/advanced/chameleon
 	id_trim = /datum/id_trim/chameleon/operative
 	uniform = /obj/item/clothing/under/syndicate
@@ -175,8 +175,8 @@
 	icon_state = "sleeper"
 	faction = list(FACTION_NANOTRASEN_PRIVATE)
 	prompt_name = "a private security officer"
-	you_are_text = "You are a Symphionia Private Security Officer!"
-	flavour_text = "If higher command has an assignment for you, it's best you follow that. Otherwise, death to The Symphionia."
+	you_are_text = "You are a Nanotrasen Private Security Officer!"
+	flavour_text = "If higher command has an assignment for you, it's best you follow that. Otherwise, death to The Syndicate."
 	outfit = /datum/outfit/nanotrasensoldier
 
 /obj/effect/mob_spawn/ghost_role/human/commander
@@ -184,8 +184,8 @@
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "a nanotrasen commander"
-	you_are_text = "You are a Symphionia Commander!"
-	flavour_text = "Upper-crusty of Symphionia. You should be given the respect you're owed."
+	you_are_text = "You are a Nanotrasen Commander!"
+	flavour_text = "Upper-crusty of Nanotrasen. You should be given the respect you're owed."
 	outfit = /datum/outfit/nanotrasencommander
 
 //space doctor, a rat with cancer, and bessie from an old removed lavaland ruin.
@@ -241,12 +241,12 @@
 	faction = list(ROLE_SYNDICATE)
 	outfit = /datum/outfit/snowsyndie
 	you_are_text = "You are a syndicate operative recently awoken from cryostasis in an underground outpost."
-	flavour_text = "Monitor Symphionia communications and record information. All intruders should be disposed of \
+	flavour_text = "Monitor Nanotrasen communications and record information. All intruders should be disposed of \
 	swiftly to assure no gathered information is stolen or lost. Try not to wander too far from the outpost as the \
 	caves can be a deadly place even for a trained operative such as yourself."
 
 /datum/outfit/snowsyndie
-	name = "Symphionia Snow Operative"
+	name = "Syndicate Snow Operative"
 	id = /obj/item/card/id/advanced/chameleon
 	id_trim = /datum/id_trim/chameleon/operative
 	uniform = /obj/item/clothing/under/syndicate/coldres
@@ -259,13 +259,13 @@
 //Forgotten syndicate ship
 
 /obj/effect/mob_spawn/ghost_role/human/syndicatespace
-	name = "Symphionia Ship Crew Member"
+	name = "Syndicate Ship Crew Member"
 	show_flavor = FALSE
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	prompt_name = "cybersun crew"
 	you_are_text = "You are a syndicate operative on old ship, stuck in hostile space."
-	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Symphionia station nearby. Fix the ship, find a way to power it and follow your captain's orders."
+	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Nanotrasen station nearby. Fix the ship, find a way to power it and follow your captain's orders."
 	important_text = "Obey orders given by your captain. DO NOT let the ship fall into enemy hands."
 	outfit = /datum/outfit/syndicatespace/syndicrew
 	spawner_job_path = /datum/job/syndicate_cybersun
@@ -279,10 +279,10 @@
 		to_chat(new_spawn, span_bold("[policy]"))
 
 /obj/effect/mob_spawn/ghost_role/human/syndicatespace/captain
-	name = "Symphionia Ship Captain"
+	name = "Syndicate Ship Captain"
 	prompt_name = "a cybersun captain"
 	you_are_text = "You are the captain of an old ship, stuck in hostile space."
-	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Symphionia station nearby. Command your crew and turn your ship into the most protected fortress."
+	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Nanotrasen station nearby. Command your crew and turn your ship into the most protected fortress."
 	important_text = "Protect the ship and secret documents in your backpack with your own life."
 	outfit = /datum/outfit/syndicatespace/syndicaptain
 	spawner_job_path = /datum/job/syndicate_cybersun_captain
@@ -292,7 +292,7 @@
 	return ..()
 
 /datum/outfit/syndicatespace
-	name = "Symphionia Ship Base"
+	name = "Syndicate Ship Base"
 	id = /obj/item/card/id/advanced/black/syndicate_command/crew_id
 	uniform = /obj/item/clothing/under/syndicate/combat
 	back = /obj/item/storage/backpack
@@ -307,14 +307,14 @@
 	syndie_scum.faction |= ROLE_SYNDICATE
 
 /datum/outfit/syndicatespace/syndicrew
-	name = "Symphionia Ship Crew Member"
+	name = "Syndicate Ship Crew Member"
 	glasses = /obj/item/clothing/glasses/night
 	mask = /obj/item/clothing/mask/gas/syndicate
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol
 	r_pocket = /obj/item/knife/combat/survival
 
 /datum/outfit/syndicatespace/syndicaptain
-	name = "Symphionia Ship Captain"
+	name = "Syndicate Ship Captain"
 	id = /obj/item/card/id/advanced/black/syndicate_command/captain_id
 	uniform = /obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate

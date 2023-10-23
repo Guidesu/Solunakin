@@ -85,7 +85,7 @@
 	},
 /obj/item/radio/intercom{
 	freerange = 1;
-	name = "Symphionia Radio Intercom";
+	name = "Syndicate Radio Intercom";
 	pixel_y = -26
 	},
 /turf/open/floor/iron/dark,

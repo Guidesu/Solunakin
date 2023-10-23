@@ -3,7 +3,7 @@ import { multiline } from 'common/string';
 
 export const OPERATIVE_MECHANICAL_DESCRIPTION = multiline`
   Attain all possible GoldenEye authentication keys and use them to activate
-  the GoldenEye. These keys use mindfragments of Symphionia heads to generate
+  the GoldenEye. These keys use mindfragments of Nanotrasen heads to generate
   the key. Use the interrogator to extract these mindfragments.
 `;
 

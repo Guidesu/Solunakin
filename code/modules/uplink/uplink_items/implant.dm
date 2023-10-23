@@ -18,8 +18,8 @@
 	desc += " Implant has enough energy for [FREEDOM_IMPLANT_CHARGES] uses before it becomes inert and harmlessly self-destructs."
 
 /datum/uplink_item/implants/radio
-	name = "Internal Symphionia Radio Implant"
-	desc = "An implant injected into the body, allowing the use of an internal Symphionia radio. \
+	name = "Internal Syndicate Radio Implant"
+	desc = "An implant injected into the body, allowing the use of an internal Syndicate radio. \
 			Used just like a regular headset, but can be disabled to use external headsets normally and to avoid detection."
 	item = /obj/item/storage/box/syndie_kit/imp_radio
 	cost = 4

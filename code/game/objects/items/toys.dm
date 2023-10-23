@@ -908,8 +908,8 @@
 	item_flags = NO_PIXEL_RANDOM_DROP
 
 /obj/item/toy/beach_ball/branded
-	name = "\improper Symphionia-brand beach ball"
-	desc = "The simple beach ball is one of Symphionia's most popular products. 'Why do we make beach balls? Because we can! (TM)' - Symphionia"
+	name = "\improper Nanotrasen-brand beach ball"
+	desc = "The simple beach ball is one of Nanotrasen's most popular products. 'Why do we make beach balls? Because we can! (TM)' - Nanotrasen"
 
 /obj/item/toy/beach_ball/baseball
 	name = "baseball"

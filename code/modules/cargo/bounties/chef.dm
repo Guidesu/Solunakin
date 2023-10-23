@@ -1,6 +1,6 @@
 /datum/bounty/item/chef/birthday_cake
 	name = "Birthday Cake"
-	description = "Symphionia's birthday is coming up! Ship Central Command a birthday cake to celebrate!"
+	description = "Nanotrasen's birthday is coming up! Ship Central Command a birthday cake to celebrate!"
 	reward = CARGO_CRATE_VALUE * 8
 	wanted_types = list(
 		/obj/item/food/cake/birthday = TRUE,
@@ -9,7 +9,7 @@
 
 /datum/bounty/reagent/chef/soup
 	name = "Soup"
-	description = "To quell the homeless uprising, Symphionia will be serving soup to all underpaid workers."
+	description = "To quell the homeless uprising, Nanotrasen will be serving soup to all underpaid workers."
 
 /datum/bounty/reagent/chef/soup/New()
 	. = ..()
@@ -29,7 +29,7 @@
 
 /datum/bounty/item/chef/onionrings
 	name = "Onion Rings"
-	description = "Symphionia is remembering Saturn day. Ship onion rings to show the station's support."
+	description = "Nanotrasen is remembering Saturn day. Ship onion rings to show the station's support."
 	reward = CARGO_CRATE_VALUE * 6
 	required_count = 3
 	wanted_types = list(/obj/item/food/onionrings = TRUE)
@@ -100,7 +100,7 @@
 
 /datum/bounty/item/chef/hotdog
 	name = "Hot Dog"
-	description = "Symphionia is conducting taste tests to determine the best hot dog recipe. Ship your station's version to participate."
+	description = "Nanotrasen is conducting taste tests to determine the best hot dog recipe. Ship your station's version to participate."
 	reward = CARGO_CRATE_VALUE * 16
 	wanted_types = list(/obj/item/food/hotdog = TRUE)
 
@@ -120,7 +120,7 @@
 
 /datum/bounty/item/chef/chawanmushi
 	name = "Chawanmushi"
-	description = "Symphionia wants to improve relations with its sister company, Japanotrasen. Ship Chawanmushi immediately."
+	description = "Nanotrasen wants to improve relations with its sister company, Japanotrasen. Ship Chawanmushi immediately."
 	reward = CARGO_CRATE_VALUE * 16
 	wanted_types = list(/obj/item/food/chawanmushi = TRUE)
 
@@ -139,7 +139,7 @@
 
 /datum/bounty/item/chef/pancakes
 	name = "Pancakes"
-	description = "Here at Symphionia we consider employees to be family. And you know what families love? Pancakes. Ship a baker's dozen."
+	description = "Here at Nanotrasen we consider employees to be family. And you know what families love? Pancakes. Ship a baker's dozen."
 	reward = CARGO_CRATE_VALUE * 10
 	required_count = 13
 	wanted_types = list(/obj/item/food/pancakes = TRUE)

@@ -116,7 +116,7 @@ const UplinkSection = (props, context) => {
             <Stack.Item fontSize="16px">
               <Section textAlign="Center">
                 Your uplink is missing or destroyed. <br />
-                Craft a Symphionia Uplink Beacon and then speak
+                Craft a Syndicate Uplink Beacon and then speak
                 <br />
                 <span style={goalstyle}>
                   <b>{replacement_code}</b>
@@ -150,7 +150,7 @@ const UplinkSection = (props, context) => {
       <br />
       {(has_uplink && (
         <Section textAlign="Center">
-          If you lose your uplink, you can craft a Symphionia Uplink Beacon and
+          If you lose your uplink, you can craft a Syndicate Uplink Beacon and
           then speak{' '}
           <span style={goalstyle}>
             <b>{replacement_code}</b>

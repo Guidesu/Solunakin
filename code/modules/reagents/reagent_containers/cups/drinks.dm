@@ -144,7 +144,7 @@
 
 /obj/item/reagent_containers/cup/glass/ice/prison
 	name = "dirty ice cup"
-	desc = "Either Symphionia's water supply is contaminated, or this machine actually vends lemon, chocolate, and cherry snow cones."
+	desc = "Either Nanotrasen's water supply is contaminated, or this machine actually vends lemon, chocolate, and cherry snow cones."
 	list_reagents = list(/datum/reagent/consumable/ice = 25, /datum/reagent/consumable/liquidgibs = 5)
 
 /obj/item/reagent_containers/cup/glass/mug // parent type is literally just so empty mug sprites are a thing
@@ -176,7 +176,7 @@
 	custom_price = PAYCHECK_CREW * 1.2
 
 /obj/item/reagent_containers/cup/glass/mug/nanotrasen
-	name = "\improper Symphionia mug"
+	name = "\improper Nanotrasen mug"
 	desc = "A mug to display your corporate pride."
 	icon_state = "mug_nt_empty"
 	base_icon_state = "mug_nt"
@@ -438,8 +438,8 @@
 /obj/item/reagent_containers/cup/glass/shaker/Initialize(mapload)
 	. = ..()
 	if(prob(10))
-		name = "\improper Symphionia 20th Anniversary Shaker"
-		desc += " It has an emblazoned Symphionia logo on it."
+		name = "\improper Nanotrasen 20th Anniversary Shaker"
+		desc += " It has an emblazoned Nanotrasen logo on it."
 		icon_state = "shaker_n"
 
 /obj/item/reagent_containers/cup/glass/flask

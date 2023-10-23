@@ -81,8 +81,8 @@
 /datum/shuttle_loan_situation/syndiehijacking
 	sender = "CentCom Counterintelligence"
 	announcement_text = "The syndicate are trying to infiltrate your station. If you let them hijack your cargo shuttle, you'll save us a headache."
-	shuttle_transit_text = "Symphionia hijack team incoming."
-	logging_desc = "Symphionia boarding party"
+	shuttle_transit_text = "Syndicate hijack team incoming."
+	logging_desc = "Syndicate boarding party"
 
 /datum/shuttle_loan_situation/syndiehijacking/spawn_items(list/spawn_list, list/empty_shuttle_turfs)
 	var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/imports/specialops]
@@ -132,7 +132,7 @@
 
 /datum/shuttle_loan_situation/jc_a_bomb
 	sender = "CentCom Security Division"
-	announcement_text = "We have discovered an active Symphionia bomb near our VIP shuttle's fuel lines. If you feel up to the task, we will pay you for defusing it."
+	announcement_text = "We have discovered an active Syndicate bomb near our VIP shuttle's fuel lines. If you feel up to the task, we will pay you for defusing it."
 	shuttle_transit_text = "Live explosive ordnance incoming. Exercise extreme caution."
 	thanks_msg = "Live explosive ordnance incoming via supply shuttle. Evacuating cargo bay is recommended."
 	bonus_points = 45000 //If you mess up, people die and the shuttle gets turned into swiss cheese

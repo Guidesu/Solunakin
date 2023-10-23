@@ -64,7 +64,7 @@
 	icon_state = "centcom_cells"
 
 /area/centcom/central_command_areas/courtroom
-	name = "Symphionia Grand Courtroom"
+	name = "Nanotrasen Grand Courtroom"
 	icon_state = "centcom_court"
 
 /area/centcom/central_command_areas/holding
@@ -173,7 +173,7 @@
 
 //Syndicates
 /area/centcom/syndicate_mothership
-	name = "Symphionia Mothership"
+	name = "Syndicate Mothership"
 	icon_state = "syndie-ship"
 	requires_power = FALSE
 	has_gravity = STANDARD_GRAVITY
@@ -182,35 +182,35 @@
 	ambience_index = AMBIENCE_DANGER
 
 /area/centcom/syndicate_mothership/control
-	name = "Symphionia Control Room"
+	name = "Syndicate Control Room"
 	icon_state = "syndie-control"
 	static_lighting = TRUE
 
 /area/centcom/syndicate_mothership/expansion_bombthreat
-	name = "Symphionia Ordnance Laboratory"
+	name = "Syndicate Ordnance Laboratory"
 	icon_state = "syndie-elite"
 	static_lighting = TRUE
 	ambience_index = AMBIENCE_ENGI
 
 /area/centcom/syndicate_mothership/expansion_bioterrorism
-	name = "Symphionia Bio-Weapon Laboratory"
+	name = "Syndicate Bio-Weapon Laboratory"
 	icon_state = "syndie-elite"
 	static_lighting = TRUE
 	ambience_index = AMBIENCE_MEDICAL
 
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare
-	name = "Symphionia Chemical Weapon Manufacturing Plant"
+	name = "Syndicate Chemical Weapon Manufacturing Plant"
 	icon_state = "syndie-elite"
 	static_lighting = TRUE
 	ambience_index = AMBIENCE_REEBE
 
 /area/centcom/syndicate_mothership/expansion_fridgerummage
-	name = "Symphionia Perishables and Foodstuffs Storage"
+	name = "Syndicate Perishables and Foodstuffs Storage"
 	icon_state = "syndie-elite"
 	static_lighting = TRUE
 
 /area/centcom/syndicate_mothership/elite_squad
-	name = "Symphionia Elite Squad"
+	name = "Syndicate Elite Squad"
 	icon_state = "syndie-elite"
 
 //MAFIA

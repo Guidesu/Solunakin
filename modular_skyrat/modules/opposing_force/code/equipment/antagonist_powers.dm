@@ -4,8 +4,8 @@
 // Traitor
 /datum/opposing_force_equipment/antagonist_powers/uplink
 	item_type = /obj/item/uplink/opfor
-	name = "Symphionia Uplink"
-	description = "An old-school Symphionia uplink without a password and an empty TC account. Perfect for the aspiring operatives."
+	name = "Syndicate Uplink"
+	description = "An old-school Syndicate uplink without a password and an empty TC account. Perfect for the aspiring operatives."
 	admin_note = "Traitor uplink without telecrystals."
 
 /datum/opposing_force_equipment/antagonist_powers/tc1
@@ -26,7 +26,7 @@
 /datum/opposing_force_equipment/antagonist_powers/codeword_manual
 	item_type = /obj/item/codeword_granter
 	name = "Codeword Manual"
-	description = "A one-use manual able to impart knowledge of codewords typically used by members of the Symphionia to identify each other in the field covertly."
+	description = "A one-use manual able to impart knowledge of codewords typically used by members of the Syndicate to identify each other in the field covertly."
 
 // Changeling
 /datum/opposing_force_equipment/antagonist_powers/changeling
@@ -53,5 +53,5 @@
 /datum/opposing_force_equipment/antagonist_powers/contractor
 	name = "Contractor Bundle"
 	item_type = /obj/item/storage/box/syndicate/contract_kit
-	description = "A box containing everything you need to take contracts from the Symphionia. Kidnap people and drop them off at specified locations for rewards in the form of Telecrystals (Usable in the provided uplink) and Contractor Points."
+	description = "A box containing everything you need to take contracts from the Syndicate. Kidnap people and drop them off at specified locations for rewards in the form of Telecrystals (Usable in the provided uplink) and Contractor Points."
 	admin_note = "This bundle is a pretty large change-up of how a person plays a round, giving them access to a swathe of new gear, in addition to a contractor tablet. This contractor tablet lets them take on objectives to non-lethally kidnap people in exhange for telecrystals, usable in the provided uplink."

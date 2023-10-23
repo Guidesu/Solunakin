@@ -272,7 +272,7 @@
 	},
 /mob/living/basic/syndicate/ranged{
 	environment_smash = 0;
-	name = "Symphionia Salvage Worker"
+	name = "Syndicate Salvage Worker"
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)

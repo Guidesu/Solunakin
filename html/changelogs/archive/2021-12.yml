@@ -95,7 +95,7 @@
       secrets panel.
   - bugfix: Fixes the cult sacrifice softlocking if the target is deleted before being
       sacced. It'll reroll a new target if that happens.
-  - bugfix: Removed two map-based runtimes for Symphionia Lavaland Base and The Derelict
+  - bugfix: Removed two map-based runtimes for Syndicate Lavaland Base and The Derelict
   - bugfix: Blind people now get a chat message when being cuffed.
   Zonespace27:
   - bugfix: Stripper poles and all other ERP equipment can no longer be built in boxes.
@@ -109,7 +109,7 @@
   - balance: Reload times now take an amount of time.
   - rscdel: Removed proprietary temporary hardlight guns.
   GoldenAlpharex:
-  - bugfix: Symphionia's Paranormal Containment team had some budget cuts, meaning
+  - bugfix: Nanotrasen's Paranormal Containment team had some budget cuts, meaning
       that ghosts are no longer stripped of their hair colors- You can finally sport
       that bright pink floor bedhead even in death once again!
   - spellcheck: Fixes a spelling mistake in the feedback for fishing something.
@@ -191,7 +191,7 @@
       on, and adding it when off.
   - balance: Phase emitters increase by 500 C per level instead of 1000 C.
   GoldenAlpharex:
-  - imageadd: Symphionia's Bench Tailoring department has worked hard on fixing an
+  - imageadd: NanoTrasen's Bench Tailoring department has worked hard on fixing an
       error in their factory line that resulted in every bench cover being darker
       than it was supposed to be, bringing them back to what they were supposed to
       look like!
@@ -269,7 +269,7 @@
       objects may get buffed or nerfed. Mostly buffed.
   - bugfix: Hints in bureaucracy forms
   - rscadd: You can now become patron of your favorite painting by buying sponsorship
-      from Symphionia Trust Foundation.
+      from Nanotrasen Trust Foundation.
   - rscadd: 'Painter''s palettes are now available at library vendor. qol: Can use
       strokes in paintings now'
   - bugfix: Burnt-out flashes once again update their in-hands correctly
@@ -302,7 +302,7 @@
       has brought Mothic food to the masses! Try out some new treats, like cheesecake
       balls, cheese soup, and five-cheese pizza at the kitchen today! There might
       even be some foods that don''t have cheese, too!'
-  - rscadd: "To coincide with the new popularity of Mothic cuisine, Symphionia now\
+  - rscadd: "To coincide with the new popularity of Mothic cuisine, Nanotrasen now\
       \ stocks seeds for T\xF6chta\xFCse Berries, a common ingredient in moth cooking,\
       \ in the Megaseed vendors. Additionally, herbs and bell peppers have also made\
       \ their way to the station's stock. Botanists, you know what to do."
@@ -469,7 +469,7 @@
   - bugfix: Placing tiny fans in the aux base gives feedback
   - bugfix: Breaking / deconstructing aux base turrets no longer brick the console
   OrionTheFox:
-  - bugfix: Symphionia has begun properly stocking internals boxes again, including
+  - bugfix: Nanotrasen has begun properly stocking internals boxes again, including
       returning the spare N2 for vox, the expanded O2 for engineers, and removing
       the extra epi-pen
   SkyratBot:
@@ -491,13 +491,13 @@
   - bugfix: Fixes shoving people carrying other people being weird
   Tokorizo:
   - rscadd: Vox sprites
-  - bugfix: Symphionia infiltrator armor now works for Vox, new sprites have been added.
+  - bugfix: Syndicate infiltrator armor now works for Vox, new sprites have been added.
   Zonespace27:
   - rscadd: Readded hypnoflash (7 TC) and hypno flashbang (12 TC) to traitor uplinks
   jupyterkat:
   - bugfix: fixed lewd furnitures spawning in people's hands
   tf-4:
-  - spellcheck: Corrected a few miscapitalisations of "Symphionia"
+  - spellcheck: Corrected a few miscapitalisations of "Nanotrasen"
 2021-12-19:
   SkyratBot:
   - bugfix: Fixes being able to table slam through impassable objects.
@@ -518,7 +518,7 @@
       displays to people not on the z-level or on the station.
   - bugfix: The nuke now kills everyone on a station z-level if blown up on the station.
   - bugfix: Basic mobs (Cows, cockroaches), count as Animals for the DNA vault.
-  - bugfix: Adds the High-performance liquid chromatography machine to the Symphionia
+  - bugfix: Adds the High-performance liquid chromatography machine to the Syndicate
       Lavaland Base.
   - bugfix: Camera consoles now require you to be close by and alive in order to operate.
   - bugfix: Mr. Pingsky no longer spams AI private because he wants to leave AI satellite
@@ -565,7 +565,7 @@
   - bugfix: You can no longer shove megafauna that you can't normally push.
   - bugfix: Adds seeds to vending machines as intended. Corrects pathway for lasagne.
       Fixes issue with Bell peppers and baking cheese.
-  - bugfix: The Symphionia News Network has updated their news tickers for when a
+  - bugfix: The Nanotrasen News Network has updated their news tickers for when a
       station horrifically blows up to be more accommodating towards the person directly
       responsible for making sure it didn't horrifically blow up.
 2021-12-23:
@@ -596,7 +596,7 @@
   - spellcheck: Fixed a typo on the barricade
 2021-12-24:
   Ebin-Halcyon:
-  - bugfix: Symphionia operatives have been taken off unpaid break and are back to
+  - bugfix: Syndicate operatives have been taken off unpaid break and are back to
       work on Bioweapon research. Along with other workers returning to work.
   - bugfix: DS-2 and Interdyne's air alarms no longer float off walls.
   Gandalf2k15:
@@ -721,7 +721,7 @@
   - bugfix: Clipping and sizing issues on drone consoles have been fixed.
 2021-12-26:
   E3N Artificial Intelligence:
-  - rscadd: Surplus SolFed Marine IPCs have been shipped to Symphionia in a trade
+  - rscadd: Surplus SolFed Marine IPCs have been shipped to Nanotrasen in a trade
       deal.
   Fikou, theOOZ:
   - imageadd: adds a new janiborg sprite!
@@ -917,7 +917,7 @@
   - rscdel: The ambitions system has been banished to hell.
   - rscdel: The antagonists module has been reset to TG
   GoldenAlpharex:
-  - bugfix: Fixes turrets causing runtimes in the Symphionia bases.
+  - bugfix: Fixes turrets causing runtimes in the Syndicate bases.
   - bugfix: Removes a few duplicate lattices from Shuttle5832.
   - bugfix: Fixes the runtimes with Orderlies and Custom Agents not having the right
       accesses to apply their trims, which popped up at every round start.
@@ -945,8 +945,8 @@
       fuel. Removing fuel with a crowbar also doesn't smack the launcher when done.
   - bugfix: Fixes a hard-del with the exo-drone launcher.
   SkyratBot:
-  - bugfix: 'Symphionia fixed a problem with their orion trail arcade machines relaying
-      security and medical comms to the most dangerous demographic: gamers. Symphionia
+  - bugfix: 'NanoTrasen fixed a problem with their orion trail arcade machines relaying
+      security and medical comms to the most dangerous demographic: gamers. NanoTrasen
       assures you that this security exploit will never happen again.'
   - bugfix: you cant make radios play comms with a broken speaker by setting their
       frequency anymore.

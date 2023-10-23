@@ -19,7 +19,7 @@
 /// Attributes that might be illegal, but don't have ties to syndicate/aren't exclusively produced by them
 #define DETSCAN_CATEGORY_ILLEGAL "Illegal Tech"
 /// The emags and other in-house technology from the syndicate
-#define DETSCAN_CATEGORY_SYNDIE "Symphionia Tech"
+#define DETSCAN_CATEGORY_SYNDIE "Syndicate Tech"
 /// praise be
 #define DETSCAN_CATEGORY_HOLY "Holy Data"
 /// The mode that the items in, what kind of item is dispensed, etc

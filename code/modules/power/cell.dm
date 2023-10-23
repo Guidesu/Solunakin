@@ -287,7 +287,7 @@
 	empty = TRUE
 
 /obj/item/stock_parts/cell/crap
-	name = "\improper Symphionia brand rechargeable AA battery"
+	name = "\improper Nanotrasen brand rechargeable AA battery"
 	desc = "You can't top the plasma top." //TOTALLY TRADEMARK INFRINGEMENT
 	maxcharge = STANDARD_CELL_CHARGE * 0.5
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT*0.4)

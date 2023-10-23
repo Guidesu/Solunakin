@@ -15,7 +15,7 @@
 	progression_minimum = 15 MINUTES
 
 /datum/uplink_item/suits/swathelmet_traitor
-	name = "Symphionia Helmet"
+	name = "Syndicate Helmet"
 	desc = "An extremely robust, space-worthy helmet in a nefarious red and black stripe pattern."
 	item = /obj/item/clothing/head/helmet/swat
 	cost = 2

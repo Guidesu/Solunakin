@@ -139,7 +139,7 @@
 	prefix = "_maps/shuttles/skyrat/"
 	suffix = "skyrat"
 	name = "Standard Emergency Shuttle"
-	description = "Symphionia's standard issue emergency shuttle."
+	description = "Nanotrasen's standard issue emergency shuttle."
 	occupancy_limit = 60
 
 /datum/map_template/shuttle/labour/skyrat

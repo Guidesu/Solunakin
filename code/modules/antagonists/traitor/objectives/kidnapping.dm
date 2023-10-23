@@ -241,7 +241,7 @@
 	if(cargo_account) //Just in case
 		cargo_account.adjust_money(-min(rand(1000, 3000), cargo_account.account_balance)) //Not so much, especially for competent cargo. Plus this can't be mass-triggered like it has been done with contractors
 
-	priority_announce("One of your crew was captured by a rival organisation - we've needed to pay their ransom to bring them back. As is policy we've taken a portion of the station's funds to offset the overall cost.", "Symphionia Asset Protection", has_important_message = TRUE)
+	priority_announce("One of your crew was captured by a rival organisation - we've needed to pay their ransom to bring them back. As is policy we've taken a portion of the station's funds to offset the overall cost.", "Nanotrasen Asset Protection", has_important_message = TRUE)
 
 	addtimer(CALLBACK(src, PROC_REF(handle_target), sent_mob), 1.5 SECONDS)
 

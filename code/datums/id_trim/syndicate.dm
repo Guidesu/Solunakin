@@ -1,15 +1,15 @@
-/// Trim for Symphionia mobs, outfits and corpses.
+/// Trim for Syndicate mobs, outfits and corpses.
 /datum/id_trim/syndicom
-	assignment = "Symphionia Overlord"
+	assignment = "Syndicate Overlord"
 	trim_state = "trim_syndicate"
 	department_color = COLOR_SYNDIE_RED
 	subdepartment_color = COLOR_SYNDIE_RED
 	sechud_icon_state = SECHUD_SYNDICATE
 	access = list(ACCESS_SYNDICATE)
 
-/// Trim for Symphionia mobs, outfits and corpses.
+/// Trim for Syndicate mobs, outfits and corpses.
 /datum/id_trim/syndicom/crew
-	assignment = "Symphionia Operative"
+	assignment = "Syndicate Operative"
 	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
 
 /// Interdyne medical Staff
@@ -42,21 +42,21 @@
 	trim_state = "trim_quartermaster"
 	sechud_icon_state = SECHUD_QUARTERMASTER
 
-/// Trim for Symphionia mobs, outfits and corpses.
+/// Trim for Syndicate mobs, outfits and corpses.
 /datum/id_trim/syndicom/captain
-	assignment = "Symphionia Ship Captain"
+	assignment = "Syndicate Ship Captain"
 	trim_state = "trim_captain"
 	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_ROBOTICS)
 
-/// Trim for Symphionia mobs, outfits and corpses.
+/// Trim for Syndicate mobs, outfits and corpses.
 /datum/id_trim/battlecruiser
-	assignment = "Symphionia Battlecruiser Crew"
+	assignment = "Syndicate Battlecruiser Crew"
 	trim_state = "trim_syndicate"
 	access = list(ACCESS_SYNDICATE)
 
-/// Trim for Symphionia mobs, outfits and corpses.
+/// Trim for Syndicate mobs, outfits and corpses.
 /datum/id_trim/battlecruiser/captain
-	assignment = "Symphionia Battlecruiser Captain"
+	assignment = "Syndicate Battlecruiser Captain"
 	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
 
 /// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.
@@ -66,7 +66,7 @@
 
 /// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.
 /datum/id_trim/chameleon/operative
-	assignment = "Symphionia Operative"
+	assignment = "Syndicate Operative"
 	trim_state = "trim_syndicate"
 	department_color = COLOR_SYNDIE_RED
 	subdepartment_color = COLOR_SYNDIE_RED
@@ -74,15 +74,15 @@
 
 /// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.
 /datum/id_trim/chameleon/operative/nuke_leader
-	assignment = "Symphionia Operative Leader"
+	assignment = "Syndicate Operative Leader"
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
 
 /// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.
 /datum/id_trim/chameleon/operative/clown
-	assignment = "Symphionia Entertainment Operative"
+	assignment = "Syndicate Entertainment Operative"
 	trim_state = "trim_clown"
 
 /// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.
 /datum/id_trim/chameleon/operative/clown_leader
-	assignment = "Symphionia Entertainment Operative Leader"
+	assignment = "Syndicate Entertainment Operative Leader"
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)

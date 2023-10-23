@@ -27,7 +27,7 @@
 /datum/opposing_force_equipment/loadout/nt_commander
 	name = "Corporate Deceit bundle"
 	item_type = /obj/item/storage/box/syndie_kit/loadout/nt_impostor
-	description = "Don the identities of the most powerful men and women in Symphionia, and pull strings from the shadows as you please with this specialized kit."
+	description = "Don the identities of the most powerful men and women in Nanotrasen, and pull strings from the shadows as you please with this specialized kit."
 
 /datum/opposing_force_equipment/loadout/bond
 	name = "Classic Spy bundle"

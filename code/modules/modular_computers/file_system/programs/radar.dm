@@ -17,9 +17,9 @@
 	COOLDOWN_DECLARE(next_scan)
 	///Used to keep track of the last value program_icon_state was set to, to prevent constant unnecessary update_appearance() calls
 	var/last_icon_state = ""
-	///Used by the tgui interface, themed NT or Symphionia.
+	///Used by the tgui interface, themed NT or Syndicate.
 	var/arrowstyle = "ntosradarpointer.png"
-	///Used by the tgui interface, themed for NT or Symphionia colors.
+	///Used by the tgui interface, themed for NT or Syndicate colors.
 	var/pointercolor = "green"
 
 /datum/computer_file/program/radar/on_start(mob/living/user)

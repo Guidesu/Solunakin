@@ -7,8 +7,8 @@
 	surplus = 0
 
 /datum/uplink_item/badass/balloon
-	name = "Symphionia Balloon"
-	desc = "For showing that you are THE BOSS: A useless red balloon with the Symphionia logo on it. \
+	name = "Syndicate Balloon"
+	desc = "For showing that you are THE BOSS: A useless red balloon with the Syndicate logo on it. \
 			Can blow the deepest of covers."
 	item = /obj/item/toy/balloon/syndicate
 	cost = 20
@@ -22,10 +22,10 @@
 	if(!.)
 		return
 
-	notify_ghosts("[user] has purchased a BADASS Symphionia Balloon!", source = src, action = NOTIFY_ORBIT, header = "What are they THINKING?")
+	notify_ghosts("[user] has purchased a BADASS Syndicate Balloon!", source = src, action = NOTIFY_ORBIT, header = "What are they THINKING?")
 
 /datum/uplink_item/badass/syndiecards
-	name = "Symphionia Playing Cards"
+	name = "Syndicate Playing Cards"
 	desc = "A special deck of space-grade playing cards with a mono-molecular edge and metal reinforcement, \
 			making them slightly more robust than a normal deck of cards. \
 			You can also play card games with them or leave them on your victims."
@@ -35,14 +35,14 @@
 	illegal_tech = FALSE
 
 /datum/uplink_item/badass/syndiecigs
-	name = "Symphionia Smokes"
+	name = "Syndicate Smokes"
 	desc = "Strong flavor, dense smoke, infused with omnizine."
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
 	cost = 2
 	illegal_tech = FALSE
 
 /datum/uplink_item/badass/syndiecash
-	name = "Symphionia Briefcase Full of Cash"
+	name = "Syndicate Briefcase Full of Cash"
 	desc = "A secure briefcase containing 5000 space credits. Useful for bribing personnel, or purchasing goods \
 			and services at lucrative prices. The briefcase also feels a little heavier to hold; it has been \
 			manufactured to pack a little bit more of a punch if your client needs some convincing."
@@ -85,20 +85,20 @@
 	item = /obj/item/storage/box/syndie_kit/centcom_costume
 
 /datum/uplink_item/badass/stickers
-	name = "Symphionia Sticker Pack"
+	name = "Syndicate Sticker Pack"
 	desc = "Contains 8 random stickers precisely engineered to resemble suspicious objects, which may or may not be useful for fooling crew."
 	item = /obj/item/storage/box/syndie_kit/stickers
 	cost = 1
 
 /datum/uplink_item/badass/demotivational_posters
-	name = "Symphionia Demotivational Poster Pack"
+	name = "Syndicate Demotivational Poster Pack"
 	desc = "Contains a selection of demotivational posters to minimise productivity and maximise apathy in the workplace."
 	item = /obj/item/storage/box/syndie_kit/poster_box
 	cost = 1
 
 /datum/uplink_item/badass/syndie_spraycan
-	name = "Symphionia Spraycan"
-	desc = "A stylish Symphionia spraycan. \
+	name = "Syndicate Spraycan"
+	desc = "A stylish Syndicate spraycan. \
 		Contains enough special solution to spray a single super-size seditious symbol, subjecting station staff to slippery suffering."
 	item = /obj/item/traitor_spraycan
 	cost = 1

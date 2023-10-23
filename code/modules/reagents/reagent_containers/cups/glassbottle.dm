@@ -379,7 +379,7 @@
 		LAZYSET(located_wine.data, "vintage", wine_info)
 
 /obj/item/reagent_containers/cup/glass/bottle/wine/proc/generate_vintage()
-	return "[CURRENT_STATION_YEAR] Symphionia Light Red"
+	return "[CURRENT_STATION_YEAR] Nanotrasen Light Red"
 
 /obj/item/reagent_containers/cup/glass/bottle/wine/unlabeled
 	name = "unlabeled wine bottle"
@@ -400,8 +400,8 @@
 	)
 	var/origin = pick(
 		"Local",
-		"Symphionia",
-		"Symphionia",
+		"Nanotrasen",
+		"Syndicate",
 	)
 	return "[year] [origin] [type]"
 
@@ -428,7 +428,7 @@
 		if("A&A")
 			fullname = "Ash and Asher"
 		if("Generic")
-			fullname = "Symphionia Cheap Imitations"
+			fullname = "Nanotrasen Cheap Imitations"
 	var/removals = list(
 		"\[REDACTED\]",
 		"\[EXPLETIVE DELETED\]",

@@ -10,7 +10,7 @@
 	name = "Agent Identification Card"
 	desc = "Agent cards prevent artificial intelligences from tracking the wearer, and hold up to 5 wildcards \
 			from other identification cards. In addition, they can be forged to display a new assignment, name and trim. \
-			This can be done an unlimited amount of times. Some Symphionia areas and devices can only be accessed \
+			This can be done an unlimited amount of times. Some Syndicate areas and devices can only be accessed \
 			with these cards."
 	item = /obj/item/card/id/advanced/chameleon
 	cost = 2
@@ -49,7 +49,7 @@
 
 /datum/uplink_item/stealthy_tools/codespeak_manual
 	name = "Codespeak Manual"
-	desc = "Symphionia agents can be trained to use a series of codewords to convey complex information, which sounds like random concepts and drinks to anyone listening. \
+	desc = "Syndicate agents can be trained to use a series of codewords to convey complex information, which sounds like random concepts and drinks to anyone listening. \
 			This manual teaches you this Codespeak. You can also hit someone else with the manual in order to teach them. This is the deluxe edition, which has unlimited uses."
 	item = /obj/item/language_manual/codespeak_manual/unlimited
 	cost = 3

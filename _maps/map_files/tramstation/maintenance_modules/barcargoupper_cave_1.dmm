@@ -14,7 +14,7 @@
 "d" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/item/paper{
-	default_raw_text = "Please leave on-site equipment alone as they are on loan from Symphionia Mining Co and need returned soon.";
+	default_raw_text = "Please leave on-site equipment alone as they are on loan from Nanotrasen Mining Co and need returned soon.";
 	name = "NOTICE"
 	},
 /turf/open/floor/plating,

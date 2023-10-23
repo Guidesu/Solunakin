@@ -120,8 +120,8 @@
 #define JOB_CENTCOM_PRIVATE_SECURITY "Private Security Force"
 // SKYRAT EDIT ADDITION START
 #define JOB_BLUESHIELD "Blueshield"
-#define JOB_NT_REP "Symphionia Consultant"
-// Symphionia Naval Command jobs
+#define JOB_NT_REP "Nanotrasen Consultant"
+// Nanotrasen Naval Command jobs
 #define JOB_NAVAL_ENSIGN "Ensign"
 #define JOB_NAVAL_LIEUTENANT "Lieutenant"
 #define JOB_NAVAL_LTCR "Lieutenant Commander"

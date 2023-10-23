@@ -11,7 +11,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/poddoor/preopen{
 	id = "lavalandsyndi";
-	name = "Symphionia Research Experimentation Shutters"
+	name = "Syndicate Research Experimentation Shutters"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -61,7 +61,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
 	id = "lavalandsyndi";
-	name = "Symphionia Research Experimentation Shutters"
+	name = "Syndicate Research Experimentation Shutters"
 	},
 /turf/open/floor/plating,
 /area/ruin/syndicate_lava_base/testlab)
@@ -116,7 +116,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/carbon/human/species/monkey{
-	faction = list("neutral","Symphionia")
+	faction = list("neutral","Syndicate")
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/light/small/directional/north,
@@ -128,7 +128,7 @@
 /obj/machinery/light/small/directional/north,
 /obj/machinery/button/door{
 	id = "lavalandsyndi";
-	name = "Symphionia Experimentation Lockdown Control";
+	name = "Syndicate Experimentation Lockdown Control";
 	pixel_y = 26;
 	req_access = list("syndicate")
 	},
@@ -216,7 +216,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
 	id = "lavalandsyndi";
-	name = "Symphionia Research Experimentation Shutters"
+	name = "Syndicate Research Experimentation Shutters"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -244,7 +244,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/carbon/human/species/monkey{
-	faction = list("neutral","Symphionia")
+	faction = list("neutral","Syndicate")
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,

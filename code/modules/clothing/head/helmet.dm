@@ -261,7 +261,7 @@
 
 /obj/item/clothing/head/helmet/swat/nanotrasen
 	name = "\improper SWAT helmet"
-	desc = "An extremely robust helmet with the Symphionia logo emblazoned on the top."
+	desc = "An extremely robust helmet with the Nanotrasen logo emblazoned on the top."
 	icon_state = "swat"
 	inhand_icon_state = "swat_helmet"
 	clothing_flags = STACKABLE_HELMET_EXEMPT

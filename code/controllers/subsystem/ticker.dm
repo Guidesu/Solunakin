@@ -590,7 +590,7 @@ SUBSYSTEM_DEF(ticker)
 
 /datum/controller/subsystem/ticker/proc/send_news_report()
 	var/news_message
-	var/news_source = "Symphionia News Network"
+	var/news_source = "Nanotrasen News Network"
 	var/decoded_station_name = html_decode(CONFIG_GET(string/cross_comms_name)) //decode station_name to avoid minor_announce double encode // SKYRAT EDIT: CROSS COMMS CONFIG
 
 	switch(news_report)
@@ -600,7 +600,7 @@ SUBSYSTEM_DEF(ticker)
 				detonated a nuclear device in the heart of a terrorist base."
 		// The station was destroyed by nuke ops
 		if(STATION_DESTROYED_NUKE)
-			news_message = "We would like to reassure all employees that the reports of a Symphionia \
+			news_message = "We would like to reassure all employees that the reports of a Syndicate \
 				backed nuclear attack on [decoded_station_name] are, in fact, a hoax. Have a secure day!"
 		// The station was evacuated (normal result)
 		if(STATION_EVACUATED)
@@ -635,15 +635,15 @@ SUBSYSTEM_DEF(ticker)
 				unknowable eldritch horror were made in error."
 		// Nuke detonated, but missed the station entirely
 		if(NUKE_MISS)
-			news_message = "The Symphionia have bungled a terrorist attack [decoded_station_name], \
+			news_message = "The Syndicate have bungled a terrorist attack [decoded_station_name], \
 				detonating a nuclear weapon in empty space nearby."
 		// All nuke ops got killed
 		if(OPERATIVES_KILLED)
 			news_message = "Repairs to [decoded_station_name] are underway after an elite \
-				Symphionia death squad was wiped out by the crew."
+				Syndicate death squad was wiped out by the crew."
 		// Nuke ops results inconclusive - Crew escaped without the disk, or nukies were left alive, or something
 		if(OPERATIVE_SKIRMISH)
-			news_message = "A skirmish between security forces and Symphionia agents aboard [decoded_station_name] \
+			news_message = "A skirmish between security forces and Syndicate agents aboard [decoded_station_name] \
 				ended with both sides bloodied but intact."
 		// Revolution victory
 		if(REVS_WIN)

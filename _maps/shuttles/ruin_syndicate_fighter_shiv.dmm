@@ -81,7 +81,7 @@
 	dir = 4;
 	shuttle_id = "caravansyndicate1";
 	ignitionTime = 25;
-	name = "Symphionia Fighter";
+	name = "Syndicate Fighter";
 	port_direction = 2;
 	preferred_direction = 4
 	},

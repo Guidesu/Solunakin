@@ -200,7 +200,7 @@
   Owai-Seek:
   - rscadd: BBQ Sauce can now be ordered in the kitchen console.
   RandomGamer123:
-  - bugfix: Symphionia uplink types can now be changed again
+  - bugfix: Syndicate uplink types can now be changed again
   - bugfix: Radio uplink frequencies are now random again
   SparkezelPL:
   - bugfix: Single tank bombs no longer just delete themselves
@@ -338,7 +338,7 @@
   - bugfix: "Fixes processing items \U0001F400"
 2021-05-12:
   Inept, Fikou:
-  - rscadd: Symphionia has seen it fit to officially commemorate the commission date
+  - rscadd: Nanotrasen has seen it fit to officially commemorate the commission date
       of its various stations- look for the commission plaques on each station today!
   antropod:
   - bugfix: fixed "remove" button in reaction chamber gui
@@ -420,7 +420,7 @@
       upon a Revolution victory.
   Kylerace:
   - bugfix: singularities will no longer eat themselves, among other things
-  - bugfix: After a series of thorough exorcisms, Symphionia would like to assure
+  - bugfix: After a series of thorough exorcisms, Nanotrasen would like to assure
       Space Station 13 that ghosts both do not exist and if they did exist can no
       longer affect the material plane by spamming the fuck out of squeaky noises
       from bananium floors
@@ -499,9 +499,9 @@
       to maintain lore consistency
 2021-05-20:
   InsaneRed:
-  - bugfix: Symphionia Saboteur borgs now properly come with a analyzer installed
-  - balance: Symphionia Medical borgs no longer have an emag
-  - balance: Symphionia Saboteur borgs now come with an emag.
+  - bugfix: Syndicate Saboteur borgs now properly come with a analyzer installed
+  - balance: Syndicate Medical borgs no longer have an emag
+  - balance: Syndicate Saboteur borgs now come with an emag.
   LemonInTheDark:
   - bugfix: Things like microwaves will no longer have their sound stack
   dragomagol:
@@ -624,7 +624,7 @@
   - rscadd: Lots of new Black Mesa content has been added.
   - rscadd: A new VOX system has been added.
   GoldenAlpharex:
-  - bugfix: Symphionia's Paranormal Containment Team has been hard at work, rendering
+  - bugfix: Nanotrasen's Paranormal Containment Team has been hard at work, rendering
       all of their cell-powered equipment unable to be tampered with by the dead.
   - imageadd: Player-made buttons now use the same sprite as the ones that can be
       found on the maps at round-start.

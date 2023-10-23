@@ -1,7 +1,7 @@
 
 /obj/machinery/computer/ert_control
 	name = "fleet asset control console"
-	desc = "A console used for redeploying Symphionia Emergency Response assets."
+	desc = "A console used for redeploying Nanotrasen Emergency Response assets."
 	icon_screen = "comm"
 	icon_keyboard = "tech_key"
 	req_access = list(ACCESS_CENT_CAPTAIN)

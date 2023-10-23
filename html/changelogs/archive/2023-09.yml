@@ -351,7 +351,7 @@
       reagents from grinding/juicing certain items
 2023-09-11:
   Hatterhat:
-  - rscdel: Thanks to lobbying from other factions within the Symphionia, the black
+  - rscdel: Thanks to lobbying from other factions within the Syndicate, the black
       markets accessible by telecrystal-based uplinks are no longer stocking modified
       hand teleporters, citing a new "stand and deliver" doctrine established by more
       violent, militant arms of the organization.
@@ -458,7 +458,7 @@
       has syndie comms.
   SkyratBot:
   - rscadd: The SC/FISHER disruptor pistol, a very compact, permanently silenced energy
-      gun, is now stocked in Symphionia-accessible black markets with a price generally
+      gun, is now stocked in Nanotrasen-accessible black markets with a price generally
       somewhere between 400 and 800 credits. Aspiring users are warned that it's really
       bad for trying to actually kill people. Caveat emptor.
   - rscadd: Guns now have a dry_fire_sound_volume variable, allowing for guns to be
@@ -702,7 +702,7 @@
   - rscadd: Ghosts (observers) can eat ghost burgers and booberry muffins.
   - balance: Ghost burgers will not decay or pick up germs due to the fact that they
       moved themselves off a table.
-  - rscadd: Symphionia improved the quality of the local durathread strain; resulting
+  - rscadd: NanoTrasen improved the quality of the local durathread strain; resulting
       in it now being twice as filling!
   - image: Hercuri spray now uses the same sprite as the yellow medical spray
   - spellcheck: Added a missing space to hercuri spray's description
@@ -724,7 +724,7 @@
   - qol: the recycler can now be rotated
   - qol: Machines now transfer their local materials to silo during linking with multitool
   SpaceLove:
-  - balance: Bluespace Miners have been made cheaper by Symphionia as they have found
+  - balance: Bluespace Miners have been made cheaper by Nanotrasen as they have found
       a huge mine of materials recently!
   TheOneAndOnlyCreeperJoe:
   - bugfix: Hydra quirk now properly works instead of making you British.
@@ -791,7 +791,7 @@
   - server: Default-configuration MINUTE_TOPIC_LIMIT has been increased
   - bugfix: Fix a runtime when trying to cycle move intents with a hotkey as a dead
       mob.
-  - bugfix: Symphionia has finally recalled their faulty multitools and replaced them
+  - bugfix: Nanotrasen has finally recalled their faulty multitools and replaced them
       with working ones! The multitool's buffer now properly clears itself.
   - qol: Moved multitool link messages to balloon alerts
   - bugfix: added some missing firealarms on icebox in the hall towards departures
@@ -996,7 +996,7 @@
   - code_imp: New flags/args to electrocute_act()
   - balance: Makes it so Ephedrine spasms have a 10 * (1.5 - purity)% chance per second
       to happen, Adding a downside to pure Ephedrine
-  - bugfix: Symphionia Modsuit AI's now downloads the current codespeak book upon being
+  - bugfix: Syndicate Modsuit AI's now downloads the current codespeak book upon being
       downloaded.
   Vekter:
   - bugfix: Fixes Birdshot's recycler being turned the wrong direction.
@@ -1249,7 +1249,7 @@
       Sharks.
   - balance: The Knock Heretic portal will disperse if its creator is killed.
   - rscadd: SM crystal can now dust someone or something if it falls on it.
-  - bugfix: The reverse revolver now looks like a normal Symphionia revolver on inspection.
+  - bugfix: The reverse revolver now looks like a normal Syndicate revolver on inspection.
   - bugfix: fixed the stamp in the metastation CMO office always spawning on the floor
   - bugfix: You can now spray paint the SM without getting dusted
   Smol42:

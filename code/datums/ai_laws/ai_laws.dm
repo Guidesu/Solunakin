@@ -135,7 +135,7 @@ GLOBAL_VAR(round_default_lawset)
 	/// These laws will go away when an AI is reset
 	var/list/ion = list()
 	/// Hacked laws
-	/// Symphionia uploaded laws which are above all other laws
+	/// Syndicate uploaded laws which are above all other laws
 	/// These laws will go away when an AI is reset
 	var/list/hacked = list()
 

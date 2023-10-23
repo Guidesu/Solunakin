@@ -9,7 +9,7 @@
 
 /obj/item/paper/fluff/ruins/dangerous_research/smith
 	name = "A Traitor's Memo"
-	default_raw_text = "The Symphionia is up to something strange here; they've hired these people, most totally unaware of their true employers.<BR>I've sent the collected data to Symphionia, and I'm going to try to disrupt the test tomorrow, allowing this to continue isn't right.<BR>They're keeping the patient semi-lucid, so some stims should wake him up."
+	default_raw_text = "The Syndicate is up to something strange here; they've hired these people, most totally unaware of their true employers.<BR>I've sent the collected data to Nanotrasen, and I'm going to try to disrupt the test tomorrow, allowing this to continue isn't right.<BR>They're keeping the patient semi-lucid, so some stims should wake him up."
 	///Dream-Of-Beaches Journal
 /obj/item/paper/fluff/ruins/dangerous_research/beaches_journal_1
 	name = "Journal of Dreams-Of-Beaches - Day 1"

@@ -432,7 +432,7 @@
 	intensity_restriction = TRUE
 
 /**
- * Symphionia Portal Storm
+ * Syndicate Portal Storm
  */
 /datum/round_event_control/portal_storm_syndicate
 	max_occurrences = 2

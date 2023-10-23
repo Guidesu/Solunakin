@@ -3,11 +3,11 @@
 
 // Note: These two are only left here because of the old Cybersun code.
 /datum/id_trim/syndicom/skyrat/crew
-	assignment = "Symphionia Operative"
+	assignment = "Syndicate Operative"
 	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
 
 /datum/id_trim/syndicom/skyrat/captain
-	assignment = "Symphionia Ship Captain"
+	assignment = "Syndicate Ship Captain"
 	trim_state = "trim_captain"
 	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
 

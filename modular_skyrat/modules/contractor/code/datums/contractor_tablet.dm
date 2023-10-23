@@ -1,9 +1,9 @@
 /datum/computer_file/program/contract_uplink
 	filename = "contractor uplink"
-	filedesc = "Symphionia Contractor Uplink"
+	filedesc = "Syndicate Contractor Uplink"
 	category = PROGRAM_CATEGORY_MISC
 	program_icon_state = "assign"
-	extended_desc = "A standard, Symphionia issued system for handling important contracts while on the field."
+	extended_desc = "A standard, Syndicate issued system for handling important contracts while on the field."
 	size = 10
 	requires_ntnet = FALSE
 	available_on_ntnet = FALSE

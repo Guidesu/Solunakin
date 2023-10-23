@@ -75,9 +75,9 @@
       (40% for walls and 20% for reinforced walls)!
   - rscadd: Combat mechas can now destroy tables and racks with a punch!
   neersighted:
-  - rscadd: The Symphionia has stolen the latest tgui improvements from Symphionia!
+  - rscadd: The Syndicate has stolen the latest tgui improvements from Nanotrasen!
       All uplinks now feature filtering/search.
-  - rscadd: Symphionia is proud to announce its next generation sleepers, featuring
+  - rscadd: Nanotrasen is proud to announce its next generation sleepers, featuring
       tgui!
   - rscadd: Portable atmospheric components have been overhauled to use the latest
       interface technology.
@@ -118,10 +118,10 @@
       to all mobs not just humans.
 2016-02-09:
   AnturK:
-  - rscadd: Symphionia Operatives can now buy bags full of plastic explosives for 9
+  - rscadd: Syndicate Operatives can now buy bags full of plastic explosives for 9
       TC.
   Gun Hog:
-  - rscadd: '"Symphionia has drafted a design for an exosuit version of the medical
+  - rscadd: '"Nanotrasen has drafted a design for an exosuit version of the medical
       nanite projector normally issued to its Emergency Response Personnel. With sufficient
       research, a prototype may be fabricated for field testing!"'
   incoming5643:
@@ -285,7 +285,7 @@
       very devastating results, namely in the form of powerful flesh-eating acid.
 2016-02-20:
   CPTANT:
-  - tweak: Due to new crystals Symphionia lasers weapons may now set you on FIRE.
+  - tweak: Due to new crystals Nanotrasen lasers weapons may now set you on FIRE.
   Joan:
   - imageadd: Blobbernauts and blob spores now have a visual healing effect when being
       healed by the blob.
@@ -309,12 +309,12 @@
       for having to MANUALLY beat their heart every 6 seconds. Heals 25 brute/burn/oxy
       damage per correctly timed pump.
   Steelpoint:
-  - tweak: Symphionia engineers have reinforced the exterior of their stealth attack
+  - tweak: Syndicate engineers have reinforced the exterior of their stealth attack
       ships. Nuclear Operative ship hull walls are now, once again, indestructible.
-  - tweak: In addition Symphionia engineers had the opportunity to revamp the interior
+  - tweak: In addition Syndicate engineers had the opportunity to revamp the interior
       of stealth attack ships. The inside of Op ships now has a slightly new layout,
       including a expanded medbay, as well as additional medical and explosive equipment.
-  - rscadd: Thanks to covert Symphionia operatives, strike teams can now bring the
+  - rscadd: Thanks to covert Syndicate operatives, strike teams can now bring the
       stealth attack ship within very close proximity to the station codenamed 'Boxstation'.
       A new ship destination labeled 'south maintenance airlock' is now available
       to Op strike teams.

@@ -4,7 +4,7 @@
 	icon = 'modular_skyrat/master_files/icons/obj/hhmirror.dmi'
 	icon_state = "hhmirror"
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE
-	special_desc = "A mirror manufactured by the Symphionia containing barber-nanites that can alter your hair on the spot. Target your head and use it on yourself to activate the nanites."
+	special_desc = "A mirror manufactured by the Syndicate containing barber-nanites that can alter your hair on the spot. Target your head and use it on yourself to activate the nanites."
 	w_class = WEIGHT_CLASS_TINY
 	// How long does it take to change someone's hairstyle?
 	var/haircut_duration = 1 SECONDS

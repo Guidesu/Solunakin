@@ -1,6 +1,6 @@
 2014-10-01:
   Cheridan:
-  - rscadd: Experienced smugglers have joined the Symphionia, adding their bag of tricks
+  - rscadd: Experienced smugglers have joined the Syndicate, adding their bag of tricks
       to its arsenal. These tricky pouches can even fit under floor plating!
   Ikarrus:
   - wip: Adds Gang War, a new game mode still in alpha development.
@@ -56,7 +56,7 @@
       finally reverse engineered them. Not only that, but we gave them a killer paintjob.
       They will be available in the uplinks of boarding parties we send out to Nanoscum
       stations.
-  - rscadd: Listen up, Marauders! The Symphionia has recently cut back funding into
+  - rscadd: Listen up, Marauders! The Syndicate has recently cut back funding into
       boarding parties. What this means is no more hi-tech fancy energy guns. We've
       had to roll back to using cheaper, mass-produced automatic shotguns. But in
       retrospect, could this possibly be a downgrade?
@@ -167,7 +167,7 @@
   - rscadd: There are rumours of some creative shaft miners discovering a way of augmenting
       APLU Ripley armour with trophy hides from goliath-type asteroid lifeforms...
   - tweak: Durand construction routines now require a phasic scanner module and a
-      super capacitor to match Symphionia industry standards.
+      super capacitor to match Nanotrasen industry standards.
   - tweak: The exosuit fire extinguisher now boasts a larger watertank, and carries
       a whole 1000u of water from the old 200u tank.
   - tweak: The exosuit plasma converter's efficiency has been vastly improved upon,

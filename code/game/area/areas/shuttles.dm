@@ -26,33 +26,33 @@
 
 ////////////////////////////Multi-area shuttles////////////////////////////
 
-////////////////////////////Symphionia infiltrator////////////////////////////
+////////////////////////////Syndicate infiltrator////////////////////////////
 
 /area/shuttle/syndicate
-	name = "Symphionia Infiltrator"
+	name = "Syndicate Infiltrator"
 	ambience_index = AMBIENCE_DANGER
 	area_limited_icon_smoothing = /area/shuttle/syndicate
 
 /area/shuttle/syndicate/bridge
-	name = "Symphionia Infiltrator Control"
+	name = "Syndicate Infiltrator Control"
 
 /area/shuttle/syndicate/medical
-	name = "Symphionia Infiltrator Medbay"
+	name = "Syndicate Infiltrator Medbay"
 
 /area/shuttle/syndicate/armory
-	name = "Symphionia Infiltrator Armory"
+	name = "Syndicate Infiltrator Armory"
 
 /area/shuttle/syndicate/eva
-	name = "Symphionia Infiltrator EVA"
+	name = "Syndicate Infiltrator EVA"
 
 /area/shuttle/syndicate/hallway
-	name = "Symphionia Infiltrator Hall"
+	name = "Syndicate Infiltrator Hall"
 
 /area/shuttle/syndicate/engineering
-	name = "Symphionia Infiltrator Engineering"
+	name = "Syndicate Infiltrator Engineering"
 
 /area/shuttle/syndicate/airlock
-	name = "Symphionia Infiltrator Airlock"
+	name = "Syndicate Infiltrator Airlock"
 
 ////////////////////////////Pirate Shuttle////////////////////////////
 
@@ -210,7 +210,7 @@
 	name = "SBC corvette"
 
 /area/shuttle/syndicate_scout
-	name = "Symphionia Scout"
+	name = "Syndicate Scout"
 
 /area/shuttle/ruin
 	name = "Ruined Shuttle"
@@ -221,13 +221,13 @@
 	name = "Ruined Caravan Shuttle"
 
 /area/shuttle/ruin/caravan/syndicate1
-	name = "Symphionia Fighter"
+	name = "Syndicate Fighter"
 
 /area/shuttle/ruin/caravan/syndicate2
-	name = "Symphionia Fighter"
+	name = "Syndicate Fighter"
 
 /area/shuttle/ruin/caravan/syndicate3
-	name = "Symphionia Drop Ship"
+	name = "Syndicate Drop Ship"
 
 /area/shuttle/ruin/caravan/pirate
 	name = "Pirate Cutter"

@@ -1,39 +1,39 @@
 /area/shuttle/syndicate/cruiser
-	name = "Symphionia Cruiser"
+	name = "Syndicate Cruiser"
 	requires_power = FALSE
 
 /area/shuttle/syndicate/cruiser/bridge
-	name = "Symphionia Cruiser Control"
+	name = "Syndicate Cruiser Control"
 	color = COLOR_BLUE
 
 /area/shuttle/syndicate/cruiser/medical
-	name = "Symphionia Cruiser Medbay"
+	name = "Syndicate Cruiser Medbay"
 	color = COLOR_LIGHT_PINK
 
 /area/shuttle/syndicate/cruiser/armory
-	name = "Symphionia Cruiser Armory"
+	name = "Syndicate Cruiser Armory"
 	color = COLOR_ORANGE
 
 /area/shuttle/syndicate/cruiser/eva
-	name = "Symphionia Cruiser EVA"
+	name = "Syndicate Cruiser EVA"
 	color = COLOR_GREEN
 
 /area/shuttle/syndicate/cruiser/hallway
 
 /area/shuttle/syndicate/cruiser/airlock
-	name = "Symphionia Cruiser Airlock"
+	name = "Syndicate Cruiser Airlock"
 	color = COLOR_RED
 
 /area/shuttle/syndicate/cruiser/brig
-	name = "Symphionia Cruiser Brig"
+	name = "Syndicate Cruiser Brig"
 	color = COLOR_BLACK
 
 /area/shuttle/syndicate/cruiser/engineering
-	name = "Symphionia Cruiser Engineering"
+	name = "Syndicate Cruiser Engineering"
 	color = COLOR_YELLOW
 
 /area/shuttle/syndicate/frigate
-	name = "Symphionia Frigate"
+	name = "Syndicate Frigate"
 
 /area/cruiser_dock
 	name = "GoldenEye Satellite"

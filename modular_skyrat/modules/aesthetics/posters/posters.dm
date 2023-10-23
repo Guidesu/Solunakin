@@ -2,8 +2,8 @@
 
 //Custom Posters Below//
 /obj/structure/sign/poster/contraband/syndicate_medical
-	name = "Symphionia Medical"
-	desc = "This poster celebrates the complete successful revival of an hour-dead, six person mining team by Symphionia Operatives. Written in the corner is a simple message, 'Stay Winning.'"
+	name = "Syndicate Medical"
+	desc = "This poster celebrates the complete successful revival of an hour-dead, six person mining team by Syndicate Operatives. Written in the corner is a simple message, 'Stay Winning.'"
 	icon = 'modular_skyrat/modules/aesthetics/posters/contraband.dmi'
 	icon_state = "poster_sr_syndiemed"
 
@@ -27,7 +27,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/icebox_moment,
 
 /obj/structure/sign/poster/contraband/shipstation
 	name = "Flight Services - Enlist"
-	desc = "This poster depicts the long deprecated 'Ship' class 'station' in it's hayday. Surprisingly, the poster seems to be Symphionia official; though with how hush they've been on the topic..." //A disaster as big as Ship deserves a scandalous coverup.
+	desc = "This poster depicts the long deprecated 'Ship' class 'station' in it's hayday. Surprisingly, the poster seems to be Nanotrasen official; though with how hush they've been on the topic..." //A disaster as big as Ship deserves a scandalous coverup.
 	icon = 'modular_skyrat/modules/aesthetics/posters/contraband.dmi'
 	icon_state = "poster_sr_shipstation"
 
@@ -67,7 +67,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/secborg_vale, 
 
 /obj/structure/sign/poster/contraband/killingjoke // I like Batman :)))
 	name = "You don't have to be crazy to work here - but it sure helps!"
-	desc = "A poster boldly stating that being insane abord Symphionia stations isn't required. But it doesn't hurt to have!"
+	desc = "A poster boldly stating that being insane abord Nanotrasen stations isn't required. But it doesn't hurt to have!"
 	icon = 'modular_skyrat/modules/aesthetics/posters/contraband.dmi'
 	icon_state = "poster_sr_killingjoke"
 

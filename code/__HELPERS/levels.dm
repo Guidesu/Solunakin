@@ -27,7 +27,7 @@
  * * The mining z-level (Lavaland) is always considered a planet.
  * * The station z-level is considered a planet if the map config says so.
  * * Central Command is always not a planet.
- * * Symphionia recon outpost is always on a planet.
+ * * Syndicate recon outpost is always on a planet.
  *
  * Returns TRUE if we are on a planet.
  * Returns FALSE if we are not in a planet, or otherwise, "in space".
@@ -53,7 +53,7 @@
 		return FALSE
 
 	if(what.onSyndieBase())
-		// Symphionia recon outpost is on some moon or something
+		// Syndicate recon outpost is on some moon or something
 		return TRUE
 
 	// Finally, more specific checks are ran for edge cases, such as lazyily loaded map templates or away missions. Not perfect.

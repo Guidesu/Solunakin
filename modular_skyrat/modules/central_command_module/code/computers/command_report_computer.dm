@@ -3,7 +3,7 @@
 
 /obj/machinery/computer/centcom_announcement
 	name = "fleet announcement console"
-	desc = "A console used for making priority Symphionia Command Reports."
+	desc = "A console used for making priority Nanotrasen Command Reports."
 	icon_screen = "comm"
 	icon_keyboard = "tech_key"
 	req_access = list(ACCESS_CENT_CAPTAIN)
@@ -11,7 +11,7 @@
 	light_color = LIGHT_COLOR_BLUE
 
 	/// The name of central command that will accompany our report
-	var/command_name = "Symphionia Fleet Command Update"
+	var/command_name = "Nanotrasen Fleet Command Update"
 	/// The actual contents of the report we're going to send.
 	var/command_report_content
 	/// The title of our report, if anything.

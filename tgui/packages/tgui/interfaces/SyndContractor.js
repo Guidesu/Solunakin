@@ -112,7 +112,7 @@ export const SyndContractorContent = (props, context) => {
     "amounts if they're not, you just won't recieve the shown",
     'bonus. You can redeem your payment through this uplink in',
     'the form of raw telecrystals, which can be put into your',
-    'regular Symphionia uplink to purchase whatever you may need.',
+    'regular Syndicate uplink to purchase whatever you may need.',
     'We provide you with these crystals the moment you send the',
     'target up to us, which can be collected at anytime through',
     'this system.',

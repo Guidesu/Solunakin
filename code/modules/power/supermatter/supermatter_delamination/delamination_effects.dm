@@ -184,7 +184,7 @@
 	priority_announce("Reports indicate formation of crystalline seeds following resonance shift event. \
 		Rapid expansion of crystal mass proportional to rising gravitational force. \
 		Matter collapse due to gravitational pull foreseeable.",
-		"Symphionia Star Observation Association")
+		"Nanotrasen Star Observation Association")
 
 	sleep(25 SECONDS)
 

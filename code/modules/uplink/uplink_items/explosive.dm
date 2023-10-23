@@ -7,7 +7,7 @@
 
 /datum/uplink_item/explosives/soap_clusterbang
 	name = "Slipocalypse Clusterbang"
-	desc = "A traditional clusterbang grenade with a payload consisting entirely of Symphionia soap. Useful in any scenario!"
+	desc = "A traditional clusterbang grenade with a payload consisting entirely of Syndicate soap. Useful in any scenario!"
 	item = /obj/item/grenade/clusterbuster/soap
 	cost = 3
 
@@ -67,7 +67,7 @@
 	surplus = 8
 
 /datum/uplink_item/explosives/syndicate_minibomb
-	name = "Symphionia Minibomb"
+	name = "Syndicate Minibomb"
 	desc = "The minibomb is a grenade with a five-second fuse. Upon detonation, it will create a small hull breach \
 			in addition to dealing high amounts of damage to nearby personnel."
 	progression_minimum = 30 MINUTES
@@ -77,7 +77,7 @@
 
 
 /datum/uplink_item/explosives/syndicate_bomb/emp
-	name = "Symphionia EMP Bomb"
+	name = "Syndicate EMP Bomb"
 	desc = "A variation of the syndicate bomb designed to produce a large EMP effect."
 	item = /obj/item/sbeacondrop/emp
 	cost = 7
@@ -88,8 +88,8 @@
 		cost *= 2
 
 /datum/uplink_item/explosives/syndicate_bomb
-	name = "Symphionia Bomb"
-	desc = "The Symphionia bomb is a fearsome device capable of massive destruction. It has an adjustable timer, \
+	name = "Syndicate Bomb"
+	desc = "The Syndicate bomb is a fearsome device capable of massive destruction. It has an adjustable timer, \
 		with a minimum of %MIN_BOMB_TIMER seconds, and can be bolted to the floor with a wrench to prevent \
 		movement. The bomb is bulky and cannot be moved; upon ordering this item, a smaller beacon will be \
 		transported to you that will teleport the actual bomb to it upon activation. Note that this bomb can \

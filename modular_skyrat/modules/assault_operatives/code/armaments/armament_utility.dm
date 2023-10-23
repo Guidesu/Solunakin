@@ -43,9 +43,9 @@
 	cost = 2
 
 /datum/armament_entry/assault_operatives/utility/syndiejaws
-	name = "Symphionia Jaws of Life"
+	name = "Syndicate Jaws of Life"
 	item_type = /obj/item/crowbar/power/syndicate
-	description = "Based on a Symphionia model, this powerful tool can be used as both a crowbar and a pair of wirecutters. \
+	description = "Based on a Nanotrasen model, this powerful tool can be used as both a crowbar and a pair of wirecutters. \
 	In its crowbar configuration, it can be used to force open airlocks. Very useful for entering the station or its departments."
 	cost = 3
 

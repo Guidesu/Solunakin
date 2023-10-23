@@ -1,5 +1,5 @@
 /**
- * Russian subtype of Symphionia troops
+ * Russian subtype of Syndicate troops
  * We're a subtype because we are nearly the same mob with a different Faction.
  */
 /mob/living/basic/syndicate/russian

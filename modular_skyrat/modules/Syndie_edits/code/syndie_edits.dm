@@ -1,4 +1,4 @@
-//DS-2/Symphionia clothing.
+//DS-2/Syndicate clothing.
 
 /obj/item/clothing/suit/armor/vest/capcarapace/syndicate
 	icon = 'modular_skyrat/modules/syndie_edits/icons/obj.dmi'
@@ -150,7 +150,7 @@
 
 /obj/item/clothing/under/syndicate/skyrat/maid
 	name = "tactical maid outfit"
-	desc = "A 'tactical' skirtleneck fashioned to the likeness of a maid outfit. Why the Symphionia has these, you'll never know."
+	desc = "A 'tactical' skirtleneck fashioned to the likeness of a maid outfit. Why the Syndicate has these, you'll never know."
 	icon_state = "syndimaid"
 	armor_type = /datum/armor/clothing_under/none
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY

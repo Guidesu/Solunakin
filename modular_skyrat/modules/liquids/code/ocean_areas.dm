@@ -32,7 +32,7 @@
 	name = "Bunker"
 
 /area/ruin/ocean/bioweapon_research
-	name = "Symphionia Ocean Base"
+	name = "Syndicate Ocean Base"
 
 /area/ruin/ocean/mining_site
 	name = "Mining Site"

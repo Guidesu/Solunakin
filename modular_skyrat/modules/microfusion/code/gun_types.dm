@@ -33,7 +33,7 @@
 //For syndicate uplink.
 /obj/item/gun/microfusion/mcr01/syndie
 	name = "SCR-01"
-	desc = "A Symphionia brand copy of the MCR-01. It comes with a proprietary suppressor and some tactical attachments."
+	desc = "A Syndicate brand copy of the MCR-01. It comes with a proprietary suppressor and some tactical attachments."
 	cell_type = /obj/item/stock_parts/cell/microfusion/advanced
 	phase_emitter_type = /obj/item/microfusion_phase_emitter/advanced
 	attachments = list(

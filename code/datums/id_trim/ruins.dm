@@ -87,7 +87,7 @@
 
 /// Trim for various Centcom corpses.
 /datum/id_trim/centcom/corpse/assault
-	assignment = "Symphionia Assault Force"
+	assignment = "Nanotrasen Assault Force"
 	access = list(ACCESS_CENT_CAPTAIN, ACCESS_CENT_GENERAL, ACCESS_CENT_SPECOPS, ACCESS_CENT_MEDICAL, ACCESS_CENT_STORAGE, ACCESS_SECURITY, ACCESS_MECH_SECURITY)
 
 /// Trim for various various ruins.

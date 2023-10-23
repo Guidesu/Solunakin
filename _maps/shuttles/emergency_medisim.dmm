@@ -694,7 +694,7 @@
 /area/shuttle/escape/simulation)
 "Cv" = (
 /obj/machinery/drone_dispenser{
-	desc = "A hefty machine that periodically creates a pair of binoculars. Really, Symphionia? We're getting this lazy?";
+	desc = "A hefty machine that periodically creates a pair of binoculars. Really, Nanotrasen? We're getting this lazy?";
 	dispense_type = /obj/item/binoculars;
 	end_create_message = "dispenses a pair of binoculars.";
 	glass_cost = 0;

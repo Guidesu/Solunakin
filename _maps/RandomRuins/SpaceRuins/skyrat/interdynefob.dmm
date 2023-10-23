@@ -1253,10 +1253,10 @@
 /area/ruin/space/has_grav/skyrat/interdynefob/cargo/hangar)
 "fd" = (
 /mob/living/simple_animal/bot/medbot/stationary{
-	faction = list("Symphionia");
+	faction = list("Syndicate");
 	maints_access_required = list("syndicate");
 	name = "Insurgent Care";
-	radio_channel = "Symphionia"
+	radio_channel = "Syndicate"
 	},
 /turf/open/floor/iron/white/diagonal,
 /area/ruin/space/has_grav/skyrat/interdynefob/medbay)
@@ -2226,7 +2226,7 @@
 	name = "syndicate access change console"
 	},
 /obj/item/paper{
-	default_raw_text = "<h1>DS2 Corporate Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Symphionia installations. Reboot of shuttle engines in progress...</p><p>The Sothran Symphionia welcomes you onboard, Corporate Liaison. It is deeply suggested you help our crew via informing them of their corporate investors' goal and to help maintain cohesion. Don't hurt yourself now, and stay winning.</p>";
+	default_raw_text = "<h1>DS2 Corporate Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Nanotrasen installations. Reboot of shuttle engines in progress...</p><p>The Sothran Syndicate welcomes you onboard, Corporate Liaison. It is deeply suggested you help our crew via informing them of their corporate investors' goal and to help maintain cohesion. Don't hurt yourself now, and stay winning.</p>";
 	name = "paper- 'DS2 Corporate Report'"
 	},
 /turf/open/floor/wood/large,
@@ -3333,13 +3333,13 @@
 	dir = 8
 	},
 /obj/machinery/computer{
-	desc = "A console meant to communicate with Symphionia upper command. This one seems to be busy processing flight calculations since you last saw it...";
+	desc = "A console meant to communicate with Syndicate upper command. This one seems to be busy processing flight calculations since you last saw it...";
 	icon_keyboard = "tech_key";
 	icon_screen = "comm";
 	name = "syndicate communications console"
 	},
 /obj/item/paper{
-	default_raw_text = "<h1>DS2 Transfer Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Symphionia installations. Reboot of shuttle engines in progress...</p><p>Active syndicate operatives have been transferred over to the target NT workplace and are NOT to be interacted with under any circumstances, unless Symphionia Command allows it. Permission to monitor their activities is granted and heavily suggested.</p><p>Stay winning.</p>";
+	default_raw_text = "<h1>DS2 Transfer Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Nanotrasen installations. Reboot of shuttle engines in progress...</p><p>Active syndicate operatives have been transferred over to the target NT workplace and are NOT to be interacted with under any circumstances, unless Syndicate Command allows it. Permission to monitor their activities is granted and heavily suggested.</p><p>Stay winning.</p>";
 	name = "paper- 'DS2 Transfer Report'"
 	},
 /turf/open/floor/iron/dark/textured_large,
@@ -3389,7 +3389,7 @@
 "oG" = (
 /obj/machinery/porta_turret/syndicate{
 	dir = 5;
-	faction = list("Symphionia","neutral")
+	faction = list("Syndicate","neutral")
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ruin/space/has_grav/skyrat/interdynefob/security/armory)
@@ -4929,7 +4929,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/item/paper{
-	default_raw_text = "<h1>DS2 Long-Term Brig Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Symphionia installations. Reboot of shuttle engines in progress...</p><p>The Sothran Symphionia has been capable of kidnapping a few key NT workers of various hierarchy levels. It is your task to interrogate, question and break their wills in order to find more intel on our enemy, Symphionia.</p><p>Stay winning.";
+	default_raw_text = "<h1>DS2 Long-Term Brig Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Nanotrasen installations. Reboot of shuttle engines in progress...</p><p>The Sothran Syndicate has been capable of kidnapping a few key NT workers of various hierarchy levels. It is your task to interrogate, question and break their wills in order to find more intel on our enemy, Nanotrasen.</p><p>Stay winning.";
 	name = "paper- 'DS2 Long-Term Brig Report'"
 	},
 /obj/machinery/airalarm/directional/north,
@@ -6437,7 +6437,7 @@
 /obj/structure/table/reinforced/plastitaniumglass,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/fax{
-	fax_name = "Unknown Symphionia Fax";
+	fax_name = "Unknown Syndicate Fax";
 	name = "DS-2 Fax Machine";
 	pixel_y = 7;
 	syndicate_network = 1
@@ -7128,7 +7128,7 @@
 	pixel_y = 6
 	},
 /obj/item/paper{
-	default_raw_text = "<h1>DS2 Command Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Symphionia installations. Reboot of shuttle engines in progress...</p><p>The Sothran Symphionia is glad to have you on-field, admiral. Symphionia is in the direct sector and, as such, is the direct target of our operatives. Manage your crew well and with respect, and leave all your anger to the gravel that is Symphionia. Remember that Interdyne has an unaffiliated facade to keep up, as such, advise against your crew flaunting their affiliation to non-crew.</p><p>Stay winning.</p>";
+	default_raw_text = "<h1>DS2 Command Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Nanotrasen installations. Reboot of shuttle engines in progress...</p><p>The Sothran Syndicate is glad to have you on-field, admiral. Nanotrasen is in the direct sector and, as such, is the direct target of our operatives. Manage your crew well and with respect, and leave all your anger to the gravel that is Nanotrasen. Remember that Interdyne has an unaffiliated facade to keep up, as such, advise against your crew flaunting their affiliation to non-crew.</p><p>Stay winning.</p>";
 	name = "paper- 'DS2 Command Report'"
 	},
 /turf/open/floor/wood/large,
@@ -7147,7 +7147,7 @@
 	pixel_y = -3
 	},
 /obj/structure/shipping_container/donk_co{
-	desc = "A standard-measure shipping container for bulk transport of goods. This one is from Donk Co. and so could be carrying just about anything- although it seems this one is overflowing with little Symphionia Figurines, known for being sold at a Loss.";
+	desc = "A standard-measure shipping container for bulk transport of goods. This one is from Donk Co. and so could be carrying just about anything- although it seems this one is overflowing with little Syndicate Figurines, known for being sold at a Loss.";
 	pixel_x = -17;
 	pixel_y = 15
 	},

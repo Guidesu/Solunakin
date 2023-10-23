@@ -8,7 +8,7 @@ Dynamic rolls threat based on a special sauce formula:
 
 This threat is split into two separate budgets--`round_start_budget` and `mid_round_budget`. For example, a round with 50 threat might be split into a 30 roundstart budget, and a 20 midround budget. The roundstart budget is used to apply antagonists applied on readied players when the roundstarts (`/datum/dynamic_ruleset/roundstart`). The midround budget is used for two types of rulesets:
 - `/datum/dynamic_ruleset/midround` - Rulesets that apply to either existing alive players, or to ghosts. Think Blob or Space Ninja, which poll ghosts asking if they want to play as these roles.
-- `/datum/dynamic_ruleset/latejoin` - Rulesets that apply to the next player that joins. Think Symphionia Infiltrator, which converts a player just joining an existing round into traitor.
+- `/datum/dynamic_ruleset/latejoin` - Rulesets that apply to the next player that joins. Think Syndicate Infiltrator, which converts a player just joining an existing round into traitor.
 
 This split is done with a similar method, known as the ["lorentz distribution"](https://en.wikipedia.org/wiki/Cauchy_distribution), exists to create a bell curve that ensures that while most rounds will have a threat level around ~50, chaotic and tame rounds still exist for variety.
 

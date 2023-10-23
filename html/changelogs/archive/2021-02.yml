@@ -196,7 +196,7 @@
       value of 450 now means 45 seconds. Set it to be 9000 if you want it to be accurate
       to the old value (15 minutes), or simply unset it.
   - admin: Midround/latejoin dynamic timers are now configurable.
-  - admin: Symphionia Sleeper Agent will now give details when ti fails.
+  - admin: Syndicate Sleeper Agent will now give details when ti fails.
   - bugfix: The autotraitor cooldown now respects configuration, rather than resetting
       back to 15 minutes after it is rolled.
   Maurukas:
@@ -496,7 +496,7 @@
   - bugfix: Fixes necropolis curse's stage 4 grabby hands
   - tweak: tweaked transitional ui widgets to appear smoother
   cacogen:
-  - tweak: In-spect scanner is now called N-spect scanner (the N stands for Symphionia)
+  - tweak: In-spect scanner is now called N-spect scanner (the N stands for Nanotrasen)
   - soundadd: N-spect scanner has a better sound effect
   - spellcheck: N-spect scanner description reads better
   - code_imp: N-spect scanner report is now a child of paper
@@ -829,7 +829,7 @@
   - bugfix: The special alert message for reaching 0 charge as an ethereal now actually
       appears.
   ArcaneMusic, Twaticus, coiax:
-  - rscadd: Symphionia reminds its crew members that the station has never orbited
+  - rscadd: Nanotrasen reminds its crew members that the station has never orbited
       a Gas Giant, and is engaging in a media campaign to remind employees of this
       fact.
   - rscadd: WAke uP ShEepLe naNotrAsen is LyINg To You wHERE DoEs THE gaS CoME from,
@@ -1017,10 +1017,10 @@
   Ghilker:
   - code_imp: readability, docs
   Imaginos16:
-  - rscadd: Symphionia has now graciously created new outfits for their esteemed members
+  - rscadd: NanoTrasen has now graciously created new outfits for their esteemed members
       of Central Command! These include new turtlenecks, a fancy coat, a new cap,
       and a skirt edition of the current Official jumpsuit.
-  - imagedel: As a result of these changes of apparel, however, Symphionia came to
+  - imagedel: As a result of these changes of apparel, however, NanoTrasen came to
       the decision to remove the old CentCom Officer Jumpsuits in favor of the Turtlenecks.
   RaveRadbury:
   - bugfix: Binary Encryption keys work in pAIs that have downloaded the encryption
@@ -1104,7 +1104,7 @@
   Dex:
   - rscadd: Added a food cart to Kilo kitchen
   EOBGames:
-  - rscadd: 'The Symphionia Entertainment Division has released a new card game designed
+  - rscadd: 'The Nanotrasen Entertainment Division has released a new card game designed
       to be played quickly and easily: Wiz-Off.! Join the battle at your local Fun
       Vendor today!'
   Flareguy:

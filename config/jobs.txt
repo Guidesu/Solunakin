@@ -17,64 +17,64 @@ Quartermaster=1,1
 
 # Central Command
 
-Symphionia Consultant=1,1
+Nanotrasen Consultant=1,1
 Blueshield=1,1
 
 
 # Cargo
 
-Cargo Technician=0,0
-Shaft Miner=0,0
-Customs Agent=0,0
+Cargo Technician=4,2
+Shaft Miner=4,4
+Customs Agent=2,2
 
 
 # Service
 
-Bartender=0,0
-Cook=0,0
-Barber=0,0
-Botanist=0,0
-Janitor=0,0
-Clown=0,0
-Mime=0,0
-Curator=0,0
-Lawyer=0,0
-Chaplain=0,0
-Psychologist=0,0
-Bouncer=0,0
+Bartender=1,1
+Cook=2,1
+Barber=2,2
+Botanist=3,2
+Janitor=5,5
+Clown=1,1
+Mime=1,1
+Curator=2,2
+Lawyer=2,2
+Chaplain=1,1
+Psychologist=1,1
+Bouncer=2,2
 
 
 # Engineering
 
-Station Engineer=0,0
-Atmospheric Technician=0,0
-Engineering Guard=0,0
+Station Engineer=5,5
+Atmospheric Technician=3,2
+Engineering Guard=2,2
 
 
 # Medical
 
-Medical Doctor=0,0
-Paramedic=0,0
-Chemist=0,0
-Geneticist=0,0
-Virologist=0,0
-Orderly=0,0
+Medical Doctor=5,3
+Paramedic=3,2
+Chemist=2,2
+Geneticist=2,2
+Virologist=1,1
+Orderly=2,2
 
 
 # Science
 
-Scientist=0,0
-Roboticist=0,0
+Scientist=5,5
+Roboticist=3,2
 Vanguard Operative=0,0
-Science Guard=0,0
+Science Guard=2,2
 
 
 # Security
 
-Warden=0,0
-Detective=0,0
-Security Officer=0,0
-Corrections Officer=0,0
+Warden=1,1
+Detective=2,2
+Security Officer=6,6
+Corrections Officer=2,1
 
 
 # Silicons
@@ -86,4 +86,4 @@ Cyborg=3,3
 # Misc.
 
 Assistant=-1,-1
-Prisoner=0,0
+Prisoner=12,12

@@ -33,10 +33,10 @@
   - balance: The nuclear device on the NukeOp Shuttle is now in an anchored state
       by default, the Nuke can only be unanchored by inserting the disk and entering
       the proper code.
-  - balance: Non-Symphionia cyborgs are now unable to access the NukeOp Shuttle Console.
+  - balance: Non-Syndicate cyborgs are now unable to access the NukeOp Shuttle Console.
   - bugfix: You can now unanchor Nukes even when the floor under them has been destroyed
   Steelpoint:
-  - rscadd: The Symphionia Corps of Engineers has begun a series of alterations to
+  - rscadd: The Nanotrasen Corps of Engineers has begun a series of alterations to
       NTSS Boxstation, the first stage of changes were aimed at altering the Brig
       design, with minor improvements and alterations.
   coiax:
@@ -127,7 +127,7 @@
       users from being attacked by wild space carp.
   - tweak: 'Reworked the kinetic speargun: Its projectiles now embed and cause more
       damage.'
-  - rscadd: Added a Symphionia bundle that contains a speargun, a quiver with magspears,
+  - rscadd: Added a Syndicate bundle that contains a speargun, a quiver with magspears,
       a carp hardsuit as well as other carp accessories.
   - tweak: Increased air alarm miasma thresholds to prevent warning spam.
   - tweak: Air scrubbers do not filter miasma by default anymore ("Filtering" and
@@ -195,10 +195,10 @@
   - rscadd: To use options, append OPTIONS to the query. Available are "PRIORITY"
       = HIGH/NORMAL, "SELECT" = FORCE_NULLS/DISABLE or 0/FALSE, "PROCCALL" = ASYNC/BLOCKING.
   mrhugo13:
-  - rscadd: The Symphionia has decided to equip their Symphionia leaders operative (Aswell
+  - rscadd: The Syndicate has decided to equip their Syndicate leaders operative (Aswell
       as their clown counterparts) with the new Combat Glove Plus! The new Combat
       Glove Plus does everything the old boring Combat Gloves does but with the added
-      extra of learning Krav Maga upon wearing them, any other Symphionia operative
+      extra of learning Krav Maga upon wearing them, any other Syndicate operative
       who wants to get in on the action will have to pay 5tc.
   subject217:
   - tweak: Plastitanium walls are no longer evil.
@@ -418,7 +418,7 @@
   Dax Dupont:
   - tweak: Vent clog events are more likely to happen.
   Denton:
-  - bugfix: The Symphionia Bundle uplink item is now purchasable again.
+  - bugfix: The Syndicate Bundle uplink item is now purchasable again.
   Gousaid67:
   - bugfix: The genetic sequence analyzer now will no longer be able to scan husked
       corpses or species with TRAIT_RADIMMUNE, similar to its bigger brother the DNA

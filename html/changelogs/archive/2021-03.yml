@@ -193,7 +193,7 @@
       apply as a template. This means the HoS can now demote departmental sec officers
       like Security Officer (Science).
   YakumoChen:
-  - rscadd: A less-than-new Symphionia Special bundle reminds you of the good old days
+  - rscadd: A less-than-new Syndicate Special bundle reminds you of the good old days
       when we didn't need all those newfangled traitor items the young-uns get. We
       had 6 items in the uplink and we had Monkey in rotation and by god we made do.
   tralezab:
@@ -382,7 +382,7 @@
   carshalash:
   - rscadd: Carbonation
   maxymax13:
-  - rscadd: The Symphionia's tech engineers have minorly modified the wiring on their
+  - rscadd: The Syndicate's tech engineers have minorly modified the wiring on their
       sequencers to not obstruct the ID card clip on jumpsuits, letting you tell the
       whole station how much of a traitor you are.
   - rscadd: You can also show them off like you can regular cards, in case the space
@@ -911,7 +911,7 @@
   - rscadd: Central Command has a new closet for if the announcement system breaks.
       They stuffed an intern in there, he should be fine.
   Cimika / Kathy Ryals:
-  - admin: Added the ability to call a N.E.R.D. (Symphionia Emergency Response Drone)
+  - admin: Added the ability to call a N.E.R.D. (Nanotrasen Emergency Response Drone)
       team in the create antagonist verb.
   Fikou:
   - bugfix: fixes getting nothing from necropolis chests
@@ -986,7 +986,7 @@
       slippery again.
   - code_imp: Slip component can be given a whitelist of valid worn slots. (B)Admins
       can now make anything worn slippery, again.
-  - admin: Midround Symphionia Sleeper Agent is now logged and messages admins when
+  - admin: Midround Syndicate Sleeper Agent is now logged and messages admins when
       triggered.
   Mothblocks:
   - bugfix: Security officers now only get PDA'd if the new member is of the same
@@ -1045,7 +1045,7 @@
       knick-knack for that matter, anymore when deleted.
   - bugfix: The experisi arcade experiment is now doable.
   Kylerace:
-  - bugfix: Symphionia & Noble realized that the holodecks ability to replicate books
+  - bugfix: NanoTrasen & Noble realized that the holodecks ability to replicate books
       was cutting into its bottom line, so they convinced the branch responsible for
       the holodeck to patch it out
   LemonInTheDark:
@@ -1084,7 +1084,7 @@
   ArcaneDefence:
   - qol: Some outdated round tips have been updated, and should hold true to the current
       state of the game a little better!
-  - rscadd: Symphionia has cut costs on manufacturing station APCs as they no longer
+  - rscadd: Nanotrasen has cut costs on manufacturing station APCs as they no longer
       have their kitchenware proofing coating. Do not put a fork in an APC.
   Arkatos:
   - qol: Added new status bar support for more objects that were previously visible
@@ -1106,7 +1106,7 @@
   - imageadd: fixes human feet poking out of envirosuit sprites
   - imageadd: gives the ventriloquist dummy a new, animated sprite
   MrDoomBringer:
-  - bugfix: Symphionia railroad engineers have done some minor repairs to their in-station
+  - bugfix: Nanotrasen railroad engineers have done some minor repairs to their in-station
       tram rails.
   NamelessFairy:
   - rscadd: CTF can now selects a random map at game start
@@ -1208,7 +1208,7 @@
   bloons3:
   - admin: Create Antag now allows for a maximum amount of antags to be selected for
       some options.
-  - bugfix: The already indestructible Symphionia Shuttle Terminal now cannot be deconstructed
+  - bugfix: The already indestructible Syndicate Shuttle Terminal now cannot be deconstructed
       with tools
   dragomagol:
   - qol: sentience fun balloons can no longer assign ghosts to dead mobs

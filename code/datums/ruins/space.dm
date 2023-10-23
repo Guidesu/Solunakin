@@ -36,7 +36,7 @@
 	id = "asteroid4"
 	suffix = "asteroid4.dmm"
 	name = "Asteroid 4"
-	description = "Symphionia Escape Pods have a 100%* success rate, and a 99%* customer satisfaction rate. \
+	description = "Nanotrasen Escape Pods have a 100%* success rate, and a 99%* customer satisfaction rate. \
 	*Please note that these statistics are taken from pods that have successfully docked with a recovery vessel."
 
 /datum/map_template/ruin/space/asteroid5
@@ -111,7 +111,7 @@
 	id = "derelict6"
 	suffix = "derelict6.dmm"
 	name = "Derelict 6"
-	description = "The hush-hush of Symphionia when it comes to stations seemingly vanishing off the radar is an interesting topic, theories of nuclear destruction float about while Symphionia \
+	description = "The hush-hush of Nanotrasen when it comes to stations seemingly vanishing off the radar is an interesting topic, theories of nuclear destruction float about while Nanotrasen \
 	flat-out denies said stations ever existing."
 
 /datum/map_template/ruin/space/derelict7
@@ -153,7 +153,7 @@
 /datum/map_template/ruin/space/caravanambush
 	id = "caravanambush"
 	suffix = "caravanambush.dmm"
-	name = "Symphionia Ambush"
+	name = "Syndicate Ambush"
 	description = "A caravan route used by passing cargo freights has been ambushed by a salvage team manned by the syndicate. \
 	The caravan managed to send off a distress message before being surrounded, their video feed cutting off as the sound of gunfire and a parrot was heard."
 
@@ -238,7 +238,7 @@
 /datum/map_template/ruin/space/listeningstation
 	id = "listeningstation"
 	suffix = "listeningstation.dmm"
-	name = "Symphionia Listening Station"
+	name = "Syndicate Listening Station"
 	description = "Listening stations form the backbone of the syndicate's information-gathering operations. \
 	Assignment to these stations is dreaded by most agents, as it entails long and lonely shifts listening to nearby stations chatter incessantly about the most meaningless things."
 
@@ -331,14 +331,14 @@ suffix = "whiteshipruin_box.dmm"*/
 /datum/map_template/ruin/space/forgottenship
 	id = "forgottenship"
 	suffix = "forgottenship.dmm"
-	name = "Symphionia Forgotten Ship"
+	name = "Syndicate Forgotten Ship"
 	description = "Seemingly abandoned ship went of course right into NT controlled space. It seems that malfunction caused most systems to turn off, except for sleepers."
 
 /datum/map_template/ruin/space/old_syndie_infiltrator
 	id = "old_infiltrator"
 	suffix = "old_infiltrator.dmm"
 	name = "Abandoned Infiltrator"
-	description = "Only one in five Gorlex Marauder strike forces return from their regular raids into Symphionia space. \
+	description = "Only one in five Gorlex Marauder strike forces return from their regular raids into Nanotrasen space. \
 		For the other four... well, their ship doesn't just disappear when their target evacuates."
 
 /datum/map_template/ruin/space/hellfactory

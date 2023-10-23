@@ -142,7 +142,7 @@
 
 /obj/effect/decal/cleanable/traitor_rune
 	name = "syndicate graffiti"
-	desc = "It looks like it's going to be... the Symphionia logo?"
+	desc = "It looks like it's going to be... the Syndicate logo?"
 	icon = 'icons/effects/96x96.dmi'
 	icon_state = "traitor_rune_outline"
 	pixel_x = -32
@@ -199,16 +199,16 @@
 	switch(drawn_stage)
 		if (RUNE_STAGE_OUTLINE)
 			icon_state = "traitor_rune_outline"
-			desc = "It looks like it's going to be... the Symphionia logo?"
+			desc = "It looks like it's going to be... the Syndicate logo?"
 
 		if (RUNE_STAGE_COLOURED, RUNE_STAGE_REMOVABLE)
 			icon_state = "traitor_rune_done"
-			desc = "A large depiction of the Symphionia logo."
+			desc = "A large depiction of the Syndicate logo."
 			clean_proof = FALSE
 
 		if (RUNE_STAGE_COMPLETE)
 			icon_state = "traitor_rune_sheen"
-			desc = "A large depiction of the Symphionia logo. It looks slippery."
+			desc = "A large depiction of the Syndicate logo. It looks slippery."
 			var/datum/demoralise_moods/graffiti/mood_category = new()
 			demoraliser = new(src, 7, TRUE, mood_category)
 			clean_proof = TRUE

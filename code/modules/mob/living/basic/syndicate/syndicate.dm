@@ -1,8 +1,8 @@
 ///////////////Base Mob////////////
 
 /mob/living/basic/syndicate
-	name = "Symphionia Operative"
-	desc = "Death to Symphionia."
+	name = "Syndicate Operative"
+	desc = "Death to Nanotrasen."
 	icon = 'icons/mob/simple/simple_human.dmi'
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	sentience_type = SENTIENCE_HUMANOID
@@ -40,7 +40,7 @@
 	AddElement(/datum/element/footstep, footstep_type = FOOTSTEP_MOB_SHOE)
 
 /mob/living/basic/syndicate/space
-	name = "Symphionia Commando"
+	name = "Syndicate Commando"
 	maxHealth = 170
 	health = 170
 	loot = list(/obj/effect/gibspawner/human)
@@ -54,7 +54,7 @@
 	set_light(4)
 
 /mob/living/basic/syndicate/space/stormtrooper
-	name = "Symphionia Stormtrooper"
+	name = "Syndicate Stormtrooper"
 	maxHealth = 250
 	health = 250
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/syndicatestormtrooper
@@ -77,7 +77,7 @@
 	return ..()
 
 /mob/living/basic/syndicate/melee/space
-	name = "Symphionia Commando"
+	name = "Syndicate Commando"
 	maxHealth = 170
 	health = 170
 	unsuitable_atmos_damage = 0
@@ -90,7 +90,7 @@
 	set_light(4)
 
 /mob/living/basic/syndicate/melee/space/stormtrooper
-	name = "Symphionia Stormtrooper"
+	name = "Syndicate Stormtrooper"
 	maxHealth = 250
 	health = 250
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/syndicatestormtrooper
@@ -110,7 +110,7 @@
 	l_hand = /obj/item/shield/energy
 
 /mob/living/basic/syndicate/melee/sword/space
-	name = "Symphionia Commando"
+	name = "Syndicate Commando"
 	maxHealth = 170
 	health = 170
 	unsuitable_atmos_damage = 0
@@ -123,7 +123,7 @@
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
 
 /mob/living/basic/syndicate/melee/sword/space/stormtrooper
-	name = "Symphionia Stormtrooper"
+	name = "Syndicate Stormtrooper"
 	maxHealth = 250
 	health = 250
 	projectile_deflect_chance = 50
@@ -159,7 +159,7 @@
 	loot = list(/obj/effect/mob_spawn/corpse/human/syndicatesoldier)
 
 /mob/living/basic/syndicate/ranged/space
-	name = "Symphionia Commando"
+	name = "Syndicate Commando"
 	maxHealth = 170
 	health = 170
 	unsuitable_atmos_damage = 0
@@ -172,7 +172,7 @@
 	set_light(4)
 
 /mob/living/basic/syndicate/ranged/space/stormtrooper
-	name = "Symphionia Stormtrooper"
+	name = "Syndicate Stormtrooper"
 	maxHealth = 250
 	health = 250
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/syndicatestormtrooper
@@ -186,12 +186,12 @@
 	r_hand = /obj/item/gun/ballistic/automatic/c20r
 
 /mob/living/basic/syndicate/ranged/smg/pilot //caravan ambush ruin
-	name = "Symphionia Salvage Pilot"
+	name = "Syndicate Salvage Pilot"
 	loot = list(/obj/effect/mob_spawn/corpse/human/syndicatepilot)
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/syndicatepilot
 
 /mob/living/basic/syndicate/ranged/smg/space
-	name = "Symphionia Commando"
+	name = "Syndicate Commando"
 	maxHealth = 170
 	health = 170
 	unsuitable_atmos_damage = 0
@@ -204,7 +204,7 @@
 	set_light(4)
 
 /mob/living/basic/syndicate/ranged/smg/space/stormtrooper
-	name = "Symphionia Stormtrooper"
+	name = "Syndicate Stormtrooper"
 	maxHealth = 250
 	health = 250
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/syndicatestormtrooper
@@ -217,7 +217,7 @@
 	r_hand = /obj/item/gun/ballistic/shotgun/bulldog
 
 /mob/living/basic/syndicate/ranged/shotgun/space
-	name = "Symphionia Commando"
+	name = "Syndicate Commando"
 	maxHealth = 170
 	health = 170
 	unsuitable_atmos_damage = 0
@@ -231,7 +231,7 @@
 	set_light(4)
 
 /mob/living/basic/syndicate/ranged/shotgun/space/stormtrooper
-	name = "Symphionia Stormtrooper"
+	name = "Syndicate Stormtrooper"
 	maxHealth = 250
 	health = 250
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/syndicatestormtrooper

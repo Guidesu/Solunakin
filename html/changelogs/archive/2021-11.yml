@@ -23,7 +23,7 @@
   - bugfix: fixes a runtime when transferring advanced ids to/from wallets
   - bugfix: Vampires can now no longer transform into bat form when their brain is
       placed in an MMI
-  The Symphionia:
+  The Syndicate:
   - rscadd: We have exported newly designed Winterized Hardsuits for frozen conditions,
       beware it does not have any better protection.
   jjpark-kb:
@@ -285,7 +285,7 @@
   - rscadd: directory param to map load + whitelist for data and _maps
   - rscadd: advertising for mojave sun in tg commit logs
   YakumoChen:
-  - bugfix: Symphionia has updated medical records upon finding out that it was still
+  - bugfix: Nanotrasen has updated medical records upon finding out that it was still
       tracking those incompatible with illegal cloning technology, which is banned
       sector-wide. Such records have been expunged.
 2021-11-09:
@@ -396,7 +396,7 @@
       it's Reinforced Wall deconstruction.
   - balance: Due to budget cuts, the RPDs can't place transit tube under dense objects
       like windows anymore.
-  Symphionia Threading department:
+  Nanotrasen Threading department:
   - imageadd: Departmental Vox guards can now wear their fancy coats!
   SkyratBot:
   - bugfix: Fixed non-human and non-silicon mobs being unable to mine rock walls when
@@ -664,7 +664,7 @@
   - bugfix: The invisible plant has been exterminated.
   GoldenAlpharex:
   - code_imp: Improved a bit some of the subtle and subtler code.
-  - rscdel: Symphionia denies any and all allegations of slacking off when hiring
+  - rscdel: Nanotrasen denies any and all allegations of slacking off when hiring
       their HR Interns. Coincidentally, after several interns suddenly went missing,
       the severity of bureaucratic mistakes was severely reduced for brand-new stations.
   - bugfix: Votes now work again.
@@ -677,7 +677,7 @@
       in it, rather than awkwardly lying on top of everything, armrests included!
   - bugfix: Mass hallucinations are over! Drinking glasses should no longer ever be
       invisible!
-  - bugfix: Quantum pads have had their blueprint tweaked by Symphionia's finest Bluespace
+  - bugfix: Quantum pads have had their blueprint tweaked by Nanotrasen's finest Bluespace
       Technicians, and will no longer break the laws of teleportation by teleporting
       themselves when they shouldn't.
   - bugfix: Benches should no longer be looking like errors on mapping editors.
@@ -733,7 +733,7 @@
       into madness
   OrionTheFox:
   - bugfix: Fixed modular posters mucking up the new TG posters
-  - bugfix: After several months of complaints, Symphionia has finally updated their
+  - bugfix: After several months of complaints, NanoTrasen has finally updated their
       HUD databases, properly representing their newer jobs, SolGov, and more to come!
   - bugfix: Departmental Guards' ID Trims will now properly appear
   - rscadd: The Ranger Poncho (brown cowboy poncho) is now Greyscale-able! (The default
@@ -811,7 +811,7 @@
   - bugfix: Mulebots no longer runtime
   - bugfix: Lavaland ash storms once again replenish basalt turfs.
   - bugfix: Toy shotguns (and toy crossbows) can be fired with only one hand again.
-  - imageadd: Due to lobbying pressure from the Yee-haw Conservation Society, Symphionia
+  - imageadd: Due to lobbying pressure from the Yee-haw Conservation Society, Nanotrasen
       vending machines now stock five new cowboy hats and an old-west vest.
   - bugfix: Random names (such as from the secrets panel) will no longer override
       your preferences.
@@ -886,7 +886,7 @@
       bags.
   - bugfix: Fixed comms console not acknowledging admin rejects.
   SolGov Engineering Safety Association (SESA):
-  - rscadd: Congratulations, Symphionia Space Station! Your engineering crew has passed
+  - rscadd: Congratulations, Nanotrasen Space Station! Your engineering crew has passed
       safety inspections with a grade of "C-", clearing you for use of spectroscopy/infrared
       based Atmospheric Analyzers! These Ranged Analyzers should be a large improvement
       to the standard.
@@ -941,7 +941,7 @@
   - bugfix: You could see parallax over blackness
 2021-11-29:
   Helios7-1:
-  - rscadd: Symphionia Cyborg division has introduced a new Inducer upgrade for engineering
+  - rscadd: NanoTrasen Cyborg division has introduced a new Inducer upgrade for engineering
       model cyborgs! Contact your roboticist today!
   RatFromTheJungle:
   - rscadd: hemophages are now a roundstart race (even w/out halloween), have had

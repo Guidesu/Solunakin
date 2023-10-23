@@ -5,7 +5,7 @@
 
 /obj/structure/sign/poster/official
 	poster_item_name = "motivational poster"
-	poster_item_desc = "An official Symphionia-issued poster to foster a compliant and obedient workforce. It comes with state-of-the-art adhesive backing, for easy pinning to any vertical surface."
+	poster_item_desc = "An official Nanotrasen-issued poster to foster a compliant and obedient workforce. It comes with state-of-the-art adhesive backing, for easy pinning to any vertical surface."
 	poster_item_icon_state = "rolled_legit"
 	printable = TRUE
 
@@ -28,8 +28,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/random, 32)
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/here_for_your_safety, 32)
 
 /obj/structure/sign/poster/official/nanotrasen_logo
-	name = "\improper Symphionia logo"
-	desc = "A poster depicting the Symphionia logo."
+	name = "\improper Nanotrasen logo"
+	desc = "A poster depicting the Nanotrasen logo."
 	icon_state = "nanotrasen_logo"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/nanotrasen_logo, 32)
@@ -197,7 +197,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/cohiba_robusto_a
 
 /obj/structure/sign/poster/official/anniversary_vintage_reprint
 	name = "50th Anniversary Vintage Reprint"
-	desc = "A reprint of a poster from 2505, commemorating the 50th Anniversary of Nanoposters Manufacturing, a subsidiary of Symphionia."
+	desc = "A reprint of a poster from 2505, commemorating the 50th Anniversary of Nanoposters Manufacturing, a subsidiary of Nanotrasen."
 	icon_state = "anniversary_vintage_reprint"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/anniversary_vintage_reprint, 32)
@@ -211,14 +211,14 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/fruit_bowl, 32)
 
 /obj/structure/sign/poster/official/pda_ad
 	name = "PDA Ad"
-	desc = "A poster advertising the latest PDA from Symphionia suppliers."
+	desc = "A poster advertising the latest PDA from Nanotrasen suppliers."
 	icon_state = "pda_ad"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/pda_ad, 32)
 
 /obj/structure/sign/poster/official/enlist
 	name = "Enlist" // but I thought deathsquad was never acknowledged
-	desc = "Enlist in the Symphionia Deathsquadron reserves today!"
+	desc = "Enlist in the Nanotrasen Deathsquadron reserves today!"
 	icon_state = "enlist"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/enlist, 32)
@@ -253,7 +253,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/the_owl, 32)
 
 /obj/structure/sign/poster/official/no_erp
 	name = "No ERP"
-	desc = "This poster reminds the crew that Eroticism, Rape and Pornography are banned on Symphionia stations."
+	desc = "This poster reminds the crew that Eroticism, Rape and Pornography are banned on Nanotrasen stations."
 	icon_state = "no_erp"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/no_erp, 32)
@@ -274,7 +274,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/dick_gum, 32)
 
 /obj/structure/sign/poster/official/there_is_no_gas_giant
 	name = "There Is No Gas Giant"
-	desc = "Symphionia has issued posters, like this one, to all stations reminding them that rumours of a gas giant are false."
+	desc = "Nanotrasen has issued posters, like this one, to all stations reminding them that rumours of a gas giant are false."
 	// And yet people still believe...
 	icon_state = "there_is_no_gas_giant"
 
@@ -301,7 +301,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/periodic_table, 
 	. += "\t[span_info("In individuals with chronic exposure, severe effects have been noted. Further heightened aggression, long-term amnesia, Alzheimer's symptoms, schizophrenia, macular degeneration, aneurysms, heightened risk of stroke, and Parkinsons symptoms have all been noted.")]"
 	. += "\t[span_info("It is recommended that all individuals in unprotected contact with raw plasma regularly check with company health officials.")]"
 	. += "\t[span_info("For more information, please check with TerraGov's extranet site on Amenthium: www.terra.gov/health_and_safety/amenthium/, or our internal risk-assessment documents (document numbers #47582-b (Plasma safety data sheets) and #64210 through #64225 (PPE regulations for working with Plasma), available via NanoDoc to all employees).")]"
-	. += "\t[span_info("Symphionia: Always looking after your health.")]"
+	. += "\t[span_info("Nanotrasen: Always looking after your health.")]"
 	return .
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/plasma_effects, 32)
@@ -314,7 +314,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/plasma_effects, 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/terragov, 32)
 
 /obj/structure/sign/poster/official/corporate_perks_vacation
-	name = "Symphionia Corporate Perks: Vacation"
+	name = "Nanotrasen Corporate Perks: Vacation"
 	desc = "This informational poster provides information on some of the prizes available via the NT Corporate Perks program, including a two-week vacation for two on the resort world Idyllus."
 	icon_state = "corporate_perks_vacation"
 
@@ -337,21 +337,21 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/jim_nortons, 32)
 
 /obj/structure/sign/poster/official/twenty_four_seven
 	name = "24-Seven Supermarkets"
-	desc = "An advertisement for 24-Seven supermarkets, advertising their new 24-Stops as part of their partnership with Symphionia."
+	desc = "An advertisement for 24-Seven supermarkets, advertising their new 24-Stops as part of their partnership with Nanotrasen."
 	icon_state = "twenty_four_seven"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/twenty_four_seven, 32)
 
 /obj/structure/sign/poster/official/tactical_game_cards
-	name = "Symphionia Tactical Game Cards"
-	desc = "An advertisement for Symphionia's TCG cards: BUY MORE CARDS."
+	name = "Nanotrasen Tactical Game Cards"
+	desc = "An advertisement for Nanotrasen's TCG cards: BUY MORE CARDS."
 	icon_state = "tactical_game_cards"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/tactical_game_cards, 32)
 
 /obj/structure/sign/poster/official/midtown_slice
 	name = "Midtown Slice Pizza"
-	desc = "An advertisement for Midtown Slice Pizza, the official pizzeria partner of Symphionia. Midtown Slice: like a slice of home, no matter where you are."
+	desc = "An advertisement for Midtown Slice Pizza, the official pizzeria partner of Nanotrasen. Midtown Slice: like a slice of home, no matter where you are."
 	icon_state = "midtown_slice"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/midtown_slice, 32)

@@ -36,7 +36,7 @@
       and attack_self (items) used to.
   IndieanaJones:
   - rscadd: Dynamic Mode can now spawn Swarmers
-  - balance: Swarmers have received a software update, changing some of their capabilities.  Symphionia
+  - balance: Swarmers have received a software update, changing some of their capabilities.  Nanotrasen
       reports a slight increase in strange objects in the neighboring sector.
   InvalidArgument3:
   - rscadd: new Ripley movement sounds!
@@ -122,7 +122,7 @@
       their target as easily as they did before.
   - soundadd: Floorbots will now play a small chime when stacked on top of each other
       to indicate that they're moving apart.
-  - bugfix: Symphionia drones no longer have references to their removed mechanics.
+  - bugfix: Syndicate drones no longer have references to their removed mechanics.
   Fikou:
   - bugfix: You will no longer lose the mission if you go to water plants on Ice Box,
       comrade.
@@ -138,7 +138,7 @@
       inventory windows.
   IndieanaJones:
   - balance: The Spider Clan has recently taken up the Space Ninja project again along
-      with the Symphionia.  Space Ninjas have been drastically changed as a result,
+      with the Syndicate.  Space Ninjas have been drastically changed as a result,
       becoming much weaker and more stealth oriented.  As a result of cutting costs
       per ninja, more ninjas were able to be hired.  Expect to see them around more
       often.
@@ -401,7 +401,7 @@
   Zytolg:
   - rscadd: Cargo, Permabrig, and some other areas now properly certified against
       Fires with some additional Firelocks
-  - rscadd: Symphionia has added new lightswitches as a part of the Corperate-Wide
+  - rscadd: Nanotrasen has added new lightswitches as a part of the Corperate-Wide
       power awareness campaign
   - rscdel: In an effort to cut costs for the new certifications, firelocks have been
       removed from Maint Doors (why were these there?)
@@ -453,7 +453,7 @@
   - bugfix: Mk-honk banana shoes can now be refilled with bananium even if not on
       help intent.
   Timberpoes:
-  - bugfix: Symphionia bounty boards no longer leave behind 95% of the machine when
+  - bugfix: Nanotrasen bounty boards no longer leave behind 95% of the machine when
       tasked with selling one! (Special thanks to ArcaneMusic)
   - bugfix: The BSA will no longer refund all of its component parts and circuitboard
       when constructed.

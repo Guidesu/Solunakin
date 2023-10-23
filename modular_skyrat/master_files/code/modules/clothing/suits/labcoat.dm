@@ -7,7 +7,7 @@
 
 /obj/item/clothing/suit/toggle/labcoat/skyrat/rd
 	name = "research directors labcoat"
-	desc = "A Symphionia standard labcoat for certified Research Directors. It has an extra plastic-latex lining on the outside for more protection from chemical and viral hazards."
+	desc = "A Nanotrasen standard labcoat for certified Research Directors. It has an extra plastic-latex lining on the outside for more protection from chemical and viral hazards."
 	icon_state = "labcoat_rd"
 	body_parts_covered = CHEST|ARMS|LEGS
 	armor_type = /datum/armor/skyrat_rd

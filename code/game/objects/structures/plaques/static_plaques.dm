@@ -63,7 +63,7 @@
 	Please be aware that riding the tram can cause a variety of injuries, including but not limited to: slips, trips, and falls; collisions with other passengers or objects; strains, sprains, and other musculoskeletal injuries; \
 	cuts, bruises, and lacerations; and more severe injuries such as head trauma, spinal cord injuries, and even death. These injuries can be caused by a variety of factors, including the movements of the tram, the behaviour \
 	of other passengers, and unforeseen circumstances such as foul play or mechanical issues.<br><br>\
-	By entering the tram, guideway, or crossings you agree Symphionia is not liable for any injuries, damages, or losses that may occur. If you do not agree to these terms, please do not use the tram.<br>"
+	By entering the tram, guideway, or crossings you agree Nanotrasen is not liable for any injuries, damages, or losses that may occur. If you do not agree to these terms, please do not use the tram.<br>"
 
 /obj/structure/plaque/static_plaque/tram/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -218,7 +218,7 @@
 
 /obj/structure/sign/plaques/kiddie/perfect_man
 	name = "\improper 'Perfect Man' sign"
-	desc = "A guide to the exhibit, explaining how recent developments in mindshield implant and cloning technologies by Symphionia Corporation have led to the development and the effective immortality of the 'perfect man', the loyal Symphionia Employee."
+	desc = "A guide to the exhibit, explaining how recent developments in mindshield implant and cloning technologies by Nanotrasen Corporation have led to the development and the effective immortality of the 'perfect man', the loyal Nanotrasen Employee."
 
 /obj/structure/sign/plaques/kiddie/perfect_drone
 	name = "\improper 'Perfect Drone' sign"

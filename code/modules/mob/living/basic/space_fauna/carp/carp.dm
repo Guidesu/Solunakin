@@ -194,7 +194,7 @@
 /mob/living/basic/carp/pet/lia
 	name = "Lia"
 	real_name = "Lia"
-	desc = "A failed experiment of Symphionia to create weaponised carp technology. This less than intimidating carp now serves as the Head of Security's pet."
+	desc = "A failed experiment of Nanotrasen to create weaponised carp technology. This less than intimidating carp now serves as the Head of Security's pet."
 	faction = list(FACTION_NEUTRAL)
 	maxHealth = 200
 	health = 200
@@ -215,7 +215,7 @@
 /mob/living/basic/carp/pet/cayenne
 	name = "Cayenne"
 	real_name = "Cayenne"
-	desc = "A failed Symphionia experiment in weaponized space carp technology, it now serves as a lovable mascot."
+	desc = "A failed Syndicate experiment in weaponized space carp technology, it now serves as a lovable mascot."
 	faction = list(ROLE_SYNDICATE)
 	/// Overlay to apply to display the disk
 	var/mutable_appearance/disk_overlay

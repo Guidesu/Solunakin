@@ -1,6 +1,6 @@
 /datum/computer_file/program/science
 	filename = "experi_track"
-	filedesc = "Symphionia Science Hub"
+	filedesc = "Nanotrasen Science Hub"
 	category = PROGRAM_CATEGORY_SCI
 	program_icon_state = "research"
 	extended_desc = "Connect to the internal science server in order to assist in station research efforts."

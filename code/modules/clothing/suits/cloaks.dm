@@ -82,7 +82,7 @@
 
 /obj/item/clothing/neck/cloak/skill_reward/playing
 	name = "legendary veteran's cloak"
-	desc = "Worn by the wisest of veteran employees, this legendary cloak is only attainable by maintaining a living employment agreement with Symphionia for over <b>five thousand hours</b>. This status symbol represents a being is better than you in nearly every quantifiable way, simple as that."
+	desc = "Worn by the wisest of veteran employees, this legendary cloak is only attainable by maintaining a living employment agreement with Nanotrasen for over <b>five thousand hours</b>. This status symbol represents a being is better than you in nearly every quantifiable way, simple as that."
 	icon_state = "playercloak"
 	element_type = /datum/element/skill_reward/veteran
 

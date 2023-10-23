@@ -555,7 +555,7 @@
 	pixel_y = 17
 	},
 /obj/structure{
-	desc = "This is the shuttle we're on. It's amazing what Symphionia can do once they actually put more than ten seconds of effort into their projects.";
+	desc = "This is the shuttle we're on. It's amazing what Nanotrasen can do once they actually put more than ten seconds of effort into their projects.";
 	icon = 'icons/obj/machines/shuttle_manipulator.dmi';
 	icon_state = "hologram_whiteship";
 	layer = 4;
@@ -641,7 +641,7 @@
 /area/shuttle/escape)
 "KU" = (
 /obj/structure/showcase/mecha/marauder{
-	desc = "A stand with an empty old Symphionia Corporation combat mech bolted to it. The marauder is described as the premier unit used to defend corporate interests and employees.";
+	desc = "A stand with an empty old Nanotrasen Corporation combat mech bolted to it. The marauder is described as the premier unit used to defend corporate interests and employees.";
 	dir = 4;
 	max_integrity = 2500;
 	name = "marauder mech exhibit"
@@ -709,7 +709,7 @@
 /area/shuttle/escape)
 "Rf" = (
 /obj/structure/showcase/mecha/marauder{
-	desc = "A stand with an empty old Symphionia Corporation combat mech bolted to it. The seraph is described as the most valuable unit in defending the VIPs of Symphionia.";
+	desc = "A stand with an empty old Nanotrasen Corporation combat mech bolted to it. The seraph is described as the most valuable unit in defending the VIPs of Nanotrasen.";
 	dir = 8;
 	icon_state = "seraph";
 	max_integrity = 2500;

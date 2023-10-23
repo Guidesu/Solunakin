@@ -23,7 +23,7 @@
 /obj/item/book/manual/wargame_rules
 	name = "Wargame: Blue Lizard - Example Ruleset"
 	icon_state = "book"
-	starting_author = "Symphionia Naval Wargames Commission"
+	starting_author = "Nanotrasen Naval Wargames Commission"
 	starting_title = "Wargame: Blue Lizard - Example Ruleset"
 	starting_content = {"
 				<head>
@@ -35,7 +35,7 @@
 				</head>
 				<body>
 				<center>
-				<b style='font-size: 12px;'>Official publication of the Symphionia Naval Wargames Commission</b>
+				<b style='font-size: 12px;'>Official publication of the Nanotrasen Naval Wargames Commission</b>
 				<h1>Wargame: Blue Lizard</h1>
 				</center>
 				<h2>Introduction</h2>
@@ -242,7 +242,7 @@
 							When the game master determines these objectives to be complete, or that some kind of game
 							ending condition has been achieved, then they may end the game at will.
 						<br>
-						*Wargame: Blue Lizard is a copyright protected title under ownership of Symphionia
+						*Wargame: Blue Lizard is a copyright protected title under ownership of Nanotrasen
 				</body>
 				</html>
 			"}
@@ -250,7 +250,7 @@
 /obj/item/book/manual/wargame_rules/examples
 	name = "Wargame: Blue Lizard - Example Ships and Scenarios"
 	icon_state = "book1"
-	starting_author = "Symphionia Naval Wargames Commission"
+	starting_author = "Nanotrasen Naval Wargames Commission"
 	starting_title = "Wargame: Blue Lizard - Example Ships and Scenarios"
 	starting_content = {"
 				<head>
@@ -265,7 +265,7 @@
 				</head>
 				<body>
 				<center>
-				<b style='font-size: 12px;'>Official publication of the Symphionia Naval Wargames Commission</b>
+				<b style='font-size: 12px;'>Official publication of the Nanotrasen Naval Wargames Commission</b>
 				<h1>Wargame: Blue Lizard</h1>
 				</center>
 				<h2>Introduction</h2>
@@ -275,9 +275,9 @@
 					ships in this book and that making your own with your game master is encouraged.
 				<br>
 				<h2>Example Ships</h2>
-					<b>Symphionia</b> <br>
-					Symphionia's fleet has historically been focused on quick response, especially due to the spread
-					of Symphionia assets across the galaxy. Their ships are often built to simply get to a location
+					<b>Nanotrasen</b> <br>
+					Nanotrasen's fleet has historically been focused on quick response, especially due to the spread
+					of Nanotrasen assets across the galaxy. Their ships are often built to simply get to a location
 					fast and, hopefully, scare off anything that's there. This isn't to say that modern vessels are
 					incapable of heavy combat, though the vessels in this list will be based upon older, decommissioned
 					ship types due to modern designs being classified.
@@ -306,7 +306,7 @@
 						- ~1/2 a tile's length of movement range
 						<br>
 						-- Battlecruiser -- <br>
-						The largest commonly fielded ship in Symphionia's navy, a fast response vessel with enough guns and
+						The largest commonly fielded ship in Nanotrasen's navy, a fast response vessel with enough guns and
 						armor to handle any large threat the fleet comes across, though these ships are a rare sight. <br>
 						- Represented by an alternate large ship marker <br>
 						- Cannons <br>
@@ -347,7 +347,7 @@
 						- ~1/2 a tile's length of movement range
 					<br>
 					<b>NRI</b> <br>
-					The NRI's navy has always been at least a contender to SolFed's and Symphionia's own, heavily focused on missiles
+					The NRI's navy has always been at least a contender to SolFed's and Nanotrasen's own, heavily focused on missiles
 					with very few ships straying away from that doctrine.
 						<br>
 						-- Patrol Corvette --
@@ -408,11 +408,11 @@
 						- ~1 tile's movement range
 					<br>
 				<h2>Example Scenarios</h2>
-					-- Symphionia/NRI Station Skirmish -- <br>
-					A Symphionia sponsored station located in NRI border territories has violated several regulations
-					and laws, and an NRI patrol fleet has been sent to repossess the station. A force of Symphionia
+					-- Nanotrasen/NRI Station Skirmish -- <br>
+					A Nanotrasen sponsored station located in NRI border territories has violated several regulations
+					and laws, and an NRI patrol fleet has been sent to repossess the station. A force of Nanotrasen
 					ships jumps in just in time to intercept. <br>
-					- Takes place with a Symphionia station surrounded by a large asteroid field of some kind between
+					- Takes place with a Nanotrasen station surrounded by a large asteroid field of some kind between
 					where both teams start. <br>
 					- Either side will win through complete destruction or surrender of the enemy. <br>
 					- The NRI should start with a few more ships, or stronger ships than the NT force, however
@@ -427,7 +427,7 @@
 					- Both the NRI and SolFed fleets should be about the same size and strength.
 					<br>
 					-- SolFed/Mothic Raiders Convoy Raid -- <br>
-					A convoy of Symphionia cargo vessels, escorted by a small patrol force, come under attack by a sizeable
+					A convoy of Nanotrasen cargo vessels, escorted by a small patrol force, come under attack by a sizeable
 					band of mothic raiders. <br>
 					- Takes place in a dense asteroid field <br>
 					- NT will win if they destroy the raiders completely <br>

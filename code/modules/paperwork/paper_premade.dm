@@ -35,7 +35,7 @@
 	name = "Bluespace Artillery (BSA) Assembly Instructions"
 	default_raw_text = {"<b>Below is a quick guide on setting up your new Bluespace Artillery Cannon.</b>
 	<br>
-	Featuring the newest in Symphionia technology, the Bluespace Artillery Cannon is your surefire ticket to complete and total threat elimination.
+	Featuring the newest in Nanotrasen technology, the Bluespace Artillery Cannon is your surefire ticket to complete and total threat elimination.
 	<br>
 	<h1>1. Acquire necessary resources.</h1>
 	* Bluespace Artillery Bore
@@ -70,7 +70,7 @@
 	<b>Commencing firing protocols requires the access of at least two heads, the console will be locked down until this requirement is met.</b>
 	<b>Always make sure you are certain before attempting to fire the BSA.<b>
 	<br>
-	<i>Keep this manual for your records, failure to do so will void your 2 day limited liability warranty from Symphionia.</i>"}
+	<i>Keep this manual for your records, failure to do so will void your 2 day limited liability warranty from Nanotrasen.</i>"}
 
 /obj/item/paper/fluff/jobs/security/beepsky_mom
 	name = "Note from Beepsky's Mom"
@@ -148,7 +148,7 @@
 
 /obj/item/paper/fluff/stations/centcom/bulletin
 	name = "paper- 'Official Bulletin'"
-	default_raw_text = "<BR>CentCom Security<BR>Port Division<BR>Official Bulletin<BR><BR>Inspector,<BR>There is an emergency shuttle arriving today.<BR><BR>Approval is restricted to Symphionia employees only. Deny all other entrants.<BR><BR>CentCom Port Commissioner"
+	default_raw_text = "<BR>CentCom Security<BR>Port Division<BR>Official Bulletin<BR><BR>Inspector,<BR>There is an emergency shuttle arriving today.<BR><BR>Approval is restricted to Nanotrasen employees only. Deny all other entrants.<BR><BR>CentCom Port Commissioner"
 
 
 /////////// Lavaland
@@ -188,7 +188,7 @@ Greetings operative.
 
 <br>As you may be aware, since your financial backers do not wish to provide our collective enemies access to any trace of you or your physical form, we've had to augment
 you with an explosive located in the base of your neck: a microbomb implant. This implant activates a blood-based explosive the moment your heart stops beating, destroying all
-evidence of your physical body and brain, eradicating you permanently so those freaks at Symphionia can't interrogate your brain. Or worse, clone you and mindwipe you.
+evidence of your physical body and brain, eradicating you permanently so those freaks at Nanotrasen can't interrogate your brain. Or worse, clone you and mindwipe you.
 We much prefer you free to die red than a slave to the corporation. I'm sure you agree. <B><i>Right, comrade?</i></B>
 <br>
 <br>Now, don't fret. While this is beneficial for our needs, we understand that operatives sometimes would prefer themselves to be able to have more
@@ -204,7 +204,7 @@ despite the presence of atropine by releasing a failsafe vial of monkey blood (n
 <br>The only factor is whether or not, and for give me for what I'm about to write, your 'animating spirit' still resides within your body to guide the AI and activate the bomb manually.
 <br>Please, do not ask your fellow operatives what this means.
 <br>
-<br>They'll probably say something absurd like <B>'your ghost needs to still be in your body to use the microbomb'</B>. That's stupid, do not listen to these ridiculous assertions. It is likely Symphionia propaganda.
+<br>They'll probably say something absurd like <B>'your ghost needs to still be in your body to use the microbomb'</B>. That's stupid, do not listen to these ridiculous assertions. It is likely Nanotrasen propaganda.
 <br>
 <br>Ghosts are not real. Necromancy is <B>bullshit</B>.
 <br>

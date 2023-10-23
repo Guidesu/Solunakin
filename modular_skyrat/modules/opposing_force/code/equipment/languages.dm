@@ -9,7 +9,7 @@
 
 /datum/opposing_force_equipment/language/codespeak
 	name = "Codespeak"
-	description = "Symphionia operatives can use a series of codewords to convey complex information, while sounding like random concepts and drinks to anyone listening in."
+	description = "Syndicate operatives can use a series of codewords to convey complex information, while sounding like random concepts and drinks to anyone listening in."
 	language = /datum/language/codespeak
 
 /datum/opposing_force_equipment/language/narsie

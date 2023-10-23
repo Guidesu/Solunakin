@@ -8,7 +8,7 @@
 /obj/docking_port/mobile{
 	dir = 2;
 	shuttle_id = "caravansyndicate3";
-	name = "Symphionia Drop Ship";
+	name = "Syndicate Drop Ship";
 	port_direction = 8;
 	preferred_direction = 4
 	},

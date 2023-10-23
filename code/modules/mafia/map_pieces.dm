@@ -39,7 +39,7 @@
 	mappath = "_maps/map_files/Mafia/mafia_ball.dmm"
 
 /datum/map_template/mafia/syndicate
-	name = "Symphionia Megastation"
+	name = "Syndicate Megastation"
 	description = "Yes, it's a very confusing day at the Megastation. Will the syndicate conflict resolution operatives succeed?"
 	mappath = "_maps/map_files/Mafia/mafia_syndie.dmm"
 	custom_outfit = /datum/outfit/mafia/syndie

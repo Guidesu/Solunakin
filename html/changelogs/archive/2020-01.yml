@@ -19,13 +19,13 @@
   Skoglol:
   - bugfix: Orion trail will no longer give you a radio for winning. Arcades have
       vending sound.
-  - bugfix: Symphionia codewords can now be locations.
+  - bugfix: Syndicate codewords can now be locations.
   - bugfix: Voice of god no longer causes you to get muted.
   - bugfix: Blood contract can no longer target someone on the centcom z-level.
   StonebayKyle:
   - tweak: Plumbing-surgery connection on Meta is now not considered maintenance.
   - tweak: Viro-medbay connection on Delta is now not considered maintenance.
-  - rscdel: Symphionia has removed expensive maintenance-exclusive radiation shields
+  - rscdel: Nanotrasen has removed expensive maintenance-exclusive radiation shields
       in specific areas on two of their research stations.
   WarlockD:
   - rscadd: Crafting recipe for construction bags.
@@ -48,7 +48,7 @@
   - refactor: clean up of the environment handles for mobs and species
 2020-01-04:
   ArcaneMusic:
-  - rscadd: Symphionia Plastic Labs has sat down and developed new designs exclusively
+  - rscadd: Nanotrasen Plastic Labs has sat down and developed new designs exclusively
       using plastic for station use. Station productivity has dropped by 2.7 percent.
   - rscadd: Adds Plastic Potted Trees, Plastic Can holders, Plastic Bead Necklaces,
       and Plastic Boxes.
@@ -403,7 +403,7 @@
   Mickyan:
   - rscadd: 'Added Thocks socks: dress to impress with thongs for your feet'
   Paxilmaniac:
-  - rscadd: "new Symphionia\u2122 Space Pods"
+  - rscadd: "new Nanotrasen\u2122 Space Pods"
   - bugfix: earmuffs actually make you deaf now
   Skoglol:
   - balance: Husking now requires more burn damage before it happens.
@@ -456,7 +456,7 @@
   - rscadd: Timer assembly now uses tgui-next.
   - bugfix: Trashbag will now properly update its icon.
   Buggy123:
-  - tweak: Be advised, the Symphionia Weaponized Experimental E-graculture Deparment
+  - tweak: Be advised, the Nanotrasen Weaponized Experimental E-graculture Deparment
       has discovered a series of mutations in space-born vine clusters. Stations in
       the cluster are advised to keep a eye out for any germinating vine spores, as
       they may be unusually potent and dangerous!

@@ -1,6 +1,6 @@
 2015-08-02:
   Incoming5643:
-  - rscadd: Symphionia toolboxes now come with never before seen red insulated gloves.
+  - rscadd: Syndicate toolboxes now come with never before seen red insulated gloves.
   Steelpoint:
   - bugfix: Fixed multiple mapping errors for Boxstation and the mining base.
   - rscadd: A circuit imprinter and exosuit fabrication board have been added to tech
@@ -56,7 +56,7 @@
   - bugfix: Glacial Blast now properly has no cooldown if used while phase shifting.
   - bugfix: Fixes a runtime if a target with no mind is enthralled.
   bgobandit:
-  - rscadd: Symphionia scientists have achieved the tremendous breakthrough of injecting
+  - rscadd: Nanotrasen scientists have achieved the tremendous breakthrough of injecting
       gold slime extracts with water. Pets ensued.
 2015-08-06:
   AnturK:
@@ -94,7 +94,7 @@
       anymore.
 2015-08-09:
   RemieRichards:
-  - rscadd: 'Symphionia Mandatory FunCo Subsidiary: CoderbusGames, would like to announce
+  - rscadd: 'Nanotrasen Mandatory FunCo Subsidiary: CoderbusGames, would like to announce
       an update to Orion Trail!'
   - rscadd: 'Spaceports: Buy/Sell Crew, Trade Fuel for Food, Trade Food for Fuel,
       Buy Spare Electronics, Engine Parts and Hull Plates, or maybe you think you''re
@@ -112,7 +112,7 @@
       meat its end as clothing.
   - rscadd: Added Space Carp spacesuit to the code, I know what I'm praying for.
   bgobandit:
-  - rscadd: After multiple complaints from WaffleCo food activists, Symphionia has
+  - rscadd: After multiple complaints from WaffleCo food activists, Nanotrasen has
       added real chocolate, berry juice and blue flavouring to its ice cream products.
 2015-08-13:
   CoreOverload:

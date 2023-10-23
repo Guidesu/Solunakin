@@ -143,7 +143,7 @@
 
 /datum/contractor_item/blackout
 	name = "Blackout"
-	desc = "Request Symphionia Command to distrupt the station's powernet. Disables power across the station for a short duration."
+	desc = "Request Syndicate Command to distrupt the station's powernet. Disables power across the station for a short duration."
 	item_icon = "bolt"
 	limited = 2
 	cost = 2
@@ -158,7 +158,7 @@
 
 /datum/contractor_item/comms_blackout
 	name = "Comms Outage"
-	desc = "Request Symphionia Command to disable station Telecommunications. Disables telecommunications across the station for a medium duration."
+	desc = "Request Syndicate Command to disable station Telecommunications. Disables telecommunications across the station for a medium duration."
 	item_icon = "phone-slash"
 	limited = 2
 	cost = 2

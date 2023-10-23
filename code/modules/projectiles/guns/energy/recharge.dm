@@ -119,7 +119,7 @@
 
 /obj/item/gun/energy/recharge/ebow/halloween
 	name = "candy corn crossbow"
-	desc = "A weapon favored by Symphionia trick-or-treaters."
+	desc = "A weapon favored by Syndicate trick-or-treaters."
 	icon_state = "crossbow_halloween"
 	base_icon_state = "crossbow_halloween"
 	no_charge_state = "crossbow_halloween_empty"

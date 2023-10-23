@@ -31,7 +31,7 @@
 				"Detective",
 				"Head of Security",
 				"Captain",
-				"Symphionia Consultant",
+				"Nanotrasen Consultant",
 				"Head of Personnel",
 				"Chief Engineer",
 				"Chief Medical Officer",
@@ -73,7 +73,7 @@
 	},
 
 	"Midround": {
-		"Symphionia Sleeper Agent": {
+		"Syndicate Sleeper Agent": {
 			"weight": 0
 		},
 
@@ -147,7 +147,7 @@
 	},
 
 	"Latejoin": {
-		"Symphionia Infiltrator": {
+		"Syndicate Infiltrator": {
 			"weight": 0
 		},
 

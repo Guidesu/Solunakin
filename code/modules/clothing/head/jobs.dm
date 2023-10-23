@@ -337,7 +337,7 @@
 //Security
 /obj/item/clothing/head/hats/hos
 	name = "generic head of security hat"
-	desc = "Please contact the Symphionia Costuming Department if found."
+	desc = "Please contact the Nanotrasen Costuming Department if found."
 	armor_type = /datum/armor/hats_hos
 	strip_delay = 8 SECONDS
 
@@ -740,7 +740,7 @@
 //CentCom
 /obj/item/clothing/head/beret/centcom_formal
 	name = "\improper CentCom Formal Beret"
-	desc = "Sometimes, a compromise between fashion and defense needs to be made. Thanks to Symphionia's most recent nano-fabric durability enhancements, this time, it's not the case."
+	desc = "Sometimes, a compromise between fashion and defense needs to be made. Thanks to Nanotrasen's most recent nano-fabric durability enhancements, this time, it's not the case."
 	icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge
 	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn

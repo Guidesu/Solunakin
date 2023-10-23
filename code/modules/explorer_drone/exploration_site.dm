@@ -221,7 +221,7 @@ GLOBAL_LIST_EMPTY(exploration_sites)
 
 /datum/exploration_site/uncharted_planet
 	name = "uncharted planet"
-	description = "A planet missing from Symphionia starcharts."
+	description = "A planet missing from Nanotrasen starcharts."
 	band_info = list(EXOSCANNER_BAND_LIFE = 3)
 	site_traits = list(EXPLORATION_SITE_SURFACE)
 

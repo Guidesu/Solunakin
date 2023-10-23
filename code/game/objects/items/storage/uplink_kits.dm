@@ -279,13 +279,13 @@
 
 /obj/item/storage/box/syndicate/contract_kit //SKYRAT EDIT - CHANGED IN MODULAR FOLDER
 	name = "Contract Kit"
-	desc = "Supplied to Symphionia contractors."
+	desc = "Supplied to Syndicate contractors."
 	icon_state = "syndiebox"
 	illustration = "writing_syndie"
 
 /obj/item/storage/box/syndicate/contractor_loadout //SKYRAT EDIT - CHANGED IN MODULAR FOLDER
 	name = "Standard Loadout"
-	desc = "Supplied to Symphionia contractors, providing their specialised space suit and chameleon uniform."
+	desc = "Supplied to Syndicate contractors, providing their specialised space suit and chameleon uniform."
 	icon_state = "syndiebox"
 	illustration = "writing_syndie"
 
@@ -297,7 +297,7 @@
 			this kit will provide you contracts to take on for TC payments.</p>
 
 			<p>Provided within, we give your specialist contractor space suit. It's even more compact, being able to fit into a pocket, and faster than the
-			Symphionia space suit available to you on the uplink. We also provide your chameleon jumpsuit and mask, both of which can be changed
+			Syndicate space suit available to you on the uplink. We also provide your chameleon jumpsuit and mask, both of which can be changed
 			to any form you need for the moment. The cigarettes are a special blend - it'll heal your injuries slowly overtime.</p>
 
 			<p>Your standard issue contractor baton hits harder than the ones you might be used to, and likely be your go to weapon for kidnapping your
@@ -308,7 +308,7 @@
 
 			<h3>Using the tablet</h3>
 			<ol>
-				<li>Open the Symphionia Contract Uplink program.</li>
+				<li>Open the Syndicate Contract Uplink program.</li>
 				<li>Here, you can accept a contract, and redeem your TC payments from completed contracts.</li>
 				<li>The payment number shown in brackets is the bonus you'll receive when bringing your target <b>alive</b>. You receive the
 				other number regardless of if they were alive or dead.</li>
@@ -466,7 +466,7 @@
 
 /obj/item/storage/box/syndie_kit/nuke
 	name = "nuke core extraction kit"
-	desc = "A box containing the equipment and instructions for extracting the plutonium cores of most Symphionia nuclear explosives."
+	desc = "A box containing the equipment and instructions for extracting the plutonium cores of most Nanotrasen nuclear explosives."
 
 /obj/item/storage/box/syndie_kit/nuke/PopulateContents()
 	new /obj/item/screwdriver/nuke(src)
@@ -683,7 +683,7 @@
 
 /obj/item/storage/box/syndie_kit/induction_kit
 	name = "syndicate induction kit"
-	desc = "Contains all you need for introducing your newest comrade to the Symphionia and all its worker's benefits."
+	desc = "Contains all you need for introducing your newest comrade to the Syndicate and all its worker's benefits."
 
 /obj/item/storage/box/syndie_kit/induction_kit/PopulateContents()
 	// Basic weaponry, so they have something to use.
@@ -718,7 +718,7 @@
 
 /obj/item/implant/nuclear_operative
 	name = "nuclear operative implant"
-	desc = "Registers you as a member of a Symphionia nuclear operative team."
+	desc = "Registers you as a member of a Syndicate nuclear operative team."
 	implant_color = "r"
 
 /obj/item/implant/nuclear_operative/get_data()
@@ -780,7 +780,7 @@
 
 /obj/item/storage/box/syndie_kit/poster_box
 	name = "syndicate poster pack"
-	desc = "Contains a variety of demotivational posters to ensure minimum productivity for the crew of any Symphionia station."
+	desc = "Contains a variety of demotivational posters to ensure minimum productivity for the crew of any Nanotrasen station."
 
 	/// Number of posters this box contains when spawning.
 	var/poster_count = 3

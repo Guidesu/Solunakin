@@ -1,6 +1,6 @@
 #define RESKIN_CHARCOAL "Charcoal"
 #define RESKIN_NT "NT Blue"
-#define RESKIN_SYNDIE "Symphionia Red"
+#define RESKIN_SYNDIE "Syndicate Red"
 
 /obj/item/clothing/under/syndicate
 	worn_icon_digi = 'modular_skyrat/master_files/icons/mob/clothing/under/syndicate_digi.dmi' // Anything that was in the syndicate.dmi, should be in the syndicate_digi.dmi
@@ -24,7 +24,7 @@
 
 /obj/item/clothing/under/syndicate/tacticool //Overwrites the 'fake' one. Zero armor, sensors, and default blue. More Balanced to make station-available.
 	name = "tacticool turtleneck"
-	desc = "A snug turtleneck, in fabulous Symphionia-blue. Just looking at it makes you want to buy a NT-certifed coffee, go into the office, and -work-."
+	desc = "A snug turtleneck, in fabulous Nanotrasen-blue. Just looking at it makes you want to buy a NT-certifed coffee, go into the office, and -work-."
 	icon = 'modular_skyrat/master_files/icons/obj/clothing/under/syndicate.dmi' //Since its an overwrite it needs new icon linking. Woe.
 	worn_icon = 'modular_skyrat/master_files/icons/mob/clothing/under/syndicate.dmi'
 	icon_state = "tactifool_blue"
@@ -46,7 +46,7 @@
 
 /obj/item/clothing/under/syndicate/tacticool/skirt //Overwrites the 'fake' one. Zero armor, sensors, and default blue. More Balanced to make station-available.
 	name = "tacticool skirtleneck"
-	desc = "A snug skirtleneck, in fabulous Symphionia-blue. Just looking at it makes you want to buy a NT-certifed coffee, go into the office, and -work-."
+	desc = "A snug skirtleneck, in fabulous Nanotrasen-blue. Just looking at it makes you want to buy a NT-certifed coffee, go into the office, and -work-."
 	icon_state = "tactifool_blue_skirt"
 	armor_type = /datum/armor/clothing_under/none
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -64,7 +64,7 @@
 
 /obj/item/clothing/under/syndicate/skyrat/baseball
 	name = "syndicate baseball tee"
-	desc = "Aaand the Symphionia Snakes are up to bat, ready for one of their signature nuclear home-runs! Lets show these corpos a good time." //NT pitches their plasma/bluespace(something)
+	desc = "Aaand the Syndicate Snakes are up to bat, ready for one of their signature nuclear home-runs! Lets show these corpos a good time." //NT pitches their plasma/bluespace(something)
 	icon_state = "syndicate_baseball"
 
 /*

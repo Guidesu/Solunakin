@@ -38,16 +38,16 @@
   - rscadd: Add a new 'Hall of Fame' emergency shuttle.  It even comes with it's own
       nifty photo album.
   - qol: When Space Dragons devour people they get extinguished, removing flames.
-  - qol: The Symphionia battlecruiser's fighters have received external cameras to
+  - qol: The Syndicate battlecruiser's fighters have received external cameras to
       aid its pilots.
   - qol: Warning lights have been added to the landing pad of the battlecruiser to
       (hopefully) reduce incident numbers.
-  - bugfix: A stray air alarm was removed from the bridge of the Symphionia battlecruiser.
+  - bugfix: A stray air alarm was removed from the bridge of the Syndicate battlecruiser.
   - bugfix: The turret control panel in the bridge of the battlecruiser has been moved
       to a wall, allowing access without needing to climb the table.
-  - bugfix: Airlocks on the Symphionia battlecruiser which were missing syndicate access,
+  - bugfix: Airlocks on the Syndicate battlecruiser which were missing syndicate access,
       has had it added.
-  - bugfix: The Symphionia medibot on the battlecruiser can now be unlocked by its
+  - bugfix: The Syndicate medibot on the battlecruiser can now be unlocked by its
       crew.
   - rscadd: Added couple new signs to the game (med, medbay, morgue, chapel, viro,
       gene, botany)
@@ -409,7 +409,7 @@
       refactor; Removes a lot of redundant item entry code and tidies up the actual
       code part of the nuclear uplink so that it is much easier to find things within
       it.'
-  - rscadd: Added 40 new cosmetic items to the Symphionia Store. Buy them now from
+  - rscadd: Added 40 new cosmetic items to the Syndicate Store. Buy them now from
       the Hat Crate, only 5 TC!
   - code_imp: Updated the nuclear operative uplink files.
   - bugfix: fixed basic mobs freezing up when in melee range of a target
@@ -430,7 +430,7 @@
       bait anymore.
   - balance: The Bepis fishing rod will now ignore fish's bait preferences.
   - bugfix: removes a stray obj/item from random metastation wall
-  - rscadd: The Symphionia has begun rolling out new Tactical Deniability Implants
+  - rscadd: The Syndicate has begun rolling out new Tactical Deniability Implants
       for their Nuclear Operative teams. It seems these implants are designed to make
       teams "fight harder" by "giving incentives for fighting to the bitter end",
       whatever they're talking about.
@@ -670,7 +670,7 @@
   CoiledLamb, Jacquerel:
   - rscadd: Adds mining weather radio
   Nerev4r:
-  - rscadd: Symphionia grooming regulations no longer specify maximum fingernail length,
+  - rscadd: NanoTrasen grooming regulations no longer specify maximum fingernail length,
       leading to more clawed employees appearing on nearby facilities.
   Senefi:
   - bugfix: NorthStar's Supermatter Waste Chamber guide no longer contains inaccurate
@@ -758,7 +758,7 @@
   - bugfix: Fixed mech being able to leave transit tube in transit
   - bugfix: Fixed mech internal damage flags working incorrectly
   - bugfix: Fixed Gygax leg overloading being useless
-  - bugfix: Fixed mechs ignoring their stock parts on creation. Symphionia mechs now
+  - bugfix: Fixed mechs ignoring their stock parts on creation. Syndicate mechs now
       stronger against lasers and consume less energy on move. Upgrading from tier
       1 to tier 2 doesn't make mech consume MORE energy than before the upgrade.
   - balance: Rebalanced mech energy drain with part upgrades. Base energy drain reduced
@@ -778,7 +778,7 @@
       rifle, which has a scope on it, their main weapon now has a scope.
   - sound: The cargo rifle now has a new, considerably more rifle sized firing sound.
       Gotten from tgmc from https://github.com/tgstation/TerraGov-Marine-Corps/pull/12280.
-  - rscadd: Adds a unique medibot to the Symphionia Infiltrator. It doesn't like nukes
+  - rscadd: Adds a unique medibot to the Syndicate Infiltrator. It doesn't like nukes
       - when one is armed, disarmed, or detonating, it says an unique line. Players
       can optionally enable personalities on it if they want to. Probably best to
       just let it stay on the shuttle though. (It's also in the Interdyne Pharmaceuticals
@@ -1132,12 +1132,12 @@
       it)
 2023-08-24:
   Hatterhat:
-  - code_imp: Removed some redundant Symphionia underclothes' armor values.
-  - bugfix: All Symphionia undersuit items now have wound armor matching their base
+  - code_imp: Removed some redundant Syndicate underclothes' armor values.
+  - bugfix: All Syndicate undersuit items now have wound armor matching their base
       tg variants.
   - bugfix: Cut down on some of the copy-pasted code regarding the Enclave uniforms,
       which are apparently in the donator tab.
-  - spellcheck: Cleaned up some typos in Symphionia uniforms' descriptions.
+  - spellcheck: Cleaned up some typos in Syndicate uniforms' descriptions.
   Melbert:
   - code_imp: Cleans up limb wound examine text code a tad.
   Rhials:
@@ -1374,7 +1374,7 @@
       Mentor and Veteran systems, defaulting to on (so this should hopefully not change
       anything on servers that have not done any migration yet).
   Seven:
-  - bugfix: Symphionia ranged mobs (and probably other basic mobs) properly update
+  - bugfix: Syndicate ranged mobs (and probably other basic mobs) properly update
       their shell's description to show they are spent.
   SkyratBot:
   - qol: The coroner can now store scythes in their labcoat and winter coat suit storage.
@@ -1431,7 +1431,7 @@
       in the Sound category of the game preferences.
   - bugfix: Compact fishing toolboxes no longer break space and time to contain any
       normal-sized object. Instead, they only break space and time to contain fishing
-      rods. Settlers migrating to Symphionia space have no reasonable explanation
+      rods. Settlers migrating to Nanotrasen space have no reasonable explanation
       for this phenomenon.
   - refactor: sheets are merged in a better way when ejected from machines & material
       related stuff

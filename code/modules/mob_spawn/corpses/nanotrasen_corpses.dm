@@ -20,7 +20,7 @@
 	outfit = /datum/outfit/nanotrasencommander
 
 /datum/outfit/nanotrasencommander
-	name = "\improper Symphionia Private Security Commander"
+	name = "\improper Nanotrasen Private Security Commander"
 	uniform = /obj/item/clothing/under/rank/centcom/commander
 	suit = /obj/item/clothing/suit/armor/bulletproof
 	ears = /obj/item/radio/headset/heads/captain
@@ -34,7 +34,7 @@
 	id_trim = /datum/id_trim/centcom/corpse/commander
 
 /obj/effect/mob_spawn/corpse/human/nanotrasensoldier
-	name = "\improper Symphionia Private Security Officer"
+	name = "\improper Nanotrasen Private Security Officer"
 	outfit = /datum/outfit/nanotrasensoldier
 
 /datum/outfit/nanotrasensoldier

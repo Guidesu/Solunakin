@@ -41,7 +41,7 @@
 
 /obj/item/clothing/shoes/jackboots
 	name = "jackboots"
-	desc = "Symphionia-issue Security combat boots for combat scenarios or combat situations. All combat, all the time."
+	desc = "Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time."
 	icon_state = "jackboots"
 	inhand_icon_state = "jackboots"
 	strip_delay = 30
@@ -114,7 +114,7 @@
 
 /obj/item/clothing/shoes/workboots
 	name = "work boots"
-	desc = "Symphionia-issue Engineering lace-up work boots for the especially blue-collar."
+	desc = "Nanotrasen-issue Engineering lace-up work boots for the especially blue-collar."
 	icon_state = "workboots"
 	inhand_icon_state = "jackboots"
 	armor_type = /datum/armor/shoes_workboots

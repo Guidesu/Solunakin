@@ -376,7 +376,7 @@
 // FLARES
 /obj/item/flashlight/flare
 	name = "flare"
-	desc = "A red Symphionia issued flare. There are instructions on the side, it reads 'pull cord, make light'."
+	desc = "A red Nanotrasen issued flare. There are instructions on the side, it reads 'pull cord, make light'."
 	light_range = 7 // Pretty bright.
 	icon_state = "flare"
 	inhand_icon_state = "flare"

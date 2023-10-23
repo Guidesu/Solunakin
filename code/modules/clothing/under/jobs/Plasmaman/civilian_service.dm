@@ -75,7 +75,7 @@
 
 /obj/item/clothing/under/plasmaman/enviroslacks
 	name = "enviroslacks"
-	desc = "The pet project of a particularly posh plasmaman, this custom suit was quickly appropriated by Symphionia for its lawyers, and bartenders alike."
+	desc = "The pet project of a particularly posh plasmaman, this custom suit was quickly appropriated by Nanotrasen for its lawyers, and bartenders alike."
 	icon_state = "enviroslacks"
 	inhand_icon_state = null
 
@@ -87,7 +87,7 @@
 
 /obj/item/clothing/under/plasmaman/curator
 	name = "curator's plasma envirosuit"
-	desc = "Made out of a modified voidsuit, this suit was Symphionia's first solution to the *logistical problems* that come with employing plasmamen. Due to the modifications, the suit is no longer space-worthy. Despite their limitations, these suits are still in used by historian and old-styled plasmamen alike."
+	desc = "Made out of a modified voidsuit, this suit was Nanotrasen's first solution to the *logistical problems* that come with employing plasmamen. Due to the modifications, the suit is no longer space-worthy. Despite their limitations, these suits are still in used by historian and old-styled plasmamen alike."
 	icon_state = "prototype_envirosuit"
 	inhand_icon_state = null
 

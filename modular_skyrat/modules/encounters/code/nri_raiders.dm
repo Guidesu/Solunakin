@@ -64,8 +64,8 @@ GLOBAL_VAR(first_officer)
 	var/number = rand(1,99)
 	///Station name one is the most important pick and is pretty much the station's main argument against getting fined, thus it better be mostly always right.
 	var/station_designation = pick_weight(list(
-		"Symphionia Research Station" = 70,
-		"Symphionia Refueling Outpost" = 5,
+		"Nanotrasen Research Station" = 70,
+		"Nanotrasen Refueling Outpost" = 5,
 		"Interdyne Pharmaceuticals Chemical Factory" = 5,
 		"Free Teshari League Engineering Station" = 5,
 		"Agurkrral Military Base" = 5,
@@ -383,7 +383,7 @@ GLOBAL_VAR(first_officer)
 	<br>3. Ensure that the station's command and security/military/defense force is not inspecting your ship, nor close approaching it, without your commanding officer's permission. It is recommended to leave a single officer as a ship's overseer, in order to minimise government property damage, as well as ensure maximum patrol efficiency in the field;
 	<br>4. Ensure that the station's security/military/defense force is not preparing for a raid, using your shipped <small>(assembly required)</small> camera console. If needed, call them out on your ship's preinstalled station announcements system and remind them of invested funds, or the station's connections with the government, or so on;
 	<br>5. Ensure that the ship, or any of the officers hasn't received any parcels, envelopes, letters or other packages, without its contents being stated by a third party and re-reviewed by any of the officers afterwards, to minimise chances of a bombing, teleportation, or any other terroristic act. If any of the above mentioned objects are to be received without the following procedured being initiated, it is required to dispose of the following objects immediately and report to the commanding officer.
-	<br><br>From the recent observations, while not being defined pre-revision in the following list, and officialy not being disclosed by the Symphionia Corporation, you might become a victim to their recent invention: a high-precision high-velocity particle accelerator, the Bluespace Artillerty Cannon. This weaponry is frequency-locked on certain global positioning systems, which are according to state regulations are built into the ship's hull. Said weaponry is excellent at disposing of small fighters to patrol corvettes, and damaging attack frigates; capable of splitting your standard issue corvette in half. And thus, to minimise your casualties and to ensure your safety, this guide provides you with a necessary information on how to circumvent said weaponry.
+	<br><br>From the recent observations, while not being defined pre-revision in the following list, and officialy not being disclosed by the Nanotrasen Corporation, you might become a victim to their recent invention: a high-precision high-velocity particle accelerator, the Bluespace Artillerty Cannon. This weaponry is frequency-locked on certain global positioning systems, which are according to state regulations are built into the ship's hull. Said weaponry is excellent at disposing of small fighters to patrol corvettes, and damaging attack frigates; capable of splitting your standard issue corvette in half. And thus, to minimise your casualties and to ensure your safety, this guide provides you with a necessary information on how to circumvent said weaponry.
 	<br>In order to perform a dodging maneuver, you have to:
 	<br>1. For the ship, lock onto the stable position in space, using your navigations console;
 	<br>2. The moment Bluespace Artillery Cannon starts charging up, boot up the ship's thrusters;

@@ -3,19 +3,19 @@
 
 /datum/opposing_force_equipment/service/rep
 	name = "100 Reputation"
-	description = "Grant your Symphionia uplink 100 reputation, should you have one."
+	description = "Grant your Syndicate uplink 100 reputation, should you have one."
 	item_type = /obj/effect/gibspawner/generic
 	var/rep_count = 100
 
 /datum/opposing_force_equipment/service/rep/high
 	name = "500 Reputation"
-	description = "Grant your Symphionia uplink 500 reputation, should you have one."
+	description = "Grant your Syndicate uplink 500 reputation, should you have one."
 	item_type = /obj/effect/gibspawner/generic
 	rep_count = 500
 
 /datum/opposing_force_equipment/service/rep/very_high
 	name = "1000 Reputation"
-	description = "Grant your Symphionia uplink 1000 reputation, should you have one."
+	description = "Grant your Syndicate uplink 1000 reputation, should you have one."
 	item_type = /obj/effect/gibspawner/generic
 	rep_count = 1000
 
@@ -52,7 +52,7 @@
 
 /datum/opposing_force_equipment/service/market_crash
 	name = "Market Crash"
-	description = "Some forged documents will be given to Symphionia, skyrocketing the price of all on-station vendors for a short while."
+	description = "Some forged documents will be given to Nanotrasen, skyrocketing the price of all on-station vendors for a short while."
 	item_type = /obj/effect/gibspawner/generic
 	admin_note = "Equivalent to the Market Crash random event."
 	max_amount = 1

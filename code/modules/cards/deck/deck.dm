@@ -199,7 +199,7 @@
 	add_memory_in_range(target, 7, /datum/memory/playing_card_pickup, protagonist = thrower, deuteragonist = target, antagonist = src)
 
 /*
-|| Symphionia playing cards, for pretending you're Gambit and playing poker for the nuke disk. ||
+|| Syndicate playing cards, for pretending you're Gambit and playing poker for the nuke disk. ||
 */
 /obj/item/toy/cards/deck/syndicate
 	name = "suspicious looking deck of cards"

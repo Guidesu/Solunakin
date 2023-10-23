@@ -6,7 +6,7 @@ const LoneInfiltrator: Antagonist = {
   name: 'Lone Infiltrator',
   description: [
     multiline`A midround traitor that can spawn near the station, equipped with
-    a Symphionia Modsuit and equipment befitting a station boarder.
+    a Syndicate Modsuit and equipment befitting a station boarder.
     Float onto the station and complete your objectives.`,
   ],
   category: Category.Midround,

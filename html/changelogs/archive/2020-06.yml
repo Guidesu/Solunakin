@@ -2,7 +2,7 @@
   Fhaxaris:
   - bugfix: baton, health analyzer, classic baton, PDA and pinpointer.
   Fikou:
-  - rscdel: Our Symphionia Elite Anti-Animal Team hunted down King Goat and stopped
+  - rscdel: Our Nanotrasen Elite Anti-Animal Team hunted down King Goat and stopped
       his reign forever. As a memorial of this event you can now get a cute goat plushie
       from the arcades.
   PrimordialOoze:
@@ -29,7 +29,7 @@
       you in the locker room.
   - bugfix: The icebox mining ladder works again.
   EOBGames, ArcaneMusic, LemonInTheDark:
-  - rscadd: Symphionia is pleased to announce the 2560 Core Set of the NT TCG has
+  - rscadd: Nanotrasen is pleased to announce the 2560 Core Set of the NT TCG has
       been released! Aspiring collectors can purchase booster packs from the Fun Vendor,
       as well as bulk purchases at cargo. Happy hunting!
   Kelenius:
@@ -128,7 +128,7 @@
   GoldenAlpharex:
   - rscadd: 'New Modular Console Preset added: /obj/machinery/modular_computer/console/preset/id'
   Inept:
-  - rscadd: 'The Symphionia Entertainment Division has released a new product: Tarot
+  - rscadd: 'The Nanotrasen Entertainment Division has released a new product: Tarot
       cards! They''re available from the Fun vendor for all your divination needs.'
   Jared-Fogle:
   - bugfix: Fixed the medical HUD sometimes reporting undefibbable bodies as defibbable
@@ -287,7 +287,7 @@
   bobbahbrown:
   - admin: Fixed malformed SQL queries for logging admin permission changes.
   dragomagol:
-  - rscadd: Symphionia has begun producing Peacekeeper plushes to improve public reception
+  - rscadd: Nanotrasen has begun producing Peacekeeper plushes to improve public reception
       of silicons
   ~~yorii~~ Space:
   - bugfix: lava boat oars work now
@@ -381,7 +381,7 @@
   - tweak: Inacusiate and Sensory Restoration no longer instantly heal all hearing
       damage when applied, instead rapidly removing both ear damage and deafness.
   - bugfix: MedHUDs and observers now display quirks as intended on examine
-  - tweak: Symphionia's Central Shipping department has put limits on the free shipping
+  - tweak: Nanotrasen's Central Shipping department has put limits on the free shipping
       it offers on goody crates, to discourage abuse of its bluespace packaging
   SteelSlayer:
   - code_imp: Removed a handful of unnecessary variables from intercoms.
@@ -458,8 +458,8 @@
       now manually handle multiz falling impacts. This fixes runtimes occuring whenever
       something fell.
   zxaber:
-  - rscadd: Nuke Ops (and Lone Ops) now start with a Symphionia-themed tablet, rather
-      than the pinpointer. The Symphionia tablet comes pre-installed with an app that
+  - rscadd: Nuke Ops (and Lone Ops) now start with a Syndicate-themed tablet, rather
+      than the pinpointer. The Syndicate tablet comes pre-installed with an app that
       replaces the function of disk pinpointers.
   - rscadd: Lifeline and Fission360, the apps that track suit sensors and nuke disks
       respectively, now show the tracking status on the screen of the tablet/laptop
@@ -523,7 +523,7 @@
   Arkatos:
   - rscadd: Portable Turret now uses tgui.
   Ryll/Shaps:
-  - tweak: Symphionia now uses smaller fonts on ID's to show age and account information,
+  - tweak: Nanotrasen now uses smaller fonts on ID's to show age and account information,
       requiring a closer look to read
   ShizCalev:
   - bugfix: Fixed revenant's light overload ability not blowing lights in a square
@@ -601,7 +601,7 @@
       radius.
 2020-06-29:
   FloranOtten:
-  - rscadd: Symphionia Scouting forces have recently reported being shot at by an
+  - rscadd: Nanotrasen Scouting forces have recently reported being shot at by an
       old man in a shack. Watch out for any strange log cabins!
   ShizCalev:
   - bugfix: Fixed pamphlets having the wrong icon.
@@ -616,7 +616,7 @@
   - balance: ninjas are slightly less the definition of speed. They're also faster
       when their suit is depowered I guess.
   and KathyRyals:
-  - tweak: Symphionia found out about the amount of expensive chemicals served in
+  - tweak: Nanotrasen found out about the amount of expensive chemicals served in
       survival medipens and cut them down to safe costs...
   - rscadd: '...And they turned the old medipen into a luxury'
   - rscdel: Lavaland Extract was found to break laws of physics and was removed from

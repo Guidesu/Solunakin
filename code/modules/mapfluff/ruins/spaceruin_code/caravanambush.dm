@@ -98,8 +98,8 @@
 	y_offset = -6
 
 /obj/machinery/computer/shuttle/caravan/syndicate1
-	name = "Symphionia Fighter Shuttle Console"
-	desc = "Used to control the Symphionia Fighter."
+	name = "Syndicate Fighter Shuttle Console"
+	desc = "Used to control the Syndicate Fighter."
 	icon_screen = "syndishuttle"
 	icon_keyboard = "syndie_key"
 	light_color = COLOR_SOFT_RED
@@ -109,8 +109,8 @@
 	possible_destinations = "caravansyndicate1_custom;caravansyndicate1_ambush;caravansyndicate1_listeningpost"
 
 /obj/machinery/computer/camera_advanced/shuttle_docker/caravan/syndicate1
-	name = "Symphionia Fighter Navigation Computer"
-	desc = "Used to designate a precise transit location for the Symphionia Fighter."
+	name = "Syndicate Fighter Navigation Computer"
+	desc = "Used to designate a precise transit location for the Syndicate Fighter."
 	icon_screen = "syndishuttle"
 	icon_keyboard = "syndie_key"
 	shuttleId = "caravansyndicate1"
@@ -122,8 +122,8 @@
 	y_offset = 0
 
 /obj/machinery/computer/shuttle/caravan/syndicate2
-	name = "Symphionia Fighter Shuttle Console"
-	desc = "Used to control the Symphionia Fighter."
+	name = "Syndicate Fighter Shuttle Console"
+	desc = "Used to control the Syndicate Fighter."
 	icon_screen = "syndishuttle"
 	icon_keyboard = "syndie_key"
 	req_access = list(ACCESS_SYNDICATE)
@@ -133,8 +133,8 @@
 	possible_destinations = "caravansyndicate2_custom;caravansyndicate2_ambush;caravansyndicate1_listeningpost"
 
 /obj/machinery/computer/camera_advanced/shuttle_docker/caravan/syndicate2
-	name = "Symphionia Fighter Navigation Computer"
-	desc = "Used to designate a precise transit location for the Symphionia Fighter."
+	name = "Syndicate Fighter Navigation Computer"
+	desc = "Used to designate a precise transit location for the Syndicate Fighter."
 	icon_screen = "syndishuttle"
 	icon_keyboard = "syndie_key"
 	shuttleId = "caravansyndicate2"
@@ -146,8 +146,8 @@
 	y_offset = 2
 
 /obj/machinery/computer/shuttle/caravan/syndicate3
-	name = "Symphionia Drop Ship Console"
-	desc = "Used to control the Symphionia Drop Ship."
+	name = "Syndicate Drop Ship Console"
+	desc = "Used to control the Syndicate Drop Ship."
 	icon_screen = "syndishuttle"
 	icon_keyboard = "syndie_key"
 	req_access = list(ACCESS_SYNDICATE)
@@ -157,8 +157,8 @@
 	possible_destinations = "caravansyndicate3_custom;caravansyndicate3_ambush;caravansyndicate3_listeningpost"
 
 /obj/machinery/computer/camera_advanced/shuttle_docker/caravan/syndicate3
-	name = "Symphionia Drop Ship Navigation Computer"
-	desc = "Used to designate a precise transit location for the Symphionia Drop Ship."
+	name = "Syndicate Drop Ship Navigation Computer"
+	desc = "Used to designate a precise transit location for the Syndicate Drop Ship."
 	icon_screen = "syndishuttle"
 	icon_keyboard = "syndie_key"
 	shuttleId = "caravansyndicate3"

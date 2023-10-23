@@ -207,7 +207,7 @@ LINEN BINS
 
 /obj/item/bedsheet/captain
 	name = "captain's bedsheet"
-	desc = "It has a Symphionia symbol on it, and was woven with a revolutionary new kind of thread guaranteed to have 0.01% permeability for most non-chemical substances, popular among most modern captains."
+	desc = "It has a Nanotrasen symbol on it, and was woven with a revolutionary new kind of thread guaranteed to have 0.01% permeability for most non-chemical substances, popular among most modern captains."
 	icon_state = "sheetcaptain"
 	inhand_icon_state = "sheetcaptain"
 	dream_messages = list("authority", "a golden ID", "sunglasses", "a green disc", "an antique gun", "the captain")
@@ -314,7 +314,7 @@ LINEN BINS
 
 /obj/item/bedsheet/rev
 	name = "revolutionary's bedsheet"
-	desc = "A bedsheet stolen from a Central Command official's bedroom, used a symbol of triumph against Symphionia's tyranny. The golden emblem on the front has been scribbled out."
+	desc = "A bedsheet stolen from a Central Command official's bedroom, used a symbol of triumph against Nanotrasen's tyranny. The golden emblem on the front has been scribbled out."
 	icon_state = "sheetrev"
 	inhand_icon_state = "sheetrev"
 	dream_messages = list(
@@ -328,8 +328,8 @@ LINEN BINS
 	)
 
 /obj/item/bedsheet/nanotrasen
-	name = "\improper Symphionia bedsheet"
-	desc = "It has the Symphionia logo on it and has an aura of duty."
+	name = "\improper Nanotrasen bedsheet"
+	desc = "It has the Nanotrasen logo on it and has an aura of duty."
 	icon_state = "sheetNT"
 	inhand_icon_state = "sheetNT"
 	dream_messages = list("authority", "an ending")

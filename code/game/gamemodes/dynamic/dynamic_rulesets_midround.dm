@@ -224,7 +224,7 @@
 
 /// Midround Traitor Ruleset (From Living)
 /datum/dynamic_ruleset/midround/from_living/autotraitor
-	name = "Symphionia Sleeper Agent"
+	name = "Syndicate Sleeper Agent"
 	midround_ruleset_style = MIDROUND_RULESET_STYLE_LIGHT
 	antag_datum = /datum/antagonist/traitor/infiltrator/sleeper_agent
 	antag_flag = ROLE_SLEEPER_AGENT

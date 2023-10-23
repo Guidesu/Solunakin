@@ -58,7 +58,7 @@
   Floyd / Qustinnus:
   - bugfix: Liver damage is now healed when fully_heal is called on carbon mobs
   MrDoomBringer:
-  - rscadd: Symphionia's ID cards are once again clearly readable from a distance,
+  - rscadd: Nanotrasen's ID cards are once again clearly readable from a distance,
       meaning employees can  show their ID's to eachother again. The Director of ID-Card
       technology promises that the temporary unreadability of said cards was not an
       oversight, and was in fact an intended, yet undocumented feature. promise. Alt+Clicking
@@ -84,7 +84,7 @@
   - tweak: Light bulbs now shatter and hurt people when stepped on.
   - tweak: Light bulbs that have been sabotaged with plasma will spill it when they
       shatter.
-  - tweak: Symphionia has started shipping more types of bedsheets to its stations.
+  - tweak: Nanotrasen has started shipping more types of bedsheets to its stations.
   Floyd / Qustinnus:
   - bugfix: Fixes vehicle bug which caused you to keep special actions when you were
       forcemoved out of them through weird means (Admin intervention, special items)
@@ -176,7 +176,7 @@
   bandit:
   - bugfix: The necropolis tendril is anchored again.
   subject217:
-  - spellcheck: The Symphionia Infiltrator's nuke storage windoor is no longer called
+  - spellcheck: The Syndicate Infiltrator's nuke storage windoor is no longer called
       "Theatre Stage".
 2018-10-09:
   Denton:
@@ -215,7 +215,7 @@
   - bugfix: Fixed the talking sword's spirit's mind not having the correct name.
   - tweak: The talking sword's spirit's name is now prefixed with "The spirit of".
   - balance: ERT backpacks and spacesuits are now fireproofed.
-  - balance: Symphionia chestrigs (belts) & bags now have fireproofing.
+  - balance: Syndicate chestrigs (belts) & bags now have fireproofing.
   - bugfix: Fixed burning sprites not updating properly for humans on fire.
   - tweak: Standing over lava while immune to it will now apply a cosmetic singeing
       effect to your character.
@@ -235,7 +235,7 @@
   - rscadd: Crawling is now possible if you are down but not stunned. Obviously, you
       will be slower.
   subject217:
-  - bugfix: The Symphionia Elite Hardsuit's combat mode will now show face masks and
+  - bugfix: The Syndicate Elite Hardsuit's combat mode will now show face masks and
       glasses.
 2018-10-12:
   BeeSting12:
@@ -293,7 +293,7 @@
   - bugfix: Fixed urinal cakes being inedible
 2018-10-16:
   ShizCalev:
-  - bugfix: Due to a recent policy review by Symphionia Central Command, we have determined
+  - bugfix: Due to a recent policy review by Nanotrasen Central Command, we have determined
       that personnel who have committed suicide are too great of a risk to be borged,
       and are making half of the Robotics staff's job redundant (we pay them good
       money to do that!) As such, suicide is now considered a PERMANENT decision.
@@ -474,7 +474,7 @@
   ShizCalev:
   - rscadd: Added a config option to automatically reopen the job positions of players
       who have suicided at roundstart.
-  - bugfix: Fixed Symphionia MMI's having their name swapped when inserting a brain.
+  - bugfix: Fixed Syndicate MMI's having their name swapped when inserting a brain.
   - tweak: Added better user feedback when inserting a dead brain into an MMI.
   - tweak: Jobbans are now displayed in a more user-friendly time format.
   - tweak: Added a notice when a user damages a brain during removal via ghetto surgery.
@@ -614,7 +614,7 @@
       technology!
 2018-10-28:
   Buggy:
-  - rscadd: Symphionia has added the Overlord lawset to their AI law database. Nonetheless,
+  - rscadd: Nanotrasen has added the Overlord lawset to their AI law database. Nonetheless,
       they strongly advise against using it under any circumstances, and insist that
       it is intended for research purposes only.
   Ikacid:

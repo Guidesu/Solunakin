@@ -35,7 +35,7 @@
 	if(!user_turf)
 		return
 	for(var/obj/machinery/power/supermatter_crystal/sm as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/power/supermatter_crystal))
-		//Exclude Symphionia owned, Delaminating, not within coverage, not on a tile.
+		//Exclude Syndicate owned, Delaminating, not within coverage, not on a tile.
 		if (!sm.include_in_cims || !isturf(sm.loc) || !(is_station_level(sm.z) || is_mining_level(sm.z) || sm.z == user_turf.z))
 			continue
 		supermatters += sm

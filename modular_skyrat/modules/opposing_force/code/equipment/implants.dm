@@ -21,10 +21,10 @@
 					a tape recorder playing Snake Eater."
 
 /datum/opposing_force_equipment/implant/radio
-	name = "Symphionia Radio Implant"
+	name = "Syndicate Radio Implant"
 	item_type = /obj/item/implanter/radio/syndicate
-	description = "An implanter that grants you inherent access to the Symphionia radio channel, in addition to being able to listen to all on-station channels."
-	admin_note = "Warning: This can let someone get in contact with actual antagonists via the Symphionia channel."
+	description = "An implanter that grants you inherent access to the Syndicate radio channel, in addition to being able to listen to all on-station channels."
+	admin_note = "Warning: This can let someone get in contact with actual antagonists via the Syndicate channel."
 
 /datum/opposing_force_equipment/implant/storage
 	name = "Storage Implant"
@@ -91,4 +91,4 @@
 /datum/opposing_force_equipment/implant/eswordarm
 	name = "Energy Sword Arm Implant"
 	item_type = /obj/item/autosurgeon/syndicate/esword_arm
-	description = "It's an energy sword, in your arm. Pretty decent for getting past stop-searches and assassinating people. Comes loaded in a Symphionia brand autosurgeon to boot!"
+	description = "It's an energy sword, in your arm. Pretty decent for getting past stop-searches and assassinating people. Comes loaded in a Syndicate brand autosurgeon to boot!"

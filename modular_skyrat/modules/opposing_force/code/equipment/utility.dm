@@ -4,7 +4,7 @@
 /datum/opposing_force_equipment/gear/emag
 	name = "Cryptographic Sequencer"
 	item_type = /obj/item/card/emag
-	description = "An electromagnetic ID card used to break machinery and disable safeties. Notoriously used by Symphionia agents, now commonly traded hardware at blackmarkets."
+	description = "An electromagnetic ID card used to break machinery and disable safeties. Notoriously used by Syndicate agents, now commonly traded hardware at blackmarkets."
 
 /datum/opposing_force_equipment/gear/doormag
 	name = "Airlock Override Card"
@@ -25,11 +25,11 @@
 
 /datum/opposing_force_equipment/gear/xraygoggles
 	item_type = /obj/item/clothing/glasses/thermal/xray
-	description = "A pair of low-light x-ray goggles manufactured by the Symphionia. Cannot be chameleon disguised. Makes wearer more vulnerable to bright lights."
+	description = "A pair of low-light x-ray goggles manufactured by the Syndicate. Cannot be chameleon disguised. Makes wearer more vulnerable to bright lights."
 
 /datum/opposing_force_equipment/gear/thermalgogglessyndi
 	item_type = /obj/item/clothing/glasses/thermal/syndi
-	description = "A Symphionia take on the classic thermal goggles, complete with chameleon disguise functionality."
+	description = "A Syndicate take on the classic thermal goggles, complete with chameleon disguise functionality."
 
 /datum/opposing_force_equipment/gear/cloakerbelt
 	item_type = /obj/item/shadowcloak
@@ -85,7 +85,7 @@
 /datum/opposing_force_equipment/gear/microlaser
 	name = "Radioactive Microlaser"
 	item_type = /obj/item/healthanalyzer/rad_laser
-	description = "A radioactive microlaser disguised as a standard Symphionia health analyzer. When used, it emits a \
+	description = "A radioactive microlaser disguised as a standard Nanotrasen health analyzer. When used, it emits a \
 			powerful burst of radiation, which, after a short delay, can incapacitate all but the most protected \
 			of humanoids."
 	admin_note = "WARNING: Is a knockout weapon with no warning, and 'infinite' use."
@@ -119,20 +119,20 @@
 	for high-ranking Cybersun officers, a few spares have been reserved for field agents."
 
 /datum/opposing_force_equipment/gear/syndiejaws
-	name = "Symphionia Jaws of Life"
+	name = "Syndicate Jaws of Life"
 	item_type = /obj/item/crowbar/power/syndicate
-	description = "Based on a Symphionia model, this powerful tool can be used as both a crowbar and a pair of wirecutters. \
+	description = "Based on a Nanotrasen model, this powerful tool can be used as both a crowbar and a pair of wirecutters. \
 	In its crowbar configuration, it can be used to force open airlocks. Very useful for entering the station or its departments."
 
 /datum/opposing_force_equipment/gear/combatmedkit
-	name = "Symphionia Combat Medic Kit"
+	name = "Syndicate Combat Medic Kit"
 	item_type = /obj/item/storage/medkit/tactical
 	description = "This first aid kit is a suspicious black and red. Included is a number of atropine medipens \
 			for rapid stabilization, sutures and regenerative mesh for wound treatment, and patches \
 			for faster healing on the field. Also comes with basic medical tools and sterlizer."
 
 /datum/opposing_force_equipment/gear/combatmedkit_premium
-	name = "Symphionia Combat Medical Suite"
+	name = "Syndicate Combat Medical Suite"
 	item_type = /obj/item/storage/medkit/tactical/premium
 	description = "This first aid kit is a suspicious black and red. Included is an unloaded combat chemical injector \
 			for suit-penetrative chem delivery, a medical science night vision HUD for quick identification of injured personnel and chemical supplies, \
@@ -140,7 +140,7 @@
 			and some helpful MODsuit modules for for field medical use and operative physiopharmaceutical augmentation."
 
 /datum/opposing_force_equipment/gear/ai_module
-	name = "Symphionia AI Law Module"
+	name = "Syndicate AI Law Module"
 	item_type = /obj/item/ai_module/syndicate
 	description = "When used with an upload console, this module allows you to upload priority laws to an artificial intelligence. \
 			Be careful with wording, as artificial intelligences may look for loopholes to exploit."
@@ -182,7 +182,7 @@
 
 /datum/opposing_force_equipment/gear/jetpack_mod
 	item_type = /obj/item/mod/module/jetpack/advanced
-	description = "A jetpack usually reserved for Symphionia MODsuits, this jetpack had the safety limiters removed, allowing it to move much faster in space."
+	description = "A jetpack usually reserved for Syndicate MODsuits, this jetpack had the safety limiters removed, allowing it to move much faster in space."
 
 /datum/opposing_force_equipment/gear/energyshield_mod
 	item_type = /obj/item/mod/module/energy_shield

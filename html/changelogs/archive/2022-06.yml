@@ -129,7 +129,7 @@
   - qol: breathedeep makes a return in the atmozphere tablet app. Right click to scan
       things, right self click (on the tablet) to scan current turf.
   - admin: MODsuits can now be picked through the outfit manager
-  - rscadd: On all five stations, Symphionia has redrawn up the area plans in the
+  - rscadd: On all five stations, Nanotrasen has redrawn up the area plans in the
       permabrig areas. Expect to see a few more APCs in each room to feed each with
       power.
   - bugfix: surplus prosthetics have correct sprites now
@@ -266,7 +266,7 @@
       All Access Fan.
   - bugfix: Photon projector implants can no longer be used in assemblies. This means
       that they can no longer bilocate.
-  - balance: Symphionia has now implemented a "buffer zone" on IceBoxStation between
+  - balance: Nanotrasen has now implemented a "buffer zone" on IceBoxStation between
       the wilderness portions of the moon and the parts where there is a station presence.
       Hopefully, you should see a lot less fauna try to make their way on station.
   - bugfix: Corrected a couple of trivial typos.
@@ -321,10 +321,10 @@
   - config: Add every AI lawset to game_options config
   - config: Rebalance AI lawsets in game_options config
   - bugfix: Lawsets overflow to behave correctly
-  - rscadd: Symphionia has finally tracked down an elusive signal that's been haunting
-      them over all of their broadcasts... there appears to be a new Symphionia Listening
+  - rscadd: Nanotrasen has finally tracked down an elusive signal that's been haunting
+      them over all of their broadcasts... there appears to be a new Syndicate Listening
       Base commissioned.
-  - balance: The odds for a Symphionia Communications Agent (the Space kind) is now
+  - balance: The odds for a Syndicate Communications Agent (the Space kind) is now
       at an 15% chance to spawn.
   - imageadd: Resprites the white costume found inside the costume vendor.
   - balance: Station equipment that holds materials (techfabs, ORMs) can't connect
@@ -524,7 +524,7 @@
   - bugfix: Fixes Novaflowers not lighting targets on fire.
   - code_imp: Reduces some copy+paste and cleans up some unique plant genes code.
   OrionTheFox:
-  - bugfix: Symphionia has found the time and money to re-fit their ERT docks onto
+  - bugfix: Nanotrasen has found the time and money to re-fit their ERT docks onto
       arrivals. Now their response teams wont have to ram through the glass walkways
       just to land!
   - imagedel: deleted LOTS of hopefully unused uniform icons. Ping @orion_the_fox#1915
@@ -580,7 +580,7 @@
   - rscadd: Adds 9x19mm Peacekeeper and 10mm Auto ammo to autolathes
 2022-06-14:
   Ebin-Halcyon:
-  - imageadd: Symphionia Engine techs now have a fancy set of overalls and cap to show
+  - imageadd: Syndicate Engine techs now have a fancy set of overalls and cap to show
       that they are truly greasemonkeys.
   - imageadd: Tactical turtlenecks have been slightly resprited
   - rscadd: Brig officers now have their own berets for both fashion and protection
@@ -642,7 +642,7 @@
   - rscadd: Add dyslexia (illiteracy quirk) as a genetic mutation.
   - rscadd: Add illiteracy as a effect for confusion disease symptom.
   - bugfix: kilostation solars no longer have plating and catwalks on the same tile
-  - spellcheck: Symphionia has lost the rights to several popular confectionaries,
+  - spellcheck: Nanotrasen has lost the rights to several popular confectionaries,
       and has created "original" replacements.
   - bugfix: Renamed a few circuit boards to explain what frame they need
   - bugfix: Chameleon neckties will no longer give you a missing-texture cape and
@@ -801,7 +801,7 @@
   - imageadd: rearranged all the security digitigrade uniforms into a security_digi.dmi
       in a continued organization effort. Please report any relevant Uniform icon
       issues to @Orion_The_Fox#1915.
-  - imageadd: Symphionia's finally permitted the use of non-replica Naval(Imperial)
+  - imageadd: Nanotrasen's finally permitted the use of non-replica Naval(Imperial)
       Uniforms aboard their station, and has even supplied Heads of Staff with higher
       quality ones as well, should they choose to wear them! (Also updates departmental
       Utility uniforms - Please report any relevant Uniform icon issues to @Orion_The_Fox#1915.)
@@ -1035,8 +1035,8 @@
       as was always intended
   - balance: Made gorillas use their old speed value when they're holding something,
       and made them slightly faster when they're not holding something
-  - bugfix: The decryption key to the Symphionia message network has been delivered
-      to the Symphionia Listening Post
+  - bugfix: The decryption key to the Nanotrasen message network has been delivered
+      to the Syndicate Listening Post
   - bugfix: People who gain or lose the monkified mutation no longer have invisible
       equipped items.
   - qol: mining and labor shuttle home docks are no longer varedits of /stationary,
@@ -1060,7 +1060,7 @@
   - bugfix: All antagonist roles will now look the way they're intended to look, in
       the "Antagonist" tab of the prefs menu.
   - bugfix: The MODsuit armor booster module should now look the way it's intended
-      to look on Clown-branded Symphionia MODsuits.
+      to look on Clown-branded Syndicate MODsuits.
   - bugfix: Moths have had their greyscale bodyparts updated to be properly greyscaled,
       allowing for much more precise coloring.
   - bugfix: Outfits will no longer call pre_equip() and post_equip() twice when they're
@@ -1116,7 +1116,7 @@
   - qol: Makes the noblium gas shells experiment explicitly clear that it requires
       Hypernoblium gas and not just "Noblium"
   - spellcheck: CentCom is now properly capitalised in the description of an experiment
-  - qol: Symphionia has used a new method of installing signs to their walls. If you
+  - qol: Nanotrasen has used a new method of installing signs to their walls. If you
       see any floating signs, or signs that appear to be positioned in incorrect locations,
       please contact your nearest reality manager.
   - bugfix: pianos will now look broken when they are damaged

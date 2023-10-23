@@ -1,5 +1,5 @@
 /mob/living/basic/mining_drone
-	name = "\improper Symphionia minebot"
+	name = "\improper Nanotrasen minebot"
 	desc = "The instructions printed on the side read: This is a small robot used to support miners, can be set to search and collect loose ore, or to help fend off wildlife. Insert any type of ore into it to make it start listening to your commands!"
 	gender = NEUTER
 	icon = 'icons/mob/silicon/aibots.dmi'

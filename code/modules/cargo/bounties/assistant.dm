@@ -1,19 +1,19 @@
 /datum/bounty/item/assistant/strange_object
 	name = "Strange Object"
-	description = "Symphionia has taken an interest in strange objects. Find one in maintenance, and ship it off to CentCom right away."
+	description = "Nanotrasen has taken an interest in strange objects. Find one in maintenance, and ship it off to CentCom right away."
 	reward = CARGO_CRATE_VALUE * 2.4
 	wanted_types = list(/obj/item/relic = TRUE)
 
 /datum/bounty/item/assistant/scooter
 	name = "Scooter"
-	description = "Symphionia has determined walking to be wasteful. Ship a scooter to CentCom to speed operations up."
+	description = "Nanotrasen has determined walking to be wasteful. Ship a scooter to CentCom to speed operations up."
 	reward = CARGO_CRATE_VALUE * 2.16 // the mat hoffman
 	wanted_types = list(/obj/vehicle/ridden/scooter = TRUE)
 	include_subtypes = FALSE
 
 /datum/bounty/item/assistant/skateboard
 	name = "Skateboard"
-	description = "Symphionia has determined walking to be wasteful. Ship a skateboard to CentCom to speed operations up."
+	description = "Nanotrasen has determined walking to be wasteful. Ship a skateboard to CentCom to speed operations up."
 	reward = CARGO_CRATE_VALUE * 1.8 // the tony hawk
 	wanted_types = list(
 		/obj/vehicle/ridden/scooter/skateboard = TRUE,
@@ -81,7 +81,7 @@
 
 /datum/bounty/item/assistant/donut
 	name = "Donuts"
-	description = "CentCom's security forces are facing heavy losses against the Symphionia. Ship donuts to raise morale."
+	description = "CentCom's security forces are facing heavy losses against the Syndicate. Ship donuts to raise morale."
 	reward = CARGO_CRATE_VALUE * 6
 	required_count = 6
 	wanted_types = list(/obj/item/food/donut = TRUE)
@@ -145,14 +145,14 @@
 
 /datum/bounty/item/assistant/ied
 	name = "IED"
-	description = "Symphionia's maximum security prison at CentCom is undergoing personnel training. Ship a handful of IEDs to serve as a training tools."
+	description = "Nanotrasen's maximum security prison at CentCom is undergoing personnel training. Ship a handful of IEDs to serve as a training tools."
 	reward = CARGO_CRATE_VALUE * 4
 	required_count = 3
 	wanted_types = list(/obj/item/grenade/iedcasing = TRUE)
 
 /datum/bounty/item/assistant/corgimeat
 	name = "Raw Corgi Meat"
-	description = "The Symphionia recently stole all of CentCom's corgi meat. Ship out a replacement immediately."
+	description = "The Syndicate recently stole all of CentCom's corgi meat. Ship out a replacement immediately."
 	reward = CARGO_CRATE_VALUE * 6
 	wanted_types = list(/obj/item/food/meat/slab/corgi = TRUE)
 

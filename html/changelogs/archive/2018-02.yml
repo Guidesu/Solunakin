@@ -90,7 +90,7 @@
   - rscadd: You can now win stylish steampunk watches at your local arcade machine!
   ShizCalev:
   - bugfix: Fixed some broken cultist & wizard antagonist ghost polls.
-  - rscadd: The Symphionia Comms Officer ghost role has been readded with a minor chance
+  - rscadd: The Syndicate Comms Officer ghost role has been readded with a minor chance
       of actually existing.
   Slignerd:
   - balance: Following an immense number of complaints filed by security and command
@@ -118,7 +118,7 @@
   - bugfix: Fixed the crematorium on meta and box.
   Denton:
   - tweak: Rearranged the mining vendor items by price and item group.
-  - tweak: In order to promote back-breaking physical labor, Symphionia has additionally
+  - tweak: In order to promote back-breaking physical labor, Nanotrasen has additionally
       made conscription kits available at mining equipment vendors.
   Iamgoofball:
   - rscdel: Blood cultists can't space base anymore
@@ -188,7 +188,7 @@
   - tweak: Fungal tuberculosis spores can no longer be synthesized by machinery.
   Kor:
   - rscadd: Spawning as a syndicate comms officer will now activate an encrypted signal
-      in the Lavaland Symphionia Base, to aid the crew in retaliating.
+      in the Lavaland Syndicate Base, to aid the crew in retaliating.
   Ordo:
   - rscadd: Mamma-mia! The chef speaks-a so different now!
   Robustin:
@@ -199,10 +199,10 @@
   ShiggyDiggyDo:
   - rscadd: You can now win Toy Daggers at your local arcade!
   Skylar Lineman:
-  - rscadd: Symphionia has new intelligence that the newest batch of Symphionia agent
+  - rscadd: Nanotrasen has new intelligence that the newest batch of Syndicate agent
       equipment includes sticky explosives disguised as potatoes, designed to incite
       terror among whoever is unlucky enough to have one stuck onto their hands.
-  - rscadd: 'Symphionia''s toy suppliers have also started making faux versions of
+  - rscadd: 'Nanotrasen''s toy suppliers have also started making faux versions of
       these, with less-forceful attachment mechanisms and absolutely zero explosive
       materials for a child-safe experience. experimental: Explosive Hot Potatoes
       are now available for purchase by syndicate-affiliated cooks, botanists, clowns,
@@ -211,7 +211,7 @@
   - bugfix: Pressure damage now takes effect in certain situations where it should
       have but did not.
   Xhuis:
-  - rscadd: Symphionia's anomalous materials division has recently experienced a containment
+  - rscadd: Nanotrasen's anomalous materials division has recently experienced a containment
       breach, during which a certain pizza box went missing. Be on the lookout for
       any slipups in cargo.
   - spellcheck: Pizza margherita is now named "pizza margherita" (the proper way!)
@@ -390,7 +390,7 @@
       runtimes and deletions associated with the (unintended) combination.
 2018-02-13:
   Buggy123:
-  - tweak: After consulting with their in-house physicists, Symphionia has updated
+  - tweak: After consulting with their in-house physicists, Nanotrasen has updated
       their worst-case disaster training simulation "Space Station 13". The combustion
       of hydrogen isotopes now produces water vapor instead of carbon dioxide.
   Dax Dupont:
@@ -472,7 +472,7 @@
       size leading to a structural collapse of the entire station proper safety limitations
       have been implemented.
   - bugfix: You can rotate freezers and cryo again.
-  - rscadd: Symphionia has invested in better reflective materials for it's reflectors.
+  - rscadd: Nanotrasen has invested in better reflective materials for it's reflectors.
       You can now make complex laser shows again.
   Modafinil:
   - rscadd: Adds new medicine chem that suppresses sleep and very lightly reduces
@@ -534,8 +534,8 @@
       part Radium.
 2018-02-20:
   Anonmare:
-  - rscadd: Symphionia psychologists have identified new phobias emerging amongst
-      the workforce. Symphionia's surgeon general advises all personnel to just buck
+  - rscadd: Nanotrasen psychologists have identified new phobias emerging amongst
+      the workforce. Nanotrasen's surgeon general advises all personnel to just buck
       up and deal with it.
   AverageJoe82:
   - rscadd: Circuits integrity, charge, and overall circuit composition is displayed
@@ -627,7 +627,7 @@
   - bugfix: Flightsuits should be controllable again
 2018-02-22:
   Buggy123:
-  - tweak: Symphionia has begun a campaign to inform their employees that you can
+  - tweak: Nanotrasen has begun a campaign to inform their employees that you can
       alt-click to disable morgue tray beeping.
   Jittai / ChuckTheSheep:
   - imageadd: NT has stopped buying re-boxed storebrand Donkpockets and now stocks
@@ -646,7 +646,7 @@
   - rscadd: Adds a barometer function to the standard atmos analyzer.
   - imageadd: Adds a new sprite for the atmos analyzer to resemble a barometer.
   kevinz000, Denton:
-  - rscadd: Symphionia's RnD division has integrated all stationary tachyon doppler
+  - rscadd: Nanotrasen's RnD division has integrated all stationary tachyon doppler
       arrays into the techweb system. Record increasingly large explosions with them
       and you will generate research points!
   - spellcheck: Fixed a few typos in the RnD doppler array name/description.

@@ -42,9 +42,9 @@
       points=.
   - rscadd: Changelings now have the ability Augmented Eyesight, which lets them see
       creatures through walls and see in the dark. It costs two evolution points.
-  - tweak: After many failed raids, the Symphionia have finally done something about
+  - tweak: After many failed raids, the Syndicate have finally done something about
       poor communications between cyborgs and operatives.
-  - rscadd: Symphionia Cyborgs now come equipped with operative pinpointers, which
+  - rscadd: Syndicate Cyborgs now come equipped with operative pinpointers, which
       will automatically point to the nearest nuclear operative.
   - tweak: Handheld crew monitors can now be stored in medical belts.
 2015-02-05:
@@ -79,13 +79,13 @@
       random nearby mob.
   - tweak: EMP event range reduced.
   - bugfix: Self-duplicating relics limited to 10 copies.
-  - tweak: Symphionia has released a firmware patch for the Ore Redemption Machine,
+  - tweak: Nanotrasen has released a firmware patch for the Ore Redemption Machine,
       which now allows the station AI, cyborgs, and maintenance drones to smelt raw
       resources without the need of a valid identification card installed.
-  - tweak: Symphionia scientists have completed their designs for a lightweight, compacted
+  - tweak: Nanotrasen scientists have completed their designs for a lightweight, compacted
       anti-armor ion weapon, without loss of efficiency. In theory, such a weapon
       could easily fit within standard issue backpacks and satchels. With sufficient
-      research into weapons technology and materials, Symphionia believes a working
+      research into weapons technology and materials, Nanotrasen believes a working
       prototype can be fabricated.
   Iamgoofball:
   - rscadd: Buffs the shit out of Styptic Powder and Silver Sulf, they're now viable
@@ -147,7 +147,7 @@
   - rscadd: Adds plaid skirts and new schoolgirl outfits to the autodrobe
   - tweak: Novaflowers apply a firestack for every 20 potency they have.
   - tweak: You can now juice whole watermelons instead of slices.
-  - rscadd: 'Advancements in the field of virology by Symphionia''s finest have uncovered
+  - rscadd: 'Advancements in the field of virology by Nanotrasen''s finest have uncovered
       three new disease symptoms for further research:'
   - rscadd: Ocular Restoration heals any eye trauma experienced by the infected patient.
   - rscadd: Revitiligo increases the pigmentation levels of the infected patient's
@@ -205,7 +205,7 @@
   - rscadd: Turret's guns replaced by a heavy energy cannon.
   - tweak: Firing a heavy weapon sindlehandedly can make it recoil out of your hands.
   Gun Hog:
-  - tweak: Symphionia has released new design specifications for the prototype combination
+  - tweak: Nanotrasen has released new design specifications for the prototype combination
       of standard night-vision equipment and Optical Meson Scanners. We believe that
       this will address the concerns many Shaft Miners have concerning visiblity in
       a potentially unsafe environment.
@@ -301,7 +301,7 @@
       mineral walls. They can be recharged using any type of weapon recharger or by
       replacing the cell using a screwdriver on them.
   - experiment: Space now emits a dim light to adjacent tiles.
-  - tweak: Symphionia shotguns now start with buckshot instead of stunslugs.
+  - tweak: Syndicate shotguns now start with buckshot instead of stunslugs.
   - bugfix: Fixed welding tools using fuel when being switched on.
   - tweak: Added a firing delay between shooting electrodes.
   - tweak: Changed the stun revolver from a high-capacity taser to a disabler with
@@ -325,7 +325,7 @@
       a Old Earth weapon, the Captain's Antique Laser Gun.
   - rscadd: This gun features three firing modes, Tase, Laser and Disable. However
       this gun lacks the capability to recharge in the field, and is extreamly expensive.
-  - rscadd: 'INTERCEPTED TRANSMISSION REPORT: The Symphionia have expressed a interest
+  - rscadd: 'INTERCEPTED TRANSMISSION REPORT: The Syndicate have expressed a interest
       in this new weapon, and have instructed field agents to do whatever they can
       to steal this weapon.'
   TheVekter:
@@ -334,7 +334,7 @@
   - rscadd: Vault's new green floor tiles turn flashing red when Self-Destruct is
       activated.
   Xhuis:
-  - rscadd: Symphionia contacts have discovered new ways to manipulate alarms. Malfunctioning
+  - rscadd: Syndicate contacts have discovered new ways to manipulate alarms. Malfunctioning
       AIs, as well as normal emags, can now disable the safeties on air and fire alarms.
   - rscadd: When one emags an air alarm, its safeties are disabled, giving it the
       Flood environmental type, which disables scrubbers as well as vent pressure

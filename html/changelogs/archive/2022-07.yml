@@ -297,7 +297,7 @@
   - balance: removes the BMP spawns that are out in bum-fuck nowhere.
   - bugfix: fixes the lack of air in the BMP asteroid spawns.
   - bugfix: fixed an incorrect disposals junction in Tramstation Medical department
-  - bugfix: Symphionia fission360 apps work again
+  - bugfix: Syndicate fission360 apps work again
   - code_imp: Code for Academy, Challenge, Spacebattle, and Wild West away missions
       has been removed
   - rscdel: Wild West Gateway (Skyrat version) has been removed
@@ -317,8 +317,8 @@
   - bugfix: Fixes a stray pixel on female human sprites
   - bugfix: corrected the minimum player count of a few disease events
   - imageadd: Added new bacon sprites. ~~Accidentally~~ added new mint sprite.
-  - rscadd: Experimental Symphionia Teleporter is now available in the Traitor Uplink
-      for 8 TC. Warning, not as safe as Symphionia Teleporters.
+  - rscadd: Experimental Syndicate Teleporter is now available in the Traitor Uplink
+      for 8 TC. Warning, not as safe as Nanotrasen Teleporters.
   - admin: The ID of the Ticket will now show up in all associated Admin PM Messages
       when logged.
   - bugfix: Airlock shock indicators on diagnostics HUDs will now correctly be removed
@@ -366,7 +366,7 @@
   - bugfix: Fix simple mob deaths causing deadchat notifications. Special mobs still
       cause deadchat notifications (brood spiders, elite lavaland mobs, morphs, revenants,
       space dragons)
-  - balance: Symphionia no longer wants easily printed upload boards.
+  - balance: Syndicate no longer wants easily printed upload boards.
   - bugfix: Thermomachines will properly have a dropshadow
   - bugfix: Weather will be blurred as expected
   - bugfix: Qm coat can carry telebaton
@@ -394,7 +394,7 @@
   - code_imp: dehardcodes admin grantable objectives list
   - bugfix: On TramStation, the xenobiology pen disposals bins should no longer pop
       off the floor tile on the turf they reside on. They should also now like...
-      actually work. Symphionia had to re-route the disposals a bit to accomodate,
+      actually work. Nanotrasen had to re-route the disposals a bit to accomodate,
       but that's alright.
   tf-4:
   - bugfix: The tile sprayer now has the correct colour for the security decal preset.
@@ -570,7 +570,7 @@
   - bugfix: modsuit flamethrower will no longer push objects
   SuperSlayer:
   - spellcheck: Traitor codewords are now given by their employer, rather then by
-      The Symphionia
+      The Syndicate
   Tastyfish:
   - qol: Automatically placed Skyrat vending machines and closets now have better
       placement.
@@ -658,7 +658,7 @@
   - balance: Two of secmed's firefly gun case's lethal magazines were replaced with
       a rubber variant.
   Jolly:
-  - bugfix: At Central Command, Symphionia's elite architects have noticed that they
+  - bugfix: At Central Command, NanoTrasen's elite architects have noticed that they
       built a door inside a window outside the Thunderdome and have decided to remove
       it.
   LordVollkorn / Gage Gaebler:
@@ -824,7 +824,7 @@
       the second actor.
   - bugfix: Fixed brownies and breadsticks not being bakeable
   - bugfix: Brownie sheets are now sliceable again.
-  - balance: Symphionia encryption keys protect your headset from radio jammers.
+  - balance: Syndicate encryption keys protect your headset from radio jammers.
   - spellcheck: Fixes a minor spelling error in seperation when you eat a red pill.
 2022-07-24:
   GoldenAlpharex:
@@ -1143,7 +1143,7 @@
       of place with the actual text.
   - bugfix: Basic cyberstomach digestion speed dropped down to be in line with the
       other stomachs
-  - bugfix: Symphionia should no longer place single bedsheets on double beds.
+  - bugfix: Nanotrasen should no longer place single bedsheets on double beds.
   - bugfix: holoparasite renaming text will no longer display to others
   - balance: Non-functional livers and stomachs can now be repaired with their respective
       surgeries once in the organ's lifetime.

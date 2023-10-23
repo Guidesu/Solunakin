@@ -425,7 +425,7 @@ GLOBAL_LIST_INIT(typecache_holodeck_linked_floorcheck_ok, typecacheof(list(/turf
 		user.log_message("emagged the Holodeck Control Console.", LOG_GAME)
 		message_admins("[ADMIN_LOOKUPFLW(user)] emagged the Holodeck Control Console.")
 
-	say("Warning. Automatic shutoff and derezzing protocols have been corrupted. Please call Symphionia maintenance and do not use the simulator.")
+	say("Warning. Automatic shutoff and derezzing protocols have been corrupted. Please call Nanotrasen maintenance and do not use the simulator.")
 	nerf(!(obj_flags & EMAGGED),FALSE)
 	return TRUE
 

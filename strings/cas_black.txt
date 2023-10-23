@@ -43,9 +43,9 @@ Law 2 is not to be used for __________!
 Listen. Recent _______ on this station left me very disappointed, OK?
 Lord Singulo hungers for _______.
 My lizard name is _____-And-_____.
-Symphionia crews have introduced a new species, evolved from _____.
-Symphionia's labor union decided to use _______ to raise employee morale.
-Symphionia's new state-of-the-art emergency shuttle was repurposed from _________ and _________.
+Nanotrasen crews have introduced a new species, evolved from _____.
+Nanotrasen's labor union decided to use _______ to raise employee morale.
+Nanotrasen's new state-of-the-art emergency shuttle was repurposed from _________ and _________.
 New in syndicate uplinks: __________!
 No matter how many lizards you have, _____ is never acceptable.
 Oh god! There's ________________ outside escape!
@@ -74,7 +74,7 @@ The Chemist's drug of choice is ______
 The cult is trying to sacrifice ________.
 The curator has read a lot of porn, but never about _____________!
 The curator's new exhibit is devoted solely to _________.
-The devious traitor replaced the Symphionia bomb payload with ________.
+The devious traitor replaced the Syndicate bomb payload with ________.
 The engineers are testing an experimental supermatter setup involving _________.
 The gods were too busy with _______ to respond to _______.
 The heretics worship ________.
@@ -85,7 +85,7 @@ The Roboticist was fired after naming the borgs ______ and _________.
 The rogue virologist released a disease with symptoms of __________ and ______.
 THE SHUTTLE CANNOT BE CALLED BECAUSE OF ________ ON THE STATION.
 The Space Wizard Federation has regrettably begun to summon _____.
-The Symphionia is offering crew members _________ to defect.
+The Syndicate is offering crew members _________ to defect.
 The traitorous atmos tech slowly replaced the station's air with ________.
 This isn't omnizine, it's _________!
 To summon Nar'Sie, we absolutely need ________.
@@ -100,9 +100,9 @@ What did the ERT find upon arriving on station?
 What does the traitor need to steal this time?
 What finally killed the Head of Security?
 What happens when you emag an emag?
-What is Symphionia's highest-priority bounty?
+What is Nanotrasen's highest-priority bounty?
 What is the gray tide protesting this time?
-What is the rarest substance known to Symphionia?
+What is the rarest substance known to Nanotrasen?
 What left the stains in the permabrig?
 What made me sell my soul to the devil?
 What made the mime speak?
@@ -118,7 +118,7 @@ What's my family heirloom?
 What's stopping the Space Station 13 remake?
 What's the Captain's fetish?
 What's the most terrifying thing on Lavaland?
-What's the Symphionia's real beef with Symphionia?
+What's the Syndicate's real beef with Nanotrasen?
 What's the worst thing a wizard can summon?
 What's the worst thing an abductor can give you?
 What's tormenting the ghosts in the afterlife?

@@ -256,7 +256,7 @@ GLOBAL_VAR_INIT(library_table_modified, 0)
 
 #define PRINTER_COOLDOWN (6 SECONDS)
 #define NEWSCASTER_COOLDOWN (10 SECONDS)
-#define LIBRARY_NEWSFEED "Symphionia Book Club"
+#define LIBRARY_NEWSFEED "Nanotrasen Book Club"
 //The different states the computer can be in, only send the info we need yeah?
 #define LIBRARY_INVENTORY 1
 #define LIBRARY_CHECKOUT 2

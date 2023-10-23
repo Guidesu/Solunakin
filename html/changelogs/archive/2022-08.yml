@@ -8,11 +8,11 @@
   Melbert:
   - bugfix: Fixes some alien actions like Evolve not working.
   OrionTheFox:
-  - imageadd: Symphionia uniform/digi icons have all been moved into clothing/under/syndicate.dmi
+  - imageadd: Syndicate uniform/digi icons have all been moved into clothing/under/syndicate.dmi
       files in a continued organization effort. Please report any relevant Uniform
       icon issues to @Orion_The_Fox#1915. (DOES NOT INCLUDE NRI)
   - qol: The Tactical/Tacticool Turtleneck overwrites have gotten re-done in a much
-      cleaner way! Symphionia crew will find only they have access to the lovely red
+      cleaner way! Syndicate crew will find only they have access to the lovely red
       ones (Reskinnable with Alt-Click), and NT Crew's Tacti-cool Turtlenecks will
       always have sensors no matter if its blue or charcoal (Again, reskinnable).
   RimiNosha:
@@ -76,7 +76,7 @@
   - balance: Removes the IRCD from the cargo packs, and replaces it with an Improved-RCD
       goodie.
   RimiNosha:
-  - balance: Symphionia has updated their clothing contracts to stock five of every
+  - balance: NanoTrasen has updated their clothing contracts to stock five of every
       clothing available in AutoDrobe and ClothesMate vendors.
   - qol: Cryo Pods and Cryo Computers no longer require power to work.
   ShizCalev:
@@ -92,7 +92,7 @@
       say regarding the word filter.
   - code_imp: No more runtimes when someone interferes in a religious spar.
   - code_imp: No more runtimes when someone wearing cowboy boots is table slammed.
-  - rscadd: Symphionia has implemented a new system of Threat Advisories to inform
+  - rscadd: Nanotrasen has implemented a new system of Threat Advisories to inform
       stations of the relative Dynamic threat to their stations by sector.
   - rscadd: The kilo whiteship has been remapped and can fly again
   - rscadd: Kilo's abandoned warehouse has been adjusted slightly to match the ship
@@ -205,7 +205,7 @@
   - bugfix: Fixes signatures not working at all. Signatures now only work when %s
       or %sign is put into an [___] input field.
   - bugfix: Input fields are now fixed and also work again.
-  - balance: Symphionia realized that the more access they had on their cards was
+  - balance: Nanotrasen realized that the more access they had on their cards was
       costing them a pretty penny, so they trimmed back the number of accesses a certain
       departmental Security Guard might have. However, any given guard will get back
       a greater amount of accesses depending on how many security guards there are
@@ -568,8 +568,8 @@
   Jolly:
   - bugfix: Somewhere in space, stairs were fixed. I don't know where, but they were
       fixed. You're welcome.
-  - bugfix: Symphionia agents touring to the Ice Moon should no longer feel.. that
-      the air is off outside the Interdyne. Those damn Symphionia employees!
+  - bugfix: Syndicate agents touring to the Ice Moon should no longer feel.. that
+      the air is off outside the Interdyne. Those damn NanoTrasen employees!
   - qol: On Delta, the prison's cell airlocks had glass reinserted. Prisoners can
       now no longer get their arms jammed in them when they open.
   - bugfix: On Delta, the disposals launcher now no longer vomits right next to the
@@ -640,7 +640,7 @@
   - qol: Elevator call buttons and the trapdoor now use balloon alerts.
   OrionTheFox:
   - bugfix: Armor Vests will now display properly for Digitigrade legs.
-  - imageadd: Alongside fixing the Symphionia's de-motivational posters, 'As Above,
+  - imageadd: Alongside fixing the Syndicate's de-motivational posters, 'As Above,
       So Below' and 'Syndie-med, Stay Winning''s icons have been updated!
   SkyratBot:
   - code_imp: Removes an unused bible proc
@@ -692,7 +692,7 @@
   Ebin-Halcyon:
   - imageadd: New shoes and magboots now fit on digitigrade legs.
   Jolly:
-  - bugfix: On Meta, Symphionia has finally added firelocks to some rooms in Medical,
+  - bugfix: On Meta, NanoTrasen has finally added firelocks to some rooms in Medical,
       the Ordnance office in science, and a desk in departures. Please avoid lightin
       any plasma in these airs for now on.
   - bugfix: Also on Meta, firelocks were installed in the virology airlock to mimic
@@ -888,8 +888,8 @@
   - bugfix: Cyborgs will now appear in the Character Preview (without their lights,
       sadly) of the Examine panel too!
   Jolly:
-  - qol: Symphionia will no longer force their employees to submit their papers in
-      a painful manner when entering CC from the evac shuttle. Glory to Symphionia.
+  - qol: NanoTrasen will no longer force their employees to submit their papers in
+      a painful manner when entering CC from the evac shuttle. Glory to NanoTrasen.
   - bugfix: On KS13, the northern most solar room no longer has duped windows.
   Paxilmaniac:
   - bugfix: mothic and tizirian supply boxes will no longer attempt to use sprites
@@ -971,7 +971,7 @@
   - bugfix: Glorious revolutionary tinkers have noticed that the rags in molotovs
       weren't burning during the flight and modified the assembly instructions so
       you can finally set bourgeois scum on fire from afar again!
-  - bugfix: Symphionia smoothed out some hiccups, so Security Departmental Order Crates
+  - bugfix: Nanotrasen smoothed out some hiccups, so Security Departmental Order Crates
       should now open in more parts of the brig.
   - bugfix: Fix chaplain's not being able to pick their bible cover while illiterate
       or blind
@@ -1128,11 +1128,11 @@
   SkyratBot:
   - bugfix: Fixes reagent transfer not properly emptying the source of reagents when
       transferring to a target.
-  - rscadd: Having struck a deal with Piccionaia Home Appliances, Symphionia has now
+  - rscadd: Having struck a deal with Piccionaia Home Appliances, Nanotrasen has now
       distributed coffeemakers to break rooms across the Spinward Sector. Get cartridges
       at cargo, and enjoy the ambrosia of the corporate masses on your station today!
   - balance: orks no longer shout their attacks over the radio
-  - rscadd: Symphionia has added a new vent and a new scrubber to MetaStation's Gravity
+  - rscadd: Nanotrasen has added a new vent and a new scrubber to MetaStation's Gravity
       Generator Foyer.
   - code_imp: split drinks_recipe into multiple files by category
   - bugfix: Replaced the directional firelocks on Metastation garden with windoors,

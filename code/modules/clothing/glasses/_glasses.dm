@@ -419,7 +419,7 @@
 	inhand_icon_state = "gar"
 	glass_colour_type = /datum/client_colour/glass_colour/red
 
-///Symphionia item that upgrades the flash protection of your eyes.
+///Syndicate item that upgrades the flash protection of your eyes.
 /obj/item/syndicate_contacts
 	name = "suspicious contact lens case"
 	desc = "A sinister red case that contains two shiny black contact lenses."
@@ -532,7 +532,7 @@
 
 /obj/item/clothing/glasses/thermal/xray
 	name = "syndicate xray goggles"
-	desc = "A pair of xray goggles manufactured by the Symphionia."
+	desc = "A pair of xray goggles manufactured by the Syndicate."
 	vision_flags = SEE_TURFS|SEE_MOBS|SEE_OBJS
 
 /obj/item/clothing/glasses/thermal/xray/equipped(mob/living/carbon/human/user, slot)
@@ -550,7 +550,7 @@
 	desc = "A pair of thermal optic goggles with an onboard chameleon generator."
 	actions_types = list(/datum/action/item_action/chameleon/change/glasses/no_preset)
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // SKYRAT EDIT ADDITION
-	special_desc = "Chameleon thermal goggles employed by the Symphionia in infiltration operations." //SKYRAT EDIT ADDITION, I don't think the regular description persists through chameleon changes.
+	special_desc = "Chameleon thermal goggles employed by the Syndicate in infiltration operations." //SKYRAT EDIT ADDITION, I don't think the regular description persists through chameleon changes.
 
 /obj/item/clothing/glasses/thermal/monocle
 	name = "thermoncle"

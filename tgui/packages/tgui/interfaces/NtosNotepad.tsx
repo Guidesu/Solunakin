@@ -332,7 +332,7 @@ const AboutDialog = (props: AboutDialogProps) => {
         <span className="NtosNotepad__AboutDialog__logo">NtOS</span>
         <Divider />
         <Box className="NtosNotepad__AboutDialog__text">
-          <span style={paragraphStyle}>Symphionia NtOS</span>
+          <span style={paragraphStyle}>Nanotrasen NtOS</span>
           <span style={paragraphStyle}>
             Version 7815696ecbf1c96e6894b779456d330e
           </span>

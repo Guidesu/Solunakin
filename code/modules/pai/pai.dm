@@ -324,10 +324,10 @@
 	log_game("[key_name(attacker)] emagged [key_name(src)], wiping their master DNA and supplemental directive.")
 	emagged = TRUE
 	master_ref = WEAKREF(attacker)
-	master_name = "The Symphionia"
+	master_name = "The Syndicate"
 	master_dna = "Untraceable Signature"
 	// Sets supplemental directive to this
-	add_supplied_law(0, "Do not interfere with the operations of the Symphionia.")
+	add_supplied_law(0, "Do not interfere with the operations of the Syndicate.")
 	QDEL_NULL(leash) // Freedom!!!
 	to_chat(src, span_danger("ALERT: Foreign software detected."))
 	to_chat(src, span_danger("WARN: Holochasis range restrictions disabled."))

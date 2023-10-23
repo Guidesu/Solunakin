@@ -1,6 +1,6 @@
 2018-05-01:
   BuffEngineering:
-  - bugfix: Symphionia has graciously connected the port bow solar's SMES to the main
+  - bugfix: Nanotrasen has graciously connected the port bow solar's SMES to the main
       grid.
   Denton:
   - rscadd: You can now craft and disassemble HUDsunglasses! Check out the clothing
@@ -62,7 +62,7 @@
   Tlaltecuhtli:
   - tweak: medbeams heal tox and oxy slighty
   pigeonsk:
-  - rscdel: After an internal audit and review Symphionia has decided that stock financing
+  - rscdel: After an internal audit and review Nanotrasen has decided that stock financing
       at the station-level makes no logistical nor managerial sense. Stations, and
       their cargo departments, may no longer play the stock market.
 2018-05-06:
@@ -280,7 +280,7 @@
   - rscadd: you can link the stacking machine and its console by using a multitool
 2018-05-20:
   Pubby:
-  - rscadd: 'Cargo bounties from Symphionia. Earn cargo points by completing fetch
+  - rscadd: 'Cargo bounties from Nanotrasen. Earn cargo points by completing fetch
       quests. remove: Several cargo exports have been reduced or merged into cargo
       bounties.'
   XDTM:
@@ -371,7 +371,7 @@
   Dax Dupont:
   - rscadd: Murderdome now has a telecomm system, so you can taunt your enemies better.
   - rscadd: Snowdin has come back, as VR!
-  - rscadd: Symphionia Tactical Bureau has discovered a Symphionia VR Training program
+  - rscadd: Nanotrasen Tactical Bureau has discovered a Syndicate VR Training program
       on their last raid. It seems to be based on an old CentCom design...
   - rscadd: Restricted variant of the uplink. Will allow admins and such to spawn
       uplinks in remote arenas or for events that aren't as destructive and can't
@@ -542,7 +542,7 @@
   Cyberboss:
   - config: The limit of monkey's spawned via monkey cubes is now configurable
   Dax Dupont:
-  - bugfix: Fixes the wrong tiles in Symphionia VR trainer and uses different tiny
+  - bugfix: Fixes the wrong tiles in Syndicate VR trainer and uses different tiny
       fans.
   - bugfix: Access didn't append to VR IDs
   Firecage:

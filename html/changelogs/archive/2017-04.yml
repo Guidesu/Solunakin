@@ -6,7 +6,7 @@
 2017-04-02:
   BeeSting12:
   - bugfix: Metastation's northeast radiation collector is now connected to the grid.
-      Symphionia would like to apologize for any inconvenience caused to engineers,
+      Nanotrasen would like to apologize for any inconvenience caused to engineers,
       but copper is expensive.
   - rscadd: Boxstation's HoP office now has a PDA tech.
   Cyberboss:
@@ -316,8 +316,8 @@
   - bugfix: The emergency backup shuttle has lighting now.
   - bugfix: Plating in deltastation's aux tool storage is no longer checkered.
   Cobby:
-  - rscadd: Symphionia Lavabase now has more explicit instructions when it comes to
-      outing non-syndicate affiliated enemies of Symphionia.
+  - rscadd: Syndicate Lavabase now has more explicit instructions when it comes to
+      outing non-syndicate affiliated enemies of Nanotrasen.
   - tweak: The GPS set tag has gone from a limit of 5 characters to 20.
   - rscadd: The GPS can now be personalized in both name and description using a pen.
   Joan:

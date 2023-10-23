@@ -193,7 +193,7 @@
 	build_path = /obj/machinery/computer/communications
 
 /obj/item/circuitboard/computer/communications/syndicate
-	name = "Symphionia Communications"
+	name = "Syndicate Communications"
 	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
 	build_path = /obj/machinery/computer/communications/syndicate
 
@@ -295,7 +295,7 @@
 	build_path = /obj/machinery/computer/pod/old/swf
 
 /obj/item/circuitboard/computer/syndicate_shuttle
-	name = "Symphionia Shuttle"
+	name = "Syndicate Shuttle"
 	greyscale_colors = CIRCUIT_COLOR_GENERIC
 	build_path = /obj/machinery/computer/shuttle/syndicate
 	var/challenge = FALSE

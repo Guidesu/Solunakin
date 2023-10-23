@@ -224,9 +224,9 @@
 #define ACCESS_FLAG_CENTCOM_NAME "Centcom"
 /// Bitflag for Centcom ID card accesses. See CENTCOM_ACCESS.
 #define ACCESS_FLAG_CENTCOM (1 << 4)
-/// Displayed name for Symphionia ID card accesses.
-#define ACCESS_FLAG_SYNDICATE_NAME "Symphionia"
-/// Bitflag for Symphionia ID card accesses. See SYNDICATE_ACCESS.
+/// Displayed name for Syndicate ID card accesses.
+#define ACCESS_FLAG_SYNDICATE_NAME "Syndicate"
+/// Bitflag for Syndicate ID card accesses. See SYNDICATE_ACCESS.
 #define ACCESS_FLAG_SYNDICATE (1 << 5)
 /// Displayed name for Offstation/Ruin/Away Mission ID card accesses.
 #define ACCESS_FLAG_AWAY_NAME "Away"
@@ -379,7 +379,7 @@
 	ACCESS_CENT_THUNDER, \
 )
 
-/// Symphionia areas off station. Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_SYNDICATE)
+/// Syndicate areas off station. Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_SYNDICATE)
 #define SYNDICATE_ACCESS list( \
 	ACCESS_SYNDICATE, \
 	ACCESS_SYNDICATE_LEADER, \

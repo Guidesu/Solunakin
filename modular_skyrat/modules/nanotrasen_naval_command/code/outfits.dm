@@ -1,5 +1,5 @@
 /datum/outfit/centcom/naval
-	name = "Symphionia Naval Command - Default"
+	name = "Nanotrasen Naval Command - Default"
 	uniform = /obj/item/clothing/under/rank/centcom/skyrat/naval
 	id = /obj/item/card/id/advanced/centcom
 	l_pocket = /obj/item/melee/baton/telescopic
@@ -19,7 +19,7 @@
 	..()
 
 /datum/outfit/centcom/naval/ensign
-	name = "Symphionia Naval Command - Ensign"
+	name = "Nanotrasen Naval Command - Ensign"
 
 	id_trim = /datum/id_trim/centcom/naval
 
@@ -35,7 +35,7 @@
 	)
 
 /datum/outfit/centcom/naval/lieutenant
-	name = "Symphionia Naval Command - Lieutenant"
+	name = "Nanotrasen Naval Command - Lieutenant"
 
 	id_trim = /datum/id_trim/centcom/naval/lieutenant
 
@@ -53,7 +53,7 @@
 	)
 
 /datum/outfit/centcom/naval/lieutenant_commander
-	name = "Symphionia Naval Command - Lieutenant Commander"
+	name = "Nanotrasen Naval Command - Lieutenant Commander"
 
 	id_trim = /datum/id_trim/centcom/naval/ltcr
 
@@ -73,7 +73,7 @@
 	)
 
 /datum/outfit/centcom/naval/commander
-	name = "Symphionia Naval Command - Commander"
+	name = "Nanotrasen Naval Command - Commander"
 
 	id_trim = /datum/id_trim/centcom/naval/commander
 
@@ -93,7 +93,7 @@
 	)
 
 /datum/outfit/centcom/naval/captain
-	name = "Symphionia Naval Command - Captain"
+	name = "Nanotrasen Naval Command - Captain"
 
 	id_trim = /datum/id_trim/centcom/naval/captain
 
@@ -113,7 +113,7 @@
 	)
 
 /datum/outfit/centcom/naval/rear_admiral
-	name = "Symphionia Naval Command - Rear Admiral"
+	name = "Nanotrasen Naval Command - Rear Admiral"
 
 	id_trim = /datum/id_trim/centcom/naval/rear_admiral
 
@@ -129,7 +129,7 @@
 	)
 
 /datum/outfit/centcom/naval/admiral
-	name = "Symphionia Naval Command - Admiral"
+	name = "Nanotrasen Naval Command - Admiral"
 
 	id_trim = /datum/id_trim/centcom/naval/admiral
 
@@ -147,7 +147,7 @@
 	)
 
 /datum/outfit/centcom/naval/fleet_admiral
-	name = "Symphionia Naval Command - Fleet Admiral"
+	name = "Nanotrasen Naval Command - Fleet Admiral"
 
 	id_trim = /datum/id_trim/centcom/naval/fleet_admiral
 

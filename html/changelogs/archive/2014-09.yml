@@ -15,7 +15,7 @@
       \t"
 2014-09-03:
   Ikarrus:
-  - tweak: Cost of Symphionia bombs increased to 6 telecrystals.
+  - tweak: Cost of Syndicate bombs increased to 6 telecrystals.
   JStheguy:
   - rscadd: Many new posters have been added.
 2014-09-04:
@@ -25,16 +25,16 @@
 2014-09-06:
   Ikarrus:
   - rscadd: "Tampered supply ordering consoles can now order dangerous devices directly\
-      \ from the Symphionia for 140 points.\n\t\t"
+      \ from the Syndicate for 140 points.\n\t\t"
   - tweak: "Securitrons line units will no longer arrest individuals without IDs if\
       \ their faces can still be read. \n\t\t"
   - tweak: "Enemy Agent ID cards have been reported to be able to interfere with the\
       \ new securitron threat assessment protocols.\n\t\t"
-  - tweak: "The Symphionia base has been modified to only allow the leading operative\
+  - tweak: "The Syndicate base has been modified to only allow the leading operative\
       \ to launch the mission.\n\t"
 2014-09-07:
   Gun Hog:
-  - rscadd: Symphionia scientists have released a Heads-Up-Display (HUD) upgrade for
+  - rscadd: Nanotrasen scientists have released a Heads-Up-Display (HUD) upgrade for
       all AI and Cyborg units! Cyborgs have had Medical sensors and a Security datacore
       integrated into their core hardware, replacing the need for a specific module.
   - rscadd: AI units are now able to have suit sensor or crew manifest data displayed

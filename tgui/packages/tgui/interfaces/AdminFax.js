@@ -91,14 +91,14 @@ export const FaxMainPanel = (props, context) => {
             icon="n"
             mr="7px"
             width="49%"
-            onClick={() => setPaperName('Symphionia Official Report')}>
-            Symphionia
+            onClick={() => setPaperName('Nanotrasen Official Report')}>
+            Nanotrasen
           </Button>
           <Button
             icon="s"
             width="49%"
-            onClick={() => setPaperName('Symphionia Report')}>
-            Symphionia
+            onClick={() => setPaperName('Syndicate Report')}>
+            Syndicate
           </Button>
         </Box>
         <Divider />
@@ -117,11 +117,11 @@ export const FaxMainPanel = (props, context) => {
             icon="n"
             mr="7px"
             width="49%"
-            onClick={() => setFromWho('Symphionia')}>
-            Symphionia
+            onClick={() => setFromWho('Nanotrasen')}>
+            Nanotrasen
           </Button>
-          <Button icon="s" width="49%" onClick={() => setFromWho('Symphionia')}>
-            Symphionia
+          <Button icon="s" width="49%" onClick={() => setFromWho('Syndicate')}>
+            Syndicate
           </Button>
         </Box>
         <Divider />

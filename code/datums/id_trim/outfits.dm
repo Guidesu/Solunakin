@@ -28,7 +28,7 @@
 
 /// Trim for VR outfits.
 /datum/id_trim/vr/operative
-	assignment = "Symphionia VR Operative"
+	assignment = "Syndicate VR Operative"
 	department_color = COLOR_RED
 	subdepartment_color = COLOR_RED
 

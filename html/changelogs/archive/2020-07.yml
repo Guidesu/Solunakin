@@ -173,7 +173,7 @@
   - bugfix: The Portable Chemical Mixer now uses proper vortex anomaly cores instead
       of raw ones.
   Kathy Ryals:
-  - bugfix: Symphionia finally realized they forgot to ship the mandatory anomaly
+  - bugfix: Nanotrasen finally realized they forgot to ship the mandatory anomaly
       compressor and two anomaly cores to Icebox.
   LemonInTheDark:
   - rscdel: Removed the research modes from tesla coils and radiation collectors.
@@ -256,7 +256,7 @@
   nightred:
   - bugfix: Service hall's deliveries windoor access has been fix
   zxaber:
-  - bugfix: The thermal vision modules found on certain Symphionia cyborgs is functional
+  - bugfix: The thermal vision modules found on certain Syndicate cyborgs is functional
       once more.
 2020-07-08:
   ArcaneMusic:
@@ -382,7 +382,7 @@
   Melbert:
   - bugfix: Fixes railings blocking bullets and immovable rods from a certain direction.
   MrDoomBringer:
-  - imageadd: Symphionia's Transportation and Logistics Subdivision has spent the
+  - imageadd: Nanotrasen's Transportation and Logistics Subdivision has spent the
       better part of their budget developing a brand new model of Supplypod. Internal
       investigations have revealed the only real differences are almost purely aesthetic.
   Ryll/Shaps:
@@ -488,7 +488,7 @@
   - bugfix: you can now get a circuit from destroying the lipid extractor
   Jared-Fogle:
   - bugfix: Fixed SWAT and Armored beat cops spawning without a weapon.
-  - bugfix: Fixed the Symphionia Ship Captain outfit not having a jumpsuit, ID, or
+  - bugfix: Fixed the Syndicate Ship Captain outfit not having a jumpsuit, ID, or
       belt.
   - bugfix: Armored fugitive bounty hunters now correctly start with an extra tank
       of plasma in their hand.
@@ -600,7 +600,7 @@
       dis- and re-connections, admin->admin PM now opens a ticket, players can no
       longer close their own tickets.
   Timberpoes:
-  - rscadd: Roboticists rejoice. Symphionia has heard your cries for help. They've
+  - rscadd: Roboticists rejoice. NanoTrasen has heard your cries for help. They've
       seen CCTV footage (recorded by the AI) of you all staring enviously at geneticists,
       lording around their shiny, polished, usable DNA Consoles. Cry no more, for
       you can now please your Silicon Overlords and robust those Machine Cultist Chaplains
@@ -973,7 +973,7 @@
   Arkatos:
   - rscadd: Gun locker now uses a radial menu.
   Asha108:
-  - tweak: Changes to the Lavaland Symphionia Atmospherics department.
+  - tweak: Changes to the Lavaland Syndicate Atmospherics department.
   - rscadd: tier 3 canisters to atmos and plasteel to storage room crates
   - rscadd: added filter and connectors, i.e. toxins, in expanded atmos
   - rscdel: Removed old, useless tier0 canister
@@ -1042,5 +1042,5 @@
   - rscadd: Mafia Achievements
   uomo91:
   - rscadd: Pubbystation now has a Commissary, in the southwest primarily hallway.
-  - tweak: Symphionia has decided to make the Commissary accessible to those without
+  - tweak: Nanotrasen has decided to make the Commissary accessible to those without
       maintenance access.

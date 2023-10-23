@@ -1178,22 +1178,22 @@
 
 /obj/item/card/id/advanced/black/syndicate_command
 	name = "syndicate ID card"
-	desc = "An ID straight from the Symphionia."
-	registered_name = "Symphionia"
+	desc = "An ID straight from the Syndicate."
+	registered_name = "Syndicate"
 	registered_age = null
 	trim = /datum/id_trim/syndicom
 	wildcard_slots = WILDCARD_LIMIT_SYNDICATE
 
 /obj/item/card/id/advanced/black/syndicate_command/crew_id
 	name = "syndicate ID card"
-	desc = "An ID straight from the Symphionia."
-	registered_name = "Symphionia"
+	desc = "An ID straight from the Syndicate."
+	registered_name = "Syndicate"
 	trim = /datum/id_trim/syndicom/crew
 
 /obj/item/card/id/advanced/black/syndicate_command/captain_id
 	name = "syndicate captain ID card"
-	desc = "An ID straight from the Symphionia."
-	registered_name = "Symphionia"
+	desc = "An ID straight from the Syndicate."
+	registered_name = "Syndicate"
 	trim = /datum/id_trim/syndicom/captain
 
 

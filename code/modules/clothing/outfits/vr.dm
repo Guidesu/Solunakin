@@ -11,7 +11,7 @@
 	H.dna.species.pre_equip_species_outfit(null, H)
 
 /datum/outfit/vr/syndicate
-	name = "Symphionia VR Operative - Basic"
+	name = "Syndicate VR Operative - Basic"
 
 	id = /obj/item/card/id/advanced/chameleon/black
 	id_trim = /datum/id_trim/vr/operative

@@ -90,5 +90,5 @@
 
 /obj/item/clothing/suit/space/hev_suit/nri/engineer
 	name = "\improper VOSKHOD-IN powered combat armor"
-	desc = "A hybrid set of space-resistant armor built on a modified Symphionia heavy-duty engineering undersuit, polyurea coated lead-lined light plasteel plates hinder mobility as little as possible and offer additional radiation protection while the onboard life support system aids the user in combat. The power cell is what makes the armor work without hassle, a sticker in the power supply unit warns anyone reading to responsibly manage battery levels."
+	desc = "A hybrid set of space-resistant armor built on a modified Nanotrasen heavy-duty engineering undersuit, polyurea coated lead-lined light plasteel plates hinder mobility as little as possible and offer additional radiation protection while the onboard life support system aids the user in combat. The power cell is what makes the armor work without hassle, a sticker in the power supply unit warns anyone reading to responsibly manage battery levels."
 	icon_state = "nri_engineer"

@@ -405,7 +405,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/barsign, 32)
 /datum/barsign/hiddensigns/syndibarsign
 	name = "Syndi Cat"
 	icon = "syndibarsign"
-	desc = "Symphionia or die."
+	desc = "Syndicate or die."
 	neon_color = "#ff0000"
 
 /datum/barsign/hiddensigns/signoff

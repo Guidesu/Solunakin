@@ -108,7 +108,7 @@
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/airlock/centcom{
-	name = "Symphionia Real Locked Door";
+	name = "Nanotrasen Real Locked Door";
 	desc = "Truly, a marvel of modern engineering."
 	},
 /turf/open/floor/iron/dark,
@@ -258,7 +258,7 @@
 /area/ruin/space/has_grav/listeningstation)
 "nX" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Symphionia Secure Airlock System";
+	name = "Syndicate Secure Airlock System";
 	desc = "Truly, a marvel of modern engineering."
 	},
 /obj/structure/cable,
@@ -665,7 +665,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/structure/reagent_dispensers/plumbed{
-	name = "Symphionia Ceritified Drinking Water";
+	name = "Syndicate Ceritified Drinking Water";
 	desc = "Who knew water could taste so good?"
 	},
 /obj/effect/mapping_helpers/burnt_floor,
@@ -680,7 +680,7 @@
 	dwidth = 4;
 	height = 5;
 	shuttle_id = "caravansyndicate1_listeningpost";
-	name = "Symphionia Listening Post";
+	name = "Syndicate Listening Post";
 	width = 9
 	},
 /turf/template_noop,

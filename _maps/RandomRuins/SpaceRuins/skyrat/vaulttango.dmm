@@ -129,7 +129,7 @@
 	name = "Report A10-28"
 	},
 /obj/item/paper{
-	default_raw_text = "Log name A10-01. Log date 9/17/2560. A10 rotation is beginning. Relocating from location Delta to here, location Tango. Expecting low traffic, considering proximity to Symphionia station radio activity. Gonna keep an eye out for that. Thankful for the calm position. Ardere.";
+	default_raw_text = "Log name A10-01. Log date 9/17/2560. A10 rotation is beginning. Relocating from location Delta to here, location Tango. Expecting low traffic, considering proximity to Nanotrasen station radio activity. Gonna keep an eye out for that. Thankful for the calm position. Ardere.";
 	name = "Report A10-01"
 	},
 /turf/open/floor/iron/dark,
@@ -910,7 +910,7 @@
 	dir = 1
 	},
 /mob/living/basic/syndicate/ranged{
-	desc = "An armed agent, provided by the Symphionia.";
+	desc = "An armed agent, provided by the Syndicate.";
 	name = "ARBORLINK Operative"
 	},
 /turf/open/floor/iron/dark,
@@ -1253,7 +1253,7 @@
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/basic/syndicate/ranged{
-	desc = "An armed agent, provided by the Symphionia.";
+	desc = "An armed agent, provided by the Syndicate.";
 	name = "ARBORLINK Operative"
 	},
 /turf/open/floor/iron/dark,
@@ -1410,7 +1410,7 @@
 	},
 /obj/machinery/firealarm/directional/north,
 /mob/living/basic/syndicate/ranged{
-	desc = "An armed agent, provided by the Symphionia.";
+	desc = "An armed agent, provided by the Syndicate.";
 	name = "ARBORLINK Operative"
 	},
 /turf/open/floor/iron/dark,
@@ -1542,7 +1542,7 @@
 	},
 /obj/machinery/light/small/directional/east,
 /mob/living/basic/syndicate/ranged{
-	desc = "An armed agent, provided by the Symphionia.";
+	desc = "An armed agent, provided by the Syndicate.";
 	name = "ARBORLINK Operative"
 	},
 /turf/open/floor/iron/dark,

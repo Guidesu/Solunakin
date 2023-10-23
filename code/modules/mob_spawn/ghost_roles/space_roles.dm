@@ -7,7 +7,7 @@
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_species = /datum/species/human
-	you_are_text = "You are a security officer working for Symphionia, stationed onboard a state of the art research station."
+	you_are_text = "You are a security officer working for Nanotrasen, stationed onboard a state of the art research station."
 	flavour_text = "You vaguely recall rushing into a cryogenics pod due to an oncoming radiation storm. \
 	The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
 	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod."
@@ -34,7 +34,7 @@
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_species = /datum/species/human
-	you_are_text = "You are an engineer working for Symphionia, stationed onboard a state of the art research station."
+	you_are_text = "You are an engineer working for Nanotrasen, stationed onboard a state of the art research station."
 	flavour_text = "You vaguely recall rushing into a cryogenics pod due to an oncoming radiation storm. The last thing \
 	you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
 	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod."
@@ -68,7 +68,7 @@
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_species = /datum/species/human
-	you_are_text = "You are a scientist working for Symphionia, stationed onboard a state of the art research station."
+	you_are_text = "You are a scientist working for Nanotrasen, stationed onboard a state of the art research station."
 	flavour_text = "You vaguely recall rushing into a cryogenics pod due to an oncoming radiation storm. \
 	The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
 	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod."
@@ -91,7 +91,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human/lavaland_syndicate/comms/space
 	you_are_text = "You are a syndicate agent, assigned to a small listening post station situated near your hated enemy's top secret research facility: Space Station 13."
-	flavour_text = "Monitor enemy activity as best you can, and try to keep a low profile. Use the communication equipment to provide support to any field agents, and sow disinformation to throw Symphionia off your trail. Do not let the base fall into enemy hands!"
+	flavour_text = "Monitor enemy activity as best you can, and try to keep a low profile. Use the communication equipment to provide support to any field agents, and sow disinformation to throw Nanotrasen off your trail. Do not let the base fall into enemy hands!"
 	important_text = "DO NOT abandon the base."
 
 /obj/effect/mob_spawn/ghost_role/human/lavaland_syndicate/comms/space/Initialize(mapload)
@@ -103,7 +103,7 @@
 ///battlecruiser stuff
 
 /obj/effect/mob_spawn/ghost_role/human/syndicate/battlecruiser
-	name = "Symphionia Battlecruiser Ship Operative"
+	name = "Syndicate Battlecruiser Ship Operative"
 	you_are_text = "You are a crewmember aboard the syndicate flagship: the SBC Starfury."
 	flavour_text = "Your job is to follow your captain's orders, maintain the ship, and keep the power flowing."
 	important_text = "The armory is not a candy store, and your role is not to assault the station directly, leave that work to the assault operatives."
@@ -133,7 +133,7 @@
 	antag_team.players_spawned += (spawned_mob.ckey)
 
 /datum/outfit/syndicate_empty/battlecruiser
-	name = "Symphionia Battlecruiser Ship Operative"
+	name = "Syndicate Battlecruiser Ship Operative"
 	belt = /obj/item/storage/belt/military/assault
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/clandestine
 	r_pocket = /obj/item/knife/combat/survival
@@ -141,7 +141,7 @@
 	box = /obj/item/storage/box/survival/syndie
 
 /obj/effect/mob_spawn/ghost_role/human/syndicate/battlecruiser/assault
-	name = "Symphionia Battlecruiser Assault Operative"
+	name = "Syndicate Battlecruiser Assault Operative"
 	you_are_text = "You are an assault operative aboard the syndicate flagship: the SBC Starfury."
 	flavour_text = "Your job is to follow your captain's orders, keep intruders out of the ship, and assault Space Station 13. There is an armory, multiple assault ships, and beam cannons to attack the station with."
 	important_text = "Work as a team with your fellow operatives and work out a plan of attack. If you are overwhelmed, escape back to your ship!"
@@ -150,7 +150,7 @@
 	uses = 8
 
 /datum/outfit/syndicate_empty/battlecruiser/assault
-	name = "Symphionia Battlecruiser Assault Operative"
+	name = "Syndicate Battlecruiser Assault Operative"
 	uniform = /obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/armor/vest
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/clandestine
@@ -161,7 +161,7 @@
 	r_pocket = /obj/item/modular_computer/pda/nukeops
 
 /obj/effect/mob_spawn/ghost_role/human/syndicate/battlecruiser/captain
-	name = "Symphionia Battlecruiser Captain"
+	name = "Syndicate Battlecruiser Captain"
 	you_are_text = "You are the captain aboard the syndicate flagship: the SBC Starfury."
 	flavour_text = "Your job is to oversee your crew, defend the ship, and destroy Space Station 13. The ship has an armory, multiple ships, beam cannons, and multiple crewmembers to accomplish this goal."
 	important_text = "As the captain, this whole operation falls on your shoulders. Help your assault operatives detonate a nuke on the station."
@@ -172,7 +172,7 @@
 	uses = 1
 
 /datum/outfit/syndicate_empty/battlecruiser/assault/captain
-	name = "Symphionia Battlecruiser Captain"
+	name = "Syndicate Battlecruiser Captain"
 	id = /obj/item/card/id/advanced/black/syndicate_command/captain_id
 	id_trim = /datum/id_trim/battlecruiser/captain
 	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate

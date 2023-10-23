@@ -21,20 +21,20 @@
   - tweak: Removed needless checks in ghost orbit, you can now orbit yourself and
       restart an orbit around the thing you are already orbiting
   Xhuis:
-  - rscadd: Symphionia Medical cyborgs now have cryptographic sequencers.
-  - rscdel: Symphionia Medical cyborgs no longer have syringes.
+  - rscadd: Syndicate Medical cyborgs now have cryptographic sequencers.
+  - rscdel: Syndicate Medical cyborgs no longer have syringes.
   - tweak: Restorative Nanites now heal much more damage per type.
   - bugfix: Operative pinpointers now actually point toward the nearest operative.
-  - bugfix: Symphionia Assault cyborgs no longer start with medical supplies.
+  - bugfix: Syndicate Assault cyborgs no longer start with medical supplies.
   - bugfix: Energy saws now have a proper icon.
-  - bugfix: Non-operatives can now longer use operative pinpointers or Symphionia cyborg
+  - bugfix: Non-operatives can now longer use operative pinpointers or Syndicate cyborg
       teleporters.
   - tweak: Doctor's Delight now requires cryoxadone in its recipe instead of omnizine.
   - tweak: Doctor's Delight now restores half a point of brute, burn, toxin, and oxygen
       damage per tick.
   - tweak: Doctor's Delight now drains nutrition while it's in your system (that is,
       unless you're a doctor).
-  - bugfix: Symphionia roboticists have given Symphionia medical cyborgs sharper hypospray
+  - bugfix: Syndicate roboticists have given Syndicate medical cyborgs sharper hypospray
       needles - they are now able to penetrate armor.
 2015-10-06:
   Gun Hog, for WJohnston:
@@ -48,11 +48,11 @@
       table for organ harvesting!
   Xhuis:
   - rscadd: Maintenance drones now have a more descriptive message when examined.
-  - tweak: A recent Symphionia firmware update to drones has increased vulnerability
+  - tweak: A recent Nanotrasen firmware update to drones has increased vulnerability
       to foreign influences. Please periodically check drones for abnormal behavior
       or status LED malfunction. Note, however, that cryptographic sequencers will
       not incur this behavior.
-  - tweak: In response to complaints about rogue drones, Symphionia engineers have
+  - tweak: In response to complaints about rogue drones, Nanotrasen engineers have
       allowed factory resets on all drones by simply using a wrench.
   - experiment: Central Command reminds drones to immediately retreat, if possible,
       when a law override is begun. Not doing so may anger the gods and incur their
@@ -72,16 +72,16 @@
       to use crowbar
   - tweak: Broken display cases can be fixed with glass sheets or removed using crowbar
   - tweak: Added start_showpiece_type variable for mappers to create custom displays
-  - rscadd: Symphionia Lone Operatives spotted near the nanotrasen stations! Keep the
+  - rscadd: Syndicate Lone Operatives spotted near the nanotrasen stations! Keep the
       disk safe!
   - tweak: Admin spawned nuclear operatives will now have access to nukeop equipment
   Gun Hog:
-  - rscadd: Symphionia's research team has released a new, high tech design for Science
+  - rscadd: Nanotrasen's research team has released a new, high tech design for Science
       Goggles, which previously did nothing! They new come fitted with a portable
       scanning module which will display the potential research data gained from experimenting
-      with an object. Symphionia has also released drivers which shall enable the
+      with an object. Nanotrasen has also released drivers which shall enable the
       prototype hardsuit's built in scan visor.
-  - rscadd: Supporting this new design, Symphionia has seen fit to provide blueprints
+  - rscadd: Supporting this new design, Nanotrasen has seen fit to provide blueprints
       for Science Goggles to the station's protolathe.
   Kor:
   - tweak: Gang implanters now only break implants/deconvert gangsters, meaning you
@@ -137,7 +137,7 @@
   - rscadd: A gamebreaking bug has been fixed with buckets. You can now wear them
       on your head.
   bgobandit:
-  - rscadd: The Grape Growers Consortium has complained that Symphionia kitchens do
+  - rscadd: The Grape Growers Consortium has complained that Nanotrasen kitchens do
       not use their products enough. HQ has come up with a few recipes to pacify them.
       Goddamn winos.
 2015-10-19:
@@ -152,11 +152,11 @@
   - rscadd: You can now attach grenades and C4 to spears to create explosive lances.
       This is done via table crafting. Alt+click the spear to set a war cry.
   Shadowlight213:
-  - rscadd: In response to reports of stranded drones, Symphionia has added magnets
+  - rscadd: In response to reports of stranded drones, Nanotrasen has added magnets
       to drone legs. They are no longer affected by lack of gravity or spacewind!
   - bugfix: Drones can now set Airlock access on RCDs.
   bgobandit:
-  - rscadd: Symphionia loves recycling! In the highly unlikely occasion that your
+  - rscadd: Nanotrasen loves recycling! In the highly unlikely occasion that your
       space station accumulates gibs, scoop 'em up and bring them to chemistry to
       recycle into soap, candles, or even delicious meat product!
   - rscadd: L3 biohazard closets now contain bio-bag satchels for the safe collection
@@ -177,7 +177,7 @@
       get 50u for faster refilling).
 2015-10-23:
   Incoming5643:
-  - rscadd: 'Symphionia bomb payloads will now detonate if set on fire long enough.
+  - rscadd: 'Syndicate bomb payloads will now detonate if set on fire long enough.
       Note that the casings for the bombs is fireproof, so if you want to set fire
       to a bombcore you''ll need to remove it from the case first (cut all wires,
       then crowbar it out). A reassurance from our explosives department: it is, and

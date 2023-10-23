@@ -2,7 +2,7 @@
 
 /obj/item/storage/box/syndicate/contract_kit
 	name = "contract kit"
-	special_desc = "Supplied to Symphionia contractors."
+	special_desc = "Supplied to Syndicate contractors."
 	special_desc_requirement = EXAMINE_CHECK_CONTRACTOR
 	icon_state = "syndiebox"
 	illustration = "writing_syndie"
@@ -47,7 +47,7 @@
 /obj/item/storage/box/syndicate/contractor_loadout
 	name = "standard loadout"
 	special_desc_requirement = EXAMINE_CHECK_CONTRACTOR
-	special_desc = "Supplied to Symphionia contractors, providing their specialised MODSuit and chameleon uniform."
+	special_desc = "Supplied to Syndicate contractors, providing their specialised MODSuit and chameleon uniform."
 	icon_state = "syndiebox"
 	illustration = "writing_syndie"
 
@@ -72,7 +72,7 @@
 
 /obj/item/storage/box/syndicate/contract_kit/midround
 	name = "contract kit"
-	special_desc = "Supplied to Symphionia contractors."
+	special_desc = "Supplied to Syndicate contractors."
 	special_desc_requirement = EXAMINE_CHECK_CONTRACTOR
 	icon_state = "syndiebox"
 	illustration = "writing_syndie"

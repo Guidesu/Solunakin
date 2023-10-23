@@ -271,7 +271,7 @@
   - rscadd: Mura space banjos are now in stock at your local NT instrument supplier!
       Start picking today!
   Anonmare:
-  - balance: Symphionia have refined instabitaluri's formula to be less toxic to living
+  - balance: Nanotrasen have refined instabitaluri's formula to be less toxic to living
       tissue.
   Arkatos:
   - bugfix: Skill levels will now show properly.
@@ -479,7 +479,7 @@
   - bugfix: Fake changeling clothes no longer drop on dismember.
   - balance: Changeling biodegrade now dissolves legcuffs.
   TheVekter:
-  - tweak: Removed the ability to unlock illegal tech using the Symphionia thrown weapons
+  - tweak: Removed the ability to unlock illegal tech using the Syndicate thrown weapons
       (Paper plane, throwing star, bola)
   - rscadd: Added a fun little surprise to maintenance loot!
   Thebleh:
@@ -529,7 +529,7 @@
   - tweak: The hypnosis text color now changes more smoothly.
   actioninja:
   - rscadd: DNA vault, holodeck, spawners, and engraved message tgui-next
-  - rscadd: tgui-next Symphionia Uplink
+  - rscadd: tgui-next Syndicate Uplink
   - bugfix: Uplinks have the syndicate theme again
   - bugfix: Traitor uplinks now render again when traitors don't have any species
       or role
@@ -615,7 +615,7 @@
   - balance: shapeshifting in pipes are dangerous now.
 2019-11-27:
   ArcaneMusic:
-  - rscadd: Symphionia's software development team has finally finished a port if
+  - rscadd: Nanotrasen's software development team has finally finished a port if
       their hit, battle arcade game, available now on tablets, laptops, and modular
       computers.
   - rscadd: Printer-enabled modular computers are now capable of printing arcade tickets,

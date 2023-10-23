@@ -34,7 +34,7 @@
 
 /obj/machinery/interrogator/examine(mob/user)
 	. = ..()
-	. += "It requies a direct link to a Symphionia defence network, stay near a Symphionia comms sat!"
+	. += "It requies a direct link to a Nanotrasen defence network, stay near a Nanotrasen comms sat!"
 
 /obj/machinery/interrogator/AltClick(mob/user)
 	. = ..()

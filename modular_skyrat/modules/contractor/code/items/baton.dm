@@ -66,7 +66,7 @@
 		upgrade.forceMove(src)
 
 /obj/item/melee/baton/telescopic/contractor_baton/upgraded
-	desc = "A compact, specialised baton assigned to Symphionia contractors. Applies light electrical shocks to targets. This one seems to have unremovable parts."
+	desc = "A compact, specialised baton assigned to Syndicate contractors. Applies light electrical shocks to targets. This one seems to have unremovable parts."
 
 /obj/item/melee/baton/telescopic/contractor_baton/upgraded/Initialize(mapload)
 	. = ..()

@@ -57,10 +57,10 @@
   Basilman:
   - bugfix: fixed agent box invisibility
   Denton:
-  - tweak: 'Symphionia lavaland base: Added a grenade parts vendor and smoke machine
+  - tweak: 'Syndicate lavaland base: Added a grenade parts vendor and smoke machine
       board. The testing chamber now has a heatproof door and vents/scrubbers to replace
       air after testing gas grenades. Chemical/soda/beer vendors are emagged by default;
-      the vault contains a set of valuable Symphionia documents.'
+      the vault contains a set of valuable Syndicate documents.'
   - tweak: Added a scrubber pipenet to the Lavaland mining base.
   Garen:
   - bugfix: mobs now call COMSIG_ATOM_ATTACKBY
@@ -218,7 +218,7 @@
   - bugfix: Blood and oil footprints sharing a tile no longer causes footprint decals
       to stack.
   WJohnston:
-  - balance: Symphionia (melee) simple animals will now move less predictably and attack
+  - balance: Syndicate (melee) simple animals will now move less predictably and attack
       twice as often, hopefully making them quite a bit more dangerous.
   XDTM:
   - tweak: Operating Computers can now sync to the research database to acquire researched
@@ -342,7 +342,7 @@
   - admin: adds logging for gun circuits, grabber circuits, and dragging claw circuits
   - rscadd: grabbers can select what they want to drop
   MrDoomBringer:
-  - imageadd: The Symphionia Airspace Aesthetics division has shipped out a newer
+  - imageadd: The Nanotrasen Airspace Aesthetics division has shipped out a newer
       design of NT-Brand "Ore Silos". No new features have been added, but they certainly
       look much nicer!
   Naksu:
@@ -471,7 +471,7 @@
   intrnlerr:
   - refactor: Refactored nettles to be reagent_containers
   nicbn:
-  - soundadd: Symphionia shoes no longer contain Silencium. Now footsteps make noise!
+  - soundadd: Nanotrasen shoes no longer contain Silencium. Now footsteps make noise!
       Sounds from Baystation.
 2018-08-28:
   Denton:

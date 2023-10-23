@@ -300,7 +300,7 @@
 		chem_buttons[chem] = chem
 
 /**
- * Symphionia version
+ * Syndicate version
  * Can be controlled from the inside and can be deconstructed.
  */
 /obj/machinery/sleeper/syndie

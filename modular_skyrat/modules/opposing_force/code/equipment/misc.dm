@@ -3,7 +3,7 @@
 
 /datum/opposing_force_equipment/other/uplink
 	item_type = /obj/item/uplink/opfor
-	name = "Symphionia Uplink"
+	name = "Syndicate Uplink"
 	description = "An old-school syndicate uplink without a password and an empty TC account. Perfect for the aspiring operatives."
 
 /datum/opposing_force_equipment/other/tc1
@@ -23,7 +23,7 @@
 
 /datum/opposing_force_equipment/other/cashcase
 	item_type = /obj/item/storage/secure/briefcase/syndie
-	name = "Symphionia Briefcase Full of Cash"
+	name = "Syndicate Briefcase Full of Cash"
 	description = "A secure briefcase containing 5000 space credits. Useful for bribing personnel, or purchasing goods \
 			and services at lucrative prices. The briefcase also feels a little heavier to hold; it has been \
 			manufactured to pack a little bit more of a punch if your client needs some convincing."

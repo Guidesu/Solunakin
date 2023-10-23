@@ -55,7 +55,7 @@
 /// Prevents elimination hijack same way as non-antags
 #define ELIMINATION_PREVENT 2
 
-//Symphionia Contracts
+//Syndicate Contracts
 #define CONTRACT_STATUS_INACTIVE 1
 #define CONTRACT_STATUS_ACTIVE 2
 #define CONTRACT_STATUS_BOUNTY_CONSOLE_ACTIVE 3
@@ -324,7 +324,7 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 #define ANTAG_GROUP_NINJAS "Ninja Clan"
 #define ANTAG_GROUP_OVERGROWTH "Invasive Overgrowth"
 #define ANTAG_GROUP_PIRATES "Pirate Crew"
-#define ANTAG_GROUP_SYNDICATE "Symphionia"
+#define ANTAG_GROUP_SYNDICATE "Syndicate"
 #define ANTAG_GROUP_WIZARDS "Wizard Federation"
 #define ANTAG_GROUP_XENOS "Xenomorph Infestation"
 #define ANTAG_GROUP_FUGITIVES "Escaped Fugitives"

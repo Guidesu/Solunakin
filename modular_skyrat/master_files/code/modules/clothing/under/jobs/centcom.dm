@@ -1,4 +1,4 @@
-//This file is for any station-aligned or neutral factions, not JUST Symphionia.
+//This file is for any station-aligned or neutral factions, not JUST Nanotrasen.
 //Try to keep them all a subtype of centcom/skyrat, for file sorting and balance - all faction representatives should have the same/similarly armored uniforms
 
 /obj/item/clothing/under/rank/centcom

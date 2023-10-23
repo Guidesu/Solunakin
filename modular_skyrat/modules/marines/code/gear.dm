@@ -1,6 +1,6 @@
 /obj/item/gun/ballistic/automatic/ar/modular/m44a
 	name = "\improper NT M44A Pulse Rifle"
-	desc = "A specialized Symphionia-produced ballistic pulse rifle that uses compressed magazines to output absurd firepower in a compact package."
+	desc = "A specialized Nanotrasen-produced ballistic pulse rifle that uses compressed magazines to output absurd firepower in a compact package."
 	icon_state = "m44a"
 	inhand_icon_state = "m44a"
 	icon = 'modular_skyrat/modules/marines/icons/m44a.dmi'
@@ -39,7 +39,7 @@
 
 /obj/item/ammo_casing/c300
 	name = ".300 caseless round"
-	desc = "A .300 caseless round for proprietary Symphionia firearms."
+	desc = "A .300 caseless round for proprietary Nanotrasen firearms."
 	caliber = "300comp"
 	projectile_type = /obj/projectile/bullet/a300
 
@@ -56,7 +56,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/modular/m44a/scoped
 	name = "\improper NT M44AS Pulse Rifle"
-	desc = "A specialized Symphionia-produced ballistic pulse rifle that uses compressed magazines to output absurd firepower in a compact package. This one's fitted with a long-range scope."
+	desc = "A specialized Nanotrasen-produced ballistic pulse rifle that uses compressed magazines to output absurd firepower in a compact package. This one's fitted with a long-range scope."
 	icon_state = "m44a_s"
 	inhand_icon_state = "m44a_s"
 
@@ -79,7 +79,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/modular/m44a/shotgun
 	name = "\improper NT M44ASG Pulse Rifle"
-	desc = "A specialized Symphionia-produced ballistic pulse rifle that uses compressed magazines to output absurd firepower in a compact package. This one's fitted with a two-round semi-automatic underbarrel 12 gauge shotgun."
+	desc = "A specialized Nanotrasen-produced ballistic pulse rifle that uses compressed magazines to output absurd firepower in a compact package. This one's fitted with a two-round semi-automatic underbarrel 12 gauge shotgun."
 	icon_state = "m44a_sg"
 	inhand_icon_state = "m44a_sg"
 	/// Reference to the underbarrel shotgun
@@ -107,7 +107,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/modular/m44a/grenadelauncher
 	name = "\improper NT M44AGL Pulse Rifle"
-	desc = "A specialized Symphionia-produced ballistic pulse rifle that uses compressed magazines to output absurd firepower in a compact package. This one's fitted with an underbarrel grenade launcher, and a red dot scope to help align it. Compensating for something?"
+	desc = "A specialized Nanotrasen-produced ballistic pulse rifle that uses compressed magazines to output absurd firepower in a compact package. This one's fitted with an underbarrel grenade launcher, and a red dot scope to help align it. Compensating for something?"
 	icon_state = "m44a_gl"
 	inhand_icon_state = "m44a_gl"
 	/// Underbarrel grenade launcher reference

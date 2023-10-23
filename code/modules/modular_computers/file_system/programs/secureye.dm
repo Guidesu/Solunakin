@@ -34,7 +34,7 @@
 	///Internal tracker used to find a specific person and keep them on cameras.
 	var/datum/trackable/internal_tracker
 
-///Symphionia subtype that has no access restrictions and is available on Syndinet
+///Syndicate subtype that has no access restrictions and is available on Syndinet
 /datum/computer_file/program/secureye/syndicate
 	filename = "syndeye"
 	filedesc = "SyndEye"

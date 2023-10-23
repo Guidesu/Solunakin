@@ -181,7 +181,7 @@
 	json_config = 'code/datums/greyscale/json_configs/encryptionkey_research.json'
 
 /datum/greyscale_config/encryptionkey_syndicate
-	name = "Symphionia Encryptionkey"
+	name = "Syndicate Encryptionkey"
 	icon_file = 'icons/obj/radio.dmi'
 	json_config = 'code/datums/greyscale/json_configs/encryptionkey_syndicate.json'
 

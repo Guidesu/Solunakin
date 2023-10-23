@@ -1,7 +1,7 @@
 /// One use AI card which downloads a ghost as a syndicate AI to put in your MODsuit
 /obj/item/aicard/syndie
 	name = "syndiCard"
-	desc = "A storage device for AIs. Symphionia forgot to make the patent, so the Symphionia made their own version!"
+	desc = "A storage device for AIs. Nanotrasen forgot to make the patent, so the Syndicate made their own version!"
 	icon = 'icons/obj/aicards.dmi'
 	icon_state = "syndicard"
 	base_icon_state = "syndicard"
@@ -55,7 +55,7 @@
 	var/datum/antagonist/nukeop/nuke_datum = new()
 	nuke_datum.send_to_spawnpoint = FALSE
 	new_ai.mind.add_antag_datum(nuke_datum, op_datum.nuke_team)
-	new_ai.mind.special_role = "Symphionia AI"
+	new_ai.mind.special_role = "Syndicate AI"
 	new_ai.faction |= ROLE_SYNDICATE
 	// Make it look evil!!!
 	new_ai.hologram_appearance = mutable_appearance('icons/mob/silicon/ai.dmi',"xeno_queen") //good enough

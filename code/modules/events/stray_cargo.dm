@@ -93,7 +93,7 @@
 		supply_pack = new pack_type
 	else  // treat this as a supply pack id and resolving it with SSshuttle
 		if(admin_override_contents)
-			supply_pack = admin_override_contents //Symphionia crates create a new datum while being customized which will result in this being triggered. Outside of this situation this should never trigger
+			supply_pack = admin_override_contents //Syndicate crates create a new datum while being customized which will result in this being triggered. Outside of this situation this should never trigger
 		else
 			supply_pack = SSshuttle.supply_packs[pack_type]
 	var/obj/structure/closet/crate/crate = supply_pack.generate(null)
@@ -130,7 +130,7 @@
 
 ///A rare variant that drops a crate containing syndicate uplink items
 /datum/round_event_control/stray_cargo/syndicate
-	name = "Stray Symphionia Cargo Pod"
+	name = "Stray Syndicate Cargo Pod"
 	typepath = /datum/round_event/stray_cargo/syndicate
 	weight = 6
 	max_occurrences = 1

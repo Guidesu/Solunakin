@@ -104,7 +104,7 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 "cy" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Symphionia Ship Airlock"
+	name = "Syndicate Ship Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/structure/cable,
@@ -163,7 +163,7 @@
 /obj/structure/cable,
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external/ruin{
-	name = "Symphionia Ship Airlock"
+	name = "Syndicate Ship Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium,
@@ -298,7 +298,7 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 "jJ" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Symphionia Ship Airlock"
+	name = "Syndicate Ship Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/iron/dark/side{
@@ -307,7 +307,7 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 "kh" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Symphionia Ship Airlock"
+	name = "Syndicate Ship Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/structure/cable,
@@ -360,7 +360,7 @@
 "lo" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external/ruin{
-	name = "Symphionia Ship Airlock"
+	name = "Syndicate Ship Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium,
@@ -397,7 +397,7 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 "nO" = (
 /obj/machinery/mineral/ore_redemption{
-	name = "Symphionia ore redemption machine";
+	name = "Syndicate ore redemption machine";
 	ore_multiplier = 4;
 	req_access = list("syndicate")
 	},
@@ -576,7 +576,7 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 "vK" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Symphionia Ship Airlock"
+	name = "Syndicate Ship Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium,
@@ -599,7 +599,7 @@
 /area/space)
 "wK" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Symphionia Ship Airlock"
+	name = "Syndicate Ship Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/iron/dark,
@@ -758,7 +758,7 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 "De" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Symphionia Ship Airlock"
+	name = "Syndicate Ship Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium/red,
@@ -821,14 +821,14 @@
 "GB" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/external/ruin{
-	name = "Symphionia Ship Airlock"
+	name = "Syndicate Ship Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "GZ" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Symphionia Ship Airlock"
+	name = "Syndicate Ship Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium,
@@ -868,7 +868,7 @@
 "Ig" = (
 /obj/machinery/porta_turret/syndicate/energy{
 	dir = 4;
-	name = "Symphionia Ship Turret";
+	name = "Syndicate Ship Turret";
 	on = 0;
 	shot_delay = 10
 	},
@@ -891,7 +891,7 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 "IH" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Symphionia Ship Airlock"
+	name = "Syndicate Ship Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/structure/cable,
@@ -900,7 +900,7 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 "IV" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Symphionia Ship Airlock"
+	name = "Syndicate Ship Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/plating,
@@ -946,7 +946,7 @@
 /obj/structure/filingcabinet,
 /obj/machinery/door/window{
 	dir = 8;
-	name = "Symphionia Interior Door";
+	name = "Syndicate Interior Door";
 	req_access = list("syndicate")
 	},
 /turf/open/floor/mineral/plastitanium/red,
@@ -1046,7 +1046,7 @@
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/grunge{
 	desc = "Vault airlock preventing air from going out.";
-	name = "Symphionia Vault Airlock"
+	name = "Syndicate Vault Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/pod/dark,
@@ -1148,7 +1148,7 @@
 "Vk" = (
 /obj/machinery/porta_turret/syndicate/energy{
 	dir = 4;
-	name = "Symphionia Ship Turret";
+	name = "Syndicate Ship Turret";
 	on = 0;
 	shot_delay = 10
 	},

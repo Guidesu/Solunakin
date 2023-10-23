@@ -39,7 +39,7 @@
   Motho:
   - rscadd: Adds five new difficult dwarven-themed drinks with (some) special effects.
   Remuluson2:
-  - bugfix: After pressure from Symphionia, Space Wizard Federation made glass and
+  - bugfix: After pressure from Nanotrasen, Space Wizard Federation made glass and
       bone knives non-conductive again.
   SkyratBot:
   - refactor: Spider healing abilities have been refactored to reuse the same code
@@ -242,7 +242,7 @@
       number of chickens and chicks are tracked. It's now possible for admins to make
       anything into an egg.
   dessysalta, Cheshify:
-  - rscadd: Symphionia has added a martial artist gi to the AutoDrobe for those who
+  - rscadd: Nanotrasen has added a martial artist gi to the AutoDrobe for those who
       want to go even further byond.
   - imageadd: Aforementioned gi sprites.
   tf-4:
@@ -548,7 +548,7 @@
       most of the time
   - bugfix: The Fugu Gland can once more be used on Ian, Carp, Giant Spiders, or other
       basic mobs.
-  - bugfix: Symphionia mobs will once again attack windows to try to reach you, and
+  - bugfix: Syndicate mobs will once again attack windows to try to reach you, and
       space ruin spiders won't.
   - bugfix: Netherworld-themed mobs will correctly adjust their speed as they take
       damage.
@@ -969,7 +969,7 @@
       them
   - bugfix: Removes duplicate decals and replaces them with new ones that are more
       efficient
-  - balance: Symphionia briefcase full of cash is now worth of 3 tc instead of 5. Better
+  - balance: Syndicate briefcase full of cash is now worth of 3 tc instead of 5. Better
       than nothing
   - admin: Admins can now customize the wisdom cow event.
   - bugfix: Borg synthesizers will no longer remain on the status panel if a borg
@@ -1037,7 +1037,7 @@
       are fixed and are all now on RMB when aggressive grabbing (or above) someone.
   LT3:
   - code_imp: Modularised roundstart station traits
-  - balance: Symphionia will now put more effort into announcing employee birthdays
+  - balance: Nanotrasen will now put more effort into announcing employee birthdays
   Melbert:
   - bugfix: Fixes rare human arm melting condition
   SkyratBot:
@@ -1099,7 +1099,7 @@
   - bugfix: Stray Cargo Pod false alarms will once again play an announcement when
       they occur.
   - bugfix: NODISMEMBER mobs can now be attacked by the flesh worm.
-  - rscadd: Symphionia has given the crew access to a brand new emergency shuttle!
+  - rscadd: Nanotrasen has given the crew access to a brand new emergency shuttle!
       Watch out for it's destructive entrance!
   - bugfix: heck suit no longer bugs out worn boots/gloves icons
   - bugfix: Failing a kickflip no longer shows the chat messages to the wrong people.
@@ -1115,7 +1115,7 @@
       input pumps and liquid output pumps
 2023-03-24:
   Gyran:
-  - rscadd: Added Cencom gloves to the Symphionia Rep locker and command vendor
+  - rscadd: Added Cencom gloves to the Nanotrasen Rep locker and command vendor
   SkyratBot:
   - bugfix: fixes gondola meatslab not being able to be placed into the DNA infuser
   softcerv:
@@ -1442,9 +1442,9 @@
   - imagedel: Removes the sprite for the Advanced Wirebrush
   - rscadd: re-added normal doors to qm's office on tram.
   - bugfix: fixed hos' shutters not being existant on tram.
-  - rscadd: The Symphionia Costuming Department has released specifications for how
+  - rscadd: The Nanotrasen Costuming Department has released specifications for how
       to convert the Head of Security's cap into a shako.
-  - bugfix: 'The Symphionia have gotten their hands on the most dangerous weapon: A
+  - bugfix: 'The Syndicate have gotten their hands on the most dangerous weapon: A
       photocopier that doesn''t require any money. God save us all.'
   - rscadd: remakes the old escape pod shuttle
   - bugfix: Kilo's arrivals port will no longer be space colored

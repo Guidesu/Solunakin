@@ -272,7 +272,7 @@
   Tofa01:
   - soundadd: Changes fire alarm to make new sound FireAlarm.ogg
   Xhuis:
-  - rscdel: The Symphionia will no longer prank their operatives by including reverse
+  - rscdel: The Syndicate will no longer prank their operatives by including reverse
       revolvers in surplus crates.
   coiax:
   - rscadd: A reverse revolver now comes in a box of hugs.
@@ -302,7 +302,7 @@
   Drunk Musicians:
   - rscadd: Drunk music
   Gun Hog:
-  - rscadd: Symphionia Engineering has devised a construction console to assist with
+  - rscadd: Nanotrasen Engineering has devised a construction console to assist with
       building the Auxiliary Mining Base, usually located near a station's Arrivals
       hallway. A breakthrough in bluespace technology, this console employs an advanced
       internal Rapid Construction Device linked to a camera-assisted holocrane for
@@ -588,9 +588,9 @@
   Tofa01:
   - bugfix: Disables sound/frequency variance on cryo tube alert sound
   coiax:
-  - rscadd: Symphionia reminds its employees that they have ALWAYS been able to taste.
+  - rscadd: Nanotrasen reminds its employees that they have ALWAYS been able to taste.
       Anyone claiming that they've recently only just gained the ability to taste
-      are probably Symphionia agents.
+      are probably Syndicate agents.
 2017-02-24:
   MrStonedOne:
   - rscdel: Limit on Mining Satchel of Holding Removed
@@ -598,7 +598,7 @@
   - rscadd: Dumping/mass pickup/mass transfer of items has a progress bar
 2017-02-25:
   AnonymousNow:
-  - rscadd: Nerd Co. has sent pairs of thicker prescription glasses out to Symphionia
+  - rscadd: Nerd Co. has sent pairs of thicker prescription glasses out to Nanotrasen
       stations, for your local geek to wear.
   Basilman:
   - rscadd: New box sprites

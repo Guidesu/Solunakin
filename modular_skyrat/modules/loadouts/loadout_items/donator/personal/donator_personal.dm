@@ -655,12 +655,12 @@
 	ckeywhitelist = list("somerandomowl")
 
 /datum/loadout_item/head/razurathhat
-	name = "Golden Symphionia Officer Cap"
+	name = "Golden Nanotrasen Officer Cap"
 	item_path = /obj/item/clothing/head/razurathhat
 	ckeywhitelist = list("razurath")
 
 /datum/loadout_item/suit/razurathcoat
-	name = "Golden Symphionia Officer Coat"
+	name = "Golden Nanotrasen Officer Coat"
 	item_path = /obj/item/clothing/suit/razurathcoat
 	ckeywhitelist = list("razurath")
 

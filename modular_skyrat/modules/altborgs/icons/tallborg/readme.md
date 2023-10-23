@@ -10,7 +10,7 @@ MekaNIKA skinline
  -	Medical
  -	Cargo-technician
  -	Miner
- -	Symphionia
+ -	Syndicate
  -	Ninja
 
 ### Terms of use:

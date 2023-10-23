@@ -19,7 +19,7 @@
 
 /obj/item/clothing/head/nanotrasen_consultant
 	name = "nanotrasen consultant's hat"
-	desc = "A cap made from durathread, it has an insignia on the front denoting the rank of \"Symphionia Consultant\"."
+	desc = "A cap made from durathread, it has an insignia on the front denoting the rank of \"Nanotrasen Consultant\"."
 	icon = 'modular_skyrat/master_files/icons/obj/clothing/hats.dmi'
 	worn_icon = 'modular_skyrat/master_files/icons/mob/clothing/head.dmi'
 	icon_state = "nt_consultant_cap"
@@ -42,7 +42,7 @@
 
 /obj/item/clothing/head/nanotrasen_consultant/beret
 	name = "nanotrasen consultant's beret"
-	desc = "A beret made from durathread, it has an insignia on the front denoting the rank of \"Symphionia Consultant\"."
+	desc = "A beret made from durathread, it has an insignia on the front denoting the rank of \"Nanotrasen Consultant\"."
 	greyscale_config = /datum/greyscale_config/beret_badge
 	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
 	greyscale_colors = "#3F3C40#155326"

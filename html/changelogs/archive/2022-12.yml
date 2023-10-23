@@ -587,7 +587,7 @@
   - bugfix: Construct actions go to the middle of the screen like expected.
   PositiveEntropy, AxieTheAxolotl:
   - imageadd: Resprites every revolver!
-  - imageadd: Adds the Symphionia Revolver, a visually new, but mechanically identical
+  - imageadd: Adds the Syndicate Revolver, a visually new, but mechanically identical
       .357 revolver to uplinks!
   RatFromTheJungle:
   - spellcheck: the bluespace microfusion parts now clarify they're bluespace, instead
@@ -708,7 +708,7 @@
       alert code, to make it require a lot less copy-paste to handle new cases.
   - bugfix: Offering a kiss no longer requires the receiver to have free hands to
       accept said kiss!
-  - bugfix: Symphionia will now no longer mount the HoPline's Ticket Machines on windows
+  - bugfix: Nanotrasen will now no longer mount the HoPline's Ticket Machines on windows
       for Meta, IceBox, and Tram.
   - bugfix: Moves virology fridge on nukie base in to a wall
   Zergspower:
@@ -728,7 +728,7 @@
   - bugfix: Santa now spawns with the actual space capable hat again!
   - bugfix: Fixed the claustrophobia trait not recognizing Santa's real hat.
   SkyratBot:
-  - bugfix: After a recent mishap with a high-ranking Symphionia operative, the uplink's
+  - bugfix: After a recent mishap with a high-ranking Syndicate operative, the uplink's
       unlock code and failsafe code (the one that makes it blow up if you say it)
       should never turn out to be the same.
 2022-12-24:
@@ -857,7 +857,7 @@
   - rscadd: Add language variety to machines that speak.  You can also pulse the vendor
       language wire to make it switch languages or EMP a machine to get the same effect.
   - rscadd: Shambling cola vendors will now speak a different language each time they
-      talk. Symphionia vendors will now speak codespeak.  Beach vendors will now speak
+      talk. Syndicate vendors will now speak codespeak.  Beach vendors will now speak
       beachbum.
   - bugfix: fixed saline drip UI not having transfer rate controls visible
   - bugfix: xmas crackers are now tiny instead of normal sized

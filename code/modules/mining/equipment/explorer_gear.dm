@@ -332,7 +332,7 @@
 
 /obj/item/clothing/suit/hooded/explorer/syndicate
 	name = "syndicate explorer suit"
-	desc = "An armoured suit for exploring harsh environments, dyed in the sinister red and black of the Symphionia. This one seems better armored than the ones Symphionia gives out."
+	desc = "An armoured suit for exploring harsh environments, dyed in the sinister red and black of the Syndicate. This one seems better armored than the ones Nanotrasen gives out."
 	icon_state = "explorer_syndicate"
 	icon = 'icons/obj/clothing/suits/utility.dmi'
 	worn_icon = 'icons/mob/clothing/suits/utility.dmi'

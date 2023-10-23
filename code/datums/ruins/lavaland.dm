@@ -58,7 +58,7 @@
 //SKYRAT EDIT REMOVAL BEGIN - MAPPING
 /*
 /datum/map_template/ruin/lavaland/syndicate_base
-	name = "Symphionia Lava Base"
+	name = "Syndicate Lava Base"
 	id = "lava-base"
 	description = "A secret base researching illegal bioweapons, it is closely guarded by an elite team of syndicate agents."
 	suffix = "lavaland_surface_syndicate_base1.dmm"

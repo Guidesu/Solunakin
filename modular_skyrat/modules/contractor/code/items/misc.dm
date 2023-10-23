@@ -17,7 +17,7 @@
 
 			<h3>Using the tablet</h3>
 			<ol>
-				<li>Open the Symphionia Contract Uplink program.</li>
+				<li>Open the Syndicate Contract Uplink program.</li>
 				<li>Here, you can accept a contract, and redeem your TC payments from completed contracts.</li>
 				<li>The payment number shown in brackets is the bonus you'll receive when bringing your target <b>alive</b>. You receive the
 				other number regardless of if they were alive or dead.</li>
@@ -58,7 +58,7 @@
 	icon = 'modular_skyrat/modules/contractor/icons/fulton.dmi'
 	can_use_indoors = TRUE
 	special_desc_requirement = EXAMINE_CHECK_CONTRACTOR
-	special_desc = "A modified fulton pack that can be used indoors thanks to Bluespace technology. Favored by Symphionia Contractors."
+	special_desc = "A modified fulton pack that can be used indoors thanks to Bluespace technology. Favored by Syndicate Contractors."
 
 
 /obj/item/paper/contractor_guide/midround
@@ -83,7 +83,7 @@
 
 			<h3>Using the tablet</h3>
 			<ol>
-				<li>Open the Symphionia Contract Uplink program.</li>
+				<li>Open the Syndicate Contract Uplink program.</li>
 				<li>Here, you can accept a contract, and redeem your TC payments from completed contracts.</li>
 				<li>The payment number shown in brackets is the bonus you'll receive when bringing your target <b>alive</b>. You receive the
 				other number regardless of if they were alive or dead.</li>

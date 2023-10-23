@@ -13,7 +13,7 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	desc = "Use to send a declaration of hostilities to the target, delaying your shuttle departure for 20 minutes while they prepare for your assault.  \
-			Such a brazen move will attract the attention of powerful benefactors within the Symphionia, who will supply your team with a massive amount of bonus telecrystals.  \
+			Such a brazen move will attract the attention of powerful benefactors within the Syndicate, who will supply your team with a massive amount of bonus telecrystals.  \
 			Must be used within five minutes, or your benefactors will lose interest."
 	var/declaring_war = FALSE
 	var/uplink_type = /obj/item/uplink/nuclear
@@ -149,7 +149,7 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 /// Subtype that does nothing but plays the war op message. Intended for debugging
 /obj/item/nuclear_challenge/literally_just_does_the_message
 	name = "\"Declaration of War\""
-	desc = "It's a Symphionia Declaration of War thing-a-majig, but it only plays the loud sound and message. Nothing else."
+	desc = "It's a Syndicate Declaration of War thing-a-majig, but it only plays the loud sound and message. Nothing else."
 	var/admin_only = TRUE
 
 /obj/item/nuclear_challenge/literally_just_does_the_message/check_allowed(mob/living/user)

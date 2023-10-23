@@ -3,7 +3,7 @@
 
 /// Preset central command names to chose from for centcom reports.
 #define CENTCOM_PRESET "Central Command"
-#define SYNDICATE_PRESET "The Symphionia"
+#define SYNDICATE_PRESET "The Syndicate"
 #define WIZARD_PRESET "The Wizard Federation"
 #define CUSTOM_PRESET "Custom Command Name"
 

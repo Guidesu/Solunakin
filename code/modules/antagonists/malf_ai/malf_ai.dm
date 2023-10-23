@@ -170,7 +170,7 @@
 	malf_ai.laws.protected_zeroth = TRUE
 	malf_ai.set_syndie_radio()
 
-	to_chat(malf_ai, "Your radio has been upgraded! Use :t to speak on an encrypted channel with Symphionia Agents!")
+	to_chat(malf_ai, "Your radio has been upgraded! Use :t to speak on an encrypted channel with Syndicate Agents!")
 
 	malf_ai.add_malf_picker()
 
@@ -317,10 +317,10 @@
 
 	var/mob/living/boss_mob = boss.current
 
-	malf_ai.set_zeroth_law("Only [boss_mob.real_name] and people [boss_mob.p_they()] designate[boss_mob.p_s()] as being such are Symphionia Agents.")
+	malf_ai.set_zeroth_law("Only [boss_mob.real_name] and people [boss_mob.p_they()] designate[boss_mob.p_s()] as being such are Syndicate Agents.")
 	malf_ai.set_syndie_radio()
 
-	to_chat(malf_ai, "Your radio has been upgraded! Use :t to speak on an encrypted channel with Symphionia Agents!")
+	to_chat(malf_ai, "Your radio has been upgraded! Use :t to speak on an encrypted channel with Syndicate Agents!")
 
 	malf_ai.add_malf_picker()
 

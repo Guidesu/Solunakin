@@ -164,7 +164,7 @@
   - rscadd: Added glowsticks. Found in maintenance, emergency toolboxes and Party
       Crates.
   kevinz000:
-  - rscadd: The Symphionia reports a breakthrough in chameleon laser gun technology
+  - rscadd: The Syndicate reports a breakthrough in chameleon laser gun technology
       that will disguise its projectiles to be just like the real thing!
 2017-03-10:
   Cyberboss:
@@ -362,7 +362,7 @@
   - bugfix: The alert level is no longer lowered by a nuke's detonation.
 2017-03-19:
   BeeSting12:
-  - rscadd: Symphionia has decided to better equip the box-class emergency shuttles
+  - rscadd: Nanotrasen has decided to better equip the box-class emergency shuttles
       with a recharger on a table in the cockpit.
   Cheridan:
   - tweak: The slime created by a pyroclastic anomaly detonating is now adult and
@@ -374,7 +374,7 @@
   - bugfix: Box Station - Replaces the smiling table grilles with their more serious
       counterparts.
   coiax:
-  - tweak: The Symphionia lavaland base now has a single self destruct bomb located
+  - tweak: The Syndicate lavaland base now has a single self destruct bomb located
       next to the Communications Room. Guaranteed destruction of the base is guaranteed
       by payloads embedded in the walls.
   octareenroon91:
@@ -519,7 +519,7 @@
       out.
   coiax:
   - bugfix: Teams playing CTF have their own radio channels, rather than using the
-      Centcom and Symphionia channels.
+      Centcom and Syndicate channels.
   - bugfix: Actually actually makes CTF barricades repair between rounds.
   - bugfix: Blue CTF lasers have little blue effects when they hit things, rather
       than red effects.

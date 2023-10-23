@@ -43,4 +43,4 @@
 	name = "implanter" // Skyrat edit , original was implanter (storage)
 	imp_type = /obj/item/implant/storage
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // Skyrat edit
-	special_desc = "A Symphionia implanter used for a storage implant" // Skyrat edit
+	special_desc = "A Syndicate implanter used for a storage implant" // Skyrat edit

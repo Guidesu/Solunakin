@@ -199,7 +199,7 @@
 /datum/hallucination/delusion/preset/syndies
 	random_hallucination_weight = 1
 	dynamic_icon = TRUE
-	delusion_name = "Symphionia"
+	delusion_name = "Syndicate"
 	affects_others = TRUE
 	affects_us = FALSE
 

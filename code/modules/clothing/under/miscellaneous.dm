@@ -131,7 +131,7 @@
 
 /obj/item/clothing/under/misc/syndicate_souvenir
 	name = "syndicate souvenir tee"
-	desc = "I got kidnapped by a Symphionia operative and all I got was this lousy t-shirt!"
+	desc = "I got kidnapped by a Syndicate operative and all I got was this lousy t-shirt!"
 	icon = 'icons/obj/clothing/under/syndicate_souvenir.dmi'
 	worn_icon = 'icons/mob/clothing/under/syndicate_souvenir.dmi'
 	icon_state = "syndicate_souvenir"

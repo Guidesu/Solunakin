@@ -63,12 +63,12 @@
   - rscadd: PDA Interface color is now a preference.
   - bugfix: Fixed PDA font style not applying at round start.
   - rscadd: 'The following messages have been added to dead chat: Security level change,
-      (re)calling, Emergency Access, CentComm/Symphionia console messages, outgoing
+      (re)calling, Emergency Access, CentComm/Syndicate console messages, outgoing
       server messages and announcements,'
   MrStonedOne:
   - bugfix: The changelog hadn't been updating. This has been fixed.
   ShiggyDiggyDo:
-  - tweak: Symphionia experts were able to create more sophisticated copies of the
+  - tweak: Syndicate experts were able to create more sophisticated copies of the
       nuclear authentication disk. While still unable to detonate the nuclear fission
       explosive with them, they're practically identical to the real disk if not examined
       closely.
@@ -429,7 +429,7 @@
   - tweak: Gas reagents (o2, plasma, ...) now dump out gas based on container temperature
       instead of room temperature
   Dax Dupont:
-  - rscadd: Fans of clown photography have successfully lobbied Symphionia to include
+  - rscadd: Fans of clown photography have successfully lobbied Nanotrasen to include
       camera and camera accessories designs in the autolathe.
   - tweak: Brings material values for the camera in line with other devices.
   - tweak: The tapes printed by autolathes now come in random colors.
@@ -437,7 +437,7 @@
   - rscadd: Praise the lord for he has granted thy chaplains, wizards, revenants and
       eminences with holy vision. They can now see blessed tiles.
   MMMiracles:
-  - rscadd: Symphionia and pirate mobs now give off light when appropriate
+  - rscadd: Syndicate and pirate mobs now give off light when appropriate
   More Robust Than You:
   - bugfix: Fixed monkey teams
   - tweak: The Lepidopterian language now has less spaces in it
@@ -472,7 +472,7 @@
   Dax Dupont:
   - bugfix: Fixed missing tile under autolathes
   MrDoomBringer:
-  - rscadd: Symphionia's Creative Psychology Initiative has brought new training to
+  - rscadd: NanoTrasen's Creative Psychology Initiative has brought new training to
       all crewmembers to foster rapid, innovative problem-solving! You can now kill
       yourself in so many more ways!
   - rscadd: The RnD department can now develop firmware upgrades to the Express Supply
@@ -616,16 +616,16 @@
       which prevents the subject from carrying out many forms of direct harm.
   SpaceManiac:
   - spellcheck: Clockwork armaments are no longer named "arnaments".
-  - bugfix: The Symphionia Listening Post's medicine closet now has the correct access.
+  - bugfix: The Syndicate Listening Post's medicine closet now has the correct access.
   coiax:
-  - rscadd: Symphionia intelligence potions also grant an internal syndicate ID card
+  - rscadd: Syndicate intelligence potions also grant an internal syndicate ID card
       to the simple animal granted intelligence. This effectively means that Cayenne
       can open the airlocks on the Infiltrator.
   uraniummeltdown:
   - bugfix: You can no longer weld airlock assemblies for infinite materials
 2018-01-27:
   Anonmare:
-  - balance: The Symphionia Chameleon Kit is now available during rounds of lower population.
+  - balance: The Syndicate Chameleon Kit is now available during rounds of lower population.
       Because of course you can have an e-sword and revolver without restriction but
       disguising and RP is verboten because we deathmatch station now.
   Dax Dupont:
@@ -647,7 +647,7 @@
   coiax:
   - balance: Mobs will now start with a random nutrition amount, between hungry and
       mildly well fed.
-  - rscadd: Symphionia Security Division has reported that syndicate comms agents,
+  - rscadd: Nanotrasen Security Division has reported that syndicate comms agents,
       both on lavaland and in space, have had training in "Codespeak", a top secret
       language for stealthy communication.
   uraniummeltdown:
@@ -660,7 +660,7 @@
   - bugfix: fixed a strange pipenet issue that happens when a singular pipe or manifold
       is placed directly between two or more components and wrenched last.
   Dax Dupont:
-  - bugfix: After 3 years of intensive research by Symphionia's elite team of chefs,
+  - bugfix: After 3 years of intensive research by Nanotrasen's elite team of chefs,
       rice dishes such as rice pudding are no longer considered salads.
   Denton:
   - spellcheck: Fixed Bubblegum's description.
@@ -720,7 +720,7 @@
   Dax Dupont:
   - rscadd: Cyborgs can now be upgraded to be h-u-g-e! Only a cosmetic effect!
   ExcessiveUseOfCobblestone:
-  - bugfix: Turrets now check for borgs. Symphionia turrets are nice to emagged borgs
+  - bugfix: Turrets now check for borgs. Syndicate turrets are nice to emagged borgs
       too!
   Iamgoofball:
   - bugfix: Minor code cleanup on the wirer

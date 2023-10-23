@@ -6,7 +6,7 @@
 
 /obj/item/paper/fluff/ruins/thederelict/syndie_mission
 	name = "Mission Objectives"
-	default_raw_text = "The Symphionia have cunningly disguised a Symphionia Uplink as your PDA. Simply enter the code \"678 Bravo\" into the ringtone select to unlock its hidden features. <br><br><b>Objective #1</b>. Kill the God damn AI in a fire blast that it rocks the station. <b>Success!</b>  <br><b>Objective #2</b>. Escape alive. <b>Failed.</b>"
+	default_raw_text = "The Syndicate have cunningly disguised a Syndicate Uplink as your PDA. Simply enter the code \"678 Bravo\" into the ringtone select to unlock its hidden features. <br><br><b>Objective #1</b>. Kill the God damn AI in a fire blast that it rocks the station. <b>Success!</b>  <br><b>Objective #2</b>. Escape alive. <b>Failed.</b>"
 
 /obj/item/paper/fluff/ruins/thederelict/nukie_objectives
 	name = "Objectives of a Nuclear Operative"
@@ -28,7 +28,7 @@
 	content = list("Central Command Status Summary -- Impending Doom -- Your station is somehow in the middle of hostile territory, in clear view of any enemy of the corporation. Your likelihood to survive is low, \
 	and station destruction is expected and almost inevitable. Secure any sensitive material and neutralize any enemy you will come across. It is important that you at least try to maintain the station. \
 	Good luck. -- Special Orders for KC13: Our military presence is inadequate in your sector. We need you to construct BSA-87 Artillery position aboard your station. Base parts are available for shipping via cargo. \
-	-Symphionia Naval Command -- Identified Shift Divergences: Overflow bureaucracy mistake - It seems for some reason we put out the wrong job-listing for the overflow role this shift...I hope you like captains.")
+	-Nanotrasen Naval Command -- Identified Shift Divergences: Overflow bureaucracy mistake - It seems for some reason we put out the wrong job-listing for the overflow role this shift...I hope you like captains.")
 
 /obj/machinery/computer/terminal/derelict/cargo
 	content = list("INTER-MAIL - #789 - Cargo Technician I. Miller -> J. Holmes -- Jake, with all due respect, I don't know how you guys can keep this shit up. Robotics has made not one, but THREE AIs, \
@@ -194,7 +194,7 @@
 		"\[00:28\] But someones got it out for me",
 		"\[00:36\] On the station I may well be called 'Captain'",
 		"\[00:42\] But the title brings with it all the prestige and responsibility of some kind of fucking manchild kindergarten teacher",
-		"\[00:55\] To think Symphionia loves to call this hellhole:",
+		"\[00:55\] To think Nanotrasen loves to call this hellhole:",
 		"\[01:03\] A state of the art orbital plasma research facility",
 		"\[01:10\] If I remember correctly though",
 		"\[01:15\] It was all about the plasma",
@@ -230,7 +230,7 @@
 		// 3rd monologue (middle shift)
 		"\[28:03\] I don't know why i'm even recording this...",
 		"\[28:13\] I sure as hell don't need it for myself",
-		"\[28:25\] Sure, I could upload it with all the evidence and dirt i've found over the years on Symphionia",
+		"\[28:25\] Sure, I could upload it with all the evidence and dirt i've found over the years on Nanotrasen",
 		"\[28:32\] But what's the point?",
 		"\[28:36\] Who would give a shit other than corporate making me suddenly disappear?",
 		"\[28:47\] I suppose I could send and upload it to the network and let people make their own judgements",

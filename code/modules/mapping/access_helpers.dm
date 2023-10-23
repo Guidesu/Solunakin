@@ -391,7 +391,7 @@
 	access_list += ACCESS_BIT_DEN
 	return access_list
 
-// -------------------- Symphionia access helpers
+// -------------------- Syndicate access helpers
 /obj/effect/mapping_helpers/airlock/access/any/syndicate
 	icon_state = "access_helper_syn"
 
@@ -842,7 +842,7 @@
 	access_list += ACCESS_VAULT
 	return access_list
 
-// -------------------- Symphionia access helpers
+// -------------------- Syndicate access helpers
 /obj/effect/mapping_helpers/airlock/access/all/syndicate
 	icon_state = "access_helper_syn"
 

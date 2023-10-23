@@ -13,7 +13,7 @@
 	icon_state = "emag"
 	item_flags = NO_MAT_REDEMPTION | NOBLUDGEON
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // SKYRAT EDIT ADDITION
-	special_desc = "An specially modified ID card used to break machinery and disable safeties. Notoriously used by Symphionia agents." // Skyrat edit
+	special_desc = "An specially modified ID card used to break machinery and disable safeties. Notoriously used by Syndicate agents." // Skyrat edit
 	slot_flags = ITEM_SLOT_ID
 	worn_icon_state = "emag"
 	var/prox_check = TRUE //If the emag requires you to be in range
@@ -89,7 +89,7 @@
 	name = "modified ID card"
 	icon_state = "doorjack"
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // SKYRAT EDIT ADDITION
-	special_desc = "Identifies commonly as a \"doorjack\", this illegally modified ID card can disrupt airlock electronics. Has a self recharging cell. Used often by Symphionia agents." // SKYRAT EDIT ADDITION
+	special_desc = "Identifies commonly as a \"doorjack\", this illegally modified ID card can disrupt airlock electronics. Has a self recharging cell. Used often by Syndicate agents." // SKYRAT EDIT ADDITION
 	worn_icon_state = "doorjack"
 	var/type_whitelist //List of types
 	var/charges = 3
@@ -137,7 +137,7 @@
 /obj/item/card/emag/battlecruiser
 	name = "battlecruiser coordinates upload card"
 	desc = "An ominous card that contains the location of the station, and when applied to a communications console, \
-	the ability to long-distance contact the Symphionia fleet."
+	the ability to long-distance contact the Syndicate fleet."
 	icon_state = "battlecruisercaller"
 	worn_icon_state = "emag"
 	///whether we have called the battlecruiser

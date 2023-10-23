@@ -133,7 +133,7 @@ export const TramController = (props, context) => {
           <Stack.Item grow={6}>
             <Section title="Controls">
               <NoticeBox>
-                Symphionia is not responsible for any injuries or fatalities
+                Nanotrasen is not responsible for any injuries or fatalities
                 caused by usage of the tram.
               </NoticeBox>
               <Button
