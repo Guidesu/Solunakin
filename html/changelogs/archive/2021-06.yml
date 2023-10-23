@@ -317,7 +317,7 @@
   - rscadd: 'The release of the new cookbook, "Tiziran Cooking: a Taste of the Homeworld"
       has brought Lizard food to the masses! Try out some new treats, like Moonfish,
       Nectar Larvae, and perhaps even Headcheese at the kitchen today!'
-  - rscadd: To coincide with the new popularity of Lizard cuisine, Nanotrasen now
+  - rscadd: To coincide with the new popularity of Lizard cuisine, Symphionia now
       stocks seeds for Korta Nuts, a common ingredient in lizard cooking, in the Megaseed
       vendors. Botanists, you know what to do.
   - rscadd: A few Tiziran fish are also available for you aquaculture lovers out there.
@@ -454,9 +454,9 @@
   - bugfix: Accidental debug tools and mapping errors have been removed from Astrum.
   - bugfix: Dangerous Research should have all of it's floors in place.
   OrionTheFox:
-  - rscadd: Nanotrasen has been hard at work shipping out new (old) warning tape rolls
+  - rscadd: Symphionia has been hard at work shipping out new (old) warning tape rolls
       for departments with common hazards!
-  - bugfix: To avoid a pending lawsuit, Nanotrasen has re-evaluated the fire safety
+  - bugfix: To avoid a pending lawsuit, Symphionia has re-evaluated the fire safety
       of their new ERT hangars, and properly sectioned them off from the rest of the
       arrivals hallways on Delta and Meta.
   SkyratBot:
@@ -494,14 +494,14 @@
   - bugfix: Vox should no longer be able to breathe station airmix with black-market
       organs.
   Gandalf2k15:
-  - rscadd: The Nanotrasen Representative has been added to the game!
+  - rscadd: The Symphionia Representative has been added to the game!
   - rscadd: More explosion sound effects!
   Melbert:
   - bugfix: Fixed nuke ops lobby meta exploit
   - bugfix: Fixes contractor tablets breaking due to contract targets cryoing.
   OrionTheFox:
   - bugfix: The CE's Naval Uniform has been remodelled to be more recognizable from
-      the HoS's, as well as their antennae properly attached. Nanotrasen's Representative
+      the HoS's, as well as their antennae properly attached. Symphionia's Representative
       is now also welcome to a selection of these uniforms.
   Ryll/Shaps:
   - bugfix: OOC heart commendations should once again function and poll people as
@@ -615,9 +615,9 @@
   - bugfix: Cargo crates no longer deliver a complementary emissive blocker with every
       delivery.
   - bugfix: Directional lighting no longer creates shadows on emissive flooring.
-  - bugfix: 'QMs can now use the Nanotrasen Internal Requisition Network program on
+  - bugfix: 'QMs can now use the Symphionia Internal Requisition Network program on
       modular computers to order things remotely. qol: All people may now download
-      the Nanotrasen Internal Requisition Network program on modular computers to
+      the Symphionia Internal Requisition Network program on modular computers to
       request to order things remotely.'
   - balance: The Forcefield Projector takes a second to put a forcefield down.
   - bugfix: The spare Codex Cicatrix created by the ritual, no longer comes with free

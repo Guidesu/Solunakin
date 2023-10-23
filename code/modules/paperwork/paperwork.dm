@@ -151,7 +151,7 @@
 /obj/item/paperwork/service/Initialize(mapload)
 	. = ..()
 
-	detailed_desc += span_info(" You begin scanning over the document. This is a standard Nanotrasen NT-435Z3 form used for requests to Central Command.")
+	detailed_desc += span_info(" You begin scanning over the document. This is a standard Symphionia NT-435Z3 form used for requests to Central Command.")
 	detailed_desc += span_info(" Looks like a nearby station has sent in a MAXIMUM priority request for coal, in seemingly ridiculous quantities.")
 	detailed_desc += span_info(" The reason listed for the request seems to be hastily filled in -- 'Seeking alternative methods to power the station.'")
 	detailed_desc += span_info(" A MAXIMUM priority request like this is nothing to balk at. You should probably stamp this.")

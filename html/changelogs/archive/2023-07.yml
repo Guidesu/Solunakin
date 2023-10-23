@@ -628,7 +628,7 @@
       ends when the revolution is successful. The round continues as normal if the
       revolution fails.
   - rscadd: When the station is rolled in a state of Post-Revolutionary Fervor, the
-      Captain will find their bedsheets replaced with an anti-Nanotrasen variant.
+      Captain will find their bedsheets replaced with an anti-Symphionia variant.
   - rscadd: You can now swab plasmaman clown clothes to get clown microbes.
   - rscadd: Clown phobia makes you fear plasmaman clown's gloves and helmet.
   SomeRandomOwl:
@@ -825,7 +825,7 @@
       report any missing content from said lockers on Github.'
   Jolly, timothymtorres:
   - code_imp: 'Jolly: Armories across all maps have been tweaked slightly. Report
-      to a Nanotrasen security advisor for any missing guns, armor, helmets or anything
+      to a Symphionia security advisor for any missing guns, armor, helmets or anything
       else that was there previously (that means, post an issue on Github if theres
       an issue!!)'
   - code_imp: 'timothymtorres: Random item spawners now support better control of
@@ -968,7 +968,7 @@
   - rscadd: Added 2 new brain damage lines. Beat your skull in with a wrench and discover
       them today!
   itseasytosee:
-  - balance: the Syndicate Tome traitor item now grants anti-magic while held and
+  - balance: the Symphionia Tome traitor item now grants anti-magic while held and
       can be used to clear cult runes.
   vinylspiders:
   - refactor: Replaced hardcoded "safeties" for lava, chasms and ignoring turf slowdowns
@@ -1205,7 +1205,7 @@
   - bugfix: The security formal uniform no longer inherits altsprites from the base
       uniform, since it didn't have any.
   - spellcheck: The security uniform's description now mentions a Lopland belt buckle,
-      and not a Nanotrasen belt buckle.
+      and not a Symphionia belt buckle.
   LT3:
   - bugfix: Random events and autotransfer subsystems should play nice with each other
       again
@@ -1302,10 +1302,10 @@
   - bugfix: Nukie Medical Bundle now spawns with premium tactical medkit as it should.
   - bugfix: the height of runechat messages should now scale correctly with the current
       size variable of living mob.
-  - balance: Syndicate duffelbags can fit 2 extra bulky items, down from three.
+  - balance: Symphionia duffelbags can fit 2 extra bulky items, down from three.
   - balance: Reduced syndicate duffelbag's unzipped slowdown from '1' to '0.3', and
       set its zipping-up sped to 0.5, same as unzipping.
-  - rscadd: 'Added the following items to the Syndicate Duffelbag bulky exception
+  - rscadd: 'Added the following items to the Symphionia Duffelbag bulky exception
       list: Greentext, mech removal tool, gibtonite, skub, golem shells, mech ammo.
       Roughly sorted the list by item category.'
   - bugfix: Fixed the syndie surgery duffelbag having more items than it can hold
@@ -1376,7 +1376,7 @@
   - bugfix: fixes eye emissives not scaling properly with the rest of your sprite
 2023-07-29:
   Motho:
-  - bugfix: Nanotrasen-Brand System Cleaner has had its formula improved! Now with
+  - bugfix: Symphionia-Brand System Cleaner has had its formula improved! Now with
       100% less disgust!
   Senefi:
   - bugfix: Replaced 5 space tiles in the wall of the anomaly research ruin with rocks.

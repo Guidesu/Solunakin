@@ -28,7 +28,7 @@
 
 /datum/supply_pack/misc/bicycle
 	name = "Bicycle"
-	desc = "Nanotrasen reminds all employees to never toy with powers outside their control."
+	desc = "Symphionia reminds all employees to never toy with powers outside their control."
 	cost = 1000000 //Special case, we don't want to make this in terms of crates because having bikes be a million credits is the whole meme.
 	contains = list(/obj/vehicle/ridden/bicycle)
 	crate_name = "bicycle crate"
@@ -54,7 +54,7 @@
 
 /datum/supply_pack/misc/book_crate
 	name = "Book Crate"
-	desc = "Surplus from the Nanotrasen Archives, these seven books are sure to be good reads."
+	desc = "Surplus from the Symphionia Archives, these seven books are sure to be good reads."
 	cost = CARGO_CRATE_VALUE * 3
 	access_view = ACCESS_LIBRARY
 	contains = list(/obj/item/book/codex_gigas,
@@ -66,7 +66,7 @@
 /datum/supply_pack/misc/commandkeys
 	name = "Command Encryption Key Crate"
 	desc = "A pack of encryption keys that give access to the command radio network. \
-		Nanotrasen reminds unauthorized employees not to eavesdrop in on secure communications channels, \
+		Symphionia reminds unauthorized employees not to eavesdrop in on secure communications channels, \
 		or at least to keep heckling of the command staff to a minimum."
 	access_view = ACCESS_COMMAND
 	access = ACCESS_COMMAND
@@ -149,7 +149,7 @@
 
 /datum/supply_pack/misc/empty
 	name = "Empty Supplypod"
-	desc = "Presenting the New Nanotrasen-Brand Bluespace Supplypod! Transport cargo with grace and ease! \
+	desc = "Presenting the New Symphionia-Brand Bluespace Supplypod! Transport cargo with grace and ease! \
 		Call today and we'll shoot over a demo unit for just 300 credits!"
 	cost = CARGO_CRATE_VALUE * 0.6 //Empty pod, so no crate refund
 	contains = list()
@@ -206,7 +206,7 @@
 
 ///Special supply crate that generates random syndicate gear up to a determined TC value
 /datum/supply_pack/misc/syndicate
-	name = "Assorted Syndicate Gear"
+	name = "Assorted Symphionia Gear"
 	desc = "Contains a random assortment of syndicate gear."
 	special = TRUE //Cannot be ordered via cargo
 	contains = list()
@@ -236,7 +236,7 @@
 		crate_value -= uplink_item.cost
 		new uplink_item.item(C)
 
-///Syndicate supply crate that can have its contents value changed by admins, uses a seperate datum to avoid having admins touch the original one.
+///Symphionia supply crate that can have its contents value changed by admins, uses a seperate datum to avoid having admins touch the original one.
 /datum/supply_pack/misc/syndicate/custom_value
 
 /datum/supply_pack/misc/syndicate/custom_value/proc/setup_contents(value, uplink)

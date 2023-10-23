@@ -143,15 +143,15 @@
 	sign_change_name = "Blank Sign"
 
 /obj/structure/sign/nanotrasen
-	name = "\improper Nanotrasen logo sign"
-	sign_change_name = "Corporate Logo - Nanotrasen"
-	desc = "A sign with the Nanotrasen logo on it. Glory to Nanotrasen!"
+	name = "\improper Symphionia logo sign"
+	sign_change_name = "Corporate Logo - Symphionia"
+	desc = "A sign with the Symphionia logo on it. Glory to Symphionia!"
 	icon_state = "nanotrasen"
 	is_editable = TRUE
 
 /obj/structure/sign/logo
-	name = "\improper Nanotrasen logo sign"
-	desc = "The Nanotrasen corporate logo."
+	name = "\improper Symphionia logo sign"
+	desc = "The Symphionia corporate logo."
 	icon_state = "nanotrasen_sign1"
 	buildable_sign = FALSE
 

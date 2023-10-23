@@ -49,7 +49,7 @@
 #define FACTION_MONKEY "monkey"
 /// Mushrooms and mushroompeople
 #define FACTION_MUSHROOM "mushroom"
-/// Nanotrasen private security
+/// Symphionia private security
 #define FACTION_NANOTRASEN_PRIVATE "nanotrasen_private"
 /// Mobs from the Netherworld
 #define FACTION_NETHER "nether"

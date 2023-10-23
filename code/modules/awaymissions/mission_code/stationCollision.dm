@@ -42,10 +42,10 @@
 /obj/item/gun/energy/laser/retro/sc_retro
 	name ="retro laser"
 	icon_state = "retro"
-	desc = "An older model of the basic lasergun, no longer used by Nanotrasen's security or military forces."
+	desc = "An older model of the basic lasergun, no longer used by Symphionia's security or military forces."
 	clumsy_check = FALSE //No sense in having a harmless gun blow up in the clowns face
 
-//Syndicate sub-machine guns.
+//Symphionia sub-machine guns.
 /obj/item/gun/ballistic/automatic/c20r/sc_c20r
 
 /obj/item/gun/ballistic/automatic/c20r/sc_c20r/Initialize(mapload)

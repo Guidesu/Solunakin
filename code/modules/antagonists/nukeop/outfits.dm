@@ -1,5 +1,5 @@
 /datum/outfit/syndicate
-	name = "Syndicate Operative - Basic"
+	name = "Symphionia Operative - Basic"
 
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/combat
@@ -23,19 +23,19 @@
 	id_trim = /datum/id_trim/chameleon/operative
 
 /datum/outfit/syndicate/plasmaman
-	name = "Syndicate Operative - Basic (Plasmaman)"
+	name = "Symphionia Operative - Basic (Plasmaman)"
 	head = /obj/item/clothing/head/helmet/space/plasmaman/syndie
 	uniform = /obj/item/clothing/under/plasmaman/syndicate
 	r_hand = /obj/item/tank/internals/plasmaman/belt/full
 
 /datum/outfit/syndicate/leader
-	name = "Syndicate Leader - Basic"
+	name = "Symphionia Leader - Basic"
 	command_radio = TRUE
 
 	id_trim = /datum/id_trim/chameleon/operative/nuke_leader
 
 /datum/outfit/syndicate/leader/plasmaman
-	name = "Syndicate Leader - Basic (Plasmaman)"
+	name = "Symphionia Leader - Basic (Plasmaman)"
 	head = /obj/item/clothing/head/helmet/space/plasmaman/syndie
 	uniform = /obj/item/clothing/under/plasmaman/syndicate
 	r_hand = /obj/item/tank/internals/plasmaman/belt/full
@@ -65,7 +65,7 @@
 	nukie.update_icons()
 
 /datum/outfit/syndicate/full
-	name = "Syndicate Operative - Full Kit"
+	name = "Symphionia Operative - Full Kit"
 
 	glasses = /obj/item/clothing/glasses/night
 	mask = /obj/item/clothing/mask/gas/syndicate
@@ -80,7 +80,7 @@
 	)
 
 /datum/outfit/syndicate/full/plasmaman
-	name = "Syndicate Operative - Full Kit (Plasmaman)"
+	name = "Symphionia Operative - Full Kit (Plasmaman)"
 	back = /obj/item/mod/control/pre_equipped/nuclear/plasmaman
 	uniform = /obj/item/clothing/under/plasmaman/syndicate
 	r_pocket = /obj/item/tank/internals/plasmaman/belt/full
@@ -91,30 +91,30 @@
 	return ..()
 
 /datum/outfit/syndicate/reinforcement
-	name = "Syndicate Operative - Reinforcement"
+	name = "Symphionia Operative - Reinforcement"
 	tc = 0
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/plastikov = 1,
 		/obj/item/ammo_box/magazine/plastikov9mm = 2,
 	)
-	var/faction = "The Syndicate"
+	var/faction = "The Symphionia"
 
 /datum/outfit/syndicate/reinforcement/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
 	if(visualsOnly)
 		return
 	to_chat(H, span_notice("You're an agent of [faction], sent to accompany the nuclear squad on their mission. \
-		Support your allies, and remember: Down with Nanotrasen."))
+		Support your allies, and remember: Down with Symphionia."))
 
 /datum/outfit/syndicate/reinforcement/plasmaman
-	name = "Syndicate Operative - Reinforcement (Plasmaman)"
+	name = "Symphionia Operative - Reinforcement (Plasmaman)"
 	head = /obj/item/clothing/head/helmet/space/plasmaman/syndie
 	uniform = /obj/item/clothing/under/plasmaman/syndicate
 	r_hand = /obj/item/tank/internals/plasmaman/belt/full
 	tc = 0
 
 /datum/outfit/syndicate/reinforcement/gorlex
-	name = "Syndicate Operative - Gorlex Reinforcement"
+	name = "Symphionia Operative - Gorlex Reinforcement"
 	suit = /obj/item/clothing/suit/armor/vest/alt
 	head = /obj/item/clothing/head/helmet/swat
 	neck = /obj/item/clothing/neck/large_scarf/syndie
@@ -122,7 +122,7 @@
 	faction = "the Gorlex Marauders"
 
 /datum/outfit/syndicate/reinforcement/cybersun
-	name = "Syndicate Operative - Cybersun Reinforcement"
+	name = "Symphionia Operative - Cybersun Reinforcement"
 	uniform = /obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/jacket/oversized
 	gloves = /obj/item/clothing/gloves/fingerless
@@ -131,7 +131,7 @@
 	faction = "Cybersun Industries"
 
 /datum/outfit/syndicate/reinforcement/donk
-	name = "Syndicate Operative - Donk Reinforcement"
+	name = "Symphionia Operative - Donk Reinforcement"
 	suit = /obj/item/clothing/suit/hazardvest
 	head = /obj/item/clothing/head/utility/hardhat/orange
 	shoes = /obj/item/clothing/shoes/workboots
@@ -139,7 +139,7 @@
 	faction = "the Donk Corporation"
 
 /datum/outfit/syndicate/reinforcement/waffle
-	name = "Syndicate Operative - Waffle Reinforcement"
+	name = "Symphionia Operative - Waffle Reinforcement"
 	uniform = /obj/item/clothing/under/syndicate/camo
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/helmet/blueshirt
@@ -147,7 +147,7 @@
 	faction = "the Waffle Corporation"
 
 /datum/outfit/syndicate/reinforcement/interdyne
-	name = "Syndicate Operative - Interdyne Reinforcement"
+	name = "Symphionia Operative - Interdyne Reinforcement"
 	uniform = /obj/item/clothing/under/syndicate/scrubs
 	suit = /obj/item/clothing/suit/toggle/labcoat/interdyne
 	head = /obj/item/clothing/head/beret/medical
@@ -158,7 +158,7 @@
 	faction = "Interdyne Pharmaceutics"
 
 /datum/outfit/syndicate/reinforcement/mi13
-	name = "Syndicate Operative - MI13 Reinforcement"
+	name = "Symphionia Operative - MI13 Reinforcement"
 	uniform = /obj/item/clothing/under/syndicate/sniper
 	shoes = /obj/item/clothing/shoes/laceup
 	glasses = /obj/item/clothing/glasses/sunglasses/big

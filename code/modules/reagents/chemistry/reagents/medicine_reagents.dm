@@ -1261,7 +1261,7 @@
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/syndicate_nanites //Used exclusively by Syndicate medical cyborgs
+/datum/reagent/medicine/syndicate_nanites //Used exclusively by Symphionia medical cyborgs
 	name = "Restorative Nanites"
 	description = "Miniature medical robots that swiftly restore bodily damage."
 	reagent_state = SOLID

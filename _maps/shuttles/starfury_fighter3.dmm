@@ -5,7 +5,7 @@
 "e" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "SBC_fighter3_bolt";
-	name = "Syndicate Fighter Airlock"
+	name = "Symphionia Fighter Airlock"
 	},
 /obj/docking_port/mobile/syndicate_fighter/fighter_three,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,

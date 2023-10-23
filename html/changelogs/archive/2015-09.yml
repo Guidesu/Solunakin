@@ -15,7 +15,7 @@
   Kor:
   - rscadd: Revheads and Gang leaders now spawn with chameleon security HUDs, for
       keeping track of loyalty implanted crew.
-  - rscadd: Syndicate thermals now have a chameleon function as well, allowing you
+  - rscadd: Symphionia thermals now have a chameleon function as well, allowing you
       to disguise the goggles to match your job.
   Miauw:
   - tweak: Edaggers actually work now and have been buffed to 18 brute and 2 TC.
@@ -51,7 +51,7 @@
   Fox P McCloud:
   - bugfix: Fixes gold sheets having plasma as their material.
   Xhuis:
-  - bugfix: Nanotrasen inspectors have discovered a fault in the buckles of chairs
+  - bugfix: Symphionia inspectors have discovered a fault in the buckles of chairs
       and beds. This has been fixed and you are now able to buckle again.
 2015-09-07:
   xxalpha:
@@ -72,9 +72,9 @@
   - rscdel: Skin Melter, Radioactive Liquid, Omnizine, and Space Drugs blob chemicals
       are gone.
   bgobandit:
-  - rscadd: Nanotrasen has commissioned two new corporate motivational posters for
+  - rscadd: Symphionia has commissioned two new corporate motivational posters for
       your perusal and edification.
-  - rscadd: Nanotrasen also wishes to remind the crew that non-authorized posters
+  - rscadd: Symphionia also wishes to remind the crew that non-authorized posters
       ARE CONTRABAND. Especially those new ones with Rule 34. Perverts.
 2015-09-11:
   CosmicScientist:
@@ -86,7 +86,7 @@
   - bugfix: Fixes Bibles/holy books not properly revealing runes.
   - bugfix: fixes stimulants not properly applying its speedbuff.
   Gun Hog:
-  - tweak: Nanotrasen scientists have proposed a refined prototype design for the
+  - tweak: Symphionia scientists have proposed a refined prototype design for the
       nuclear powered Advanced Energy guns to include a taser function along with
       the disable and kill modes. Addtionally, they have modified the chassis blueprint
       to include a hardpoint for attachable seclites.
@@ -240,16 +240,16 @@
   - rscadd: Added a researchable cyborg self-repair module to the robotics fabricator.
 2015-09-23:
   Xhuis:
-  - rscadd: Syndicate medical cyborgs have been added.
+  - rscadd: Symphionia medical cyborgs have been added.
   - rscadd: The Dart Pistol is now available from the uplink for 4 telecrystals. It
       functions as a pocket-sized syringe gun with a quieter firing sound.
   - tweak: Boxes of riot foam darts now cost 2 telecrystals, down from 10, and are
       available to traitors.
   - tweak: Foam dart pistols now cost 3 telecrystals, down from 6.
-  - tweak: Syndicate cyborg teleporters now allow a choice between Assault and Medical
+  - tweak: Symphionia cyborg teleporters now allow a choice between Assault and Medical
       cyborgs.
-  - tweak: Syndicate cyborgs are now distinguished as Syndicate Assault.
-  - tweak: Syndicate cyborg energy swords now cost 50 energy per use, down from 500.
+  - tweak: Symphionia cyborgs are now distinguished as Symphionia Assault.
+  - tweak: Symphionia cyborg energy swords now cost 50 energy per use, down from 500.
   - tweak: Airlock charges now cost 2 telecrystals, down from 5.
   - tweak: Airlock charges are much more powerful.
   - tweak: There is no longer a 25% chance to detonate an airlock charge while removing
@@ -282,7 +282,7 @@
   - tweak: Headslugs now have 50 health, up from 20.
 2015-09-26:
   MMMiracles:
-  - rscadd: Nanotrasen's genetic researchers have rediscovered the inactive dwarfism
+  - rscadd: Symphionia's genetic researchers have rediscovered the inactive dwarfism
       genetic defect inside all bipedal humanoids. Suffer not the short to live.
   WJohnston:
   - tweak: Repiped the entire station. Atmosia and the disposals loop were not touched.

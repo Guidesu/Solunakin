@@ -3,7 +3,7 @@
 
 /datum/opposing_force_equipment/clothing/syndiebag
 	item_type = /obj/item/storage/backpack/duffelbag/syndie
-	name = "Syndicate Brand Duffelbag"
+	name = "Symphionia Brand Duffelbag"
 	description = "Thanks to being made from a lighter yet sturdier material, this duffelbag holds just the same as any other duffelbag without the speed penalty of its counterparts."
 
 /datum/opposing_force_equipment/clothing/vest
@@ -24,7 +24,7 @@
 
 /datum/opposing_force_equipment/clothing/helmet
 	item_type = /obj/item/clothing/head/helmet/swat
-	description = "A red-striped SWAT helmet. More robust than the standard-issue Nanotrasen security issue helmet, and spaceproof to boot."
+	description = "A red-striped SWAT helmet. More robust than the standard-issue Symphionia security issue helmet, and spaceproof to boot."
 
 /datum/opposing_force_equipment/clothing/syndierig
 	item_type = /obj/item/storage/belt/military

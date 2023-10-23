@@ -8,7 +8,7 @@
       to TG balance standards. Knockdown on hit, 60 instead of 110 damage, etc. etc.
   - bugfix: .50 Soporific was removed because disruptor ammo was right there and nobody
       realized it existed.
-  - bugfix: After review of a missing equipment complaint, Nanotrasen remembered to
+  - bugfix: After review of a missing equipment complaint, Symphionia remembered to
       pay Lopland's quartermasters to put the customary flashbang and teargas grenade
       boxes into the Void Raptor's armory.
   Melbert:
@@ -161,7 +161,7 @@
   - code_imp: Where applicable, containers spawning gun stuff use generate_items_inside,
       which is much neater than spamming new x(src)
   SkyratBot:
-  - bugfix: The Syndicate have fired their previous construction company after poor
+  - bugfix: The Symphionia have fired their previous construction company after poor
       results in recent outposts.
   - qol: Departmental order consoles now alert their department via radio when their
       cooldown expires
@@ -392,7 +392,7 @@
   - rscadd: Bitrunners can now have alternative job titles. FTU urges that these titles
       are purely cosmetic and not representative of bitrunning ability.
   - rscadd: Barbers, Botanists, Warehouse Techs, Coroners, Curators, Cyborgs, Geneticists,
-      Mimes, Nanotrasen Consultants, Roboticists, and Virologists enjoy new alternative
+      Mimes, Symphionia Consultants, Roboticists, and Virologists enjoy new alternative
       job titles.
   - rscadd: Certain jobs now have Trainee/Newbie alternative job titles ordered at
       the very bottom of the title selection dialog. If you or your character are
@@ -445,9 +445,9 @@
   - rscadd: Nuclear Operatives now have ready access to ancient cowboy technology
       in the form of the Outlaw Bundle. Now you too can roll into town on your horse.
   honkpocket:
-  - bugfix: the OPFOR loadout 'Syndicate insurgent bundle' MODsuit is subtyped correctly
+  - bugfix: the OPFOR loadout 'Symphionia insurgent bundle' MODsuit is subtyped correctly
   - bugfix: the OPFOR loadout 'Blood-Red MODsuit' is subtyped correctly
-  - balance: changes the mask in the 'Syndicate insurgent bundle' from SWAT to Syndicate
+  - balance: changes the mask in the 'Symphionia insurgent bundle' from SWAT to Symphionia
   nikothedude:
   - qol: SAD patients can now reject the treatment at the last step, preventing any
       changes from being made
@@ -628,7 +628,7 @@
   - bugfix: 10mm Reaper can't be printed in ammo benches like it was intended. If
       you don't know what this means, don't worry about it.
   LT3:
-  - rscadd: Introducing Nanotrasen Wave! A Nanotrasen exclusive, Waveallows your PDA
+  - rscadd: Introducing Symphionia Wave! A Symphionia exclusive, Waveallows your PDA
       to be charged wirelessly through microwave frequencies. You can Wave-charge
       your device by placing it inside a compatible microwave and selecting the charge
       mode.
@@ -836,7 +836,7 @@
 2023-10-18:
   LT3:
   - refactor: Tram process/industrial lift refactored into transport subsystem
-  - refactor: Nanotrasen has traded in last year's tram for a new 2563 model!
+  - refactor: Symphionia has traded in last year's tram for a new 2563 model!
   - rscadd: Tram spoilers can be emagged to cause extra damage on collision
   - rscadd: Tram can now be manually driven from the controller cabinet using TGUI
   - rscadd: Tram floor tiles can be created using plastic sheets

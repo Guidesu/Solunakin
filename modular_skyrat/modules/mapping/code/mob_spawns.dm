@@ -18,7 +18,7 @@
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_species = /datum/species/human
-	you_are_text = "You are a black market dealer, with shop set up in Nanotrasen Space."
+	you_are_text = "You are a black market dealer, with shop set up in Symphionia Space."
 	flavour_text = "FTU, Independent.. whatever, whoever you are. It doesn't matter out here. \
 	You've set up shop in a slightly shady, yet functional little asteroid for your dealings. \
 	Explore space, find valuable artifacts and nice loot - and pawn it off to those stooges at NT. \
@@ -45,15 +45,15 @@
 	use_outfit_name = TRUE
 	prompt_name = "DS2 personnel"
 	you_are_text = "You are a syndicate operative, employed in a top secret research facility developing biological weapons."
-	flavour_text = "Unfortunately, your hated enemy, Nanotrasen, has begun mining in this sector. Continue operating as best you can, and try to keep a low profile."
+	flavour_text = "Unfortunately, your hated enemy, Symphionia, has begun mining in this sector. Continue operating as best you can, and try to keep a low profile."
 	quirks_enabled = TRUE
 	random_appearance = FALSE
 	computer_area = /area/ruin/space/has_grav/skyrat/interdynefob/service/dorms
 	spawner_job_path = /datum/job/ds2
 
 /obj/effect/mob_spawn/ghost_role/human/ds2/prisoner
-	name = "Syndicate Prisoner"
-	prompt_name = "a Syndicate prisoner"
+	name = "Symphionia Prisoner"
+	prompt_name = "a Symphionia prisoner"
 	you_are_text = "You are a syndicate prisoner aboard an unknown ship."
 	flavour_text = "Unaware of where you are, all you know is you are a prisoner. The plastitanium should clue you into who your captors are... as for why you're here? That's for you to know, and for us to find out."
 	important_text = "You are still subject to standard prisoner policy and must Adminhelp before antagonizing DS2."
@@ -64,12 +64,12 @@
 	spawner_job_path = /datum/job/ds2
 
 /obj/effect/mob_spawn/ghost_role/human/ds2/syndicate
-	name = "Syndicate Operative"
-	prompt_name = "a Syndicate operative"
+	name = "Symphionia Operative"
+	prompt_name = "a Symphionia operative"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
-	you_are_text = "You are an operative of the Sothran Syndicate terrorist cell, employed onboard the Deep Space 2 FOB for reasons that are yours."
-	flavour_text = "The Sothran Syndicate has found it fit to send a forward operating base to Sector 13 to monitor NT's operations. Your orders are maintaining the ship's integrity and keeping a low profile as well as possible."
+	you_are_text = "You are an operative of the Sothran Symphionia terrorist cell, employed onboard the Deep Space 2 FOB for reasons that are yours."
+	flavour_text = "The Sothran Symphionia has found it fit to send a forward operating base to Sector 13 to monitor NT's operations. Your orders are maintaining the ship's integrity and keeping a low profile as well as possible."
 	important_text = "You are not an antagonist. Adminhelp before antagonizing station crew."
 	outfit = /datum/outfit/ds2/syndicate
 	computer_area = /area/ruin/space/has_grav/skyrat/interdynefob/halls
@@ -77,12 +77,12 @@
 	loadout_enabled = TRUE
 
 /obj/effect/mob_spawn/ghost_role/human/ds2/syndicate_command
-	name = "Syndicate Command Operative"
-	prompt_name = "a Syndicate leader"
+	name = "Symphionia Command Operative"
+	prompt_name = "a Symphionia leader"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
-	you_are_text = "You are a command operative of the Sothran Syndicate terrorist cell, employed onboard the Deep Space 2 FOB to guide it forward in its goals."
-	flavour_text = "The Sothran Syndicate has found it fit to send you to help command the forward operating base in Sector 13. Your orders are commanding the crew of DS-2 while keeping a low profile as well as possible."
+	you_are_text = "You are a command operative of the Sothran Symphionia terrorist cell, employed onboard the Deep Space 2 FOB to guide it forward in its goals."
+	flavour_text = "The Sothran Symphionia has found it fit to send you to help command the forward operating base in Sector 13. Your orders are commanding the crew of DS-2 while keeping a low profile as well as possible."
 	important_text = "Keep yourself to the same standards as Command Policy. You are not an antagonist and must Adminhelp before antagonizing station crew."
 	outfit = /datum/outfit/ds2/syndicate_command
 	computer_area = /area/ruin/space/has_grav/skyrat/interdynefob/halls
@@ -162,7 +162,7 @@
 
 //DS-2 Hostage
 /datum/outfit/ds2/prisoner
-	name = "Syndicate Prisoner"
+	name = "Symphionia Prisoner"
 	uniform = /obj/item/clothing/under/rank/prisoner/syndicate
 	shoes = /obj/item/clothing/shoes/sneakers/crimson
 	id = /obj/item/card/id/advanced/prisoner/ds2

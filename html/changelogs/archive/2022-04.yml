@@ -12,7 +12,7 @@
   - bugfix: Makes cyborg lollipop dispenser use the cyborg (non-omnizine) variant
       for consistency.
   GoldenAlpharex:
-  - bugfix: Nanotrasen reviewed their computer stocks and noticed how those stocked
+  - bugfix: Symphionia reviewed their computer stocks and noticed how those stocked
       in libraries were mislabeled, swiftly correcting this error to ensure their
       Curators are able to work once again.
   GuiltyNeko:
@@ -56,8 +56,8 @@
   - bugfix: Fixed certain pens breaking painting on a canvas because of their peculiar
       colors.
   - bugfix: mechs will now show in their tabs equippable equipment as intended
-  - imageadd: 'Nanotrasen has once more updated its legendary Central Command Wardrobe,
-      improving upon its designs even further! Expansion: Nanotrasen has also added
+  - imageadd: 'Symphionia has once more updated its legendary Central Command Wardrobe,
+      improving upon its designs even further! Expansion: Symphionia has also added
       a new outfit for Special Ops Officers to enjoy, instead of a simple leather
       jacket: The CentCom Officer''s Coat!'
   - bugfix: When an airlock that is being hacked receives plasteel reinforcement,
@@ -67,7 +67,7 @@
       qol: Move Help menu to the end of the menu bar.'
   - bugfix: 'Humans no longer "enter" mechs twice qol: as a side effect mech entering
       will cancel immediately instead of failing at the end only'
-  - bugfix: Nanotrasen realized how much they were spending on newscasters that got
+  - bugfix: Symphionia realized how much they were spending on newscasters that got
       buried under posters and the like, so the corporation decided to stock the crew
       with juuuuust enough. They have saved a lot of money from this venture, and
       the economy will promptly begin to skyrocket to new heights.
@@ -182,7 +182,7 @@
   SkyratBot:
   - bugfix: fixes rev runtime when a headrev body is destroyed
   - bugfix: Fix shutters contextual screentips to not display as open with LMB.
-  - balance: On IceBoxStation, Nanotrasen finally decided to reinforce the western
+  - balance: On IceBoxStation, Symphionia finally decided to reinforce the western
       walls on the Captain's Room and the Teleporter Room.
   - bugfix: Food processors now give more processed food, depending on its matter
       bin.
@@ -192,7 +192,7 @@
   - bugfix: TramStation's Medbay's White Medkits actually have stuff in them now.
   - bugfix: TramStation's Surgery Rooms are now actually named appropriately. The
       person who mixed up their starship directions is being executed at noon.
-  - bugfix: The Syndicate Operatives positioned on Lavaland are no longer able to
+  - bugfix: The Symphionia Operatives positioned on Lavaland are no longer able to
       violate the ONE THING they were told to not perform (leave the base).
   - rscadd: A conformational change in reality has caused every single bed (when applicable)
       to be tastefully rotated in the opposite direction.
@@ -222,7 +222,7 @@
       interface menu rather than with an empty hand. qol: pAIs will now get a bit
       more feedback on the state of the MODsuit when it gets activated or deactivated.'
   GuiltyNeko:
-  - rscadd: Blueshield and Nanotrasen Consultant's offices have made their way to
+  - rscadd: Blueshield and Symphionia Consultant's offices have made their way to
       icebox
   Jolly:
   - bugfix: A floating poster in Ice Box's service hall was properly contained.
@@ -249,7 +249,7 @@
   SkyratBot:
   - bugfix: Health sensors inside of chemical grenades will now work as intended and
       the process is almost impossible to screw up.
-  - bugfix: 'On Meta, Delta, and Kilo: Nanotrasen has decided to shuffle around those
+  - bugfix: 'On Meta, Delta, and Kilo: Symphionia has decided to shuffle around those
       brand-new newscasters to ensure the AIs could actually see the buttons they
       want to hit.'
   - bugfix: layering issue with venus fly trap and spacevine
@@ -258,7 +258,7 @@
   - bugfix: A handful of issues on icebox, pertaining to /area/s, firelocks, airlocks,
       mapping helpers, mapping mistakes, a literal space tile, and more have been
       squashed!
-  - bugfix: You can actually move the Syndicate Infiltrator's docking position on
+  - bugfix: You can actually move the Symphionia Infiltrator's docking position on
       icebox again. Yeah. I know.
   - bugfix: Petri dish cultures no longer stay behind on the sprite like some sort
       of ghost after being washed out of it. Cells don't have souls.
@@ -382,7 +382,7 @@
   - bugfix: NT Risk Audits have replaced fraudulent posters calling the ice moon environment
       "space."
   - bugfix: Fire alarms no longer magically emit light when they lose power.
-  - bugfix: On DeltaStation, Nanotrasen will no longer place a Gas Vendor and an Intercom
+  - bugfix: On DeltaStation, Symphionia will no longer place a Gas Vendor and an Intercom
       in such a position on one of the walls on the Clown's bedroom where they overlap.
   - bugfix: Debug Glasses have SM protection
   - rscdel: The Detomatix cartridge's ability to open the nuclear operative pod doors
@@ -483,14 +483,14 @@
   - bugfix: Fixes the flying camera problem once and for all. Report any cameras that
       are not against walls please.
   GoldenAlpharex:
-  - bugfix: Nanotrasen's Furniture Department decided to decommission the faulty hologram
+  - bugfix: Symphionia's Furniture Department decided to decommission the faulty hologram
       projectors from their benches, as they were added by an intern thinking it would
       be funny to display big red letters above everyone sitting on them.
   Helios7-1:
   - rscadd: Engihound plush. Now available in loadout selection!
   SkyratBot:
   - bugfix: Plasmamen no longer have a stray white pixel.
-  - rscadd: 'On MetaStation, IceBoxStation, and DeltaStation: Nanotrasen has formally
+  - rscadd: 'On MetaStation, IceBoxStation, and DeltaStation: Symphionia has formally
       defined the "holding cell" section of the brig.'
   - imageadd: There is now a new area icon for this new "holding cell" section.
 2022-04-14:
@@ -533,7 +533,7 @@
       No littering!
   - bugfix: Fixes facial hair using main hair colour instead of facial hair colour
   - admin: added logging for supply orders' rare erroneous manifest mechanic
-  - bugfix: After a few mishaps, Nanotrasen fixed a few small area definition errors
+  - bugfix: After a few mishaps, Symphionia fixed a few small area definition errors
       on MetaStation.
   Tastyfish:
   - bugfix: Fixes teshari and vox clothing sprites.
@@ -586,12 +586,12 @@
       proper botany bandanas.
   - rscadd: You should now be able to rotate bedsheets on yourself as you take restful
       sleeps.
-  - bugfix: Nanotrasen will no longer place bedsheets the wrong way on beds.
+  - bugfix: Symphionia will no longer place bedsheets the wrong way on beds.
   - rscadd: Remapped the Pride's Mirror ruin
   - imageadd: Wrapped parcels now have an overlay when tagged with a destination.
   - refactor: Refactored wrapped parcels to have a common base type.
   - bugfix: metal foam now blocks you from falling down a z-level if it's below you
-  - rscadd: Nanotrasen realized that their holodeck simulation of the photobooth was
+  - rscadd: Symphionia realized that their holodeck simulation of the photobooth was
       not properly configured, and was showing up with ugly, grouted tiles. This has
       been rectified to be a pure white backdrop for all your photograph desires.
   - bugfix: Uncle Pete remembered to order new rollerskates for his rollerdome. 30
@@ -714,7 +714,7 @@
       (Plasmaman icons were also sorted into their own .dmi's, report relevant issues
       to @Orion_The_Fox#1915.)
   SkyratBot:
-  - balance: Brand partners have encouraged Nanotrasen to reduce the availability
+  - balance: Brand partners have encouraged Symphionia to reduce the availability
       of syndicate-made donuts and donk pockets aboard all stations
   Stalkeros:
   - bugfix: M16's mag compatibility issue resolved.
@@ -782,7 +782,7 @@
   - rscdel: removes round start tablets
   - rscadd: NT Investors have built a new perma brig on IceBoxStation for the purpose
       of press releases.
-  - bugfix: Nanotrasen has declared a recall on all item stacks, due to the fact the
+  - bugfix: Symphionia has declared a recall on all item stacks, due to the fact the
       fact they kept merging in hands and pockets. All stacks will now instead only
       merge in your storage containers, or on the floor.
   - bugfix: Removed a stray pixel in the energy shield module sprite
@@ -851,13 +851,13 @@
       once every 5 minutes.
   - balance: The value of gasses exported through the cargo department have been skewed
       way, WAY down in terms of price.
-  - balance: The Syndicate briefcase of cash now contains now costs 5 TC, up from
+  - balance: The Symphionia briefcase of cash now contains now costs 5 TC, up from
       1 TC, for 5000 credits.
   - balance: Printing items from lathes on station now costs a fee of 10 credits per
       item printed if it's from a lathe not under your department.
   - qol: The payment component has received additional handling for physical credits,
       as well as pulled credits/ID cards for those without hands.
-  - bugfix: Cleaned up some pipes lying around in the Lavaland Syndicate base supermatter.
+  - bugfix: Cleaned up some pipes lying around in the Lavaland Symphionia base supermatter.
   - qol: On the mapping end, all of the Supply Departments (and Lavaland) have had
       their doors reprogrammed to use a mapping helper system, rather than manually
       editing the access variables on the door itself.

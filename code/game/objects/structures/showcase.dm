@@ -64,7 +64,7 @@
 
 /obj/structure/showcase/mecha/marauder
 	name = "combat mech exhibit"
-	desc = "A stand with an empty old Nanotrasen Corporation combat mech bolted to it. It is described as the premier unit used to defend corporate interests and employees."
+	desc = "A stand with an empty old Symphionia Corporation combat mech bolted to it. It is described as the premier unit used to defend corporate interests and employees."
 	icon = 'icons/mob/mecha.dmi'
 	icon_state = "marauder"
 
@@ -75,20 +75,20 @@
 	icon_state = "firefighter"
 
 /obj/structure/showcase/machinery/implanter
-	name = "\improper Nanotrasen automated mindshield implanter exhibit"
-	desc = "A flimsy model of a standard Nanotrasen automated mindshield implant machine. With secure positioning harnesses and a robotic surgical injector, brain damage and other serious medical anomalies are now up to 60% less likely!"
+	name = "\improper Symphionia automated mindshield implanter exhibit"
+	desc = "A flimsy model of a standard Symphionia automated mindshield implant machine. With secure positioning harnesses and a robotic surgical injector, brain damage and other serious medical anomalies are now up to 60% less likely!"
 	icon = 'icons/obj/machines/implant_chair.dmi'
 	icon_state = "implantchair"
 
 /obj/structure/showcase/machinery/microwave
-	name = "\improper Nanotrasen-brand microwave"
-	desc = "The famous Nanotrasen-brand microwave, the multi-purpose cooking appliance every station needs! This one appears to be drawn onto a cardboard box."
+	name = "\improper Symphionia-brand microwave"
+	desc = "The famous Symphionia-brand microwave, the multi-purpose cooking appliance every station needs! This one appears to be drawn onto a cardboard box."
 	icon = 'icons/obj/machines/microwave.dmi'
 	icon_state = "mw_complete"
 
 /obj/structure/showcase/machinery/microwave_engineering
-	name = "\improper Nanotrasen Wave(tm) microwave"
-	desc = "Just when everyone thought Nanotrasen couldn't improve on their famous microwave, this 2563 model features Wave™! A Nanotrasen exclusive, Wave™ allows your PDA to be charged wirelessly through microwave frequencies. Because nothing says 'future' like charging your PDA while overcooking your leftovers. Nanotrasen Wave™ - Multitasking, redefined."
+	name = "\improper Symphionia Wave(tm) microwave"
+	desc = "Just when everyone thought Symphionia couldn't improve on their famous microwave, this 2563 model features Wave™! A Symphionia exclusive, Wave™ allows your PDA to be charged wirelessly through microwave frequencies. Because nothing says 'future' like charging your PDA while overcooking your leftovers. Symphionia Wave™ - Multitasking, redefined."
 	icon = 'icons/obj/machines/microwave.dmi'
 	icon_state = "engi_mw_complete"
 
@@ -100,11 +100,11 @@
 
 /obj/structure/showcase/perfect_employee
 	name = "'Perfect Man' employee exhibit"
-	desc = "A stand with a model of the perfect Nanotrasen Employee bolted to it. Signs indicate it is robustly genetically engineered, as well as being ruthlessly loyal."
+	desc = "A stand with a model of the perfect Symphionia Employee bolted to it. Signs indicate it is robustly genetically engineered, as well as being ruthlessly loyal."
 
 /obj/structure/showcase/machinery/tv
-	name = "\improper Nanotrasen corporate newsfeed"
-	desc = "A slightly battered looking TV. Various Nanotrasen infomercials play on a loop, accompanied by a jaunty tune."
+	name = "\improper Symphionia corporate newsfeed"
+	desc = "A slightly battered looking TV. Various Symphionia infomercials play on a loop, accompanied by a jaunty tune."
 	icon = 'icons/obj/machines/computer.dmi'
 	icon_state = "television"
 

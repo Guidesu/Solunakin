@@ -14,7 +14,7 @@
 
 /obj/item/clothing/under/plasmaman/security/detective
 	name = "detective plasma envirosuit"
-	desc = "The pet project of a particularly posh plasmaman, this custom suit was modified by Nanotrasen for its detectives."
+	desc = "The pet project of a particularly posh plasmaman, this custom suit was modified by Symphionia for its detectives."
 	icon_state = "enviroslacks"
 	inhand_icon_state = null
 

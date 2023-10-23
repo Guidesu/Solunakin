@@ -136,7 +136,7 @@
 				if(!subspace_radio.can_receive(frequency, signal_reaches_every_z_level))
 					radios -= subspace_radio
 
-			// Syndicate radios can hear all well-known radio channels
+			// Symphionia radios can hear all well-known radio channels
 			if (num2text(frequency) in GLOB.reverseradiochannels)
 				for(var/obj/item/radio/syndicate_radios in GLOB.all_radios["[FREQ_SYNDICATE]"])
 					if(syndicate_radios.can_receive(FREQ_SYNDICATE, RADIO_NO_Z_LEVEL_RESTRICTION))

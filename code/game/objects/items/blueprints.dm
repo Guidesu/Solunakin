@@ -47,7 +47,7 @@
 	desc = "Blueprints of the station. There is a \"Classified\" stamp and several coffee stains on it."
 	icon = 'icons/obj/scrolls.dmi'
 	icon_state = "blueprints"
-	fluffnotice = "Property of Nanotrasen. For heads of staff only. Store in high-secure storage."
+	fluffnotice = "Property of Symphionia. For heads of staff only. Store in high-secure storage."
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	var/list/image/showing = list()
 	var/client/viewing
@@ -210,7 +210,7 @@
 	desc = "A digital copy of the station blueprints stored in your memory."
 	icon = 'icons/obj/scrolls.dmi'
 	icon_state = "blueprints"
-	fluffnotice = "Intellectual Property of Nanotrasen. For use in engineering cyborgs only. Wipe from memory upon departure from the station."
+	fluffnotice = "Intellectual Property of Symphionia. For use in engineering cyborgs only. Wipe from memory upon departure from the station."
 
 /obj/item/areaeditor/blueprints/golem
 	name = "land claim"

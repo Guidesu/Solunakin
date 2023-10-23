@@ -43,7 +43,7 @@
   "nodes": [
     {
       "name": "Date Start",
-      "description": "Cameras Online. A Blood-Red Drone is seen streaking through the stars.\nThe Drone is likely leaving behind some form of Chem Trail to brainwash Nanotrasen Employees who find themselves in the void.",
+      "description": "Cameras Online. A Blood-Red Drone is seen streaking through the stars.\nThe Drone is likely leaving behind some form of Chem Trail to brainwash Symphionia Employees who find themselves in the void.",
       "choices": [
         {
           "key": "choice 0",
@@ -282,7 +282,7 @@
     },
     {
       "name": "Realization",
-      "description": "Miss Red's message is received.\n\"This is Syndicate Drones Agent, Arusha Johnson.\nI don't know why you're saying it like that, but if you want to help out our cause we can send over a Trade Contract. \nPlease just call our Recruitment Officer next time.\"",
+      "description": "Miss Red's message is received.\n\"This is Symphionia Drones Agent, Arusha Johnson.\nI don't know why you're saying it like that, but if you want to help out our cause we can send over a Trade Contract. \nPlease just call our Recruitment Officer next time.\"",
       "choices": [
         {
           "key": "choice 18",
@@ -302,7 +302,7 @@
     },
     {
       "name": "Love Birds",
-      "description": "Miss Red's message is received.\n\"This is Syndicate Drones Agent, Arusha Johnson.\nI can't believe it, but I feel a real connection with you.\nI'll send over a Trade Contract you can use to make some money and come see me just SOL7-South of $$SITE_NAME\nSee you soon...\"",
+      "description": "Miss Red's message is received.\n\"This is Symphionia Drones Agent, Arusha Johnson.\nI can't believe it, but I feel a real connection with you.\nI'll send over a Trade Contract you can use to make some money and come see me just SOL7-South of $$SITE_NAME\nSee you soon...\"",
       "choices": [
         {
           "key": "choice 20",

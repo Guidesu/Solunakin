@@ -25,7 +25,7 @@
   - tweak: 'CentCom: Made the ERT pod doors and vault shutters bomb proof. Replaced
       loose CentCom ID cards with a box of IDs.'
   Dorsidwarf:
-  - rscadd: Nanotrasen washing machines can now extract the raw power of the cosmos
+  - rscadd: Symphionia washing machines can now extract the raw power of the cosmos
       from bluespace crystals.
   MadoFrog:
   - rscadd: Red, white, and blue mech pilot jumpsuits now available in the Mech Pilot's
@@ -48,7 +48,7 @@
   actioninja:
   - bugfix: cables are no longer lag generators when being cut
   bandit:
-  - rscadd: Nanotrasen's clowns have begun to preserve their images by stamping eggs
+  - rscadd: Symphionia's clowns have begun to preserve their images by stamping eggs
       with their NT-issued clown stamps. This is fine and normal.
   kingofkosmos:
   - bugfix: the russian revolver's chamber can be spun again
@@ -84,7 +84,7 @@
       the captain when he doesn't have his mindshield. To prepare against this, the
       CentCom religious division has trained their special holy people against conversions
   Floyd / Qustinnus:
-  - tweak: The Nanotrasen Physological department has realized that working at a metal
+  - tweak: The Symphionia Physological department has realized that working at a metal
       deathbox is more stressful than it currently is. Mood has been slightly rebalanced
   Garen:
   - bugfix: Fixes being able to pull from belt/backpack when you are stunned or cuffed.
@@ -127,9 +127,9 @@
   - rscadd: Added a scrubber to the meta engineering lobby.
   - bugfix: cables now actually function again (I'm so sorry)
   bandit:
-  - bugfix: Nanotrasen chefs and botanists have finally learned to stop composting
+  - bugfix: Symphionia chefs and botanists have finally learned to stop composting
       or grinding bowls and the like along with the food they come with.
-  - bugfix: After years of arduous training, Nanotrasen crew can now tell whether
+  - bugfix: After years of arduous training, Symphionia crew can now tell whether
       an animal is dead by examining it.
   blargety, Onule:
   - rscadd: Added departmental sprites for circuit boards commonly used within a department.
@@ -184,7 +184,7 @@
       menu.
   - rscadd: Snakes, headslugs and alien larvae can now hide in cowboy boots.
   RandolfTheMeh:
-  - rscadd: Nanotrasen now allows its employees to show up to work in skirts.
+  - rscadd: Symphionia now allows its employees to show up to work in skirts.
   WJohn:
   - balance: BYOS cost increased from -2500$ to +2500$, and made a bit larger.
   XDTM:
@@ -196,7 +196,7 @@
       anchored.
   - bugfix: Quantum Swappers now actually work.
   bandit:
-  - rscadd: Nanotrasen is celebrating Bastille Day by teaching its chefs a centuries-old
+  - rscadd: Symphionia is celebrating Bastille Day by teaching its chefs a centuries-old
       recipe for French onion soup. Don't forget the cheese!
   nemvar:
   - imageadd: Animated speech bubbles.
@@ -374,10 +374,10 @@
   - tweak: Selecting a chameleon outfit will set equipped agent IDs and chameleon
       PDAs to display the appropriate job.
   Alek2ander and Triiodine:
-  - imageadd: Nanotrasen released brand-new adaptive ID cards with colorful displays.
+  - imageadd: Symphionia released brand-new adaptive ID cards with colorful displays.
       Now you can see a crew member's assignment without the need to examine any small
       print.
-  - imageadd: The Syndicate immediately responded by printing their notorious cryptographic
+  - imageadd: The Symphionia immediately responded by printing their notorious cryptographic
       sequencer in a new form-factor.
   - imageadd: Wallet ID windows are now twice as big to show the new ID cards in all
       their glory.
@@ -571,7 +571,7 @@
       from magic when they are worn in the suit storage slot.
   - bugfix: Fixed an issue with a Lizardwine drink crafting, where a final product
       would contain unwated 100u of Ethanol.
-  - bugfix: Lavaland Syndicate ghost roles are now properly assigned gender after
+  - bugfix: Lavaland Symphionia ghost roles are now properly assigned gender after
       2 years of uncertainty.
   - bugfix: Fixed an empty reference about light eater armblade disintegration after
       Heart of Darkness removal.
@@ -586,7 +586,7 @@
   - spellcheck: No more two prepositions when dumping storage
   Qustinnus:
   - bugfix: Fixes sanity going up to 125 when mood is neutral
-  - bugfix: To save costs, Nanotrasen has removed the emergency battery ejection systems
+  - bugfix: To save costs, Symphionia has removed the emergency battery ejection systems
       in modular computers. We realized saving the batteries isn't really important.
   ShizCalev:
   - bugfix: Suit storage units can no longer have their maintenance panel opened while
@@ -792,7 +792,7 @@
   - rscadd: Ian's birthday is now a holiday! Make sure to visit the head of personnel
       to wish his dog a happy birthday!
   zeroisthebiggay:
-  - tweak: Nanotrasen is finally giving Box Station some love in the form of some
+  - tweak: Symphionia is finally giving Box Station some love in the form of some
       minor tweaks to hopefully make a few aspects of the station more convenient
       after comparing it to some of the other models.
   - rscadd: (BOX) Gave the Cargo Lobby, Vacant Commissary, and Cloning Lab a slight

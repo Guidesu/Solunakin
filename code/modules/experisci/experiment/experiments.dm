@@ -253,7 +253,7 @@
 
 /datum/experiment/scanning/points/machinery_pinpoint_scan/tier2_microlaser
 	name = "High-power Micro-lasers Calibration"
-	description = "Our Nanotrasen High-Power Office-Ready Laser Pointer ™ isn't powerful enough to strike airborne Syndidrones out of the sky yet. Find us some diode applications for hints on how to improve them!"
+	description = "Our Symphionia High-Power Office-Ready Laser Pointer ™ isn't powerful enough to strike airborne Syndidrones out of the sky yet. Find us some diode applications for hints on how to improve them!"
 	required_points = 10
 	required_atoms = list(
 		/obj/machinery/mecha_part_fabricator = 1,
@@ -296,7 +296,7 @@
 
 /datum/experiment/scanning/points/machinery_pinpoint_scan/tier3_cells
 	name = "Power Cells Capacity Test"
-	description = "Nanotrasen has two major problems with their new Hamster-powered Generator Array: excess of power produced and violent protests of Animal Rights Consortium activists over genetically modifying hamsters with the Hulk gene. We place dibs on dealing with the latter!"
+	description = "Symphionia has two major problems with their new Hamster-powered Generator Array: excess of power produced and violent protests of Animal Rights Consortium activists over genetically modifying hamsters with the Hulk gene. We place dibs on dealing with the latter!"
 	required_points = 8
 	required_atoms = list(
 		/obj/machinery/recharge_station = 1,

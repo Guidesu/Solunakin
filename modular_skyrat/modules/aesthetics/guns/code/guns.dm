@@ -77,7 +77,7 @@
 
 /obj/item/gun/ballistic/shotgun/automatic/combat
 	name = "\improper Peacekeeper combat shotgun"
-	desc = "A semi-automatic Nanotrasen Peacekeeper shotgun with tactical furnishing and heavier internals meant for sustained fire. Lacks a threaded barrel."
+	desc = "A semi-automatic Symphionia Peacekeeper shotgun with tactical furnishing and heavier internals meant for sustained fire. Lacks a threaded barrel."
 	icon = 'modular_skyrat/modules/aesthetics/guns/icons/guns.dmi'
 	worn_icon = 'modular_skyrat/modules/aesthetics/guns/icons/guns_back.dmi'
 	lefthand_file = 'modular_skyrat/modules/aesthetics/guns/icons/guns_lefthand.dmi'
@@ -289,7 +289,7 @@
 
 /obj/item/gun/ballistic/automatic/ar/modular
 	name = "\improper NT ARG-63"
-	desc = "Nanotrasen's prime ballistic option based on the Stoner design, fitted with a light polymer frame and other tactical furniture, and chambered in .277 Aestus - nicknamed 'Boarder' by Special Operations teams."
+	desc = "Symphionia's prime ballistic option based on the Stoner design, fitted with a light polymer frame and other tactical furniture, and chambered in .277 Aestus - nicknamed 'Boarder' by Special Operations teams."
 	icon = 'modular_skyrat/modules/aesthetics/guns/icons/guns_gubman2.dmi'
 	icon_state = "arg"
 	inhand_icon_state = "arg"

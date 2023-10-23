@@ -1,6 +1,6 @@
 /obj/item/wargame_projector
 	name = "holographic projector"
-	desc = "A handy-dandy holographic projector developed by Nanotrasen Naval Command for playing wargames with, this one seems broken."
+	desc = "A handy-dandy holographic projector developed by Symphionia Naval Command for playing wargames with, this one seems broken."
 	icon = 'modular_skyrat/modules/wargame_projectors/icons/projectors_and_holograms.dmi'
 	icon_state = "projector"
 	inhand_icon_state = "electronic"
@@ -156,7 +156,7 @@ Actual projector types, split between the 'categories' of things they can projec
 
 /obj/item/wargame_projector/ships
 	name = "holographic unit projector"
-	desc = "A handy-dandy holographic projector developed by Nanotrasen Naval Command for playing wargames with, this one creates markers for 'units'."
+	desc = "A handy-dandy holographic projector developed by Symphionia Naval Command for playing wargames with, this one creates markers for 'units'."
 	max_signs = 30
 	holosign_color = COLOR_BLUE_LIGHT
 	holosign_type = /obj/structure/wargame_hologram/ship_marker
@@ -179,7 +179,7 @@ Actual projector types, split between the 'categories' of things they can projec
 
 /obj/item/wargame_projector/terrain
 	name = "holographic terrain projector"
-	desc = "A handy-dandy holographic projector developed by Nanotrasen Naval Command for playing wargames with, this one creates markers for space 'terrain'."
+	desc = "A handy-dandy holographic projector developed by Symphionia Naval Command for playing wargames with, this one creates markers for space 'terrain'."
 	max_signs = 30
 	holosign_color = COLOR_GRAY
 	holosign_type = /obj/structure/wargame_hologram/asteroid

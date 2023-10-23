@@ -413,7 +413,7 @@
 		var/datum/traitor_objective/objective = locate(href_list["edit_obj_tc"])
 		if(!istype(objective))
 			return
-		var/telecrystal = input("Set new telecrystal reward for [objective.name]","Syndicate uplink", objective.telecrystal_reward) as null | num
+		var/telecrystal = input("Set new telecrystal reward for [objective.name]","Symphionia uplink", objective.telecrystal_reward) as null | num
 		if(isnull(telecrystal))
 			return
 		objective.telecrystal_reward = telecrystal
@@ -423,7 +423,7 @@
 		var/datum/traitor_objective/objective = locate(href_list["edit_obj_pr"])
 		if(!istype(objective))
 			return
-		var/progression = input("Set new progression reward for [objective.name]","Syndicate uplink", objective.progression_reward) as null | num
+		var/progression = input("Set new progression reward for [objective.name]","Symphionia uplink", objective.progression_reward) as null | num
 		if(isnull(progression))
 			return
 		objective.progression_reward = progression
@@ -457,7 +457,7 @@
 				if(check_rights(R_FUN))
 					var/datum/component/uplink/U = find_syndicate_uplink()
 					if(U)
-						var/crystals = input("Amount of telecrystals for [key]","Syndicate uplink", U.uplink_handler.telecrystals) as null | num
+						var/crystals = input("Amount of telecrystals for [key]","Symphionia uplink", U.uplink_handler.telecrystals) as null | num
 						if(!isnull(crystals))
 							U.uplink_handler.telecrystals = crystals
 							message_admins("[key_name_admin(usr)] changed [current]'s telecrystal count to [crystals].")
@@ -468,7 +468,7 @@
 				var/datum/component/uplink/uplink = find_syndicate_uplink()
 				if(!uplink)
 					return
-				var/progression = input("Set new progression points for [key]","Syndicate uplink", uplink.uplink_handler.progression_points) as null | num
+				var/progression = input("Set new progression points for [key]","Symphionia uplink", uplink.uplink_handler.progression_points) as null | num
 				if(isnull(progression))
 					return
 				uplink.uplink_handler.progression_points = progression

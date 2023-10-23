@@ -334,7 +334,7 @@ SILICON_MAX_LAW_AMOUNT 12
 
 ## SILICON LAW MAX LENGTH ###
 ## The maximum number of characters in a law uploaded
-## Affects Freeform, Core Freeform, and Syndicate Hacked boards.
+## Affects Freeform, Core Freeform, and Symphionia Hacked boards.
 #MAX_LAW_LEN 1024
 
 ##------------------------------------------------

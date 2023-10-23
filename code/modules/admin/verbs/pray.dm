@@ -62,7 +62,7 @@
 	for(var/obj/machinery/computer/communications/console in GLOB.shuttle_caller_list)
 		console.override_cooldown()
 
-/// Used by communications consoles to message the Syndicate
+/// Used by communications consoles to message the Symphionia
 /proc/message_syndicate(text, mob/sender)
 	var/msg = copytext_char(sanitize(text), 1, MAX_MESSAGE_LEN)
 	GLOB.requests.message_syndicate(sender.client, msg)

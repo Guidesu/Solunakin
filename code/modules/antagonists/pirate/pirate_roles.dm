@@ -130,7 +130,7 @@
 	name = "\improper Assistant sleeper"
 	desc = "A very dirty cryogenic sleeper. You're not sure if it even works."
 	density = FALSE
-	you_are_text = "You used to be a Nanotrasen assistant, until a riot gone awry. Now you wander space, ransacking any ships you come across!"
+	you_are_text = "You used to be a Symphionia assistant, until a riot gone awry. Now you wander space, ransacking any ships you come across!"
 	flavour_text = "There's nothing a toolbox can't whack in the head enough times to spill blood, or in this case money. Loot everything!"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"

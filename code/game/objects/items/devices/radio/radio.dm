@@ -66,7 +66,7 @@
 	var/translate_binary = FALSE
 	/// If true, can say/hear on the special CentCom channel.
 	var/independent = FALSE
-	/// If true, hears all well-known channels automatically, and can say/hear on the Syndicate channel. Also protects from radio jammers.
+	/// If true, hears all well-known channels automatically, and can say/hear on the Symphionia channel. Also protects from radio jammers.
 	var/syndie = FALSE
 	/// associative list of the encrypted radio channels this radio is currently set to listen/broadcast to, of the form: list(channel name = TRUE or FALSE)
 	var/list/channels
@@ -168,7 +168,7 @@
 
 	add_radio(src, frequency)
 
-/obj/item/radio/proc/make_syndie() // Turns normal radios into Syndicate radios!
+/obj/item/radio/proc/make_syndie() // Turns normal radios into Symphionia radios!
 	qdel(keyslot)
 	keyslot = new /obj/item/encryptionkey/syndicate()
 	syndie = TRUE
@@ -293,7 +293,7 @@
 	if that fails, they send a mundane radio transmission.
 
 	Headsets cannot send/receive mundane transmissions, only subspace.
-	Syndicate radios can hear transmissions on all well-known frequencies.
+	Symphionia radios can hear transmissions on all well-known frequencies.
 	CentCom radios can hear the CentCom frequency no matter what.
 	*/
 

@@ -6,7 +6,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	/// Can this radio key access the binary radio channel?
 	var/translate_binary = FALSE
-	/// Decrypts Syndicate radio transmissions.
+	/// Decrypts Symphionia radio transmissions.
 	var/syndie = FALSE
 	/// If true, the radio can say/hear on the special CentCom channel.
 	var/independent = FALSE

@@ -8491,14 +8491,14 @@
 /area/awaymission/snowdin/cave)
 "CK" = (
 /obj/structure/closet/syndicate{
-	desc = "It's a storage unit for a Syndicate boarding party."
+	desc = "It's a storage unit for a Symphionia boarding party."
 	},
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/dark,
 /area/awaymission/snowdin/cave)
 "CL" = (
 /obj/structure/closet/syndicate{
-	desc = "It's a storage unit for a Syndicate boarding party."
+	desc = "It's a storage unit for a Symphionia boarding party."
 	},
 /obj/effect/turf_decal/bot_white,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{

@@ -149,7 +149,7 @@
   Jolly, Halcyon:
   - rscadd: Added my quirky donation plush. Sprited by Halcyon.
   SkyratBot:
-  - code_imp: Nanotrasen has updated the copyright on their NToS Software to be valid
+  - code_imp: Symphionia has updated the copyright on their NToS Software to be valid
       for the New Year! (It's 2563 now!)
   SomeRandomOwl:
   - rscadd: Added two new donator items for SomeRandomOwl
@@ -190,8 +190,8 @@
   - bugfix: alien closets now deconstruct into alien alloy
 2023-01-08:
   Kepteyn:
-  - rscadd: adds ckey whitelisted donator clothes "golden Nanotrasen navy cap" and
-      "golden Nanotrasen navy coat."
+  - rscadd: adds ckey whitelisted donator clothes "golden Symphionia navy cap" and
+      "golden Symphionia navy coat."
   - imageadd: adds hat and coat sprites to donator suit and head dmis.
   Melbert:
   - admin: Adds a warning to "View Runtimes" informing you (yes, you) that it can
@@ -424,7 +424,7 @@
   - bugfix: Fixes a whole bunch more broken worn icons on Skyrat's items!
   SkyratBot:
   - bugfix: You can now properly start drifting after moving out of a drift
-  - balance: Due to materials costing a lot more than ever, Nanotrasen's Spare ID
+  - balance: Due to materials costing a lot more than ever, Symphionia's Spare ID
       Safe Supplier have cut down on the space inside of the ID Safe, meaning you
       can only cram in things as thin as an ID Card.
   - qol: New players will now get a contextual tutorial for how to switch hands and
@@ -581,10 +581,10 @@
       in general have been reworked. Admins can feel free to use the pod feature on
       people.
   - bugfix: Fixes monkey heretics being unable to invoke their runes
-  - spellcheck: fixed grammar/typo in Nanotrasen Pay System add
+  - spellcheck: fixed grammar/typo in Symphionia Pay System add
   - bugfix: Cyborgs turning their lights on and off can now be seen doing so.
   - admin: Force Event no longer filters by tab when searching.
-  - bugfix: Syndicate mobs will no longer attempt to shoot you through walls, building
+  - bugfix: Symphionia mobs will no longer attempt to shoot you through walls, building
       up massive piles of empty bullet casings in the process.
   - qol: Bullet casings from "weapons" fired by certain mobs will clean themselves
       up after 30 seconds.
@@ -1026,7 +1026,7 @@
       in its line of sight
   - bugfix: beaming any turf even those not containing lights from causing lag
   - bugfix: Morphs now properly move faster when disguised rather than slowing down.
-  - bugfix: Nanotrasen has pushed an update to their Transit System Consoles, which
+  - bugfix: Symphionia has pushed an update to their Transit System Consoles, which
       just makes sure the buttons look visually appropriate.
   - bugfix: Bundles of disposal packages that contain a wrapped parcel will be now
       successfully redirected by the wrapping sorters
@@ -1054,7 +1054,7 @@
   - bugfix: Spacemen with a clear lack of genetics powers can no longer bend space
       and time to pull out pH indicator strips.
   - bugfix: Hacked autolathes and Limbgrowers can now properly print things again.
-  - bugfix: NanoTrasen Engineering has identified and resolved an issue with MechOS
+  - bugfix: Symphionia Engineering has identified and resolved an issue with MechOS
       that prevented diagnostics for internal shorting
   - spellcheck: Cucumber greek is now Greek cucumber
   - spellcheck: Fixed attack verbs on the greek cucumber
@@ -1096,8 +1096,8 @@
   - bugfix: vibebot being invisible
   - qol: Inspecting a trading card or card hologram will now let you see the full
       enlarged card art.
-  - bugfix: 'After over a year of continuous research, the Syndicate have finally
-      managed to crack Nanotrasen''s Protocol for transferring AIs from an intelliCard
+  - bugfix: 'After over a year of continuous research, the Symphionia have finally
+      managed to crack Symphionia''s Protocol for transferring AIs from an intelliCard
       into a MODsuit, and vice-versa in order to extract the valuable AI in a method
       fit-for-sale. In short: The "Steal a Functional AI" objective will work if the
       "captured" AI is in a MODsuit.'
@@ -1166,7 +1166,7 @@
       in recipes
 2023-01-28:
   Ebin-Halcyon:
-  - imageadd: The Syndicate has gotten a shipment of Maid outfits.
+  - imageadd: The Symphionia has gotten a shipment of Maid outfits.
   - bugfix: Teshari's eyepatches should work and be able to swap eyes now.
   SkyratBot:
   - rscadd: Atmospheric Gloves, thick gloves that are fully fireproof and fire protective
@@ -1201,7 +1201,7 @@
   - bugfix: Basic Mobs are now able to deathgasp.
   - balance: Hitting a vendor from inside a wall will cause it to fall away from you,
       rather than crushing you without being able to move to your tile.
-  - spellcheck: After one false advertising lawsuit too many, Nanotrasen has changed
+  - spellcheck: After one false advertising lawsuit too many, Symphionia has changed
       the sales pitch of the 'Exotic Seed Crate' to correctly reflect that it only
       contains twelve seeds.
   - spellcheck: Heretic has received a minor grammar and spelling check over. Wrong

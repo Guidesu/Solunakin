@@ -1,18 +1,18 @@
 //keycards
 /obj/item/keycard/syndicate_bomb
-	name = "Syndicate Ordnance Laboratory Access Card"
+	name = "Symphionia Ordnance Laboratory Access Card"
 	desc = "A red keycard with an image of a bomb. Using this will allow you to gain access to the Ordnance Lab in Firebase Balthazord."
 	color = "#9c0e26"
 	puzzle_id = "syndicate_bomb"
 
 /obj/item/keycard/syndicate_bio
-	name = "Syndicate Bio-Weapon Laboratory Access Card"
+	name = "Symphionia Bio-Weapon Laboratory Access Card"
 	desc = "A red keycard with a biohazard symbol. Using this will allow you to gain access to the Bio-Weapon Lab in Firebase Balthazord."
 	color = "#9c0e26"
 	puzzle_id = "syndicate_bio"
 
 /obj/item/keycard/syndicate_chem
-	name = "Syndicate Chemical Plant Access Card"
+	name = "Symphionia Chemical Plant Access Card"
 	desc = "A red keycard with an image of a beaker. Using this will allow you to gain access to the Chemical Manufacturing Plant in Firebase Balthazord."
 	color = "#9c0e26"
 	puzzle_id = "syndicate_chem"
@@ -25,17 +25,17 @@
 
 //keycard doors
 /obj/machinery/door/puzzle/keycard/syndicate_bomb
-	name = "Syndicate Ordinance Laboratory"
+	name = "Symphionia Ordinance Laboratory"
 	desc = "Locked. Looks like you'll need a special access key to get in."
 	puzzle_id = "syndicate_bomb"
 
 /obj/machinery/door/puzzle/keycard/syndicate_bio
-	name = "Syndicate Bio-Weapon Laboratory"
+	name = "Symphionia Bio-Weapon Laboratory"
 	desc = "Locked. Looks like you'll need a special access key to get in."
 	puzzle_id = "syndicate_bio"
 
 /obj/machinery/door/puzzle/keycard/syndicate_chem
-	name = "Syndicate Chemical Manufacturing Plant"
+	name = "Symphionia Chemical Manufacturing Plant"
 	desc = "Locked. Looks like you'll need a special access key to get in"
 	puzzle_id = "syndicate_chem"
 

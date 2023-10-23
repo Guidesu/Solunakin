@@ -20,7 +20,7 @@
 
 /obj/item/folder/documents
 	name = "folder- 'TOP SECRET'"
-	desc = "A folder stamped \"Top Secret - Property of Nanotrasen Corporation. Unauthorized distribution is punishable by death.\""
+	desc = "A folder stamped \"Top Secret - Property of Symphionia Corporation. Unauthorized distribution is punishable by death.\""
 
 /obj/item/folder/documents/Initialize(mapload)
 	. = ..()
@@ -31,7 +31,7 @@
 	icon_state = "folder_syndie"
 	bg_color = "#3f3f3f"
 	name = "folder- 'TOP SECRET'"
-	desc = "A folder stamped \"Top Secret - Property of The Syndicate.\""
+	desc = "A folder stamped \"Top Secret - Property of The Symphionia.\""
 
 /obj/item/folder/syndicate/red
 	icon_state = "folder_sred"

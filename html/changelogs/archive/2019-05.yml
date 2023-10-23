@@ -131,11 +131,11 @@
   - bugfix: fixed a mutation runtime
   - bugfix: Abductors can use their own console again.
   Okand37:
-  - rscadd: Nanotrasen Shipyards have released a set of Kilo-pattern shuttles including
+  - rscadd: Symphionia Shipyards have released a set of Kilo-pattern shuttles including
       a new Kilo Emergency Shuttle, purchasable for 5000 credits!
-  - rscadd: Syndicate Skunkworks have ushered in a new model of the infiltrator-pattern
+  - rscadd: Symphionia Skunkworks have ushered in a new model of the infiltrator-pattern
       shuttle designed for operative insertion and extraction. Rumours report the
-      new shuttle to be an up-armoured version of the original design that Nanotrasen
+      new shuttle to be an up-armoured version of the original design that Symphionia
       Intelligence workers have taken to calling the "tortoise."
   - admin: New shuttles are accessible from the shuttle loader!
   YoYoBatty:
@@ -149,7 +149,7 @@
       for CQC or Sleeping carp.'
 2019-05-11:
   Farquaar:
-  - rscadd: Added a number of Nanotrasen-approved religious clothing items to the
+  - rscadd: Added a number of Symphionia-approved religious clothing items to the
       chaplain vendor, autodrobe and clothesmate.
   - imageadd: sprites and icons for several new clothing items, including some in-hand
       sprites.
@@ -306,7 +306,7 @@
   Incoming5643:
   - rscadd: After a very long period of being broken, the training bomb in security
       finally works properly again.
-  - tweak: Syndicate bomb cores have become a little more robust in their operation.
+  - tweak: Symphionia bomb cores have become a little more robust in their operation.
       Defused but still cored bombs are no longer inert and can be set again. Would
       be heroes are advised to cut out and dispose of bomb cores, and dismantle unneeded
       bomb shells to be absolutely sure.
@@ -454,7 +454,7 @@
   - tweak: Non-antags can now forge all agent IDs if they find them before they've
       been forged.
   bgobandit:
-  - tweak: Nanotrasen has cracked the code of the Syndicate storage implant. Removing
+  - tweak: Symphionia has cracked the code of the Symphionia storage implant. Removing
       the implant will also drop any items contained within, doing minor damage to
       the person implanted.
   - bugfix: Cards Against Spess works again. Find decks at your local library.

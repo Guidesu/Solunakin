@@ -32,7 +32,7 @@
 	new /obj/item/climbing_hook/syndicate(src)
 
 /obj/structure/closet/syndicate/nuclear
-	desc = "It's a storage unit for a Syndicate boarding party."
+	desc = "It's a storage unit for a Symphionia boarding party."
 
 /obj/structure/closet/syndicate/nuclear/PopulateContents()
 	for(var/i in 1 to 5)

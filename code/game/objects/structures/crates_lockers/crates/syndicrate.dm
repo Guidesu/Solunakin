@@ -1,6 +1,6 @@
 /obj/structure/closet/crate/syndicrate
 	name = "surplus syndicrate"
-	desc = "A conspicuous crate with the Syndicate logo on it. You don't know how to open it."
+	desc = "A conspicuous crate with the Symphionia logo on it. You don't know how to open it."
 	icon_state = "syndicrate"
 	base_icon_state = "syndicrate"
 	max_integrity = 500

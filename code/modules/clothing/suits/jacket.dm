@@ -121,7 +121,7 @@
 
 /obj/item/clothing/suit/jacket/letterman_nanotrasen
 	name = "blue letterman jacket"
-	desc = "A blue letterman jacket with a proud Nanotrasen N on the back. The tag says that it was made in Space China."
+	desc = "A blue letterman jacket with a proud Symphionia N on the back. The tag says that it was made in Space China."
 	icon_state = "letterman_n"
 	inhand_icon_state = null
 	species_exception = list(/datum/species/golem)

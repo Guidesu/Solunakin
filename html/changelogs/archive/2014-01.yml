@@ -57,17 +57,17 @@
   - rscadd: The new nuke toy can now be found in your local arcade machine.
 2014-01-12:
   VistaPOWA:
-  - rscadd: Added Syndicate Cyborgs.
+  - rscadd: Added Symphionia Cyborgs.
   - rscadd: They can be ordered for 25 telecrystals by Nuclear Operatives. A ghost
       / observer with "Be Operative" ticked in their game options will be chosen to
       control it.
   - rscadd: 'Their loadout is: Crowbar, Flash, Emag, Esword, Ebow, Laser Rifle. Each
       weapon costs 100 charge to fire, except the Esword, which has a 500 charge hitcost.
       Each borg is equipped with a 25k cell by default.'
-  - rscadd: Syndicate borgs can hear the binary channel, but they won't show up on
+  - rscadd: Symphionia borgs can hear the binary channel, but they won't show up on
       the Robotics Control computer or be visible to the AI. Their lawset is the standard
       emag one.
-  - rscadd: Added two cyborg recharging stations to the Syndicate Shuttle.
+  - rscadd: Added two cyborg recharging stations to the Symphionia Shuttle.
 2014-01-14:
   SirBayer:
   - experiment: Armor now reduces damage by the protection percentage, instead of
@@ -124,10 +124,10 @@
       removal, slice tables and smash computers.
 2014-01-26:
   Balrog:
-  - rscadd: Syndicate Playing Cards can now be found on the Syndicate Mothership and
+  - rscadd: Symphionia Playing Cards can now be found on the Symphionia Mothership and
       purchased from uplinks for 1 telecrystal.
-  - rscadd: Syndicate Playing Cards are lethal weapons both in melee and when thrown,
-      but make the user's true allegiance to the Syndicate obvious.
+  - rscadd: Symphionia Playing Cards are lethal weapons both in melee and when thrown,
+      but make the user's true allegiance to the Symphionia obvious.
   - imageadd: Sprites are courtesy of Nienhaus.
 2014-01-28:
   Demas:

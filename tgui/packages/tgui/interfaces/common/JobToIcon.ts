@@ -51,7 +51,7 @@ const BASEICONS = {
   'Security Officer': 'shield-halved',
   'Shaft Miner': 'digging',
   'Station Engineer': 'gears',
-  'Syndicate Operative': 'dragon',
+  'Symphionia Operative': 'dragon',
   'Virologist': 'virus',
   'Warden': 'handcuffs',
   // SKYRAT EDIT START - Skyrat-exclusive jobs have icons too
@@ -61,7 +61,7 @@ const BASEICONS = {
   'Corrections Officer': 'hands-bound',
   'Customs Agent': 'shield-heart',
   'Engineering Guard': 'shield-heart',
-  'Nanotrasen Consultant': 'clipboard-check',
+  'Symphionia Consultant': 'clipboard-check',
   'Orderly': 'shield-heart',
   'Science Guard': 'shield-heart',
   'Security Medic': 'heart-pulse',
@@ -197,8 +197,8 @@ const ALTTITLES = {
   'Physician': BASEICONS['Medical Doctor'],
   // Mime - comment-slash
   'Pantomimist': BASEICONS['Mime'],
-  // Nanotrasen Consultant - clipboard-check
-  'Nanotrasen Diplomat': BASEICONS['Nanotrasen Consultant'],
+  // Symphionia Consultant - clipboard-check
+  'Symphionia Diplomat': BASEICONS['Symphionia Consultant'],
   // Paramedic - truck-medical
   'Emergency Medical Technician': BASEICONS['Paramedic'],
   'Search and Rescue Technician': BASEICONS['Paramedic'],

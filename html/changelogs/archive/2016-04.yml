@@ -108,7 +108,7 @@
   - bugfix: Centcom is happy to report that our single sided windows and our windoors
       should once again create an airtight seal.
   bgobandit:
-  - rscadd: Honk! Nanotrasen's clowning and development department has invented the
+  - rscadd: Honk! Symphionia's clowning and development department has invented the
       clown megaphone, standard in all clowning loadouts! Honk honk!
 2016-04-07:
   Kor:
@@ -122,7 +122,7 @@
   - rscadd: Survival pods now contain a stationary GPS computer.
   - rscadd: You can now toggle your GPS off with alt+click.
   bgobandit:
-  - rscadd: Due to budget cuts, Nanotrasen is no longer utilizing copy-protected paper
+  - rscadd: Due to budget cuts, Symphionia is no longer utilizing copy-protected paper
       for its classified documents. Fortunately, our world-class security team has
       always prevented any thefts or photocopies from being made!
   - rscadd: Secret documents can be photocopied. If you have an objective to steal
@@ -163,7 +163,7 @@
   - tweak: Fixed an issue with a door on the Golem Ship
   - rscadd: The unfathomable entity Carp'sie has blessed vir followers with mysterious
       carp guardians.
-  - rscadd: Nanotrasen Cyborgs are now able to empty ore boxes without human assistance
+  - rscadd: Symphionia Cyborgs are now able to empty ore boxes without human assistance
   - rscadd: Ore boxes are now craftable with 4 planks of wood
   - tweak: Ore boxes now drop their contents when destroyed, or dismantled with a
       crowbar
@@ -305,7 +305,7 @@
   kevinz000:
   - rscadd: 'Admin Detection Multitool: A multitool that shows when administrators
       are watching you! Now you can grief in safety!'
-  - tweak: Syndicate R&D scientists have significantly increased the range of their
+  - tweak: Symphionia R&D scientists have significantly increased the range of their
       "AI detection multitools", making them turn yellow when an AI's tracking is
       near, but not on you just yet!
 2016-04-21:
@@ -385,7 +385,7 @@
   - tweak: Blobbernauts now cost 40 resources to produce, from 30.
   - rscdel: Factories supporting blobbernauts do not spawn spores.
   Lati:
-  - tweak: Syndicate bomb can be only delayed once by pulsing the delay wire. Time
+  - tweak: Symphionia bomb can be only delayed once by pulsing the delay wire. Time
       gained from this is changed from 10 seconds to 30 seconds.
   TechnoAlchemisto:
   - tweak: Goliath plates can now be stacked.
@@ -442,13 +442,13 @@
   - rscadd: The warden's locker now contains krav maga gloves.
   TechnoAlchemisto:
   - rscadd: You can now craft skull helmets from bones.
-  - rscadd: Syndicate bombs are now harder to detect
+  - rscadd: Symphionia bombs are now harder to detect
 2016-04-29:
   Bawhoppen:
   - rscadd: Several lesser-used uplink's TC cost have been rebalanced.
   - tweak: Steckhin down from 9TC to 7TC.
   - tweak: Tactical medkit down from 9TC to 4TC.
-  - tweak: Syndicate magboots from 3TC to 2TC.
+  - tweak: Symphionia magboots from 3TC to 2TC.
   - tweak: Powersinks down from 10TC to 6TC.
   - tweak: Stealth rad-laser down from 5TC to 3TC.
   - tweak: Bundles have been updated accordingly.
@@ -513,8 +513,8 @@
   - rscadd: PACMAN Generator Crate added for 2500
   - rscadd: Defibrillator Crate added for 2500
   - rscadd: Added more helmets to the Laser Tag Crate.
-  - rscadd: Nanotrasen Customs report that some wide band suppliers have been providing
-      "alternative" firing pins. Nanotrasen reminds all crewmembers that contraband
+  - rscadd: Symphionia Customs report that some wide band suppliers have been providing
+      "alternative" firing pins. Symphionia reminds all crewmembers that contraband
       is contraband.
   - rscadd: Contraband crates now appear visually similar to legitimate crates.
   - bugfix: The cargo shuttle's normal transit time has been restored.
@@ -540,5 +540,5 @@
   - rscadd: Adds a basic paper plane to the game. Fold paper with alt-clicking.
   - rscadd: Paper planes are now fully compatible with every stamps on station.
   bgobandit:
-  - rscadd: 'Nanotrasen has released Cards Against Spess! Visit your local library
+  - rscadd: 'Symphionia has released Cards Against Spess! Visit your local library
       for a copy. Warning: may cause breakage of the fourth wall.'

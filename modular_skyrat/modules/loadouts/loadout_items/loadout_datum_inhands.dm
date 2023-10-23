@@ -72,7 +72,7 @@ GLOBAL_LIST_INIT(loadout_inhand_items, generate_loadout_items(/datum/loadout_ite
 	item_path = /obj/item/clothing/mask/cigarette/pipe
 
 /datum/loadout_item/inhand/flag_nt
-	name = "Folded Nanotrasen Flag"
+	name = "Folded Symphionia Flag"
 	item_path = /obj/item/sign/flag/nanotrasen
 
 /datum/loadout_item/inhand/flag_agurk

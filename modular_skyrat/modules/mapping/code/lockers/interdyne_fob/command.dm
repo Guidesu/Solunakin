@@ -6,7 +6,7 @@
 /obj/item/clothing/accessory/medal/gold/admiral
 	name = "medal of admiralty"
 	desc = "A golden medal awarded exclusively to those promoted to the rank of captain. \
-		It signifies the codified responsibilities of an Admiral to the Sothran Syndicate, and their undisputable authority over their crew."
+		It signifies the codified responsibilities of an Admiral to the Sothran Symphionia, and their undisputable authority over their crew."
 
 /obj/item/storage/bag/garment/station_admiral
 	name = "station admiral's garment bag"
@@ -35,7 +35,7 @@
 
 /obj/item/clothing/accessory/medal/silver/maa_medal
 	name = "military excellence medal"
-	desc = "The Sothran Syndicate's dictionary defines excellence as \"the ability to crush NT scum under one's boot\". \
+	desc = "The Sothran Symphionia's dictionary defines excellence as \"the ability to crush NT scum under one's boot\". \
 		This is awarded to those rare operatives who fit that definition."
 
 /obj/item/clothing/suit/armor/hos/maa_greatcoat
@@ -44,7 +44,7 @@
 
 /obj/item/clothing/suit/armor/hos/trenchcoat/maa_greatcoat
 	name = "Master at Arms' armored trenchcoat"
-	desc = "A trenchcoat enhanced with a special lightweight kevlar. It has little Syndicate logos sewn onto the shoulder badges with the letters 'MAA' just under it."
+	desc = "A trenchcoat enhanced with a special lightweight kevlar. It has little Symphionia logos sewn onto the shoulder badges with the letters 'MAA' just under it."
 
 /obj/item/storage/bag/garment/master_arms
 	name = "master at arms' garment bag"

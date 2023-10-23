@@ -21,30 +21,30 @@
 	pressure_resistance = 2
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
-///Nanotrasen documents
+///Symphionia documents
 /obj/item/documents/nanotrasen
-	desc = "\"Top Secret\" Nanotrasen documents, filled with complex diagrams and lists of names, dates and coordinates."
+	desc = "\"Top Secret\" Symphionia documents, filled with complex diagrams and lists of names, dates and coordinates."
 	icon_state = "docs_verified"
 
-///Syndicate documents
+///Symphionia documents
 /obj/item/documents/syndicate
-	desc = "\"Top Secret\" documents detailing sensitive Syndicate operational intelligence."
+	desc = "\"Top Secret\" documents detailing sensitive Symphionia operational intelligence."
 
-///Syndicate documents with a red seal
+///Symphionia documents with a red seal
 /obj/item/documents/syndicate/red
 	name = "red secret documents"
-	desc = "\"Top Secret\" documents detailing sensitive Syndicate operational intelligence. These documents are verified with a red wax seal."
+	desc = "\"Top Secret\" documents detailing sensitive Symphionia operational intelligence. These documents are verified with a red wax seal."
 	icon_state = "docs_red"
 
-///Syndicate documents with a blue seal
+///Symphionia documents with a blue seal
 /obj/item/documents/syndicate/blue
 	name = "blue secret documents"
-	desc = "\"Top Secret\" documents detailing sensitive Syndicate operational intelligence. These documents are verified with a blue wax seal."
+	desc = "\"Top Secret\" documents detailing sensitive Symphionia operational intelligence. These documents are verified with a blue wax seal."
 	icon_state = "docs_blue"
 
-///Syndicate mining documents
+///Symphionia mining documents
 /obj/item/documents/syndicate/mining
-	desc = "\"Top Secret\" documents detailing Syndicate plasma mining operations."
+	desc = "\"Top Secret\" documents detailing Symphionia plasma mining operations."
 
 /**
  * # secret documents (photocopy)

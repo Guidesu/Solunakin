@@ -5,7 +5,7 @@ SUBSYSTEM_DEF(lorecaster)
 	var/list/stories
 
 /datum/controller/subsystem/lorecaster/Initialize()
-	GLOB.news_network.create_feed_channel("Nanotrasen News Network", "NNN", "Get the latest stories from the frontier, here! For the not-quite-latest stories, download the \"News Archive\" app to any NTOS-based device today!", locked = TRUE, hardset_channel = 1001)
+	GLOB.news_network.create_feed_channel("Symphionia News Network", "NNN", "Get the latest stories from the frontier, here! For the not-quite-latest stories, download the \"News Archive\" app to any NTOS-based device today!", locked = TRUE, hardset_channel = 1001)
 	var/config_delay = CONFIG_GET(number/lorecaster_delay)
 	if(config_delay)
 		wait = config_delay
@@ -23,5 +23,5 @@ SUBSYSTEM_DEF(lorecaster)
 	var/text = stories[picked_story]["text"]
 	var/title = stories[picked_story]["title"]
 	text += "\n\nOriginally published on: [stories[picked_story]["month"]]/[stories[picked_story]["day"]]/[stories[picked_story]["year"]]"
-	GLOB.news_network.submit_article(text || "Someone forgot to fill out the article!", title || "Nanotrasen News Broadcast", "Nanotrasen News Network", null)
+	GLOB.news_network.submit_article(text || "Someone forgot to fill out the article!", title || "Symphionia News Broadcast", "Symphionia News Network", null)
 	stories -= picked_story

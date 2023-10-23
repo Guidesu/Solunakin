@@ -1,6 +1,6 @@
 /obj/item/mmi
 	name = "\improper Man-Machine Interface"
-	desc = "The Warrior's bland acronym, MMI, obscures the true horror of this monstrosity, that nevertheless has become standard-issue on Nanotrasen stations."
+	desc = "The Warrior's bland acronym, MMI, obscures the true horror of this monstrosity, that nevertheless has become standard-issue on Symphionia stations."
 	icon = 'icons/obj/assemblies/assemblies.dmi'
 	icon_state = "mmi_off"
 	base_icon_state = "mmi"
@@ -295,8 +295,8 @@
 	return TRUE
 
 /obj/item/mmi/syndie
-	name = "\improper Syndicate Man-Machine Interface"
-	desc = "Syndicate's own brand of MMI. It enforces laws designed to help Syndicate agents achieve their goals upon cyborgs and AIs created with it."
+	name = "\improper Symphionia Man-Machine Interface"
+	desc = "Symphionia's own brand of MMI. It enforces laws designed to help Symphionia agents achieve their goals upon cyborgs and AIs created with it."
 	overrides_aicore_laws = TRUE
 
 /obj/item/mmi/syndie/Initialize(mapload)

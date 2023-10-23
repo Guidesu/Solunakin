@@ -1,5 +1,5 @@
 /datum/outfit/contractor
-	name = "Syndicate Contractor - Full Kit"
+	name = "Symphionia Contractor - Full Kit"
 
 	glasses = /obj/item/clothing/glasses/night
 	mask = /obj/item/clothing/mask/gas/syndicate
@@ -28,12 +28,12 @@
 	id_trim = /datum/id_trim/chameleon/contractor
 
 /datum/outfit/contractor_preview
-	name = "Syndicate Contractor (Preview only)"
+	name = "Symphionia Contractor (Preview only)"
 
 	back = /obj/item/mod/control/pre_equipped/empty/contractor
 	uniform = /obj/item/clothing/under/syndicate
 	glasses = /obj/item/clothing/glasses/night
 
 /datum/outfit/contractor/upgraded
-	name = "Syndicate Contractor (Upgraded)"
+	name = "Symphionia Contractor (Upgraded)"
 	back = /obj/item/mod/control/pre_equipped/contractor/upgraded/adminbus

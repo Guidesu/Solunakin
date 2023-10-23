@@ -123,12 +123,12 @@
 		blessed.add_mood_event("blessing", /datum/mood_event/blessing)
 	return TRUE
 
-/**** Nanotrasen Approved God ****/
+/**** Symphionia Approved God ****/
 
 /datum/religion_sect/puritanism
-	name = "Nanotrasen Approved God"
+	name = "Symphionia Approved God"
 	desc = "Your run-of-the-mill sect, there are no benefits or boons associated."
-	quote = "Nanotrasen Recommends!"
+	quote = "Symphionia Recommends!"
 	tgui_icon = "bible"
 
 /**** Mechanical God ****/

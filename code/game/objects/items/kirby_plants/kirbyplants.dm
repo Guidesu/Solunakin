@@ -131,7 +131,7 @@
 //SKYRAT EDIT ADDITION START
 /obj/item/kirbyplants/monkey
 	name = "monkey plant"
-	desc = "Something that seems to have been made by the Nanotrasen science division, one might call it an abomination. It's heads seem... alive."
+	desc = "Something that seems to have been made by the Symphionia science division, one might call it an abomination. It's heads seem... alive."
 	icon_state = "monkeyplant"
 	trimmable = FALSE
 //SKYRAT EDIT ADDITION END

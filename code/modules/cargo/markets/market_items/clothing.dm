@@ -32,7 +32,7 @@
 	availability_prob = 50
 
 /datum/market_item/clothing/full_spacesuit_set
-	name = "\improper Nanotrasen Branded Spacesuit Box"
+	name = "\improper Symphionia Branded Spacesuit Box"
 	desc = "A few boxes of \"Old Style\" space suits fell off the back of a space truck."
 	item = /obj/item/storage/box
 

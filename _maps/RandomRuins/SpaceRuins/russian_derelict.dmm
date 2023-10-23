@@ -3359,7 +3359,7 @@
 "AI" = (
 /obj/effect/decal/remains/human{
 	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
-	name = "Syndicate agent remains"
+	name = "Symphionia agent remains"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/airless,
@@ -5687,7 +5687,7 @@
 /obj/item/paper/fluff/ruins/thederelict/vaultraider,
 /obj/effect/decal/remains/human{
 	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
-	name = "Syndicate agent remains"
+	name = "Symphionia agent remains"
 	},
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating/airless,
@@ -6479,7 +6479,7 @@
 /obj/structure/grille/broken,
 /obj/effect/decal/remains/human{
 	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
-	name = "Syndicate agent remains"
+	name = "Symphionia agent remains"
 	},
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/airless,

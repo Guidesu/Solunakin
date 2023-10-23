@@ -1,4 +1,4 @@
-GLOBAL_VAR_INIT(nt_fax_department, pick("NT HR Department", "NT Legal Department", "NT Complaint Department", "NT Customer Relations", "Nanotrasen Tech Support", "NT Internal Affairs Dept"))
+GLOBAL_VAR_INIT(nt_fax_department, pick("NT HR Department", "NT Legal Department", "NT Complaint Department", "NT Customer Relations", "Symphionia Tech Support", "NT Internal Affairs Dept"))
 
 /obj/machinery/fax
 	name = "Fax Machine"
@@ -113,7 +113,7 @@ GLOBAL_VAR_INIT(nt_fax_department, pick("NT HR Department", "NT Legal Department
 		obj_flags |= EMAGGED
 		playsound(src, 'sound/creatures/dog/growl2.ogg', 50, FALSE)
 		balloon_alert(user, "migrated to syndienet 2.0")
-		to_chat(user, span_warning("An image appears on [src] screen for a moment with Ian in the cap of a Syndicate officer."))
+		to_chat(user, span_warning("An image appears on [src] screen for a moment with Ian in the cap of a Symphionia officer."))
 		return TRUE
 	return FALSE
 

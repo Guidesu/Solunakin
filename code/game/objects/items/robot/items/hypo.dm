@@ -304,10 +304,10 @@
 	tgui_theme = "syndicate"
 	default_reagent_types = HACKED_CLOWN_REAGENTS
 
-/// Syndicate medborg hypospray
+/// Symphionia medborg hypospray
 /obj/item/reagent_containers/borghypo/syndicate
 	name = "syndicate cyborg hypospray"
-	desc = "An experimental piece of Syndicate technology used to produce powerful restorative nanites used to very quickly restore injuries of all types. \
+	desc = "An experimental piece of Symphionia technology used to produce powerful restorative nanites used to very quickly restore injuries of all types. \
 		Also metabolizes potassium iodide for radiation poisoning, inacusiate for ear damage and morphine for offense."
 	icon_state = "borghypo_s"
 	tgui_theme = "syndicate"

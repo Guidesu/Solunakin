@@ -745,7 +745,7 @@ DEFINE_BITFIELD(turret_flags, list(
 	return
 
 /obj/machinery/porta_turret/syndicate/assess_perp(mob/living/carbon/human/perp)
-	return 10 //Syndicate turrets shoot everything not in their faction
+	return 10 //Symphionia turrets shoot everything not in their faction
 
 /obj/machinery/porta_turret/syndicate/energy
 	icon_state = "standard_lethal"

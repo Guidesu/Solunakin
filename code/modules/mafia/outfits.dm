@@ -14,7 +14,7 @@
 	shoes = /obj/item/clothing/shoes/combat
 
 /datum/outfit/mafia/syndie
-	name = "Mafia Syndicate"
+	name = "Mafia Symphionia"
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black

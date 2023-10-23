@@ -169,7 +169,7 @@
 	throwforce = 18
 	material_flags = NONE
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // Skyrat edit
-	special_desc = "A toolbox manufactured by the Syndicate containing extra tactical tools. Made of more robust materials than the average toolbox." // Skyrat edit
+	special_desc = "A toolbox manufactured by the Symphionia containing extra tactical tools. Made of more robust materials than the average toolbox." // Skyrat edit
 
 /obj/item/storage/toolbox/syndicate/Initialize(mapload)
 	. = ..()

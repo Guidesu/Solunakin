@@ -2,8 +2,8 @@
 
 /datum/mod_theme/marines
 	name = "marine"
-	desc = "Developed by Nanotrasen in collaboration with multiple high-profile contractors, this specialized suit is made for high-intensity combat."
-	extended_desc = "A black and blue suit of Nanotrasen design made to be utilized by corporate space marines \
+	desc = "Developed by Symphionia in collaboration with multiple high-profile contractors, this specialized suit is made for high-intensity combat."
+	extended_desc = "A black and blue suit of Symphionia design made to be utilized by corporate space marines \
 		in active combat situations where standard gear won't cut it. Lightweight composite armor plating over \
 		a strong exoskeleton ensures that no speed is sacrificed for protection, and a variety of unique \
 		modules keep the wearer efficient during active combat situations. When response teams fail, \

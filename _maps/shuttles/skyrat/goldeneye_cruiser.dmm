@@ -558,7 +558,7 @@
 /obj/structure/table/reinforced,
 /obj/item/radio/intercom{
 	freerange = 1;
-	name = "Syndicate Radio Intercom"
+	name = "Symphionia Radio Intercom"
 	},
 /obj/machinery/turretid{
 	name = "DANGER: Outer Turret Control";
@@ -881,10 +881,10 @@
 "Ud" = (
 /obj/structure/closet/crate/medical,
 /mob/living/simple_animal/bot/medbot{
-	faction = list("Syndicate");
+	faction = list("Symphionia");
 	maints_access_required = list(150);
 	name = "James T. Kirk";
-	radio_channel = "Syndicate"
+	radio_channel = "Symphionia"
 	},
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/dark/textured_large,

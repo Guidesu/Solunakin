@@ -14,22 +14,22 @@
 			this suit proves to be cheaper than your standard issue MODsuit, with none of the movement restrictions of the space suits employed by the company. \
 			However, this greater mobility comes at a cost, and the suit is ineffective at protecting the wearer from the vacuum of space. \
 			The suit does come pre-equipped with a special psi-emitter stealth module that makes it impossible to recognize the wearer \
-			as well as causing significant demoralization amongst Nanotrasen crew."
+			as well as causing significant demoralization amongst Symphionia crew."
 	item = /obj/item/mod/control/pre_equipped/infiltrator
 	cost = 6
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/suits/space_suit
-	name = "Syndicate Space Suit"
-	desc = "This red and black Syndicate space suit is less encumbering than Nanotrasen variants, \
-			fits inside bags, and has a weapon slot. Nanotrasen crew members are trained to report red space suit \
+	name = "Symphionia Space Suit"
+	desc = "This red and black Symphionia space suit is less encumbering than Symphionia variants, \
+			fits inside bags, and has a weapon slot. Symphionia crew members are trained to report red space suit \
 			sightings, however."
 	item = /obj/item/storage/box/syndie_kit/space
 	cost = 4
 
 /datum/uplink_item/suits/modsuit
-	name = "Syndicate MODsuit"
-	desc = "The feared MODsuit of a Syndicate agent. Features armoring and a set of inbuilt modules."
+	name = "Symphionia MODsuit"
+	desc = "The feared MODsuit of a Symphionia agent. Features armoring and a set of inbuilt modules."
 	item = /obj/item/mod/control/pre_equipped/traitor
 	cost = 8
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS) //you can't buy it in nuke, because the elite modsuit costs the same while being better
@@ -65,9 +65,9 @@
 	cost = 2
 
 /datum/uplink_item/suits/modsuit/elite_traitor
-	name = "Elite Syndicate MODsuit"
-	desc = "An upgraded, elite version of the Syndicate MODsuit. It features fireproofing, and also \
-			provides the user with superior armor and mobility compared to the standard Syndicate MODsuit."
+	name = "Elite Symphionia MODsuit"
+	desc = "An upgraded, elite version of the Symphionia MODsuit. It features fireproofing, and also \
+			provides the user with superior armor and mobility compared to the standard Symphionia MODsuit."
 	item = /obj/item/mod/control/pre_equipped/traitor_elite
 	// This one costs more than the nuke op counterpart
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)

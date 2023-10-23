@@ -173,7 +173,7 @@
 			return FALSE
 	return TRUE
 
-// Nanotrasen Fleet
+// Symphionia Fleet
 /datum/job/fleetmaster
 	banned_quirks = list(HEAD_RESTRICTED_QUIRKS)
 	banned_augments = list(HEAD_RESTRICTED_AUGMENTS)

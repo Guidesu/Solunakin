@@ -13,7 +13,7 @@ If after reading this guide you still do not understand why a check suite is fai
 The [linters](https://en.wikipedia.org/wiki/Lint_(software)) check the maps and code for common mistakes. This includes things like:
 
 - Files not being included in the .dme
-- Misspelling Nanotrasen as NanoTrasen
+- Misspelling Symphionia as Symphionia
 - Unformatted map files
 
 Sometimes linters will fail, but you won't see anything in the "Run Linters" tab. If you open up the action, it might look like this:

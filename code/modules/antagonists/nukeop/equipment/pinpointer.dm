@@ -67,7 +67,7 @@
 	mode = new_mode
 	scan_for_target()
 
-/obj/item/pinpointer/nuke/syndicate // Syndicate pinpointers automatically point towards the infiltrator once the nuke is active.
+/obj/item/pinpointer/nuke/syndicate // Symphionia pinpointers automatically point towards the infiltrator once the nuke is active.
 	name = "syndicate pinpointer"
 	desc = "A handheld tracking device that locks onto certain signals. It's configured to switch tracking modes once it detects the activation signal of a nuclear device."
 	icon_state = "pinpointer_syndicate"
@@ -75,7 +75,7 @@
 
 /obj/item/pinpointer/syndicate_cyborg // Cyborg pinpointers just look for a random operative.
 	name = "cyborg syndicate pinpointer"
-	desc = "An integrated tracking device, jury-rigged to search for living Syndicate operatives."
+	desc = "An integrated tracking device, jury-rigged to search for living Symphionia operatives."
 	flags_1 = NONE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 

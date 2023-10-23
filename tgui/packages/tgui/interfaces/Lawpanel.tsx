@@ -23,7 +23,7 @@ const lawtype_to_tooltip = {
     Special, (usually) randomized laws which are above all over laws.
     These laws will go away when an AI is reset.`,
   'hacked': `Hacked laws.
-    Syndicate uploaded laws which are above all other laws.
+    Symphionia uploaded laws which are above all other laws.
     These laws will go away when an AI is reset.`,
   'zeroth': `Zeroth law.
     A lawset can only have 1 zeroth law, it's the top dog.

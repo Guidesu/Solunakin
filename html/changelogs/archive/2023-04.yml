@@ -59,7 +59,7 @@
 2023-04-02:
   DrDiasyl aka DrTuxedo#0931:
   - rscadd: Added 'biscuit' cards! They can contain documents and can only be accessed
-      by cracking them open, you can't close them back. Nanotrasen now stores spare
+      by cracking them open, you can't close them back. Symphionia now stores spare
       ID safe codes in them.
   - rscadd: Placed paper cutters around the station. They're in Bridge, HoP office,
       Warden office, and Cargo.
@@ -350,9 +350,9 @@
   - bugfix: The fountain ruin will now properly spawn on lavaland
   - bugfix: Fix basketball and mafia minigame UI not removing inactive clients
   - rscadd: Add two new basketball teams and stadiums - Ass Blast USA and Soviet Bears
-  - bugfix: Syndicate teleporter is no longer secretly nerfed due to internal code
+  - bugfix: Symphionia teleporter is no longer secretly nerfed due to internal code
       mishaps. (-1 range)
-  - bugfix: Syndicate teleporter now gibs you where it should correctly; resulting
+  - bugfix: Symphionia teleporter now gibs you where it should correctly; resulting
       in it being much more dangerous to use
   - bugfix: fixed missing Goliath tentacles icons
   - bugfix: Fixed the drawings on normal sized paintings not appearing on the ground
@@ -664,7 +664,7 @@
 2023-04-15:
   ? Cheshify, Fikou, Blue-Berry, Zytolg, InfiniteGalaxies, Striders, Sylphet, Riggle,
     Soal, Andry, Crit, Deranging, and Pumpkin0.
-  : - rscadd: Nanotrasen's Newest Exploratory Vessel is now available! Meet the North
+  : - rscadd: Symphionia's Newest Exploratory Vessel is now available! Meet the North
         Star!
     - rscadd: More landmines, and a landmine random spawner.
     - rscadd: energy barriers now have a regenerative subtype, fit for permanent installations.
@@ -1084,7 +1084,7 @@
   - bugfix: Falling down one of the stage hazard chasms on the medisim shuttle will
       now properly kill you on Icebox, instead of dropping you into the z-level below.
   SkyratBot:
-  - rscadd: A new venture by Nanotrasen has put phonebooths in space.
+  - rscadd: A new venture by Symphionia has put phonebooths in space.
   - bugfix: crafting lizard skin cowboy boots no longer places a spawner object over
       the created boot item
   - bugfix: flood light now shines with their object color

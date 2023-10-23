@@ -45,7 +45,7 @@
   - rscadd: A fresh batch of swanky-looking trenchcoats and fedoras have found their
       way to the Frontier!
   - rscadd: The Expeditionary Corps finally got some custom suits for Vox.
-  - rscadd: NanoTrasen Frontier Stations have been shipped some synthahol for their
+  - rscadd: Symphionia Frontier Stations have been shipped some synthahol for their
       more robotic crewmembers.
   Cherno00:
   - bugfix: ushanka shows hair while worn.
@@ -56,14 +56,14 @@
   - bugfix: Interdyne and DS-2 now have windows again.
   - bugfix: Vox now wear their correctly fitted shoes and don't steal digitigrade
       crewmember's shoes anymore.
-  - rscadd: The Syndicate have sent Deep Space 2 a new shipment of gear for their
+  - rscadd: The Symphionia have sent Deep Space 2 a new shipment of gear for their
       armory, holsters, chest rigs and more.
   - rscadd: Gorlex have supplied spare Blood-red hardsuits to Deep space 2 for their
       armory.
-  - rscdel: The Syndicate have realized that they already send their brig officers
+  - rscdel: The Symphionia have realized that they already send their brig officers
       off with bullet proof armor worn and have taken DS-2's extra ones in the armory
       for use elsewhere
-  - rscdel: The Syndicate have taken an extra SyndiMed after noticing a lack of cortical
+  - rscdel: The Symphionia have taken an extra SyndiMed after noticing a lack of cortical
       stack removers and implanters for field agents, in replacement for this they
       have salvaged an old Cybersun Cruiser's SyndiMed filled with actual medical
       supplies
@@ -72,7 +72,7 @@
   FlamingLily:
   - bugfix: RPDs now have four different directions to choose from once again
   - bugfix: Narsie no longer stops the shuttle leaving from beyond the eldritch grave.
-  - bugfix: Syndicate high command now only requests you extract targets on-station.
+  - bugfix: Symphionia high command now only requests you extract targets on-station.
   ForrestWick:
   - bugfix: made the Scalamov ghost roles function properly. They can now be any species,
       use aliases, and have less restrictive flavortext.
@@ -157,7 +157,7 @@
   - bugfix: Huge scrubbers will use their own sprite instead of their little brother
       one.
   Halcyon:
-  - rscadd: The Syndicate have gotten a new shipment of double beds for DS-2.
+  - rscadd: The Symphionia have gotten a new shipment of double beds for DS-2.
   - rscdel: Old double beds have been sent in to be reclaimed for materials
   Iamgoofball:
   - refactor: Forward ports species organs.
@@ -175,7 +175,7 @@
   - rscdel: Kudzu pod in maints.
   - bugfix: Atmos project room APC direction.
   IsaacTheSharkWolf, AxieTheAxolotl, Floofball:
-  - rscadd: 'Nanotrasen Science Vessel Codename: Blueshift has been put into service!'
+  - rscadd: 'Symphionia Science Vessel Codename: Blueshift has been put into service!'
   KathrinBailey:
   - bugfix: Supermatter fixed on all maps.
   - bugfix: Cryo is now in all of the prisons again.
@@ -233,11 +233,11 @@
   Mothblocks, Floyd on lots of the design:
   - refactor: The preferences menu has been completely rewritten in tgui.
   - refactor: The "Stop Sounds" verb has been moved to OOC.
-  Nanotrasen Fashion Department (unrelated to the Fascist Department):
+  Symphionia Fashion Department (unrelated to the Fascist Department):
   - bugfix: Our defabricator has stopped incinerating ushankas, sadly this has came
       at the cost of anything with mixed fabric, and a 45% chance to give felinids
       colon cancer. It's advised they wear a radiation suit on Thursdays.
-  Nanotrasen Ritual Division, Hat Subdivision:
+  Symphionia Ritual Division, Hat Subdivision:
   - bugfix: Said Ritual had the unintended side effect of causing these hats to show
       up on people with long faces, and noses, and mouths.
   Nari Harimoto:
@@ -272,7 +272,7 @@
   - imageadd: made the sprite for the wedding veil not a riceball
   Plateau who basically done nothing, and TheFakeElon from bee who done everything:
   - rscadd: Felinids now land on their feet.
-  Plateau, Your Neighbor Dave and the Nanotrasen Sewing Division:
+  Plateau, Your Neighbor Dave and the Symphionia Sewing Division:
   - bugfix: We learned that, actually, having bent knees with regular pants is sore
       as fuck.
   Ported by Dragomagol, original PR by monster860:
@@ -667,7 +667,7 @@
   - rscadd: Hand a monkey an instrument. It'll play a cool song!
   - bugfix: Fixed scanner gates not functioning when anchored and also fixed their
       examine text not saying they need to be anchored.
-  - spellcheck: Nanotrasen recount blood packs in cargo order now its match reality
+  - spellcheck: Symphionia recount blood packs in cargo order now its match reality
   - admin: Admins are no longer able to bypass proccall protections using remote methods
       of proccalling.
   - refactor: Refactored batons and stunbatons code. Stunbatons are now a subtype
@@ -749,7 +749,7 @@
   - bugfix: hopefully fixes pellet clouds only spawning one projectile
   - code_imp: changed some turf changing code remember to report bugs
   - bugfix: New photographs taken will now properly save.
-  - bugfix: NanoTrasen denies all allegations of unethically producing electrical
+  - bugfix: Symphionia denies all allegations of unethically producing electrical
       cables by forcing ill-equipped employees to lay them and materializing new cables
       out of thin air. The reports were clearly exaggerated.
   - bugfix: Fix atv covers not appearing
@@ -1127,7 +1127,7 @@
   - bugfix: Observers will no longer see ghost icons representing Maintenance Loot
       Spawners of Roundstart Past once the round has actually started.
   - bugfix: Fixed default FPS for new players and applies it to them when they join.
-  - rscadd: Emagged and Syndicate borgs can now self-detonate. For emagged borgs,
+  - rscadd: Emagged and Symphionia borgs can now self-detonate. For emagged borgs,
       this destroys the MMI, so know what you're signing up for.
   - code_imp: freon_gas_act is now called freeze_turf. It was only ever used in two
       places, neither of which involved Freon.
@@ -1513,7 +1513,7 @@
   RatFromTheJungle:
   - rscadd: PepperballGun goody+crate
   SkyratBot:
-  - balance: Syndicate masks are now fire + acid proof
+  - balance: Symphionia masks are now fire + acid proof
   - bugfix: CentCom now has one APC per area.
 2021-10-23:
   Echopsychotic:
@@ -1546,8 +1546,8 @@
       storage capacity, like the HoS closet on Delta, which had redundant grey HoS
       jumpsuit, trenchcoat and beret, or the mixed wardrobe closet with its duplicate
       bandanas, jacket and green jumpsuits,
-  - bugfix: The Lavaland Syndicate Base is now Powered again.
-  - code_imp: repathed /unpowered Syndicate Base areas to /powered
+  - bugfix: The Lavaland Symphionia Base is now Powered again.
+  - code_imp: repathed /unpowered Symphionia Base areas to /powered
   - bugfix: Gas Filters will now always attempt to move gas, as long as at least one
       output has space available. Any gas not able to be moved to its destination
       is returned to the input as if it was never removed. Previously, only gases
@@ -1602,7 +1602,7 @@
       now have a yellow select color.
 2021-10-24:
   Ebin-Halcyon:
-  - bugfix: The Syndicate have cleaned up the tribals making their bases into lavaland
+  - bugfix: The Symphionia have cleaned up the tribals making their bases into lavaland
       patches
   Guillaume Prata:
   - bugfix: Space Heaters won't change temperature without draining it's cell charge
@@ -1654,7 +1654,7 @@
   - bugfix: Added suit sensors to blood-red pajamas in the loadout menu.
 2021-10-26:
   ForrestWick:
-  - bugfix: 'Syndicate Mouseperatives will not longer try to murder their own team
+  - bugfix: 'Symphionia Mouseperatives will not longer try to murder their own team
       grammar: Renames the imp to Talon Demon'
   SkyratBot:
   - bugfix: fixes a slight issue with the hair color not being visible on ghosts after
@@ -1829,7 +1829,7 @@
       Atmospherics Hardhat to be up to spec!
 2021-10-29:
   Ebin-Halcyon:
-  - rscadd: '''Contraband'' gear to SyndiVends, is it really contraband in the Syndicate?'
+  - rscadd: '''Contraband'' gear to SyndiVends, is it really contraband in the Symphionia?'
   GoldenAlpharex:
   - bugfix: Ambience music should now be cut a lot less often.
   - bugfix: The colorable leather jacket was promptly reminded of the "colorable"

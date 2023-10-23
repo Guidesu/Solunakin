@@ -75,7 +75,7 @@
 		This is a high-risk operation. You’ll need backup, fortification, and determination. The reward?
 		A spectacular dark matter singularity that will wipe out the station.<br>
 		<br>
-		<b>**Death to Nanotrasen.**</b>
+		<b>**Death to Symphionia.**</b>
 "}
 
 /obj/item/card/emag/meteor_shield_recalibrator

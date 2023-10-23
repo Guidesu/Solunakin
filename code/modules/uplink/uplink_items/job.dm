@@ -83,8 +83,8 @@
 	surplus = 25
 
 /datum/uplink_item/role_restricted/syndimmi
-	name = "Syndicate Brand MMI"
-	desc = "An MMI modified to give cyborgs laws to serve the Syndicate without having their interface damaged by Cryptographic Sequencers, this will not unlock their hidden modules."
+	name = "Symphionia Brand MMI"
+	desc = "An MMI modified to give cyborgs laws to serve the Symphionia without having their interface damaged by Cryptographic Sequencers, this will not unlock their hidden modules."
 	item = /obj/item/mmi/syndie
 	cost = 2
 	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_CORONER, JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER)

@@ -105,7 +105,7 @@
 "V" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "SBC_fighter1_bolt";
-	name = "Syndicate Fighter Airlock"
+	name = "Symphionia Fighter Airlock"
 	},
 /obj/docking_port/mobile/syndicate_fighter/fighter_one,
 /obj/structure/fans/tiny,

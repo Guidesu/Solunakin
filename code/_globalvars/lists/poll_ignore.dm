@@ -73,7 +73,7 @@ GLOBAL_LIST_INIT(poll_ignore_desc, list(
 	POLL_IGNORE_SPIDER = "Spiders",
 	POLL_IGNORE_SPLITPERSONALITY = "Split Personality",
 	POLL_IGNORE_STALKER = "Stalker",
-	POLL_IGNORE_SYNDICATE = "Syndicate",
+	POLL_IGNORE_SYNDICATE = "Symphionia",
 	POLL_IGNORE_VENUSHUMANTRAP = "Venus Human Traps",
 ))
 //Skyrat Edit Stop: Cortical Borer

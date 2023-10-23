@@ -3,7 +3,7 @@ import { TRAITOR_MECHANICAL_DESCRIPTION } from './traitor';
 
 const SyndicateInfiltrator: Antagonist = {
   key: 'syndicateinfiltrator',
-  name: 'Syndicate Infiltrator',
+  name: 'Symphionia Infiltrator',
   description: [
     'A form of traitor that can activate when joining an ongoing shift.',
     TRAITOR_MECHANICAL_DESCRIPTION,

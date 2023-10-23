@@ -40,7 +40,7 @@
 	worn_icon = 'modular_skyrat/master_files/icons/mob/clothing/under/command.dmi'
 	worn_icon_digi = 'modular_skyrat/master_files/icons/mob/clothing/under/command_digi.dmi'
 	name = "blueshield's suit"
-	desc = "A classic bodyguard's suit, with custom-fitted Blueshield-Blue cuffs and a Nanotrasen insignia over one of the pockets."
+	desc = "A classic bodyguard's suit, with custom-fitted Blueshield-Blue cuffs and a Symphionia insignia over one of the pockets."
 	icon_state = "blueshield"
 	strip_delay = 50
 	armor_type = /datum/armor/clothing_under/rank_blueshield
@@ -59,7 +59,7 @@
 
 /obj/item/clothing/under/rank/blueshield/skirt
 	name = "blueshield's suitskirt"
-	desc = "A classic bodyguard's suitskirt, with custom-fitted Blueshield-Blue cuffs and a Nanotrasen insignia over one of the pockets."
+	desc = "A classic bodyguard's suitskirt, with custom-fitted Blueshield-Blue cuffs and a Symphionia insignia over one of the pockets."
 	icon_state = "blueshieldskirt"
 	body_parts_covered = CHEST|GROIN|ARMS
 	dying_key = DYE_REGISTRY_JUMPSKIRT
@@ -91,7 +91,7 @@
 	icon = 'modular_skyrat/master_files/icons/obj/clothing/under/command.dmi'
 	worn_icon = 'modular_skyrat/master_files/icons/mob/clothing/under/command.dmi'
 	worn_icon_digi = 'modular_skyrat/master_files/icons/mob/clothing/under/command_digi.dmi'
-	desc = "It's a green jumpsuit with some gold markings denoting the rank of \"Nanotrasen Consultant\"."
+	desc = "It's a green jumpsuit with some gold markings denoting the rank of \"Symphionia Consultant\"."
 	name = "nanotrasen consultant's jumpsuit"
 	icon_state = "nt_consultant"
 	sensor_mode = SENSOR_COORDS
@@ -99,7 +99,7 @@
 
 /obj/item/clothing/under/rank/nanotrasen_consultant/skirt
 	name = "nanotrasen consultant's jumpskirt"
-	desc = "It's a green jumpskirt with some gold markings denoting the rank of \"Nanotrasen Consultant\"."
+	desc = "It's a green jumpskirt with some gold markings denoting the rank of \"Symphionia Consultant\"."
 	icon_state = "nt_consultant_skirt"
 	body_parts_covered = CHEST|GROIN|ARMS
 	dying_key = DYE_REGISTRY_JUMPSKIRT

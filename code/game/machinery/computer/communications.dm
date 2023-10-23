@@ -139,13 +139,13 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 				return FALSE
 		if(battlecruiser_called)
 			if (user)
-				to_chat(user, span_danger("The card reports a long-range message already sent to the Syndicate fleet...?"))
+				to_chat(user, span_danger("The card reports a long-range message already sent to the Symphionia fleet...?"))
 			return FALSE
 		battlecruiser_called = TRUE
 		caller_card.use_charge(user)
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(summon_battlecruiser), caller_card.team), rand(20 SECONDS, 1 MINUTES))
 		playsound(src, 'sound/machines/terminal_alert.ogg', 50, FALSE)
-		priority_announce("Attention crew: deep-space sensors detect a Syndicate battlecruiser-class signature subspace rift forming near your station. Estimated time until arrival: three to five minutes.", "[command_name()] High-Priority Update") //SKYRAT EDIT ADDITION: announcement on battlecruiser call
+		priority_announce("Attention crew: deep-space sensors detect a Symphionia battlecruiser-class signature subspace rift forming near your station. Estimated time until arrival: three to five minutes.", "[command_name()] High-Priority Update") //SKYRAT EDIT ADDITION: announcement on battlecruiser call
 		return TRUE
 
 	if(obj_flags & EMAGGED)
@@ -257,12 +257,12 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 				to_chat(usr, span_danger("SYSERR @l(19833)of(transmit.dm): !@$ MESSAGE TRANSMITTED TO SYNDICATE COMMAND."))
 			else if(syndicate)
 				message_syndicate(message, usr)
-				to_chat(usr, span_danger("Message transmitted to Syndicate Command."))
+				to_chat(usr, span_danger("Message transmitted to Symphionia Command."))
 			else
 				message_centcom(message, usr)
 				to_chat(usr, span_notice("Message transmitted to Central Command."))
 
-			var/associates = (emagged || syndicate) ? "the Syndicate": "CentCom"
+			var/associates = (emagged || syndicate) ? "the Symphionia": "CentCom"
 			usr.log_talk(message, LOG_SAY, tag = "message to [associates]")
 			deadchat_broadcast(" has messaged [associates], \"[message]\" at [span_name("[get_area_name(usr, TRUE)]")].", span_name("[usr.real_name]"), usr, message_type = DEADCHAT_ANNOUNCEMENT)
 			COOLDOWN_START(src, important_action_cooldown, IMPORTANT_ACTION_COOLDOWN)
@@ -952,7 +952,7 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 
 		if(HACK_THREAT) // Force an unfavorable situation on the crew
 			priority_announce(
-				"Attention crew, the Nanotrasen Department of Intelligence has received intel suggesting increased enemy activity in your sector beyond that initially reported in today's threat advisory.",
+				"Attention crew, the Symphionia Department of Intelligence has received intel suggesting increased enemy activity in your sector beyond that initially reported in today's threat advisory.",
 				"[command_name()] High-Priority Update",
 			)
 

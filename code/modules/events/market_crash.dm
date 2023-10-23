@@ -24,16 +24,16 @@
 		"some risky housing market outcomes",\
 		"the B.E.P.I.S. team's untimely downfall",\
 		"speculative SolFed grants backfiring",  /*SKYRAT EDIT CHANGE; original was "speculative Terragov grants backfiring"*/\
-		"greatly exaggerated reports of Nanotrasen accountancy personnel being \"laid off\"",\
+		"greatly exaggerated reports of Symphionia accountancy personnel being \"laid off\"",\
 		"a \"great investment\" into \"non-fungible tokens\" by a \"moron\"",\
 		"a number of raids from Tiger Cooperative agents",\
 		"supply chain shortages",\
-		"the \"Nanotrasen+\" social media network's untimely downfall",\
-		"the \"Nanotrasen+\" social media network's unfortunate success",\
+		"the \"Symphionia+\" social media network's untimely downfall",\
+		"the \"Symphionia+\" social media network's unfortunate success",\
 		"uhh, bad luck, we guess"
 	)
 	var/reason = pick(poss_reasons)
-	priority_announce("Due to [reason], prices for on-station vendors will be increased for a short period.", "Nanotrasen Accounting Division")
+	priority_announce("Due to [reason], prices for on-station vendors will be increased for a short period.", "Symphionia Accounting Division")
 
 /datum/round_event/market_crash/start()
 	. = ..()
@@ -46,7 +46,7 @@
 	REMOVE_TRAIT(SSeconomy, TRAIT_MARKET_CRASHING, MARKET_CRASH_EVENT_TRAIT)
 	SSeconomy.price_update()
 	SSeconomy.update_vending_prices()
-	priority_announce("Prices for on-station vendors have now stabilized.", "Nanotrasen Accounting Division")
+	priority_announce("Prices for on-station vendors have now stabilized.", "Symphionia Accounting Division")
 
 /datum/round_event/market_crash/tick()
 	. = ..()

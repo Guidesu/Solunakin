@@ -28,7 +28,7 @@
 
 /datum/mafia_ability/attack_player/proc/internal_affairs(datum/mafia_controller/game)
 	SIGNAL_HANDLER
-	host_role.send_message_to_player(span_userdanger("You have been killed by Nanotrasen Internal Affairs!"))
+	host_role.send_message_to_player(span_userdanger("You have been killed by Symphionia Internal Affairs!"))
 	host_role.reveal_role(game, verbose = TRUE)
 	host_role.kill(game, host_role, FALSE) //you technically kill yourself but that shouldn't matter
 

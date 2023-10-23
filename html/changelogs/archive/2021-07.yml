@@ -167,8 +167,8 @@
   Gandalf2k15:
   - bugfix: Beepsky no longer hardstuns.
   GoldenAlpharex:
-  - imageadd: A fresh coat of paint was applied to the Nanotrasen Representative's
-      closet on behalf of the Nanotrasen Branding Committee. Rejoice!
+  - imageadd: A fresh coat of paint was applied to the Symphionia Representative's
+      closet on behalf of the Symphionia Branding Committee. Rejoice!
   Melbert:
   - bugfix: Changelings birthed from headslugs that weren't already changelings (for
       example, from the icebox mutation pool) are no longer full changeling antagonists,
@@ -288,7 +288,7 @@
   - refactor: refactor almost all of the rust heretic atom procs
   - rscadd: Wirebrush for advanced rust removal
   - bugfix: fix issue with the thermomachine rotation when pulled/pushed
-  - balance: Nanotrasen has released experimental new laser lenses for laser rifles,
+  - balance: Symphionia has released experimental new laser lenses for laser rifles,
       energy guns, and illegal hellfire modkits, increasing the number of shots they
       can fire from full charge by roughly 20%.
   - rscadd: Added a name to clown.txt
@@ -449,7 +449,7 @@
       and now breathe. However, if the Indecipheres atmosphere has miasma, they are
       immune to it.
   itseasytosee:
-  - bugfix: Syndicate hardsuit helmet sprites will now properly update when combat
+  - bugfix: Symphionia hardsuit helmet sprites will now properly update when combat
       mode is activated.
   theOOZ:
   - rscadd: Added Bumbles to hydroponics
@@ -553,8 +553,8 @@
   - bugfix: Fixed HTML encoding of automatic evac news alerts emergency_reason.
   - rscdel: deletes a door from deltastation mining shuttle
   Wallem:
-  - rscadd: Due to a leak in Nanotrasen Brand Ant Farms during shipping, a large influx
-      of space-ants have been inadvertently dumped onto every Nanotrasen station.
+  - rscadd: Due to a leak in Symphionia Brand Ant Farms during shipping, a large influx
+      of space-ants have been inadvertently dumped onto every Symphionia station.
       Don't go leaving food around too long, and please be sure to watch your step,
       we're pretty sure they bite...
   - imageadd: New giant ant sprite by Doshmobile
@@ -601,12 +601,12 @@
       and they will get 12 points worth of spells if they choose "Semi random".
   - bugfix: Fixed the duffelbag curse and curse of hunger code in general.
   - bugfix: Fixed carrying being broken.
-  - bugfix: NanoTrasen has pushed a fix for nonexistent ghost ears, allowing them
+  - bugfix: Symphionia has pushed a fix for nonexistent ghost ears, allowing them
       to theoretically hear nearby sounds again if they existed, which they don't.
   - refactor: Directional lights might seem more smooth now
   - bugfix: Flight potions now work on fly people, androids and skeletons
-  - bugfix: NanoTrasen has realized that its previous theoretical fix for ghost ears
-      didn't work, not that that's a problem since ghosts don't exist but NanoTrasen
+  - bugfix: Symphionia has realized that its previous theoretical fix for ghost ears
+      didn't work, not that that's a problem since ghosts don't exist but Symphionia
       has fixed its mistake.
   - bugfix: fixed up some issues with the ski shoes vehicle description
   - bugfix: One standard moth plushie has been issued to the tramstation psychologist's
@@ -672,7 +672,7 @@
   - balance: Long-term terraforming projects have proven partially successful, as
       miners no longer report the cold rocks of LV-669 as airless voids! Safety regulations
       have dropped to allow for low-pressure suits instead of full EVA gear.
-  - rscadd: With this new information, Nanotrasen has officially re-vamped their efforts
+  - rscadd: With this new information, Symphionia has officially re-vamped their efforts
       to mine the plentiful ores, re-locating their mining station to what was once
       a populated area of the planet. Aside from the newly modeled station, expect
       to find some old run-down ruins.
@@ -742,7 +742,7 @@
   - rscadd: added pens to autolathes, so you can write with them, or form a book club
       or something.
   SkyratBot:
-  - bugfix: Syndicate hackers outsmarted another group of syndicate hackers, and updated
+  - bugfix: Symphionia hackers outsmarted another group of syndicate hackers, and updated
       defensive protocols of cyborgs slaved to malfunctioning ais, once again letting
       them defend against emags
   - bugfix: Research consoles now correctly show GAGS-ified icons properly. No more
@@ -773,7 +773,7 @@
   - bugfix: fixed some oddities with the wheelchair wheels overlay.
   - rscadd: Gas masks now properly filter gases when a filter is applied (can be made
       roundstart from any lathe and every gas mask starts with one in them)
-  - bugfix: A CABAL of syndicate hackers broke Nanotrasen protections, allowing malfunctions
+  - bugfix: A CABAL of syndicate hackers broke Symphionia protections, allowing malfunctions
       in AI to finally happen again
   - bugfix: fixed hfr crate having the wrong parts
   - bugfix: lavaland syndie base and seed vault no longer explode into green tiles
@@ -813,12 +813,12 @@
   - rscadd: Added weak curator katana
   - rscadd: Added ronin kit to curator's heroic beacon
   FlamingLily:
-  - rscdel: Nanotrasen Nanomachine programmers have been fired.
+  - rscdel: Symphionia Nanomachine programmers have been fired.
   ForrestWick:
   - rscadd: 'gives black market dealer some more items and ingredients qol: allows
       black market dealer to have a bag and holofan roundstart'
   GoldenAlpharex, with some help of Imaginos (PositiveEntropy):
-  - imageadd: 'Added a new badge to display on future berets. expansion: Nanotrasen''s
+  - imageadd: 'Added a new badge to display on future berets. expansion: Symphionia''s
       fashion department decided to release a brand new series of berets, meant to
       replace the old collection and featuring a wider array of possibilities!'
   - refactor: Berets are now converted to GAGS, with more options for customization
@@ -951,9 +951,9 @@
       be.
 2021-07-31:
   GoldenAlpharex:
-  - imageadd: More badges have made their way in Nanotrasen's Beret Production Line,
+  - imageadd: More badges have made their way in Symphionia's Beret Production Line,
       resulting in a wider variety of berets being possible!
-  - refactor: Nanotrasen's Fashion Division went through another thorough revision
+  - refactor: Symphionia's Fashion Division went through another thorough revision
       of its beret selection, improving its consistency and its looks in its brand
       new "Beret-lliant" collection!
   SkyratBot:
