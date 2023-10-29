@@ -71,14 +71,14 @@ REOPEN_ROUNDSTART_SUICIDE_ROLES_COMMAND_POSITIONS
 
 
 ## ALERT LEVELS ###
-ALERT_GREEN All threats to the station have passed. Security may not have weapons visible, privacy laws are once again fully enforced.
-ALERT_BLUE_UPTO The station has received reliable information about possible hostile activity on the station. Security staff may have weapons visible, random searches are permitted.
+ALERT_GREEN All threats to the outpost have passed. Security may not have weapons visible, privacy laws are once again fully enforced.
+ALERT_BLUE_UPTO The outpost has received reliable information about possible hostile activity on the outpost. Security staff may have weapons visible, random searches are permitted.
 ALERT_BLUE_DOWNTO The immediate threat has passed. Security may no longer have weapons drawn at all times, but may continue to have them visible. Random searches are still allowed.
-ALERT_RED_UPTO There is an immediate serious threat to the station. Security may have weapons unholstered at all times. Random searches are allowed and advised. Additionally, access requirements on some doors have been lifted.
-ALERT_RED_DOWNTO The station's destruction has been averted. There is still however an immediate serious threat to the station. Security may have weapons unholstered at all times, random searches are allowed and advised.
-ALERT_DELTA Destruction of the station is imminent. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill.
+ALERT_RED_UPTO There is an immediate serious threat to the outpost. Security may have weapons unholstered at all times. Random searches are allowed and advised. Additionally, access requirements on some doors have been lifted.
+ALERT_RED_DOWNTO The outpost's destruction has been averted. There is still however an immediate serious threat to the outpost. Security may have weapons unholstered at all times, random searches are allowed and advised.
+ALERT_DELTA Destruction of the outpost is imminent. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill.
 
-## The total weight of station goals possible for a round (allows multiple goals)
+## The total weight of outpost goals possible for a round (allows multiple goals)
 STATION_GOAL_BUDGET 4
 
 ## GAME MODES ###
@@ -136,7 +136,7 @@ DYNAMIC_CONFIG_ENABLED
 ## Comment this out to disable random events during the round.
 ALLOW_RANDOM_EVENTS
 
-## Uncomment this to disable station traits.
+## Uncomment this to disable outpost traits.
 #FORBID_STATION_TRAITS
 
 ## Multiplier for earliest start time of dangerous events.
@@ -167,7 +167,7 @@ ALLOW_AI_MULTICAM
 ## AWAY MISSIONS ###
 
 ## Uncomment to load one of the missions from awaymissionconfig.txt or away_missions/ at roundstart.
-#ROUNDSTART_AWAY
+ROUNDSTART_AWAY
 
 ## How long the delay is before the Away Mission gate opens. Default is half an hour.
 ## 600 is one minute.
@@ -203,7 +203,7 @@ EVERYONE_HAS_MAINT_ACCESS
 
 ## This variable is how you may configure "Scaling Access" for Departmental Security Officers.
 ## Set to 0/commented out for "off", Departmental Security Officers will never get additional room-specific access (beyond general departmental doors).
-## Set to 1 if you want to enable "Scaling Access", where Departmental Security Officers will get access to most rooms within a department depending on how many security officers there are relative to the number of people on a station.
+## Set to 1 if you want to enable "Scaling Access", where Departmental Security Officers will get access to most rooms within a department depending on how many security officers there are relative to the number of people on a outpost.
 ## Set to 2 if you want Departmental Security Officers to always have access to all rooms in a department.
 DEPSEC_ACCESS_LEVEL 1
 
@@ -288,7 +288,7 @@ RANDOM_LAWS dagothbot
 LAW_WEIGHT custom,0
 
 ## standard-ish laws. These are fairly ok to run
-## Unique AI station trait uses weights so we don't want asimov
+## Unique AI outpost trait uses weights so we don't want asimov
 #SKYRAT EDIT ADDITION BEGIN
 LAW_WEIGHT armadyne_safeguard,40
 LAW_WEIGHT dagothbot,8
@@ -345,7 +345,7 @@ SILICON_MAX_LAW_AMOUNT 12
 
 ## See code/__DEFINES/DNA.dm for more options than the ones below.
 
-## You probably want humans on your space station, but technically speaking you can turn them off without any ill effect
+## You probably want humans on your space outpost, but technically speaking you can turn them off without any ill effect
 ROUNDSTART_RACES human
 
 ## Races that are strictly worse than humans that could probably be turned on without balance concerns
@@ -497,7 +497,7 @@ OCEAN_BUDGET 60
 ## Space Ruin Budget
 Space_Budget 16
 
-## Time in ds from when a player latejoins till the arrival shuttle docks at the station
+## Time in ds from when a player latejoins till the arrival shuttle docks at the outpost
 ## Must be at least 30. At least 55 recommended to be visually/aurally appropriate
 ARRIVALS_SHUTTLE_DOCK_WINDOW 55
 

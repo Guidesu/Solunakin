@@ -61,26 +61,3 @@
 		hypercorporations buy the senate votes they need and establish territory far past the Earth Government's reach. \
 		In hypercorporation territory company policy is law, giving new meaning to \"employee termination\".",
 	)
-
-/datum/species/human/create_pref_unique_perks()
-	var/list/to_add = list()
-
-	if(CONFIG_GET(number/default_laws) == 0 || CONFIG_GET(flag/silicon_asimov_superiority_override)) // Default lawset is set to Asimov
-		to_add += list(list(
-			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
-			SPECIES_PERK_ICON = "robot",
-			SPECIES_PERK_NAME = "Asimov Superiority",
-			SPECIES_PERK_DESC = "The AI and their cyborgs are, by default, subservient only \
-				to humans. As a human, silicons are required to both protect and obey you.",
-		))
-
-	if(CONFIG_GET(flag/enforce_human_authority))
-		to_add += list(list(
-			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
-			SPECIES_PERK_ICON = "bullhorn",
-			SPECIES_PERK_NAME = "Chain of Command",
-			SPECIES_PERK_DESC = "Symphionia only recognizes humans for command roles, such as Captain.",
-		))
-
-	return to_add
-

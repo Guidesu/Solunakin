@@ -2,9 +2,9 @@
 #define DEFAULT_ANNOUNCEMENT_SOUND "default_announcement"
 
 /// Preset central command names to chose from for centcom reports.
-#define CENTCOM_PRESET "Central Command"
-#define SYNDICATE_PRESET "The Symphionia"
-#define WIZARD_PRESET "The Wizard Federation"
+#define CENTCOM_PRESET "Higher Council"
+#define SYNDICATE_PRESET "The Symphionia'S Council"
+#define WIZARD_PRESET "The Magicis Federation"
 #define CUSTOM_PRESET "Custom Command Name"
 
 /// Verb to change the global command name.

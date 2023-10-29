@@ -2,4 +2,4 @@
 # without worrying about committing. These are applied after config.txt.
 # You do not need this if you are a server operator! You should instead use the $include system.
 
-#STATIONNAME My Dev World
+STATIONNAME Frior Luna

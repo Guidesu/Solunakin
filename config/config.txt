@@ -12,26 +12,26 @@ $include auxtools.txt
 
 # You can use the @ character at the beginning of a config option to lock it from being edited in-game
 # Example usage:
-# @SERVERNAME tgstation
+ @SERVERNAME Solunakin: A slice of stars
 # Which sets the SERVERNAME, and disallows admins from being able to change it using View Variables.
 # @LOG_TWITTER 0
 # Which explicitly disables LOG_TWITTER, as well as locking it.
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-# SERVERNAME tgstation
+ SERVERNAME Solunakin: A slice of stars
 
 ## Server tagline: This will appear right below the server's title.
-# SERVERTAGLINE A generic TG-based server
+ SERVERTAGLINE A slice-of-life fork of a ss13 server!
 
-## Discord Link: This is the link to Skyrat's discord server
-# DISCORD_LINK https://discord.gg/hGpZ4Z3
+## Discord Link:
+# DISCORD_LINK
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 # SERVERSQLNAME tgstation
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Space Station 13
+STATIONNAME Frior Luna
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 #HUB
@@ -140,13 +140,13 @@ VOTE_PERIOD 600
 ## 0 = Cannot respawn (default)
 ## 1 = Can respawn
 ## 2 = Can respawn if choosing a different character
-ALLOW_RESPAWN 0
+ALLOW_RESPAWN 1
 
 ## Respawn delay (deciseconds), which doesn't allow to return to lobby
 RESPAWN_DELAY 0
 
 ## set a hosted by name for unix platforms
-HOSTEDBY Yournamehere
+HOSTEDBY Guidesa
 
 ## Uncomment this to stop people connecting to your server without a registered ckey. (i.e. guest-* are all blocked from connecting)
 GUEST_BAN
@@ -189,7 +189,7 @@ GUEST_BAN
 # RULESURL http://www.tgstation13.org/wiki/Rules
 
 ## Github address
-# GITHUBURL https://www.github.com/tgstation/tgstation
+ GITHUBURL https://github.com/Guidesu/Solunakin
 
 ## Discord bot command prefix, if the discord bot is used
 # DISCORDBOTCOMMANDPREFIX ?
@@ -255,13 +255,13 @@ ALLOW_HOLIDAYS
 TICKLAG 0.5
 
 ##Can also be set as per-second value, the following value is identical to the above.
-#FPS 20
+FPS 60
 
 ## Comment this out to disable automuting
 #AUTOMUTE_ON
 
 ## Uncomment this to let players see their own notes (they can still be set by admins only)
-#SEE_OWN_NOTES
+SEE_OWN_NOTES
 
 ### Comment these two out to prevent notes fading out over time for admins.
 ## Notes older then this will start fading out.
