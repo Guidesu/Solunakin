@@ -45,7 +45,7 @@
 	genes = list (/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/glow/purple, /datum/plant_gene/trait/plant_laughter)
 	mutatelist = list (/obj/item/seeds/peas/laugh/peace)
 	reagents_add = list (/datum/reagent/consumable/laughter = 0.05, /datum/reagent/consumable/sugar = 0.05, /datum/reagent/consumable/nutriment = 0.07)
-	rarity = 25 //It actually might make Central Command Officials loosen up a smidge, eh?
+	rarity = 25 //It actually might make Conglomeration of Colonists Officials loosen up a smidge, eh?
 	graft_gene = /datum/plant_gene/trait/plant_laughter
 
 /obj/item/food/grown/laugh

@@ -363,7 +363,7 @@
 	if(!current_turf)
 		return FALSE
 
-	// This doesn't necessarily check that we're at central command,
+	// This doesn't necessarily check that we're at Conglomeration of Colonists,
 	// but it checks for any shuttles which have finished are still in hyperspace
 	// (IE, stuff like the whiteship which fly off into the sunset and "escape")
 	if(is_reserved_level(current_turf.z))

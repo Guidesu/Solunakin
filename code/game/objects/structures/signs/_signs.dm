@@ -144,7 +144,7 @@
 
 /obj/structure/sign/nanotrasen
 	name = "\improper Symphionia logo sign"
-	sign_change_name = "Corporate Logo - Symphionia"
+	sign_change_name = "Conglomeration  Logo - Symphionia"
 	desc = "A sign with the Symphionia logo on it. Glory to Symphionia!"
 	icon_state = "nanotrasen"
 	is_editable = TRUE

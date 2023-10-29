@@ -25,7 +25,7 @@
       new castes and abilities for combat
   - soundadd: several fitting sounds for the xeno menace to scream at you
   - imageadd: xeno sprites from tgmc, credit to the many people who did those
-  - rscadd: The Central Command shuttle dock area has been improved once again over
+  - rscadd: The Conglomeration of Colonists shuttle dock area has been improved once again over
       the last variant.
   - rscadd: Two new recolorable masks have been added to the loadout, a half mask
       respirator, and a sterile mask.
@@ -305,7 +305,7 @@
   - rscdel: Skyrat fishing has been removed in favor of using tg fishing, though fishing
       portals can still be made by upgrading water basins
   PositiveEntropy:
-  - rscadd: Adds the CentVend inside Central Command! You're now able to vend Central
+  - rscadd: Adds the CentVend inside Conglomeration of Colonists! You're now able to vend Central
       Command clothing items for all your commanding needs!
   - rscadd: Re-adds the CentCom Official's suit, making it the default clothing option
       for CentCom Officials! The turtlenecks have instead been made to be the standard

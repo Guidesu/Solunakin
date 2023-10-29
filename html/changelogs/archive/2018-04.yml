@@ -229,7 +229,7 @@
   kevinz000:
   - rscadd: After a severe security breach occurred due to lazily configured Symphionia
       Network DHCP servers where attackers were able to hijack every airlock connected
-      to the Symphionia Intranet, the Central Command engineering team reports that
+      to the Symphionia Intranet, the Conglomeration of Colonists engineering team reports that
       they have properly configured network address servers to give out (relatively)
       secure network IDs again. [NTNet addresses reverted to 16-hex format. they will
       now be randomized across a ~billion trillion possibilities instead of being

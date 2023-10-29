@@ -30,7 +30,7 @@
   SpaceLoveSs13:
   - rscdel: Antag hud for mobs after round end has been removed. Round End report
       still shows antags.
-  - rscadd: Central Command has decided to add restocking units for the Command Outfitting
+  - rscadd: Conglomeration of Colonists has decided to add restocking units for the Command Outfitting
       Station to reward the hardwork of Station Heads.
   - rscadd: All heads can now get their nice cloaks from Command Outfitting Station!
   - bugfix: Command outfitting station can be deconstructed now.
@@ -540,7 +540,7 @@
   zydras:
   - rscadd: DS-2 has been fully retrofitted into a working spaceship and have had
       their ID trims fully updated.
-  - rscadd: DS-2 is now staffed with two Mining Officers and a Corporate Liaison.
+  - rscadd: DS-2 is now staffed with two Mining Officers and a Conglomeration  Liaison.
   - rscadd: Donk Co. has provided DS-2 with all new outfits for most of its members.
   - balance: Many of the DS-2 gear the ship starts with has been either cut, modified
       or rebalanced. No more loot pinata.

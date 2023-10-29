@@ -22,12 +22,12 @@
 	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
 
 /area/station/command/corporate_showroom
-	name = "\improper Corporate Showroom"
+	name = "\improper Conglomeration  Showroom"
 	icon_state = "showroom"
 	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
 
 /area/station/command/corporate_suite
-	name = "\improper Corporate Guest Suite"
+	name = "\improper Conglomeration  Guest Suite"
 	icon_state = "command"
 	sound_environment = SOUND_AREA_WOODFLOOR
 
@@ -91,6 +91,6 @@
 */
 
 /area/station/command/corporate_dock
-	name = "\improper Corporate Private Dock"
+	name = "\improper Conglomeration  Private Dock"
 	icon_state = "command"
 	sound_environment = SOUND_AREA_SMALL_SOFTFLOOR

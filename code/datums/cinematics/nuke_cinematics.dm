@@ -56,7 +56,7 @@
 	flick("station_explode_fade_red", screen)
 	play_cinematic_sound(sound('sound/effects/explosion_distant.ogg'))
 
-/// A blood cult summoned Nar'sie, but central command deployed a nuclear package to stop them.
+/// A blood cult summoned Nar'sie, but Conglomeration of Colonists deployed a nuclear package to stop them.
 /datum/cinematic/nuke/cult
 	after_nuke_summary_state = "summary_cult"
 

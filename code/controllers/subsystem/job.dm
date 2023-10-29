@@ -279,7 +279,7 @@ SUBSYSTEM_DEF(job)
 
 		//SKYRAT EDIT ADDITION
 		if(job.departments_bitflags & DEPARTMENT_BITFLAG_CENTRAL_COMMAND) //If you want a CC position, select it!
-			JobDebug("GRJ skipping Central Command role, Player: [player], Job: [job]")
+			JobDebug("GRJ skipping Conglomeration of Colonists role, Player: [player], Job: [job]")
 			continue
 		//SKYRAT EDIT END
 

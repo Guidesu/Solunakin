@@ -106,7 +106,7 @@
 #define JOB_ERT_JANITOR "Janitorial Response Officer"
 #define JOB_ERT_CLOWN "Entertainment Response Officer"
 //CentCom
-#define JOB_CENTCOM "Central Command"
+#define JOB_CENTCOM "Conglomeration of Colonists"
 #define JOB_CENTCOM_OFFICIAL "CentCom Official"
 #define JOB_CENTCOM_ADMIRAL "Admiral"
 #define JOB_CENTCOM_COMMANDER "CentCom Commander"
@@ -213,7 +213,7 @@
 #define DEPARTMENT_BITFLAG_CAPTAIN (1<<9)
 #define DEPARTMENT_CAPTAIN "Captain"
 #define DEPARTMENT_BITFLAG_CENTRAL_COMMAND (1<<10) //SKYRAT EDIT CHANGE
-#define DEPARTMENT_CENTRAL_COMMAND "Central Command" //SKYRAT EDIT CHANGE
+#define DEPARTMENT_CENTRAL_COMMAND "Conglomeration of Colonists" //SKYRAT EDIT CHANGE
 
 /* Job datum job_flags */
 /// Whether the mob is announced on arrival.

@@ -1,7 +1,7 @@
 /// Dorms Room Papers
 /obj/item/paper/fluff/ruins/waystation/menu
 	name = "This week's food menu"
-	default_raw_text = "Here is what Corporate sent us for this week, The usual.<BR><BR><B>Monday</B> - Pizza and Mac & Cheese<BR><B>Tuesday</B> - Space Carp Sashimi & Sushi<BR><B>ednesday</B> - Garlic-and-oil nizaya & Khinkali<BR><B>Thursday</B> - QM's birthday, Cake and a bunch of Pastries<BR><B>Frida</B>y - Fish & Chips<BR><BR>Plus whatever kind of booze and food that the techies manage to \"accidentally\" steal from the crates (This is a reminder) -Cook"
+	default_raw_text = "Here is what Conglomeration  sent us for this week, The usual.<BR><BR><B>Monday</B> - Pizza and Mac & Cheese<BR><B>Tuesday</B> - Space Carp Sashimi & Sushi<BR><B>ednesday</B> - Garlic-and-oil nizaya & Khinkali<BR><B>Thursday</B> - QM's birthday, Cake and a bunch of Pastries<BR><B>Frida</B>y - Fish & Chips<BR><BR>Plus whatever kind of booze and food that the techies manage to \"accidentally\" steal from the crates (This is a reminder) -Cook"
 
 /obj/item/paper/fluff/ruins/waystation/toilet
 	name = "REMINDER!!"

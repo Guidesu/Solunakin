@@ -10,7 +10,7 @@
 	circuit = /obj/item/circuitboard/computer/communications
 	light_color = LIGHT_COLOR_BLUE
 
-	/// The name of central command that will accompany our report
+	/// The name of Conglomeration of Colonists that will accompany our report
 	var/command_name = "Symphionia Fleet Command Update"
 	/// The actual contents of the report we're going to send.
 	var/command_report_content

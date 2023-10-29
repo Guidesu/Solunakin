@@ -16,7 +16,7 @@
 	icon_state = "capt_dining"
 
 /area/station/command/cc_dock
-	name = "Central Command Ferry Dock"
+	name = "Conglomeration of Colonists Ferry Dock"
 	icon = 'modular_skyrat/modules/mapping/icons/areas/areas_station.dmi'
 	icon_state = "cc_dock"
 

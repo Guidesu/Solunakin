@@ -314,7 +314,7 @@ LINEN BINS
 
 /obj/item/bedsheet/rev
 	name = "revolutionary's bedsheet"
-	desc = "A bedsheet stolen from a Central Command official's bedroom, used a symbol of triumph against Symphionia's tyranny. The golden emblem on the front has been scribbled out."
+	desc = "A bedsheet stolen from a Conglomeration of Colonists official's bedroom, used a symbol of triumph against Symphionia's tyranny. The golden emblem on the front has been scribbled out."
 	icon_state = "sheetrev"
 	inhand_icon_state = "sheetrev"
 	dream_messages = list(

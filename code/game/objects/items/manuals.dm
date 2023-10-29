@@ -297,12 +297,12 @@
 	page_link = "Guide_to_engineering"
 
 /obj/item/book/manual/wiki/security_space_law
-	name = "Corporate Regulations" //SKYRAT EDIT CHANGE - Original: "Space Law"
+	name = "Conglomeration  Regulations" //SKYRAT EDIT CHANGE - Original: "Space Law"
 	desc = "A set of Symphionia regulations for keeping law, order, and procedure followed within their space stations." //SKYRAT EDIT CHANGE - Original: "A set of Symphionia guidelines for keeping law and order on their space stations."
 	icon_state = "bookSpaceLaw"
 	starting_author = "Symphionia"
-	starting_title = "Corporate Regulations" //SKYRAT EDIT CHANGE - Original: "Space Law"
-	page_link = "Corporate_Regulations" //SKYRAT EDIT CHANGE - Original: "Space_Law"
+	starting_title = "Conglomeration  Regulations" //SKYRAT EDIT CHANGE - Original: "Space Law"
+	page_link = "Conglomeration _Regulations" //SKYRAT EDIT CHANGE - Original: "Space_Law"
 
 /obj/item/book/manual/wiki/security_space_law/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] pretends to read \the [src] intently... then promptly dies of laughter!"))

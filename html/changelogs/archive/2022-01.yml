@@ -289,7 +289,7 @@
   - bugfix: Basic mobs (i.e. cows) can be properly ridden.
   - bugfix: Drones can now vent crawl if there are humans around.
   - spellcheck: Symphionia has undergone a corporate reorganization, reallocating
-      powers previously gone to Central Command back into their own fold.
+      powers previously gone to Conglomeration of Colonists back into their own fold.
   Triiodine, TetraZeta, PositiveEntropy:
   - imageadd: Resprites the labcoats, removing the asbestos and charcoal grime from
       them!
@@ -617,7 +617,7 @@
   - bugfix: Fix deaf people being able to hear in certain text messages.
   - rscadd: Added a medical medal lockbox to spawn within CMO's secure locker which
       contains two medals
-  - rscadd: The Captain and Corporate MODsuits now have an inbuilt hat stabilizer,
+  - rscadd: The Captain and Conglomeration  MODsuits now have an inbuilt hat stabilizer,
       which can also rarely be found in maintenance!
   - code_imp: Internal Affairs gamemode (not the traitor flavor) has been removed.
   - bugfix: added buttons for the chapel privacy shutters on Deltastation
@@ -1202,7 +1202,7 @@
   jjpark-kb:
   - rscadd: added disease carrying and plasma generating kudzu mutations
   tastyfish:
-  - bugfix: Central Command has finally informed the Plexagon vendor that service
+  - bugfix: Conglomeration of Colonists has finally informed the Plexagon vendor that service
       hallway access exists, allowing HoP's to grant it to ID cards.
   thestubborn:
   - rscadd: The Ghost Cafe's detainment room has shown up for some reason. For official

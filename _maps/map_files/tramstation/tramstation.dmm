@@ -23027,7 +23027,7 @@
 	pixel_y = 32
 	},
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Symphionia Conglomeration of Colonists. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},

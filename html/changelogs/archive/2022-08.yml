@@ -1050,7 +1050,7 @@
       and are no longer "obstructed" by things such as the barbers locker. Yay?
   - rscdel: On IceBox, in the barber shop, the secure safe was removed. No, we did
       not include any golden combs in there. Stop asking.
-  - bugfix: Central Command should NOW actually have the updated dock area bits.
+  - bugfix: Conglomeration of Colonists should NOW actually have the updated dock area bits.
   Jolly-66:
   - bugfix: The evac shuttle brig section now properly has door access defined on
       its external airlocks. You can no longer enter it if you lack general security

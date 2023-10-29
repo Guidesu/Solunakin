@@ -157,7 +157,7 @@ GLOBAL_LIST_INIT(syndicate_employers, list(
 ///employers that are from nanotrasen
 GLOBAL_LIST_INIT(nanotrasen_employers, list(
 	"Champions of Evil",
-	"Corporate Climber",
+	"Conglomeration  Climber",
 	"Gone Postal",
 	"Internal Affairs Agent",
 	"Legal Trouble",
@@ -175,7 +175,7 @@ GLOBAL_LIST_INIT(hijack_employers, list(
 ///employers who hire agents to do a task and escape... or martyrdom. whatever
 GLOBAL_LIST_INIT(normal_employers, list(
 	"Champions of Evil",
-	"Corporate Climber",
+	"Conglomeration  Climber",
 	"Cybersun Industries",
 	"Donk Corporation",
 	"Gorlex Marauders",

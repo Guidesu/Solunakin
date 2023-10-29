@@ -66,7 +66,7 @@
 /obj/machinery/door/airlock/command{
 	hackProof = 1;
 	id_tag = "scorpliaison";
-	name = "Corporate Liaison"
+	name = "Conglomeration  Liaison"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/structure/cable,
@@ -2226,8 +2226,8 @@
 	name = "syndicate access change console"
 	},
 /obj/item/paper{
-	default_raw_text = "<h1>DS2 Corporate Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Symphionia installations. Reboot of shuttle engines in progress...</p><p>The Sothran Symphionia welcomes you onboard, Corporate Liaison. It is deeply suggested you help our crew via informing them of their corporate investors' goal and to help maintain cohesion. Don't hurt yourself now, and stay winning.</p>";
-	name = "paper- 'DS2 Corporate Report'"
+	default_raw_text = "<h1>DS2 Conglomeration  Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Symphionia installations. Reboot of shuttle engines in progress...</p><p>The Sothran Symphionia welcomes you onboard, Conglomeration  Liaison. It is deeply suggested you help our crew via informing them of their corporate investors' goal and to help maintain cohesion. Don't hurt yourself now, and stay winning.</p>";
+	name = "paper- 'DS2 Conglomeration  Report'"
 	},
 /turf/open/floor/wood/large,
 /area/ruin/space/has_grav/skyrat/interdynefob/bridge/cl)
@@ -2554,7 +2554,7 @@
 /obj/machinery/door/poddoor/shutters{
 	dir = 8;
 	id = "ds2corpliaison";
-	name = "Corporate Liaison Shutters"
+	name = "Conglomeration  Liaison Shutters"
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/skyrat/interdynefob/bridge/cl)
@@ -6845,7 +6845,7 @@
 /obj/machinery/button/door/directional/north{
 	desc = "Keep out the paperwork.";
 	id = "scorpliaison";
-	name = "Corporate Liaison's room bolt";
+	name = "Conglomeration  Liaison's room bolt";
 	normaldoorcontrol = 1;
 	req_access = list("syndicate_leader");
 	specialfunctions = 4
@@ -10502,7 +10502,7 @@
 /obj/machinery/door/poddoor/shutters{
 	dir = 8;
 	id = "ds2corpliaison";
-	name = "Corporate Liaison Shutters"
+	name = "Conglomeration  Liaison Shutters"
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/skyrat/interdynefob/bridge/cl)

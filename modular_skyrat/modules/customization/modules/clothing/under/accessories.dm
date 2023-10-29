@@ -8,7 +8,7 @@
 	attachment_slot = CHEST
 
 	var/stored_name
-	var/badge_string = "Corporate Security"
+	var/badge_string = "Conglomeration  Security"
 
 	drop_sound = 'modular_skyrat/master_files/sound/items/drop/ring.ogg'
 	pickup_sound = 'modular_skyrat/master_files/sound/items/pickup/ring.ogg'

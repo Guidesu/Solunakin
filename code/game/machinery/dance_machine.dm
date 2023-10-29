@@ -117,7 +117,7 @@
 		user.playsound_local(src, 'sound/misc/compiler-failure.ogg', 25, TRUE)
 		return UI_CLOSE
 	if(!songs.len && !isobserver(user))
-		to_chat(user,span_warning("Error: No music tracks have been authorized for your station. Petition Central Command to resolve this issue."))
+		to_chat(user,span_warning("Error: No music tracks have been authorized for your station. Petition Conglomeration of Colonists to resolve this issue."))
 		user.playsound_local(src, 'sound/misc/compiler-failure.ogg', 25, TRUE)
 		return UI_CLOSE
 	return ..()

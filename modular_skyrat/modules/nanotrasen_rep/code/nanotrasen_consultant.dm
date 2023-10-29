@@ -5,7 +5,7 @@
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Central Command"
+	supervisors = "Conglomeration of Colonists"
 	minimal_player_age = 14
 	exp_requirements = 600
 	exp_required_type = EXP_TYPE_CREW
@@ -74,14 +74,14 @@
 
 /obj/item/radio/headset/heads/nanotrasen_consultant
 	name = "\proper the Symphionia consultant's headset"
-	desc = "An official Central Command headset."
+	desc = "An official Conglomeration of Colonists headset."
 	icon_state = "cent_headset"
 	keyslot = new /obj/item/encryptionkey/headset_com
 	keyslot2 = new /obj/item/encryptionkey/headset_cent
 
 /obj/item/radio/headset/heads/nanotrasen_consultant/alt
 	name = "\proper the Symphionia consultant's bowman headset"
-	desc = "An official Central Command headset. Protects ears from flashbangs."
+	desc = "An official Conglomeration of Colonists headset. Protects ears from flashbangs."
 	icon_state = "cent_headset_alt"
 
 /obj/item/radio/headset/heads/nanotrasen_consultant/alt/Initialize(mapload)

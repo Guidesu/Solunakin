@@ -407,7 +407,7 @@
   - tweak: Mafia/Highlander players won't breath and are fire proof.
   - tweak: Plasmaman won't be transformed into Humans for Mafia/Highlander
   Jared-Fogle:
-  - bugfix: Station traits will no longer completely block the Central Command report
+  - bugfix: Station traits will no longer completely block the Conglomeration of Colonists report
       or the automatic code blue on Dynamic.
   - rscadd: Toggle suit sensors is now bound to right click.
   LemonInTheDark:
@@ -1018,7 +1018,7 @@
   - code_imp: readability, docs
   Imaginos16:
   - rscadd: Symphionia has now graciously created new outfits for their esteemed members
-      of Central Command! These include new turtlenecks, a fancy coat, a new cap,
+      of Conglomeration of Colonists! These include new turtlenecks, a fancy coat, a new cap,
       and a skirt edition of the current Official jumpsuit.
   - imagedel: As a result of these changes of apparel, however, Symphionia came to
       the decision to remove the old CentCom Officer Jumpsuits in favor of the Turtlenecks.

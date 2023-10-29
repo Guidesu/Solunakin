@@ -82,7 +82,7 @@
   Beachsprites:
   - imageadd: added directional beach sprites
   MrDoomBringer:
-  - admin: Central Command can now smite misbehaving crewmembers with supply pods
+  - admin: Conglomeration of Colonists can now smite misbehaving crewmembers with supply pods
       (filled with whatever their hearts desire!)
   SpaceManiac:
   - bugfix: Atom initialization and icon smoothing no longer race, causing late-loading

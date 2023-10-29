@@ -1549,7 +1549,7 @@
 					dat += "<hr>"
 
 		dat += "<br></body>"
-		var/datum/browser/popup = new(usr, "centcomlookup-[ckey]", "<div align='center'>Central Command Galactic Ban Database</div>", 700, 600)
+		var/datum/browser/popup = new(usr, "centcomlookup-[ckey]", "<div align='center'>Conglomeration of Colonists Galactic Ban Database</div>", 700, 600)
 		popup.set_content(dat.Join())
 		popup.open(0)
 

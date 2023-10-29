@@ -132,10 +132,10 @@ export const PortraitPicker = (props, context) => {
             </Flex.Item>
             <Flex.Item>
               <NoticeBox danger>
-                WARNING: While Central Command loves art as much as you do,
-                choosing erotic art will lead to severe consequences.
-                Additionally, Central Command reserves the right to request you
-                change your display portrait, for any reason.
+                WARNING: While Conglomeration of Colonists loves art as much as
+                you do, choosing erotic art will lead to severe consequences.
+                Additionally, Conglomeration of Colonists reserves the right to
+                request you change your display portrait, for any reason.
               </NoticeBox>
             </Flex.Item>
           </Flex.Item>

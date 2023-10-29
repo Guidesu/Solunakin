@@ -255,7 +255,7 @@
 			message_admins("[ertemplate.polldesc] has spawned with the mission: [ertemplate.mission]")
 			//SKYRAT EDIT ADDITION BEGIN
 			if(ertemplate.notify_players)
-				priority_announce("Central command has responded to your request for a CODE [uppertext(ertemplate.code)] Emergency Response Team and have confirmed one to be enroute.", "ERT Request", ANNOUNCER_ERTYES)
+				priority_announce("Conglomeration of Colonists has responded to your request for a CODE [uppertext(ertemplate.code)] Emergency Response Team and have confirmed one to be enroute.", "ERT Request", ANNOUNCER_ERTYES)
 			//SKYRAT EDIT END
 		//Open the Armory doors
 		if(ertemplate.opendoors)

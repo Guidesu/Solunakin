@@ -78,9 +78,9 @@
 
 	if(isnull(sender_override))
 		if(length(title) > 0)
-			GLOB.news_network.submit_article(title + "<br><br>" + text, "Central Command", "Station Announcements", null)
+			GLOB.news_network.submit_article(title + "<br><br>" + text, "Conglomeration of Colonists", "Station Announcements", null)
 		else
-			GLOB.news_network.submit_article(text, "Central Command Update", "Station Announcements", null)
+			GLOB.news_network.submit_article(text, "Conglomeration of Colonists Update", "Station Announcements", null)
 
 /proc/print_command_report(text = "", title = null, announce=TRUE)
 	if(!title)

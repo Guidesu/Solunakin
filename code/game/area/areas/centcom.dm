@@ -13,7 +13,7 @@
 
 // This is just to define the category
 /area/centcom/central_command_areas
-	name = "Central Command Areas"
+	name = "Conglomeration of Colonists Areas"
 
 /area/centcom/central_command_areas/control
 	name = "CentCom Central Control"

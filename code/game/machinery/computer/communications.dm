@@ -260,7 +260,7 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 				to_chat(usr, span_danger("Message transmitted to Symphionia Command."))
 			else
 				message_centcom(message, usr)
-				to_chat(usr, span_notice("Message transmitted to Central Command."))
+				to_chat(usr, span_notice("Message transmitted to Conglomeration of Colonists."))
 
 			var/associates = (emagged || syndicate) ? "the Symphionia": "CentCom"
 			usr.log_talk(message, LOG_SAY, tag = "message to [associates]")

@@ -199,13 +199,13 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/ai_module))
 		return
 	owner.playsound_local(owner, 'sound/misc/bloblarm.ogg', 50, 0, use_reverb = FALSE)
 	to_chat(owner, span_userdanger("!!! UNAUTHORIZED SELF-DESTRUCT ACCESS !!!"))
-	to_chat(owner, span_boldannounce("This is a class-3 security violation. This incident will be reported to Central Command."))
+	to_chat(owner, span_boldannounce("This is a class-3 security violation. This incident will be reported to Conglomeration of Colonists."))
 	for(var/i in 1 to 3)
 		sleep(2 SECONDS)
 		if(QDELETED(owner) || !isturf(owner_AI.loc))
 			active = FALSE
 			return
-		to_chat(owner, span_boldannounce("Sending security report to Central Command.....[rand(0, 9) + (rand(20, 30) * i)]%"))
+		to_chat(owner, span_boldannounce("Sending security report to Conglomeration of Colonists.....[rand(0, 9) + (rand(20, 30) * i)]%"))
 	sleep(0.3 SECONDS)
 	if(QDELETED(owner) || !isturf(owner_AI.loc))
 		active = FALSE

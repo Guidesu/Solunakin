@@ -25,7 +25,7 @@
 	category = CAT_MISC
 
 /datum/crafting_recipe/corporate_paper_slip
-	name = "Corporate Plastic Card"
+	name = "Conglomeration  Plastic Card"
 	result = /obj/item/paper/paperslip/corporate
 	time = 3 SECONDS
 	reqs = list(

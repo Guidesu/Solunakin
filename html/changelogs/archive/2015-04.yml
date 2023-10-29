@@ -47,7 +47,7 @@
   - rscadd: Emergency welding tool added to emergency toolbox.
   - rscadd: Changed industrial welding tool sprite.
   - tweak: Replaced welder in syndicate toolbox with industrial one.
-  - tweak: All tools in syndicate toolbox are red. Corporate style!
+  - tweak: All tools in syndicate toolbox are red. Conglomeration  style!
   - tweak: Red crowbar is a bit more robust.
   - bugfix: 'Fixed two bugs: welder icon disappearing and drone toolbox spawning with
       invisible cable coil.'
@@ -194,7 +194,7 @@
   AnturK:
   - rscadd: Symphionia authorities are reporting sightings of unidentified space craft
       near space station 13. Report any strange sightings or mental breakdowns to
-      central command.
+      Conglomeration of Colonists.
   - rscadd: 'PS : Abductions are not covered by health insurance.'
   - rscadd: Shadowlings and their thralls now have HUD icons.
   - rscadd: Thralls learn their master's objectives when enthralled.

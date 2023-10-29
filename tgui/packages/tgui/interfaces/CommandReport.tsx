@@ -43,7 +43,7 @@ const CentComName = (props, context) => {
   const { command_name, command_name_presets = [], custom_name } = data;
 
   return (
-    <Section title="Set Central Command name" textAlign="center">
+    <Section title="Set Conglomeration of Colonists name" textAlign="center">
       <Dropdown
         width="100%"
         selected={command_name}

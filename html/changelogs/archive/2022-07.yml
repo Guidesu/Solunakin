@@ -526,7 +526,7 @@
   Guillaume Prata:
   - bugfix: Roller beds can actually fold when right clicked now.
   Jolly:
-  - rscadd: The Central Command evac shuttle dock has been remapped.
+  - rscadd: The Conglomeration of Colonists evac shuttle dock has been remapped.
   - qol: The Interlink outside areas are now properly lighted. No more florescent
       tubes!
   - qol: On the interlink, some of the late join spots have been changed. Nothing
@@ -658,7 +658,7 @@
   - balance: Two of secmed's firefly gun case's lethal magazines were replaced with
       a rubber variant.
   Jolly:
-  - bugfix: At Central Command, Symphionia's elite architects have noticed that they
+  - bugfix: At Conglomeration of Colonists, Symphionia's elite architects have noticed that they
       built a door inside a window outside the Thunderdome and have decided to remove
       it.
   LordVollkorn / Gage Gaebler:
@@ -1036,7 +1036,7 @@
   Stalkeros, Lukaster42 for making sure former doesn't starve to death.:
   - rscadd: Adds six NRI-themed posters to contraband poster rotation.
   Tastyfish:
-  - bugfix: Central Command finally gave the orderly the correct computer console
+  - bugfix: Conglomeration of Colonists finally gave the orderly the correct computer console
       case on Metastation.
   Zenitheevee:
   - rscadd: Adds more shuttle to the P-T shuttle.

@@ -56,7 +56,7 @@
   - bugfix: Fixed certain pens breaking painting on a canvas because of their peculiar
       colors.
   - bugfix: mechs will now show in their tabs equippable equipment as intended
-  - imageadd: 'Symphionia has once more updated its legendary Central Command Wardrobe,
+  - imageadd: 'Symphionia has once more updated its legendary Conglomeration of Colonists Wardrobe,
       improving upon its designs even further! Expansion: Symphionia has also added
       a new outfit for Special Ops Officers to enjoy, instead of a simple leather
       jacket: The CentCom Officer''s Coat!'
@@ -279,7 +279,7 @@
   - rscadd: single replacement syringe gun crate
   YakumoChen:
   - balance: Department Guards need working ears, eyes, and Common literacy.
-  - bugfix: Corporate Regulations can finally be read in-game again
+  - bugfix: Conglomeration  Regulations can finally be read in-game again
   Zonespace27:
   - rscadd: Added a way to add your character's art to your close examine profile,
       called a "Headshot". Provided you have donator or veteran crew status, you can
@@ -341,7 +341,7 @@
       use
 2022-04-11:
   Ebin-Halcyon:
-  - imageadd: Central command uniforms have been refitted to fit with digitigrade
+  - imageadd: Conglomeration of Colonists uniforms have been refitted to fit with digitigrade
       legs
   Gandalf2k15:
   - balance: The T-90 no longer comes with a mag installed.

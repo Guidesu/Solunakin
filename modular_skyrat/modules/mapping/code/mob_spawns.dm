@@ -291,7 +291,7 @@
 		)
 
 /datum/outfit/ds2/syndicate_command/corporateliaison
-	name = "DS-2 Corporate Liasion"
+	name = "DS-2 Conglomeration  Liasion"
 	uniform = /obj/item/clothing/under/syndicate/sniper
 	head = /obj/item/clothing/head/fedora
 	shoes = /obj/item/clothing/shoes/laceup

@@ -82,7 +82,7 @@
 		to_chat(user,span_warning("Error: Access Denied."))
 		return UI_CLOSE
 	if(!SSjukeboxes.songs.len && !isobserver(user))
-		to_chat(user,span_warning("Error: No music tracks have been authorized for your station. Petition Central Command to resolve this issue."))
+		to_chat(user,span_warning("Error: No music tracks have been authorized for your station. Petition Conglomeration of Colonists to resolve this issue."))
 		return UI_CLOSE
 	return ..()
 

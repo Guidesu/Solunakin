@@ -42,14 +42,14 @@
 
 /datum/bounty/item/assistant/toolbox
 	name = "Toolboxes"
-	description = "There's an absence of robustness at Central Command. Hurry up and ship some toolboxes as a solution."
+	description = "There's an absence of robustness at Conglomeration of Colonists. Hurry up and ship some toolboxes as a solution."
 	reward = CARGO_CRATE_VALUE * 4
 	required_count = 6
 	wanted_types = list(/obj/item/storage/toolbox = TRUE)
 
 /datum/bounty/item/assistant/statue
 	name = "Statue"
-	description = "Central Command would like to commision an artsy statue for the lobby. Ship one out, when possible."
+	description = "Conglomeration of Colonists would like to commision an artsy statue for the lobby. Ship one out, when possible."
 	reward = CARGO_CRATE_VALUE * 4
 	wanted_types = list(/obj/structure/statue = TRUE)
 
@@ -131,14 +131,14 @@
 
 /datum/bounty/item/assistant/potted_plants
 	name = "Potted Plants"
-	description = "Central Command is looking to commission a new BirdBoat-class station. You've been ordered to supply the potted plants."
+	description = "Conglomeration of Colonists is looking to commission a new BirdBoat-class station. You've been ordered to supply the potted plants."
 	reward = CARGO_CRATE_VALUE * 4
 	required_count = 8
 	wanted_types = list(/obj/item/kirbyplants = TRUE)
 
 /datum/bounty/item/assistant/monkey_cubes
 	name = "Monkey Cubes"
-	description = "Due to a recent genetics accident, Central Command is in serious need of monkeys. Your mission is to ship monkey cubes."
+	description = "Due to a recent genetics accident, Conglomeration of Colonists is in serious need of monkeys. Your mission is to ship monkey cubes."
 	reward = CARGO_CRATE_VALUE * 4
 	required_count = 3
 	wanted_types = list(/obj/item/food/monkeycube = TRUE)

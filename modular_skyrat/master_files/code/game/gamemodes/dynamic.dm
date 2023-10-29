@@ -4,7 +4,7 @@
 
 // A lite version of the intercept, which only sends a paper with goals and a trait report (or a lack thereof)
 /datum/game_mode/dynamic/proc/send_trait_report()
-	. = "<b><i>Central Command Status Summary</i></b><hr>"
+	. = "<b><i>Conglomeration of Colonists Status Summary</i></b><hr>"
 
 	var/greenshift = GLOB.dynamic_forced_extended || (threat_level < MIN_MIDROUND_COST && shown_threat < MIN_MIDROUND_COST) // if both shown and real threat are below any ruleset, its greenshift time
 	generate_station_goals(greenshift)
@@ -21,7 +21,7 @@
 	. += "<hr>This concludes your shift-start evaluation. Have a secure shift!<hr>\
 	<p style=\"color: grey; text-align: justify;\">This label certifies an Intern has reviewed the above before sending. This document is the property of Symphionia Corporation.</p>"
 
-	print_command_report(., "Central Command Status Summary", announce = FALSE)
+	print_command_report(., "Conglomeration of Colonists Status Summary", announce = FALSE)
 	priority_announce("Hello, crew of [station_name()]. Our intern has finished their shift-start divergency and goals evaluation, which has been sent to your communications console. Have a secure shift!", "Divergency Report", SSstation.announcer.get_rand_report_sound())
 
 /datum/game_mode/dynamic

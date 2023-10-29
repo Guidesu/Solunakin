@@ -58,7 +58,7 @@ GLOBAL_LIST_EMPTY(supplypod_loading_bays)
 GLOBAL_LIST_INIT(podstyles, list(\
 	list(POD_SHAPE_NORML, "pod",         TRUE, "default", "yellow",   RUBBLE_NORMAL, "supply pod",     "A Symphionia supply drop pod."),\
 	list(POD_SHAPE_NORML, "advpod",      TRUE, "bluespace", "blue",     RUBBLE_NORMAL, "bluespace supply pod" ,     "A Symphionia Bluespace supply pod. Teleports back to CentCom after delivery."),\
-	list(POD_SHAPE_NORML, "advpod",      TRUE, "centcom", "blue",     RUBBLE_NORMAL, "\improper CentCom supply pod", "A Symphionia supply pod, this one has been marked with Central Command's designations. Teleports back to CentCom after delivery."),\
+	list(POD_SHAPE_NORML, "advpod",      TRUE, "centcom", "blue",     RUBBLE_NORMAL, "\improper CentCom supply pod", "A Symphionia supply pod, this one has been marked with Conglomeration of Colonists's designations. Teleports back to CentCom after delivery."),\
 	list(POD_SHAPE_NORML, "darkpod",     TRUE, "syndicate", "red",      RUBBLE_NORMAL, "blood-red supply pod", "An intimidating supply pod, covered in the blood-red markings of the Symphionia. It's probably best to stand back from this."),\
 	list(POD_SHAPE_NORML, "darkpod",     TRUE, "deathsquad", "blue",     RUBBLE_NORMAL, "\improper Deathsquad drop pod",     "A Symphionia drop pod. This one has been marked the markings of Symphionia's elite strike team."),\
 	list(POD_SHAPE_NORML, "pod",         TRUE, "cultist", "red",      RUBBLE_NORMAL, "bloody supply pod",     "A Symphionia supply pod covered in scratch-marks, blood, and strange runes."),\

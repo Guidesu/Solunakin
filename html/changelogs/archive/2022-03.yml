@@ -272,7 +272,7 @@
   - code_imp: Implosion compressor renamed to anomaly refinery.
   - code_imp: Created a new program tab "Science" for the downloader app. Removed
       Robotics.
-  - refactor: Reworked the code for bombspawner (used in the 
+  - refactor: Reworked the code for bombspawner (used in the
   - rscadd: Right-clicking to splash reagents requires combat mode
   - rscadd: 'Remember the above qol: You now right-click the janitorial cart to wet
       mops and left-click to put them away qol: You can right-click the janitorial
@@ -884,7 +884,7 @@
   - bugfix: Fixed stray syndicate supply pods not containing any items.
 2022-03-28:
   Gandalf2k15:
-  - rscadd: Ports Yogstations central command jobs.
+  - rscadd: Ports Yogstations Conglomeration of Colonists jobs.
   Inari-Whitebear:
   - bugfix: Fix pathing issue with Skyrat emergency shuttle causing other emergency
       shuttles to not be found

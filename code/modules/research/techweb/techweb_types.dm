@@ -25,7 +25,7 @@
  */
 /datum/techweb/admin
 	id = "ADMIN"
-	organization = "Central Command"
+	organization = "Conglomeration of Colonists"
 
 /datum/techweb/admin/New()
 	. = ..()

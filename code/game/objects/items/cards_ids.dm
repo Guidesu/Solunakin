@@ -734,7 +734,7 @@
 			. += "The [linked_dept.account_holder] linked to the ID reports a balance of [linked_dept.account_balance] cr."
 
 	if(HAS_TRAIT(user, TRAIT_ID_APPRAISER))
-		. += HAS_TRAIT(src, TRAIT_JOB_FIRST_ID_CARD) ? span_boldnotice("Hmm... yes, this ID was issued from Central Command!") : span_boldnotice("This ID was created in this sector, not by Central Command.")
+		. += HAS_TRAIT(src, TRAIT_JOB_FIRST_ID_CARD) ? span_boldnotice("Hmm... yes, this ID was issued from Conglomeration of Colonists!") : span_boldnotice("This ID was created in this sector, not by Conglomeration of Colonists.")
 		if(HAS_TRAIT(src, TRAIT_TASTEFULLY_THICK_ID_CARD) && (user.is_holding(src) || (user.CanReach(src) && user.put_in_hands(src, ignore_animation = FALSE))))
 			ADD_TRAIT(src, TRAIT_NODROP, "psycho")
 			. += span_hypnophrase("Look at that subtle coloring... The tasteful thickness of it. Oh my God, it even has a watermark...")
@@ -1111,7 +1111,7 @@
 
 /obj/item/card/id/advanced/centcom
 	name = "\improper CentCom ID"
-	desc = "An ID straight from Central Command."
+	desc = "An ID straight from Conglomeration of Colonists."
 	icon_state = "card_centcom"
 	assigned_icon_state = "assigned_centcom"
 	registered_name = JOB_CENTCOM

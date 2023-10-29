@@ -91,7 +91,7 @@
 	worn_icon_state = "armadyne_belt"
 
 /datum/outfit/armadyne_rep
-	name = "Armadyne Corporate Representative"
+	name = "Armadyne Conglomeration  Representative"
 
 	suit_store = /obj/item/modular_computer/pda/security
 	ears = /obj/item/radio/headset/headset_cent/commander
@@ -115,7 +115,7 @@
 
 
 /datum/outfit/armadyne_security
-	name = "Armadyne Corporate Security"
+	name = "Armadyne Conglomeration  Security"
 
 	ears = /obj/item/radio/headset/headset_sec/alt
 	uniform = /obj/item/clothing/under/rank/security/peacekeeper/armadyne/tactical
@@ -138,7 +138,7 @@
 
 
 /datum/outfit/armadyne_security/commander
-	name = "Armadyne Corporate Security Commander"
+	name = "Armadyne Conglomeration  Security Commander"
 
 	ears = /obj/item/radio/headset/headset_sec/alt
 	uniform = /obj/item/clothing/under/rank/security/peacekeeper/armadyne/tactical
@@ -163,7 +163,7 @@
 
 
 /datum/outfit/armadyne_security/high_alert
-	name = "Armadyne Corporate Security (High Alert)"
+	name = "Armadyne Conglomeration  Security (High Alert)"
 	belt = /obj/item/storage/belt/security/webbing/peacekeeper/armadyne
 	suit_store = /obj/item/gun/ballistic/automatic/sol_rifle
 	backpack_contents = list(
@@ -175,7 +175,7 @@
 
 
 /datum/outfit/armadyne_security/commander/high_alert
-	name = "Armadyne Corporate Security Commander (High Alert)"
+	name = "Armadyne Conglomeration  Security Commander (High Alert)"
 	suit_store = /obj/item/gun/ballistic/automatic/sol_rifle
 	backpack_contents = list(
 		/obj/item/melee/baton/telescopic,
@@ -194,7 +194,7 @@
 	wildcard_slots = WILDCARD_LIMIT_CENTCOM
 
 /datum/id_trim/centcom/armadyne
-	assignment = "Armadyne Corporate"
+	assignment = "Armadyne Conglomeration "
 	trim_state = "trim_ert_commander"
 
 /datum/id_trim/centcom/armadyne/New()
@@ -206,14 +206,14 @@
 	trim = /datum/id_trim/centcom/armadyne/security
 
 /datum/id_trim/centcom/armadyne/security
-	assignment = "Armadyne Corporate Security Detail"
+	assignment = "Armadyne Conglomeration  Security Detail"
 	trim_state = "trim_ert_commander"
 
 /obj/item/card/id/advanced/armadyne/agent
 	trim = /datum/id_trim/centcom/armadyne/agent
 
 /datum/id_trim/centcom/armadyne/agent
-	assignment = "Armadyne Corporate Directorate"
+	assignment = "Armadyne Conglomeration  Directorate"
 	trim_state = "trim_ert_commander"
 
 /datum/outfit/armadyne_rep/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -227,26 +227,26 @@
 	..()
 
 /obj/item/card/id/armadyne/corpo/security
-	assignment = "Armadyne Corporate Security"
+	assignment = "Armadyne Conglomeration  Security"
 
 
 /datum/antagonist/ert/armadyne
-	name = "Armadyne Corporate Security"
+	name = "Armadyne Conglomeration  Security"
 	outfit = /datum/outfit/armadyne_security
 	role = "Security"
 
 /datum/antagonist/ert/armadyne/high_alert
-	name = "Armadyne Corporate Security (High Alert)"
+	name = "Armadyne Conglomeration  Security (High Alert)"
 	outfit = /datum/outfit/armadyne_security/high_alert
 	role = "Security"
 
 /datum/antagonist/ert/armadyne/leader
-	name = "Armadyne Corporate Security Commander"
+	name = "Armadyne Conglomeration  Security Commander"
 	outfit = /datum/outfit/armadyne_security/commander
 	role = "Commander"
 
 /datum/antagonist/ert/armadyne/leader/high_alert
-	name = "Armadyne Corporate Security Commander (High Alert)"
+	name = "Armadyne Conglomeration  Security Commander (High Alert)"
 	outfit = /datum/outfit/armadyne_security/commander/high_alert
 	role = "Commander"
 

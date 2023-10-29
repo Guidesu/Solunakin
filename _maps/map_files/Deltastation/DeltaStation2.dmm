@@ -10751,7 +10751,7 @@
 	},
 /obj/machinery/button/door/directional/north{
 	id = "corporatelounge";
-	name = "Corporate Lounge Shutters";
+	name = "Conglomeration  Lounge Shutters";
 	pixel_x = -4;
 	pixel_y = 26
 	},
@@ -31824,7 +31824,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 1;
 	id = "corporatelounge";
-	name = "Corporate Lounge Shutters"
+	name = "Conglomeration  Lounge Shutters"
 	},
 /turf/open/floor/plating,
 /area/station/command/corporate_showroom)
@@ -42180,7 +42180,7 @@
 "kvF" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
-	name = "Corporate Lounge"
+	name = "Conglomeration  Lounge"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -42477,7 +42477,7 @@
 "kzp" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
-	name = "Corporate Lounge"
+	name = "Conglomeration  Lounge"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "showroom"
@@ -44859,7 +44859,7 @@
 	pixel_x = 7
 	},
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Symphionia Conglomeration of Colonists. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -45172,7 +45172,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "corporatelounge";
-	name = "Corporate Lounge Shutters"
+	name = "Conglomeration  Lounge Shutters"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -55320,7 +55320,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 1;
 	id = "corporatelounge";
-	name = "Corporate Lounge Shutters"
+	name = "Conglomeration  Lounge Shutters"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -56495,7 +56495,7 @@
 /obj/structure/table/wood,
 /obj/structure/cable,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Symphionia Conglomeration of Colonists. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -68976,7 +68976,7 @@
 "rme" = (
 /obj/structure/table/wood,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Symphionia Conglomeration of Colonists. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -73844,7 +73844,7 @@
 /area/station/commons/fitness/recreation)
 "swR" = (
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Symphionia Conglomeration of Colonists. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -93595,7 +93595,7 @@
 "xsU" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
-	name = "Corporate Lounge"
+	name = "Conglomeration  Lounge"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "showroom"

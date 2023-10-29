@@ -71,7 +71,7 @@
 	var/area/fake_summon_area_type = pick(GLOB.the_station_areas - hallucinator_area.type)
 	var/area/fake_summon_area = GLOB.areas_by_type[fake_summon_area_type]
 
-	to_chat(hallucinator, span_priorityannounce("Central Command Higher Dimensional Affairs"))
+	to_chat(hallucinator, span_priorityannounce("Conglomeration of Colonists Higher Dimensional Affairs"))
 	to_chat(hallucinator, span_priorityalert("Figments from an eldritch god are being summoned by [totally_real_cult_leader.real_name] \
 		into [fake_summon_area] from an unknown dimension. Disrupt the ritual at all costs!"))
 

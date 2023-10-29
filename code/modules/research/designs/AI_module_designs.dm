@@ -167,8 +167,8 @@
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design/board/corporate_module
-	name = "Corporate Module"
-	desc = "Allows for the construction of a Corporate AI Core Module."
+	name = "Conglomeration  Module"
+	desc = "Allows for the construction of a Conglomeration  AI Core Module."
 	id = "corporate_module"
 	materials = list(/datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/diamond = SHEET_MATERIAL_AMOUNT, /datum/material/bluespace = HALF_SHEET_MATERIAL_AMOUNT)
 	build_path = /obj/item/ai_module/core/full/corp

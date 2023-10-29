@@ -1,9 +1,9 @@
 /// The default command report announcement sound.
 #define DEFAULT_ANNOUNCEMENT_SOUND "default_announcement"
 
-/// Preset central command names to chose from for centcom reports.
+/// Preset Conglomeration of Colonists names to chose from for centcom reports.
 #define CENTCOM_PRESET "Higher Council"
-#define SYNDICATE_PRESET "The Symphionia'S Council"
+#define SYNDICATE_PRESET "The Symphionian Council"
 #define WIZARD_PRESET "The Magicis Federation"
 #define CUSTOM_PRESET "Custom Command Name"
 
@@ -15,12 +15,12 @@
 	if(!check_rights(R_ADMIN))
 		return
 
-	var/input = input(usr, "Please input a new name for Central Command.", "What?", "") as text|null
+	var/input = input(usr, "Please input a new name for Conglomeration of Colonists.", "What?", "") as text|null
 	if(!input)
 		return
 	change_command_name(input)
-	message_admins("[key_name_admin(src)] has changed Central Command's name to [input]")
-	log_admin("[key_name(src)] has changed the Central Command name to: [input]")
+	message_admins("[key_name_admin(src)] has changed Conglomeration of Colonists's name to [input]")
+	log_admin("[key_name(src)] has changed the Conglomeration of Colonists name to: [input]")
 
 /// Verb to open the create command report window and send command reports.
 /client/proc/cmd_admin_create_centcom_report()
@@ -38,7 +38,7 @@
 /datum/command_report_menu
 	/// The mob using the UI.
 	var/mob/ui_user
-	/// The name of central command that will accompany our report
+	/// The name of Conglomeration of Colonists that will accompany our report
 	var/command_name = CENTCOM_PRESET
 	/// Whether we are using a custom name instead of a preset.
 	var/custom_name

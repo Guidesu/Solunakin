@@ -48,7 +48,7 @@
 	icon_state = "syndie-control"
 
 /area/ruin/space/has_grav/skyrat/interdynefob/bridge/cl
-	name = "DS-2 Corporate Liaison's Office"
+	name = "DS-2 Conglomeration  Liaison's Office"
 	sound_environment = SOUND_AREA_WOODFLOOR
 
 /area/ruin/space/has_grav/skyrat/interdynefob/bridge/admiral

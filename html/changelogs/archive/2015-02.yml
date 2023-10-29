@@ -72,7 +72,7 @@
   - bugfix: You can now spam the 'Ready' button as much as you want without it setting
       you 'Not ready' again.
   Dorsidwarf:
-  - rscadd: Added the ability to call Central Command for the nuclear authentication
+  - rscadd: Added the ability to call Conglomeration of Colonists for the nuclear authentication
       codes. This requires a captain-level ID and admin approval, and warns the crew.
   Gun Hog:
   - tweak: E.X.P.E.R.I-MENTOR meteor storm event replaced with a fireball that targets

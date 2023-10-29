@@ -73,7 +73,7 @@
 
 /datum/id_trim/syndicom/skyrat/ds2/corporateliasion // DS2 HoP
 	trim_icon = 'modular_skyrat/master_files/icons/obj/card.dmi'
-	assignment = "DS-2 Corporate Liaison"
+	assignment = "DS-2 Conglomeration  Liaison"
 	trim_state = "trim_ds2corporateliaison"
 	sechud_icon_state = SECHUD_DS2_CORPLIAISON
 	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS, ACCESS_SYNDICATE_LEADER)

@@ -441,7 +441,7 @@
       alert at start of shift.
 2022-09-12:
   GoldenAlpharex:
-  - bugfix: Corporate sofa corners have been exorcised and will no longer engulf anyone
+  - bugfix: Conglomeration  sofa corners have been exorcised and will no longer engulf anyone
       that sits on them while they're in the L orientation.
   Nari Harimoto:
   - bugfix: you can now rotate machines even when the room has no power again
@@ -948,7 +948,7 @@
   nevimer:
   - code_imp: Overrides pointing code to add a timer on pointing.
   "san7890, kugamo@\_ParadiseSS13":
-  - rscadd: Symphionia had a loose shipping container hit the hull of Central Command
+  - rscadd: Symphionia had a loose shipping container hit the hull of Conglomeration of Colonists
       from one "Station P", so they just decided to pour those into the station's
       autodrobes.
   theOOZ:
@@ -974,7 +974,7 @@
       fake alerts, fake sounds, and more. Check the VV dropdown.
   OrionTheFox:
   - bugfix: After several failed attempts, Symphionia has simply begun outsourcing
-      the printing of their Corporate Regulations (alongside plenty of NDAs of course).
+      the printing of their Conglomeration  Regulations (alongside plenty of NDAs of course).
       Expect the booklets to actually have words from now on!
   Paxilmaniac:
   - rscdel: The automapper delta prison has been removed, we will instead just use

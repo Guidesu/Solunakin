@@ -4853,7 +4853,7 @@
 "ckV" = (
 /turf/closed/indestructible/fakedoor{
 	desc = "Why would you want to go back, you just got here!";
-	name = "Central Command Security Dock"
+	name = "Conglomeration of Colonists Security Dock"
 	},
 /area/centcom/interlink)
 "ckY" = (
@@ -6031,7 +6031,7 @@
 "fov" = (
 /turf/closed/indestructible/fakedoor{
 	desc = "Why would you want to go back, you just got here!";
-	name = "Central Command Dock"
+	name = "Conglomeration of Colonists Dock"
 	},
 /area/centcom/interlink)
 "foI" = (

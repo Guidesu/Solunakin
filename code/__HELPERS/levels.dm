@@ -26,7 +26,7 @@
  * * Nullspace counts as "not a planet", so you may want to check that separately.
  * * The mining z-level (Lavaland) is always considered a planet.
  * * The station z-level is considered a planet if the map config says so.
- * * Central Command is always not a planet.
+ * * Conglomeration of Colonists is always not a planet.
  * * Symphionia recon outpost is always on a planet.
  *
  * Returns TRUE if we are on a planet.
@@ -49,7 +49,7 @@
 		return SSmapping.is_planetary()
 
 	if(is_centcom_level(what_turf.z))
-		// Central Command is definitely in space
+		// Conglomeration of Colonists is definitely in space
 		return FALSE
 
 	if(what.onSyndieBase())

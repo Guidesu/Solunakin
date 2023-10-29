@@ -516,7 +516,7 @@
 				mode = SHUTTLE_ESCAPE
 				launch_status = ENDGAME_LAUNCHED
 				setTimer(SSshuttle.emergency_escape_time * engine_coeff)
-				priority_announce("The Emergency Shuttle has left the station. Estimate [timeLeft(600)] minutes until the shuttle docks at Central Command.", null, null, ANNOUNCEMENT_TYPE_PRIORITY)
+				priority_announce("The Emergency Shuttle has left the station. Estimate [timeLeft(600)] minutes until the shuttle docks at Conglomeration of Colonists.", null, null, ANNOUNCEMENT_TYPE_PRIORITY)
 				INVOKE_ASYNC(SSticker, TYPE_PROC_REF(/datum/controller/subsystem/ticker, poll_hearts))
 				bolt_all_doors() //SKYRAT EDIT ADDITION
 				SSmapping.mapvote() //If no map vote has been run yet, start one.
@@ -584,7 +584,7 @@
 	mode = SHUTTLE_ESCAPE
 	launch_status = ENDGAME_LAUNCHED
 	setTimer(SSshuttle.emergency_escape_time)
-	priority_announce("The Emergency Shuttle is preparing for direct jump. Estimate [timeLeft(600)] minutes until the shuttle docks at Central Command.", null, null, ANNOUNCEMENT_TYPE_PRIORITY)
+	priority_announce("The Emergency Shuttle is preparing for direct jump. Estimate [timeLeft(600)] minutes until the shuttle docks at Conglomeration of Colonists.", null, null, ANNOUNCEMENT_TYPE_PRIORITY)
 
 ///Generate a list of events to run during the departure
 /obj/docking_port/mobile/emergency/proc/setup_shuttle_events()

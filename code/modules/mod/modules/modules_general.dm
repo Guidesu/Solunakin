@@ -627,7 +627,7 @@
 	icon_state = "hat_holder"
 	incompatible_modules = list(/obj/item/mod/module/hat_stabilizer)
 	/*Intentionally left inheriting 0 complexity and removable = TRUE;
-	even though it comes inbuilt into the Magnate/Corporate MODS and spawns in maints, I like the idea of stealing them*/
+	even though it comes inbuilt into the Magnate/Conglomeration  MODS and spawns in maints, I like the idea of stealing them*/
 	/// Currently "stored" hat. No armor or function will be inherited, only the icon and cover flags.
 	var/obj/item/clothing/head/attached_hat
 	/// Original cover flags for the MOD helmet, before a hat is placed

@@ -23,10 +23,10 @@
         "ui_theme": "neutral",
         "uplink": "The Champions of Evil is well connected to the black market. Your uplink has been provided for utmost evil!"
     },
-    "Corporate Climber": {
+    "Conglomeration  Climber": {
         "allies": "Death to the Symphionia.",
         "goal": "Killing needlessly would make you some kind of traitor, or at least definitely seen as one. This is all just a means to an end.",
-        "introduction": "You are the Corporate Climber.",
+        "introduction": "You are the Conglomeration  Climber.",
         "roundend_report": "was a corporate climber.",
         "ui_theme": "neutral",
         "uplink": "You have connections to the black market for the deeds. Knock off a few loose weights, and your climb will be so much smoother."

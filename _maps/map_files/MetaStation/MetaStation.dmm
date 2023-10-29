@@ -420,7 +420,7 @@
 "ahW" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
-	name = "Corporate Showroom"
+	name = "Conglomeration  Showroom"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -16491,7 +16491,7 @@
 "gfk" = (
 /obj/structure/table/wood,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Symphionia Conglomeration of Colonists. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -25256,7 +25256,7 @@
 /area/station/engineering/atmos)
 "jgy" = (
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Symphionia Conglomeration of Colonists. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -26296,7 +26296,7 @@
 "jwW" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
-	name = "Corporate Showroom"
+	name = "Conglomeration  Showroom"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -36870,7 +36870,7 @@
 "nmm" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
-	name = "Corporate Showroom"
+	name = "Conglomeration  Showroom"
 	},
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -52832,7 +52832,7 @@
 	pixel_y = 32
 	},
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Symphionia Conglomeration of Colonists. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -63359,7 +63359,7 @@
 /obj/item/clothing/under/suit/black_really,
 /obj/item/clothing/glasses/sunglasses,
 /obj/machinery/camera/directional/north{
-	c_tag = "Corporate Showroom"
+	c_tag = "Conglomeration  Showroom"
 	},
 /turf/open/floor/wood,
 /area/station/command/corporate_showroom)

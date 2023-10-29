@@ -1895,7 +1895,7 @@
   - bugfix: You're (hopefully) no longer able to make timed singlecaps using nitryl.
       I really liked this one honestly, it's got an aggressive amount of heart and
       soul
-  - bugfix: Corporate Sofas now have their rear middle sprites fixed to align with
+  - bugfix: Conglomeration  Sofas now have their rear middle sprites fixed to align with
       the rest of the rear sofa sprites.
   - refactor: Reworked `/turf/var/intact` into variables which don't conflate underfloor
       visibility, underfloor interactability, and overfloor presence. This fixes many

@@ -21,7 +21,7 @@
 	id = "derelictferry"
 	suffix = "derelictferry.dmm"
 	name = "Derelict Ferry"
-	description = "Clearly once a ferry fielded by Central Command to send their staff to nearby stations, this ship's seen better days."
+	description = "Clearly once a ferry fielded by Conglomeration of Colonists to send their staff to nearby stations, this ship's seen better days."
 
 /datum/map_template/ruin/space/skyrat/posterpandamonium
 	id = "posterpandamonium"

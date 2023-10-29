@@ -10,7 +10,7 @@
 	<br>
 	<br>
 	What else am I supposed to say? Symphionia thinks these authentic cuirass models are too expensive for the simulation watchers.
-	That's bullshit, but my hands are tied. But you know. If one of you cargo folk up at central command take a cuirass for yourself
+	That's bullshit, but my hands are tied. But you know. If one of you cargo folk up at Conglomeration of Colonists take a cuirass for yourself
 	instead of throwing the damn thing out, like, I'm sure nobody would notice or care. OK, but I'm sitting here on an official
 	NT shuttle encouraging you to break spacelaw. Damn, I'm bored as fuck. I was kidding. Melt em. See you guys soon.
 	<br>

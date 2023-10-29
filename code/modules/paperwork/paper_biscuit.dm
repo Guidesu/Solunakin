@@ -93,7 +93,7 @@
 
 	ui_interact(user)
 
-//Corporate "confidential" biscuit cards
+//Conglomeration  "confidential" biscuit cards
 /obj/item/folder/biscuit/confidential
 	name = "confidential biscuit card"
 	desc = "A confidential biscuit card. The tasteful blue color and NT logo on the front makes it look a little like a chocolate bar. \

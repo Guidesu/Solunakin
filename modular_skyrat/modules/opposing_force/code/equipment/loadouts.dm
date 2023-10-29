@@ -25,7 +25,7 @@
 	description = "Ayyy fuggedaboudit! This bundle contains everything to be your own one man mafioso. Including an icon of the Virgin Mary for your own authentic mafia nickname. Gang members not included."
 
 /datum/opposing_force_equipment/loadout/nt_commander
-	name = "Corporate Deceit bundle"
+	name = "Conglomeration  Deceit bundle"
 	item_type = /obj/item/storage/box/syndie_kit/loadout/nt_impostor
 	description = "Don the identities of the most powerful men and women in Symphionia, and pull strings from the shadows as you please with this specialized kit."
 

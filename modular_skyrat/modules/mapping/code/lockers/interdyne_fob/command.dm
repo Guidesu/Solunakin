@@ -76,7 +76,7 @@
 
 /obj/item/clothing/neck/chaplain/black/cl_cloak
 	name = "corporate liaison's cloak"
-	desc = "A unique cloak that shimmers with the Corporate Liaison's emblem."
+	desc = "A unique cloak that shimmers with the Conglomeration  Liaison's emblem."
 
 /obj/item/storage/bag/garment/corprate_liaison
 	name = "corprate liaison's garment bag"

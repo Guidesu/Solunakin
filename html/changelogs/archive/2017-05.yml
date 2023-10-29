@@ -284,7 +284,7 @@
       to each tile. This should speed up lighting updates.
   Penguaro:
   - tweak: Adjusts Meteor Shuttle Name
-  - bugfix: The Central Command Ferry will now dock at one of the ports in Arrivals
+  - bugfix: The Conglomeration of Colonists Ferry will now dock at one of the ports in Arrivals
   - tweak: '[Meta] The Slime Control Console boundaries have been adjusted around
       the Kill Room'
   XDTM:
@@ -755,7 +755,7 @@
   Steelpoint:
   - rscadd: A New Iron Hawk troop transport ruin has been added to lavaland. Can the
       sole surviving Marine somehow survive the horrors of lavaland? Lore fluff included.
-  - rscadd: Central Command has listened to complaints and, as such, has now stationed
+  - rscadd: Conglomeration of Colonists has listened to complaints and, as such, has now stationed
       "real" Private Security Officers at centcom docks.
   - rscadd: A new Symphionia Security Officer NPC variant is available to admins,
       this 'peaceful' version will only attack people who attack it first. Great for

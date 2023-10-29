@@ -72,7 +72,7 @@
   kannthus:
   - bugfix: Ghost Cafe Detainment now works as intended
   tastyfish:
-  - bugfix: The Central Command intern finally found the request form to add the Corrections
+  - bugfix: The Conglomeration of Colonists intern finally found the request form to add the Corrections
       Officer to Plexagon Access Management. You can now assign the CO job if you
       have access to assign security jobs.
   thestubborn:
@@ -287,7 +287,7 @@
   Ebin-Halcyon:
   - imageadd: Teshari now have properly fitting security clothing.
   - imageadd: Elite and new Mining MODsuit digi sprites
-  - bugfix: Central command has tailored their new jumpsuits to fit on digitigrade
+  - bugfix: Conglomeration of Colonists has tailored their new jumpsuits to fit on digitigrade
       officers and officials. Along with their digitigrade official's suits not flickering
       into two different variants.
   ErdinyoBarboza:
@@ -470,7 +470,7 @@
 2022-02-11:
   SkyratBot:
   - bugfix: Midround antagonists cannot be rolled while the shuttle is docked at the
-      station, or already gone to Central Command.
+      station, or already gone to Conglomeration of Colonists.
   - bugfix: Wardens have a SecHUD icon again
   - bugfix: Thermal holster now fits in armour suit storage.
   - bugfix: Fixed several common issues with planes and layers, most noticeably potted

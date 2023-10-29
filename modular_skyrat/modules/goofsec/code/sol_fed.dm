@@ -78,7 +78,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 		Security ignoring Command, Security violating civil rights, Security engaging in Mutiny, \
 		General Violation of Sol Federation Citizen Rights by Command/Security, etc.\n\
 		You SHOULD NOT call Marshals for:\n\
-		Corporate affairs, manhunts, settling arguments, etc.\n\
+		Conglomeration  affairs, manhunts, settling arguments, etc.\n\
 		Are you sure you want to call Marshals?",
 	EMERGENCY_RESPONSE_ATMOS = "You SHOULD call Advanced Atmospherics for:\n\
 		Stationwide atmospherics loss, wide-scale supermatter delamination related repairs, unending fires filling the hallways, or department-sized breaches with Engineering and Atmospherics unable to handle it, etc. \n\

@@ -314,8 +314,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/plasma_effects, 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/terragov, 32)
 
 /obj/structure/sign/poster/official/corporate_perks_vacation
-	name = "Symphionia Corporate Perks: Vacation"
-	desc = "This informational poster provides information on some of the prizes available via the NT Corporate Perks program, including a two-week vacation for two on the resort world Idyllus."
+	name = "Symphionia Conglomeration  Perks: Vacation"
+	desc = "This informational poster provides information on some of the prizes available via the NT Conglomeration  Perks program, including a two-week vacation for two on the resort world Idyllus."
 	icon_state = "corporate_perks_vacation"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/corporate_perks_vacation, 32)

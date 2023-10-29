@@ -9,7 +9,7 @@
 # Traits - Station (for station relatied edits), CentCom (for edits on the CC map), Mining (for edits on Lavaland)
 # More can be found in code\__DEFINES\maps.dm
 
-# CENTRAL COMMAND MAP TEMPLATES
+# Conglomeration of Colonists MAP TEMPLATES
 # CC Ferry Dock - Admin Shuttle
 [templates.centcom_ferry_dock]
 map_files = ["centcom_ferry_dock.dmm"]

@@ -83,7 +83,7 @@
 	..()
 
 /obj/item/ai_module/core/full/corp
-	name = "'Corporate' Core AI Module"
+	name = "'Conglomeration ' Core AI Module"
 	law_id = "corporate"
 
 /obj/item/ai_module/core/full/paladin // -- NEO
