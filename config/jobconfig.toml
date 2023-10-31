@@ -36,22 +36,22 @@
 "Playtime Requirements" = 60
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 3
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [BARBER]
 "Playtime Requirements" = 0
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 2
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [BARTENDER]
 "Playtime Requirements" = 0
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 1
-"Total Positions" = 1
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [BLUESHIELD]
 "Playtime Requirements" = 2400
@@ -64,36 +64,36 @@
 "Playtime Requirements" = 0
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 3
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [BOUNCER]
 "Playtime Requirements" = 180
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 2
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [CAPTAIN]
 "Playtime Requirements" = 2400
 "Required Account Age" = 14
 "# Required Character Age" = 0
-"Spawn Positions" = 1
-"Total Positions" = 1
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [CARGO_TECHNICIAN]
 "# Playtime Requirements" = 0
 "# Required Account Age" = 0
 "# Required Character Age" = 0
-"# Spawn Positions" = 3
-"# Total Positions" = 5
+"# Spawn Positions" = 0
+"# Total Positions" = 0
 
 [CHAPLAIN]
 "Playtime Requirements" = 0
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 1
-"Total Positions" = 1
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [CHEMIST]
 "Playtime Requirements" = 60
@@ -120,71 +120,71 @@
 "Playtime Requirements" = 180
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 1
-"Total Positions" = 1
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [COOK]
 "Playtime Requirements" = 0
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 1
-"Total Positions" = 2
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [CORRECTIONS_OFFICER]
 "Playtime Requirements" = 150
 "Required Account Age" = 7
 "# Required Character Age" = 0
-"Spawn Positions" = 1
-"Total Positions" = 1
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [CORONER]
 "# Playtime Requirements" = 0
 "# Required Account Age" = 0
 "# Required Character Age" = 0
-"# Spawn Positions" = 1
-"# Total Positions" = 1
+"# Spawn Positions" = 0
+"# Total Positions" = 0
 
 [CURATOR]
 "Playtime Requirements" = 0
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 2
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [CUSTOMS_AGENT]
 "Playtime Requirements" = 180
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 2
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [CYBORG]
 "Playtime Requirements" = 120
 "Required Account Age" = 21
 "# Required Character Age" = 0
-"Spawn Positions" = 3
-"Total Positions" = 3
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [DETECTIVE]
 "Playtime Requirements" = 300
 "Required Account Age" = 7
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 2
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [ENGINEERING_GUARD]
 "Playtime Requirements" = 180
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 2
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [GENETICIST]
 "Playtime Requirements" = 60
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 2
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [HEAD_OF_PERSONNEL]
 "Playtime Requirements" = 2400
@@ -204,29 +204,29 @@
 "Playtime Requirements" = 0
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 5
-"Total Positions" = 5
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [LAWYER]
 "Playtime Requirements" = 0
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 2
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [MEDICAL_DOCTOR]
 "Playtime Requirements" = 0
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 3
-"Total Positions" = 5
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [MIME]
 "Playtime Requirements" = 180
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 1
-"Total Positions" = 1
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [NANOTRASEN_CONSULTANT]
 "Playtime Requirements" = 2400
@@ -239,29 +239,29 @@
 "Playtime Requirements" = 180
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 2
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [PARAMEDIC]
 "Playtime Requirements" = 0
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 3
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [PRISONER]
 "Playtime Requirements" = 0
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 12
-"Total Positions" = 12
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [PSYCHOLOGIST]
 "Playtime Requirements" = 0
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 1
-"Total Positions" = 1
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [QUARTERMASTER]
 "Playtime Requirements" = 2400
@@ -281,50 +281,50 @@
 "Playtime Requirements" = 60
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 3
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [SCIENCE_GUARD]
 "Playtime Requirements" = 180
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 2
-"Total Positions" = 2
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [SCIENTIST]
 "Playtime Requirements" = 60
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 5
-"Total Positions" = 5
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [SECURITY_MEDIC]
 "Playtime Requirements" = 180
 "Required Account Age" = 7
 "# Required Character Age" = 0
-"Spawn Positions" = 1
-"Total Positions" = 1
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [SECURITY_OFFICER]
 "Playtime Requirements" = 300
 "Required Account Age" = 7
 "# Required Character Age" = 0
-"Spawn Positions" = 6
-"Total Positions" = 6
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [SHAFT_MINER]
 "Playtime Requirements" = 0
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 4
-"Total Positions" = 4
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [STATION_ENGINEER]
 "Playtime Requirements" = 60
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 5
-"Total Positions" = 5
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [VANGUARD_OPERATIVE]
 "Playtime Requirements" = 400
@@ -337,12 +337,12 @@
 "Playtime Requirements" = 60
 "Required Account Age" = 0
 "# Required Character Age" = 0
-"Spawn Positions" = 1
-"Total Positions" = 1
+"Spawn Positions" = 0
+"Total Positions" = 0
 
 [WARDEN]
 "Playtime Requirements" = 300
 "Required Account Age" = 7
 "# Required Character Age" = 0
-"Spawn Positions" = 1
-"Total Positions" = 1
+"Spawn Positions" = 0
+"Total Positions" = 0
