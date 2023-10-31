@@ -52,17 +52,17 @@
 #define JOB_AI "AI"
 #define JOB_CYBORG "Cyborg"
 #define JOB_PERSONAL_AI "Personal AI"
-//Security
-#define JOB_WARDEN "Warden"
-#define JOB_DETECTIVE "Detective"
-#define JOB_SECURITY_OFFICER "Security Officer"
-#define JOB_SECURITY_OFFICER_MEDICAL "Security Officer (Medical)"
-#define JOB_SECURITY_OFFICER_ENGINEERING "Security Officer (Engineering)"
-#define JOB_SECURITY_OFFICER_SCIENCE "Security Officer (Science)"
-#define JOB_SECURITY_OFFICER_SUPPLY "Security Officer (Cargo)"
+//Marshal
+#define JOB_WARDEN "Supply Warden"
+#define JOB_DETECTIVE "Marshal Investigation Agent"
+#define JOB_SECURITY_OFFICER "Marshal Officer"
+#define JOB_SECURITY_OFFICER_MEDICAL "Marshal Officer (Medical)"
+#define JOB_SECURITY_OFFICER_ENGINEERING "Marshal Officer (Engineering)"
+#define JOB_SECURITY_OFFICER_SCIENCE "Marshal Officer (Science)"
+#define JOB_SECURITY_OFFICER_SUPPLY "Marshal Officer (Cargo)"
 #define JOB_CORRECTIONS_OFFICER "Corrections Officer" // SKYRAT EDIT ADDITION
 //Engineering
-#define JOB_STATION_ENGINEER "Station Engineer"
+#define JOB_STATION_ENGINEER "Outpost Engineer"
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
 #define JOB_ENGINEERING_GUARD "Engineering Guard" // SKYRAT EDIT ADDITION
 //Medical
@@ -99,7 +99,7 @@
 //ERTs
 #define JOB_ERT_DEATHSQUAD "Death Commando"
 #define JOB_ERT_COMMANDER "Emergency Response Team Commander"
-#define JOB_ERT_OFFICER "Security Response Officer"
+#define JOB_ERT_OFFICER "Marshal Response Officer"
 #define JOB_ERT_ENGINEER "Engineering Response Officer"
 #define JOB_ERT_MEDICAL_DOCTOR "Medical Response Officer"
 #define JOB_ERT_CHAPLAIN "Religious Response Officer"
@@ -117,7 +117,7 @@
 #define JOB_CENTCOM_MEDICAL_DOCTOR "Medical Officer"
 #define JOB_CENTCOM_RESEARCH_OFFICER "Research Officer"
 #define JOB_CENTCOM_SPECIAL_OFFICER "Special Ops Officer"
-#define JOB_CENTCOM_PRIVATE_SECURITY "Private Security Force"
+#define JOB_CENTCOM_PRIVATE_SECURITY "Private Marshal Force"
 // SKYRAT EDIT ADDITION START
 #define JOB_BLUESHIELD "Blueshield"
 #define JOB_NT_REP "Symphionia Consultant"
@@ -193,9 +193,9 @@
 #define DEPARTMENT_UNASSIGNED "No Department"
 
 #define DEPARTMENT_BITFLAG_SECURITY (1<<0)
-#define DEPARTMENT_SECURITY "Security"
+#define DEPARTMENT_SECURITY "Marshal"
 #define DEPARTMENT_BITFLAG_COMMAND (1<<1)
-#define DEPARTMENT_COMMAND "Command"
+#define DEPARTMENT_COMMAND "Council"
 #define DEPARTMENT_BITFLAG_SERVICE (1<<2)
 #define DEPARTMENT_SERVICE "Service"
 #define DEPARTMENT_BITFLAG_CARGO (1<<3)
@@ -213,7 +213,7 @@
 #define DEPARTMENT_BITFLAG_CAPTAIN (1<<9)
 #define DEPARTMENT_CAPTAIN "Captain"
 #define DEPARTMENT_BITFLAG_CENTRAL_COMMAND (1<<10) //SKYRAT EDIT CHANGE
-#define DEPARTMENT_CENTRAL_COMMAND "Conglomeration of Colonists" //SKYRAT EDIT CHANGE
+#define DEPARTMENT_CENTRAL_COMMAND "Symphonia" //SKYRAT EDIT CHANGE
 
 /* Job datum job_flags */
 /// Whether the mob is announced on arrival.
@@ -245,9 +245,9 @@
 
 // Variable macros used to declare who is the supervisor for a given job, announced to the player when they join as any given job.
 #define SUPERVISOR_CAPTAIN "the Captain"
-#define SUPERVISOR_CE "the Chief Engineer"
-#define SUPERVISOR_CMO "the Chief Medical Officer"
-#define SUPERVISOR_HOP "the Head of Personnel"
-#define SUPERVISOR_HOS "the Head of Security"
+#define SUPERVISOR_CE "the Master Engineer"
+#define SUPERVISOR_CMO "the Senior Medical Officer"
+#define SUPERVISOR_HOP "Steward"
+#define SUPERVISOR_HOS "the Head of Marshal"
 #define SUPERVISOR_QM "the Quartermaster"
 #define SUPERVISOR_RD "the Research Director"

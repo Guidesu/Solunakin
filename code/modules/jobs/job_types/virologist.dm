@@ -3,7 +3,7 @@
 	description = "Study the effects of various diseases and synthesize a \
 		vaccine for them. Engineer beneficial viruses."
 	department_head = list(JOB_CHIEF_MEDICAL_OFFICER)
-	faction = FACTION_STATION
+	faction = FACTION_NONE
 	total_positions = 0
 	spawn_positions = 0
 	supervisors = SUPERVISOR_CMO

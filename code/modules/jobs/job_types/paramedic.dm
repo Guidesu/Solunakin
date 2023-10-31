@@ -3,7 +3,7 @@
 	description = "Run around the station looking for patients, respond to \
 		emergencies, give patients a roller bed ride to medbay."
 	department_head = list(JOB_CHIEF_MEDICAL_OFFICER)
-	faction = FACTION_STATION
+	faction = FACTION_NONE
 	total_positions = 0
 	spawn_positions = 0
 	supervisors = SUPERVISOR_CMO

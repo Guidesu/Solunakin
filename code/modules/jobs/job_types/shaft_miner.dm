@@ -3,7 +3,7 @@
 	description = "Travel to strange lands. Mine ores. \
 		Meet strange creatures. Kill them for their gold."
 	department_head = list(JOB_QUARTERMASTER)
-	faction = FACTION_STATION
+	faction = FACTION_NONE
 	total_positions = 0
 	spawn_positions = 0
 	supervisors = SUPERVISOR_QM
