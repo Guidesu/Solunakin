@@ -42,6 +42,21 @@
 
 // ~~ Weapon Categories ~~
 
+// Core Gear Box: This contains all the 'fundamental' equipment that most nuclear operatives probably should be buying. It isn't cheaper, but it is a quick and convenient method of acquiring all the gear necessary immediately.
+// Only allows one purchase, and doesn't prevent the purchase of the contained items. Focused on newer players to help them understand what items they need to succeed, and to help older players quickly purchase the baseline gear they need.
+
+/datum/uplink_item/weapon_kits/core
+	name = "Core Equipment Box (Essential)"
+	desc = "This box contains an airlock authentification override card, a C-4 explosive charge, a freedom implant and a stimpack injector. \
+		The most important support items for most operatives to succeed in their mission, bundled together. It is highly recommend you buy this kit. \
+		Note: This bundle is not at a discount. You can purchase all of these items separately. You do not NEED these items, but most operatives fail WITHOUT at \
+		least SOME of these items. More experienced operatives can do without."
+	item = /obj/item/storage/box/syndie_kit/core_gear
+	cost = 14 //freedom 5, doormag 3, c-4 1, stimpack 5
+	limited_stock = 1
+	cant_discount = TRUE
+	purchasable_from = UPLINK_NUKE_OPS
+
 //Low-cost firearms: Around 8 TC each. Meant for easy squad weapon purchases
 
 /datum/uplink_item/weapon_kits/low_cost
@@ -153,7 +168,7 @@
 	cost = 4
 	purchasable_from = UPLINK_NUKE_OPS
 
-// ~~ Energy Sword and Shield ~~
+// ~~ Energy Sword and Shield & CQC ~~
 
 /datum/uplink_item/weapon_kits/medium_cost/sword_and_board
 	name = "Energy Shield and Sword Case (Very Hard)"
@@ -161,31 +176,38 @@
 		energy and laser projectiles, and the sword most forms of attack. Perfect for the enterprising nuclear knight. "
 	item = /obj/item/storage/toolbox/guncase/sword_and_board
 
-// ~~ Symphionia Revolver ~~
+/datum/uplink_item/weapon_kits/medium_cost/cqc
+	name = "CQC Equipment Case (Very Hard)"
+	desc = "Contains a manual that instructs you in the ways of CQC, or Close Quarters Combat. Comes with a stealth implant, a pack of smokes and a snazzy bandana (use it with the hat stabilizers in your MODsuit)."
+	item = /obj/item/storage/toolbox/guncase/cqc
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
+	surplus = 0
+
+// ~~ Syndicate Revolver ~~
 // Nuclear operatives get a special deal on their revolver purchase compared to traitors.
 
 /datum/uplink_item/weapon_kits/medium_cost/revolvercase
-	name = "Symphionia Revolver Case (Moderate)"
-	desc = "Waffle Co.'s modernized Symphionia revolver. Fires 7 brutal rounds of .357 Magnum. \
+	name = "Syndicate Revolver Case (Moderate)"
+	desc = "Waffle Co.'s modernized Syndicate revolver. Fires 7 brutal rounds of .357 Magnum. \
 		A classic operative weapon, brought to the modern era. Comes with 3 additional speedloaders of .357."
 	item = /obj/item/storage/toolbox/guncase/revolver
 
 /datum/uplink_item/ammo_nuclear/basic/revolver
 	name = ".357 Speed Loader (Revolver)"
-	desc = "A speed loader that contains seven additional .357 Magnum rounds; usable with the Symphionia revolver. \
+	desc = "A speed loader that contains seven additional .357 Magnum rounds; usable with the Syndicate revolver. \
 		For when you really need a lot of things dead. Operatives get a discount from most of our agents!"
 	item = /obj/item/ammo_box/a357
 
 /datum/uplink_item/ammo_nuclear/special/revolver/phasic
 	name = ".357 Phasic Speed Loader (Revolver)"
-	desc = "A speed loader that contains seven additional .357 Magnum phasic rounds; usable with the Symphionia revolver. \
+	desc = "A speed loader that contains seven additional .357 Magnum phasic rounds; usable with the Syndicate revolver. \
 		These bullets are made from an experimental alloy, 'Ghost Lead', that allows it to pass through almost any non-organic material. \
 		The name is a misnomer. It doesn't contain any lead whatsoever!"
 	item = /obj/item/ammo_box/a357/phasic
 
 /datum/uplink_item/ammo_nuclear/special/revolver/heartseeker
 	name = ".357 Heartseeker Speed Loader (Revolver)"
-	desc = "A speed loader that contains seven additional .357 Magnum heartseeker rounds; usable with the Symphionia revolver. \
+	desc = "A speed loader that contains seven additional .357 Magnum heartseeker rounds; usable with the Syndicate revolver. \
 		Able to veer straight into targets! Don't miss a shot with heartseeker! As seen in the hit NTFlik horror-space western film, Forget-Me-Not!	\
 		Brought to you by Roseus Galactic!"
 	item = /obj/item/ammo_box/a357/heartseeker
@@ -290,7 +312,7 @@
 /datum/uplink_item/weapon_kits/high_cost/sniper
 	name = "Anti-Materiel Sniper Rifle Briefcase (Hard)"
 	desc = "An outdated, but still extremely powerful anti-material sniper rifle. Fires .50 BMG cartridges from a 6 round magazine. \
-		Can be fitted with a suppressor. If anyone asks how that even works, tell them it's Symphionia's fault. Comes with \
+		Can be fitted with a suppressor. If anyone asks how that even works, tell them it's Nanotrasen's fault. Comes with \
 		3 spare magazines; 2 regular magazines and 1 disruptor magazine. Also comes with a suit and tie."
 	item = /obj/item/storage/briefcase/sniper
 
@@ -331,18 +353,11 @@
 		Blast your enemies with instant shots! Just watch out for the rebound..."
 	item = /obj/item/ammo_box/magazine/sniper_rounds/marksman
 
-/datum/uplink_item/weapon_kits/high_cost/cqc
-	name = "CQC Equipment Case (Very Hard)"
-	desc = "Contains a manual that instructs you in the ways of CQC, or Close Quarters Combat. Comes with a stealth implant and a snazzy bandana (and a hat stabilizer to go with it)."
-	item = /obj/item/storage/toolbox/guncase/cqc
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
-	surplus = 0
-
 /datum/uplink_item/weapon_kits/high_cost/doublesword
 	name = "Double-Energy Sword Case (Very Hard)"
 	desc = "A case containing a double-energy sword, anti-slip module, meth autoinjector, and a bar of soap. \
 		Some say the most infamous nuclear operatives utilized this combination of equipment to slaughter hundreds \
-		of Symphionia employees. However, some also say this is an embellishment from the Tiger Co-operative. \
+		of Nanotrasen employees. However, some also say this is an embellishment from the Tiger Co-operative. \
 		The soap did most of the work. Comes with a prisoner uniform so you fit the part."
 	item = /obj/item/storage/toolbox/guncase/doublesword
 
@@ -402,9 +417,9 @@
 // ~~ Detonator: In case you lose the old one ~~
 
 /datum/uplink_item/explosives/syndicate_detonator
-	name = "Symphionia Detonator"
-	desc = "The Symphionia detonator is a companion device to the Symphionia bomb. Simply press the included button \
-		and an encrypted radio frequency will instruct all live Symphionia bombs to detonate. \
+	name = "Syndicate Detonator"
+	desc = "The Syndicate detonator is a companion device to the Syndicate bomb. Simply press the included button \
+		and an encrypted radio frequency will instruct all live Syndicate bombs to detonate. \
 		Useful for when speed matters or you wish to synchronize multiple bomb blasts. Be sure to stand clear of \
 		the blast radius before using the detonator."
 	item = /obj/item/syndicatedetonator
@@ -432,23 +447,23 @@
 	item = /obj/item/antag_spawner/nuke_ops
 
 /datum/uplink_item/reinforcements/assault_borg
-	name = "Symphionia Assault Cyborg"
-	desc = "A cyborg designed and programmed for systematic extermination of non-Symphionia personnel. \
+	name = "Syndicate Assault Cyborg"
+	desc = "A cyborg designed and programmed for systematic extermination of non-Syndicate personnel. \
 		Comes equipped with a self-resupplying LMG, a grenade launcher, energy sword, emag, pinpointer, flash and crowbar."
 	item = /obj/item/antag_spawner/nuke_ops/borg_tele/assault
 
 /datum/uplink_item/reinforcements/medical_borg
-	name = "Symphionia Medical Cyborg"
+	name = "Syndicate Medical Cyborg"
 	desc = "A combat medical cyborg. Has limited offensive potential, but makes more than up for it with its support capabilities. \
 		It comes equipped with a nanite hypospray, a medical beamgun, combat defibrillator, full surgical kit including an energy saw, an emag, pinpointer and flash. \
 		Thanks to its organ storage bag, it can perform surgery as well as any humanoid."
 	item = /obj/item/antag_spawner/nuke_ops/borg_tele/medical
 
 /datum/uplink_item/reinforcements/saboteur_borg
-	name = "Symphionia Saboteur Cyborg"
+	name = "Syndicate Saboteur Cyborg"
 	desc = "A streamlined engineering cyborg, equipped with covert modules. Also incapable of leaving the welder in the shuttle. \
 		Aside from regular Engineering equipment, it comes with a special destination tagger that lets it traverse disposals networks. \
-		Its chameleon projector lets it disguise itself as a Symphionia cyborg, on top it has thermal vision and a pinpointer."
+		Its chameleon projector lets it disguise itself as a Nanotrasen cyborg, on top it has thermal vision and a pinpointer."
 	item = /obj/item/antag_spawner/nuke_ops/borg_tele/saboteur
 
 // ~~ Disposable Sentry Gun ~~
@@ -489,8 +504,8 @@
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/bundles_tc/induction_kit
-	name = "Symphionia Induction Kit"
-	desc = "Met a fellow syndicate agent on the station? Kept some TC in reserve just in case? Or are you communicating with one via the Symphionia channel? \
+	name = "Syndicate Induction Kit"
+	desc = "Met a fellow syndicate agent on the station? Kept some TC in reserve just in case? Or are you communicating with one via the Syndicate channel? \
 		Get this kit and you'll be able to induct them into your operative team via a special implant. \
 		Additionally, it contains an assortment of useful gear for new operatives, including a space suit, an Ansem pistol, two spare magazines, and more! \
 		*NOT* for usage with Reinforcements, and does not brainwash the target!"
@@ -499,7 +514,7 @@
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/bundles_tc/cowboy
-	name = "Symphionia Outlaw Kit"
+	name = "Syndicate Outlaw Kit"
 	desc = "There've been high tales of an outlaw 'round these parts. A fella so ruthless and efficient no ranger could ever capture 'em. \
 	Now you can be just like 'em! \
 	This kit contains armor-lined cowboy equipment, a custom revolver and holster, and a horse with a complimentary apple to tame. \
@@ -572,9 +587,9 @@
 // Modsuits
 
 /datum/uplink_item/suits/modsuit/elite
-	name = "Elite Symphionia MODsuit"
-	desc = "An upgraded, elite version of the Symphionia MODsuit. It features fireproofing, and also \
-		provides the user with superior armor and mobility compared to the standard Symphionia MODsuit."
+	name = "Elite Syndicate MODsuit"
+	desc = "An upgraded, elite version of the Syndicate MODsuit. It features fireproofing, and also \
+		provides the user with superior armor and mobility compared to the standard Syndicate MODsuit."
 	item = /obj/item/mod/control/pre_equipped/elite
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
@@ -609,15 +624,15 @@
 
 /datum/uplink_item/device_tools/medgun_mod
 	name = "Medbeam Gun Module"
-	desc = "A wonder of Symphionia engineering, the Medbeam gun module, or Medi-Gun enables a medic to keep his fellow \
+	desc = "A wonder of Syndicate engineering, the Medbeam gun module, or Medi-Gun enables a medic to keep his fellow \
 		operatives in the fight, even while under fire. Don't cross the streams!"
 	item = /obj/item/mod/module/medbeam
 	cost = 15
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/suits/syndi_intellicard
-	name = "Pre-Loaded Symphionia Intellicard"
-	desc = "A syndicate intellicard that can be activated to download a captured Symphionia AI, modified with the standard syndicate lawset. You can slot it into your modsuit for a conversational partner! It can additionally control the MODsuit's modules at will, and move your body around even if you're in critical condition or dead. \
+	name = "Pre-Loaded Syndicate Intellicard"
+	desc = "A syndicate intellicard that can be activated to download a captured Nanotrasen AI, modified with the standard syndicate lawset. You can slot it into your modsuit for a conversational partner! It can additionally control the MODsuit's modules at will, and move your body around even if you're in critical condition or dead. \
 			However, due to failsafes activated during the extraction process, the AI is unable to interact with electronics from anywhere but direct proximity..."
 	item = /obj/item/aicard/syndie/loaded
 	cost = 12
@@ -625,8 +640,8 @@
 	refundable = TRUE
 
 /datum/uplink_item/suits/synd_ai_upgrade
-	name = "Symphionia AI Upgrade"
-	desc = "...unless you buy the Symphionia Upgrade! This data chip allows the captured AI to increase its interaction range by two tiles per application. The Symphionia recommends three or four purchases at most, for a total of seven or infinite meters of range."
+	name = "Syndicate AI Upgrade"
+	desc = "...unless you buy the Syndicate Upgrade! This data chip allows the captured AI to increase its interaction range by two tiles per application. The Syndicate recommends three or four purchases at most, for a total of seven or infinite meters of range."
 	item = /obj/item/computer_disk/syndie_ai_upgrade
 	cost = 4
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
@@ -645,15 +660,15 @@
 	restricted = TRUE
 
 /datum/uplink_item/device_tools/syndie_jaws_of_life
-	name = "Symphionia Jaws of Life"
-	desc = "Based on a Symphionia model, this powerful tool can be used as both a crowbar and a pair of wirecutters. \
+	name = "Syndicate Jaws of Life"
+	desc = "Based on a Nanotrasen model, this powerful tool can be used as both a crowbar and a pair of wirecutters. \
 		In its crowbar configuration, it can be used to force open airlocks. Very useful for entering the station or its departments."
 	item = /obj/item/crowbar/power/syndicate
 	cost = 4
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/medkit
-	name = "Symphionia Combat Medic Kit"
+	name = "Syndicate Combat Medic Kit"
 	desc = "This first aid kit is a suspicious black and red. Included is a number of atropine medipens \
 		for rapid stabilization and detonation prevention, sutures and regenerative mesh for wound treatment, and patches \
 		for faster healing on the field. Also comes with basic medical tools and sterlizer."
@@ -662,7 +677,7 @@
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/medkit/premium
-	name = "Symphionia Combat Medical Suite"
+	name = "Syndicate Combat Medical Suite"
 	desc = "This first aid kit is a suspicious black and red. Included is an unloaded combat chemical injector \
 		for suit-penetrative chem delivery, a medical science night vision HUD for quick identification of injured personnel and chemical supplies, \
 		improved medical supplies, including Interdyne-approved pharmaceuticals, a hacked cybernetic surgery toolset arm implant, \
@@ -672,9 +687,9 @@
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/potion
-	name = "Symphionia Sentience Potion"
+	name = "Syndicate Sentience Potion"
 	item = /obj/item/slimepotion/slime/sentience/nuclear
-	desc = "A potion recovered at great risk by undercover Symphionia operatives and then subsequently modified with Symphionia technology. \
+	desc = "A potion recovered at great risk by undercover Syndicate operatives and then subsequently modified with Syndicate technology. \
 		Using it will make any animal sentient, and bound to serve you, as well as implanting an internal radio for communication and an internal ID card for opening doors."
 	cost = 4
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
@@ -764,15 +779,15 @@
 	cant_discount = TRUE
 
 /datum/uplink_item/base_keys/bomb_key
-	name = "Symphionia Ordnance Laboratory Access Card"
+	name = "Syndicate Ordnance Laboratory Access Card"
 	desc = "Do you fancy yourself an explosives expert? If so, then consider yourself lucky! With this special Authorization Key, \
 		you can blow those corpo suits away with your very own home-made explosive devices. Made in your local firebase's \
-		very own Ordnance Laboratory! *The Symphionia is not responsible for injuries or deaths sustained while utilizing the lab."
+		very own Ordnance Laboratory! *The Syndicate is not responsible for injuries or deaths sustained while utilizing the lab."
 	item = /obj/item/keycard/syndicate_bomb
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/base_keys/bio_key
-	name = "Symphionia Bio-Weapon Laboratory Access Card"
+	name = "Syndicate Bio-Weapon Laboratory Access Card"
 	desc = "In the right hands, even vile corpo technology can be turned into a vast arsenal of liberation and justice. From \
 		micro-organism symbiosis to slime-core weaponization, this special Authorization Key can let you push past the boundaries \
 		of bio-terrorism at breakneck speeds. As a bonus, these labs even come equipped with natural life support! *Plants not included."
@@ -780,7 +795,7 @@
 	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS
 
 /datum/uplink_item/base_keys/chem_key
-	name = "Symphionia Chemical Plant Access Card"
+	name = "Syndicate Chemical Plant Access Card"
 	desc = "For some of our best Operatives, watching corpo space stations blow up with a flash of retribution just isn't enough. \
 		Folks like those prefer a more personal touch to their artistry. For those interested, a special Authorization Key \
 		can be instantly delivered to your location. Create groundbreaking chemical agents, cook up, sell the best of drugs, \
@@ -803,7 +818,7 @@
 
 /datum/uplink_item/badass/hats
 	name = "Hat Crate"
-	desc = "Hat crate! Contains hats, along with hat stabilizers to wear your hats while you're in your suit! HATS!!!"
+	desc = "Hat crate! Contains hats! HATS!!!"
 	item = /obj/structure/closet/crate/large/hats
 	cost = 5
 	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS
