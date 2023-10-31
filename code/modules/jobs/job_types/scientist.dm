@@ -1,4 +1,4 @@
-/*datum/job/scientist
+/datum/job/scientist
 	title = JOB_SCIENTIST
 	description = "Do experiments, perform research, feed the slimes, make bombs."
 	department_head = list(JOB_RESEARCH_DIRECTOR)

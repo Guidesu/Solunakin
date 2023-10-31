@@ -1,4 +1,4 @@
-/*datum/job/cargo_technician
+/datum/job/cargo_technician
 	title = JOB_CARGO_TECHNICIAN
 	description = "Distribute supplies to the departments that ordered them, \
 		collect empty crates, load and unload the supply shuttle, \

@@ -1,4 +1,4 @@
-/*datum/job/clown
+/datum/job/clown
 	title = JOB_CLOWN
 	description = "Entertain the crew, make bad jokes, go on a holy quest to find bananium, HONK!"
 	department_head = list(JOB_HEAD_OF_PERSONNEL)

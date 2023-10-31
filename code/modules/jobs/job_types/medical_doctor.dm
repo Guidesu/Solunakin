@@ -1,4 +1,4 @@
-/*datum/job/doctor
+/datum/job/doctor
 	title = JOB_MEDICAL_DOCTOR
 	description = "Save lives, run around the station looking for victims, \
 		scan everyone in sight"

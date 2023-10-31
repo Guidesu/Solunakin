@@ -1,4 +1,4 @@
-/*datum/job/mime
+/datum/job/mime
 	title = JOB_MIME
 	description = "..."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)

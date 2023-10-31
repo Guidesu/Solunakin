@@ -1,4 +1,4 @@
-/*datum/job/psychologist
+/datum/job/psychologist
 	title = JOB_PSYCHOLOGIST
 	description = "Advocate sanity, self-esteem, and teamwork in a station \
 		staffed with headcases."

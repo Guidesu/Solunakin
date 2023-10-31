@@ -1,4 +1,4 @@
-/*datum/job/curator
+/datum/job/curator
 	title = JOB_CURATOR
 	description = "Read and write books and hand them to people, stock \
 		bookshelves, report on station news."

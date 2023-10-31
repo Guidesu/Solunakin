@@ -1,4 +1,4 @@
-/*datum/job/security_officer
+/datum/job/security_officer
 	title = JOB_SECURITY_OFFICER
 	description = "Protect company assets, follow the Standard Operating \
 		Procedure, eat donuts."

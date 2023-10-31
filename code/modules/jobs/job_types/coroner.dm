@@ -1,4 +1,4 @@
-/*datum/job/coroner
+/datum/job/coroner
 	title = JOB_CORONER
 	description = "Perform Autopsies whenever needed, \
 		Update medical records accordingly, apply formaldehyde."

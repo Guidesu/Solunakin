@@ -1,4 +1,4 @@
-/*datum/job/paramedic
+/datum/job/paramedic
 	title = JOB_PARAMEDIC
 	description = "Run around the station looking for patients, respond to \
 		emergencies, give patients a roller bed ride to medbay."

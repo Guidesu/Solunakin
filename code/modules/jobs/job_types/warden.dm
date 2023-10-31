@@ -1,4 +1,4 @@
-/*datum/job/warden
+/datum/job/warden
 	title = JOB_WARDEN
 	description = "Watch over the Brig and Prison Wing, release prisoners when \
 		their time is up, issue equipment to security, be a security officer when \
