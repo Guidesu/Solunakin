@@ -1,4 +1,4 @@
-/datum/job/cyborg
+/*datum/job/cyborg
 	title = JOB_CYBORG
 	description = "Assist the crew, follow your laws, obey your AI."
 	auto_deadmin_role_flags = DEADMIN_POSITION_SILICON

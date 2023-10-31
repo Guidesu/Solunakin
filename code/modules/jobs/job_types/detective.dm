@@ -1,4 +1,4 @@
-/datum/job/detective
+/*datum/job/detective
 	title = JOB_DETECTIVE
 	description = "Investigate crimes, gather evidence, perform interrogations, \
 		look badass, smoke cigarettes."

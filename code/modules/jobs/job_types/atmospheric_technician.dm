@@ -1,4 +1,4 @@
-/datum/job/atmospheric_technician
+/*datum/job/atmospheric_technician
 	title = JOB_ATMOSPHERIC_TECHNICIAN
 	description = "Ensure the air is breathable on the station, fill oxygen tanks, fight fires, purify the air."
 	department_head = list(JOB_CHIEF_ENGINEER)

@@ -1,4 +1,4 @@
-/datum/job/prisoner
+/*datum/job/prisoner
 	title = JOB_PRISONER
 	description = "Keep yourself occupied in permabrig."
 	department_head = list("The Security Team")

@@ -1,4 +1,4 @@
-/datum/job/chemist
+/*datum/job/chemist
 	title = JOB_CHEMIST
 	description = "Supply the doctors with chemicals, make medicine, as well as \
 		less likable substances in the comfort of a fully reinforced room."

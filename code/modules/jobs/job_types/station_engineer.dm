@@ -1,4 +1,4 @@
-/datum/job/station_engineer
+/*datum/job/station_engineer
 	title = JOB_STATION_ENGINEER
 	description = "Start the Supermatter, wire the solars, repair station hull \
 		and wiring damage."
