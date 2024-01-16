@@ -26,10 +26,10 @@ export type MedicalRecord = {
   quirk_notes: string;
   rank: string;
   species: string;
-  // NOVA EDIT START - RP Records
+  // SKYRAT EDIT START - RP Records
   past_general_records: string;
   past_medical_records: string;
-  // NOVA EDIT END
+  // SKYRAT EDIT END
 };
 
 export type MedicalNote = {

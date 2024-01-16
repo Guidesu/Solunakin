@@ -1,5 +1,4 @@
 import { toFixed } from 'common/math';
-
 import { useBackend } from '../backend';
 import { Box, Button, Section } from '../components';
 import { Window } from '../layouts';
@@ -11,8 +10,8 @@ type Data = {
   possible_amounts: number[];
 };
 
-export const ChemSynthesizer = (props) => {
-  const { act, data } = useBackend<Data>();
+export const ChemSynthesizer = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const {
     amount,
     current_reagent,

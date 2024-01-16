@@ -1,5 +1,4 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
 import { Button, Section } from '../components';
 import { Window } from '../layouts';
@@ -11,8 +10,8 @@ type Data = {
   flash_charging: BooleanLike;
 };
 
-export const BrigTimer = (props) => {
-  const { act, data } = useBackend<Data>();
+export const BrigTimer = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { timing, minutes, seconds, flash_charging } = data;
   return (
     <Window width={300} height={138}>
@@ -34,8 +33,7 @@ export const BrigTimer = (props) => {
                 onClick={() => act('flash')}
               />
             </>
-          }
-        >
+          }>
           <Button
             icon="fast-backward"
             onClick={() => act('time', { adjust: -600 })}

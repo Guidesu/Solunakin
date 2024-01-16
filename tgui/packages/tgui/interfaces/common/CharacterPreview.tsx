@@ -1,16 +1,16 @@
 import { ByondUi } from '../../components';
 
 export const CharacterPreview = (props: {
-  width?: string; // NOVA EDIT
+  width?: string; // SKYRAT EDIT
   height: string;
   id: string;
 }) => {
-  // NOVA EDIT
+  // SKYRAT EDIT
   const { width = '220px' } = props;
-  // NOVA EDIT END
+  // SKYRAT EDIT END
   return (
     <ByondUi
-      width={width} // NOVA EDIT
+      width={width} // SKYRAT EDIT
       height={props.height}
       params={{
         id: props.id,

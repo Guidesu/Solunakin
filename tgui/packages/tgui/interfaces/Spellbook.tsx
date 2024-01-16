@@ -1,21 +1,9 @@
 import { BooleanLike } from 'common/react';
 import { multiline } from 'common/string';
-import { ReactNode } from 'react';
-
 import { useBackend, useLocalState } from '../backend';
-import {
-  Box,
-  Button,
-  Dimmer,
-  Divider,
-  Icon,
-  Input,
-  NoticeBox,
-  ProgressBar,
-  Section,
-  Stack,
-} from '../components';
+import { Box, Button, Dimmer, Divider, Icon, Input, NoticeBox, ProgressBar, Section, Stack } from '../components';
 import { Window } from '../layouts';
+import { InfernoNode } from 'inferno';
 
 enum SpellCategory {
   Offensive = 'Offensive',
@@ -61,7 +49,7 @@ type Data = {
 type TabType = {
   title: string;
   blurb?: string;
-  component?: () => ReactNode;
+  component?: () => InfernoNode;
   locked?: boolean;
   scrollable?: boolean;
 };
@@ -139,8 +127,8 @@ const BUYWORD2ICON = {
   Cast: 'meteor',
 };
 
-const EnscribedName = (props) => {
-  const { data } = useBackend<Data>();
+const EnscribedName = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { owner } = data;
   return (
     <>
@@ -150,8 +138,7 @@ const EnscribedName = (props) => {
         fontSize="50px"
         color="bad"
         textAlign="center"
-        fontFamily="Ink Free"
-      >
+        fontFamily="Ink Free">
         {owner}
       </Box>
       <Divider />
@@ -161,8 +148,8 @@ const EnscribedName = (props) => {
 
 const lineHeightToc = '34.6px';
 
-const TableOfContents = (props) => {
-  const [tabIndex, setTabIndex] = useLocalState('tab-index', 1);
+const TableOfContents = (props, context) => {
+  const [tabIndex, setTabIndex] = useLocalState(context, 'tab-index', 1);
   return (
     <Box textAlign="center">
       <Button
@@ -243,8 +230,8 @@ const TableOfContents = (props) => {
   );
 };
 
-const LockedPage = (props) => {
-  const { act, data } = useBackend<Data>();
+const LockedPage = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { owner } = data;
   return (
     <Dimmer>
@@ -260,7 +247,7 @@ const LockedPage = (props) => {
   );
 };
 
-const PointLocked = (props) => {
+const PointLocked = (props, context) => {
   return (
     <Dimmer>
       <Stack vertical>
@@ -295,8 +282,8 @@ type WizardLoadout = {
   author: string;
 };
 
-const SingleLoadout = (props: WizardLoadout) => {
-  const { act } = useBackend<WizardLoadout>();
+const SingleLoadout = (props: WizardLoadout, context) => {
+  const { act } = useBackend<WizardLoadout>(context);
   const { author, name, blurb, icon, loadoutId, loadoutColor } = props;
   return (
     <Stack.Item grow>
@@ -325,8 +312,8 @@ const SingleLoadout = (props: WizardLoadout) => {
 
 const LoadoutWidth = 19.17;
 
-const Loadouts = (props) => {
-  const { data } = useBackend<Data>();
+const Loadouts = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { points } = data;
   // Future todo : Make these datums on the DM side
   return (
@@ -397,8 +384,8 @@ const Loadouts = (props) => {
 
 const lineHeightRandomize = 6;
 
-const Randomize = (props) => {
-  const { act, data } = useBackend<Data>();
+const Randomize = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { points, semi_random_bonus, full_random_bonus } = data;
   return (
     <Stack fill vertical>
@@ -441,9 +428,9 @@ const Randomize = (props) => {
   );
 };
 
-const SearchSpells = (props) => {
-  const { data } = useBackend<Data>();
-  const [spellSearch] = useLocalState('spell-search', '');
+const SearchSpells = (props, context) => {
+  const { data } = useBackend<Data>(context);
+  const [spellSearch] = useLocalState(context, 'spell-search', '');
   const { entries } = data;
 
   const filterEntryList = (entries: SpellEntry[]) => {
@@ -462,7 +449,7 @@ const SearchSpells = (props) => {
         entry.desc.toLowerCase().includes(searchStatement) ||
         // Also opting to include category
         // so you can search "rituals" to see them all at once
-        entry.cat.toLowerCase().includes(searchStatement),
+        entry.cat.toLowerCase().includes(searchStatement)
     );
   };
 
@@ -492,12 +479,15 @@ const SearchSpells = (props) => {
   );
 };
 
-const SpellTabDisplay = (props: {
-  TabSpells: SpellEntry[];
-  CooldownOffset?: number;
-  PointOffset?: number;
-}) => {
-  const { act, data } = useBackend<Data>();
+const SpellTabDisplay = (
+  props: {
+    TabSpells: SpellEntry[];
+    CooldownOffset?: number;
+    PointOffset?: number;
+  },
+  context
+) => {
+  const { act, data } = useBackend<Data>(context);
   const { points } = data;
   const { TabSpells, CooldownOffset, PointOffset } = props;
 
@@ -589,8 +579,8 @@ const SpellTabDisplay = (props: {
   );
 };
 
-const CategoryDisplay = (props: { ActiveCat: TabType }) => {
-  const { data } = useBackend<Data>();
+const CategoryDisplay = (props: { ActiveCat: TabType }, context) => {
+  const { data } = useBackend<Data>(context);
   const { entries } = data;
   const { ActiveCat } = props;
 
@@ -620,11 +610,15 @@ const CategoryDisplay = (props: { ActiveCat: TabType }) => {
 const widthSection = '466px';
 const heightSection = '456px';
 
-export const Spellbook = (props) => {
-  const { data } = useBackend<Data>();
+export const Spellbook = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { points } = data;
-  const [tabIndex, setTabIndex] = useLocalState('tab-index', 1);
-  const [spellSearch, setSpellSearch] = useLocalState('spell-search', '');
+  const [tabIndex, setTabIndex] = useLocalState(context, 'tab-index', 1);
+  const [spellSearch, setSpellSearch] = useLocalState(
+    context,
+    'spell-search',
+    ''
+  );
   const ActiveCat = TAB2NAME[tabIndex - 1];
   const ActiveNextCat = TAB2NAME[tabIndex];
 
@@ -686,8 +680,7 @@ export const Spellbook = (props) => {
                         icon="arrow-rotate-left"
                         onClick={() => setSpellSearch('')}
                       />
-                    }
-                  >
+                    }>
                     <SearchSpells />
                   </Section>
                 </Stack.Item>
@@ -714,8 +707,7 @@ export const Spellbook = (props) => {
                             {tabIndex}
                           </Box>
                         </>
-                      }
-                    >
+                      }>
                       <CategoryDisplay ActiveCat={ActiveCat} />
                     </Section>
                   </Stack.Item>
@@ -740,8 +732,7 @@ export const Spellbook = (props) => {
                             {tabIndex + 1}
                           </Box>
                         </>
-                      }
-                    >
+                      }>
                       <CategoryDisplay ActiveCat={ActiveNextCat} />
                     </Section>
                   </Stack.Item>
@@ -761,6 +752,7 @@ export const Spellbook = (props) => {
                   <Input
                     width={15}
                     placeholder="Search for a spell..."
+                    icon="search"
                     onInput={(e, val) => setSpellSearch(val)}
                   />
                 </Stack.Item>

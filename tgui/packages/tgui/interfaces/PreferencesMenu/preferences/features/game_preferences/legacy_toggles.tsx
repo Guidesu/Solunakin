@@ -1,6 +1,5 @@
 import { multiline } from 'common/string';
-
-import { CheckboxInput, CheckboxInputInverse, FeatureToggle } from '../base';
+import { FeatureToggle, CheckboxInput, CheckboxInputInverse } from '../base';
 
 export const admin_ignore_cult_ghost: FeatureToggle = {
   name: 'Prevent being summoned as a cult ghost',

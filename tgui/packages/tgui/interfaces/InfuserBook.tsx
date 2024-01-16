@@ -1,10 +1,8 @@
-import { paginate, range } from 'common/collections';
-import { multiline } from 'common/string';
-import { useState } from 'react';
-
-import { useBackend } from '../backend';
+import { useBackend, useLocalState } from '../backend';
 import { BlockQuote, Box, Button, Section, Stack, Tabs } from '../components';
 import { Window } from '../layouts';
+import { multiline } from 'common/string';
+import { paginate, range } from 'common/collections';
 
 type Entry = {
   name: string;
@@ -70,14 +68,18 @@ const TIER2TIERDATA: TierData[] = [
   },
 ];
 
-export const InfuserBook = (props) => {
-  const { data, act } = useBackend<DnaInfuserData>();
+export const InfuserBook = (props, context) => {
+  const { data, act } = useBackend<DnaInfuserData>(context);
   const { entries } = data;
 
-  const [bookPosition, setBookPosition] = useState({
-    chapter: 0,
-    pageInChapter: 0,
-  });
+  const [bookPosition, setBookPosition] = useLocalState<BookPosition>(
+    context,
+    'bookPosition',
+    {
+      chapter: 0,
+      pageInChapter: 0,
+    }
+  );
   const { chapter, pageInChapter } = bookPosition;
 
   const paginatedEntries = paginateEntries(entries);
@@ -147,11 +149,8 @@ export const InfuserBook = (props) => {
                       key={tabIndex}
                       selected={chapter === tabIndex}
                       onClick={
-                        tabIndex === 4
-                          ? undefined
-                          : () => switchChapter(tabIndex)
-                      }
-                    >
+                        tabIndex === 4 ? null : () => switchChapter(tabIndex)
+                      }>
                       <Box color={tabIndex === 4 && 'red'}>{tab}</Box>
                     </Tabs.Tab>
                   );
@@ -183,8 +182,7 @@ export const InfuserBook = (props) => {
                 <Button
                   color={restrictedNext && 'black'}
                   onClick={() => setPage(pageInChapter + 1)}
-                  fluid
-                >
+                  fluid>
                   {restrictedNext ? 'RESTRICTED' : 'Next Page'}
                 </Button>
               </Stack.Item>
@@ -196,7 +194,7 @@ export const InfuserBook = (props) => {
   );
 };
 
-export const InfuserInstructions = (props) => {
+export const InfuserInstructions = (props, context) => {
   return (
     <Section title="DNA Infusion Guide" height={PAGE_HEIGHT}>
       <Stack vertical>
@@ -235,7 +233,7 @@ type InfuserEntryProps = {
   entry: Entry;
 };
 
-const InfuserEntry = (props: InfuserEntryProps) => {
+const InfuserEntry = (props: InfuserEntryProps, context) => {
   const { entry } = props;
 
   const tierData = TIER2TIERDATA[entry.tier];
@@ -249,8 +247,7 @@ const InfuserEntry = (props: InfuserEntryProps) => {
         <Button tooltip={tierData.desc} icon={tierData.icon}>
           {tierData.name}
         </Button>
-      }
-    >
+      }>
       <Stack vertical fill>
         <Stack.Item>
           <BlockQuote>

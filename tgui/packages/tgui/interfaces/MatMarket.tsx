@@ -1,10 +1,9 @@
+import { useBackend } from '../backend';
+import { Section, Stack, Button, Modal } from '../components';
+import { Window } from '../layouts';
 import { BooleanLike } from 'common/react';
 import { toTitleCase } from 'common/string';
-
-import { useBackend } from '../backend';
-import { Button, Modal, Section, Stack } from '../components';
 import { formatMoney } from '../format';
-import { Window } from '../layouts';
 
 type Material = {
   name: string;
@@ -22,11 +21,10 @@ type Data = {
   orderBalance: number;
   materials: Material[];
   catastrophe: BooleanLike;
-  CARGO_CRATE_VALUE: number;
 };
 
-export const MatMarket = (props) => {
-  const { act, data } = useBackend<Data>();
+export const MatMarket = (props, context) => {
+  const { act, data } = useBackend<Data>(context); // this will tell your editor that data is the type listed above
 
   const {
     orderingPrive,
@@ -35,14 +33,7 @@ export const MatMarket = (props) => {
     orderBalance,
     materials = [],
     catastrophe,
-    CARGO_CRATE_VALUE,
   } = data;
-
-  // offset cost with crate value if there is currently nothing in the order
-  const total_order_cost = orderBalance || CARGO_CRATE_VALUE;
-  // multiplier of 1.1 for private orders
-  const multiplier = orderingPrive ? 1.1 : 1;
-
   return (
     <Window width={980} height={630}>
       <Window.Content scrollable>
@@ -63,8 +54,7 @@ export const MatMarket = (props) => {
                 onClick={() => act('toggle_budget')}
               />
             )
-          }
-        >
+          }>
           Buy orders for material sheets placed here will be ordered on the next
           cargo shipment.
           <br /> <br />
@@ -104,8 +94,7 @@ export const MatMarket = (props) => {
                     textColor={material.color ? material.color : 'white'}
                     fontSize="125%"
                     width="15%"
-                    pr="3%"
-                  >
+                    pr="3%">
                     {toTitleCase(material.name)}
                   </Stack.Item>
 
@@ -126,8 +115,7 @@ export const MatMarket = (props) => {
                         : material.trend === 'down'
                           ? 'red'
                           : 'white'
-                    }
-                  >
+                    }>
                     <b>{toTitleCase(material.name)}</b> is trending{' '}
                     <b>{material.trend}</b>.
                   </Stack.Item>
@@ -138,8 +126,7 @@ export const MatMarket = (props) => {
                   disabled={
                     catastrophe === 1 ||
                     material.price <= 0 ||
-                    creditBalance - total_order_cost <
-                      material.price * multiplier ||
+                    creditBalance - orderBalance < material.price ||
                     material.requested + 1 > material.quantity
                   }
                   tooltip={material.price * 1}
@@ -155,8 +142,7 @@ export const MatMarket = (props) => {
                   disabled={
                     catastrophe === 1 ||
                     material.price <= 0 ||
-                    creditBalance - total_order_cost <
-                      material.price * 5 * multiplier ||
+                    creditBalance - orderBalance < material.price * 5 ||
                     material.requested + 5 > material.quantity
                   }
                   tooltip={material.price * 5}
@@ -172,8 +158,7 @@ export const MatMarket = (props) => {
                   disabled={
                     catastrophe === 1 ||
                     material.price <= 0 ||
-                    creditBalance - total_order_cost <
-                      material.price * 10 * multiplier ||
+                    creditBalance - orderBalance < material.price * 10 ||
                     material.requested + 10 > material.quantity
                   }
                   tooltip={material.price * 10}
@@ -189,8 +174,7 @@ export const MatMarket = (props) => {
                   disabled={
                     catastrophe === 1 ||
                     material.price <= 0 ||
-                    creditBalance - total_order_cost <
-                      material.price * 25 * multiplier ||
+                    creditBalance - orderBalance < material.price * 25 ||
                     material.requested + 25 > material.quantity
                   }
                   tooltip={material.price * 25}
@@ -206,8 +190,7 @@ export const MatMarket = (props) => {
                   disabled={
                     catastrophe === 1 ||
                     material.price <= 0 ||
-                    creditBalance - total_order_cost <
-                      material.price * 50 * multiplier ||
+                    creditBalance - orderBalance < material.price * 50 ||
                     material.requested + 50 > material.quantity
                   }
                   tooltip={material.price * 50}
@@ -231,7 +214,7 @@ export const MatMarket = (props) => {
   );
 };
 
-const MarketCrashModal = (props) => {
+const MarketCrashModal = (props, context) => {
   return (
     <Modal textAlign="center" mr={1.5}>
       ATTENTION! THE MARKET HAS CRASHED

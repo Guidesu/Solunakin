@@ -1,31 +1,24 @@
 import { useBackend } from '../backend';
 import { Section, Stack } from '../components';
 import { Window } from '../layouts';
-import { Rules } from './AntagInfoRules'; // NOVA EDIT ADDITION
-import { Objective, ObjectivePrintout } from './common/Objectives';
+import { ObjectivePrintout, Objective } from './common/Objectives';
 
 type Info = {
   antag_name: string;
   objectives: Objective[];
 };
 
-// NOVA EDIT increase height from 250 to 500
-export const AntagInfoGeneric = (props) => {
-  const { data } = useBackend<Info>();
+export const AntagInfoGeneric = (props, context) => {
+  const { data } = useBackend<Info>(context);
   const { antag_name, objectives } = data;
   return (
-    <Window width={620} height={500}>
+    <Window width={620} height={250}>
       <Window.Content>
         <Section scrollable fill>
           <Stack vertical>
             <Stack.Item textColor="red" fontSize="20px">
               You are the {antag_name}!
             </Stack.Item>
-            {/* NOVA EDIT ADDITION START */}
-            <Stack.Item>
-              <Rules />
-            </Stack.Item>
-            {/* NOVA EDIT ADDITION END */}
             <Stack.Item>
               <ObjectivePrintout objectives={objectives} />
             </Stack.Item>

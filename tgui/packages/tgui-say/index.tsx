@@ -1,7 +1,5 @@
 import './styles/main.scss';
-
 import { createRenderer } from 'tgui/renderer';
-
 import { TguiSay } from './TguiSay';
 
 const renderApp = createRenderer(() => {

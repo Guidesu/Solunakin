@@ -6,14 +6,15 @@
  * @license MIT
  */
 
-import { EventEmitter } from 'common/events';
 import { KEY_ALT, KEY_CTRL, KEY_F1, KEY_F12, KEY_SHIFT } from 'common/keycodes';
+
+import { EventEmitter } from 'common/events';
 
 export const globalEvents = new EventEmitter();
 let ignoreWindowFocus = false;
 
 export const setupGlobalEvents = (
-  options: { ignoreWindowFocus?: boolean } = {},
+  options: { ignoreWindowFocus?: boolean } = {}
 ): void => {
   ignoreWindowFocus = !!options.ignoreWindowFocus;
 };
@@ -122,6 +123,7 @@ window.addEventListener('focusin', (e) => {
   setWindowFocus(true);
   if (canStealFocus(e.target as HTMLElement)) {
     stealFocus(e.target as HTMLElement);
+    return;
   }
 });
 

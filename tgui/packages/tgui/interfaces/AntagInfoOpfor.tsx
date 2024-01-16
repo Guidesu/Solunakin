@@ -1,10 +1,9 @@
-// THIS IS A NOVA SECTOR UI FILE
-import { useBackend } from '../backend';
-import { Button, Section, Stack } from '../components';
+import { Section, Stack, Button } from '../components';
 import { Window } from '../layouts';
+import { useBackend } from '../backend';
 
-export const AntagInfoOpfor = (props) => {
-  const { act } = useBackend();
+export const AntagInfoOpfor = (props, context) => {
+  const { act } = useBackend(context);
   return (
     <Window width={620} height={250}>
       <Window.Content>

@@ -1,6 +1,5 @@
 import { BooleanLike } from 'common/react';
-import { ReactNode } from 'react';
-
+import { InfernoNode } from 'inferno';
 import { useBackend } from '../../backend';
 import { Button, Stack } from '../../components';
 
@@ -19,7 +18,7 @@ type ObjectivePrintoutProps = {
   // For passing onto the Stack component
   fill?: boolean;
   // Allows additional components to follow the printout in the same stack
-  objectiveFollowup?: ReactNode;
+  objectiveFollowup?: InfernoNode;
   // The prefix to use for each objective, defaults to "#" (#1, #2)
   objectivePrefix?: string;
   // The font size to use for each objective
@@ -30,7 +29,7 @@ type ObjectivePrintoutProps = {
   titleMessage?: string;
 };
 
-export const ObjectivePrintout = (props: ObjectivePrintoutProps) => {
+export const ObjectivePrintout = (props: ObjectivePrintoutProps, context) => {
   const {
     fill,
     objectiveFollowup,
@@ -68,14 +67,17 @@ type ReplaceObjectivesProps = {
   button_tooltip?: string;
 };
 
-export const ReplaceObjectivesButton = (props: ReplaceObjectivesProps) => {
+export const ReplaceObjectivesButton = (
+  props: ReplaceObjectivesProps,
+  context
+) => {
   const {
     can_change_objective,
     button_title,
     button_colour,
     button_tooltip = 'Replace your existing objectives with a custom one. This action can only be taken once',
   } = props;
-  const { act } = useBackend();
+  const { act } = useBackend(context);
   if (!can_change_objective) {
     return null;
   }

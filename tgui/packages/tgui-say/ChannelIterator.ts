@@ -2,10 +2,10 @@ export type Channel =
   | 'Say'
   | 'Radio'
   | 'Me'
-  // NOVA EDIT ADDITION START
+  // SKYRAT EDIT ADDITION START
   | 'Whis'
   | 'LOOC'
-  // NOVA EDIT ADDITION END
+  // SKYRAT EDIT ADDITION END
   | 'OOC'
   | 'Admin';
 
@@ -21,15 +21,15 @@ export class ChannelIterator {
     'Say',
     'Radio',
     'Me',
-    // NOVA EDIT ADDITION
+    // SKYRAT EDIT ADDITION
     'Whis',
     'LOOC',
-    // NOVA EDIT ADDITION
+    // SKYRAT EDIT ADDITION
     'OOC',
     'Admin',
   ];
   private readonly blacklist: Channel[] = ['Admin'];
-  private readonly quiet: Channel[] = ['OOC', 'LOOC', 'Admin']; // NOVA EDIT CHANGE (Add LOOC)
+  private readonly quiet: Channel[] = ['OOC', 'LOOC', 'Admin']; // SKYRAT EDIT CHANGE (Add LOOC)
 
   public next(): Channel {
     if (this.blacklist.includes(this.channels[this.index])) {

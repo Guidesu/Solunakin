@@ -1,18 +1,16 @@
-// THIS IS A NOVA SECTOR UI FILE
 import { useBackend } from '../backend';
 import { Icon, Section, Stack } from '../components';
 import { Window } from '../layouts';
-import { Rules } from './AntagInfoRules';
 
 type Info = {
   antag_name: string;
 };
 
-export const AntagInfoClock = (props) => {
-  const { data } = useBackend<Info>();
+export const AntagInfoClock = (props, context) => {
+  const { data } = useBackend<Info>(context);
   const { antag_name } = data;
   return (
-    <Window width={620} height={350} theme="clockwork">
+    <Window width={620} height={250} theme="clockwork">
       <Window.Content>
         <Section scrollable fill>
           <Stack vertical>
@@ -20,9 +18,6 @@ export const AntagInfoClock = (props) => {
               <Icon name={'cog'} rotation={0} spin />
               {' You are the ' + antag_name + '! '}
               <Icon name={'cog'} rotation={35} spin />
-            </Stack.Item>
-            <Stack.Item>
-              <Rules />
             </Stack.Item>
             <Stack.Item>
               <ObjectivePrintout />
@@ -34,8 +29,8 @@ export const AntagInfoClock = (props) => {
   );
 };
 
-const ObjectivePrintout = (props) => {
-  const { data } = useBackend<Info>();
+const ObjectivePrintout = (props, context) => {
+  const { data } = useBackend<Info>(context);
   return (
     <Stack vertical>
       <Stack.Item bold>Your goals:</Stack.Item>

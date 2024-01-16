@@ -1,6 +1,5 @@
-import { multiline } from 'common/string';
-
 import { Antagonist, Category } from '../base';
+import { multiline } from 'common/string';
 
 export const TRAITOR_MECHANICAL_DESCRIPTION = multiline`
       Start with an uplink to purchase your gear and take on your sinister

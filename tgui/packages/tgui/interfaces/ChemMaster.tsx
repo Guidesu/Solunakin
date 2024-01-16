@@ -1,22 +1,7 @@
 import { BooleanLike, classes } from 'common/react';
 import { capitalize } from 'common/string';
-import { useState } from 'react';
-
-import { useBackend } from '../backend';
-import {
-  AnimatedNumber,
-  Box,
-  Button,
-  ColorBox,
-  Divider,
-  LabeledList,
-  NumberInput,
-  ProgressBar,
-  Section,
-  Stack,
-  Table,
-  Tooltip,
-} from '../components';
+import { useBackend, useLocalState } from '../backend';
+import { AnimatedNumber, Box, Button, Section, Table, NumberInput, Tooltip, LabeledList, ColorBox, ProgressBar, Stack, Divider } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -71,8 +56,8 @@ type Container = {
   volume: number;
 };
 
-export const ChemMaster = (props) => {
-  const { data } = useBackend<Data>();
+export const ChemMaster = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { reagentAnalysisMode } = data;
   return (
     <Window width={400} height={620}>
@@ -83,8 +68,8 @@ export const ChemMaster = (props) => {
   );
 };
 
-const ChemMasterContent = (props) => {
-  const { act, data } = useBackend<Data>();
+const ChemMasterContent = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const {
     isPrinting,
     printingProgress,
@@ -104,7 +89,7 @@ const ChemMasterContent = (props) => {
     suggestedContainer,
   } = data;
 
-  const [itemCount, setItemCount] = useState(1);
+  const [itemCount, setItemCount] = useLocalState(context, 'itemCount', 1);
 
   return (
     <Box>
@@ -124,8 +109,7 @@ const ChemMasterContent = (props) => {
               />
             </Box>
           )
-        }
-      >
+        }>
         {!hasBeaker && (
           <Box color="label" my={'4px'}>
             No beaker loaded.
@@ -161,8 +145,7 @@ const ChemMasterContent = (props) => {
               onClick={() => act('toggleTransferMode')}
             />
           </>
-        }
-      >
+        }>
         {bufferContents.length === 0 && (
           <Box color="label" my={'4px'}>
             Buffer is empty.
@@ -200,8 +183,8 @@ const ChemMasterContent = (props) => {
                     Math.round(
                       Math.min(
                         selectedContainerVolume,
-                        bufferCurrentVolume / itemCount,
-                      ) * 100,
+                        bufferCurrentVolume / itemCount
+                      ) * 100
                     ) / 100
                   } u. each`}
                 </Box>
@@ -218,14 +201,12 @@ const ChemMasterContent = (props) => {
             ) : (
               <Button content="Printing..." icon="gear" iconSpin disabled />
             ))
-          }
-        >
+          }>
           {!!hasContainerSuggestion && (
             <Button.Checkbox
               onClick={() => act('toggleContainerSuggestion')}
               checked={doSuggestContainer}
-              mb={1}
-            >
+              mb={1}>
               Guess container by main reagent in the buffer
             </Button.Checkbox>
           )}
@@ -243,7 +224,7 @@ const ChemMasterContent = (props) => {
                       category={category}
                       container={container}
                     />
-                  ),
+                  )
               )}
             </Box>
           ))}
@@ -259,20 +240,17 @@ const ChemMasterContent = (props) => {
               content="Stop"
               onClick={() => act('stopPrinting')}
             />
-          }
-        >
+          }>
           <ProgressBar
             value={printingProgress}
             minValue={0}
             maxValue={printingTotal}
-            color="good"
-          >
+            color="good">
             <Box
               lineHeight={1.9}
               style={{
-                textShadow: '1px 1px 0 black',
-              }}
-            >
+                'text-shadow': '1px 1px 0 black',
+              }}>
               {`Printing ${printingProgress} out of ${printingTotal}`}
             </Box>
           </ProgressBar>
@@ -282,8 +260,8 @@ const ChemMasterContent = (props) => {
   );
 };
 
-const ReagentEntry = (props) => {
-  const { data, act } = useBackend<Data>();
+const ReagentEntry = (props, context) => {
+  const { data, act } = useBackend<Data>(context);
   const { chemical, transferTo } = props;
   const { isPrinting } = data;
   return (
@@ -340,7 +318,7 @@ const ReagentEntry = (props) => {
         />
         <Button
           icon="ellipsis-h"
-          tooltip="Custom amount"
+          title="Custom amount"
           disabled={isPrinting}
           onClick={() =>
             act('transfer', {
@@ -352,7 +330,7 @@ const ReagentEntry = (props) => {
         />
         <Button
           icon="question"
-          tooltip="Analyze"
+          title="Analyze"
           onClick={() =>
             act('analyze', {
               reagentRef: chemical.ref,
@@ -364,15 +342,14 @@ const ReagentEntry = (props) => {
   );
 };
 
-const ContainerButton = ({ container, category }) => {
-  const { act, data } = useBackend<Data>();
+const ContainerButton = ({ container, category }, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { isPrinting, selectedContainerRef } = data;
   const isPillPatch = ['pills', 'patches'].includes(category.name);
   return (
     <Tooltip
       key={container.ref}
-      content={`${capitalize(container.name)}\xa0(${container.volume}u)`}
-    >
+      content={`${capitalize(container.name)}\xa0(${container.volume}u)`}>
       <Button
         overflow="hidden"
         color="transparent"
@@ -385,12 +362,11 @@ const ContainerButton = ({ container, category }) => {
           act('selectContainer', {
             ref: container.ref,
           });
-        }}
-      >
+        }}>
         <Box
           m={isPillPatch ? '0' : '8px'}
           style={{
-            transform: 'scale(2)',
+            'transform': 'scale(2)',
           }}
           className={classes(['chemmaster32x32', container.icon])}
         />
@@ -399,8 +375,8 @@ const ContainerButton = ({ container, category }) => {
   ) as any;
 };
 
-const AnalysisResults = (props) => {
-  const { act, data } = useBackend<Data>();
+const AnalysisResults = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const {
     name,
     state,
@@ -423,17 +399,15 @@ const AnalysisResults = (props) => {
           content="Back"
           onClick={() => act('stopAnalysis')}
         />
-      }
-    >
+      }>
       <LabeledList>
         <LabeledList.Item label="Name">{name}</LabeledList.Item>
         <LabeledList.Item label="Purity">
           <Box
             style={{
-              textTransform: 'capitalize',
+              'text-transform': 'capitalize',
             }}
-            color={purityLevel}
-          >
+            color={purityLevel}>
             {purityLevel}
           </Box>
         </LabeledList.Item>
@@ -466,10 +440,9 @@ const GroupTitle = ({ title }) => {
       </Stack.Item>
       <Stack.Item
         style={{
-          textTransform: 'capitalize',
+          'text-transform': 'capitalize',
         }}
-        color={'gray'}
-      >
+        color={'gray'}>
         {title}
       </Stack.Item>
       <Stack.Item grow>

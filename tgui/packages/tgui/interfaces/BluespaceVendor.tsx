@@ -3,15 +3,8 @@ import { flow } from 'common/fp';
 import { toFixed } from 'common/math';
 import { BooleanLike } from 'common/react';
 import { multiline } from 'common/string';
-
 import { useBackend } from '../backend';
-import {
-  Button,
-  NumberInput,
-  ProgressBar,
-  Section,
-  Stack,
-} from '../components';
+import { Button, NumberInput, ProgressBar, Section, Stack } from '../components';
 import { Table, TableCell, TableRow } from '../components/Table';
 import { getGasColor } from '../constants';
 import { Window } from '../layouts';
@@ -39,8 +32,8 @@ type GasDisplayProps = {
   gasMax: number;
 };
 
-export const BluespaceVendor = (props) => {
-  const { act, data } = useBackend<Data>();
+export const BluespaceVendor = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const {
     bluespace_network_gases = [],
     inserted_tank,
@@ -81,8 +74,7 @@ export const BluespaceVendor = (props) => {
                     onClick={() => act('tank_expel')}
                   />
                 </>
-              }
-            >
+              }>
               <Stack>
                 <Stack.Item>
                   <NumberInput
@@ -130,8 +122,7 @@ export const BluespaceVendor = (props) => {
                   and finally press start on the gas of your choice!
                 `}
                 />
-              }
-            >
+              }>
               <Table>
                 <thead>
                   <TableRow>
@@ -162,8 +153,8 @@ export const BluespaceVendor = (props) => {
   );
 };
 
-const GasDisplay = (props: GasDisplayProps) => {
-  const { act, data } = useBackend<Data>();
+const GasDisplay = (props: GasDisplayProps, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { pumping, selected_gas, inserted_tank } = data;
   const {
     gas: { name, amount, price, id },

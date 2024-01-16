@@ -1,5 +1,4 @@
 import { BooleanLike } from 'common/react';
-
 import { sendAct } from '../../backend';
 import { Gender } from './preferences/gender';
 
@@ -25,7 +24,7 @@ export enum Food {
   Sugar = 'SUGAR',
   Toxic = 'TOXIC',
   Vegetables = 'VEGETABLES',
-  Bloody = 'BLOODY', // NOVA EDIT ADDITION - Hemophage Food
+  Bloody = 'BLOODY', // SKYRAT EDIT ADDITION - Hemophage Food
 }
 
 export enum JobPriority {
@@ -51,7 +50,7 @@ export type Species = {
 
   enabled_features: string[];
 
-  veteran_only: boolean; // NOVA EDIT - Veteran quirks
+  veteran_only: boolean; // SKYRAT EDIT - Veteran quirks
 
   perks: {
     positive: Perk[];
@@ -79,10 +78,10 @@ export type Department = {
 export type Job = {
   description: string;
   department: string;
-  // NOVA EDIT
+  // SKYRAT EDIT
   veteran?: boolean;
   alt_titles?: string[];
-  // NOVA EDIT END
+  // SKYRAT EDIT END
 };
 
 export type Quirk = {
@@ -90,12 +89,10 @@ export type Quirk = {
   icon: string;
   name: string;
   value: number;
-  customizable: boolean;
-  customization_options?: string[];
-  veteran_only: boolean; // NOVA EDIT - Veteran quirks
+  veteran_only: boolean; // SKYRAT EDIT - Veteran quirks
 };
 
-// NOVA EDIT START
+// SKYRAT EDIT START
 export type Language = {
   description: string;
   name: string;
@@ -132,7 +129,7 @@ export type Organ = {
   costs: Record<string, number>;
 };
 
-// NOVA EDIT END
+// SKYRAT EDIT END
 export type QuirkInfo = {
   max_positive_quirks: number;
   quirk_info: Record<string, Quirk>;
@@ -174,10 +171,10 @@ export type PreferencesMenuData = {
   character_preview_view: string;
   character_profiles: (string | null)[];
 
-  preview_options: string[]; // NOVA EDIT ADDITION
-  preview_selection: string; // NOVA EDIT ADDITION
+  preview_options: string[]; // SKYRAT EDIT ADDITION
+  preview_selection: string; // SKYRAT EDIT ADDITION
 
-  is_veteran: BooleanLike; // NOVA EDIT - Veteran status
+  is_veteran: BooleanLike; // SKYRAT EDIT - Veteran status
 
   character_preferences: {
     clothing: Record<string, string>;
@@ -189,7 +186,6 @@ export type PreferencesMenuData = {
     };
     secondary_features: Record<string, unknown>;
     supplemental_features: Record<string, unknown>;
-    manually_rendered_features: Record<string, string>;
 
     names: Record<string, string>;
 
@@ -215,7 +211,7 @@ export type PreferencesMenuData = {
   >;
   job_preferences: Record<string, JobPriority>;
 
-  // NOVA EDIT
+  // SKYRAT EDIT
   job_alt_titles: Record<string, string>;
 
   robotic_styles: string[];
@@ -229,7 +225,7 @@ export type PreferencesMenuData = {
   quirks_balance: number;
   positive_quirk_count: number;
   species_restricted_jobs?: string[];
-  // NOVA EDIT END
+  // SKYRAT EDIT END
   keybindings: Record<string, string[]>;
   overflow_role: string;
   selected_quirks: string[];

@@ -1,14 +1,6 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
-import {
-  Box,
-  Button,
-  LabeledList,
-  NoticeBox,
-  ProgressBar,
-  Section,
-} from '../components';
+import { Box, ProgressBar, NoticeBox, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -23,8 +15,8 @@ type Data = {
   beaker_reagent_color: string;
 };
 
-export const ChemSeparator = (props) => {
-  const { act, data } = useBackend<Data>();
+export const ChemSeparator = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   return (
     <Window width={470} height={130}>
       <Window.Content>
@@ -76,21 +68,18 @@ export const ChemSeparator = (props) => {
                     />
                   )}
                 </Box>
-              }
-            >
+              }>
               <ProgressBar
                 height={2}
                 value={data.own_total_volume}
                 minValue={0}
                 maxValue={data.own_maximum_volume}
-                color={data.own_reagent_color}
-              >
+                color={data.own_reagent_color}>
                 <Box
                   lineHeight={1.9}
                   style={{
-                    textShadow: '1px 1px 0 black',
-                  }}
-                >
+                    'text-shadow': '1px 1px 0 black',
+                  }}>
                   {`${Math.ceil(data.own_total_volume)} of ${
                     data.own_maximum_volume
                   } units at ${Math.ceil(data.temperature)}°C`}
@@ -126,21 +115,18 @@ export const ChemSeparator = (props) => {
                       onClick={() => act('eject')}
                     />
                   </Box>
-                }
-              >
+                }>
                 <ProgressBar
                   height={2}
                   value={data.beaker_total_volume}
                   minValue={0}
                   maxValue={data.beaker_maximum_volume}
-                  color={data.beaker_reagent_color}
-                >
+                  color={data.beaker_reagent_color}>
                   <Box
                     lineHeight={1.9}
                     style={{
-                      textShadow: '1px 1px 0 black',
-                    }}
-                  >
+                      'text-shadow': '1px 1px 0 black',
+                    }}>
                     {`${Math.ceil(data.beaker_total_volume)} of ${
                       data.beaker_maximum_volume
                     } units`}

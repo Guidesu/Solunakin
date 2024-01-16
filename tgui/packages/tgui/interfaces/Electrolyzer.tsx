@@ -1,5 +1,4 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
 import { Button, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
@@ -12,8 +11,8 @@ type Data = {
   powerLevel: number;
 };
 
-export const Electrolyzer = (props) => {
-  const { act, data } = useBackend<Data>();
+export const Electrolyzer = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { hasPowercell, on, open, anchored, powerLevel } = data;
 
   return (
@@ -37,13 +36,13 @@ export const Electrolyzer = (props) => {
                 onClick={() => act('power')}
               />
             </>
-          }
-        >
+          }>
           <LabeledList>
-            <LabeledList.Item label="Cell" color={!hasPowercell ? 'bad' : ''}>
+            <LabeledList.Item label="Cell" color={!hasPowercell && 'bad'}>
               {(hasPowercell && (
                 <ProgressBar
                   value={powerLevel / 100}
+                  content={powerLevel + '%'}
                   ranges={{
                     good: [0.6, Infinity],
                     average: [0.3, 0.6],

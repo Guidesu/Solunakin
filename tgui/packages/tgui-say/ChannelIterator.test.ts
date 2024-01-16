@@ -11,10 +11,10 @@ describe('ChannelIterator', () => {
     expect(channelIterator.current()).toBe('Say');
     expect(channelIterator.next()).toBe('Radio');
     expect(channelIterator.next()).toBe('Me');
-    // NOVA EDIT ADDITION START
+    // SKYRAT EDIT ADDITION START
     expect(channelIterator.next()).toBe('Whis');
     expect(channelIterator.next()).toBe('LOOC');
-    // NOVA EDIT ADDITION END
+    // SKYRAT EDIT ADDITION END
     expect(channelIterator.next()).toBe('OOC');
     expect(channelIterator.next()).toBe('Say'); // Admin is blacklisted so it should be skipped
   });

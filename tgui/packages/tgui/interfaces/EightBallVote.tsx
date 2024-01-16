@@ -1,9 +1,8 @@
-import { BooleanLike } from 'common/react';
-import { toTitleCase } from 'common/string';
-
 import { useBackend } from '../backend';
-import { Box, Button, Grid, NoticeBox, Section } from '../components';
+import { Box, Button, Grid, Section, NoticeBox } from '../components';
+import { toTitleCase } from 'common/string';
 import { Window } from '../layouts';
+import { BooleanLike } from 'common/react';
 
 type Data = {
   shaking: BooleanLike;
@@ -17,8 +16,8 @@ type Answer = {
   selected: BooleanLike;
 };
 
-export const EightBallVote = (props) => {
-  const { act, data } = useBackend<Data>();
+export const EightBallVote = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { shaking } = data;
   return (
     <Window width={400} height={600}>
@@ -31,8 +30,8 @@ export const EightBallVote = (props) => {
   );
 };
 
-const EightBallVoteQuestion = (props) => {
-  const { act, data } = useBackend<Data>();
+const EightBallVoteQuestion = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { question, answers = [] } = data;
   return (
     <Section>

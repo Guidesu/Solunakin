@@ -1,12 +1,11 @@
 import { range } from 'common/collections';
 import { BooleanLike } from 'common/react';
-
 import { resolveAsset } from '../assets';
 import { useBackend } from '../backend';
-import { Box, Button, Icon, Image, Stack } from '../components';
+import { Box, Button, Icon, Stack } from '../components';
 import { Window } from '../layouts';
 
-const ROWS = 6; // NOVA EDIT CHANGE
+const ROWS = 6; // SKYRAT EDIT CHANGE
 const COLUMNS = 6;
 
 const BUTTON_DIMENSIONS = '50px';
@@ -28,10 +27,9 @@ const CornerText = (props: {
       style={{
         position: 'relative',
         left: align === 'left' ? '2px' : '-2px',
-        textAlign: align,
-        textShadow: '1px 1px 1px #555',
-      }}
-    >
+        'text-align': align,
+        'text-shadow': '1px 1px 1px #555',
+      }}>
       {children}
     </Box>
   );
@@ -59,12 +57,12 @@ const ALTERNATE_ACTIONS: Record<string, AlternateAction> = {
   },
 
   enable_internals: {
-    icon: 'lungs', // NOVA EDIT - TGFONT IS FUCKED AND I DUNNO WHY SO HERE'S A BANDAID - original "tg-air-tank"
+    icon: 'lungs', // SKYRAT EDIT - TGFONT IS FUCKED AND I DUNNO WHY SO HERE'S A BANDAID - original "tg-air-tank"
     text: 'Enable internals',
   },
 
   disable_internals: {
-    icon: 'lungs-virus', // NOVA EDIT - TGFONT IS FUCKED AND I DUNNO WHY SO HERE'S A BANDAID - original "tg-air-tank-slash"
+    icon: 'lungs-virus', // SKYRAT EDIT - TGFONT IS FUCKED AND I DUNNO WHY SO HERE'S A BANDAID - original "tg-air-tank-slash"
     text: 'Disable internals',
   },
 
@@ -208,7 +206,7 @@ const SLOTS: Record<
     gridSpot: getGridSpotKey([4, 5]),
     image: 'inventory-pocket.png',
   },
-  // NOVA EDIT ADDITION
+  // SKYRAT EDIT ADDITION
   vagina: {
     displayName: 'vagina',
     gridSpot: getGridSpotKey([5, 1]),
@@ -233,7 +231,7 @@ const SLOTS: Record<
     image: 'inventory-pocket.png',
   },
 };
-// NOVA EDIT END
+// SKYRAT EDIT END
 enum ObscuringLevel {
   Completely = 1,
   Hidden = 2,
@@ -273,8 +271,8 @@ type StripMenuData = {
   name: string;
 };
 
-export const StripMenu = (props) => {
-  const { act, data } = useBackend<StripMenuData>();
+export const StripMenu = (props, context) => {
+  const { act, data } = useBackend<StripMenuData>(context);
 
   const gridSpots = new Map<GridSpotKey, string>();
   for (const key of Object.keys(data.items)) {
@@ -320,12 +318,14 @@ export const StripMenu = (props) => {
                     }
 
                     content = (
-                      <Image
+                      <Box
+                        as="img"
                         src={`data:image/jpeg;base64,${item.icon}`}
                         height="100%"
                         width="100%"
                         style={{
-                          verticalAlign: 'middle',
+                          '-ms-interpolation-mode': 'nearest-neighbor',
+                          'vertical-align': 'middle',
                         }}
                       />
                     );
@@ -343,7 +343,7 @@ export const StripMenu = (props) => {
                         ml={0}
                         mt={1.3}
                         style={{
-                          textAlign: 'center',
+                          'text-align': 'center',
                           height: '100%',
                           width: '100%',
                         }}
@@ -359,15 +359,13 @@ export const StripMenu = (props) => {
                       style={{
                         width: BUTTON_DIMENSIONS,
                         height: BUTTON_DIMENSIONS,
-                      }}
-                    >
+                      }}>
                       <Box
                         style={{
                           position: 'relative',
                           width: '100%',
                           height: '100%',
-                        }}
-                      >
+                        }}>
                         <Button
                           onClick={() => {
                             act('use', {
@@ -383,11 +381,11 @@ export const StripMenu = (props) => {
                             position: 'relative',
                             width: '100%',
                             height: '100%',
-                            padding: '0',
-                          }}
-                        >
+                            padding: 0,
+                          }}>
                           {slot.image && (
-                            <Image
+                            <Box
+                              as="img"
                               className="centered-image"
                               src={resolveAsset(slot.image)}
                               opacity={0.7}
@@ -410,11 +408,10 @@ export const StripMenu = (props) => {
                             style={{
                               background: 'rgba(0, 0, 0, 0.6)',
                               position: 'absolute',
-                              bottom: '0',
-                              right: '0',
-                              zIndex: '2',
-                            }}
-                          >
+                              bottom: 0,
+                              right: 0,
+                              'z-index': 2,
+                            }}>
                             <Icon name={alternateAction.icon} />
                           </Button>
                         )}

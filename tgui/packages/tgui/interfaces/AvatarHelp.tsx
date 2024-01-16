@@ -19,7 +19,7 @@ const boxHelp = [
     color: 'green',
     text: 'Bring the crate to the designated sending location in the safehouse. The area may seem out of place. Examine the safehouse to find it.',
     icon: 'boxes',
-    title: 'Recover',
+    'title': 'Recover',
   },
   {
     color: 'blue',
@@ -47,8 +47,8 @@ const boxHelp = [
   },
 ] as const;
 
-export const AvatarHelp = (props) => {
-  const { data } = useBackend<Data>();
+export const AvatarHelp = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { help_text = DEFAULT_HELP } = data;
 
   return (
@@ -60,8 +60,7 @@ export const AvatarHelp = (props) => {
               color="good"
               fill
               scrollable
-              title="Welcome to the Virtual Domain."
-            >
+              title="Welcome to the Virtual Domain.">
               {help_text}
             </Section>
           </Stack.Item>
@@ -97,7 +96,7 @@ export const AvatarHelp = (props) => {
 };
 
 // I wish I had media queries
-const BoxHelp = (props: { index: number }) => {
+const BoxHelp = (props: { index: number }, context) => {
   const { index } = props;
 
   return (
@@ -115,8 +114,7 @@ const BoxHelp = (props: { index: number }) => {
             />
             <Box>{boxHelp[index].title}</Box>
           </Stack>
-        }
-      >
+        }>
         {boxHelp[index].text}
       </Section>
     </Stack.Item>

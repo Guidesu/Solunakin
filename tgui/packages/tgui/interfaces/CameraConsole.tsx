@@ -2,17 +2,8 @@ import { filter, sortBy } from 'common/collections';
 import { flow } from 'common/fp';
 import { BooleanLike, classes } from 'common/react';
 import { createSearch } from 'common/string';
-import { useState } from 'react';
-
-import { useBackend } from '../backend';
-import {
-  Button,
-  ByondUi,
-  Input,
-  NoticeBox,
-  Section,
-  Stack,
-} from '../components';
+import { useBackend, useLocalState } from '../backend';
+import { Button, ByondUi, Input, NoticeBox, Section, Stack } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -34,7 +25,7 @@ type Camera = {
  */
 const prevNextCamera = (
   cameras: Camera[],
-  activeCamera: Camera & { status: BooleanLike },
+  activeCamera: Camera & { status: BooleanLike }
 ) => {
   if (!activeCamera || cameras.length < 2) {
     return [];
@@ -79,7 +70,7 @@ const selectCameras = (cameras: Camera[], searchText = ''): Camera[] => {
   ])(cameras);
 };
 
-export const CameraConsole = (props) => {
+export const CameraConsole = (props, context) => {
   return (
     <Window width={850} height={708}>
       <Window.Content>
@@ -89,24 +80,22 @@ export const CameraConsole = (props) => {
   );
 };
 
-export const CameraContent = (props) => {
-  const [searchText, setSearchText] = useState('');
-
+export const CameraContent = (props, context) => {
   return (
     <Stack fill>
       <Stack.Item grow>
-        <CameraSelector searchText={searchText} setSearchText={setSearchText} />
+        <CameraSelector />
       </Stack.Item>
       <Stack.Item grow={3}>
-        <CameraControls searchText={searchText} />
+        <CameraControls />
       </Stack.Item>
     </Stack>
   );
 };
 
-const CameraSelector = (props) => {
-  const { act, data } = useBackend<Data>();
-  const { searchText, setSearchText } = props;
+const CameraSelector = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
+  const [searchText, setSearchText] = useLocalState(context, 'searchText', '');
   const { activeCamera } = data;
   const cameras = selectCameras(data.cameras, searchText);
 
@@ -115,12 +104,10 @@ const CameraSelector = (props) => {
       <Stack.Item>
         <Input
           autoFocus
-          expensive
           fluid
           mt={1}
           placeholder="Search for a camera"
           onInput={(e, value) => setSearchText(value)}
-          value={searchText}
         />
       </Stack.Item>
       <Stack.Item grow>
@@ -144,8 +131,7 @@ const CameraSelector = (props) => {
                 act('switch_camera', {
                   camera: camera.ref,
                 })
-              }
-            >
+              }>
               {camera.name}
             </div>
           ))}
@@ -155,10 +141,10 @@ const CameraSelector = (props) => {
   );
 };
 
-const CameraControls = (props: { searchText: string }) => {
-  const { act, data } = useBackend<Data>();
+const CameraControls = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { activeCamera, can_spy, mapRef } = data;
-  const { searchText } = props;
+  const [searchText] = useLocalState(context, 'searchText', '');
 
   const cameras = selectCameras(data.cameras, searchText);
 

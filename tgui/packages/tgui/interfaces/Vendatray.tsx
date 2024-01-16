@@ -1,7 +1,6 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
-import { Box, Button, Image, Section, Stack } from '../components';
+import { Box, Button, Section, Stack } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -13,8 +12,8 @@ type Data = {
   product_icon: string;
 };
 
-export const Vendatray = (props) => {
-  const { act, data } = useBackend<Data>();
+export const Vendatray = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { product_name, registered, owner_name } = data;
 
   return (
@@ -27,7 +26,7 @@ export const Vendatray = (props) => {
           </Stack.Item>
         </Stack>
         {registered ? (
-          <Section italic>Pays to the account of {owner_name}.</Section>
+          <Section italics>Pays to the account of {owner_name}.</Section>
         ) : (
           <>
             <Section>Tray is unregistered.</Section>
@@ -46,8 +45,8 @@ export const Vendatray = (props) => {
 };
 
 /** Lists product info and buttons to open or purchase */
-const ProductInfo = (props) => {
-  const { act, data } = useBackend<Data>();
+const ProductInfo = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { product_name, product_cost, tray_open } = data;
 
   return (
@@ -80,19 +79,21 @@ const ProductInfo = (props) => {
 };
 
 /** Produces an image from the product icon */
-const VendingImage = (props) => {
-  const { data } = useBackend<Data>();
+const VendingImage = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { product_icon } = data;
 
   return (
     <Section height="100%">
-      <Image
+      <Box
+        as="img"
         m={1}
         src={`data:image/jpeg;base64,${product_icon}`}
         height="96px"
         width="96px"
         style={{
-          verticalAlign: 'middle',
+          '-ms-interpolation-mode': 'nearest-neighbor',
+          'vertical-align': 'middle',
         }}
       />
     </Section>

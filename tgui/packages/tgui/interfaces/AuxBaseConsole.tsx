@@ -1,7 +1,5 @@
 import { BooleanLike } from 'common/react';
-import { useState } from 'react';
-
-import { useBackend } from '../backend';
+import { useBackend, useLocalState } from '../backend';
 import { Button, NoticeBox, Section, Table, Tabs } from '../components';
 import { Window } from '../layouts';
 import { ShuttleConsoleContent } from './ShuttleConsole';
@@ -23,57 +21,49 @@ type Turret = {
 };
 
 const STATUS_COLOR_KEYS = {
-  ERROR: 'bad',
-  Disabled: 'bad',
-  Firing: 'average',
+  'ERROR': 'bad',
+  'Disabled': 'bad',
+  'Firing': 'average',
   'All Clear': 'good',
 } as const;
 
-enum TAB {
-  Shuttle = 1,
-  Aux,
-}
-
-export const AuxBaseConsole = (props) => {
-  const { data } = useBackend<Data>();
-  const [tab, setTab] = useState(TAB.Shuttle);
+export const AuxBaseConsole = (props, context) => {
+  const { data } = useBackend<Data>(context);
+  const [tab, setTab] = useLocalState(context, 'tab', 1);
   const { type, blind_drop, turrets = [] } = data;
 
   return (
     <Window
       width={turrets.length ? 620 : 350}
-      height={turrets.length ? 310 : 260}
-    >
+      height={turrets.length ? 310 : 260}>
       <Window.Content scrollable={!!turrets.length}>
         <Tabs>
           <Tabs.Tab
             icon="list"
             lineHeight="23px"
             selected={tab === 1}
-            onClick={() => setTab(1)}
-          >
+            onClick={() => setTab(1)}>
             {type === 'shuttle' ? 'Shuttle Launch' : 'Base Launch'}
           </Tabs.Tab>
           <Tabs.Tab
             icon="list"
             lineHeight="23px"
             selected={tab === 2}
-            onClick={() => setTab(2)}
-          >
+            onClick={() => setTab(2)}>
             Turrets ({turrets.length})
           </Tabs.Tab>
         </Tabs>
-        {tab === TAB.Shuttle && (
+        {tab === 1 && (
           <ShuttleConsoleContent type={type} blind_drop={blind_drop} />
         )}
-        {tab === TAB.Aux && <AuxBaseConsoleContent />}
+        {tab === 2 && <AuxBaseConsoleContent />}
       </Window.Content>
     </Window>
   );
 };
 
-export const AuxBaseConsoleContent = (props) => {
-  const { act, data } = useBackend<Data>();
+export const AuxBaseConsoleContent = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { turrets = [] } = data;
 
   return (
@@ -87,8 +77,7 @@ export const AuxBaseConsoleContent = (props) => {
             onClick={() => act('turrets_power')}
           />
         )
-      }
-    >
+      }>
       {!turrets.length ? (
         <NoticeBox>No connected turrets</NoticeBox>
       ) : (

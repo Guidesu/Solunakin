@@ -1,16 +1,8 @@
-import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
-import {
-  Box,
-  Button,
-  Dropdown,
-  LabeledList,
-  Section,
-  Stack,
-} from '../components';
+import { Box, Button, Dropdown, LabeledList, Section, Stack } from '../components';
 import { Window } from '../layouts';
 import { InterfaceLockNoticeBox } from './common/InterfaceLockNoticeBox';
+import { BooleanLike } from 'common/react';
 
 export type Data = {
   locked: BooleanLike;
@@ -37,8 +29,8 @@ export type NavBeaconStaticControl = {
   has_codes: BooleanLike;
 };
 
-export const NavBeacon = (props) => {
-  const { act, data } = useBackend();
+export const NavBeacon = (props, context) => {
+  const { act, data } = useBackend(context);
   return (
     <Window title="Nagivational Beacon" width={400} height={350}>
       <Window.Content>
@@ -48,8 +40,8 @@ export const NavBeacon = (props) => {
   );
 };
 
-export const NavBeaconContent = (props) => {
-  const { act, data } = useBackend<Data>();
+export const NavBeaconContent = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { controls, static_controls } = data;
   const disabled = data.locked && !data.siliconUser;
   return (
@@ -61,8 +53,8 @@ export const NavBeaconContent = (props) => {
   );
 };
 
-export const NavBeaconControlSection = (props: DisabledProps) => {
-  const { act, data } = useBackend<Data>();
+export const NavBeaconControlSection = (props: DisabledProps, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { controls, static_controls } = data;
   return (
     <Section title="Controls">
@@ -105,7 +97,7 @@ export const NavBeaconControlSection = (props: DisabledProps) => {
         </LabeledList.Item>
         <LabeledList.Item label="Delivery Direction">
           <Dropdown
-            disabled={!!props.disabled}
+            disabled={props.disabled}
             options={static_controls.direction_options}
             displayText={controls.delivery_direction || 'none'}
             onSelected={(value) =>
@@ -120,8 +112,8 @@ export const NavBeaconControlSection = (props: DisabledProps) => {
   );
 };
 
-export const NavBeaconMaintenanceSection = (props: DisabledProps) => {
-  const { act, data } = useBackend<Data>();
+export const NavBeaconMaintenanceSection = (props: DisabledProps, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { controls, static_controls } = data;
   return (
     <Section title="Maintenance">

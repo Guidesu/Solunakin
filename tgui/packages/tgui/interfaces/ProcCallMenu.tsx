@@ -1,14 +1,6 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
-import {
-  Button,
-  Dropdown,
-  Input,
-  NoticeBox,
-  Section,
-  Stack,
-} from '../components';
+import { Stack, Section, Input, Button, Dropdown, NoticeBox } from '../components';
 import { Window } from '../layouts';
 
 type Port = {
@@ -25,8 +17,8 @@ type ProcCallMenuData = {
   resolve_weakref: BooleanLike;
 };
 
-export const ProcCallMenu = (props) => {
-  const { act, data } = useBackend<ProcCallMenuData>();
+export const ProcCallMenu = (props, context) => {
+  const { act, data } = useBackend<ProcCallMenuData>(context);
   const {
     input_ports,
     possible_types,
@@ -37,7 +29,7 @@ export const ProcCallMenu = (props) => {
   return (
     <Window width={500} height={400}>
       <Window.Content scrollable>
-        <Stack fill>
+        <Stack grow height="100%">
           <Stack.Item>
             <Section fill title="Options">
               <Stack vertical width="180px">
@@ -119,7 +111,7 @@ export const ProcCallMenu = (props) => {
   );
 };
 
-const PortEntry = (props) => {
+const PortEntry = (props, context) => {
   const {
     onRemove,
     onEnter,

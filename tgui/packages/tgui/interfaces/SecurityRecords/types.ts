@@ -24,10 +24,10 @@ export type SecurityRecord = {
   species: string;
   wanted_status: string;
   voice: string;
-  // NOVA EDIT START - RP Records
+  // SKYRAT EDIT START - RP Records
   past_general_records: string;
   past_security_records: string;
-  // NOVA EDIT END
+  // SKYRAT EDIT END
 };
 
 export type Crime = {

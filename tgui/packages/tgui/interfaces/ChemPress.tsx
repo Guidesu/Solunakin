@@ -1,15 +1,6 @@
+import { useBackend, useLocalState } from '../backend';
+import { Box, Button, Input, LabeledList, NumberInput, Section } from '../components';
 import { capitalizeAll } from 'common/string';
-import { useState } from 'react';
-
-import { useBackend } from '../backend';
-import {
-  Box,
-  Button,
-  Input,
-  LabeledList,
-  NumberInput,
-  Section,
-} from '../components';
 import { Window } from '../layouts';
 
 type Product = {
@@ -32,8 +23,8 @@ type Data = {
   packaging_type: string;
 };
 
-export const ChemPress = (props) => {
-  const { act, data } = useBackend<Data>();
+export const ChemPress = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const {
     current_volume,
     product_name,
@@ -43,7 +34,11 @@ export const ChemPress = (props) => {
     packaging_types,
     packaging_type,
   } = data;
-  const [categoryName, setCategoryName] = useState(packaging_category);
+  const [categoryName, setCategoryName] = useLocalState(
+    context,
+    'categoryName',
+    packaging_category
+  );
   const shownCategory =
     packaging_types.find((category) => category.cat_name === categoryName) ||
     packaging_types[0];
@@ -99,8 +94,7 @@ export const ChemPress = (props) => {
                     act('change_product', {
                       ref: design.ref,
                     })
-                  }
-                >
+                  }>
                   <Box
                     className={design.class_name}
                     style={{

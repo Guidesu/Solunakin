@@ -1,17 +1,7 @@
 import { BooleanLike } from 'common/react';
-
-import { useBackend } from '../backend';
-import {
-  Box,
-  Button,
-  Collapsible,
-  Icon,
-  LabeledList,
-  NoticeBox,
-  Section,
-  Stack,
-} from '../components';
+import { Box, Icon, Stack, Button, Section, NoticeBox, LabeledList, Collapsible } from '../components';
 import { Window } from '../layouts';
+import { useBackend } from '../backend';
 
 enum VoteConfig {
   None = -1,
@@ -60,8 +50,8 @@ type Data = {
   voting: string[];
 };
 
-export const VotePanel = (props) => {
-  const { data } = useBackend<Data>();
+export const VotePanel = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { currentVote, user } = data;
 
   /**
@@ -72,12 +62,12 @@ export const VotePanel = (props) => {
     windowTitle +=
       ': ' +
       (currentVote.question || currentVote.vote.name).replace(/^\w/, (c) =>
-        c.toUpperCase(),
+        c.toUpperCase()
       );
   }
 
   return (
-    <Window title={windowTitle} width={400} height={500}>
+    <Window resizable title={windowTitle} width={400} height={500}>
       <Window.Content>
         <Stack fill vertical>
           <Section title="Create Vote">
@@ -96,8 +86,8 @@ export const VotePanel = (props) => {
  * The create vote options menu. Only upper admins can disable voting.
  * @returns A section visible to everyone with vote options.
  */
-const VoteOptions = (props) => {
-  const { act, data } = useBackend<Data>();
+const VoteOptions = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { possibleVotes, user } = data;
 
   return (
@@ -146,16 +136,15 @@ const VoteOptions = (props) => {
  * View Voters by ckey. Admin only.
  * @returns A collapsible list of voters
  */
-const VotersList = (props) => {
-  const { data } = useBackend<Data>();
+const VotersList = (props, context) => {
+  const { data } = useBackend<Data>(context);
 
   return (
     <Stack.Item>
       <Collapsible
         title={`View Voters${
           data.voting.length ? `: ${data.voting.length}` : ''
-        }`}
-      >
+        }`}>
         <Section height={8} fill scrollable>
           {data.voting.map((voter) => {
             return <Box key={voter}>{voter}</Box>;
@@ -170,8 +159,8 @@ const VotersList = (props) => {
  * The choices panel which displays all options in the list.
  * @returns A section visible to all users.
  */
-const ChoicesPanel = (props) => {
-  const { act, data } = useBackend<Data>();
+const ChoicesPanel = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { currentVote, user } = data;
 
   return (
@@ -194,16 +183,14 @@ const ChoicesPanel = (props) => {
                       disabled={user.singleSelection === choice.name}
                       onClick={() => {
                         act('voteSingle', { voteOption: choice.name });
-                      }}
-                    >
+                      }}>
                       Vote
                     </Button>
-                  }
-                >
+                  }>
                   {user.singleSelection &&
                     choice.name === user.singleSelection && (
                       <Icon
-                        align="right"
+                        alignSelf="right"
                         mr={2}
                         color="green"
                         name="vote-yea"
@@ -212,7 +199,7 @@ const ChoicesPanel = (props) => {
                   {
                     user.isLowerAdmin
                       ? `${choice.votes} Votes`
-                      : '' /* NOVA EDIT*/
+                      : '' /* SKYRAT EDIT*/
                   }
                 </LabeledList.Item>
                 <LabeledList.Divider />
@@ -236,20 +223,23 @@ const ChoicesPanel = (props) => {
                     <Button
                       onClick={() => {
                         act('voteMulti', { voteOption: choice.name });
-                      }}
-                    >
+                      }}>
                       Vote
                     </Button>
-                  }
-                >
+                  }>
                   {user.multiSelection &&
                   user.multiSelection[user.ckey.concat(choice.name)] === 1 ? (
-                    <Icon align="right" mr={2} color="blue" name="vote-yea" />
+                    <Icon
+                      alignSelf="right"
+                      mr={2}
+                      color="blue"
+                      name="vote-yea"
+                    />
                   ) : null}
                   {
                     user.isLowerAdmin
                       ? `${choice.votes} Votes`
-                      : '' /* NOVA EDIT*/
+                      : '' /* SKYRAT EDIT*/
                   }
                 </LabeledList.Item>
                 <LabeledList.Divider />
@@ -267,8 +257,8 @@ const ChoicesPanel = (props) => {
  * Countdown timer at the bottom. Includes a cancel vote option for admins.
  * @returns A section visible to everyone.
  */
-const TimePanel = (props) => {
-  const { act, data } = useBackend<Data>();
+const TimePanel = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { currentVote, user } = data;
 
   return (
@@ -283,8 +273,7 @@ const TimePanel = (props) => {
             <Button
               color="red"
               disabled={!user.isLowerAdmin || !currentVote}
-              onClick={() => act('cancel')}
-            >
+              onClick={() => act('cancel')}>
               Cancel Vote
             </Button>
           )}

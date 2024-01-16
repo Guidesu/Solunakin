@@ -16,8 +16,8 @@ type spawner = {
   important_text?: string;
 };
 
-export const SpawnersMenu = (props) => {
-  const { act, data } = useBackend<SpawnersMenuContext>();
+export const SpawnersMenu = (props, context) => {
+  const { act, data } = useBackend<SpawnersMenuContext>(context);
   const spawners = data.spawners || [];
   return (
     <Window title="Spawners Menu" width={700} height={525}>
@@ -53,8 +53,7 @@ export const SpawnersMenu = (props) => {
                       />
                     </Stack.Item>
                   </Stack>
-                }
-              >
+                }>
                 <LabeledList>
                   {spawner.desc ? (
                     <LabeledList.Item label="Description">

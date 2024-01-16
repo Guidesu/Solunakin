@@ -1,13 +1,5 @@
 import { useBackend } from '../backend';
-import {
-  AnimatedNumber,
-  Box,
-  Button,
-  Modal,
-  Section,
-  Stack,
-  Tabs,
-} from '../components';
+import { AnimatedNumber, Box, Button, Modal, Section, Stack, Tabs } from '../components';
 import { formatMoney } from '../format';
 import { Window } from '../layouts';
 
@@ -42,8 +34,8 @@ type DeliveryMethod = {
   price: number;
 };
 
-export const BlackMarketUplink = (props) => {
-  const { act, data } = useBackend<Data>();
+export const BlackMarketUplink = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const {
     categories = [],
     markets = [],
@@ -76,8 +68,7 @@ export const BlackMarketUplink = (props) => {
                 act('set_market', {
                   market: market.id,
                 })
-              }
-            >
+              }>
               {market.name}
             </Tabs.Tab>
           ))}
@@ -94,8 +85,7 @@ export const BlackMarketUplink = (props) => {
                     act('set_category', {
                       category: category,
                     })
-                  }
-                >
+                  }>
                   {category}
                 </Tabs.Tab>
               ))}
@@ -134,8 +124,8 @@ export const BlackMarketUplink = (props) => {
   );
 };
 
-const ShipmentSelector = (props) => {
-  const { act, data } = useBackend<Data>();
+const ShipmentSelector = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { buying, ltsrbt_built, money } = data;
   if (!buying) {
     return null;

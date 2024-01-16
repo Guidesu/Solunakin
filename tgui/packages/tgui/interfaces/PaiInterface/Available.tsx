@@ -1,14 +1,5 @@
 import { useBackend } from 'tgui/backend';
-import {
-  Box,
-  Button,
-  Icon,
-  ProgressBar,
-  Section,
-  Table,
-  Tooltip,
-} from 'tgui/components';
-
+import { Box, Button, Icon, ProgressBar, Section, Table, Tooltip } from 'tgui/components';
 import { SOFTWARE_DESC } from './constants';
 import { PaiData } from './types';
 
@@ -21,16 +12,15 @@ export const AvailableDisplay = () => {
       buttons={<MemoryDisplay />}
       fill
       scrollable
-      title="Available Software"
-    >
+      title="Available Software">
       <SoftwareList />
     </Section>
   );
 };
 
 /** Displays the remaining RAM left as a progressbar. */
-const MemoryDisplay = (props) => {
-  const { data } = useBackend<PaiData>();
+const MemoryDisplay = (props, context) => {
+  const { data } = useBackend<PaiData>(context);
   const { ram } = data;
 
   return (
@@ -61,8 +51,8 @@ const MemoryDisplay = (props) => {
 /** A list of available software.
  *  creates table rows for each, like a vendor.
  */
-const SoftwareList = (props) => {
-  const { data } = useBackend<PaiData>();
+const SoftwareList = (props, context) => {
+  const { data } = useBackend<PaiData>(context);
   const { available } = data;
   if (!available) {
     return null;
@@ -82,8 +72,8 @@ const SoftwareList = (props) => {
 };
 
 /** A row for an individual software listing. */
-const ListItem = (props) => {
-  const { act, data } = useBackend<PaiData>();
+const ListItem = (props, context) => {
+  const { act, data } = useBackend<PaiData>(context);
   const { installed, ram } = data;
   const { cost, name } = props;
   const purchased = installed.includes(name);
@@ -109,8 +99,7 @@ const ListItem = (props) => {
           disabled={ram < cost || purchased}
           onClick={() => act('buy', { selection: name })}
           tooltip={SOFTWARE_DESC[name]}
-          tooltipPosition="bottom-start"
-        >
+          tooltipPosition="bottom-start">
           <Icon ml={1} mr={-2} name="download" />
         </Button>
       </Table.Cell>

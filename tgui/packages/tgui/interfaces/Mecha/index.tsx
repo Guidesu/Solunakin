@@ -1,23 +1,14 @@
-import { useState } from 'react';
-
-import { useBackend } from '../../backend';
-import {
-  Button,
-  ByondUi,
-  LabeledList,
-  ProgressBar,
-  Section,
-  Stack,
-} from '../../components';
-import { formatSiUnit } from '../../format';
 import { Window } from '../../layouts';
-import { AccessConfig } from '../common/AccessConfig';
-import { AlertPane } from './AlertPane';
-import { MainData } from './data';
+import { useBackend, useLocalState } from '../../backend';
+import { ByondUi, Stack, Button, Section, ProgressBar, LabeledList } from '../../components';
+import { formatSiUnit } from '../../format';
 import { ModulesPane } from './ModulesPane';
+import { AlertPane } from './AlertPane';
+import { AccessConfig } from '../common/AccessConfig';
+import { MainData } from './data';
 
-export const Mecha = (props) => {
-  const { data } = useBackend<MainData>();
+export const Mecha = (props, context) => {
+  const { data } = useBackend<MainData>(context);
   return (
     <Window theme={data.ui_theme} width={800} height={560}>
       <Window.Content>
@@ -27,9 +18,13 @@ export const Mecha = (props) => {
   );
 };
 
-export const Content = (props) => {
-  const { act, data } = useBackend<MainData>();
-  const [edit_access, editAccess] = useState(false);
+export const Content = (props, context) => {
+  const { act, data } = useBackend<MainData>(context);
+  const [edit_access, editAccess] = useLocalState(
+    context,
+    'edit_access',
+    false
+  );
   const {
     name,
     mecha_flags,
@@ -55,8 +50,7 @@ export const Content = (props) => {
                   tooltipPosition="left"
                   onClick={() => act('changename')}
                 />
-              }
-            >
+              }>
               <Stack fill vertical>
                 <Stack.Item>
                   <ByondUi
@@ -145,8 +139,8 @@ export const Content = (props) => {
   );
 };
 
-const PowerBar = (props) => {
-  const { act, data } = useBackend<MainData>();
+const PowerBar = (props, context) => {
+  const { act, data } = useBackend<MainData>(context);
   const { power_level, power_max } = data;
   return (
     <LabeledList.Item label="Power">
@@ -158,25 +152,24 @@ const PowerBar = (props) => {
           bad: [-Infinity, 0.25],
         }}
         style={{
-          textShadow: '1px 1px 0 black',
-        }}
-      >
+          'text-shadow': '1px 1px 0 black',
+        }}>
         {power_max === null
           ? 'Power cell missing'
           : power_level === 1e31
             ? 'Infinite'
             : `${formatSiUnit(power_level * 1000, 0, 'J')} of ${formatSiUnit(
-                power_max * 1000,
-                0,
-                'J',
-              )}`}
+              power_max * 1000,
+              0,
+              'J'
+            )}`}
       </ProgressBar>
     </LabeledList.Item>
   );
 };
 
-const IntegrityBar = (props) => {
-  const { act, data } = useBackend<MainData>();
+const IntegrityBar = (props, context) => {
+  const { act, data } = useBackend<MainData>(context);
   const { integrity, integrity_max, scanmod_rating } = data;
   return (
     <LabeledList.Item label="Integrity">
@@ -188,17 +181,16 @@ const IntegrityBar = (props) => {
           bad: [-Infinity, 0.25],
         }}
         style={{
-          textShadow: '1px 1px 0 black',
-        }}
-      >
+          'text-shadow': '1px 1px 0 black',
+        }}>
         {!scanmod_rating ? 'Unknown' : `${integrity} of ${integrity_max}`}
       </ProgressBar>
     </LabeledList.Item>
   );
 };
 
-const LightsBar = (props) => {
-  const { act, data } = useBackend<MainData>();
+const LightsBar = (props, context) => {
+  const { act, data } = useBackend<MainData>(context);
   const { power_level, power_max, mecha_flags, mechflag_keys } = data;
   const has_lights = mecha_flags & mechflag_keys['HAS_LIGHTS'];
   const lights_on = mecha_flags & mechflag_keys['LIGHTS_ON'];
@@ -215,8 +207,8 @@ const LightsBar = (props) => {
   );
 };
 
-const CabinSeal = (props) => {
-  const { act, data } = useBackend<MainData>();
+const CabinSeal = (props, context) => {
+  const { act, data } = useBackend<MainData>(context);
   const {
     enclosed,
     cabin_sealed,
@@ -273,8 +265,7 @@ const CabinSeal = (props) => {
             />
           </>
         )
-      }
-    >
+      }>
       <Button
         icon={cabin_sealed ? 'mask-ventilator' : 'wind'}
         content={cabin_sealed ? 'Sealed' : 'Exposed'}
@@ -286,8 +277,8 @@ const CabinSeal = (props) => {
   );
 };
 
-const DNALock = (props) => {
-  const { act, data } = useBackend<MainData>();
+const DNALock = (props, context) => {
+  const { act, data } = useBackend<MainData>(context);
   const { dna_lock } = data;
   return (
     <LabeledList.Item label="DNA Lock">

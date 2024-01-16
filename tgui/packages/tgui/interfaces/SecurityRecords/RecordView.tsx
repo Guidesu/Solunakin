@@ -1,32 +1,22 @@
 import { useBackend, useLocalState } from 'tgui/backend';
-import {
-  Box,
-  Button,
-  LabeledList,
-  NoticeBox,
-  RestrictedInput,
-  Section,
-  Stack,
-  Table,
-} from 'tgui/components';
-
+import { Box, Button, LabeledList, NoticeBox, RestrictedInput, Section, Stack, Table } from 'tgui/components';
 import { CharacterPreview } from '../common/CharacterPreview';
 import { EditableText } from '../common/EditableText';
-import { CRIMESTATUS2COLOR, CRIMESTATUS2DESC } from './constants';
 import { CrimeWatcher } from './CrimeWatcher';
-import { getSecurityRecord } from './helpers';
 import { RecordPrint } from './RecordPrint';
+import { CRIMESTATUS2COLOR, CRIMESTATUS2DESC } from './constants';
+import { getSecurityRecord } from './helpers';
 import { SecurityRecordsData } from './types';
 
 /** Views a selected record. */
-export const SecurityRecordView = (props) => {
-  const foundRecord = getSecurityRecord();
+export const SecurityRecordView = (props, context) => {
+  const foundRecord = getSecurityRecord(context);
   if (!foundRecord) return <NoticeBox>Nothing selected.</NoticeBox>;
 
-  const { data } = useBackend<SecurityRecordsData>();
+  const { data } = useBackend<SecurityRecordsData>(context);
   const { assigned_view } = data;
 
-  const [open] = useLocalState<boolean>('printOpen', false);
+  const [open] = useLocalState<boolean>(context, 'printOpen', false);
 
   return (
     <Stack fill vertical>
@@ -45,13 +35,13 @@ export const SecurityRecordView = (props) => {
   );
 };
 
-const RecordInfo = (props) => {
-  const foundRecord = getSecurityRecord();
+const RecordInfo = (props, context) => {
+  const foundRecord = getSecurityRecord(context);
   if (!foundRecord) return <NoticeBox>Nothing selected.</NoticeBox>;
 
-  const { act, data } = useBackend<SecurityRecordsData>();
+  const { act, data } = useBackend<SecurityRecordsData>(context);
   const { available_statuses } = data;
-  const [open, setOpen] = useLocalState<boolean>('printOpen', false);
+  const [open, setOpen] = useLocalState<boolean>(context, 'printOpen', false);
 
   const { min_age, max_age } = data;
 
@@ -67,10 +57,10 @@ const RecordInfo = (props) => {
     species,
     wanted_status,
     voice,
-    // NOVA EDIT START - RP Records
+    // SKYRAT EDIT START - RP Records
     past_general_records,
     past_security_records,
-    // NOVA EDIT END
+    // SKYRAT EDIT END
   } = foundRecord;
 
   const hasValidCrimes = !!crimes.find((crime) => !!crime.valid);
@@ -86,8 +76,7 @@ const RecordInfo = (props) => {
                   height="1.7rem"
                   icon="print"
                   onClick={() => setOpen(true)}
-                  tooltip="Print a rapsheet or poster."
-                >
+                  tooltip="Print a rapsheet or poster.">
                   Print
                 </Button>
               </Stack.Item>
@@ -107,7 +96,7 @@ const RecordInfo = (props) => {
               {name}
             </Table.Cell>
           }
-        >
+          wrap>
           <LabeledList>
             <LabeledList.Item
               buttons={available_statuses.map((button, index) => {
@@ -126,14 +115,12 @@ const RecordInfo = (props) => {
                     }
                     pl={!isSelected ? '1.8rem' : 1}
                     tooltip={CRIMESTATUS2DESC[button] || ''}
-                    tooltipPosition="bottom-start"
-                  >
+                    tooltipPosition="bottom-start">
                     {button[0]}
                   </Button>
                 );
               })}
-              label="Status"
-            >
+              label="Status">
               <Box color={CRIMESTATUS2COLOR[wanted_status]}>
                 {wanted_status}
               </Box>
@@ -196,18 +183,18 @@ const RecordInfo = (props) => {
                 text={note}
               />
             </LabeledList.Item>
-            {/* NOVA EDIT START - RP Records (Not pretty but it's there) */}
+            {/* SKYRAT EDIT START - RP Records (Not pretty but it's there) */}
             <LabeledList.Item label="General Records">
-              <Box maxWidth="100%" preserveWhitespace>
+              <Box wrap maxWidth="100%" preserveWhitespace>
                 {past_general_records || 'N/A'}
               </Box>
             </LabeledList.Item>
             <LabeledList.Item label="Past Security Records">
-              <Box maxWidth="100%" preserveWhitespace>
+              <Box wrap maxWidth="100%" preserveWhitespace>
                 {past_security_records || 'N/A'}
               </Box>
             </LabeledList.Item>
-            {/* NOVA EDIT END */}
+            {/* SKYRAT EDIT END */}
           </LabeledList>
         </Section>
       </Stack.Item>

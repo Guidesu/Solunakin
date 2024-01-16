@@ -1,5 +1,5 @@
 import { useBackend, useSharedState } from '../../backend';
-import { Button, Flex, Input, Section } from '../../components';
+import { Flex, Input, Section, Button } from '../../components';
 
 type Data = {
   upperText: string;
@@ -7,8 +7,8 @@ type Data = {
   maxStatusLineLength: number;
 };
 
-export const StatusDisplayControls = (props) => {
-  const { act, data } = useBackend<Data>();
+export const StatusDisplayControls = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const {
     upperText: initialUpper,
     lowerText: initialLower,
@@ -16,12 +16,14 @@ export const StatusDisplayControls = (props) => {
   } = data;
 
   const [upperText, setUpperText] = useSharedState(
+    context,
     'statusUpperText',
-    initialUpper,
+    initialUpper
   );
   const [lowerText, setLowerText] = useSharedState(
+    context,
     'statusLowerText',
-    initialLower,
+    initialLower
   );
 
   return (

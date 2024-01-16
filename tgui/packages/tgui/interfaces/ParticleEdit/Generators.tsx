@@ -1,17 +1,9 @@
 import { useBackend } from '../../backend';
-import { Dropdown, NumberInput, Stack } from '../../components';
-import {
-  GeneratorProps,
-  GeneratorTypes,
-  GeneratorTypesNoVectors,
-  P_DATA_GENERATOR,
-  ParticleUIData,
-  RandToNumber,
-  RandTypes,
-} from './data';
+import { NumberInput, Dropdown, Stack } from '../../components';
+import { GeneratorProps, GeneratorTypes, GeneratorTypesNoVectors, ParticleUIData, P_DATA_GENERATOR, RandToNumber, RandTypes } from './data';
 
-export const GeneratorListEntry = (props: GeneratorProps) => {
-  const { act, data } = useBackend<ParticleUIData>();
+export const GeneratorListEntry = (props: GeneratorProps, context) => {
+  const { act, data } = useBackend<ParticleUIData>(context);
   const { var_name, generator, allow_vectors } = props;
   // omits generators that are not allowed with certain vars
   const allowed_generators = allow_vectors

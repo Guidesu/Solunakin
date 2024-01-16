@@ -12,8 +12,8 @@ type ThemeInfo = {
   theme_ref: string;
 };
 
-export const NtosThemeConfigure = (props) => {
-  const { act, data } = useBackend<Data>();
+export const NtosThemeConfigure = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { PC_device_theme, themes } = data;
   return (
     <NtosWindow width={400} height={600}>
@@ -23,8 +23,7 @@ export const NtosThemeConfigure = (props) => {
           grow
           direction="column"
           textAlign="center"
-          align-items="center"
-        >
+          align-items="center">
           {themes.map((theme) => (
             <Flex.Item key={theme} width="100%" grow={1}>
               <Button.Checkbox

@@ -1,16 +1,8 @@
-import { BooleanLike } from 'common/react';
-import { useState } from 'react';
-
+import { BlockQuote, Collapsible, Modal, Section, Stack, Tabs } from '../components';
 import { useBackend } from '../backend';
-import {
-  BlockQuote,
-  Collapsible,
-  Modal,
-  Section,
-  Stack,
-  Tabs,
-} from '../components';
+import { useLocalState } from '../backend';
 import { Window } from '../layouts';
+import { BooleanLike } from 'common/react';
 
 type Data = {
   PlayerAccounts: PlayerAccount[];
@@ -38,8 +30,12 @@ enum SCREENS {
   audit,
 }
 
-export const AccountingConsole = (props) => {
-  const [screenmode, setScreenmode] = useState(SCREENS.users);
+export const AccountingConsole = (props, context) => {
+  const [screenmode, setScreenmode] = useLocalState(
+    context,
+    'tab_main',
+    SCREENS.users
+  );
 
   return (
     <Window width={300} height={360}>
@@ -50,14 +46,12 @@ export const AccountingConsole = (props) => {
             <Tabs fluid textAlign="center">
               <Tabs.Tab
                 selected={screenmode === SCREENS.users}
-                onClick={() => setScreenmode(SCREENS.users)}
-              >
+                onClick={() => setScreenmode(SCREENS.users)}>
                 Users
               </Tabs.Tab>
               <Tabs.Tab
                 selected={screenmode === SCREENS.audit}
-                onClick={() => setScreenmode(SCREENS.audit)}
-              >
+                onClick={() => setScreenmode(SCREENS.audit)}>
                 Audit
               </Tabs.Tab>
             </Tabs>
@@ -72,17 +66,17 @@ export const AccountingConsole = (props) => {
   );
 };
 
-const UsersScreen = (props) => {
-  const { data } = useBackend<Data>();
+const UsersScreen = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { PlayerAccounts } = data;
 
   return (
     <Section fill scrollable title="Crew Account Summary">
       {PlayerAccounts.map((account) => (
         <Collapsible
+          fill
           key={account.index}
-          title={account.name + ' the ' + account.job}
-        >
+          title={account.name + ' the ' + account.job}>
           <Stack vertical>
             <BlockQuote>
               <Stack.Item textColor={'green'}>
@@ -99,8 +93,8 @@ const UsersScreen = (props) => {
   );
 };
 
-const AuditScreen = (props) => {
-  const { data } = useBackend<Data>();
+const AuditScreen = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { AuditLog } = data;
 
   return (
@@ -116,8 +110,8 @@ const AuditScreen = (props) => {
 };
 
 /** The modal menu that contains the prompts to making new channels. */
-const MarketCrashing = (props) => {
-  const { data } = useBackend<Data>();
+const MarketCrashing = (props, context) => {
+  const { data } = useBackend<Data>(context);
 
   const { Crashing } = data;
   if (!Crashing) {

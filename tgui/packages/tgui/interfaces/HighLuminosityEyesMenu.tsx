@@ -1,13 +1,6 @@
 import { BooleanLike } from '../../common/react';
 import { useBackend } from '../backend';
-import {
-  Button,
-  ColorBox,
-  Input,
-  LabeledList,
-  NumberInput,
-  Section,
-} from '../components';
+import { Button, ColorBox, Input, LabeledList, NumberInput, Section } from '../components';
 import { Window } from '../layouts';
 
 type EyeColorData = {
@@ -29,8 +22,8 @@ enum ToUpdate {
   RightEye,
 }
 
-const LightColorDisplay = (props) => {
-  const { act, data } = useBackend<Data>();
+const LightColorDisplay = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { lightColor } = data;
   return (
     <LabeledList.Item label="Color">
@@ -60,8 +53,8 @@ const LightColorDisplay = (props) => {
   );
 };
 
-const RangeDisplay = (props) => {
-  const { act, data } = useBackend<Data>();
+const RangeDisplay = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { range } = data;
   return (
     <LabeledList.Item label="Range">
@@ -93,16 +86,16 @@ const RangeDisplay = (props) => {
   );
 };
 
-const EyeColorDisplay = (props) => {
-  const { act, data } = useBackend<Data>();
+const EyeColorDisplay = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { eyeColor } = data;
   return (
     <>
-      <LabeledList.Item label="Match Color">
+      <LabeledList.Item label="Match Colors">
         <Button.Checkbox
           checked={eyeColor.mode}
           onClick={() => act('toggle_eye_color')}
-          tooltip="Toggles whether eyecolor matches the color of the light."
+          tooltip="Toggle the eye color mode."
         />
       </LabeledList.Item>
       {!eyeColor.mode && (
@@ -119,7 +112,7 @@ const EyeColorDisplay = (props) => {
               onClick={() =>
                 act('random_color', { to_update: ToUpdate.LeftEye })
               }
-              tooltip="Randomizes the eye color."
+              tooltip="Randomizes the light color."
             />
             <Input
               value={eyeColor.left}
@@ -147,7 +140,7 @@ const EyeColorDisplay = (props) => {
               onClick={() =>
                 act('random_color', { to_update: ToUpdate.RightEye })
               }
-              tooltip="Randomizes the eye color."
+              tooltip="Randomizes the light color."
             />
             <Input
               value={eyeColor.right}
@@ -167,15 +160,14 @@ const EyeColorDisplay = (props) => {
   );
 };
 
-export const HighLuminosityEyesMenu = (props) => {
-  const { act, data } = useBackend<Data>();
+export const HighLuminosityEyesMenu = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { eyeColor } = data;
   return (
     <Window
       title="High Luminosity Eyes"
       width={eyeColor.hasOwner ? 262 : 225}
-      height={eyeColor.hasOwner ? (eyeColor.mode ? 170 : 220) : 135}
-    >
+      height={eyeColor.hasOwner ? (eyeColor.mode ? 170 : 220) : 135}>
       <Window.Content>
         <Section fill title="Settings">
           <LabeledList>

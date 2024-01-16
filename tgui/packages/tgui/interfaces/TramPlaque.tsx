@@ -1,5 +1,5 @@
 import { useBackend } from '../backend';
-import { LabeledList, NoticeBox, Section, Stack } from '../components';
+import { NoticeBox, Section, LabeledList, Stack } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -14,8 +14,8 @@ type Tram = {
   tramCollisions: number;
 };
 
-export const TramPlaque = (props) => {
-  const { data } = useBackend<Data>();
+export const TramPlaque = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { currentTram = [], previousTrams = [] } = data;
 
   return (
@@ -23,8 +23,7 @@ export const TramPlaque = (props) => {
       title="Tram Information Plaque"
       width={600}
       height={360}
-      theme="dark"
-    >
+      theme="dark">
       <Window.Content>
         <NoticeBox info>SkyyTram Mk VI by Nakamura Engineering</NoticeBox>
         <Section
@@ -32,12 +31,11 @@ export const TramPlaque = (props) => {
             currentTram.map((serialNumber) => serialNumber.serialNumber) +
             ' - Constructed ' +
             currentTram.map((serialNumber) => serialNumber.mfgDate)
-          }
-        >
+          }>
           <LabeledList>
             <LabeledList.Item label="Distance Travelled">
               {currentTram.map(
-                (serialNumber) => serialNumber.distanceTravelled / 1000,
+                (serialNumber) => serialNumber.distanceTravelled / 1000
               )}{' '}
               km
             </LabeledList.Item>
@@ -47,7 +45,7 @@ export const TramPlaque = (props) => {
           </LabeledList>
         </Section>
         <Section title="Tram History">
-          <Stack fill>
+          <Stack horizontal fill>
             <Stack.Item m={1} grow>
               <b>Serial</b>
             </Stack.Item>

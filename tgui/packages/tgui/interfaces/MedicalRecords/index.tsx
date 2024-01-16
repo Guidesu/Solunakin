@@ -1,13 +1,12 @@
+import { Window } from 'tgui/layouts';
 import { useBackend } from 'tgui/backend';
 import { Box, Button, Icon, NoticeBox, Stack } from 'tgui/components';
-import { Window } from 'tgui/layouts';
-
 import { MedicalRecordTabs } from './RecordTabs';
 import { MedicalRecordView } from './RecordView';
 import { MedicalRecordData } from './types';
 
-export const MedicalRecords = (props) => {
-  const { data } = useBackend<MedicalRecordData>();
+export const MedicalRecords = (props, context) => {
+  const { data } = useBackend<MedicalRecordData>(context);
   const { authenticated } = data;
 
   return (
@@ -21,8 +20,8 @@ export const MedicalRecords = (props) => {
   );
 };
 
-const UnauthorizedView = (props) => {
-  const { act } = useBackend<MedicalRecordData>();
+const UnauthorizedView = (props, context) => {
+  const { act } = useBackend<MedicalRecordData>(context);
 
   return (
     <Stack.Item grow>
@@ -49,8 +48,8 @@ const UnauthorizedView = (props) => {
   );
 };
 
-const AuthView = (props) => {
-  const { act } = useBackend<MedicalRecordData>();
+const AuthView = (props, context) => {
+  const { act } = useBackend<MedicalRecordData>(context);
 
   return (
     <>
@@ -70,8 +69,7 @@ const AuthView = (props) => {
                 icon="lock"
                 color="good"
                 ml={2}
-                onClick={() => act('logout')}
-              >
+                onClick={() => act('logout')}>
                 Log Out
               </Button>
             </NoticeBox>

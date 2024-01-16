@@ -1,5 +1,4 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
 import { Button, Input, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -15,8 +14,8 @@ type Data = {
   shell: BooleanLike;
 };
 
-export const AirLockMainSection = (props) => {
-  const { act, data } = useBackend<Data>();
+export const AirLockMainSection = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const {
     accesses = [],
     oneAccess,
@@ -139,7 +138,7 @@ export const AirLockMainSection = (props) => {
   );
 };
 
-export const AirlockElectronics = (props) => {
+export const AirlockElectronics = (props, context) => {
   return (
     <Window width={420} height={485}>
       <Window.Content>

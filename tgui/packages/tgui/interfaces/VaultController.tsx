@@ -1,6 +1,5 @@
 import { toFixed } from 'common/math';
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
 import { Button, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
@@ -11,8 +10,8 @@ type Data = {
   max: number;
 };
 
-export const VaultController = (props) => {
-  const { act, data } = useBackend<Data>();
+export const VaultController = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { doorstatus, stored, max } = data;
 
   return (
@@ -27,8 +26,7 @@ export const VaultController = (props) => {
               disabled={stored < max}
               onClick={() => act('togglelock')}
             />
-          }
-        >
+          }>
           <VaultList />
         </Section>
       </Window.Content>
@@ -37,8 +35,8 @@ export const VaultController = (props) => {
 };
 
 /** Displays info about the vault in a labeledlist */
-const VaultList = (props) => {
-  const { data } = useBackend<Data>();
+const VaultList = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { stored, max } = data;
 
   return (
@@ -50,8 +48,7 @@ const VaultList = (props) => {
             good: [1, Infinity],
             average: [0.3, 1],
             bad: [-Infinity, 0.3],
-          }}
-        >
+          }}>
           {toFixed(stored / 1000) + ' / ' + toFixed(max / 1000) + ' kW'}
         </ProgressBar>
       </LabeledList.Item>

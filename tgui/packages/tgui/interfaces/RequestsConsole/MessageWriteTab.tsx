@@ -1,19 +1,10 @@
-import { sortStrings } from 'common/collections';
-import { useState } from 'react';
-
 import { useBackend, useLocalState } from '../../backend';
-import {
-  Box,
-  Button,
-  Dropdown,
-  Section,
-  Stack,
-  TextArea,
-} from '../../components';
-import { RequestPriority, RequestsData, RequestType } from './types';
+import { sortStrings } from 'common/collections';
+import { Box, Button, Dropdown, Section, Stack, TextArea } from '../../components';
+import { RequestsData, RequestType, RequestPriority } from './types';
 
-export const MessageWriteTab = (props) => {
-  const { act, data } = useBackend<RequestsData>();
+export const MessageWriteTab = (props, context) => {
+  const { act, data } = useBackend<RequestsData>(context);
   const {
     authentication_data,
     hack_state,
@@ -32,10 +23,22 @@ export const MessageWriteTab = (props) => {
     setPriority(RequestPriority.NORMAL);
     setRequestType(RequestType.ASSISTANCE);
   };
-  const [messageText, setMessageText] = useLocalState('messageText', '');
-  const [requestType, setRequestType] = useState(RequestType.ASSISTANCE);
-  const [priority, setPriority] = useState(RequestPriority.NORMAL);
-  const [recipient, setRecipient] = useState('');
+  const [messageText, setMessageText] = useLocalState(
+    context,
+    'messageText',
+    ''
+  );
+  const [requestType, setRequestType] = useLocalState(
+    context,
+    'requestType',
+    RequestType.ASSISTANCE
+  );
+  const [priority, setPriority] = useLocalState(
+    context,
+    'priority',
+    RequestPriority.NORMAL
+  );
+  const [recipient, setRecipient] = useLocalState(context, 'recipient', '');
   return (
     <Section>
       <Stack fill mb={2}>
@@ -43,40 +46,37 @@ export const MessageWriteTab = (props) => {
           <Button
             fluid
             icon="handshake-angle"
+            content="Request Assistance"
             selected={requestType === RequestType.ASSISTANCE}
             onClick={() => {
               setRecipient('');
               setRequestType(RequestType.ASSISTANCE);
             }}
-          >
-            Request Assistance
-          </Button>
+          />
         </Stack.Item>
         <Stack.Item grow>
           <Button
             fluid
             icon="boxes-stacked"
+            content="Request Supplies"
             selected={requestType === RequestType.SUPPLIES}
             onClick={() => {
               setRecipient('');
               setRequestType(RequestType.SUPPLIES);
             }}
-          >
-            Request Supplies
-          </Button>
+          />
         </Stack.Item>
         <Stack.Item grow>
           <Button
             fluid
             icon="upload"
+            content="Relay Information"
             selected={requestType === RequestType.INFORMATION}
             onClick={() => {
               setRecipient('');
               setRequestType(RequestType.INFORMATION);
             }}
-          >
-            Relay Information
-          </Button>
+          />
         </Stack.Item>
       </Stack>
       <Box>
@@ -146,6 +146,7 @@ export const MessageWriteTab = (props) => {
         fluid
         height={20}
         maxLength={1025}
+        multiline
         value={messageText}
         onChange={(_, value) => setMessageText(value)}
         placeholder="Type your message..."
@@ -155,6 +156,7 @@ export const MessageWriteTab = (props) => {
           <Stack.Item>
             <Button
               icon="paper-plane"
+              content="Send message"
               disabled={!messageText || !recipient || !priority || !requestType}
               onClick={() => {
                 if (!messageText || !recipient || !priority || !requestType) {
@@ -169,28 +171,33 @@ export const MessageWriteTab = (props) => {
                 });
                 resetMessage();
               }}
-            >
-              Send message
-            </Button>
+            />
           </Stack.Item>
           <Stack.Item>
-            <Button icon="id-card" onClick={() => act('verify_id')}>
-              {authentication_data.message_verified_by || 'Not verified'}
-            </Button>
-            <Button icon="stamp" onClick={() => act('stamp')}>
-              {authentication_data.message_stamped_by || 'Not stamped'}
-            </Button>
+            <Button
+              warning
+              icon="id-card"
+              content={
+                authentication_data.message_verified_by || 'Not verified'
+              }
+              onClick={() => act('verify_id')}
+            />
+            <Button
+              warning
+              icon="stamp"
+              content={authentication_data.message_stamped_by || 'Not stamped'}
+              onClick={() => act('stamp')}
+            />
           </Stack.Item>
         </Stack>
         <Button
           icon="trash-can"
+          content="Discard message"
           onClick={() => {
             act('clear_authentication');
             resetMessage();
           }}
-        >
-          Discard message
-        </Button>
+        />
       </Section>
     </Section>
   );

@@ -6,34 +6,40 @@
  * @license MIT
  */
 
-import { BooleanLike, classes } from 'common/react';
-import { ReactNode } from 'react';
-
+import { classes, pureComponentHooks } from 'common/react';
+import { InfernoNode } from 'inferno';
 import { BoxProps, computeBoxClassName, computeBoxProps } from './Box';
 
 const FA_OUTLINE_REGEX = /-o$/;
 
-type IconPropsUnique = { name: string } & Partial<{
-  size: number;
-  spin: BooleanLike;
-  className: string;
-  rotation: number;
-  style: Partial<HTMLDivElement['style']>;
-}>;
+type IconPropsUnique = {
+  name: string;
+  size?: number;
+  spin?: boolean;
+  className?: string;
+  rotation?: number;
+  style?: string | CSSProperties;
+};
 
 export type IconProps = IconPropsUnique & BoxProps;
 
 export const Icon = (props: IconProps) => {
-  const { name, size, spin, className, rotation, ...rest } = props;
+  let { style, ...restlet } = props;
+  const { name, size, spin, className, rotation, ...rest } = restlet;
 
-  const customStyle = rest.style || {};
   if (size) {
-    customStyle.fontSize = size * 100 + '%';
+    if (!style) {
+      style = {};
+    }
+    style['font-size'] = size * 100 + '%';
   }
   if (rotation) {
-    customStyle.transform = `rotate(${rotation}deg)`;
+    if (!style) {
+      style = {};
+    }
+    style['transform'] = `rotate(${rotation}deg)`;
   }
-  rest.style = customStyle;
+  rest.style = style;
 
   const boxProps = computeBoxProps(rest);
 
@@ -69,8 +75,10 @@ export const Icon = (props: IconProps) => {
   );
 };
 
+Icon.defaultHooks = pureComponentHooks;
+
 type IconStackUnique = {
-  children: ReactNode;
+  children: InfernoNode;
   className?: string;
 };
 
@@ -80,9 +88,8 @@ export const IconStack = (props: IconStackProps) => {
   const { className, children, ...rest } = props;
   return (
     <span
-      className={classes(['IconStack', className, computeBoxClassName(rest)])}
-      {...computeBoxProps(rest)}
-    >
+      class={classes(['IconStack', className, computeBoxClassName(rest)])}
+      {...computeBoxProps(rest)}>
       {children}
     </span>
   );

@@ -1,17 +1,10 @@
-import { BooleanLike } from 'common/react';
+import { useBackend, useLocalState } from '../backend';
 import { multiline } from 'common/string';
-import { useState } from 'react';
-
-import { useBackend } from '../backend';
-import { BlockQuote, Button, Section, Stack, Tabs } from '../components';
-import { Window } from '../layouts';
-import { Rules } from './AntagInfoRules'; // NOVA EDIT ADDITION
-import {
-  Objective,
-  ObjectivePrintout,
-  ReplaceObjectivesButton,
-} from './common/Objectives';
 import { GenericUplink, Item } from './Uplink/GenericUplink';
+import { BlockQuote, Button, Section, Stack, Tabs } from '../components';
+import { BooleanLike } from 'common/react';
+import { Window } from '../layouts';
+import { ObjectivePrintout, Objective, ReplaceObjectivesButton } from './common/Objectives';
 
 const allystyle = {
   fontWeight: 'bold',
@@ -42,8 +35,8 @@ type Info = {
   can_change_objective: BooleanLike;
 };
 
-const IntroductionSection = (props) => {
-  const { act, data } = useBackend<Info>();
+const IntroductionSection = (props, context) => {
+  const { act, data } = useBackend<Info>(context);
   const { intro, objectives, can_change_objective } = data;
   return (
     <Section fill title="Intro" scrollable>
@@ -62,15 +55,14 @@ const IntroductionSection = (props) => {
               />
             }
           />
-          <Rules /* NOVA EDIT ADDITION */ />
         </Stack.Item>
       </Stack>
     </Section>
   );
 };
 
-const FlavorSection = (props) => {
-  const { data } = useBackend<Info>();
+const FlavorSection = (props, context) => {
+  const { data } = useBackend<Info>(context);
   const { allies, goal } = data;
   return (
     <Section
@@ -81,7 +73,7 @@ const FlavorSection = (props) => {
           mr={-0.8}
           mt={-0.5}
           icon="hammer"
-          /* NOVA EDIT: ORIGINAL TOOLTIP
+          /* SKYRAT EDIT: ORIGINAL TOOLTIP
           tooltip={multiline`
             This is a gameplay suggestion for bored ais.
             You don't have to follow it, unless you want some
@@ -90,14 +82,14 @@ const FlavorSection = (props) => {
           tooltip={multiline`
             Please refer to the 'Antagonist Policy' section of the wiki
             if you have any questions.`}
-          tooltipPosition="bottom-start"
-        />
-      }
-    >
+          tooltipPosition="bottom-start">
+          Policy
+        </Button>
+      }>
       <Stack vertical fill>
         <Stack.Item grow>
           <Stack fill vertical>
-            <Stack.Item style={{ backgroundColor: 'black' }}>
+            <Stack.Item style={{ 'background-color': 'black' }}>
               <span style={goalstyle}>
                 System Integrity Report:
                 <br />
@@ -105,7 +97,7 @@ const FlavorSection = (props) => {
               &gt;{goal}
             </Stack.Item>
             <Stack.Divider />
-            <Stack.Item grow style={{ backgroundColor: 'black' }}>
+            <Stack.Item grow style={{ 'background-color': 'black' }}>
               <span style={allystyle}>
                 Morality Core Report:
                 <br />
@@ -113,7 +105,7 @@ const FlavorSection = (props) => {
               &gt;{allies}
             </Stack.Item>
             <Stack.Divider />
-            <Stack.Item style={{ backgroundColor: 'black' }}>
+            <Stack.Item style={{ 'background-color': 'black' }}>
               <span style={badstyle}>
                 Overall Sentience Coherence Grade: FAILING.
                 <br />
@@ -129,8 +121,8 @@ const FlavorSection = (props) => {
   );
 };
 
-const CodewordsSection = (props) => {
-  const { data } = useBackend<Info>();
+const CodewordsSection = (props, context) => {
+  const { data } = useBackend<Info>(context);
   const { has_codewords, phrases, responses } = data;
   return (
     <Section title="Codewords" mb={!has_codewords && -1}>
@@ -175,10 +167,14 @@ const CodewordsSection = (props) => {
   );
 };
 
-export const AntagInfoMalf = (props) => {
-  const { act, data } = useBackend<Info>();
+export const AntagInfoMalf = (props, context) => {
+  const { act, data } = useBackend<Info>(context);
   const { processingTime, categories } = data;
-  const [antagInfoTab, setAntagInfoTab] = useState(0);
+  const [antagInfoTab, setAntagInfoTab] = useLocalState(
+    context,
+    'antagInfoTab',
+    0
+  );
   const categoriesList: string[] = [];
   const items: Item[] = [];
   for (let i = 0; i < categories.length; i++) {
@@ -200,24 +196,21 @@ export const AntagInfoMalf = (props) => {
     <Window
       width={660}
       height={530}
-      theme={(antagInfoTab === 0 && 'hackerman') || 'malfunction'}
-    >
-      <Window.Content style={{ fontFamily: 'Consolas, monospace' }}>
+      theme={(antagInfoTab === 0 && 'hackerman') || 'malfunction'}>
+      <Window.Content style={{ 'font-family': 'Consolas, monospace' }}>
         <Stack vertical fill>
           <Stack.Item>
             <Tabs fluid>
               <Tabs.Tab
                 icon="info"
                 selected={antagInfoTab === 0}
-                onClick={() => setAntagInfoTab(0)}
-              >
+                onClick={() => setAntagInfoTab(0)}>
                 Information
               </Tabs.Tab>
               <Tabs.Tab
                 icon="code"
                 selected={antagInfoTab === 1}
-                onClick={() => setAntagInfoTab(1)}
-              >
+                onClick={() => setAntagInfoTab(1)}>
                 Malfunction Modules
               </Tabs.Tab>
             </Tabs>

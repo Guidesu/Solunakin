@@ -1,5 +1,4 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
 import { Button, LabeledList, NumberInput, Section } from '../components';
 import { Window } from '../layouts';
@@ -12,8 +11,8 @@ type Data = {
   max_pressure: number;
 };
 
-export const AtmosPump = (props) => {
-  const { act, data } = useBackend<Data>();
+export const AtmosPump = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { on, max_rate, max_pressure, rate, pressure } = data;
 
   return (

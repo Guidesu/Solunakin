@@ -1,6 +1,5 @@
 import { BooleanLike } from 'common/react';
 import { multiline } from 'common/string';
-
 import { useBackend } from '../backend';
 import { Button, Input, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -17,8 +16,8 @@ type Data = {
   newhead: string;
 };
 
-export const AutomatedAnnouncement = (props) => {
-  const { act, data } = useBackend<Data>();
+export const AutomatedAnnouncement = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { arrivalToggle, arrival, newheadToggle, newhead } = data;
   return (
     <Window title="Automated Announcement System" width={500} height={225}>
@@ -32,8 +31,7 @@ export const AutomatedAnnouncement = (props) => {
               content={arrivalToggle ? 'On' : 'Off'}
               onClick={() => act('ArrivalToggle')}
             />
-          }
-        >
+          }>
           <LabeledList>
             <LabeledList.Item
               label="Message"
@@ -43,8 +41,7 @@ export const AutomatedAnnouncement = (props) => {
                   tooltip={TOOLTIP_TEXT}
                   tooltipPosition="left"
                 />
-              }
-            >
+              }>
               <Input
                 fluid
                 value={arrival}
@@ -66,8 +63,7 @@ export const AutomatedAnnouncement = (props) => {
               content={newheadToggle ? 'On' : 'Off'}
               onClick={() => act('NewheadToggle')}
             />
-          }
-        >
+          }>
           <LabeledList>
             <LabeledList.Item
               label="Message"
@@ -77,8 +73,7 @@ export const AutomatedAnnouncement = (props) => {
                   tooltip={TOOLTIP_TEXT}
                   tooltipPosition="left"
                 />
-              }
-            >
+              }>
               <Input
                 fluid
                 value={newhead}

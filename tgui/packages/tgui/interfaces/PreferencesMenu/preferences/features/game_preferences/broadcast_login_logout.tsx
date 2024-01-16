@@ -1,5 +1,4 @@
 import { multiline } from 'common/string';
-
 import { CheckboxInput, FeatureToggle } from '../base';
 
 export const broadcast_login_logout: FeatureToggle = {

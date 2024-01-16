@@ -1,14 +1,13 @@
-import { classes } from 'common/react';
-
 import { useBackend } from '../backend';
-import { Box, Icon, Section, Stack, Tooltip } from '../components';
+import { Material } from './Fabrication/Types';
 import { Window } from '../layouts';
+import { Box, Tooltip, Icon, Stack, Section } from '../components';
+import { Design } from './Fabrication/Types';
+import { MaterialCostSequence } from './Fabrication/MaterialCostSequence';
+import { MaterialMap } from './Fabrication/Types';
+import { classes } from 'common/react';
 import { DesignBrowser } from './Fabrication/DesignBrowser';
 import { MaterialAccessBar } from './Fabrication/MaterialAccessBar';
-import { MaterialCostSequence } from './Fabrication/MaterialCostSequence';
-import { Material } from './Fabrication/Types';
-import { Design } from './Fabrication/Types';
-import { MaterialMap } from './Fabrication/Types';
 
 type ComponentPrinterData = {
   designs: Record<string, Design>;
@@ -16,8 +15,8 @@ type ComponentPrinterData = {
   SHEET_MATERIAL_AMOUNT: number;
 };
 
-export const ComponentPrinter = (props) => {
-  const { act, data } = useBackend<ComponentPrinterData>();
+export const ComponentPrinter = (props, context) => {
+  const { act, data } = useBackend<ComponentPrinterData>(context);
   const { materials, designs, SHEET_MATERIAL_AMOUNT } = data;
 
   // Reduce the material count array to a map of actually available materials.
@@ -38,7 +37,7 @@ export const ComponentPrinter = (props) => {
               buildRecipeElement={(
                 design,
                 availableMaterials,
-                _onPrintDesign,
+                _onPrintDesign
               ) => (
                 <Recipe
                   design={design}
@@ -71,13 +70,13 @@ type RecipeProps = {
   SHEET_MATERIAL_AMOUNT: number;
 };
 
-const Recipe = (props: RecipeProps) => {
-  const { act } = useBackend<ComponentPrinterData>();
+const Recipe = (props: RecipeProps, context) => {
+  const { act } = useBackend<ComponentPrinterData>(context);
   const { design, available, SHEET_MATERIAL_AMOUNT } = props;
 
   const canPrint = !Object.entries(design.cost).some(
     ([material, amount]) =>
-      !available[material] || amount > (available[material] ?? 0),
+      !available[material] || amount > (available[material] ?? 0)
   );
 
   return (
@@ -88,8 +87,7 @@ const Recipe = (props: RecipeProps) => {
             'FabricatorRecipe__Button',
             'FabricatorRecipe__Button--icon',
             !canPrint && 'FabricatorRecipe__Button--disabled',
-          ])}
-        >
+          ])}>
           <Icon name="question-circle" />
         </div>
       </Tooltip>
@@ -101,8 +99,7 @@ const Recipe = (props: RecipeProps) => {
             SHEET_MATERIAL_AMOUNT={SHEET_MATERIAL_AMOUNT}
             available={available}
           />
-        }
-      >
+        }>
         <div
           className={classes([
             'FabricatorRecipe__Title',
@@ -110,8 +107,7 @@ const Recipe = (props: RecipeProps) => {
           ])}
           onClick={() =>
             canPrint && act('print', { designId: design.id, amount: 1 })
-          }
-        >
+          }>
           <div className="FabricatorRecipe__Icon">
             <Box
               width={'32px'}

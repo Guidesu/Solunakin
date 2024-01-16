@@ -1,20 +1,9 @@
-import { BooleanLike } from 'common/react';
-import { decodeHtmlEntities } from 'common/string';
-import { Component, createRef, RefObject } from 'react';
-
-import { useBackend } from '../../backend';
-import {
-  Box,
-  Button,
-  Icon,
-  Image,
-  Input,
-  Modal,
-  Section,
-  Stack,
-  Tooltip,
-} from '../../components';
+import { Stack, Section, Button, Box, Input, Modal, Tooltip, Icon } from '../../components';
+import { Component, RefObject, createRef, SFC } from 'inferno';
 import { NtMessage, NtMessenger, NtPicture } from './types';
+import { BooleanLike } from 'common/react';
+import { useBackend } from '../../backend';
+import { decodeHtmlEntities } from 'common/string';
 
 type ChatScreenProps = {
   canReply: BooleanLike;
@@ -70,7 +59,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
   componentDidUpdate(
     prevProps: ChatScreenProps,
     _prevState: ChatScreenState,
-    _snapshot: any,
+    _snapshot: any
   ) {
     if (prevProps.messages.length !== this.props.messages.length) {
       this.scrollToBottom();
@@ -83,7 +72,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
       return;
     }
 
-    const { act } = useBackend();
+    const { act } = useBackend(this.context);
 
     this.tryClearReadTimeout();
 
@@ -117,7 +106,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
   }
 
   clearUnreads() {
-    const { act } = useBackend();
+    const { act } = useBackend(this.context);
 
     act('PDA_clearUnreads', { ref: this.props.chatRef });
   }
@@ -131,7 +120,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
 
   handleSelectPicture() {
     const { isSilicon } = this.props;
-    const { act } = useBackend();
+    const { act } = useBackend(this.context);
     if (isSilicon) {
       act('PDA_siliconSelectPhoto');
     } else {
@@ -144,7 +133,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
       return;
     }
 
-    const { act } = useBackend();
+    const { act } = useBackend(this.context);
     const { chatRef, recipient } = this.props;
 
     let ref = chatRef ? chatRef : recipient.ref;
@@ -163,7 +152,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
   }
 
   render() {
-    const { act } = useBackend();
+    const { act } = useBackend(this.context);
     const {
       canReply,
       messages,
@@ -203,7 +192,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
                 : undefined
             }
           />
-        </Stack.Item>,
+        </Stack.Item>
       );
     }
 
@@ -226,9 +215,8 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
             onClick={() => {
               act('PDA_selectPhoto', { uid: photo.uid });
               this.setState({ selectingPhoto: false });
-            }}
-          >
-            <Image src={photo.path} maxHeight={10} />
+            }}>
+            <Box as="img" src={photo.path} maxHeight={10} />
           </Button>
         </Stack.Item>
       ));
@@ -291,9 +279,8 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
                   pt={1}
                   onClick={() => act('PDA_clearPhoto')}
                   tooltip="Remove attachment"
-                  tooltipPosition="auto-end"
-                >
-                  <Image src={selectedPhoto} />
+                  tooltipPosition="auto-end">
+                  <Box as="img" src={selectedPhoto} />
                 </Button>
               </Stack.Item>
             )}
@@ -305,6 +292,8 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
                     fluid
                     autoFocus
                     width="100%"
+                    justify
+                    id="input"
                     value={message}
                     maxLength={1024}
                     onInput={this.handleMessageInput}
@@ -349,8 +338,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
             fill
             fitted
             title={`${recipient.name} (${recipient.job})`}
-            ref={this.scrollRef}
-          >
+            scrollableRef={this.scrollRef}>
             <Stack vertical className="NtosChatLog">
               {!!(messages.length > 0 && canReply) && (
                 <>
@@ -378,9 +366,8 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
                   tooltipPosition="left"
                   onClick={() => this.setState({ previewingImage: undefined })}
                 />
-              }
-            >
-              <Image src={previewingImage} />
+              }>
+              <Box as="img" src={previewingImage} />
             </Section>
           </Modal>
         )}
@@ -419,21 +406,20 @@ const ChatMessage = (props: ChatMessageProps) => {
       {!!everyone && (
         <Box className="NtosChatMessage__everyone">Sent to everyone</Box>
       )}
-      {!!photoPath && (
+      {photoPath !== null && (
         <Button
           tooltip="View image"
           className="NtosChatMessage__image"
           color="transparent"
-          onClick={onPreviewImage}
-        >
-          <Image src={photoPath} mt={1} />
+          onClick={onPreviewImage}>
+          <Box as="img" src={photoPath} mt={1} />
         </Button>
       )}
     </Box>
   );
 };
 
-const ChatDivider = (props: { mt: number }) => {
+const ChatDivider: SFC<{ mt: number }> = (props) => {
   return (
     <Box className="UnreadDivider" m={0} mt={props.mt}>
       <div />

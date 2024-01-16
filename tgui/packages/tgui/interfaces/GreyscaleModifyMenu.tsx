@@ -1,18 +1,5 @@
 import { useBackend } from '../backend';
-import {
-  Box,
-  Button,
-  ColorBox,
-  Divider,
-  Flex,
-  Icon,
-  Image,
-  Input,
-  LabeledList,
-  Section,
-  Stack,
-  Table,
-} from '../components';
+import { Box, Button, ColorBox, Flex, Stack, Icon, Input, LabeledList, Section, Table, Divider } from '../components';
 import { Window } from '../layouts';
 
 type ColorEntry = {
@@ -67,8 +54,8 @@ const DirectionAbbreviation: Record<Direction, string> = {
   [Direction.NorthWest]: 'NW',
 };
 
-const ConfigDisplay = (props) => {
-  const { act, data } = useBackend<GreyscaleMenuData>();
+const ConfigDisplay = (props, context) => {
+  const { act, data } = useBackend<GreyscaleMenuData>(context);
   return (
     <Section title="Designs">
       <LabeledList>
@@ -86,8 +73,8 @@ const ConfigDisplay = (props) => {
   );
 };
 
-const ColorDisplay = (props) => {
-  const { act, data } = useBackend<GreyscaleMenuData>();
+const ColorDisplay = (props, context) => {
+  const { act, data } = useBackend<GreyscaleMenuData>(context);
   const colors = data.colors || [];
   return (
     <Section title="Colors">
@@ -109,8 +96,7 @@ const ColorDisplay = (props) => {
           <LabeledList.Item
             key={`colorgroup${item.index}${item.value}`}
             label={`Color Group ${item.index}`}
-            color={item.value}
-          >
+            color={item.value}>
             <ColorBox color={item.value} />{' '}
             <Button
               icon="palette"
@@ -136,8 +122,8 @@ const ColorDisplay = (props) => {
   );
 };
 
-const PreviewCompassSelect = (props) => {
-  const { act, data } = useBackend<GreyscaleMenuData>();
+const PreviewCompassSelect = (props, context) => {
+  const { act, data } = useBackend<GreyscaleMenuData>(context);
   return (
     <Box>
       <Stack vertical>
@@ -165,9 +151,9 @@ const PreviewCompassSelect = (props) => {
   );
 };
 
-const SingleDirection = (props) => {
+const SingleDirection = (props, context) => {
   const { dir } = props;
-  const { data, act } = useBackend<GreyscaleMenuData>();
+  const { data, act } = useBackend<GreyscaleMenuData>(context);
   return (
     <Flex.Item grow={1} basis={0}>
       <Button
@@ -184,8 +170,8 @@ const SingleDirection = (props) => {
   );
 };
 
-const IconStatesDisplay = (props) => {
-  const { data, act } = useBackend<GreyscaleMenuData>();
+const IconStatesDisplay = (props, context) => {
+  const { data, act } = useBackend<GreyscaleMenuData>(context);
   return (
     <Section title="Icon States">
       <Flex>
@@ -204,8 +190,8 @@ const IconStatesDisplay = (props) => {
   );
 };
 
-const PreviewDisplay = (props) => {
-  const { data } = useBackend<GreyscaleMenuData>();
+const PreviewDisplay = (props, context) => {
+  const { data } = useBackend<GreyscaleMenuData>(context);
   return (
     <Section title={`Preview (${data.sprites_dir})`}>
       <Table>
@@ -215,12 +201,24 @@ const PreviewDisplay = (props) => {
           </Table.Cell>
           {data.sprites?.finished ? (
             <Table.Cell>
-              <Image m={0} mx="10%" src={data.sprites.finished} width="75%" />
+              <Box
+                as="img"
+                src={data.sprites.finished}
+                m={0}
+                width="75%"
+                mx="10%"
+                style={{ '-ms-interpolation-mode': 'nearest-neighbor' }}
+              />
             </Table.Cell>
           ) : (
             <Table.Cell>
-              <Box>
-                <Icon name="image" ml="25%" size={5} />
+              <Box grow>
+                <Icon
+                  name="image"
+                  ml="25%"
+                  size={5}
+                  style={{ '-ms-interpolation-mode': 'nearest-neighbor' }}
+                />
               </Box>
             </Table.Cell>
           )}
@@ -266,7 +264,14 @@ const PreviewDisplay = (props) => {
 
 const SingleSprite = (props) => {
   const { source } = props;
-  return <Image src={source} />;
+  return (
+    <Box
+      as="img"
+      src={source}
+      width="100%"
+      style={{ '-ms-interpolation-mode': 'nearest-neighbor' }}
+    />
+  );
 };
 
 const LoadingAnimation = () => {
@@ -277,8 +282,8 @@ const LoadingAnimation = () => {
   );
 };
 
-export const GreyscaleModifyMenu = (props) => {
-  const { act, data } = useBackend<GreyscaleMenuData>();
+export const GreyscaleModifyMenu = (props, context) => {
+  const { act, data } = useBackend<GreyscaleMenuData>(context);
   return (
     <Window title="Color Configuration" width={325} height={800}>
       <Window.Content scrollable>

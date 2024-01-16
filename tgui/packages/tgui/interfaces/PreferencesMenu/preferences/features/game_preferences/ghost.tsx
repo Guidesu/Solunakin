@@ -1,19 +1,11 @@
-import { binaryInsertWith } from 'common/collections';
-import { classes } from 'common/react';
 import { multiline } from 'common/string';
-import { ReactNode } from 'react';
-
-import { useBackend } from '../../../../../backend';
+import { CheckboxInput, FeatureChoiced, FeatureChoicedServerData, FeatureDropdownInput, FeatureToggle, FeatureValueProps } from '../base';
 import { Box, Dropdown, Flex } from '../../../../../components';
+import { classes } from 'common/react';
+import { InfernoNode } from 'inferno';
+import { binaryInsertWith } from 'common/collections';
+import { useBackend } from '../../../../../backend';
 import { PreferencesMenuData } from '../../../data';
-import {
-  CheckboxInput,
-  FeatureChoiced,
-  FeatureChoicedServerData,
-  FeatureDropdownInput,
-  FeatureToggle,
-  FeatureValueProps,
-} from '../base';
 
 export const ghost_accs: FeatureChoiced = {
   name: 'Ghost accessories',
@@ -23,18 +15,19 @@ export const ghost_accs: FeatureChoiced = {
 };
 
 const insertGhostForm = binaryInsertWith<{
-  displayText: ReactNode;
+  displayText: InfernoNode;
   value: string;
 }>(({ value }) => value);
 
 const GhostFormInput = (
   props: FeatureValueProps<string, string, FeatureChoicedServerData>,
+  context
 ) => {
-  const { data } = useBackend<PreferencesMenuData>();
+  const { data } = useBackend<PreferencesMenuData>(context);
 
   const serverData = props.serverData;
   if (!serverData) {
-    return <> </>;
+    return;
   }
 
   const displayNames = serverData.display_names;
@@ -44,7 +37,7 @@ const GhostFormInput = (
 
   const displayTexts = {};
   let options: {
-    displayText: ReactNode;
+    displayText: InfernoNode;
     value: string;
   }[] = [];
 
@@ -111,8 +104,9 @@ export const ghost_orbit: FeatureChoiced = {
   `,
   component: (
     props: FeatureValueProps<string, string, FeatureChoicedServerData>,
+    context
   ) => {
-    const { data } = useBackend<PreferencesMenuData>();
+    const { data } = useBackend<PreferencesMenuData>(context);
 
     return (
       <FeatureDropdownInput {...props} disabled={!data.content_unlocked} />

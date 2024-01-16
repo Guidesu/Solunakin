@@ -1,18 +1,6 @@
 import { BooleanLike } from 'common/react';
-import { useState } from 'react';
-
-import { useBackend } from '../backend';
-import {
-  Box,
-  Button,
-  Dimmer,
-  Icon,
-  NoticeBox,
-  Section,
-  Stack,
-  Tabs,
-  Tooltip,
-} from '../components';
+import { useBackend, useLocalState } from '../backend';
+import { Box, Button, Dimmer, Icon, NoticeBox, Section, Stack, Tabs, Tooltip } from '../components';
 import { Window } from '../layouts';
 
 // 15x crate value
@@ -54,8 +42,8 @@ const CooldownEstimate = (props) => {
   );
 };
 
-export const DepartmentOrders = (props) => {
-  const { data } = useBackend<Info>();
+export const DepartmentOrders = (props, context) => {
+  const { data } = useBackend<Info>(context);
   const { time_left } = data;
   return (
     <Window title="Department Orders" width={620} height={580}>
@@ -85,8 +73,8 @@ export const DepartmentOrders = (props) => {
   );
 };
 
-const CooldownDimmer = (props) => {
-  const { act, data } = useBackend<Info>();
+const CooldownDimmer = (props, context) => {
+  const { act, data } = useBackend<Info>(context);
   const { can_override, time_left } = data;
   return (
     <Dimmer>
@@ -109,8 +97,7 @@ const CooldownDimmer = (props) => {
             fontSize="14px"
             color="red"
             disabled={!can_override}
-            onClick={() => act('override_order')}
-          >
+            onClick={() => act('override_order')}>
             <Box fontSize="22px">Override</Box>
           </Button>
         </Stack.Item>
@@ -119,21 +106,23 @@ const CooldownDimmer = (props) => {
   );
 };
 
-const DepartmentCatalog = (props) => {
-  const { act, data } = useBackend<Info>();
+const DepartmentCatalog = (props, context) => {
+  const { act, data } = useBackend<Info>(context);
   const { supplies } = data;
-  const [tabCategory, setTabCategory] = useState(supplies[0]);
-
+  const [tabCategory, setTabCategory] = useLocalState(
+    context,
+    'tabName',
+    supplies[0]
+  );
   return (
     <Stack vertical fill>
       <Stack.Item>
         <Tabs textAlign="center" fluid>
           {supplies.map((cat) => (
             <Tabs.Tab
-              key={cat.name}
+              key={cat}
               selected={tabCategory === cat}
-              onClick={() => setTabCategory(cat)}
-            >
+              onClick={() => setTabCategory(cat)}>
               {cat.name}
             </Tabs.Tab>
           ))}
@@ -150,9 +139,9 @@ const DepartmentCatalog = (props) => {
                       <Box
                         as="span"
                         style={{
-                          borderBottom: '2px dotted rgba(255, 255, 255, 0.8)',
-                        }}
-                      >
+                          'border-bottom':
+                            '2px dotted rgba(255, 255, 255, 0.8)',
+                        }}>
                         {pack.name}
                       </Box>
                     </Tooltip>
@@ -165,8 +154,7 @@ const DepartmentCatalog = (props) => {
                         act('order', {
                           id: pack.id,
                         })
-                      }
-                    >
+                      }>
                       Order
                     </Button>
                   </Stack.Item>

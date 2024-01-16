@@ -1,15 +1,6 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
-import {
-  Box,
-  Button,
-  Divider,
-  Knob,
-  LabeledControls,
-  Section,
-  Stack,
-} from '../components';
+import { Box, Button, Divider, Knob, LabeledControls, Section, Stack } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -31,8 +22,8 @@ export const TrainingMachine = () => {
 };
 
 /** Creates a labeledlist of controls */
-const TrainingControls = (props) => {
-  const { act, data } = useBackend<Data>();
+const TrainingControls = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { movespeed, range, moving } = data;
 
   return (
@@ -64,12 +55,17 @@ const TrainingControls = (props) => {
       <Stack.Item>
         <Divider vertical />
       </Stack.Item>
-      <Stack.Item>
-        <Button fluid selected={moving} onClick={() => act('toggle')}>
-          <Box bold fontSize="1.4em" lineHeight={3}>
-            {moving ? 'END' : 'BEGIN'}
-          </Box>
-        </Button>
+      <Stack.Item label="Simulation">
+        <Button
+          fluid
+          selected={moving}
+          content={
+            <Box bold fontSize="1.4em" lineHeight={3}>
+              {moving ? 'END' : 'BEGIN'}
+            </Box>
+          }
+          onClick={() => act('toggle')}
+        />
       </Stack.Item>
     </LabeledControls>
   );

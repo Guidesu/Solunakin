@@ -1,17 +1,8 @@
+import { useBackend, useLocalState } from '../backend';
+import { AnimatedNumber, Box, Button, NumberInput, Section, Stack } from '../components';
+import { Window } from '../layouts';
 import { round, toFixed } from 'common/math';
 import { BooleanLike } from 'common/react';
-import { useState } from 'react';
-
-import { useBackend } from '../backend';
-import {
-  AnimatedNumber,
-  Box,
-  Button,
-  NumberInput,
-  Section,
-  Stack,
-} from '../components';
-import { Window } from '../layouts';
 
 type Reagent = {
   name: string;
@@ -26,14 +17,22 @@ export type MixingData = {
   isReacting: BooleanLike;
 };
 
-export const ChemMixingChamber = (props) => {
-  const { act, data } = useBackend<MixingData>();
+export const ChemMixingChamber = (props, context) => {
+  const { act, data } = useBackend<MixingData>(context);
 
-  const [reagentQuantity, setReagentQuantity] = useState(1);
+  const [reagentName, setReagentName] = useLocalState(
+    context,
+    'reagentName',
+    ''
+  );
+  const [reagentQuantity, setReagentQuantity] = useLocalState(
+    context,
+    'reagentQuantity',
+    1
+  );
 
   const { emptying, temperature, targetTemp, isReacting } = data;
   const reagents = data.reagents || [];
-
   return (
     <Window width={290} height={400}>
       <Window.Content>
@@ -61,8 +60,7 @@ export const ChemMixingChamber = (props) => {
                     />
                   </Stack.Item>
                 </Stack>
-              }
-            >
+              }>
               <Stack vertical>
                 <Stack.Item>
                   <Stack fill>
@@ -95,13 +93,11 @@ export const ChemMixingChamber = (props) => {
                     fontSize="16px"
                     inline
                     bold
-                    color={emptying ? 'bad' : 'good'}
-                  >
+                    color={emptying ? 'bad' : 'good'}>
                     {emptying ? 'Emptying' : 'Filling'}
                   </Box>
                 )
-              }
-            >
+              }>
               <Stack vertical fill>
                 <Stack.Item>
                   <Stack fill>

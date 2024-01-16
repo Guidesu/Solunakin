@@ -1,6 +1,5 @@
-import { multiline } from 'common/string';
-
 import { Antagonist, Category } from '../base';
+import { multiline } from 'common/string';
 import { CHANGELING_MECHANICAL_DESCRIPTION } from './changeling';
 
 const Stowaway_Changeling: Antagonist = {

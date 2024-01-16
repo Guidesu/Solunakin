@@ -1,15 +1,13 @@
-// THIS IS A NOVA SECTOR UI FILE
-import { BlockQuote, Box, NoticeBox, Section } from '../components';
+import { Section, BlockQuote, Box, NoticeBox } from '../components';
 import { Window } from '../layouts';
 
-export const DelamProcedure = () => {
+export const DelamProcedure = (context) => {
   return (
     <Window
       title="Safety Moth - Delamination Emergency Procedure"
       width={666}
       height={865}
-      theme="dark"
-    >
+      theme="dark">
       <Window.Content>
         <Section title="NT-approved delam emergency procedure">
           <NoticeBox danger m={2}>

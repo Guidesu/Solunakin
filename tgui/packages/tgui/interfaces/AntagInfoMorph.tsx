@@ -1,6 +1,5 @@
 import { BlockQuote, Stack } from '../components';
 import { Window } from '../layouts';
-import { Rules } from './AntagInfoRules'; // NOVA EDIT ADDITION
 
 const goodstyle = {
   color: 'lightgreen',
@@ -14,7 +13,7 @@ const noticestyle = {
   color: 'lightblue',
 };
 
-export const AntagInfoMorph = (props) => {
+export const AntagInfoMorph = (props, context) => {
   return (
     <Window width={620} height={170} theme="abductor">
       <Window.Content>
@@ -49,11 +48,6 @@ export const AntagInfoMorph = (props) => {
               </span>{' '}
             </BlockQuote>
           </Stack.Item>
-          {/* NOVA EDIT ADDITION START */}
-          <Stack.Item>
-            <Rules />
-          </Stack.Item>
-          {/* NOVA EDIT ADDITION END */}
         </Stack>
       </Window.Content>
     </Window>

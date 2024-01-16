@@ -1,9 +1,9 @@
 import { useBackend } from '../../backend';
 import { Button, NoticeBox, Stack } from '../../components';
-import { RequestPriority, RequestsData } from './types';
+import { RequestsData, RequestPriority } from './types';
 
-export const RequestsConsoleHeader = (props) => {
-  const { act, data } = useBackend<RequestsData>();
+export const RequestsConsoleHeader = (props, context) => {
+  const { act, data } = useBackend<RequestsData>(context);
   const { has_mail_send_error, new_message_priority } = data;
   return (
     <Stack.Item mb={1}>
@@ -14,8 +14,8 @@ export const RequestsConsoleHeader = (props) => {
   );
 };
 
-const EmergencyBox = (props) => {
-  const { act, data } = useBackend<RequestsData>();
+const EmergencyBox = (props, context) => {
+  const { act, data } = useBackend<RequestsData>(context);
   const { emergency } = data;
   return (
     <>
@@ -71,17 +71,17 @@ const EmergencyBox = (props) => {
   );
 };
 
-const ErrorNoticeBox = (props) => {
+const ErrorNoticeBox = (props, context) => {
   return (
     <NoticeBox danger>{'Error occured while sending a message!'}</NoticeBox>
   );
 };
 
-const MessageNoticeBox = (props) => {
-  const { data } = useBackend<RequestsData>();
+const MessageNoticeBox = (props, context) => {
+  const { data } = useBackend<RequestsData>(context);
   const { new_message_priority } = data;
   return (
-    <NoticeBox>
+    <NoticeBox warning>
       {'You have new unread '}
       {new_message_priority === RequestPriority.HIGH && 'PRIORITY '}
       {new_message_priority === RequestPriority.EXTREME && 'EXTREME PRIORITY '}

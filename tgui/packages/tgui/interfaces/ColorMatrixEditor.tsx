@@ -1,14 +1,6 @@
-import { toFixed } from 'common/math';
-
 import { useBackend } from '../backend';
-import {
-  Box,
-  Button,
-  ByondUi,
-  NumberInput,
-  Section,
-  Stack,
-} from '../components';
+import { toFixed } from 'common/math';
+import { Box, Stack, Section, ByondUi, NumberInput, Button } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -18,8 +10,8 @@ type Data = {
 
 const PREFIXES = ['r', 'g', 'b', 'a', 'c'] as const;
 
-export const ColorMatrixEditor = (props) => {
-  const { act, data } = useBackend<Data>();
+export const ColorMatrixEditor = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { mapRef, currentColor } = data;
 
   return (

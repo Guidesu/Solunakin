@@ -1,9 +1,8 @@
-import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
-import { Button, LabeledList } from '../components';
 import { Window } from '../layouts';
+import { LabeledList, Button } from '../components';
 import { AccessConfig } from './common/AccessConfig';
+import { BooleanLike } from 'common/react';
 
 type Data = {
   oneAccess: BooleanLike;
@@ -11,8 +10,8 @@ type Data = {
   accesses: string[];
 };
 
-export const CircuitAccessChecker = (props) => {
-  const { act, data } = useBackend<Data>();
+export const CircuitAccessChecker = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { oneAccess, regions = [], accesses = [] } = data;
 
   return (
@@ -28,8 +27,8 @@ export const CircuitAccessChecker = (props) => {
           </LabeledList.Item>
         </LabeledList>
         <AccessConfig
-          accesses={regions || []}
-          selectedList={accesses || []}
+          accesses={regions}
+          selectedList={accesses}
           accessMod={(ref) =>
             act('set', {
               access: ref,

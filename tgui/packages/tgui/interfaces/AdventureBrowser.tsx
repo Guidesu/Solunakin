@@ -1,8 +1,8 @@
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, NoticeBox, Section, Table } from '../components';
-import { formatTime } from '../format';
+import { Button, Section, Box, NoticeBox, Table } from '../components';
 import { Window } from '../layouts';
 import { AdventureDataProvider, AdventureScreen } from './ExodroneConsole';
+import { formatTime } from '../format';
 
 type Adventure = {
   ref: string;
@@ -23,11 +23,12 @@ type AdventureBrowserData = AdventureDataProvider & {
   delay_message: string;
 };
 
-const AdventureList = (props) => {
-  const { data, act } = useBackend<AdventureBrowserData>();
+const AdventureList = (props, context) => {
+  const { data, act } = useBackend<AdventureBrowserData>(context);
   const [openAdventure, setOpenAdventure] = useLocalState<string | null>(
+    context,
     'openAdventure',
-    null,
+    null
   );
 
   return (
@@ -56,13 +57,12 @@ const AdventureList = (props) => {
   );
 };
 
-const DebugPlayer = (props) => {
-  const { data, act } = useBackend<AdventureBrowserData>();
+const DebugPlayer = (props, context) => {
+  const { data, act } = useBackend<AdventureBrowserData>(context);
   return (
     <Section
       title="Playtest"
-      buttons={<Button onClick={() => act('end_play')}>End Playtest</Button>}
-    >
+      buttons={<Button onClick={() => act('end_play')}>End Playtest</Button>}>
       {data.delay_time > 0 ? (
         <Box>
           DELAY {formatTime(data.delay_time)} / {data.delay_message}
@@ -79,8 +79,8 @@ const DebugPlayer = (props) => {
   );
 };
 
-export const AdventureBrowser = (props) => {
-  const { data } = useBackend<AdventureBrowserData>();
+export const AdventureBrowser = (props, context) => {
+  const { data } = useBackend<AdventureBrowserData>(context);
 
   return (
     <Window width={600} height={400} title="Adventure Overview">

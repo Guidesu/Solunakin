@@ -1,14 +1,14 @@
 import { useBackend } from '../backend';
 import { Box, Icon, Section, Stack } from '../components';
 import { Window } from '../layouts';
-import { Objective, ObjectivePrintout } from './common/Objectives';
+import { ObjectivePrintout, Objective } from './common/Objectives';
 
 type Data = {
   objectives: Objective[];
 };
 
-export const AntagInfoBrainwashed = (porps) => {
-  const { data } = useBackend<Data>();
+export const AntagInfoBrainwashed = (porps, context) => {
+  const { data } = useBackend<Data>(context);
 
   return (
     <Window width={400} height={400} theme="abductor">

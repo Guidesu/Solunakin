@@ -1,7 +1,6 @@
 import { toFixed } from 'common/math';
-
 import { useBackend } from '../backend';
-import { Button, NumberInput, Section, Stack } from '../components';
+import { Button, Stack, NumberInput, Section } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -12,8 +11,8 @@ type Data = {
   maxFrequency: number;
 };
 
-export const Signaler = (props) => {
-  const { act, data } = useBackend();
+export const Signaler = (props, context) => {
+  const { act, data } = useBackend(context);
   return (
     <Window width={280} height={128}>
       <Window.Content>
@@ -23,8 +22,8 @@ export const Signaler = (props) => {
   );
 };
 
-export const SignalerContent = (props) => {
-  const { act, data } = useBackend<Data>();
+export const SignalerContent = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { code, frequency, cooldown, minFrequency, maxFrequency } = data;
 
   const color = 'rgba(13, 13, 213, 0.7)';

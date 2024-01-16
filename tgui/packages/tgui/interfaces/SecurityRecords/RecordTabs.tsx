@@ -1,33 +1,22 @@
 import { filter, sortBy } from 'common/collections';
 import { flow } from 'common/fp';
-import { useState } from 'react';
 import { useBackend, useLocalState } from 'tgui/backend';
-import {
-  Box,
-  Button,
-  Icon,
-  Input,
-  NoticeBox,
-  Section,
-  Stack,
-  Tabs,
-} from 'tgui/components';
-
+import { Stack, Input, Section, Tabs, NoticeBox, Box, Icon, Button } from 'tgui/components';
 import { JOB2ICON } from '../common/JobToIcon';
 import { CRIMESTATUS2COLOR } from './constants';
 import { isRecordMatch } from './helpers';
-import { SecurityRecord, SecurityRecordsData } from './types';
+import { SecurityRecordsData, SecurityRecord } from './types';
 
 /** Tabs on left, with search bar */
-export const SecurityRecordTabs = (props) => {
-  const { act, data } = useBackend<SecurityRecordsData>();
+export const SecurityRecordTabs = (props, context) => {
+  const { act, data } = useBackend<SecurityRecordsData>(context);
   const { higher_access, records = [] } = data;
 
   const errorMessage = !records.length
     ? 'No records found.'
     : 'No match. Refine your search.';
 
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useLocalState(context, 'search', '');
 
   const sorted: SecurityRecord[] = flow([
     filter((record: SecurityRecord) => isRecordMatch(record, search)),
@@ -62,8 +51,7 @@ export const SecurityRecordTabs = (props) => {
             <Button
               disabled
               icon="plus"
-              tooltip="Add new records by inserting a 1 by 1 meter photo into the terminal. You do not need this screen open."
-            >
+              tooltip="Add new records by inserting a 1 by 1 meter photo into the terminal. You do not need this screen open.">
               Create
             </Button>
           </Stack.Item>
@@ -83,12 +71,12 @@ export const SecurityRecordTabs = (props) => {
 };
 
 /** Individual record */
-const CrewTab = (props: { record: SecurityRecord }) => {
+const CrewTab = (props: { record: SecurityRecord }, context) => {
   const [selectedRecord, setSelectedRecord] = useLocalState<
     SecurityRecord | undefined
-  >('securityRecord', undefined);
+  >(context, 'securityRecord', undefined);
 
-  const { act, data } = useBackend<SecurityRecordsData>();
+  const { act, data } = useBackend<SecurityRecordsData>(context);
   const { assigned_view } = data;
   const { record } = props;
   const { crew_ref, name, rank, wanted_status } = record;
@@ -108,10 +96,10 @@ const CrewTab = (props: { record: SecurityRecord }) => {
   return (
     <Tabs.Tab
       className="candystripe"
+      label={record.name}
       onClick={() => selectRecord(record)}
-      selected={isSelected}
-    >
-      <Box bold={isSelected} color={CRIMESTATUS2COLOR[wanted_status]}>
+      selected={isSelected}>
+      <Box bold={isSelected} color={CRIMESTATUS2COLOR[wanted_status]} wrap>
         <Icon name={JOB2ICON[rank] || 'question'} /> {name}
       </Box>
     </Tabs.Tab>

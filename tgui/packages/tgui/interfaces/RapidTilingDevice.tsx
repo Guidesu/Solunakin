@@ -1,11 +1,9 @@
 import { classes } from 'common/react';
 import { capitalizeAll } from 'common/string';
-import { useState } from 'react';
-
-import { useBackend } from '../backend';
-import { Box, Button, Section, Stack, Tabs } from '../components';
-import { Window } from '../layouts';
+import { useBackend, useLocalState } from '../backend';
+import { Box, Button, Section, Tabs, Stack } from '../components';
 import { InfoSection } from './RapidConstructionDevice';
+import { Window } from '../layouts';
 
 type Data = {
   selected_icon: string;
@@ -32,8 +30,8 @@ const ROTATION_MAP = {
   east: 'rotateZ(-90deg)',
 } as const;
 
-const TilePreview = (props) => {
-  const { data } = useBackend<Data>();
+const TilePreview = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { selected_icon, selected_direction } = data;
 
   return (
@@ -42,8 +40,7 @@ const TilePreview = (props) => {
       style={{
         width: '50px',
         height: '50px',
-      }}
-    >
+      }}>
       <Box
         className={classes(['rtd32x32', selected_icon])}
         style={{
@@ -56,11 +53,11 @@ const TilePreview = (props) => {
   );
 };
 
-const DirectionSelect = (props) => {
-  const { act, data } = useBackend<Data>();
+const DirectionSelect = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { tile_dirs = [], selected_direction } = data;
   return (
-    <Section fill>
+    <Section fill vertical>
       <Stack vertical>
         {tile_dirs.map((dir) => (
           <Stack.Item key={dir}>
@@ -81,8 +78,8 @@ const DirectionSelect = (props) => {
   );
 };
 
-const TileRotateSection = (props) => {
-  const { data } = useBackend<Data>();
+const TileRotateSection = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { selected_direction } = data;
   return (
     <Stack fill vertical>
@@ -96,23 +93,26 @@ const TileRotateSection = (props) => {
   );
 };
 
-const TileDesignSection = (props) => {
-  const { act, data } = useBackend<Data>();
+const TileDesignSection = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { categories = [], selected_category, selected_recipe } = data;
-  const [categoryName, setCategoryName] = useState(selected_category);
+  const [categoryName, setCategoryName] = useLocalState(
+    context,
+    'categoryName',
+    selected_category
+  );
   const shownCategory =
     categories.find((category) => category.category_name === categoryName) ||
     categories[0];
-
   return (
     <Section fill scrollable>
       <Tabs>
         {categories.map((category) => (
           <Tabs.Tab
+            fluid
             key={category.category_name}
             selected={category.category_name === categoryName}
-            onClick={() => setCategoryName(category.category_name)}
-          >
+            onClick={() => setCategoryName(category.category_name)}>
             {category.category_name}
           </Tabs.Tab>
         ))}
@@ -121,6 +121,7 @@ const TileDesignSection = (props) => {
         <Button
           key={i + 1}
           fluid
+          ellipsis
           color="transparent"
           selected={
             recipe.name === selected_recipe &&
@@ -134,8 +135,7 @@ const TileDesignSection = (props) => {
               category_name: shownCategory.category_name,
               id: i + 1,
             })
-          }
-        >
+          }>
           <Box
             inline
             verticalAlign="middle"
@@ -152,7 +152,7 @@ const TileDesignSection = (props) => {
   );
 };
 
-export const RapidTilingDevice = (props) => {
+export const RapidTilingDevice = (props, context) => {
   return (
     <Window width={500} height={540}>
       <Window.Content>

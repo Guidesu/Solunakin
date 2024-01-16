@@ -1,16 +1,6 @@
-import { ReactNode, useState } from 'react';
-
+import { InfernoNode } from 'inferno';
 import { useBackend, useLocalState } from '../../backend';
-import {
-  Box,
-  Button,
-  Flex,
-  Input,
-  LabeledList,
-  Section,
-  Stack,
-  Tooltip,
-} from '../../components';
+import { Box, Button, Flex, Input, LabeledList, Section, Stack, Tooltip } from '../../components';
 
 /**
  * This describes something that influences a particular reaction
@@ -46,12 +36,15 @@ type Gas = {
   reactions: { [key: string]: string } | [];
 };
 
-const GasSearchBar = (props: {
-  title: ReactNode;
-  onChange: (inputValue: string) => void;
-  activeInput: boolean;
-  setActiveInput: (toggle: boolean) => void;
-}) => {
+const GasSearchBar = (
+  props: {
+    title: InfernoNode;
+    onChange: (inputValue: string) => void;
+    activeInput: boolean;
+    setActiveInput: (toggle: boolean) => void;
+  },
+  context
+) => {
   const { title, onChange, activeInput, setActiveInput } = props;
   return (
     <Flex align="center">
@@ -75,15 +68,24 @@ const GasSearchBar = (props: {
   );
 };
 
-const GasHandbook = (props) => {
-  const { act, data } = useBackend<{ gasInfo: Gas[] }>();
+const GasHandbook = (props, context) => {
+  const { act, data } = useBackend<{ gasInfo: Gas[] }>(context);
   const { gasInfo } = data;
-  const [activeGasId, setActiveGasId] = useLocalState('activeGasId', '');
-  const [activeReactionId, setActiveReactionId] = useLocalState(
-    'activeReactionId',
-    '',
+  const [activeGasId, setActiveGasId] = useLocalState(
+    context,
+    'activeGasId',
+    ''
   );
-  const [gasActiveInput, setGasActiveInput] = useState(false);
+  const [activeReactionId, setActiveReactionId] = useLocalState(
+    context,
+    'activeReactionId',
+    ''
+  );
+  const [gasActiveInput, setGasActiveInput] = useLocalState(
+    context,
+    'gasActiveInput',
+    false
+  );
   const relevantGas = gasInfo.find((gas) => gas.id === activeGasId);
   return (
     <Section
@@ -93,15 +95,14 @@ const GasHandbook = (props) => {
           onChange={(keyword) =>
             setActiveGasId(
               gasInfo.find((gas) =>
-                gas.name.toLowerCase().startsWith(keyword.toLowerCase()),
-              )?.id || '',
+                gas.name.toLowerCase().startsWith(keyword.toLowerCase())
+              )?.id || ''
             )
           }
           activeInput={gasActiveInput}
           setActiveInput={setGasActiveInput}
         />
-      }
-    >
+      }>
       {relevantGas && (
         <>
           <Box mb="0.5em">{relevantGas.description}</Box>
@@ -117,7 +118,7 @@ const GasHandbook = (props) => {
                   content={reaction_name}
                 />
               </Box>
-            ),
+            )
           )}
         </>
       )}
@@ -125,17 +126,26 @@ const GasHandbook = (props) => {
   );
 };
 
-const ReactionHandbook = (props) => {
-  const { act, data } = useBackend<{ reactionInfo: Reaction[] }>();
+const ReactionHandbook = (props, context) => {
+  const { act, data } = useBackend<{ reactionInfo: Reaction[] }>(context);
   const { reactionInfo } = data;
-  const [activeGasId, setActiveGasId] = useLocalState('activeGasId', '');
-  const [activeReactionId, setActiveReactionId] = useLocalState(
-    'activeReactionId',
-    '',
+  const [activeGasId, setActiveGasId] = useLocalState(
+    context,
+    'activeGasId',
+    ''
   );
-  const [reactionActiveInput, setReactionActiveInput] = useState(false);
+  const [activeReactionId, setActiveReactionId] = useLocalState(
+    context,
+    'activeReactionId',
+    ''
+  );
+  const [reactionActiveInput, setReactionActiveInput] = useLocalState(
+    context,
+    'reactionActiveInput',
+    false
+  );
   const relevantReaction = reactionInfo?.find(
-    (reaction) => reaction.id === activeReactionId,
+    (reaction) => reaction.id === activeReactionId
   );
   return (
     <Section
@@ -149,15 +159,14 @@ const ReactionHandbook = (props) => {
           onChange={(keyword) =>
             setActiveReactionId(
               reactionInfo.find((reaction) =>
-                reaction.name.toLowerCase().startsWith(keyword.toLowerCase()),
-              )?.id || '',
+                reaction.name.toLowerCase().startsWith(keyword.toLowerCase())
+              )?.id || ''
             )
           }
           activeInput={reactionActiveInput}
           setActiveInput={setReactionActiveInput}
         />
-      }
-    >
+      }>
       {relevantReaction && (
         <>
           <Box mb="0.5em">{relevantReaction.description}</Box>
@@ -176,9 +185,8 @@ const ReactionHandbook = (props) => {
                     <Tooltip content={factor.tooltip} position="top">
                       <Flex>
                         <Flex.Item
-                          style={{ borderBottom: 'dotted 2px' }}
-                          shrink
-                        >
+                          style={{ 'border-bottom': 'dotted 2px' }}
+                          shrink>
                           {factor.factor_name + ':'}
                         </Flex.Item>
                       </Flex>
@@ -186,8 +194,7 @@ const ReactionHandbook = (props) => {
                   ) : (
                     factor.factor_name
                   )
-                }
-              >
+                }>
                 {factor.desc}
               </LabeledList.Item>
             ))}
@@ -198,7 +205,10 @@ const ReactionHandbook = (props) => {
   );
 };
 
-export const AtmosHandbookContent = (props: { vertical?: boolean }) => {
+export const AtmosHandbookContent = (
+  props: { vertical?: boolean },
+  context
+) => {
   return props.vertical ? (
     <>
       <GasHandbook />
@@ -216,11 +226,16 @@ export const AtmosHandbookContent = (props: { vertical?: boolean }) => {
   );
 };
 
-export const atmosHandbookHooks = () => {
-  const [activeGasId, setActiveGasId] = useLocalState('activeGasId', '');
+export const atmosHandbookHooks = (context) => {
+  const [activeGasId, setActiveGasId] = useLocalState(
+    context,
+    'activeGasId',
+    ''
+  );
   const [activeReactionId, setActiveReactionId] = useLocalState(
+    context,
     'activeReactionId',
-    '',
+    ''
   );
   return [setActiveGasId, setActiveReactionId];
 };

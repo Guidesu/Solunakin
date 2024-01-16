@@ -1,13 +1,6 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
-import {
-  AnimatedNumber,
-  Box,
-  Button,
-  LabeledList,
-  Section,
-} from '../components';
+import { AnimatedNumber, Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -17,8 +10,8 @@ type Data = {
   status_report: string;
 };
 
-export const CargoHoldTerminal = (props) => {
-  const { act, data } = useBackend<Data>();
+export const CargoHoldTerminal = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { points, pad, sending, status_report } = data;
 
   return (
@@ -51,8 +44,7 @@ export const CargoHoldTerminal = (props) => {
                 onClick={() => act(sending ? 'stop' : 'send')}
               />
             </>
-          }
-        >
+          }>
           <LabeledList>
             <LabeledList.Item label="Status" color={pad ? 'good' : 'bad'}>
               {pad ? 'Online' : 'Not Found'}

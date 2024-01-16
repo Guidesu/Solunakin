@@ -1,8 +1,7 @@
 import { paginate } from 'common/collections';
 import { BooleanLike } from 'common/react';
-
 import { useBackend, useLocalState } from '../backend';
-import { Button, Icon, Input, Section, Stack, Tabs } from '../components';
+import { Stack, Button, Icon, Input, Section, Tabs } from '../components';
 import { Window } from '../layouts';
 
 const CATEGORY_PAGE_ITEMS = 4;
@@ -63,7 +62,7 @@ type ForceEventData = {
   events: Event[];
 };
 
-export const ForceEvent = (props) => {
+export const ForceEvent = (props, context) => {
   return (
     <Window theme="admin" title="Force Event" width={450} height={450}>
       <Window.Content>
@@ -80,10 +79,14 @@ export const ForceEvent = (props) => {
   );
 };
 
-export const PanelOptions = (props) => {
-  const [searchQuery, setSearchQuery] = useLocalState('searchQuery', '');
+export const PanelOptions = (props, context) => {
+  const [searchQuery, setSearchQuery] = useLocalState(
+    context,
+    'searchQuery',
+    ''
+  );
 
-  const [announce, setAnnounce] = useLocalState('announce', true);
+  const [announce, setAnnounce] = useLocalState(context, 'announce', true);
 
   return (
     <Stack width="240px">
@@ -94,7 +97,7 @@ export const PanelOptions = (props) => {
         <Input
           autoFocus
           fluid
-          onInput={(e, value) => setSearchQuery(value)}
+          onInput={(e) => setSearchQuery(e.target.value)}
           placeholder="Search..."
           value={searchQuery}
         />
@@ -103,8 +106,7 @@ export const PanelOptions = (props) => {
         <Button.Checkbox
           fluid
           checked={announce}
-          onClick={() => setAnnounce(!announce)}
-        >
+          onClick={() => setAnnounce(!announce)}>
           Announce
         </Button.Checkbox>
       </Stack.Item>
@@ -112,13 +114,13 @@ export const PanelOptions = (props) => {
   );
 };
 
-export const EventSection = (props) => {
-  const { data, act } = useBackend<ForceEventData>();
+export const EventSection = (props, context) => {
+  const { data, act } = useBackend<ForceEventData>(context);
   const { categories, events } = data;
 
-  const [category] = useLocalState('category', categories[0]);
-  const [searchQuery] = useLocalState('searchQuery', '');
-  const [announce] = useLocalState('announce', true);
+  const [category] = useLocalState(context, 'category', categories[0]);
+  const [searchQuery] = useLocalState(context, 'searchQuery', '');
+  const [announce] = useLocalState(context, 'announce', true);
 
   const preparedEvents = paginateEvents(
     events.filter((event) => {
@@ -132,7 +134,7 @@ export const EventSection = (props) => {
       }
       return true;
     }),
-    EVENT_PAGE_ITEMS,
+    EVENT_PAGE_ITEMS
   );
 
   const sectionTitle = searchQuery ? 'Searching...' : category.name + ' Events';
@@ -161,8 +163,7 @@ export const EventSection = (props) => {
                         type: event.type,
                         announce: announce,
                       })
-                    }
-                  >
+                    }>
                     {event.name}
                   </Button>
                 </Stack.Item>
@@ -175,11 +176,15 @@ export const EventSection = (props) => {
   );
 };
 
-export const EventTabs = (props) => {
-  const { data } = useBackend<ForceEventData>();
+export const EventTabs = (props, context) => {
+  const { data } = useBackend<ForceEventData>(context);
   const { categories } = data;
 
-  const [category, setCategory] = useLocalState('category', categories[0]);
+  const [category, setCategory] = useLocalState(
+    context,
+    'category',
+    categories[0]
+  );
 
   const layerCats = paginate(categories, CATEGORY_PAGE_ITEMS);
 
@@ -192,8 +197,7 @@ export const EventTabs = (props) => {
               selected={category === cat}
               icon={cat.icon}
               key={cat.icon}
-              onClick={() => setCategory(cat)}
-            >
+              onClick={() => setCategory(cat)}>
               {cat.name}
             </Tabs.Tab>
           ))}

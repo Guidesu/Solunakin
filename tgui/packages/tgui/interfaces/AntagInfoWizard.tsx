@@ -1,14 +1,8 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
 import { Box, Section, Stack } from '../components';
 import { Window } from '../layouts';
-import { Rules } from './AntagInfoRules'; // NOVA EDIT ADDITION
-import {
-  Objective,
-  ObjectivePrintout,
-  ReplaceObjectivesButton,
-} from './common/Objectives';
+import { ObjectivePrintout, Objective, ReplaceObjectivesButton } from './common/Objectives';
 
 const teleportstyle = {
   color: 'yellow',
@@ -54,13 +48,12 @@ type Info = {
   can_change_objective: BooleanLike;
 };
 
-// SKYRAT CHANGE height from 630 to 700
-export const AntagInfoWizard = (props) => {
-  const { data, act } = useBackend<Info>();
+export const AntagInfoWizard = (props, context) => {
+  const { data, act } = useBackend<Info>(context);
   const { ritual, objectives, can_change_objective } = data;
 
   return (
-    <Window width={620} height={700} theme="wizard">
+    <Window width={620} height={630} theme="wizard">
       <Window.Content>
         <Stack vertical fill>
           <Stack.Item grow>
@@ -85,11 +78,6 @@ export const AntagInfoWizard = (props) => {
                 <Stack.Item>
                   <RitualPrintout ritual={ritual} />
                 </Stack.Item>
-                {/* NOVA EDIT ADDITION START */}
-                <Stack.Item>
-                  <Rules />
-                </Stack.Item>
-                {/* NOVA EDIT ADDITION END */}
               </Stack>
             </Section>
           </Stack.Item>
@@ -164,7 +152,7 @@ export const AntagInfoWizard = (props) => {
   );
 };
 
-const RitualPrintout = (props: { ritual: GrandRitual }) => {
+const RitualPrintout = (props: { ritual: GrandRitual }, context) => {
   const { ritual } = props;
   if (!ritual.next_area) {
     return null;

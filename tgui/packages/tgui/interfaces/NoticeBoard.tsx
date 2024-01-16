@@ -1,5 +1,4 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
 import { Box, Button, Section, Stack } from '../components';
 import { Window } from '../layouts';
@@ -9,8 +8,8 @@ type Data = {
   items: { ref: string; name: string }[];
 };
 
-export const NoticeBoard = (props) => {
-  const { act, data } = useBackend<Data>();
+export const NoticeBoard = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { allowed, items = [] } = data;
 
   return (
@@ -28,8 +27,7 @@ export const NoticeBoard = (props) => {
               key={item.ref}
               color="black"
               backgroundColor="white"
-              style={{ padding: '2px 2px 0 2px' }}
-            >
+              style={{ padding: '2px 2px 0 2px' }}>
               <Stack.Item align="center" grow>
                 <Box align="center">{item.name}</Box>
               </Stack.Item>

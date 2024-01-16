@@ -1,19 +1,7 @@
-import { sortBy } from 'common/collections';
-import { useState } from 'react';
-
 import { useBackend, useLocalState } from '../backend';
-import {
-  BlockQuote,
-  Button,
-  Collapsible,
-  LabeledList,
-  NoticeBox,
-  RestrictedInput,
-  Section,
-  Stack,
-  Tabs,
-} from '../components';
 import { Window } from '../layouts';
+import { BlockQuote, Button, Collapsible, LabeledList, NoticeBox, RestrictedInput, Section, Stack, Tabs } from '../components';
+import { sortBy } from 'common/collections';
 
 type Data = {
   records: WarrantRecord[];
@@ -35,10 +23,11 @@ type Citation = {
   time: number;
 };
 
-export const WarrantConsole = (props) => {
+export const WarrantConsole = (props, context) => {
   const [selectedRecord] = useLocalState<WarrantRecord | undefined>(
+    context,
     'warrantRecord',
-    undefined,
+    undefined
   );
 
   return (
@@ -60,14 +49,14 @@ export const WarrantConsole = (props) => {
 };
 
 /** Displays all valid records with warrants. */
-const RecordList = (props) => {
-  const { act, data } = useBackend<Data>();
+const RecordList = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { records = [] } = data;
   const sorted = sortBy((record: WarrantRecord) => record.crew_name)(records);
 
   const [selectedRecord, setSelectedRecord] = useLocalState<
     WarrantRecord | undefined
-  >('warrantRecord', undefined);
+  >(context, 'warrantRecord', undefined);
 
   const selectHandler = (record: WarrantRecord) => {
     if (selectedRecord?.crew_ref === record.crew_ref) {
@@ -89,8 +78,7 @@ const RecordList = (props) => {
       }
       fill
       scrollable
-      title="Citations"
-    >
+      title="Citations">
       <Stack fill vertical>
         {!records?.length ? (
           <NoticeBox>No citations issued.</NoticeBox>
@@ -101,8 +89,7 @@ const RecordList = (props) => {
                 className="candystripe"
                 key={index}
                 onClick={() => selectHandler(record)}
-                selected={selectedRecord?.crew_ref === record.crew_ref}
-              >
+                selected={selectedRecord?.crew_ref === record.crew_ref}>
                 {record.crew_name}: {record.citations.length}
               </Tabs.Tab>
             ))}
@@ -114,8 +101,8 @@ const RecordList = (props) => {
 };
 
 /** Views info on the current selection. */
-const ViewRecord = (props) => {
-  const foundRecord = getCurrentRecord();
+const ViewRecord = (props, context) => {
+  const foundRecord = getCurrentRecord(context);
   if (!foundRecord) return <> </>;
 
   const { citations = [], crew_name } = foundRecord;
@@ -134,18 +121,18 @@ const ViewRecord = (props) => {
 };
 
 /** Handles paying fines */
-const CitationManager = (props) => {
-  const foundRecord = getCurrentRecord();
+const CitationManager = (props, context) => {
+  const foundRecord = getCurrentRecord(context);
   if (!foundRecord) return <> </>;
 
-  const { act } = useBackend<Data>();
+  const { act } = useBackend<Data>(context);
   const {
     citation: { author, details, fine, fine_ref, fine_name, paid, time },
   } = props;
 
   const { crew_ref } = foundRecord;
 
-  const [paying, setPaying] = useState(5);
+  const [paying, setPaying] = useLocalState(context, 'citationAmount', 5);
 
   return (
     <Collapsible
@@ -155,14 +142,12 @@ const CitationManager = (props) => {
           icon="print"
           onClick={() =>
             act('print', { crew_ref: crew_ref, fine_ref: fine_ref })
-          }
-        >
+          }>
           Print
         </Button>
       }
       color={getFineColor(fine)}
-      title={fine_name}
-    >
+      title={fine_name}>
       <LabeledList>
         <LabeledList.Item label="Details">
           <BlockQuote>{details}</BlockQuote>
@@ -197,16 +182,17 @@ const CitationManager = (props) => {
 };
 
 /** We need an active reference and this a pain to rewrite */
-export const getCurrentRecord = () => {
+export const getCurrentRecord = (context) => {
   const [selectedRecord] = useLocalState<WarrantRecord | undefined>(
+    context,
     'warrantRecord',
-    undefined,
+    undefined
   );
   if (!selectedRecord) return;
-  const { data } = useBackend<Data>();
+  const { data } = useBackend<Data>(context);
   const { records = [] } = data;
   const foundRecord = records.find(
-    (record) => record.crew_ref === selectedRecord.crew_ref,
+    (record) => record.crew_ref === selectedRecord.crew_ref
   );
   if (!foundRecord) return;
 

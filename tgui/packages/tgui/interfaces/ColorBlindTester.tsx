@@ -27,14 +27,14 @@ accessability, it is nowhere near gospel.`,
 with a crowbar`,
 ] as const;
 
-export const ColorBlindTester = (props) => {
-  const { data } = useBackend<Data>();
+export const ColorBlindTester = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { details } = data;
 
   return (
     <Window title="Color Blindness Testing" width={600} height={515}>
       <Window.Content>
-        <NoticeBox>
+        <NoticeBox warning>
           {UI_WARNINGS.map((warning, index) => (
             <Box key={index}>{warning}</Box>
           ))}
@@ -49,8 +49,8 @@ export const ColorBlindTester = (props) => {
   );
 };
 
-const ColorBlindCategory = (props: Props) => {
-  const { act, data } = useBackend<Data>();
+const ColorBlindCategory = (props: Props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { category } = props;
   const { details, selected } = data;
 
@@ -69,8 +69,7 @@ const ColorBlindCategory = (props: Props) => {
               })
             }
           />
-        }
-      >
+        }>
         {details[category]}
       </Section>
     );
@@ -86,8 +85,7 @@ const ColorBlindCategory = (props: Props) => {
           color="bad"
           onClick={() => act('clear_matrix')}
         />
-      }
-    >
+      }>
       {details[category]}
     </Section>
   );

@@ -1,22 +1,16 @@
 import { sortBy } from 'common/collections';
 import { classes } from 'common/react';
-import { PropsWithChildren, ReactNode } from 'react';
-
+import { InfernoNode, SFC } from 'inferno';
 import { useBackend } from '../../backend';
 import { Box, Button, Dropdown, Stack, Tooltip } from '../../components';
-import {
-  createSetPreference,
-  Job,
-  JoblessRole,
-  JobPriority,
-  PreferencesMenuData,
-} from './data';
+import { logger } from '../../logging';
+import { createSetPreference, Job, JoblessRole, JobPriority, PreferencesMenuData } from './data';
 import { ServerPreferencesFetcher } from './ServerPreferencesFetcher';
 
 const sortJobs = (entries: [string, Job][], head?: string) =>
   sortBy<[string, Job]>(
     ([key, _]) => (key === head ? -1 : 1),
-    ([key, _]) => key,
+    ([key, _]) => key
   )(entries);
 
 const PRIORITY_BUTTON_SIZE = '18px';
@@ -31,7 +25,7 @@ const PriorityButton = (props: {
   const className = `PreferencesMenu__Jobs__departments__priority`;
 
   return (
-    // NOVA EDIT START
+    // SKYRAT EDIT START
     <Button
       className={classes([
         className,
@@ -45,7 +39,7 @@ const PriorityButton = (props: {
       height={PRIORITY_BUTTON_SIZE}
       width={PRIORITY_BUTTON_SIZE}
     />
-    // NOVA EDIT END
+    // SKYRAT EDIT END
   );
 };
 
@@ -54,7 +48,8 @@ type CreateSetPriority = (priority: JobPriority | null) => () => void;
 const createSetPriorityCache: Record<string, CreateSetPriority> = {};
 
 const createCreateSetPriorityFromName = (
-  jobName: string,
+  context,
+  jobName: string
 ): CreateSetPriority => {
   if (createSetPriorityCache[jobName] !== undefined) {
     return createSetPriorityCache[jobName];
@@ -69,7 +64,7 @@ const createCreateSetPriorityFromName = (
     }
 
     const setPriority = () => {
-      const { act } = useBackend<PreferencesMenuData>();
+      const { act } = useBackend<PreferencesMenuData>(context);
 
       act('set_job_preference', {
         job: jobName,
@@ -112,16 +107,14 @@ const PriorityButtons = (props: {
   const { createSetPriority, isOverflow, priority } = props;
 
   return (
-    <Box // NOVA EDIT - Originally a stack
+    <Box
+      inline // SKYRAT EDIT
       style={{
-        alignItems: 'center',
-        height: '100%',
-        justifyContent: 'flex-end',
-        paddingLeft: '0.3em',
-        paddingTop: '0.12em', // NOVA EDIT ADDITION - Add some vertical padding
-        paddingBottom: '0.12em', // NOVA EDIT ADDITION - To make this look nicer
-      }}
-    >
+        'align-items': 'center',
+        'height': '100%',
+        'textAlign': 'end', // SKYRAT EDIT
+        'padding': '0.3em', // SKYRAT EDIT
+      }}>
       {isOverflow ? (
         <>
           <PriorityButton
@@ -171,30 +164,40 @@ const PriorityButtons = (props: {
           />
         </>
       )}
-    </Box> // NOVA EDIT - Originally a stack
+    </Box> // SKYRAT EDIT
   );
 };
 
-const JobRow = (props: { className?: string; job: Job; name: string }) => {
-  const { data, act } = useBackend<PreferencesMenuData>(); // NOVA EDIT CHANGE - Adds act param
+const JobRow = (
+  props: {
+    className?: string;
+    job: Job;
+    name: string;
+  },
+  context
+) => {
+  const { data } = useBackend<PreferencesMenuData>(context);
   const { className, job, name } = props;
 
   const isOverflow = data.overflow_role === name;
   const priority = data.job_preferences[name];
 
-  const createSetPriority = createCreateSetPriorityFromName(name);
+  const createSetPriority = createCreateSetPriorityFromName(context, name);
+  // SKYRAT EDIT
+  const { act } = useBackend<PreferencesMenuData>(context);
+  // SKYRAT EDIT END
 
   const experienceNeeded =
     data.job_required_experience && data.job_required_experience[name];
   const daysLeft = data.job_days_left ? data.job_days_left[name] : 0;
 
-  // NOVA EDIT ADDITION
+  // SKYRAT EDIT
   const alt_title_selected = data.job_alt_titles[name]
     ? data.job_alt_titles[name]
     : name;
-  // NOVA EDIT END
+  // SKYRAT EDIT END
 
-  let rightSide: ReactNode;
+  let rightSide: InfernoNode;
 
   if (experienceNeeded) {
     const { experience_type, required_playtime } = experienceNeeded;
@@ -223,7 +226,7 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
         </Stack.Item>
       </Stack>
     );
-    // NOVA EDIT START
+    // SKYRAT EDIT START
   } else if (job.veteran && !data.is_veteran) {
     rightSide = (
       <Stack align="center" height="100%" pr={1}>
@@ -243,7 +246,7 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
         </Stack.Item>
       </Stack>
     );
-    // NOVA EDIT END
+    // SKYRAT EDIT END
   } else {
     rightSide = (
       <PriorityButtons
@@ -253,20 +256,27 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
       />
     );
   }
-
   return (
-    <Stack.Item className={className} height="100%" mt={0}>
-      <Stack fill align="center">
-        <Tooltip content={job.description} position="bottom-start">
+    <Box
+      className={className}
+      style={{
+        // SKYRAT EDIT
+        'margin-top': 0,
+      }}>
+      <Stack align="center" /* SKYRAT EDIT */>
+        <Tooltip
+          content={job.description}
+          position="right" // SKYRAT EDIT bottom-start->right
+        >
           <Stack.Item
             className="job-name"
             width="50%"
             style={{
-              paddingLeft: '0.3em',
-            }}
-          >
+              'padding-left': '0.3em',
+            }}>
+            {' '}
             {
-              // NOVA EDIT CHANGE START - ORIGINAL: {name}
+              // SKYRAT EDIT
               !job.alt_titles ? (
                 name
               ) : (
@@ -279,22 +289,23 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
                   }
                 />
               )
-              // NOVA EDIT CHANGE END
+              // SKYRAT EDIT END
             }
           </Stack.Item>
         </Tooltip>
 
-        <Stack.Item grow className="options">
+        <Stack.Item width="50%" className="options" /* SKYRAT EDIT */>
           {rightSide}
         </Stack.Item>
       </Stack>
-    </Stack.Item>
+    </Box> // SKYRAT EDIT
   );
 };
 
-const Department = (props: { department: string } & PropsWithChildren) => {
+const Department: SFC<{ department: string }> = (props) => {
   const { children, department: name } = props;
   const className = `PreferencesMenu__Jobs__departments--${name}`;
+  logger.log(name + ': ' + className);
 
   return (
     <ServerPreferencesFetcher
@@ -316,15 +327,17 @@ const Department = (props: { department: string } & PropsWithChildren) => {
 
         const jobsForDepartment = sortJobs(
           Object.entries(jobs).filter(([_, job]) => job.department === name),
-          department.head,
+          department.head
         );
 
+        logger.log(className);
         return (
           <Box>
             {
               jobsForDepartment.map(([name, job]) => {
+                logger.log(name);
                 return (
-                  <JobRow /* NOVA EDIT START - Fixing alt titles */
+                  <JobRow /* SKYRAT EDIT START - Fixing alt titles */
                     className={classes([
                       className,
                       name === department.head && 'head',
@@ -334,7 +347,7 @@ const Department = (props: { department: string } & PropsWithChildren) => {
                     name={name}
                   />
                 );
-              }) /* NOVA EDIT END */
+              }) /* SKYRAT EDIT END */
             }
 
             {children}
@@ -354,8 +367,8 @@ const Gap = (props: { amount: number }) => {
   return <Box height={`calc(${props.amount}px + 0.2em)`} />;
 };
 
-const JoblessRoleDropdown = (props) => {
-  const { act, data } = useBackend<PreferencesMenuData>();
+const JoblessRoleDropdown = (props, context) => {
+  const { act, data } = useBackend<PreferencesMenuData>(context);
   const selected = data.character_preferences.misc.joblessrole;
 
   const options = [

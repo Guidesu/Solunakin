@@ -1,25 +1,8 @@
 import { classes } from 'common/react';
-
 import { useBackend } from '../../backend';
-import {
-  BlockQuote,
-  Box,
-  Button,
-  Divider,
-  Icon,
-  Section,
-  Stack,
-  Tooltip,
-} from '../../components';
+import { BlockQuote, Box, Button, Divider, Icon, Section, Stack, Tooltip } from '../../components';
 import { CharacterPreview } from '../common/CharacterPreview';
-import {
-  createSetPreference,
-  Food,
-  Perk,
-  PreferencesMenuData,
-  ServerData,
-  Species,
-} from './data';
+import { createSetPreference, Food, Perk, PreferencesMenuData, ServerData, Species } from './data';
 import { ServerPreferencesFetcher } from './ServerPreferencesFetcher';
 
 const FOOD_ICONS = {
@@ -101,8 +84,7 @@ const FoodList = (props: {
               .join(', ')}
           </Box>
         </Box>
-      }
-    >
+      }>
       <Stack ml={2}>
         {props.food.map((food) => {
           return (
@@ -174,16 +156,15 @@ const SpeciesPerk = (props: { className: string; perk: Perk }) => {
           <Divider />
           <Box>{perk.description}</Box>
         </Box>
-      }
-    >
-      <Box className={className} width="32px" height="32px">
+      }>
+      <Box class={className} width="32px" height="32px">
         <Icon
           name={perk.ui_icon}
           size={1.5}
           ml={0}
           mt={1}
           style={{
-            textAlign: 'center',
+            'text-align': 'center',
             height: '100%',
             width: '100%',
           }}
@@ -210,7 +191,7 @@ const SpeciesPerks = (props: { perks: Species['perks'] }) => {
         </Stack>
       </Stack.Item>
 
-      <Stack>
+      <Stack grow>
         {neutral.map((perk) => {
           return (
             <Stack.Item key={perk.name}>
@@ -233,17 +214,20 @@ const SpeciesPerks = (props: { perks: Species['perks'] }) => {
   );
 };
 
-const SpeciesPageInner = (props: {
-  handleClose: () => void;
-  species: ServerData['species'];
-}) => {
-  const { act, data } = useBackend<PreferencesMenuData>();
+const SpeciesPageInner = (
+  props: {
+    handleClose: () => void;
+    species: ServerData['species'];
+  },
+  context
+) => {
+  const { act, data } = useBackend<PreferencesMenuData>(context);
   const setSpecies = createSetPreference(act, 'species');
 
   let species: [string, Species][] = Object.entries(props.species).map(
     ([species, data]) => {
       return [species, data];
-    },
+    }
   );
 
   // Humans are always the top of the list
@@ -271,7 +255,7 @@ const SpeciesPageInner = (props: {
           <Stack.Item>
             <Box height="calc(100vh - 170px)" overflowY="auto" pr={3}>
               {species.map(([speciesKey, species]) => {
-                // NOVA EDIT START - Veteran-only species
+                // SKYRAT EDIT START - Veteran-only species
                 let speciesPage = (
                   <Button
                     key={speciesKey}
@@ -289,8 +273,7 @@ const SpeciesPageInner = (props: {
                       display: 'block',
                       height: '64px',
                       width: '64px',
-                    }}
-                  >
+                    }}>
                     <Box
                       className={classes(['species64x64', species.icon])}
                       ml={-1}
@@ -306,13 +289,13 @@ const SpeciesPageInner = (props: {
                   );
                 }
                 return speciesPage;
-                // NOVA EDIT END
+                // SKYRAT EDIT END
               })}
             </Box>
           </Stack.Item>
 
           <Stack.Item grow>
-            <Box>
+            <Box fill>
               <Box>
                 <Stack fill>
                   <Stack.Item width="70%">
@@ -324,11 +307,14 @@ const SpeciesPageInner = (props: {
                         currentSpecies.diet && (
                           <Diet diet={currentSpecies.diet} />
                         )
-                      }
-                    >
-                      {/* NOVA EDIT CHANGE START - Adds maxHeight, scrollable*/}
-                      <Section title="Description" maxHeight="14vh" scrollable>
-                        {/* NOVA EDIT CHANGE END */}
+                      }>
+                      <Section
+                        /* SKYRAT EDIT START - Scrollable description */
+                        title="Description"
+                        maxHeight="14vh"
+                        scrollable:true
+                        /* SKYRAT EDIT END*/
+                      >
                         {currentSpecies.desc}
                       </Section>
 
@@ -349,10 +335,10 @@ const SpeciesPageInner = (props: {
 
               <Box mt={1}>
                 <Section title="Lore">
-                  <BlockQuote /* NOVA EDIT START - scrollable lore */
+                  <BlockQuote /* SKYRAT EDIT START - scrollable lore */
                     overflowY="auto"
                     maxHeight="45vh"
-                    mr={-1} /* NOVA EDIT END */
+                    mr={-1} /* SKYRAT EDIT END */
                   >
                     {currentSpecies.lore.map((text, index) => (
                       <Box key={index} maxWidth="100%">

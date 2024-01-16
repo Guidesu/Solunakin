@@ -1,6 +1,5 @@
-import { multiline } from 'common/string';
-
 import { Antagonist, Category } from '../base';
+import { multiline } from 'common/string';
 
 export const REVOLUTIONARY_MECHANICAL_DESCRIPTION = multiline`
       Armed with a flash, convert as many people to the revolution as you can.

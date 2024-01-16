@@ -1,10 +1,9 @@
-// THIS IS A NOVA SECTOR UI FILE
+import { Stack, Section, Button, Box } from '../../components';
 import { useBackend } from '../../backend';
-import { Box, Button, Section, Stack } from '../../components';
 import { PreferencesMenuData } from './data';
 
-export const KnownLanguage = (props) => {
-  const { act } = useBackend<PreferencesMenuData>();
+export const KnownLanguage = (props, context) => {
+  const { act } = useBackend<PreferencesMenuData>(context);
   return (
     <Stack.Item>
       <Section title={props.language.name}>
@@ -14,8 +13,7 @@ export const KnownLanguage = (props) => {
           color="bad"
           onClick={() =>
             act('remove_language', { language_name: props.language.name })
-          }
-        >
+          }>
           Forget <Box className={'languages16x16 ' + props.language.icon} />
         </Button>
       </Section>
@@ -23,8 +21,8 @@ export const KnownLanguage = (props) => {
   );
 };
 
-export const UnknownLanguage = (props) => {
-  const { act } = useBackend<PreferencesMenuData>();
+export const UnknownLanguage = (props, context) => {
+  const { act } = useBackend<PreferencesMenuData>(context);
   return (
     <Stack.Item>
       <Section title={props.language.name}>
@@ -34,8 +32,7 @@ export const UnknownLanguage = (props) => {
           color="good"
           onClick={() =>
             act('give_language', { language_name: props.language.name })
-          }
-        >
+          }>
           Learn <Box className={'languages16x16 ' + props.language.icon} />
         </Button>
       </Section>
@@ -43,8 +40,8 @@ export const UnknownLanguage = (props) => {
   );
 };
 
-export const LanguagesPage = (props) => {
-  const { data } = useBackend<PreferencesMenuData>();
+export const LanguagesPage = (props, context) => {
+  const { data } = useBackend<PreferencesMenuData>(context);
   return (
     <Stack>
       <Stack.Item minWidth="33%">
@@ -63,8 +60,7 @@ export const LanguagesPage = (props) => {
             data.selected_languages.length +
             '/' +
             data.total_language_points
-          }
-        >
+          }>
           Here, you can purchase languages using a point buy system. Each
           Language is worth 1 point.
         </Section>

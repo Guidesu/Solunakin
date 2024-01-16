@@ -3,8 +3,8 @@ export const CHANNELS = [
   'Say',
   'Radio',
   'Me',
-  'Whis', // NOVA EDIT ADDITION - CUSTOMIZATION
-  'LOOC', // NOVA EDIT ADDITION - CUSTOMIZATION
+  'Whis', // SKYRAT EDIT ADDITION - CUSTOMIZATION
+  'LOOC', // SKYRAT EDIT ADDITION - CUSTOMIZATION
   'OOC',
   'Admin',
 ] as const;

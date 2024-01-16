@@ -1,8 +1,7 @@
-import { useState } from 'react';
-
-import { useBackend } from '../backend';
+import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Input, Section, Stack } from '../components';
 import { Window } from '../layouts';
+import { logger } from '../logging';
 
 type Data = {
   comments: string;
@@ -19,14 +18,15 @@ const PAI_RULES = `You are expected to role play to some degree. Keep in mind:
 Not entering information may lead to you not being selected. Press submit to
 alert pAI cards of your candidacy.`;
 
-export const PaiSubmit = (props) => {
-  const { data } = useBackend<Data>();
+export const PaiSubmit = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { comments, description, name } = data;
-  const [input, setInput] = useState({
+  const [input, setInput] = useLocalState<Data>(context, 'input', {
     comments,
     description,
     name,
   });
+  logger.log(input);
 
   return (
     <Window width={400} height={460} title="pAI Candidacy Menu">
@@ -48,7 +48,7 @@ export const PaiSubmit = (props) => {
 };
 
 /** Displays basic info about playing pAI */
-const DetailsDisplay = (props) => {
+const DetailsDisplay = (props, context) => {
   return (
     <Section fill scrollable title="Details">
       <Box color="label">
@@ -62,7 +62,7 @@ const DetailsDisplay = (props) => {
 };
 
 /** Input boxes for submission details */
-const InputDisplay = (props) => {
+const InputDisplay = (props, context) => {
   const { input, setInput } = props;
   const { name, description, comments } = input;
 
@@ -86,7 +86,7 @@ const InputDisplay = (props) => {
           </Box>
           <Input
             fluid
-            maxLength={500} /* NOVA EDIT: ORIGINAL 100 */
+            maxLength={100}
             value={description}
             onChange={(e, value) => setInput({ ...input, description: value })}
           />
@@ -97,7 +97,7 @@ const InputDisplay = (props) => {
           </Box>
           <Input
             fluid
-            maxLength={500} /* NOVA EDIT: ORIGINAL 100 */
+            maxLength={100}
             value={comments}
             onChange={(e, value) => setInput({ ...input, comments: value })}
           />
@@ -108,8 +108,8 @@ const InputDisplay = (props) => {
 };
 
 /** Gives the user a submit button */
-const ButtonsDisplay = (props) => {
-  const { act } = useBackend<Data>();
+const ButtonsDisplay = (props, context) => {
+  const { act } = useBackend<Data>(context);
   const { input } = props;
   const { comments, description, name } = input;
 
@@ -119,16 +119,14 @@ const ButtonsDisplay = (props) => {
         <Stack.Item>
           <Button
             onClick={() => act('save', { comments, description, name })}
-            tooltip="Saves your candidate data locally."
-          >
+            tooltip="Saves your candidate data locally.">
             SAVE
           </Button>
         </Stack.Item>
         <Stack.Item>
           <Button
             onClick={() => act('load')}
-            tooltip="Loads saved candidate data, if any."
-          >
+            tooltip="Loads saved candidate data, if any.">
             LOAD
           </Button>
         </Stack.Item>
@@ -140,8 +138,7 @@ const ButtonsDisplay = (props) => {
                 description,
                 name,
               })
-            }
-          >
+            }>
             SUBMIT
           </Button>
         </Stack.Item>

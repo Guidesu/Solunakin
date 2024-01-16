@@ -1,5 +1,4 @@
-import { ReactNode } from 'react';
-
+import { InfernoNode } from 'inferno';
 import { Button } from '../../components';
 
 export const PageButton = <P extends unknown>(props: {
@@ -9,7 +8,7 @@ export const PageButton = <P extends unknown>(props: {
 
   setPage: (page: P) => void;
 
-  children?: ReactNode;
+  children?: InfernoNode;
 }) => {
   const pageIsActive =
     props.currentPage === props.page ||
@@ -22,8 +21,7 @@ export const PageButton = <P extends unknown>(props: {
       fontSize="1.2em"
       fluid
       selected={pageIsActive}
-      onClick={() => props.setPage(props.page)}
-    >
+      onClick={() => props.setPage(props.page)}>
       {props.children}
     </Button>
   );

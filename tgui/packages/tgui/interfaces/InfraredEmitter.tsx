@@ -1,7 +1,6 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
-import { Button, LabeledList, Section } from '../components';
+import { Button, Section, LabeledList } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -9,8 +8,8 @@ type Data = {
   visible: BooleanLike;
 };
 
-export const InfraredEmitter = (props) => {
-  const { act, data } = useBackend<Data>();
+export const InfraredEmitter = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { on, visible } = data;
 
   return (

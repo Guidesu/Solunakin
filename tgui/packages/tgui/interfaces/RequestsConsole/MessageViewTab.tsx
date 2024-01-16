@@ -1,23 +1,10 @@
-import { decodeHtmlEntities } from 'common/string';
-
 import { useBackend } from '../../backend';
-import {
-  BlockQuote,
-  Button,
-  LabeledList,
-  NoticeBox,
-  Section,
-  Stack,
-} from '../../components';
-import {
-  RequestMessage,
-  RequestPriority,
-  RequestsData,
-  RequestType,
-} from './types';
+import { BlockQuote, Button, LabeledList, NoticeBox, Section, Stack } from '../../components';
+import { decodeHtmlEntities } from 'common/string';
+import { RequestMessage, RequestPriority, RequestsData, RequestType } from './types';
 
-export const MessageViewTab = (props) => {
-  const { act, data } = useBackend<RequestsData>();
+export const MessageViewTab = (props, context) => {
+  const { act, data } = useBackend<RequestsData>(context);
   const { messages = [] } = data;
   return (
     <Section fill scrollable>
@@ -30,8 +17,13 @@ export const MessageViewTab = (props) => {
   );
 };
 
-const MessageDisplay = (props: { message: RequestMessage }) => {
-  const { act } = useBackend();
+const MessageDisplay = (
+  props: {
+    message: RequestMessage;
+  },
+  context
+) => {
+  const { act } = useBackend(context);
   const { message } = props;
   const append_list_keys = message.appended_list
     ? Object.keys(message.appended_list)
@@ -45,13 +37,12 @@ const MessageDisplay = (props: { message: RequestMessage }) => {
           message.sender_department +
           ', ' +
           message.received_time
-        }
-      >
+        }>
         {message.priority === RequestPriority.HIGH && (
-          <NoticeBox>High Priority</NoticeBox>
+          <NoticeBox warning>High Priority</NoticeBox>
         )}
         {message.priority === RequestPriority.EXTREME && (
-          <NoticeBox danger>!!!Extreme Priority!!!</NoticeBox>
+          <NoticeBox bad>!!!Extreme Priority!!!</NoticeBox>
         )}
         <BlockQuote>
           {decodeHtmlEntities(message.content)}

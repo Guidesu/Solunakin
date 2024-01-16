@@ -1,7 +1,6 @@
 import { toFixed } from 'common/math';
-
 import { useBackend } from '../backend';
-import { Button, Flex, NoticeBox, ProgressBar, Section } from '../components';
+import { Button, Flex, NoticeBox, Section, ProgressBar } from '../components';
 import { Window } from '../layouts';
 
 type BorgHypoContext = {
@@ -17,8 +16,8 @@ type Reagent = {
   description: string;
 };
 
-export const BorgHypo = (props) => {
-  const { data } = useBackend<BorgHypoContext>();
+export const BorgHypo = (props, context) => {
+  const { data } = useBackend<BorgHypoContext>(context);
   const { maxVolume, theme, reagents, selectedReagent } = data;
 
   const dynamicHeight = reagents.length * 25 + 60;
@@ -38,8 +37,8 @@ export const BorgHypo = (props) => {
   );
 };
 
-const ReagentDisplay = (props) => {
-  const { act } = useBackend();
+const ReagentDisplay = (props, context) => {
+  const { act } = useBackend(context);
   const { reagents, selected, maxVolume } = props;
   if (reagents.length === 0) {
     return <NoticeBox>No reagents available!</NoticeBox>;

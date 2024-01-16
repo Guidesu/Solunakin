@@ -1,7 +1,7 @@
 import { Flex } from '../../components';
-import { formatSiUnit } from '../../format';
-import { MaterialIcon } from './MaterialIcon';
 import { Design, MaterialMap } from './Types';
+import { MaterialIcon } from './MaterialIcon';
+import { formatSiUnit } from '../../format';
 
 export type MaterialCostSequenceProps = {
   /**
@@ -52,7 +52,10 @@ export type MaterialCostSequenceProps = {
  *
  * Otherwise, the labels are white.
  */
-export const MaterialCostSequence = (props: MaterialCostSequenceProps) => {
+export const MaterialCostSequence = (
+  props: MaterialCostSequenceProps,
+  context
+) => {
   const { design, amount, available, align, justify, SHEET_MATERIAL_AMOUNT } =
     props;
   let { costMap } = props;
@@ -72,7 +75,7 @@ export const MaterialCostSequence = (props: MaterialCostSequenceProps) => {
   return (
     <Flex wrap justify={justify ?? 'space-around'} align={align ?? 'center'}>
       {Object.entries(costMap).map(([material, quantity]) => (
-        <Flex.Item key={material} style={{ padding: '0.25em' }}>
+        <Flex.Item key={material} style={{ 'padding': '0.25em' }}>
           <Flex direction={'column'} align="center">
             <Flex.Item>
               <MaterialIcon
@@ -90,11 +93,10 @@ export const MaterialCostSequence = (props: MaterialCostSequenceProps) => {
                         ? '#f08f11'
                         : '#db2828',
                 }
-              }
-            >
+              }>
               {formatSiUnit(
                 ((amount || 1) * quantity) / SHEET_MATERIAL_AMOUNT,
-                0,
+                0
               )}
             </Flex.Item>
           </Flex>

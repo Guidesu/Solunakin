@@ -1,7 +1,6 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
-import { LabeledList, Section } from '../components';
+import { Section, LabeledList } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -11,8 +10,12 @@ type Data = {
   outboundPlatform: number;
 };
 
-export const CrossingSignal = (props) => {
-  const { data } = useBackend<Data>();
+type Props = {
+  context: any;
+};
+
+export const CrossingSignal = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
 
   const { sensorStatus, operatingStatus, inboundPlatform, outboundPlatform } =
     data;
@@ -24,14 +27,12 @@ export const CrossingSignal = (props) => {
           <LabeledList>
             <LabeledList.Item
               label="Operating Status"
-              color={operatingStatus ? 'bad' : 'good'}
-            >
+              color={operatingStatus ? 'bad' : 'good'}>
               {operatingStatus ? 'Degraded' : 'Normal'}
             </LabeledList.Item>
             <LabeledList.Item
               label="Sensor Status"
-              color={sensorStatus ? 'good' : 'bad'}
-            >
+              color={sensorStatus ? 'good' : 'bad'}>
               {sensorStatus ? 'Connected' : 'Error'}
             </LabeledList.Item>
             <LabeledList.Item label="Inbound Platform">

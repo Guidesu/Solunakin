@@ -1,14 +1,6 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
-import {
-  Box,
-  Button,
-  LabeledList,
-  NoticeBox,
-  Section,
-  Stack,
-} from '../components';
+import { Box, Button, LabeledList, NoticeBox, Section, Stack } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -24,8 +16,8 @@ type Wire = {
   wire: string;
 };
 
-export const Wires = (props) => {
-  const { data } = useBackend<Data>();
+export const Wires = (props, context) => {
+  const { data } = useBackend<Data>(context);
   const { proper_name, status = [], wires = [] } = data;
   const dynamicHeight = 150 + wires.length * 30 + (proper_name ? 30 : 0);
 
@@ -61,8 +53,8 @@ export const Wires = (props) => {
 };
 
 /** Returns a labeled list of wires */
-const WireMap = (props) => {
-  const { act, data } = useBackend<Data>();
+const WireMap = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const { wires } = data;
 
   return (
@@ -101,8 +93,7 @@ const WireMap = (props) => {
                 }
               />
             </>
-          }
-        >
+          }>
           {!!wire.wire && <i>({wire.wire})</i>}
         </LabeledList.Item>
       ))}

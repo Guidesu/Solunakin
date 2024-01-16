@@ -1,6 +1,5 @@
-// THIS IS A NOVA SECTOR UI FILE
 import { useBackend } from '../backend';
-import { Flex, NoticeBox, Section } from '../components';
+import { Section, NoticeBox, Flex } from '../components';
 import { Window } from '../layouts';
 
 type ICESData = {
@@ -19,8 +18,8 @@ type Props = {
   context: any;
 };
 
-export const IntensityCredits = (props) => {
-  const { act, data } = useBackend<ICESData>();
+export const IntensityCredits = (props, context) => {
+  const { act, data } = useBackend<ICESData>(context);
 
   const {
     current_credits,

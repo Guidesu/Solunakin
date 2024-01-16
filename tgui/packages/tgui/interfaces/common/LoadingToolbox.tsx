@@ -1,4 +1,4 @@
-import { Dimmer, Icon, Stack } from '../../components';
+import { Stack, Icon, Dimmer } from '../../components';
 
 /** Spinner that represents loading states.
  *
@@ -18,7 +18,7 @@ import { Dimmer, Icon, Stack } from '../../components';
  * )
  * ```
  */
-export const LoadingScreen = (props) => {
+export const LoadingScreen = (props, context) => {
   return (
     <Dimmer>
       <Stack align="center" fill justify="center" vertical>

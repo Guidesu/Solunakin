@@ -1,18 +1,15 @@
-import { useState } from 'react';
-
-import { useBackend } from '../backend';
-import { Button, ProgressBar, Section, Table } from '../components';
+import { useBackend, useLocalState } from '../backend';
 import { NtosWindow } from '../layouts';
 import { SupermatterContent, SupermatterData } from './Supermatter';
+import { Button, ProgressBar, Section, Table } from '../components';
 
 type NtosSupermatterData = SupermatterData & { focus_uid?: number };
 
-export const NtosSupermatter = (props) => {
-  const { act, data } = useBackend<NtosSupermatterData>();
+export const NtosSupermatter = (props, context) => {
+  const { act, data } = useBackend<NtosSupermatterData>(context);
   const { sm_data, gas_metadata, focus_uid } = data;
-  const [activeUID, setActiveUID] = useState(0);
+  const [activeUID, setActiveUID] = useLocalState(context, 'activeUID', 0);
   const activeSM = sm_data.find((sm) => sm.uid === activeUID);
-
   return (
     <NtosWindow height={400} width={700}>
       <NtosWindow.Content>
@@ -35,8 +32,7 @@ export const NtosSupermatter = (props) => {
                 content="Refresh"
                 onClick={() => act('PRG_refresh')}
               />
-            }
-          >
+            }>
             <Table>
               {sm_data.map((sm) => (
                 <Table.Row key={sm.uid}>
@@ -58,7 +54,7 @@ export const NtosSupermatter = (props) => {
                     <Button
                       icon="bell"
                       color={focus_uid === sm.uid && 'yellow'}
-                      onClick={() => act('PRG_focus', { focus_uid: sm.uid })}
+                      onClick={() => act('PRG_focus', { 'focus_uid': sm.uid })}
                     />
                   </Table.Cell>
                   <Table.Cell collapsing>

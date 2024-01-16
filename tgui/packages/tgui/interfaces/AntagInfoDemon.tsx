@@ -1,9 +1,8 @@
-import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
 import { Box, Section, Stack } from '../components';
+import { BooleanLike } from 'common/react';
 import { Window } from '../layouts';
-import { Objective, ObjectivePrintout } from './common/Objectives';
+import { ObjectivePrintout, Objective } from './common/Objectives';
 
 const jauntstyle = {
   color: 'lightblue',
@@ -19,12 +18,12 @@ type Info = {
   objectives: Objective[];
 };
 
-export const AntagInfoDemon = (props) => {
-  const { data } = useBackend<Info>();
+export const AntagInfoDemon = (props, context) => {
+  const { data } = useBackend<Info>(context);
   const { fluff, objectives, explain_attack } = data;
   return (
     <Window width={620} height={356} theme="syndicate">
-      <Window.Content style={{ backgroundImage: 'none' }}>
+      <Window.Content style={{ 'background-image': 'none' }}>
         <Stack fill>
           <Stack.Item>
             <DemonRunes />
@@ -37,8 +36,7 @@ export const AntagInfoDemon = (props) => {
                     <Stack.Item
                       textAlign="center"
                       textColor="red"
-                      fontSize="20px"
-                    >
+                      fontSize="20px">
                       {fluff}
                     </Stack.Item>
                     <Stack.Item>
@@ -86,7 +84,7 @@ export const AntagInfoDemon = (props) => {
   );
 };
 
-const DemonRunes = (props) => {
+const DemonRunes = (props, context) => {
   return (
     <Section height="102%" mt="-6px" fill>
       {/*

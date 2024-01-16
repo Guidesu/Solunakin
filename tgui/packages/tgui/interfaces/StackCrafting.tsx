@@ -1,20 +1,10 @@
-import { filter, map, reduce, sortBy } from 'common/collections';
-import { flow } from 'common/fp';
-import { clamp } from 'common/math';
 import { createSearch } from 'common/string';
-import { useState } from 'react';
-
-import { useBackend } from '../backend';
-import {
-  Box,
-  Button,
-  Collapsible,
-  Input,
-  NoticeBox,
-  Section,
-  Table,
-} from '../components';
+import { filter, map, reduce, sortBy } from 'common/collections';
+import { useBackend, useLocalState } from '../backend';
+import { Box, Button, Input, NoticeBox, Section, Collapsible, Table } from '../components';
 import { Window } from '../layouts';
+import { clamp } from 'common/math';
+import { flow } from 'common/fp';
 
 type Recipe = {
   ref: unknown | null;
@@ -57,6 +47,7 @@ type RecipeListFilterableEntry = [string, RecipeList | Recipe | undefined];
  * @param value the value to test
  * @returns type guard boolean
  */
+// eslint-disable-next-line func-style
 function isRecipeList(value: Recipe | RecipeList): value is RecipeList {
   return (value as Recipe).ref === undefined;
 }
@@ -69,7 +60,7 @@ function isRecipeList(value: Recipe | RecipeList): value is RecipeList {
  */
 const filterRecipeList = (
   list: RecipeList,
-  keyFilter: (key: string) => boolean,
+  keyFilter: (key: string) => boolean
 ) => {
   const filteredList: RecipeList = flow([
     map((entry: RecipeListEntry): RecipeListFilterableEntry => {
@@ -98,11 +89,11 @@ const filterRecipeList = (
   return Object.keys(filteredList).length ? filteredList : undefined;
 };
 
-export const StackCrafting = (_props) => {
-  const { data } = useBackend<StackCraftingProps>();
+export const StackCrafting = (_props, context) => {
+  const { data } = useBackend<StackCraftingProps>(context);
   const { amount, recipes = {} } = data;
 
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useLocalState(context, 'searchText', '');
   const testSearch = createSearch(searchText, (item: string) => item);
   const filteredRecipes = filterRecipeList(recipes, testSearch);
 
@@ -123,8 +114,7 @@ export const StackCrafting = (_props) => {
                 mx={1}
               />
             </>
-          }
-        >
+          }>
           {filteredRecipes ? (
             <RecipeListBox recipes={filteredRecipes} />
           ) : (
@@ -141,18 +131,18 @@ const RecipeListBox = (props: RecipeListProps) => {
 
   return (
     <>
-      {Object.keys(recipes).map((title, index) => {
+      {Object.keys(recipes).map((title) => {
         const recipe = recipes[title];
         if (isRecipeList(recipe)) {
           return (
-            <Collapsible key={title} ml={1} color="label" title={title}>
+            <Collapsible ml={1} color="label" title={title}>
               <Box ml={2}>
                 <RecipeListBox recipes={recipe} />
               </Box>
             </Collapsible>
           );
         } else {
-          return <RecipeBox key={title} title={title} recipe={recipe} />;
+          return <RecipeBox title={title} recipe={recipe} />;
         }
       })}
     </>
@@ -167,14 +157,14 @@ const buildMultiplier = (recipe: Recipe, amount: number) => {
   return Math.floor(amount / recipe.req_amount);
 };
 
-const Multipliers = (props: MultiplierProps) => {
-  const { act } = useBackend();
+const Multipliers = (props: MultiplierProps, context) => {
+  const { act } = useBackend(context);
 
   const { recipe, maxMultiplier } = props;
 
   const maxM = Math.min(
     maxMultiplier,
-    Math.floor(recipe.max_res_amount / recipe.res_amount),
+    Math.floor(recipe.max_res_amount / recipe.res_amount)
   );
 
   const multipliers = [5, 10, 25];
@@ -192,7 +182,7 @@ const Multipliers = (props: MultiplierProps) => {
               multiplier: multiplier,
             })
           }
-        />,
+        />
       );
     }
   }
@@ -207,15 +197,15 @@ const Multipliers = (props: MultiplierProps) => {
             multiplier: maxM,
           })
         }
-      />,
+      />
     );
   }
 
   return <>{finalResult.map((x) => x)}</>;
 };
 
-const RecipeBox = (props: RecipeBoxProps) => {
-  const { act, data } = useBackend<StackCraftingProps>();
+const RecipeBox = (props: RecipeBoxProps, context) => {
+  const { act, data } = useBackend<StackCraftingProps>(context);
 
   const { amount } = data;
 

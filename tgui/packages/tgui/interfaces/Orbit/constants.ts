@@ -1,15 +1,13 @@
 export const ANTAG2COLOR = {
-  Abductors: 'pink',
+  'Abductors': 'pink',
   'Ash Walkers': 'olive',
-  Biohazards: 'brown',
+  'Biohazards': 'brown',
   'Bounty Hunters': 'yellow',
-  CentCom: 'teal',
-  'Digital Anomalies': 'teal',
+  'CentCom': 'teal',
+  'Cyber Authority': 'teal',
   'Emergency Response Team': 'teal',
   'Escaped Fugitives': 'orange',
   'Xenomorph Infestation': 'violet',
-  'Spacetime Aberrations': 'white',
-  'Deviant Crew': 'white',
 } as const;
 
 export const THREAT = {

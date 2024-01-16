@@ -1,5 +1,4 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
 import { Button, Stack, Table } from '../components';
 import { Window } from '../layouts';
@@ -13,11 +12,11 @@ type CircuitAdminPanelData = {
   }[];
 };
 
-export const CircuitAdminPanel = (props) => {
-  const { act, data } = useBackend<CircuitAdminPanelData>();
+export const CircuitAdminPanel = (props, context) => {
+  const { act, data } = useBackend<CircuitAdminPanelData>(context);
 
   return (
-    <Window title="Circuit Admin Panel" width={1200} height={500}>
+    <Window title="Circuit Admin Panel" width={1200} height={500} resizable>
       <Window.Content>
         <Stack vertical>
           <Stack.Item>
@@ -27,8 +26,7 @@ export const CircuitAdminPanel = (props) => {
                 <Button
                   onClick={() => {
                     act('disable_circuit_sound');
-                  }}
-                >
+                  }}>
                   Disable all circuit sound emitters
                 </Button>
               </Stack.Item>

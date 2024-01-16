@@ -44,11 +44,11 @@ $discordWebHooks = array();
 // Only these repositories will announce in game.
 // Any repository that players actually care about.
 $game_announce_whitelist = array(
-	/* NOVA EDIT - We want it to announce to us - ORIGINAL:
+	/* SKYRAT EDIT - We want it to announce to us - ORIGINAL:
 	"tgstation",
 	"TerraGov-Marine-Corps",
-	// ORIGINAL END - NOVA EDIT: */
-	"GalaxiaStation",
+	// ORIGINAL END - SKYRAT EDIT: */
+	"Skyrat-tg",
 );
 
 // Any repository that matches in this blacklist will not appear on Discord.
@@ -806,7 +806,7 @@ function game_server_send($addr, $port, $str) {
 		$bytessent += $result;
 	}
 
-	/* --- Idle for a while until received bytes from game server --- */
+	/* --- Idle for a while until recieved bytes from game server --- */
 	$result = socket_read($server, 10000, PHP_BINARY_READ);
 	socket_close($server); // we don't need this anymore
 

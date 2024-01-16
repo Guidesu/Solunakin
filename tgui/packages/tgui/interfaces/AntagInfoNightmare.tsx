@@ -1,6 +1,5 @@
 import { BlockQuote, LabeledList, Section, Stack } from '../components';
 import { Window } from '../layouts';
-import { Rules } from './AntagInfoRules'; // NOVA EDIT ADDITION
 
 const tipstyle = {
   color: 'white',
@@ -10,9 +9,9 @@ const noticestyle = {
   color: 'lightblue',
 };
 
-export const AntagInfoNightmare = (props) => {
+export const AntagInfoNightmare = (props, context) => {
   return (
-    <Window width={620} height={380}>
+    <Window width={620} height={340}>
       <Window.Content backgroundColor="#0d0d0d">
         <Stack fill>
           <Stack.Item width="46.2%">
@@ -64,17 +63,11 @@ export const AntagInfoNightmare = (props) => {
                 </LabeledList.Item>
                 <LabeledList.Item label="Light Eater">
                   Your twisted appendage. It will consume the light of what it
-                  touches, be it victim or object. After 15 seconds of being in
-                  jaunt, stabbing a foe will stun them or do extra damage.
+                  touches, be it victim or object.
                 </LabeledList.Item>
               </LabeledList>
             </Section>
           </Stack.Item>
-          {/* NOVA EDIT ADDITION START */}
-          <Stack.Item>
-            <Rules />
-          </Stack.Item>
-          {/* NOVA EDIT ADDITION END */}
         </Stack>
       </Window.Content>
     </Window>

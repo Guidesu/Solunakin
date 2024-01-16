@@ -1,13 +1,12 @@
-import { KEY } from 'common/keys';
-import { BooleanLike } from 'common/react';
-import { Component, createRef, RefObject } from 'react';
-import { dragStartHandler } from 'tgui/drag';
-
 import { Channel, ChannelIterator } from './ChannelIterator';
 import { ChatHistory } from './ChatHistory';
+import { Component, createRef, InfernoKeyboardEvent, RefObject } from 'inferno';
 import { LINE_LENGTHS, RADIO_PREFIXES, WINDOW_SIZES } from './constants';
-import { windowClose, windowOpen, windowSet } from './helpers';
 import { byondMessages } from './timers';
+import { dragStartHandler } from 'tgui/drag';
+import { windowOpen, windowClose, windowSet } from './helpers';
+import { BooleanLike } from 'common/react';
+import { KEY } from 'common/keys';
 
 type ByondOpen = {
   channel: Channel;
@@ -222,7 +221,7 @@ export class TguiSay extends Component<{}, State> {
     this.setValue(typed.slice(3));
   }
 
-  handleKeyDown(event) {
+  handleKeyDown(event: InfernoKeyboardEvent<HTMLTextAreaElement>) {
     switch (event.key) {
       case KEY.Up:
       case KEY.Down:
@@ -311,16 +310,17 @@ export class TguiSay extends Component<{}, State> {
       this.channelIterator.current();
 
     return (
-      <div className={`window window-${theme} window-${this.state.size}`}>
+      <div
+        className={`window window-${theme} window-${this.state.size}`}
+        $HasKeyedChildren>
         <Dragzone position="top" theme={theme} />
-        <div className="center">
+        <div className="center" $HasKeyedChildren>
           <Dragzone position="left" theme={theme} />
-          <div className="input">
+          <div className="input" $HasKeyedChildren>
             <button
               className={`button button-${theme}`}
               onClick={this.handleIncrementChannel}
-              type="button"
-            >
+              type="button">
               {this.state.buttonContent}
             </button>
             <textarea
@@ -347,7 +347,7 @@ const Dragzone = ({ theme, position }: { theme: string; position: string }) => {
   return (
     <div
       className={`dragzone-${location} dragzone-${position} dragzone-${theme}`}
-      onMouseDown={dragStartHandler}
+      onmousedown={dragStartHandler}
     />
   );
 };

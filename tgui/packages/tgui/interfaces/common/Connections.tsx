@@ -1,5 +1,5 @@
-import { classes } from '../../../common/react';
 import { CSS_COLORS } from '../../constants';
+import { classes } from '../../../common/react';
 
 const SVG_CURVE_INTENSITY = 64;
 
@@ -26,16 +26,19 @@ export type Connection = {
   ref?: string;
 };
 
-export const Connections = (props: {
-  connections: Connection[];
-  zLayer?: number;
-  lineWidth?: number;
-}) => {
+export const Connections = (
+  props: {
+    connections: Connection[];
+    zLayer?: number;
+    lineWidth?: number;
+  },
+  context
+) => {
   const { connections, zLayer = -1, lineWidth = '2px' } = props;
 
   const isColorClass = (str) => {
     if (typeof str === 'string') {
-      return CSS_COLORS.includes(str as any);
+      return CSS_COLORS.includes(str);
     }
   };
 
@@ -44,11 +47,10 @@ export const Connections = (props: {
       width="100%"
       height="100%"
       style={{
-        position: 'absolute',
-        pointerEvents: 'none',
-        zIndex: zLayer,
-      }}
-    >
+        'position': 'absolute',
+        'pointer-events': 'none',
+        'z-index': zLayer,
+      }}>
       {connections.map((val, index) => {
         const from = val.from;
         const to = val.to;

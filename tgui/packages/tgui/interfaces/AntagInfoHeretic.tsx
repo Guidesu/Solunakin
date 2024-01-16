@@ -1,16 +1,8 @@
-import { BooleanLike } from 'common/react';
-import { useState } from 'react';
-
-import { useBackend } from '../backend';
-import { BlockQuote, Box, Button, Section, Stack, Tabs } from '../components';
-import { CssColor } from '../constants';
+import { useBackend, useLocalState } from '../backend';
+import { Section, Stack, Box, Tabs, Button, BlockQuote } from '../components';
 import { Window } from '../layouts';
-import { Rules } from './AntagInfoRules'; // NOVA EDIT ADDITION
-import {
-  Objective,
-  ObjectivePrintout,
-  ReplaceObjectivesButton,
-} from './common/Objectives';
+import { BooleanLike } from 'common/react';
+import { ObjectivePrintout, Objective, ReplaceObjectivesButton } from './common/Objectives';
 
 const hereticRed = {
   color: '#e03c3c',
@@ -44,7 +36,7 @@ type Knowledge = {
   cost: number;
   disabled: boolean;
   hereticPath: string;
-  color: CssColor;
+  color: string;
 };
 
 type KnowledgeInfo = {
@@ -54,14 +46,15 @@ type KnowledgeInfo = {
 
 type Info = {
   charges: number;
+  side_charges: number;
   total_sacrifices: number;
   ascended: BooleanLike;
   objectives: Objective[];
   can_change_objective: BooleanLike;
 };
 
-const IntroductionSection = (props) => {
-  const { data, act } = useBackend<Info>();
+const IntroductionSection = (props, context) => {
+  const { data, act } = useBackend<Info>(context);
   const { objectives, ascended, can_change_objective } = data;
 
   return (
@@ -70,12 +63,6 @@ const IntroductionSection = (props) => {
         <Section title="You are the Heretic!" fill fontSize="14px">
           <Stack vertical>
             <FlavorSection />
-            <Stack.Divider />
-            {/* NOVA EDIT ADDITION START */}
-            <Stack.Item>
-              <Rules />
-            </Stack.Item>
-            {/* NOVA EDIT ADDITION END */}
             <Stack.Divider />
             <GuideSection />
             <Stack.Divider />
@@ -88,8 +75,8 @@ const IntroductionSection = (props) => {
                   fill
                   titleMessage={
                     can_change_objective
-                      ? 'Your OPFOR objectives are your primary ones, but in order to ascend, you have these tasks to fulfill' /* NOVA EDIT CHANGE - opfor objectives */
-                      : 'Your OPFOR objectives are your primary ones. Use your dark knowledge to fulfill your personal goal' /* NOVA EDIT CHANGE - opfor objectives  */
+                      ? 'Your OPFOR objectives are your primary ones, but in order to ascend, you have these tasks to fulfill' /* SKYRAT EDIT CHANGE - opfor objectives */
+                      : 'Your OPFOR objectives are your primary ones. Use your dark knowledge to fulfill your personal goal' /* SKYRAT EDIT CHANGE - opfor objectives  */
                   }
                   objectives={objectives}
                   objectiveFollowup={
@@ -191,9 +178,9 @@ const GuideSection = () => {
   );
 };
 
-const InformationSection = (props) => {
-  const { data } = useBackend<Info>();
-  const { charges, total_sacrifices, ascended } = data;
+const InformationSection = (props, context) => {
+  const { data } = useBackend<Info>(context);
+  const { charges, side_charges, total_sacrifices, ascended } = data;
   return (
     <Stack.Item>
       <Stack vertical fill>
@@ -215,6 +202,13 @@ const InformationSection = (props) => {
           <span style={hereticBlue}>
             knowledge point{charges !== 1 ? 's' : ''}
           </span>
+          {!!side_charges && (
+            <span>
+              {' '}
+              and <b>{side_charges}</b> side point
+              {side_charges !== 1 ? 's' : ''}
+            </span>
+          )}{' '}
           .
         </Stack.Item>
         <Stack.Item>
@@ -227,8 +221,8 @@ const InformationSection = (props) => {
   );
 };
 
-const ResearchedKnowledge = (props) => {
-  const { data } = useBackend<KnowledgeInfo>();
+const ResearchedKnowledge = (props, context) => {
+  const { data } = useBackend<KnowledgeInfo>(context);
   const { learnedKnowledge } = data;
 
   return (
@@ -252,8 +246,8 @@ const ResearchedKnowledge = (props) => {
   );
 };
 
-const KnowledgeShop = (props) => {
-  const { data, act } = useBackend<KnowledgeInfo>();
+const KnowledgeShop = (props, context) => {
+  const { data, act } = useBackend<KnowledgeInfo>(context);
   const { learnableKnowledge } = data;
 
   return (
@@ -287,9 +281,9 @@ const KnowledgeShop = (props) => {
   );
 };
 
-const ResearchInfo = (props) => {
-  const { data } = useBackend<Info>();
-  const { charges } = data;
+const ResearchInfo = (props, context) => {
+  const { data } = useBackend<Info>(context);
+  const { charges, side_charges } = data;
 
   return (
     <Stack justify="space-evenly" height="100%" width="100%">
@@ -299,7 +293,14 @@ const ResearchInfo = (props) => {
             You have <b>{charges || 0}</b>&nbsp;
             <span style={hereticBlue}>
               knowledge point{charges !== 1 ? 's' : ''}
-            </span>{' '}
+            </span>
+            {!!side_charges && (
+              <span>
+                {' '}
+                and <b>{side_charges}</b> side point
+                {side_charges !== 1 ? 's' : ''}
+              </span>
+            )}{' '}
             to spend.
           </Stack.Item>
           <Stack.Item grow>
@@ -314,37 +315,34 @@ const ResearchInfo = (props) => {
   );
 };
 
-export const AntagInfoHeretic = (props) => {
-  const { data } = useBackend<Info>();
+export const AntagInfoHeretic = (props, context) => {
+  const { data } = useBackend<Info>(context);
   const { ascended } = data;
 
-  const [currentTab, setTab] = useState(0);
+  const [currentTab, setTab] = useLocalState(context, 'currentTab', 0);
 
   return (
     <Window width={675} height={635}>
       <Window.Content
         style={{
-          backgroundImage: 'none',
-          background: ascended
+          'background-image': 'none',
+          'background': ascended
             ? 'radial-gradient(circle, rgba(24,9,9,1) 54%, rgba(31,10,10,1) 60%, rgba(46,11,11,1) 80%, rgba(47,14,14,1) 100%);'
             : 'radial-gradient(circle, rgba(9,9,24,1) 54%, rgba(10,10,31,1) 60%, rgba(21,11,46,1) 80%, rgba(24,14,47,1) 100%);',
-        }}
-      >
+        }}>
         <Stack vertical fill>
           <Stack.Item>
             <Tabs fluid>
               <Tabs.Tab
                 icon="info"
                 selected={currentTab === 0}
-                onClick={() => setTab(0)}
-              >
+                onClick={() => setTab(0)}>
                 Information
               </Tabs.Tab>
               <Tabs.Tab
                 icon={currentTab === 1 ? 'book-open' : 'book'}
                 selected={currentTab === 1}
-                onClick={() => setTab(1)}
-              >
+                onClick={() => setTab(1)}>
                 Research
               </Tabs.Tab>
             </Tabs>

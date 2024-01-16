@@ -1,34 +1,18 @@
-import { useState } from 'react';
-import { useBackend, useLocalState } from 'tgui/backend';
-import {
-  BlockQuote,
-  Box,
-  Button,
-  Collapsible,
-  Icon,
-  Input,
-  LabeledList,
-  NoticeBox,
-  RestrictedInput,
-  Section,
-  Stack,
-  Tabs,
-  TextArea,
-  Tooltip,
-} from 'tgui/components';
-
+import { useLocalState, useBackend } from 'tgui/backend';
+import { SECURETAB, Crime, SecurityRecordsData } from './types';
 import { getSecurityRecord } from './helpers';
-import { Crime, SECURETAB, SecurityRecordsData } from './types';
+import { BlockQuote, Box, Button, Collapsible, Icon, Input, LabeledList, NoticeBox, RestrictedInput, Section, Stack, Tabs, TextArea, Tooltip } from 'tgui/components';
 
 /** Displays a list of crimes and allows to add new ones. */
-export const CrimeWatcher = (props) => {
-  const foundRecord = getSecurityRecord();
+export const CrimeWatcher = (props, context) => {
+  const foundRecord = getSecurityRecord(context);
   if (!foundRecord) return <> </>;
 
   const { crimes, citations } = foundRecord;
   const [selectedTab, setSelectedTab] = useLocalState<SECURETAB>(
+    context,
     'selectedTab',
-    SECURETAB.Crimes,
+    SECURETAB.Crimes
   );
 
   return (
@@ -37,21 +21,18 @@ export const CrimeWatcher = (props) => {
         <Tabs fluid>
           <Tabs.Tab
             onClick={() => setSelectedTab(SECURETAB.Crimes)}
-            selected={selectedTab === SECURETAB.Crimes}
-          >
+            selected={selectedTab === SECURETAB.Crimes}>
             Crimes: {crimes.length}
           </Tabs.Tab>
           <Tabs.Tab
             onClick={() => setSelectedTab(SECURETAB.Citations)}
-            selected={selectedTab === SECURETAB.Citations}
-          >
+            selected={selectedTab === SECURETAB.Citations}>
             Citations: {citations.length}
           </Tabs.Tab>
           <Tooltip content="Add a new crime or citation" position="bottom">
             <Tabs.Tab
               onClick={() => setSelectedTab(SECURETAB.Add)}
-              selected={selectedTab === SECURETAB.Add}
-            >
+              selected={selectedTab === SECURETAB.Add}>
               <Icon name="plus" />
             </Tabs.Tab>
           </Tooltip>
@@ -71,8 +52,8 @@ export const CrimeWatcher = (props) => {
 };
 
 /** Displays the crimes and citations of a record. */
-const CrimeList = (props) => {
-  const foundRecord = getSecurityRecord();
+const CrimeList = (props, context) => {
+  const foundRecord = getSecurityRecord(context);
   if (!foundRecord) return <> </>;
 
   const { citations, crimes } = foundRecord;
@@ -95,12 +76,12 @@ const CrimeList = (props) => {
 };
 
 /** Displays an individual crime */
-const CrimeDisplay = ({ item }: { item: Crime }) => {
-  const foundRecord = getSecurityRecord();
+const CrimeDisplay = ({ item }: { item: Crime }, context) => {
+  const foundRecord = getSecurityRecord(context);
   if (!foundRecord) return <> </>;
 
   const { crew_ref } = foundRecord;
-  const { act, data } = useBackend<SecurityRecordsData>();
+  const { act, data } = useBackend<SecurityRecordsData>(context);
   const { current_user, higher_access } = data;
   const { author, crime_ref, details, fine, name, paid, time, valid } = item;
   const showFine = !!fine && fine > 0 ? `: ${fine} cr` : '';
@@ -117,7 +98,11 @@ const CrimeDisplay = ({ item }: { item: Crime }) => {
     displayTitle = name.slice(0, 18) + showFine;
   }
 
-  const [editing, setEditing] = useLocalState(`editing_${crime_ref}`, false);
+  const [editing, setEditing] = useLocalState(
+    context,
+    `editing_${crime_ref}`,
+    false
+  );
 
   return (
     <Stack.Item>
@@ -149,8 +134,7 @@ const CrimeDisplay = ({ item }: { item: Crime }) => {
             <Button
               disabled={!valid || (!higher_access && author !== current_user)}
               icon="pen"
-              onClick={() => setEditing(true)}
-            >
+              onClick={() => setEditing(true)}>
               Edit
             </Button>
             <Button.Confirm
@@ -204,19 +188,24 @@ const CrimeDisplay = ({ item }: { item: Crime }) => {
 };
 
 /** Writes a new crime. Reducers don't seem to work here, so... */
-const CrimeAuthor = (props) => {
-  const foundRecord = getSecurityRecord();
+const CrimeAuthor = (props, context) => {
+  const foundRecord = getSecurityRecord(context);
   if (!foundRecord) return <> </>;
 
   const { crew_ref } = foundRecord;
-  const { act } = useBackend<SecurityRecordsData>();
+  const { act } = useBackend<SecurityRecordsData>(context);
 
-  const [crimeName, setCrimeName] = useState('');
-  const [crimeDetails, setCrimeDetails] = useState('');
-  const [crimeFine, setCrimeFine] = useState(0);
+  const [crimeName, setCrimeName] = useLocalState(context, 'crimeName', '');
+  const [crimeDetails, setCrimeDetails] = useLocalState(
+    context,
+    'crimeDetails',
+    ''
+  );
+  const [crimeFine, setCrimeFine] = useLocalState(context, 'crimeFine', 0);
   const [selectedTab, setSelectedTab] = useLocalState<SECURETAB>(
+    context,
     'selectedTab',
-    SECURETAB.Crimes,
+    SECURETAB.Crimes
   );
 
   const nameMeetsReqs = crimeName?.length > 2;
@@ -258,6 +247,7 @@ const CrimeAuthor = (props) => {
           fluid
           height={4}
           maxLength={1025}
+          multiline
           onChange={(_, value) => setCrimeDetails(value)}
           placeholder="Type some details..."
         />

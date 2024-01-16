@@ -1,5 +1,4 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
 import { Button, LabeledList, NumberInput, Section } from '../components';
 import { Window } from '../layouts';
@@ -15,8 +14,8 @@ type Data = {
   emptying: BooleanLike;
 };
 
-export const ChemAcclimator = (props) => {
-  const { act, data } = useBackend<Data>();
+export const ChemAcclimator = (props, context) => {
+  const { act, data } = useBackend<Data>(context);
   const {
     chem_temp,
     target_temperature,
@@ -78,8 +77,7 @@ export const ChemAcclimator = (props) => {
               selected={enabled}
               onClick={() => act('toggle_power')}
             />
-          }
-        >
+          }>
           <LabeledList>
             <LabeledList.Item label="Volume">
               <NumberInput

@@ -27,17 +27,16 @@ import './styles/themes/wizard.scss';
 import './styles/themes/admin.scss';
 // SKYRAT ADDITION START
 import './styles/themes/clockwork.scss';
-
 // SKYRAT ADDITION END
-import { perf } from 'common/perf';
-import { setupHotReloading } from 'tgui-dev-server/link/client.cjs';
 
-import { setGlobalStore } from './backend';
-import { setupGlobalEvents } from './events';
-import { setupHotKeys } from './hotkeys';
+import { StoreProvider, configureStore } from './store';
+
 import { captureExternalLinks } from './links';
 import { createRenderer } from './renderer';
-import { configureStore } from './store';
+import { perf } from 'common/perf';
+import { setupGlobalEvents } from './events';
+import { setupHotKeys } from './hotkeys';
+import { setupHotReloading } from 'tgui-dev-server/link/client.cjs';
 
 perf.mark('inception', window.performance?.timing?.navigationStart);
 perf.mark('init');
@@ -45,11 +44,13 @@ perf.mark('init');
 const store = configureStore();
 
 const renderApp = createRenderer(() => {
-  setGlobalStore(store);
-
   const { getRoutedComponent } = require('./routes');
   const Component = getRoutedComponent(store);
-  return <Component />;
+  return (
+    <StoreProvider store={store}>
+      <Component />
+    </StoreProvider>
+  );
 });
 
 const setupApp = () => {

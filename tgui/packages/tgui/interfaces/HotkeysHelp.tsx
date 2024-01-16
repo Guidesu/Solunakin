@@ -32,7 +32,7 @@ const altRegex = /(.*)(Alt)(.*)/;
 const addColorModifier = (
   content: string,
   regex: RegExp,
-  color: string,
+  color: string
 ): JSX.Element | null => {
   const match = content.match(regex);
 
@@ -88,8 +88,8 @@ const KeyBinding = (props: KeyBindingBoxProps) => (
   <>{processColorModifiers(props.keycode)}</>
 );
 
-export const HotkeysHelp = (props) => {
-  const { data } = useBackend<HotkeysHelpData>();
+export const HotkeysHelp = (props, context) => {
+  const { data } = useBackend<HotkeysHelpData>(context);
 
   return (
     <Window title="Hotkeys Help" width={500} height={800}>
@@ -115,23 +115,16 @@ export const HotkeysHelp = (props) => {
                       <Tooltip
                         key={binding.name}
                         content={binding.desc}
-                        position="bottom"
-                      >
+                        position="bottom">
                         <Box p={1} m={1} inline className="HotkeysHelp__pill">
                           {binding.name}
                         </Box>
                       </Tooltip>
                     ) : (
-                      <Box
-                        key={binding.name}
-                        p={1}
-                        m={1}
-                        inline
-                        className="HotkeysHelp__pill"
-                      >
+                      <Box p={1} m={1} inline className="HotkeysHelp__pill">
                         {binding.name}
                       </Box>
-                    ),
+                    )
                   )}
                 </Table.Cell>
               </Table.Row>
