@@ -1,39 +1,45 @@
 import { exhaustiveCheck } from 'common/exhaustive';
-import { useBackend, useLocalState } from '../../backend';
-import { Stack, Dropdown, Flex } from '../../components';
+import { useState } from 'react';
+
+import { useBackend } from '../../backend';
+import { Dropdown, Flex, Stack } from '../../components'; // NOVA EDIT CHANGE - ORIGINAL: import { Stack } from '../../components';
 import { Window } from '../../layouts';
-import { PreferencesMenuData } from './data';
-import { PageButton } from './PageButton';
 import { AntagsPage } from './AntagsPage';
+import { PreferencesMenuData } from './data';
 import { JobsPage } from './JobsPage';
-import { MainPage } from './MainPage';
-import { SpeciesPage } from './SpeciesPage';
-import { QuirksPage } from './QuirksPage';
-// SKYRAT EDIT
+// NOVA EDIT
 import { LanguagesPage } from './LanguagesMenu';
 import { LimbsPage } from './LimbsPage';
-// SKYRAT EDIT END
+// NOVA EDIT END
+import { MainPage } from './MainPage';
+import { PageButton } from './PageButton';
+import { QuirksPage } from './QuirksPage';
+import { SpeciesPage } from './SpeciesPage';
+
 enum Page {
   Antags,
   Main,
   Jobs,
-  // SKYRAT EDIT
+  // NOVA EDIT
   Limbs,
   Languages,
-  // SKYRAT EDIT END
+  // NOVA EDIT END
   Species,
   Quirks,
 }
 
 const CharacterProfiles = (props: {
-  activeSlot: number; // SKYRAT EDIT CHANGE
+  activeSlot: number;
   onClick: (index: number) => void;
   profiles: (string | null)[];
 }) => {
-  const { profiles, activeSlot, onClick } = props;
-  // SKYRAT EDIT CHANGE
+  const { profiles, activeSlot, onClick } = props; // NOVA EDIT CHANGE
+
   return (
-    <Flex align="center" justify="center">
+    <Flex /* NOVA EDIT CHANGE START - Skyrat uses a dropdown instead of buttons */
+      align="center"
+      justify="center"
+    >
       <Flex.Item width="25%">
         <Dropdown
           width="100%"
@@ -48,18 +54,14 @@ const CharacterProfiles = (props: {
           }}
         />
       </Flex.Item>
-    </Flex>
+    </Flex> /* NOVA EDIT CHANGE END */
   );
 };
 
-export const CharacterPreferenceWindow = (props, context) => {
-  const { act, data } = useBackend<PreferencesMenuData>(context);
+export const CharacterPreferenceWindow = (props) => {
+  const { act, data } = useBackend<PreferencesMenuData>();
 
-  const [currentPage, setCurrentPage] = useLocalState(
-    context,
-    'currentPage',
-    Page.Main
-  );
+  const [currentPage, setCurrentPage] = useState(Page.Main);
 
   let pageContents;
 
@@ -70,14 +72,14 @@ export const CharacterPreferenceWindow = (props, context) => {
     case Page.Jobs:
       pageContents = <JobsPage />;
       break;
-    // SKYRAT EDIT
+    // NOVA EDIT
     case Page.Limbs:
       pageContents = <LimbsPage />;
       break;
     case Page.Languages:
       pageContents = <LanguagesPage />;
       break;
-    // SKYRAT EDIT END
+    // NOVA EDIT END
     case Page.Main:
       pageContents = (
         <MainPage openSpecies={() => setCurrentPage(Page.Species)} />
@@ -128,7 +130,8 @@ export const CharacterPreferenceWindow = (props, context) => {
                   currentPage={currentPage}
                   page={Page.Main}
                   setPage={setCurrentPage}
-                  otherActivePages={[Page.Species]}>
+                  otherActivePages={[Page.Species]}
+                >
                   Character
                 </PageButton>
               </Stack.Item>
@@ -137,7 +140,8 @@ export const CharacterPreferenceWindow = (props, context) => {
                 <PageButton
                   currentPage={currentPage}
                   page={Page.Jobs}
-                  setPage={setCurrentPage}>
+                  setPage={setCurrentPage}
+                >
                   {/*
                     Fun fact: This isn't "Jobs" so that it intentionally
                     catches your eyes, because it's really important!
@@ -146,13 +150,14 @@ export const CharacterPreferenceWindow = (props, context) => {
                 </PageButton>
               </Stack.Item>
               {
-                // SKYRAT EDIT
+                // NOVA EDIT
               }
               <Stack.Item grow>
                 <PageButton
                   currentPage={currentPage}
                   page={Page.Limbs}
-                  setPage={setCurrentPage}>
+                  setPage={setCurrentPage}
+                >
                   Augments+
                 </PageButton>
               </Stack.Item>
@@ -161,18 +166,20 @@ export const CharacterPreferenceWindow = (props, context) => {
                 <PageButton
                   currentPage={currentPage}
                   page={Page.Languages}
-                  setPage={setCurrentPage}>
+                  setPage={setCurrentPage}
+                >
                   Languages
                 </PageButton>
               </Stack.Item>
               {
-                // SKYRAT EDIT END
+                // NOVA EDIT END
               }
               <Stack.Item grow>
                 <PageButton
                   currentPage={currentPage}
                   page={Page.Antags}
-                  setPage={setCurrentPage}>
+                  setPage={setCurrentPage}
+                >
                   Antagonists
                 </PageButton>
               </Stack.Item>
@@ -181,7 +188,8 @@ export const CharacterPreferenceWindow = (props, context) => {
                 <PageButton
                   currentPage={currentPage}
                   page={Page.Quirks}
-                  setPage={setCurrentPage}>
+                  setPage={setCurrentPage}
+                >
                   Quirks
                 </PageButton>
               </Stack.Item>
