@@ -41,7 +41,7 @@
 		cost = get_total_cost(), \
 		contains = things_to_order,
 	)
-	var/datum/supply_order/new_order = new(
+	var/datum/supply_order/disposable/new_order = new(
 		pack = mining_pack,
 		orderer = purchaser,
 		orderer_rank = "Mining Vendor",
@@ -71,11 +71,11 @@
 	if(istype(weapon, /obj/item/mining_voucher))
 		redeem_voucher(weapon, user)
 		return
-	//SKYRAT EDIT ADDITON BEGIN - SEVA
+	//NOVA EDIT ADDITON BEGIN - SEVA
 	if(istype(weapon, /obj/item/suit_voucher))
 		redeem_suit_voucher(weapon, user)
 		return
-	//SKYRAT EDIT ADDITON END
+	//NOVA EDIT ADDITON END
 	return ..()
 
 /obj/machinery/computer/order_console/mining/update_icon_state()

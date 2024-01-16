@@ -195,10 +195,10 @@
 				var/obj/machinery/new_machine = new circuit.build_path(loc)
 				new_machine.setDir(dir)
 				transfer_fingerprints_to(new_machine)
-				// SKYRAT EDIT ADDITION BEGIN - Connecting Computers
+				// NOVA EDIT ADDITION BEGIN - Connecting Computers
 				for(var/obj/machinery/computer/selected in range(1,src))
 					selected.update_overlays()
-				// SKYRAT EDIT ADDITION END - Connecting Computers
+				// NOVA EDIT ADDITION END - Connecting Computers
 				if(istype(new_machine, /obj/machinery/computer))
 					var/obj/machinery/computer/new_computer = new_machine
 
@@ -230,7 +230,7 @@
 	return ..() // This hotkey is BLACKLISTED since it's used by /datum/component/simple_rotation
 
 /obj/structure/frame/computer/deconstruct(disassembled = TRUE)
-	if(!(flags_1 & NODECONSTRUCT_1))
+	if(!(obj_flags & NO_DECONSTRUCTION))
 		if(state == 4)
 			new /obj/item/shard(drop_location())
 			new /obj/item/shard(drop_location())
@@ -245,7 +245,7 @@
 
 /obj/structure/frame/computer/rcd/Initialize(mapload)
 	name = "computer frame"
-	icon = 'icons/obj/assemblies/stock_parts.dmi'
+	icon = 'icons/obj/devices/stock_parts.dmi'
 	icon_state = "0"
 
 	. = ..()

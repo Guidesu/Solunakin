@@ -23,19 +23,24 @@
 	light_on = FALSE
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
-	block_chance = 45 //SKYRAT EDIT - Lowered ORIGINAL:75
+	block_chance = 45 //NOVA EDIT - Lowered ORIGINAL:75
 	block_sound = 'sound/weapons/block_blade.ogg'
 	max_integrity = 200
 	armor_type = /datum/armor/item_dualsaber
 	resistance_flags = FIRE_PROOF
 	wound_bonus = -10
 	bare_wound_bonus = 20
+<<<<<<< HEAD
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE_TOY // Skyrat edit
 	special_desc = "A double bladed energy sword employed by the Symphionia in raids" // Skyrat edit
+=======
+	special_desc_requirement = EXAMINE_CHECK_SYNDICATE_TOY // NOVA EDIT
+	special_desc = "A double bladed energy sword employed by the Syndicate in raids" // NOVA EDIT
+>>>>>>> Nova/master
 	item_flags = NO_BLOOD_ON_ITEM
 	var/w_class_on = WEIGHT_CLASS_BULKY
 	var/saber_color = "green"
-	var/two_hand_force = 34
+	var/two_hand_force = 40
 	var/hacked = FALSE
 	var/list/possible_colors = list("red", "blue", "green", "purple")
 
@@ -151,9 +156,21 @@
 		user.adjustStaminaLoss(25)
 
 /obj/item/dualsaber/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK, damage_type = BRUTE)
-	if(HAS_TRAIT(src, TRAIT_WIELDED))
-		return ..()
-	return 0
+	if(!HAS_TRAIT(src, TRAIT_WIELDED))
+		return FALSE //not interested unless we're wielding
+
+	if(attack_type == PROJECTILE_ATTACK)
+		var/obj/projectile/our_projectile = hitby
+
+		if(our_projectile.reflectable)
+			final_block_chance = 0 //we handle this via IsReflect(), effectively 75% block
+		else
+			final_block_chance -= 25 //We aren't AS good at blocking physical projectiles, like ballistics and thermals
+
+	if(attack_type == LEAP_ATTACK)
+		final_block_chance -= 50 //We are particularly bad at blocking someone JUMPING at us..
+
+	return ..()
 
 /obj/item/dualsaber/process()
 	if(HAS_TRAIT(src, TRAIT_WIELDED))
@@ -161,11 +178,11 @@
 			set_light_color(pick(COLOR_SOFT_RED, LIGHT_COLOR_GREEN, LIGHT_COLOR_LIGHT_CYAN, LIGHT_COLOR_LAVENDER))
 		open_flame()
 	else
-		STOP_PROCESSING(SSobj, src)
+		return PROCESS_KILL
 
 /obj/item/dualsaber/IsReflect()
-	if(HAS_TRAIT(src, TRAIT_WIELDED))
-		return 1
+	if(HAS_TRAIT(src, TRAIT_WIELDED) && prob(block_chance))
+		return TRUE
 
 /obj/item/dualsaber/ignition_effect(atom/A, mob/user)
 	// same as /obj/item/melee/energy, mostly

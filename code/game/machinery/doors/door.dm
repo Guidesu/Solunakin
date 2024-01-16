@@ -1,4 +1,4 @@
-// #define DOOR_CLOSE_WAIT 60 ///Default wait until doors autoclose // SKYRAT EDIT REMOVAL - moved to code/__DEFINES/~skyrat_defines/airlock.dm
+// #define DOOR_CLOSE_WAIT 60 ///Default wait until doors autoclose // NOVA EDIT REMOVAL - moved to code/__DEFINES/~nova_defines/airlock.dm
 /obj/machinery/door
 	name = "door"
 	desc = "It opens and closes."
@@ -329,7 +329,7 @@
 
 /obj/machinery/door/welder_act(mob/living/user, obj/item/tool)
 	try_to_weld(tool, user)
-	return TOOL_ACT_TOOLTYPE_SUCCESS
+	return ITEM_INTERACT_SUCCESS
 
 /obj/machinery/door/crowbar_act(mob/living/user, obj/item/tool)
 	if(user.combat_mode)
@@ -340,7 +340,7 @@
 		var/obj/item/crowbar/crowbar = tool
 		forced_open = crowbar.force_opens
 	try_to_crowbar(tool, user, forced_open)
-	return TOOL_ACT_TOOLTYPE_SUCCESS
+	return ITEM_INTERACT_SUCCESS
 
 /obj/machinery/door/attackby(obj/item/weapon, mob/living/user, params)
 	if(istype(weapon, /obj/item/access_key))
@@ -359,7 +359,7 @@
 
 /obj/machinery/door/welder_act_secondary(mob/living/user, obj/item/tool)
 	try_to_weld_secondary(tool, user)
-	return TOOL_ACT_TOOLTYPE_SUCCESS
+	return ITEM_INTERACT_SUCCESS
 
 /obj/machinery/door/crowbar_act_secondary(mob/living/user, obj/item/tool)
 	var/forced_open = FALSE
@@ -367,7 +367,7 @@
 		var/obj/item/crowbar/crowbar = tool
 		forced_open = crowbar.force_opens
 	try_to_crowbar_secondary(tool, user, forced_open)
-	return TOOL_ACT_TOOLTYPE_SUCCESS
+	return ITEM_INTERACT_SUCCESS
 
 /obj/machinery/door/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
 	. = ..()
@@ -381,12 +381,12 @@
 			if(glass)
 				playsound(loc, 'sound/effects/glasshit.ogg', 90, TRUE)
 			else if(damage_amount)
-				//SKYRAT EDIT ADDITION - CREDITS TO WHITEDREAM(valtos)
-				playsound(src, pick('modular_skyrat/master_files/sound/effects/metalblock1.wav', 'modular_skyrat/master_files/sound/effects/metalblock2.wav', \
-									'modular_skyrat/master_files/sound/effects/metalblock3.wav', 'modular_skyrat/master_files/sound/effects/metalblock4.wav', \
-									'modular_skyrat/master_files/sound/effects/metalblock5.wav', 'modular_skyrat/master_files/sound/effects/metalblock6.wav', \
-									'modular_skyrat/master_files/sound/effects/metalblock7.wav', 'modular_skyrat/master_files/sound/effects/metalblock8.wav'), 50, TRUE)
-				//SKYRAT EDIT END
+				//NOVA EDIT ADDITION - CREDITS TO WHITEDREAM(valtos)
+				playsound(src, pick('modular_nova/master_files/sound/effects/metalblock1.wav', 'modular_nova/master_files/sound/effects/metalblock2.wav', \
+									'modular_nova/master_files/sound/effects/metalblock3.wav', 'modular_nova/master_files/sound/effects/metalblock4.wav', \
+									'modular_nova/master_files/sound/effects/metalblock5.wav', 'modular_nova/master_files/sound/effects/metalblock6.wav', \
+									'modular_nova/master_files/sound/effects/metalblock7.wav', 'modular_nova/master_files/sound/effects/metalblock8.wav'), 50, TRUE)
+				//NOVA EDIT END
 			else
 				playsound(src, 'sound/weapons/tap.ogg', 50, TRUE)
 		if(BURN)
@@ -508,11 +508,11 @@
 			else if(ismonkey(future_pancake)) //For monkeys
 				future_pancake.emote("screech")
 				future_pancake.adjustBruteLoss(DOOR_CRUSH_DAMAGE)
-				future_pancake.StaminaKnockdown(20, TRUE, TRUE) // SKYRAT EDIT CHANGE - AIRLOCKS - ORIGINAL: future_pancake.Paralyze(100)
+				future_pancake.StaminaKnockdown(20, TRUE, TRUE) // NOVA EDIT CHANGE - AIRLOCKS - ORIGINAL: future_pancake.Paralyze(100)
 			else if(ishuman(future_pancake)) //For humans
 				future_pancake.adjustBruteLoss(DOOR_CRUSH_DAMAGE)
 				future_pancake.emote("scream")
-				future_pancake.StaminaKnockdown(20, TRUE, TRUE) // SKYRAT EDIT CHANGE - AIRLOCKS - ORIGINAL: future_pancake.Paralyze(100)
+				future_pancake.StaminaKnockdown(20, TRUE, TRUE) // NOVA EDIT CHANGE - AIRLOCKS - ORIGINAL: future_pancake.Paralyze(100)
 			else //for simple_animals & borgs
 				future_pancake.adjustBruteLoss(DOOR_CRUSH_DAMAGE)
 				var/turf/location = get_turf(src)
@@ -599,4 +599,4 @@
 		return ..()
 	return ..(0)
 
-// #undef DOOR_CLOSE_WAIT // SKYRAT EDIT REMOVAL - moved to code/__DEFINES/~skyrat_defines/airlock.dm
+// #undef DOOR_CLOSE_WAIT // NOVA EDIT REMOVAL - moved to code/__DEFINES/~nova_defines/airlock.dm

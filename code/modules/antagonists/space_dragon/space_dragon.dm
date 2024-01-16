@@ -181,7 +181,11 @@
 	var/datum/objective/summon_carp/main_objective = locate() in objectives
 	main_objective?.completed = TRUE
 	priority_announce("A large amount of lifeforms have been detected approaching [station_name()] at extreme speeds. \
+<<<<<<< HEAD
 		Remaining crew are advised to evacuate as soon as possible.", "Conglomeration of Colonists Wildlife Observations", has_important_message = TRUE)
+=======
+		Remaining crew are advised to evacuate as soon as possible.", "[command_name()] Wildlife Observations", has_important_message = TRUE)
+>>>>>>> Nova/master
 	sound_to_playing_players('sound/creatures/space_dragon_roar.ogg', volume = 75)
 	for(var/obj/structure/carp_rift/rift as anything in rift_list)
 		rift.carp_stored = 999999

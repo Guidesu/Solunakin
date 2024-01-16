@@ -2,9 +2,15 @@
 	title = JOB_PRISONER
 	description = "Keep yourself occupied in permabrig."
 	department_head = list("The Security Team")
+<<<<<<< HEAD
 	faction = FACTION_NONE
 	total_positions = 0		// SKYRAT EDIT: Original value (0)
 	spawn_positions = 0
+=======
+	faction = FACTION_STATION
+	total_positions = 12		// NOVA EDIT: Original value (0)
+	spawn_positions = 2
+>>>>>>> Nova/master
 	supervisors = "the security team"
 	exp_granted_type = EXP_TYPE_CREW
 	paycheck = PAYCHECK_LOWER
@@ -14,7 +20,7 @@
 	plasmaman_outfit = /datum/outfit/plasmaman/prisoner
 
 	display_order = JOB_DISPLAY_ORDER_PRISONER
-	department_for_prefs = /datum/job_department/assistant // SKYRAT EDIT - ORIGINAL: /datum/job_department/security
+	department_for_prefs = /datum/job_department/assistant // NOVA EDIT - ORIGINAL: /datum/job_department/security
 
 	exclusive_mail_goodies = TRUE
 	mail_goodies = list (
@@ -45,6 +51,7 @@
 	var/datum/crime/past_crime = new(crime.name, crime.desc, "Conglomeration of Colonists", "Indefinite.")
 	target_record.crimes += past_crime
 	to_chat(crewmember, span_warning("You are imprisoned for \"[crime_name]\"."))
+	crewmember.add_mob_memory(/datum/memory/key/permabrig_crimes, crimes = crime_name)
 
 /datum/outfit/job/prisoner
 	name = "Prisoner"
@@ -69,7 +76,6 @@
 	if(!crime_name)
 		return
 	var/datum/prisoner_crime/crime = GLOB.prisoner_crimes[crime_name]
-
 	var/list/limbs_to_tat = new_prisoner.bodyparts.Copy()
 	for(var/i in 1 to crime.tattoos)
 		if(!length(SSpersistence.prison_tattoos_to_use) || visualsOnly)

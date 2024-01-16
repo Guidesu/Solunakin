@@ -84,7 +84,7 @@
 		to_chat(user, span_notice("You swallow a gulp of [src]."))
 
 	SEND_SIGNAL(src, COMSIG_GLASS_DRANK, target_mob, user)
-	SEND_SIGNAL(target_mob, COMSIG_GLASS_DRANK, src, user) // SKYRAT EDIT ADDITION - Hemophages can't casually drink what's not going to regenerate their blood
+	SEND_SIGNAL(target_mob, COMSIG_GLASS_DRANK, src, user) // NOVA EDIT ADDITION - Hemophages can't casually drink what's not going to regenerate their blood
 	var/fraction = min(gulp_size/reagents.total_volume, 1)
 	reagents.trans_to(target_mob, gulp_size, transferred_by = user, methods = INGEST)
 	checkLiked(fraction, target_mob)
@@ -125,7 +125,7 @@
 			return
 
 		var/trans = reagents.trans_to(target, amount_per_transfer_from_this, transferred_by = user)
-		to_chat(user, span_notice("You transfer [round(trans, 0.01)] unit\s of the solution to [target]."))
+		to_chat(user, span_notice("You transfer [trans] unit\s of the solution to [target]."))
 
 	else if(target.is_drainable()) //A dispenser. Transfer FROM it TO us.
 		if(!target.reagents.total_volume)
@@ -137,7 +137,7 @@
 			return
 
 		var/trans = target.reagents.trans_to(src, amount_per_transfer_from_this, transferred_by = user)
-		to_chat(user, span_notice("You fill [src] with [round(trans, 0.01)] unit\s of the contents of [target]."))
+		to_chat(user, span_notice("You fill [src] with [trans] unit\s of the contents of [target]."))
 
 	target.update_appearance()
 
@@ -158,7 +158,7 @@
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 		var/trans = target.reagents.trans_to(src, amount_per_transfer_from_this, transferred_by = user)
-		to_chat(user, span_notice("You fill [src] with [round(trans, 0.01)] unit\s of the contents of [target]."))
+		to_chat(user, span_notice("You fill [src] with [trans] unit\s of the contents of [target]."))
 
 	target.update_appearance()
 	return SECONDARY_ATTACK_CONTINUE_CHAIN
@@ -168,34 +168,34 @@
 	if(hotness && reagents)
 		reagents.expose_temperature(hotness)
 		to_chat(user, span_notice("You heat [name] with [attacking_item]!"))
-		return
+		return TRUE
 
 	//Cooling method
 	if(istype(attacking_item, /obj/item/extinguisher))
 		var/obj/item/extinguisher/extinguisher = attacking_item
 		if(extinguisher.safety)
-			return
+			return TRUE
 		if (extinguisher.reagents.total_volume < 1)
 			to_chat(user, span_warning("\The [extinguisher] is empty!"))
-			return
+			return TRUE
 		var/cooling = (0 - reagents.chem_temp) * extinguisher.cooling_power * 2
 		reagents.expose_temperature(cooling)
 		to_chat(user, span_notice("You cool the [name] with the [attacking_item]!"))
 		playsound(loc, 'sound/effects/extinguish.ogg', 75, TRUE, -3)
 		extinguisher.reagents.remove_all(1)
-		return
+		return TRUE
 
 	if(istype(attacking_item, /obj/item/food/egg)) //breaking eggs
 		var/obj/item/food/egg/attacking_egg = attacking_item
 		if(!reagents)
-			return
-		if(reagents.total_volume >= reagents.maximum_volume)
+			return TRUE
+		if(reagents.holder_full())
 			to_chat(user, span_notice("[src] is full."))
 		else
 			to_chat(user, span_notice("You break [attacking_egg] in [src]."))
 			attacking_egg.reagents.trans_to(src, attacking_egg.reagents.total_volume, transferred_by = user)
 			qdel(attacking_egg)
-		return
+		return TRUE
 
 	return ..()
 
@@ -219,7 +219,7 @@
 
 /obj/item/reagent_containers/cup/beaker
 	name = "beaker"
-	desc = "A beaker. It can hold up to 60 units." //SKYRAT EDIT: Used to say can hold up to 50 units.
+	desc = "A beaker. It can hold up to 60 units." //NOVA EDIT: Used to say can hold up to 50 units.
 	icon = 'icons/obj/medical/chemical.dmi'
 	icon_state = "beaker"
 	inhand_icon_state = "beaker"
@@ -228,8 +228,8 @@
 	worn_icon_state = "beaker"
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT*5)
 	fill_icon_thresholds = list(0, 1, 20, 40, 60, 80, 100)
-	volume = 60 //SKYRAT EDIT: Addition
-	possible_transfer_amounts = list(5,10,15,20,30,60) //SKYRAT EDIT: Addition
+	volume = 60 //NOVA EDIT: Addition
+	possible_transfer_amounts = list(5,10,15,20,30,60) //NOVA EDIT: Addition
 
 /obj/item/reagent_containers/cup/beaker/Initialize(mapload)
 	. = ..()
@@ -246,24 +246,24 @@
 
 /obj/item/reagent_containers/cup/beaker/large
 	name = "large beaker"
-	desc = "A large beaker. Can hold up to 120 units." //SKYRAT EDIT: Used to say Can hold up to 100 units.
+	desc = "A large beaker. Can hold up to 120 units." //NOVA EDIT: Used to say Can hold up to 100 units.
 	icon_state = "beakerlarge"
 	custom_materials = list(/datum/material/glass= SHEET_MATERIAL_AMOUNT*1.25)
-	volume = 120 //SKYRAT EDIT: Original value (100)
+	volume = 120 //NOVA EDIT: Original value (100)
 	amount_per_transfer_from_this = 10
-	//possible_transfer_amounts = list(5,10,15,20,25,30,50,100) //SKYRAT EDIT: Original Values
-	possible_transfer_amounts = list(5,10,15,20,30,40,60,120) //SKYRAT EDIT: New Values
+	//possible_transfer_amounts = list(5,10,15,20,25,30,50,100) //NOVA EDIT: Original Values
+	possible_transfer_amounts = list(5,10,15,20,30,40,60,120) //NOVA EDIT: New Values
 	fill_icon_thresholds = list(0, 1, 20, 40, 60, 80, 100)
 
 /obj/item/reagent_containers/cup/beaker/plastic
 	name = "x-large beaker"
-	desc = "An extra-large beaker. Can hold up to 150 units." //SKYRAT EDIT: Used to say Can hold up to 120 units
+	desc = "An extra-large beaker. Can hold up to 150 units." //NOVA EDIT: Used to say Can hold up to 120 units
 	icon_state = "beakerwhite"
 	custom_materials = list(/datum/material/glass=SHEET_MATERIAL_AMOUNT*1.25, /datum/material/plastic=SHEET_MATERIAL_AMOUNT * 1.5)
-	volume = 150 //SKYRAT EDIT: Original Value (120)
+	volume = 150 //NOVA EDIT: Original Value (120)
 	amount_per_transfer_from_this = 10
-	//possible_transfer_amounts = list(5,10,15,20,25,30,60,120) //SKYRAT EDIT: Original values
-	possible_transfer_amounts = list(5,10,15,20,25,30,50,75,150) //SKYRAT EDIT: New Values
+	//possible_transfer_amounts = list(5,10,15,20,25,30,60,120) //NOVA EDIT: Original values
+	possible_transfer_amounts = list(5,10,15,20,25,30,50,75,150) //NOVA EDIT: New Values
 	fill_icon_thresholds = list(0, 1, 10, 20, 40, 60, 80, 100)
 
 /obj/item/reagent_containers/cup/beaker/meta
@@ -348,23 +348,20 @@
 
 /obj/item/reagent_containers/cup/bucket
 	name = "bucket"
-	desc = "It's a bucket. You can squeeze a mop's contents into it by using right-click." //SKYRAT EDIT CHANGE - ORIGINAL: desc = "It's a bucket."
+	desc = "It's a bucket. You can squeeze a mop's contents into it by using right-click." //NOVA EDIT CHANGE - ORIGINAL: desc = "It's a bucket."
 	icon = 'icons/obj/service/janitor.dmi'
 	worn_icon = 'icons/mob/clothing/head/utility.dmi'
 	icon_state = "bucket"
 	inhand_icon_state = "bucket"
 	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/custodial_righthand.dmi'
-	greyscale_colors = "#0085e5" //matches 1:1 with the original sprite color before gag-ification.
-	greyscale_config = /datum/greyscale_config/buckets
-	greyscale_config_worn = /datum/greyscale_config/buckets_worn
-	greyscale_config_inhand_left = /datum/greyscale_config/buckets_inhands_left
-	greyscale_config_inhand_right = /datum/greyscale_config/buckets_inhands_right
+	fill_icon_state = "bucket"
+	fill_icon_thresholds = list(50, 90)
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT * 2)
 	w_class = WEIGHT_CLASS_NORMAL
 	amount_per_transfer_from_this = 20
-	possible_transfer_amounts = list(5,10,15,20,25,30,50,100) //SKYRAT EDIT CHANGE
-	volume = 100 //SKYRAT EDIT CHANGE
+	possible_transfer_amounts = list(5,10,15,20,25,30,50,100) //NOVA EDIT CHANGE
+	volume = 100 //NOVA EDIT CHANGE
 	flags_inv = HIDEHAIR
 	slot_flags = ITEM_SLOT_HEAD
 	resistance_flags = NONE
@@ -385,20 +382,10 @@
 	fire = 75
 	acid = 50
 
-/obj/item/reagent_containers/cup/bucket/Initialize(mapload, vol)
-	if(greyscale_colors == initial(greyscale_colors))
-		set_greyscale(pick(list("#0085e5", COLOR_OFF_WHITE, COLOR_ORANGE_BROWN, COLOR_SERVICE_LIME, COLOR_MOSTLY_PURE_ORANGE, COLOR_FADED_PINK, COLOR_RED, COLOR_YELLOW, COLOR_VIOLET, COLOR_WEBSAFE_DARK_GRAY)))
-	return ..()
-
 /obj/item/reagent_containers/cup/bucket/wooden
 	name = "wooden bucket"
 	icon_state = "woodbucket"
 	inhand_icon_state = "woodbucket"
-	greyscale_colors = null
-	greyscale_config = null
-	greyscale_config_worn = null
-	greyscale_config_inhand_left = null
-	greyscale_config_inhand_right = null
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 2)
 	resistance_flags = FLAMMABLE
 	armor_type = /datum/armor/bucket_wooden
@@ -407,7 +394,7 @@
 	melee = 10
 	acid = 50
 
-// SKYRAT EDIT CHANGE START - LIQUIDS
+// NOVA EDIT CHANGE START - LIQUIDS
 /* Original
 /obj/item/reagent_containers/cup/bucket/attackby(obj/O, mob/user, params)
 	if(istype(O, /obj/item/mop))
@@ -446,7 +433,7 @@
 		var/obj/item/bot_assembly/cleanbot/new_cleanbot_ass = new(null, src)
 		user.put_in_hands(new_cleanbot_ass)
 		return
-// SKYRAT EDIT CHANGE END - LIQUIDS
+// NOVA EDIT CHANGE END - LIQUIDS
 
 /obj/item/reagent_containers/cup/bucket/equipped(mob/user, slot)
 	. = ..()
@@ -536,6 +523,11 @@
 	to_chat(user, span_warning("You can't grind this!"))
 
 /obj/item/reagent_containers/cup/mortar/proc/grind_item(obj/item/item, mob/living/carbon/human/user)
+	if(item.flags_1 & HOLOGRAM_1)
+		to_chat(user, span_notice("You try to grind [item], but it fades away!"))
+		qdel(item)
+		return
+
 	if(!item.grind(reagents, user))
 		if(isstack(item))
 			to_chat(usr, span_notice("[src] attempts to grind as many pieces of [item] as possible."))
@@ -547,6 +539,11 @@
 	QDEL_NULL(item)
 
 /obj/item/reagent_containers/cup/mortar/proc/juice_item(obj/item/item, mob/living/carbon/human/user)
+	if(item.flags_1 & HOLOGRAM_1)
+		to_chat(user, span_notice("You try to juice [item], but it fades away!"))
+		qdel(item)
+		return
+
 	if(!item.juice(reagents, user))
 		to_chat(user, span_notice("You fail to juice [item]."))
 		return

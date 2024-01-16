@@ -9,6 +9,7 @@ GLOBAL_LIST_INIT(petsplosion_candidates, typecacheof(list(
 	/mob/living/basic/lizard,
 	/mob/living/basic/mothroach,
 	/mob/living/basic/mouse/brown/tom,
+	/mob/living/basic/parrot,
 	/mob/living/basic/pet,
 	/mob/living/basic/pig,
 	/mob/living/basic/rabbit,
@@ -17,13 +18,12 @@ GLOBAL_LIST_INIT(petsplosion_candidates, typecacheof(list(
 	/mob/living/basic/snake,
 	/mob/living/basic/spider/giant/sgt_araneus,
 	/mob/living/simple_animal/hostile/retaliate/goose/vomit,
-	/mob/living/simple_animal/parrot,
 	/mob/living/simple_animal/pet,
 )))
 
 /datum/round_event_control/wizard/petsplosion //the horror
 	name = "Petsplosion"
-	weight = 0 //SKYRAT EDIT CHANGE - WIZARD CHANGE - ORIGINAL weight = 2
+	weight = 0 //NOVA EDIT CHANGE - WIZARD CHANGE - ORIGINAL weight = 2
 	typepath = /datum/round_event/wizard/petsplosion
 	max_occurrences = 1 //Exponential growth is nothing to sneeze at!
 	earliest_start = 0 MINUTES

@@ -10,11 +10,13 @@
 **/
 /mob/living/proc/gib(drop_bitflags=NONE)
 	var/prev_lying = lying_angle
-	if(stat != DEAD)
-		death(TRUE)
+	spawn_gibs(drop_bitflags)
 
 	if(!prev_lying)
 		gib_animation()
+
+	if(stat != DEAD)
+		death(TRUE)
 
 	ghostize()
 	spill_organs(drop_bitflags)
@@ -22,7 +24,6 @@
 	if(drop_bitflags & DROP_BODYPARTS)
 		spread_bodyparts(drop_bitflags)
 
-	spawn_gibs(drop_bitflags)
 	SEND_SIGNAL(src, COMSIG_LIVING_GIBBED, drop_bitflags)
 	qdel(src)
 
@@ -130,9 +131,9 @@
 	med_hud_set_status()
 	stop_pulling()
 
-	cut_overlay(GLOB.combat_indicator_overlay) //SKYRAT EDIT ADDITION - COMBAT_INDICATOR
-	set_combat_indicator(FALSE) //SKYRAT EDIT ADDITION - COMBAT_INDICATOR
-	set_ssd_indicator(FALSE) //SKYRAT EDIT ADDITION - SSD_INDICATOR
+	cut_overlay(GLOB.combat_indicator_overlay) //NOVA EDIT ADDITION - COMBAT_INDICATOR
+	set_combat_indicator(FALSE) //NOVA EDIT ADDITION - COMBAT_INDICATOR
+	set_ssd_indicator(FALSE) //NOVA EDIT ADDITION - SSD_INDICATOR
 
 	SEND_SIGNAL(src, COMSIG_LIVING_DEATH, gibbed)
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_DEATH, src, gibbed)

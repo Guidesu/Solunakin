@@ -60,7 +60,11 @@
 // Playtime tracking system, see jobs_exp.dm
 #define EXP_TYPE_LIVING "Living"
 #define EXP_TYPE_CREW "Crew"
+<<<<<<< HEAD
 #define EXP_TYPE_CENTRAL_COMMAND "Conglomeration of Colonists" // SKYRAT EDIT ADD
+=======
+#define EXP_TYPE_CENTRAL_COMMAND "Central Command" // NOVA EDIT ADD
+>>>>>>> Nova/master
 #define EXP_TYPE_COMMAND "Command"
 #define EXP_TYPE_ENGINEERING "Engineering"
 #define EXP_TYPE_MEDICAL "Medical"
@@ -131,6 +135,9 @@
 /// These are preferences that are supplementary for main features,
 /// such as hair color being affixed to hair.
 #define PREFERENCE_CATEGORY_SUPPLEMENTAL_FEATURES "supplemental_features"
+
+/// These preferences will not be rendered on the preferences page, and are practically invisible unless specifically rendered. Used for quirks, currently.
+#define PREFERENCE_CATEGORY_MANUALLY_RENDERED "manually_rendered_features"
 
 // Playtime is tracked in minutes
 /// The time needed to unlock hardcore random mode in preferences

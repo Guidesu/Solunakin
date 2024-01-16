@@ -21,6 +21,7 @@
 /obj/structure/closet/secure_closet/medical2
 	name = "anesthetic closet"
 	desc = "Used to knock people out."
+	icon_state = "med_secure"
 	req_access = list(ACCESS_SURGERY)
 
 /obj/structure/closet/secure_closet/medical2/PopulateContents()
@@ -48,6 +49,7 @@
 	name = "psychology locker"
 	req_access = list(ACCESS_PSYCHOLOGY)
 	icon_state = "cabinet"
+	door_anim_time = 0 // no animation
 	open_sound = 'sound/machines/wooden_closet_open.ogg'
 	close_sound = 'sound/machines/wooden_closet_close.ogg'
 	open_sound_volume = 25
@@ -68,7 +70,7 @@
 	new /obj/item/clothing/glasses/blindfold(src)
 
 /obj/structure/closet/secure_closet/chief_medical
-	name = "\proper chief medical officer's locker"
+	name = "chief medical officer's locker"
 	req_access = list(ACCESS_CMO)
 	icon_state = "cmo"
 
@@ -84,7 +86,7 @@
 	new /obj/item/defibrillator/compact/loaded(src)
 	new /obj/item/healthanalyzer/advanced(src)
 	new /obj/item/assembly/flash/handheld(src)
-	new /obj/item/storage/briefcase/medicalgunset/cmo(src) //SKYRAT EDIT ADDITION MEDIGUNS
+	new /obj/item/storage/briefcase/medicalgunset/cmo(src) //NOVA EDIT ADDITION MEDIGUNS
 	new /obj/item/autosurgeon/medical_hud(src)
 	new /obj/item/door_remote/chief_medical_officer(src)
 	new /obj/item/clothing/neck/petcollar(src)
@@ -93,16 +95,18 @@
 	new /obj/item/circuitboard/machine/techfab/department/medical(src)
 	new /obj/item/storage/photo_album/cmo(src)
 	new /obj/item/storage/lockbox/medal/med(src)
+	new /obj/item/card/id/departmental_budget/med(src) //NOVA EDIT ADDITION
 
 /obj/structure/closet/secure_closet/chief_medical/populate_contents_immediate()
 	. = ..()
 
 	// Traitor steal objective
 	//new /obj/item/reagent_containers/hypospray/cmo(src) - ORIGINAL
-	new /obj/item/storage/hypospraykit/cmo(src) //SKYRAT EDIT ADDITION - New Hyposprays
+	new /obj/item/storage/hypospraykit/cmo(src) //NOVA EDIT ADDITION - New Hyposprays
 
 /obj/structure/closet/secure_closet/animal
-	name = "animal control"
+	name = "animal control locker"
+	icon_door = "chemical"
 	req_access = list(ACCESS_SURGERY)
 
 /obj/structure/closet/secure_closet/animal/PopulateContents()
@@ -115,7 +119,7 @@
 	name = "chemical closet"
 	desc = "Store dangerous chemicals in here."
 	req_access = list(ACCESS_PHARMACY)
-	icon_door = "chemical"
+	icon_state = "chem_secure"
 
 /obj/structure/closet/secure_closet/chemical/PopulateContents()
 	..()
@@ -123,8 +127,8 @@
 	new /obj/item/storage/box/pillbottles(src)
 	new /obj/item/storage/box/medigels(src)
 	new /obj/item/storage/box/medigels(src)
-	new /obj/item/storage/box/hypospray(src) //SKYRAT EDIT ADDITION - HYPOSPRAYS
-	new /obj/item/storage/box/hypospray(src) //SKYRAT EDIT ADDITION - HYPOSPRAYS
+	new /obj/item/storage/box/hypospray(src) //NOVA EDIT ADDITION - HYPOSPRAYS
+	new /obj/item/storage/box/hypospray(src) //NOVA EDIT ADDITION - HYPOSPRAYS
 	new /obj/item/ph_booklet(src)
 	new /obj/item/reagent_containers/dropper(src)
 	new /obj/item/reagent_containers/cup/bottle/acidic_buffer(src) //hopefully they get the hint

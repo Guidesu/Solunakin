@@ -192,7 +192,7 @@
 	strip_delay = 70
 	resistance_flags = FLAMMABLE
 	dog_fashion = null
-	//SKYRAT EDIT ADDITION START
+	//NOVA EDIT ADDITION START
 	uses_advanced_reskins = TRUE
 	unique_reskin = list(
 		"Basic Warden Armor" = list(
@@ -202,25 +202,52 @@
 			RESKIN_WORN_ICON_STATE = "warden_alt"
 		),
 		"Standard" = list(
-			RESKIN_ICON = 'modular_skyrat/master_files/icons/obj/clothing/suits/armor.dmi',
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi',
 			RESKIN_ICON_STATE = "vest_warden",
-			RESKIN_WORN_ICON = 'modular_skyrat/master_files/icons/mob/clothing/suits/armor.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi',
 			RESKIN_WORN_ICON_STATE = "vest_warden",
 		),
 		"Peacekeeper" = list(
-			RESKIN_ICON = 'modular_skyrat/master_files/icons/obj/clothing/suits/armor.dmi',
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi',
 			RESKIN_ICON_STATE = "peacekeeper_trench_warden",
-			RESKIN_WORN_ICON = 'modular_skyrat/master_files/icons/mob/clothing/suits/armor.dmi',
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi',
 			RESKIN_WORN_ICON_STATE = "peacekeeper_trench_warden",
 			RESKIN_SUPPORTS_VARIATIONS_FLAGS = NONE
 		)
 	)
-	//SKYRAT EDIT ADDITION END
+	//NOVA EDIT ADDITION END
 
 /obj/item/clothing/suit/armor/vest/warden/alt
 	name = "warden's armored jacket"
 	desc = "A red jacket with silver rank pips and body armor strapped on top."
 	icon_state = "warden_jacket"
+
+/obj/item/clothing/suit/armor/vest/secjacket
+	name = "security jacket"
+	desc = "A red jacket in red Security colors. It has hi-vis stripes all over it."
+	icon_state = "secjacket"
+	inhand_icon_state = "armor"
+	armor_type = /datum/armor/armor_secjacket
+	body_parts_covered = CHEST|GROIN|ARMS
+	cold_protection = CHEST|GROIN|ARMS|HANDS
+	heat_protection = CHEST|GROIN|ARMS|HANDS
+	resistance_flags = FLAMMABLE
+	dog_fashion = null
+
+/obj/item/clothing/suit/armor/vest/secjacket/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
+	. = ..()
+	if(!isinhands)
+		. += emissive_appearance(icon_file, "[icon_state]-emissive", src, alpha = src.alpha)
+
+/datum/armor/armor_secjacket //Gotta compensate those extra covered limbs
+	melee = 25
+	bullet = 25
+	laser = 25
+	energy = 35
+	bomb = 20
+	fire = 30
+	acid = 30
+	wound = 5
 
 /obj/item/clothing/suit/armor/vest/leather
 	name = "security overcoat"
@@ -369,13 +396,18 @@
 
 /obj/item/clothing/suit/armor/swat
 	name = "MK.I SWAT Suit"
+<<<<<<< HEAD
 	desc = "A tactical suit first developed in a joint effort by the defunct IS-ERI and Symphionia in 2321 for military operations. It has a minor slowdown, but offers decent protection."
+=======
+	desc = "A tactical suit first developed in a joint effort by the defunct IS-ERI and Nanotrasen in 2321 for military operations. \
+		It has a minor slowdown, but offers decent protection and helps the wearer resist shoving in close quarters."
+>>>>>>> Nova/master
 	icon_state = "heavy"
 	inhand_icon_state = "swat_suit"
 	armor_type = /datum/armor/armor_swat
 	strip_delay = 120
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	clothing_flags = THICKMATERIAL
+	clothing_flags = BLOCKS_SHOVE_KNOCKDOWN | THICKMATERIAL
 	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT_OFF
 	heat_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS

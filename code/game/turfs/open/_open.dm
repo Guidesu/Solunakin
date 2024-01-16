@@ -90,7 +90,7 @@
  */
 /turf/open/proc/replace_floor(turf/open/new_floor_path, flags)
 	if (!overfloor_placed && initial(new_floor_path.overfloor_placed))
-		PlaceOnTop(new_floor_path, flags = flags)
+		place_on_top(new_floor_path, flags = flags)
 		return
 	ChangeTurf(new_floor_path, flags = flags)
 
@@ -285,7 +285,7 @@
 	return TRUE
 
 /turf/open/handle_slip(mob/living/carbon/slipper, knockdown_amount, obj/slippable, lube, paralyze_amount, force_drop)
-	if(slipper.movement_type & (FLYING | FLOATING))
+	if(slipper.movement_type & MOVETYPES_NOT_TOUCHING_GROUND)
 		return FALSE
 	if(!has_gravity(src))
 		return FALSE
@@ -302,13 +302,13 @@
 		// Stops sliding
 		slide_distance = 0
 
-	// SKYRAT EDIT START - Akula species
+	// NOVA EDIT START - Akula species
 	if(HAS_TRAIT(slipper, TRAIT_SLIPPERY))
 		if(!(lube & SLIDE_ICE))
 			lube |= SLIDE
 
 		slide_distance = rand(SLIPPERY_MIN, SLIPPERY_MAX)
-	// SKYRAT EDIT END
+	// NOVA EDIT END
 
 	var/obj/buckled_obj
 	if(slipper.buckled)
@@ -408,7 +408,7 @@
 		return
 
 	playsound(src, 'sound/weapons/genhit.ogg', 50, TRUE)
-	var/turf/open/floor/plating/new_plating = PlaceOnTop(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
+	var/turf/open/floor/plating/new_plating = place_on_top(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
 	if(lattice)
 		qdel(lattice)
 	else
@@ -446,4 +446,3 @@
 
 	playsound(src, 'sound/weapons/genhit.ogg', 50, TRUE)
 	new /obj/structure/girder/tram(src)
-

@@ -13,40 +13,11 @@
 	/// Who gave out this medal
 	var/awarder
 
-/// Callback for do_after to check if we can still be pinned
-/obj/item/clothing/accessory/medal/proc/pin_checks(mob/living/pinner, mob/living/carbon/human/pinning_on)
-	if(QDELETED(src) || QDELETED(pinner) || QDELETED(pinning_on))
-		return FALSE
-	if(!pinner.is_holding(src) || !pinner.Adjacent(pinning_on))
-		return FALSE
-	var/obj/item/clothing/under/pinning_on_uniform = pinning_on.w_uniform
-	if(!istype(pinning_on_uniform) || !can_attach_accessory(pinning_on_uniform, pinner))
-		return FALSE
-	return TRUE
-
-/obj/item/clothing/accessory/medal/pre_attack(atom/target, mob/living/user, params)
+/obj/item/clothing/accessory/medal/Initialize(mapload)
 	. = ..()
-	if(.)
-		return
-	if(!ishuman(target) || target == user)
-		return
+	AddComponent(/datum/component/pinnable_accessory, on_pre_pin = CALLBACK(src, PROC_REF(provide_reason)))
 
-	. = TRUE // no attack chain please
-
-	var/mob/living/carbon/human/distinguished = target
-	var/obj/item/clothing/under/distinguished_uniform = distinguished.w_uniform
-	if(!istype(distinguished_uniform))
-		distinguished.balloon_alert(user, "no uniform to pin on!")
-		return .
-	if(!can_attach_accessory(distinguished_uniform, user))
-		// Check handles feedback messages and etc
-		return .
-
-	user.visible_message(
-		span_notice("[user] tries to pin [src] on [distinguished]'s chest."),
-		span_notice("You try to pin [src] on [distinguished]'s chest."),
-	)
-
+<<<<<<< HEAD
 	commendation_message = tgui_input_text(user, "Reason for this commendation? It will be recorded by Symphionia.", "Commendation", max_length = 140)
 	if(!commendation_message || !pin_checks(user, distinguished))
 		return .
@@ -65,6 +36,12 @@
 		)
 
 	return .
+=======
+/// Input a reason for the medal for the round end screen
+/obj/item/clothing/accessory/medal/proc/provide_reason(mob/living/carbon/human/distinguished, mob/user)
+	commendation_message = tgui_input_text(user, "Reason for this commendation? It will be recorded by Nanotrasen.", "Commendation", max_length = 140)
+	return !!commendation_message
+>>>>>>> Nova/master
 
 /obj/item/clothing/accessory/medal/attach(obj/item/clothing/under/attach_to, mob/living/attacher)
 	var/mob/living/distinguished = attach_to.loc

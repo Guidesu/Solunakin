@@ -151,6 +151,7 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 
 	SSpoints_of_interest.make_point_of_interest(src)
 	ADD_TRAIT(src, TRAIT_HEAR_THROUGH_DARKNESS, ref(src))
+	ADD_TRAIT(src, TRAIT_SECURITY_HUD, ref(src))
 
 /mob/dead/observer/get_photo_description(obj/item/camera/camera)
 	if(!invisibility || camera.see_ghosts)
@@ -171,10 +172,10 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 		mind.current.med_hud_set_status()
 
 	GLOB.ghost_images_default -= ghostimage_default
-	QDEL_NULL(ghostimage_default)
+	ghostimage_default = null
 
 	GLOB.ghost_images_simple -= ghostimage_simple
-	QDEL_NULL(ghostimage_simple)
+	ghostimage_simple = null
 
 	updateallghostimages()
 
@@ -304,7 +305,13 @@ Works together with spawning an observer, noted above.
 	ghost.client?.init_verbs()
 	if(!can_reenter_corpse)// Disassociates observer mind from the body mind
 		ghost.mind = null
-	ghost.client?.player_details.time_of_death = ghost.mind?.current ? mind.current.timeofdeath : world.time
+
+	var/recordable_time = world.time
+	var/mob/living/former_mob = ghost.mind?.current
+	if(isliving(former_mob))
+		recordable_time = former_mob.timeofdeath
+
+	ghost.client?.player_details.time_of_death = recordable_time
 	SEND_SIGNAL(src, COMSIG_MOB_GHOSTIZED)
 	return ghost
 
@@ -328,11 +335,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		if(!HAS_TRAIT(src, TRAIT_CORPSELOCKED)) //corpse-locked have to confirm with the alert below
 			ghostize(TRUE)
 			return TRUE
-	// SKYRAT EDIT ADDITION -- Free Ghost Cafe Ghosting
+	// NOVA EDIT ADDITION -- Free Ghost Cafe Ghosting
 	if(HAS_TRAIT(src, TRAIT_FREE_GHOST))
 		ghostize(TRUE) // Can return with TRUE
 		return TRUE
-	// SKYRAT EDIT ADDITION END
+	// NOVA EDIT ADDITION END
 	var/response = tgui_alert(usr, "Are you sure you want to ghost? If you ghost whilst still alive you cannot re-enter your body!", "Confirm Ghost Observe", list("Ghost", "Stay in Body"))
 	if(response != "Ghost")
 		return FALSE//didn't want to ghost after-all
@@ -387,7 +394,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(!mind || QDELETED(mind.current))
 		to_chat(src, span_warning("You have no body."))
 		return
-	if(!can_reenter_corpse && !mind.has_antag_datum(/datum/antagonist/changeling)) //SKYRAT EDIT
+	if(!can_reenter_corpse && !mind.has_antag_datum(/datum/antagonist/changeling)) //NOVA EDIT
 		to_chat(src, span_warning("You cannot re-enter your body."))
 		return
 	if(mind.current.key && mind.current.key[1] != "@") //makes sure we don't accidentally kick any clients
@@ -420,13 +427,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		// Update med huds
 		current_mob.med_hud_set_status()
 		current_mob.log_message("had their player ([key_name(src)]) do-not-resuscitate / DNR", LOG_GAME, color = COLOR_GREEN, log_globally = FALSE)
-		//SKYRAT EDIT ADDITION - DNR TRAIT (Technically this is just to fix ghost-DNR'ing not actually DNR'ing, but it pairs with the trait so)
+		//NOVA EDIT ADDITION - DNR TRAIT (Technically this is just to fix ghost-DNR'ing not actually DNR'ing, but it pairs with the trait so)
 		if(!current_mob.has_quirk(/datum/quirk/dnr))
 			current_mob.add_quirk(/datum/quirk/dnr)
 		var/datum/job/job_to_free = SSjob.GetJob(current_mob.mind.assigned_role.title)
 		if(job_to_free)
 			job_to_free.current_positions = max(0, job_to_free.current_positions - 1)
-		//SKYRAT EDIT ADDITION END - DNR TRAIT
+		//NOVA EDIT ADDITION END - DNR TRAIT
 	log_message("has opted to do-not-resuscitate / DNR from their body ([current_mob])", LOG_GAME, color = COLOR_GREEN)
 
 	// Disassociates observer mind from the body mind
@@ -435,19 +442,19 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	to_chat(src, span_boldnotice("You can no longer be brought back into your body."))
 	return TRUE
 
-/mob/dead/observer/proc/notify_cloning(message, sound, atom/source, flashwindow = TRUE)
+/mob/dead/observer/proc/send_revival_notification(message, sound, atom/source, flashwindow)
 	if(flashwindow)
 		window_flash(client)
 	if(message)
 		to_chat(src, span_ghostalert("[message]"))
 		if(source)
-			var/atom/movable/screen/alert/A = throw_alert("[REF(source)]_notify_cloning", /atom/movable/screen/alert/notify_cloning)
+			var/atom/movable/screen/alert/A = throw_alert("[REF(source)]_revival", /atom/movable/screen/alert/revival)
 			if(A)
 				var/ui_style = client?.prefs?.read_preference(/datum/preference/choiced/ui_style)
-				var/erp_ui_style = client?.prefs?.read_preference(/datum/preference/choiced/ui_style) //SKYRAT EDIT - ADDITION - ERP ICONS FIX
+				var/erp_ui_style = client?.prefs?.read_preference(/datum/preference/choiced/ui_style) //NOVA EDIT - ADDITION - ERP ICONS FIX
 				if(ui_style)
 					A.icon = ui_style2icon(ui_style)
-					A.icon = erp_ui_style2icon(erp_ui_style) //SKYRAT EDIT - ADDITION - ERP ICONS FIX
+					A.icon = erp_ui_style2icon(erp_ui_style) //NOVA EDIT - ADDITION - ERP ICONS FIX
 				A.desc = message
 				var/old_layer = source.layer
 				var/old_plane = source.plane
@@ -756,17 +763,33 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			reenter_corpse()
 			return
 
-		if(href_list["jump"])
-			var/atom/movable/target = locate(href_list["jump"])
-			var/turf/target_turf = get_turf(target)
-			if(target_turf && isturf(target_turf))
-				abstract_move(target_turf)
+		if(href_list["view"])
+			var/atom/target = locate(href_list["view"])
+			observer_view(target)
+			return
 
 		if(href_list["play"])
 			var/atom/movable/target = locate(href_list["play"])
-			if(istype(target) && (target != src))
-				target.attack_ghost(usr)
-				return
+			jump_to_interact(target)
+
+/// We orbit and interact with the target
+/mob/dead/observer/proc/jump_to_interact(atom/target)
+	if(isnull(target) || target == src)
+		return
+
+	ManualFollow(target)
+	target.attack_ghost(usr)
+
+/// We orbit the target or jump if its a turf
+/mob/dead/observer/proc/observer_view(atom/target)
+	if(isnull(target) || target == src)
+		return
+
+	if(isturf(target))
+		abstract_move(target)
+		return
+
+	ManualFollow(target)
 
 //We don't want to update the current var
 //But we will still carry a mind.

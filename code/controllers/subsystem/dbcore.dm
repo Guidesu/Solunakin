@@ -186,10 +186,10 @@ SUBSYSTEM_DEF(dbcore)
 			UNTIL(query.process())
 			queries_active -= query
 
-		// SKYRAT EDIT START - SQL-based logging
+		// NOVA EDIT START - SQL-based logging
 		for(var/table in queued_log_entries_by_table)
-			MassInsert(table, rows = queued_log_entries_by_table[table], duplicate_key = FALSE, ignore_errors = FALSE, delayed = FALSE, warn = FALSE, async = TRUE, special_columns = null)
-		// SKYRAT EDIT END
+			MassInsert(table, rows = queued_log_entries_by_table[table], duplicate_key = FALSE, ignore_errors = FALSE, warn = FALSE, async = TRUE, special_columns = null)
+		// NOVA EDIT END
 
 		var/datum/db_query/query_round_shutdown = SSdbcore.NewQuery(
 			"UPDATE [format_table_name("round")] SET shutdown_datetime = Now(), end_state = :end_state WHERE id = :round_id",
@@ -303,9 +303,9 @@ SUBSYSTEM_DEF(dbcore)
 
 	if(!Connect())
 		return
-	var/datum/db_query/query_round_initialize = SSdbcore.NewQuery(/* SKYRAT EDIT CHANGE - MULTISERVER */
+	var/datum/db_query/query_round_initialize = SSdbcore.NewQuery(/* NOVA EDIT CHANGE - MULTISERVER */
 		"INSERT INTO [format_table_name("round")] (initialize_datetime, server_name, server_ip, server_port) VALUES (Now(), :server_name, INET_ATON(:internet_address), :port)",
-		list("server_name" = CONFIG_GET(string/serversqlname), "internet_address" = world.internet_address || "0", "port" = "[world.port]") // SKYRAT EDIT CHANGE - MULTISERVER
+		list("server_name" = CONFIG_GET(string/serversqlname), "internet_address" = world.internet_address || "0", "port" = "[world.port]") // NOVA EDIT CHANGE - MULTISERVER
 	)
 	query_round_initialize.Execute(async = FALSE)
 	GLOB.round_id = "[query_round_initialize.last_insert_id]"
@@ -404,11 +404,8 @@ The duplicate_key arg can be true to automatically generate this part of the que
 	or set to a string that is appended to the end of the query
 Ignore_errors instructes mysql to continue inserting rows if some of them have errors.
 	the erroneous row(s) aren't inserted and there isn't really any way to know why or why errored
-Delayed insert mode was removed in mysql 7 and only works with MyISAM type tables,
-	It was included because it is still supported in mariadb.
-	It does not work with duplicate_key and the mysql server ignores it in those cases
 */
-/datum/controller/subsystem/dbcore/proc/MassInsert(table, list/rows, duplicate_key = FALSE, ignore_errors = FALSE, delayed = FALSE, warn = FALSE, async = TRUE, special_columns = null)
+/datum/controller/subsystem/dbcore/proc/MassInsert(table, list/rows, duplicate_key = FALSE, ignore_errors = FALSE, warn = FALSE, async = TRUE, special_columns = null)
 	if (!table || !rows || !istype(rows))
 		return
 
@@ -425,8 +422,6 @@ Delayed insert mode was removed in mysql 7 and only works with MyISAM type table
 
 	// Prepare SQL query full of placeholders
 	var/list/query_parts = list("INSERT")
-	if (delayed)
-		query_parts += " DELAYED"
 	if (ignore_errors)
 		query_parts += " IGNORE"
 	query_parts += " INTO "

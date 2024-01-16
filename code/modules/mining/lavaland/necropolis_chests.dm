@@ -55,7 +55,7 @@
 		if(12)
 			new /obj/item/jacobs_ladder(src)
 		if(13)
-			new /obj/item/guardiancreator/miner(src)
+			new /obj/item/guardian_creator/miner(src)
 		if(14)
 			new /obj/item/warp_cube/red(src)
 		if(15)
@@ -127,7 +127,7 @@
 	var/loot = rand(1,2)
 	switch(loot)
 		if(1)
-			new /obj/item/bloodcrawl_bottle(src) //SKYRAT EDIT ORIGINAL : new /obj/item/mayhem(src)
+			new /obj/item/bloodcrawl_bottle(src) //NOVA EDIT ORIGINAL : new /obj/item/mayhem(src)
 		if(2)
 			new /obj/item/soulscythe(src)
 

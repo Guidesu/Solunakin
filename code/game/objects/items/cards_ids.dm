@@ -92,7 +92,7 @@
 	var/holopay_name = "holographic pay stand"
 
 	/// Registered owner's age.
-	var/registered_age = 18 //SKYRAT EDIT - ORIGINAL (13)
+	var/registered_age = 18 //NOVA EDIT - ORIGINAL (13)
 
 	/// The job name registered on the card (for example: Assistant).
 	var/assignment
@@ -419,7 +419,7 @@
 	if(Adjacent(user))
 		var/minor
 		if(registered_name && registered_age && registered_age < AGE_MINOR)
-			minor = " <b>[registered_age]</b>" //SKYRAT EDIT CHANGE
+			minor = " <b>[registered_age]</b>" //NOVA EDIT CHANGE
 		user.visible_message(span_notice("[user] shows you: [icon2html(src, viewers(user))] [src.name][minor]."), span_notice("You show \the [src.name][minor]."))
 	add_fingerprint(user)
 
@@ -441,14 +441,11 @@
 /obj/item/card/id/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
 
-	if(held_item != src)
-		return
-
 	context[SCREENTIP_CONTEXT_LMB] = "Show ID"
 	context[SCREENTIP_CONTEXT_RMB] = "Project pay stand"
 	if(isnull(registered_account) || registered_account.replaceable) //Same check we use when we check if we can assign an account
-		context[SCREENTIP_CONTEXT_ALT_LMB] = "Assign account"
-	else
+		context[SCREENTIP_CONTEXT_ALT_RMB] = "Assign account"
+	if(!registered_account.replaceable || registered_account.account_balance > 0)
 		context[SCREENTIP_CONTEXT_ALT_LMB] = "Withdraw credits"
 	return CONTEXTUAL_SCREENTIP_SET
 
@@ -569,11 +566,11 @@
 		if (money_added)
 			to_chat(user, span_notice("You stuff the contents into the card! They disappear in a puff of bluespace smoke, adding [money_added] worth of credits to the linked account."))
 		return
-	/// SKYRAT EDIT BEGINS - Trim Tokens - Proc defined in modular_skyrat/modules/trim_tokens/code/cards_id.dm
+	/// NOVA EDIT BEGINS - Trim Tokens - Proc defined in modular_nova/modules/trim_tokens/code/cards_id.dm
 	else if(istype(W, /obj/item/trim_token))
 		apply_token(W, user)
 		return
-	/// SKYRAT EDIT ENDS
+	/// NOVA EDIT ENDS
 	else
 		return ..()
 
@@ -654,10 +651,8 @@
 		return FALSE
 	var/list/user_memories = user.mind.memories
 	var/datum/memory/key/account/user_key = user_memories[/datum/memory/key/account]
-	var/user_account = 11111
-	if(!isnull(user_key))
-		user_account = user_key.remembered_id
-	var/new_bank_id = tgui_input_number(user, "Enter the account ID to associate with this card.", "Link Bank Account", user_account, 999999, 111111)
+	var/default_account = (istype(user_key) && user_key.remembered_id) || 11111
+	var/new_bank_id = tgui_input_number(user, "Enter the account ID to associate with this card.", "Link Bank Account", default_account, 999999, 111111)
 	if(!new_bank_id || QDELETED(user) || QDELETED(src) || issilicon(user) || !alt_click_can_use_id(user) || loc != user)
 		return FALSE
 	if(registered_account?.account_id == new_bank_id)
@@ -677,9 +672,6 @@
 
 /obj/item/card/id/AltClick(mob/living/user)
 	if(!alt_click_can_use_id(user))
-		return
-	if(!registered_account || registered_account.replaceable)
-		set_new_account(user)
 		return
 	if(registered_account.account_debt)
 		var/choice = tgui_alert(user, "Choose An Action", "Bank Account", list("Withdraw", "Pay Debt"))
@@ -709,6 +701,14 @@
 	else
 		var/difference = amount_to_remove - registered_account.account_balance
 		registered_account.bank_card_talk(span_warning("ERROR: The linked account requires [difference] more credit\s to perform that withdrawal."), TRUE)
+
+/obj/item/card/id/alt_click_secondary(mob/user)
+	. = ..()
+	if(!alt_click_can_use_id(user))
+		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+	if(!registered_account || registered_account.replaceable)
+		set_new_account(user)
+		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/card/id/proc/pay_debt(user)
 	var/amount_to_pay = tgui_input_number(user, "How much do you want to pay? (Max: [registered_account.account_balance] cr)", "Debt Payment", max_value = min(registered_account.account_balance, registered_account.account_debt))
@@ -1007,7 +1007,7 @@
 	if(istype(old_loc, /obj/item/storage/wallet))
 		UnregisterSignal(old_loc, list(COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_DROPPED))
 
-	if(istype(old_loc, /obj/item/modular_computer/pda))
+	if(istype(old_loc, /obj/item/modular_computer))
 		UnregisterSignal(old_loc, list(COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_DROPPED))
 
 	//New loc
@@ -1015,7 +1015,7 @@
 		RegisterSignal(loc, COMSIG_ITEM_EQUIPPED, PROC_REF(update_intern_status))
 		RegisterSignal(loc, COMSIG_ITEM_DROPPED, PROC_REF(remove_intern_status))
 
-	if(istype(loc, /obj/item/modular_computer/pda))
+	if(istype(loc, /obj/item/modular_computer))
 		RegisterSignal(loc, COMSIG_ITEM_EQUIPPED, PROC_REF(update_intern_status))
 		RegisterSignal(loc, COMSIG_ITEM_DROPPED, PROC_REF(remove_intern_status))
 
@@ -1347,7 +1347,7 @@
 	desc = "A highly advanced chameleon ID card. Touch this card on another ID card or player to choose which accesses to copy. \
 		Has special magnetic properties which force it to the front of wallets."
 	trim = /datum/id_trim/chameleon
-	wildcard_slots = WILDCARD_LIMIT_CHAMELEON_PLUS // SKYRAT EDIT - Original WILDCARD_LIMIT_CHAMELEON
+	wildcard_slots = WILDCARD_LIMIT_CHAMELEON_PLUS // NOVA EDIT - Original WILDCARD_LIMIT_CHAMELEON
 	actions_types = list(/datum/action/item_action/chameleon/change/id, /datum/action/item_action/chameleon/change/id_trim)
 
 	/// Have we set a custom name and job assignment, or will we use what we're given when we chameleon change?

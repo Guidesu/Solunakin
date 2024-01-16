@@ -413,14 +413,14 @@
 			target.color = rgb(0, 128, 0)
 			animate(target, color = old_color, time = 1 SECONDS, easing = EASE_IN)
 
-		// SKYRAT EDIT START
+		// NOVA EDIT START
 		if(IS_CLOCK(target))
 			to_chat(user, span_warning("Some force greater than you intervenes! [target] is protected by the heretic Ratvar!"))
 			to_chat(target, span_warning("You are protected by your faith to Ratvar!"))
 			var/old_color = target.color
 			target.color = rgb(190, 135, 0)
 			animate(target, color = old_color, time = 1 SECONDS, easing = EASE_IN)
-		// SKYRAT EDIT END
+		// NOVA EDIT END
 
 		else if(target.can_block_magic())
 			to_chat(user, span_warning("The spell had no effect!"))
@@ -749,15 +749,15 @@
 					to_chat(user,span_warning("[human_bloodbag.p_Theyre()] missing too much blood - you cannot drain [human_bloodbag.p_them()] further!"))
 					return
 		if(isconstruct(target))
-			var/mob/living/simple_animal/construct_thing = target
+			var/mob/living/basic/construct/construct_thing = target
 			var/missing_health = construct_thing.maxHealth - construct_thing.health
 			if(missing_health)
 				if(uses > missing_health)
-					construct_thing.adjustHealth(-missing_health)
+					construct_thing.adjust_health(-missing_health)
 					construct_thing.visible_message(span_warning("[construct_thing] is fully healed by [user]'s blood magic!"))
 					uses -= missing_health
 				else
-					construct_thing.adjustHealth(-uses)
+					construct_thing.adjust_health(-uses)
 					construct_thing.visible_message(span_warning("[construct_thing] is partially healed by [user]'s blood magic!"))
 					uses = 0
 				playsound(get_turf(construct_thing), 'sound/magic/staff_healing.ogg', 25)

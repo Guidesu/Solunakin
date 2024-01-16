@@ -1,4 +1,4 @@
-/* SKYRAT EDIT REMOVAL - Moved to modular_skyrat\master_files\code\modules\surgery\bodyparts\species_parts\moth_bodyparts.dm
+/* NOVA EDIT REMOVAL - Moved to modular_nova\master_files\code\modules\surgery\bodyparts\species_parts\moth_bodyparts.dm
 /obj/item/bodypart/head/moth
 	icon = 'icons/mob/human/species/moth/bodyparts.dmi'
 	icon_state = "moth_head"
@@ -15,6 +15,7 @@
 	limb_id = SPECIES_MOTH
 	is_dimorphic = TRUE
 	should_draw_greyscale = FALSE
+	wing_types = list(/obj/item/organ/external/wings/functional/moth/megamoth, /obj/item/organ/external/wings/functional/moth/mothra)
 
 /obj/item/bodypart/arm/left/moth
 	icon = 'icons/mob/human/species/moth/bodyparts.dmi'
@@ -23,6 +24,7 @@
 	limb_id = SPECIES_MOTH
 	should_draw_greyscale = FALSE
 	unarmed_attack_verb = "slash"
+	grappled_attack_verb = "lacerate"
 	unarmed_attack_effect = ATTACK_EFFECT_CLAW
 	unarmed_attack_sound = 'sound/weapons/slash.ogg'
 	unarmed_miss_sound = 'sound/weapons/slashmiss.ogg'
@@ -34,6 +36,7 @@
 	limb_id = SPECIES_MOTH
 	should_draw_greyscale = FALSE
 	unarmed_attack_verb = "slash"
+	grappled_attack_verb = "lacerate"
 	unarmed_attack_effect = ATTACK_EFFECT_CLAW
 	unarmed_attack_sound = 'sound/weapons/slash.ogg'
 	unarmed_miss_sound = 'sound/weapons/slashmiss.ogg'
@@ -51,4 +54,4 @@
 	icon_static = 'icons/mob/human/species/moth/bodyparts.dmi'
 	limb_id = SPECIES_MOTH
 	should_draw_greyscale = FALSE
-*/ // SKYRAT EDIT END
+*/ // NOVA EDIT END

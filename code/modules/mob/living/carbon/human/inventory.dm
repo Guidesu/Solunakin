@@ -179,12 +179,12 @@
 				return
 
 			gloves = equipping
-			//SKYRAT EDIT ADDITION - ERP UPDATE
+			//NOVA EDIT ADDITION - ERP UPDATE
 			if(gloves.breakouttime)
-				ADD_TRAIT(src, TRAIT_RESTRAINED, GLOVES_TRAIT)
+				ADD_TRAIT(src, TRAIT_RESTRAINED, TRAIT_GLOVES)
 				stop_pulling()
 				update_mob_action_buttons()
-			//SKYRAT EDIT ADDITION END
+			//NOVA EDIT ADDITION END
 			update_worn_gloves()
 		if(ITEM_SLOT_FEET)
 			if(shoes)
@@ -257,33 +257,33 @@
 			if(I.flags_inv & HIDEJUMPSUIT)
 				update_worn_undersuit()
 
-			// SKYRAT EDIT ADDITION START - ERP Overlays
+			// NOVA EDIT ADDITION START - ERP Overlays
 			if(I.flags_inv & HIDESEXTOY)
 				update_inv_lewd()
-			// SKYRAT EDIT ADDITION END
+			// NOVA EDIT ADDITION END
 
 			update_worn_oversuit()
 	else if(I == w_uniform)
-		if(invdrop)
-			if(r_store)
-				dropItemToGround(r_store, TRUE) //Again, makes sense for pockets to drop.
-			if(l_store)
-				dropItemToGround(l_store, TRUE)
-			if(wear_id)
-				dropItemToGround(wear_id)
-			if(belt)
-				dropItemToGround(belt)
 		w_uniform = null
 		update_suit_sensors()
 		if(!QDELETED(src))
 			update_worn_undersuit()
+		if(invdrop)
+			if(r_store && !can_equip(r_store, ITEM_SLOT_RPOCKET, TRUE, ignore_equipped = TRUE))
+				dropItemToGround(r_store, TRUE) //Again, makes sense for pockets to drop.
+			if(l_store && !can_equip(l_store, ITEM_SLOT_LPOCKET, TRUE, ignore_equipped = TRUE))
+				dropItemToGround(l_store, TRUE)
+			if(wear_id && !can_equip(wear_id, ITEM_SLOT_ID, TRUE, ignore_equipped = TRUE))
+				dropItemToGround(wear_id)
+			if(belt && !can_equip(belt, ITEM_SLOT_BELT, TRUE, ignore_equipped = TRUE))
+				dropItemToGround(belt)
 	else if(I == gloves)
-		//SKYRAT EDIT ADDITION - ERP UPDATE
+		//NOVA EDIT ADDITION - ERP UPDATE
 		if(gloves.breakouttime) //when unequipping a straightjacket
-			REMOVE_TRAIT(src, TRAIT_RESTRAINED, GLOVES_TRAIT)
+			REMOVE_TRAIT(src, TRAIT_RESTRAINED, TRAIT_GLOVES)
 			drop_all_held_items() //suit is restraining
 			update_mob_action_buttons() //certain action buttons may be usable again.
-		//SKYRAT EDIT ADDITION END
+		//NOVA EDIT ADDITION END
 		gloves = null
 		if(!QDELETED(src))
 			update_worn_gloves()

@@ -14,6 +14,8 @@
 	var/key = ""
 	/// This will also call the emote.
 	var/key_third_person = ""
+	/// Needed for more user-friendly emote names, so emotes with keys like "aflap" will show as "flap angry". Defaulted to key.
+	var/name = ""
 	/// Message displayed when emote is used.
 	var/message = ""
 	/// Message displayed if the user is a mime.
@@ -58,12 +60,12 @@
 	var/can_message_change = FALSE
 	/// How long is the cooldown on the audio of the emote, if it has one?
 	var/audio_cooldown = 2 SECONDS
-	//SKYRAT EDIT ADDITION BEGIN - EMOTES
+	//NOVA EDIT ADDITION BEGIN - EMOTES
 	var/sound_volume = 25 //Emote volume
 	var/list/allowed_species
 	/// Are silicons explicitely allowed to use this emote?
 	var/silicon_allowed = FALSE
-	//SKYRAT EDIT ADDITION END
+	//NOVA EDIT ADDITION END
 
 /datum/emote/New()
 	switch(mob_type_allowed_typecache)
@@ -76,6 +78,9 @@
 
 	mob_type_blacklist_typecache = typecacheof(mob_type_blacklist_typecache)
 	mob_type_ignore_stat_typecache = typecacheof(mob_type_ignore_stat_typecache)
+
+	if(!name)
+		name = key
 
 /**
  * Handles the modifications and execution of emotes.
@@ -104,18 +109,21 @@
 		return
 
 	user.log_message(msg, LOG_EMOTE)
-	// SKYRAT EDIT START - Better emotes - Original: var/dchatmsg = "<b>[user]</b> [msg]"
+	// NOVA EDIT START - Better emotes - Original: var/dchatmsg = "<b>[user]</b> [msg]"
 	var/space = should_have_space_before_emote(html_decode(msg)[1]) ? " " : ""
 	var/dchatmsg = "<b>[user]</b>[space][msg]"
-	// SKYRAT EDIT END
+	// NOVA EDIT END
 
 	var/tmp_sound = get_sound(user)
-	if(tmp_sound && should_play_sound(user, intentional) && !TIMER_COOLDOWN_CHECK(user, type))
+	if(tmp_sound && should_play_sound(user, intentional) && TIMER_COOLDOWN_FINISHED(user, type))
 		TIMER_COOLDOWN_START(user, type, audio_cooldown)
-		//SKYRAT EDIT CHANGE BEGIN
-		//playsound(user, tmp_sound, 50, vary) - SKYRAT EDIT - ORIGINAL
-		playsound(user, tmp_sound, sound_volume, vary)
-		//SKYRAT EDIT CHANGE END
+		//NOVA EDIT CHANGE BEGIN
+		//playsound(user, tmp_sound, 50, vary) - NOVA EDIT - ORIGINAL
+		if(istype(src, /datum/emote/living/lewd))
+			play_lewd_sound(user, tmp_sound, sound_volume, vary, pref_to_check = /datum/preference/toggle/erp/sounds)
+		else
+			playsound(user, tmp_sound, sound_volume, vary)
+		//NOVA EDIT CHANGE END
 
 	var/user_turf = get_turf(user)
 	if (user.client)
@@ -123,28 +131,31 @@
 			if(!ghost.client || isnewplayer(ghost))
 				continue
 			if(get_chat_toggles(ghost.client) & CHAT_GHOSTSIGHT && !(ghost in viewers(user_turf, null)))
-				ghost.show_message("<span class='emote'>[FOLLOW_LINK(ghost, user)] [dchatmsg]</span>")
+				if(pref_check_emote(ghost)) // NOVA EDIT ADDITION - Pref checked emotes
+					ghost.show_message("<span class='emote'>[FOLLOW_LINK(ghost, user)] [dchatmsg]</span>") // NOVA EDIT CHANGE - Indented
 	if(emote_type & (EMOTE_AUDIBLE | EMOTE_VISIBLE)) //emote is audible and visible
-		user.audible_message(msg, deaf_message = "<span class='emote'>You see how <b>[user]</b>[space][msg]</span>", audible_message_flags = EMOTE_MESSAGE, separation = space) // SKYRAT EDIT - Better emotes - ORIGINAL: user.audible_message(msg, deaf_message = "<span class='emote'>You see how <b>[user]</b> [msg]</span>", audible_message_flags = EMOTE_MESSAGE)
+		user.audible_message(msg, deaf_message = "<span class='emote'>You see how <b>[user]</b>[space][msg]</span>", audible_message_flags = EMOTE_MESSAGE, separation = space, pref_to_check = pref_to_check) // NOVA EDIT - Better emotes - ORIGINAL: user.audible_message(msg, deaf_message = "<span class='emote'>You see how <b>[user]</b> [msg]</span>", audible_message_flags = EMOTE_MESSAGE)
 	else if(emote_type & EMOTE_VISIBLE)	//emote is only visible
-		user.visible_message(msg, visible_message_flags = EMOTE_MESSAGE, separation = space) // SKYRAT EDIT - Better emotes - ORIGINAL: user.visible_message(msg, visible_message_flags = EMOTE_MESSAGE)
+		user.visible_message(msg, visible_message_flags = EMOTE_MESSAGE, separation = space, pref_to_check = pref_to_check) // NOVA EDIT - Better emotes - ORIGINAL: user.visible_message(msg, visible_message_flags = EMOTE_MESSAGE)
 	if(emote_type & EMOTE_IMPORTANT)
 		for(var/mob/living/viewer in viewers())
 			if(viewer.is_blind() && !viewer.can_hear())
-				to_chat(viewer, msg)
+				if(pref_check_emote(viewer)) // NOVA EDIT ADDITION - Pref checked emotes
+					to_chat(viewer, msg) // NOVA EDIT CHANGE - Indented
 
-	// SKYRAT EDIT -- BEGIN -- ADDITION -- AI QOL - RELAY EMOTES OVER HOLOPADS
+	// NOVA EDIT -- BEGIN -- ADDITION -- AI QOL - RELAY EMOTES OVER HOLOPADS
 	var/obj/effect/overlay/holo_pad_hologram/hologram = GLOB.hologram_impersonators[user]
 	if(hologram)
 		if(emote_type & (EMOTE_AUDIBLE | EMOTE_VISIBLE))
-			hologram.audible_message(msg, deaf_message = span_emote("You see how <b>[user]</b> [msg]"), audible_message_flags = EMOTE_MESSAGE)
+			hologram.audible_message(msg, deaf_message = span_emote("You see how <b>[user]</b> [msg]"), audible_message_flags = EMOTE_MESSAGE, pref_to_check = pref_to_check)
 		else if(emote_type & EMOTE_VISIBLE)
-			hologram.visible_message(msg, visible_message_flags = EMOTE_MESSAGE)
+			hologram.visible_message(msg, visible_message_flags = EMOTE_MESSAGE, pref_to_check = pref_to_check)
 		if(emote_type & EMOTE_IMPORTANT)
 			for(var/mob/living/viewer in viewers(world.view, hologram))
 				if(viewer.is_blind() && !viewer.can_hear())
-					to_chat(viewer, msg)
-	// SKYRAT EDIT -- END
+					if(pref_check_emote(viewer))
+						to_chat(viewer, msg)
+	// NOVA EDIT -- END
 
 /**
  * For handling emote cooldown, return true to allow the emote to happen.
@@ -158,8 +169,8 @@
 /datum/emote/proc/check_cooldown(mob/user, intentional)
 	if(!intentional)
 		return TRUE
-	//SKYRAT EDIT CHANGE BEGIN - EMOTES - GLOBAL COOLDOWN
-	//if(user.emotes_used && user.emotes_used[src] + cooldown > world.time) - SKYRAT EDIT - ORIGINAL
+	//NOVA EDIT CHANGE BEGIN - EMOTES - GLOBAL COOLDOWN
+	//if(user.emotes_used && user.emotes_used[src] + cooldown > world.time) - NOVA EDIT - ORIGINAL
 	if(user.nextsoundemote > world.time)
 		var/datum/emote/default_emote = /datum/emote
 		if(cooldown > initial(default_emote.cooldown)) // only worry about longer-than-normal emotes
@@ -167,9 +178,9 @@
 		return FALSE
 	//if(!user.emotes_used)
 	//	user.emotes_used = list()
-	//user.emotes_used[src] = world.time - SKYRAT EDIT - ORIGINAL
+	//user.emotes_used[src] = world.time - NOVA EDIT - ORIGINAL
 	user.nextsoundemote = world.time + cooldown
-	//SKYRAT EDIT CHANGE END
+	//NOVA EDIT CHANGE END
 	return TRUE
 
 /**
@@ -287,7 +298,7 @@
 	if(HAS_TRAIT(user, TRAIT_EMOTEMUTE))
 		return FALSE
 
-	//SKYRAT EDIT BEGIN
+	//NOVA EDIT BEGIN
 	if(allowed_species)
 		var/check = FALSE
 		if(silicon_allowed && issilicon(user))
@@ -297,7 +308,7 @@
 			if(sender.dna.species.type in allowed_species)
 				check = TRUE
 		return check
-	//SKYRAT EDIT END
+	//NOVA EDIT END
 
 	return TRUE
 

@@ -16,7 +16,7 @@
 	resistance_flags = FLAMMABLE
 	var/mopcount = 0
 	///Maximum volume of reagents it can hold.
-	var/max_reagent_volume = 50 // SKYRAT EDIT - ORIGINAL: 15
+	var/max_reagent_volume = 50 // NOVA EDIT - ORIGINAL: 15
 	var/mopspeed = 1.5 SECONDS
 	force_string = "robust... against germs"
 	var/insertable = TRUE
@@ -50,7 +50,7 @@
 	if(reagents.total_volume < 0.1)
 		cleaner.balloon_alert(cleaner, "mop is dry!")
 		return DO_NOT_CLEAN
-	return reagents.has_chemical_flag(REAGENT_CLEANS, 1)
+	return reagents.has_reagent(amount = 1, chemical_flags = REAGENT_CLEANS)
 
 /**
  * Applies reagents to the cleaned floor and removes them from the mop.
@@ -60,7 +60,9 @@
  * * cleaned_turf the turf that is being cleaned
  * * cleaner the mob that is doing the cleaning
  */
-/obj/item/mop/proc/apply_reagents(datum/cleaning_source, turf/cleaned_turf, mob/living/cleaner)
+/obj/item/mop/proc/apply_reagents(datum/cleaning_source, turf/cleaned_turf, mob/living/cleaner, clean_succeeded)
+	if(!clean_succeeded)
+		return
 	reagents.expose(cleaned_turf, TOUCH, 10) //Needed for proper floor wetting.
 	var/val2remove = 1
 	if(cleaner?.mind)
@@ -72,9 +74,9 @@
 	ADD_TRAIT(src, TRAIT_NODROP, CYBORG_ITEM_TRAIT)
 
 /obj/item/mop/advanced
-	desc = "The most advanced tool in a custodian's arsenal, complete with a condenser for self-wetting! Just think of all the viscera you will clean up with this! Due to the self-wetting technology, it proves very inefficient for cleaning up spills." //SKYRAT EDIT
+	desc = "The most advanced tool in a custodian's arsenal, complete with a condenser for self-wetting! Just think of all the viscera you will clean up with this! Due to the self-wetting technology, it proves very inefficient for cleaning up spills." //NOVA EDIT
 	name = "advanced mop"
-	max_reagent_volume = 100 // SKYRAT EDIT - ORIGINAL: 10
+	max_reagent_volume = 100 // NOVA EDIT - ORIGINAL: 10
 	icon_state = "advmop"
 	inhand_icon_state = "advmop"
 	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'

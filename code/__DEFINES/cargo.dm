@@ -53,8 +53,10 @@
 /// Universal Scanner mode for using the price tagger.
 #define SCAN_PRICE_TAG 3
 
-GLOBAL_LIST_EMPTY(supplypod_loading_bays)
+///Used by coupons to define that they're cursed
+#define COUPON_OMEN "omen"
 
+<<<<<<< HEAD
 GLOBAL_LIST_INIT(podstyles, list(\
 	list(POD_SHAPE_NORML, "pod",         TRUE, "default", "yellow",   RUBBLE_NORMAL, "supply pod",     "A Symphionia supply drop pod."),\
 	list(POD_SHAPE_NORML, "advpod",      TRUE, "bluespace", "blue",     RUBBLE_NORMAL, "bluespace supply pod" ,     "A Symphionia Bluespace supply pod. Teleports back to CentCom after delivery."),\
@@ -71,3 +73,13 @@ GLOBAL_LIST_INIT(podstyles, list(\
 	list(POD_SHAPE_OTHER, "gondola",     FALSE, FALSE, FALSE,   RUBBLE_NONE,     "gondola",     "The silent walker. This one seems to be part of a delivery agency."),\
 	list(POD_SHAPE_OTHER, FALSE,         FALSE,    FALSE,            FALSE,   RUBBLE_NONE,         FALSE,      FALSE,      "rl_click", "give_po")\
 ))
+=======
+///Discount categories for coupons. This one is for anything that isn't discountable.
+#define SUPPLY_PACK_NOT_DISCOUNTABLE null
+///Discount category for the standard stuff, mostly goodies.
+#define SUPPLY_PACK_STD_DISCOUNTABLE "standard_discount"
+///Discount category for stuff that's mostly niche and/or that might be useful.
+#define SUPPLY_PACK_UNCOMMON_DISCOUNTABLE "uncommon_discount"
+///Discount category for the silly, overpriced, joke content, sometimes useful or plain bad.
+#define SUPPLY_PACK_RARE_DISCOUNTABLE "rare_discount"
+>>>>>>> Nova/master
