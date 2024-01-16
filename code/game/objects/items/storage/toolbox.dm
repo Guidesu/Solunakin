@@ -6,7 +6,7 @@
 	inhand_icon_state = "toolbox_default"
 	lefthand_file = 'icons/mob/inhands/equipment/toolbox_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/toolbox_righthand.dmi'
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	force = 12
 	throwforce = 12
 	throw_speed = 2
@@ -162,19 +162,14 @@
 		new_cable_three.set_cable_color(pickedcolor)
 
 /obj/item/storage/toolbox/syndicate
-	name = "tactical toolbox" //NOVA EDIT
+	name = "tactical toolbox" //SKYRAT EDIT
 	icon_state = "syndicate"
 	inhand_icon_state = "toolbox_syndi"
 	force = 15
 	throwforce = 18
 	material_flags = NONE
-<<<<<<< HEAD
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // Skyrat edit
 	special_desc = "A toolbox manufactured by the Symphionia containing extra tactical tools. Made of more robust materials than the average toolbox." // Skyrat edit
-=======
-	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // NOVA EDIT
-	special_desc = "A toolbox manufactured by the Syndicate containing extra tactical tools. Made of more robust materials than the average toolbox." // NOVA EDIT
->>>>>>> Nova/master
 
 /obj/item/storage/toolbox/syndicate/Initialize(mapload)
 	. = ..()
@@ -381,7 +376,7 @@
 
 /obj/item/storage/toolbox/guncase/revolver
 	name = "revolver gun case"
-	weapon_to_spawn = /obj/item/gun/ballistic/revolver/syndicate/nuclear
+	weapon_to_spawn = /obj/item/gun/ballistic/revolver/syndicate
 	extra_to_spawn = /obj/item/ammo_box/a357
 
 /obj/item/storage/toolbox/guncase/sword_and_board
@@ -423,7 +418,7 @@
 	dog_fashion = null
 
 /obj/item/storage/toolbox/guncase/doublesword
-	name = "double-bladed energy sword weapon case"
+	name = "double-energy sword weapon case"
 	weapon_to_spawn = /obj/item/dualsaber
 	extra_to_spawn = /obj/item/soap/syndie
 

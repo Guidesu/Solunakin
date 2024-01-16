@@ -1381,6 +1381,7 @@
 /obj/machinery/space_heater,
 /obj/effect/decal/remains/robot,
 /obj/structure/sign/warning/fire/directional/north,
+/obj/machinery/space_heater,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/awaymission/cabin)
@@ -1639,7 +1640,7 @@
 	},
 /area/awaymission/cabin/caves/sovietcave)
 "is" = (
-/obj/structure/closet/secure_closet/freezer/fridge/open,
+/obj/structure/closet/secure_closet/freezer/kitchen,
 /obj/item/reagent_containers/condiment/enzyme,
 /turf/open/floor/iron/freezer,
 /area/awaymission/cabin)
@@ -4459,8 +4460,8 @@
 /obj/structure/signpost/salvation{
 	density = 0;
 	desc = "An intercomm. Someone seems to be on the other end. I should use it.";
-	icon = 'icons/obj/machines/wallmounts.dmi';
-	icon_state = "intercom_prison";
+	icon = 'icons/obj/radio.dmi';
+	icon_state = "intercom";
 	max_integrity = 99999;
 	name = "\proper Fun Jail intercom";
 	pixel_y = 32;

@@ -6,7 +6,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	vis_flags = VIS_INHERIT_ID // Important for interaction with and visualization of openspace.
 	luminosity = 1
 	light_height = LIGHTING_HEIGHT_FLOOR
-
+	
 	///what /mob/oranges_ear instance is already assigned to us as there should only ever be one.
 	///used for guaranteeing there is only one oranges_ear per turf when assigned, speeds up view() iteration
 	var/mob/oranges_ear/assigned_oranges_ear
@@ -600,7 +600,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	. = ..()
 	if((acidpwr <= 0) || (acid_volume <= 0))
 		return FALSE
-	if(QDELETED(src)) //NOVA EDIT: fix createanddestroy
+	if(QDELETED(src)) //skyrat edit: fix createanddestroy
 		return FALSE
 	AddComponent(/datum/component/acid, acidpwr, acid_volume, GLOB.acid_overlay)
 
@@ -618,7 +618,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	AddElement(/datum/element/rust)
 
 /turf/handle_fall(mob/faller)
-	SEND_SIGNAL(src, COMSIG_TURF_MOB_FALL, faller) //NOVA EDIT ADDITION
+	SEND_SIGNAL(src, COMSIG_TURF_MOB_FALL, faller) //SKYRAT EDIT ADDITION
 	if(has_gravity(src))
 		playsound(src, SFX_BODYFALL, 50, TRUE)
 	faller.drop_all_held_items()
@@ -756,7 +756,3 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	explosive_resistance -= get_explosive_block()
 	inherent_explosive_resistance = explosion_block
 	explosive_resistance += get_explosive_block()
-
-/// Returns whether it is safe for an atom to move across this turf
-/turf/proc/can_cross_safely(atom/movable/crossing)
-	return TRUE

@@ -18,7 +18,7 @@
 	actions_types = list(
 		/datum/action/item_action/mod/deploy,
 		/datum/action/item_action/mod/activate,
-		/datum/action/item_action/mod/sprite_accessories, // NOVA EDIT - Hide mutant parts action
+		/datum/action/item_action/mod/sprite_accessories, // SKYRAT EDIT - Hide mutant parts action
 		/datum/action/item_action/mod/panel,
 		/datum/action/item_action/mod/module,
 		/datum/action/item_action/mod/deploy/ai,
@@ -222,7 +222,7 @@
 		else
 			. += span_notice("You could use a <b>MOD core</b> on it to install one.")
 		if(isnull(ai_assistant))
-			. += span_notice("You could install a pAI with a <b>pAI card</b>.") // NOVA EDIT CHANGE - ORIGINAL: . += span_notice("You could install an AI or pAI using their <b>storage card</b>.")
+			. += span_notice("You could install a pAI with a <b>pAI card</b>.") // SKYRAT EDIT CHANGE - ORIGINAL: . += span_notice("You could install an AI or pAI using their <b>storage card</b>.")
 		else if(isAI(ai_assistant))
 			. += span_notice("You could remove [ai_assistant] with an <b>intellicard</b>.")
 	. += span_notice("You could copy/set link frequency with a <b>multitool</b>.")
@@ -271,9 +271,9 @@
 
 // Grant pinned actions to pin owners, gives AI pinned actions to the AI and not the wearer
 /obj/item/mod/control/grant_action_to_bearer(datum/action/action)
-	if (!istype(action, /datum/action/item_action/mod/pinnable))
+	if (!istype(action, /datum/action/item_action/mod/pinned_module))
 		return ..()
-	var/datum/action/item_action/mod/pinnable/pinned = action
+	var/datum/action/item_action/mod/pinned_module/pinned = action
 	give_item_action(action, pinned.pinner, slot_flags)
 
 /obj/item/mod/control/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change = TRUE)
@@ -300,7 +300,7 @@
 			playsound(src, 'sound/machines/scanbuzz.ogg', 25, FALSE, SILENCED_SOUND_EXTRARANGE)
 			return
 
-	// NOVA EDIT ADDITION START - Can't remove your MODsuit from your back when it's still active (as it can cause runtimes and even the MODsuit control unit to delete itself)
+	// SKYRAT EDIT ADDITION START - Can't remove your MODsuit from your back when it's still active (as it can cause runtimes and even the MODsuit control unit to delete itself)
 	if(active)
 		if(!wearer.incapacitated())
 			balloon_alert(wearer, "deactivate first!")
@@ -700,14 +700,14 @@
 		part.visor_flags_cover = category[SEALED_COVER] || NONE
 		part.alternate_worn_layer = category[UNSEALED_LAYER]
 		mod_parts[part] = part.alternate_worn_layer
-		/* NOVA EDIT START - All MODsuit parts can be worn as overslots.
+		/* SKYRAT EDIT START - All MODsuit parts can be worn as overslots.
 		if(!category[CAN_OVERSLOT])
 			if(overslotting_parts[part])
 				var/obj/item/overslot = overslotting_parts[part]
 				overslot.forceMove(drop_location())
 			overslotting_parts -= part
 			continue
-		*/ // NOVA EDIT END
+		*/ // SKYRAT EDIT END
 		overslotting_parts |= part
 	wearer?.regenerate_icons()
 
@@ -774,11 +774,3 @@
 	update_speed()
 	qdel(speed_potion)
 	return SPEED_POTION_STOP
-
-/// Disables the mod link frequency attached to this unit.
-/obj/item/mod/control/proc/disable_modlink()
-	if(isnull(mod_link))
-		return
-
-	mod_link.end_call()
-	mod_link.frequency = null

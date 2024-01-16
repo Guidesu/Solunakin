@@ -70,7 +70,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	hitsound = 'sound/weapons/bladeslice.ogg'
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
 	force = 40
 	throwforce = 10
@@ -99,11 +99,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	user.visible_message(span_suicide("[user] is falling on [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return BRUTELOSS
 
-/obj/item/claymore/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK, damage_type = BRUTE)
-	if(attack_type == PROJECTILE_ATTACK || attack_type == LEAP_ATTACK)
-		final_block_chance = 0 //Don't bring a sword to a gunfight, and also you aren't going to really block someone full body tackling you with a sword
-	return ..()
-
 //statistically similar to e-cutlasses
 /obj/item/claymore/cutlass
 	name = "cutlass"
@@ -118,24 +113,9 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	throw_range = 5
 	armour_penetration = 35
 
-/obj/item/claymore/carrot
-	name = "carrot sword"
-	desc = "A full-sized carrot sword. Definitely \not\ good for the eyes, not anymore."
-	icon_state = "carrot_sword"
-	inhand_icon_state = "carrot_sword"
-	worn_icon_state = "carrot_sword"
-	flags_1 = NONE
-	force = 19
-	throwforce = 7
-	throw_speed = 3
-	throw_range = 7
-	armour_penetration = 5
-	block_chance = 10
-	resistance_flags = NONE
-
 /obj/item/claymore/highlander //ALL COMMENTS MADE REGARDING THIS SWORD MUST BE MADE IN ALL CAPS
 	desc = "<b><i>THERE CAN BE ONLY ONE, AND IT WILL BE YOU!!!</i></b>\nActivate it in your hand to point to the nearest victim."
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	item_flags = DROPDEL //WOW BRO YOU LOST AN ARM, GUESS WHAT YOU DONT GET YOUR SWORD ANYMORE //I CANT BELIEVE SPOOKYDONUT WOULD BREAK THE REQUIREMENTS
 	slot_flags = null
 	block_chance = 0 //RNG WON'T HELP YOU NOW, PANSY
@@ -161,7 +141,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 /obj/item/claymore/highlander/process()
 	if(ishuman(loc))
 		var/mob/living/carbon/human/holder = loc
-		layer = ABOVE_ALL_MOB_LAYER //NO HIDING BEHIND PLANTS FOR YOU, DICKWEED (HA GET IT, BECAUSE WEEDS ARE PLANTS)
+		SET_PLANE_EXPLICIT(holder, GAME_PLANE_UPPER_FOV_HIDDEN, src) //NO HIDING BEHIND PLANTS FOR YOU, DICKWEED (HA GET IT, BECAUSE WEEDS ARE PLANTS)
 		ADD_TRAIT(holder, TRAIT_NOBLOOD, HIGHLANDER_TRAIT) //AND WE WON'T BLEED OUT LIKE COWARDS
 	else
 		if(!(flags_1 & ADMIN_SPAWNED_1))
@@ -285,7 +265,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		return INITIALIZE_HINT_QDEL
 
 /obj/item/claymore/highlander/robot/process()
-	layer = ABOVE_ALL_MOB_LAYER
+	SET_PLANE_IMPLICIT(loc, GAME_PLANE_UPPER_FOV_HIDDEN)
 
 /obj/item/katana
 	name = "katana"
@@ -296,7 +276,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	worn_icon_state = "katana"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
 	force = 40
 	throwforce = 10
@@ -363,7 +343,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	desc = "A sharp, concealable, spring-loaded knife."
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	force = 3
 	w_class = WEIGHT_CLASS_SMALL
 	throwforce = 5
@@ -418,7 +398,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 /obj/item/phone
 	name = "red phone"
 	desc = "Should anything ever go wrong..."
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = 'icons/obj/device.dmi'
 	icon_state = "red_phone"
 	force = 3
 	throwforce = 2

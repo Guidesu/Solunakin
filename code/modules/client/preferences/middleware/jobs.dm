@@ -1,9 +1,9 @@
 /datum/preference_middleware/jobs
 	action_delegations = list(
 		"set_job_preference" = PROC_REF(set_job_preference),
-		// NOVA EDIT
+		// SKYRAT EDIT
 		"set_job_title" = PROC_REF(set_job_title),
-		// NOVA EDIT END
+		// SKYRAT EDIT END
 	)
 
 /datum/preference_middleware/jobs/proc/set_job_preference(list/params, mob/user)
@@ -28,7 +28,7 @@
 
 	return TRUE
 
-// NOVA EDIT
+// SKYRAT EDIT
 /datum/preference_middleware/jobs/proc/set_job_title(list/params, mob/user)
 	var/job_title = params["job"]
 	var/new_job_title = params["new_title"]
@@ -44,7 +44,7 @@
 	preferences.alt_job_titles[job_title] = new_job_title
 
 	return TRUE
-// NOVA EDIT END
+// SKYRAT EDIT END
 
 /datum/preference_middleware/jobs/get_constant_data()
 	var/list/data = list()
@@ -73,8 +73,8 @@
 		jobs[job.title] = list(
 			"description" = job.description,
 			"department" = department_name,
-			"veteran" = job.veteran_only, // NOVA EDIT
-			"alt_titles" = job.alt_titles, // NOVA EDIT
+			"veteran" = job.veteran_only, // SKYRAT EDIT
+			"alt_titles" = job.alt_titles, // SKYRAT EDIT
 		)
 
 	data["departments"] = departments
@@ -84,24 +84,24 @@
 
 /datum/preference_middleware/jobs/get_ui_data(mob/user)
 	var/list/data = list()
-	// NOVA EDIT
+	// SKYRAT EDIT
 	if(isnull(preferences.alt_job_titles))
 		preferences.alt_job_titles = list()
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 	data["job_preferences"] = preferences.job_preferences
-	// NOVA EDIT
+	// SKYRAT EDIT
 	data["job_alt_titles"] = preferences.alt_job_titles
 	data["species_restricted_jobs"] = get_unavailable_jobs_for_species()
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 
 	return data
 
 /datum/preference_middleware/jobs/get_ui_static_data(mob/user)
 	var/list/data = list()
-	// NOVA EDIT
+	// SKYRAT EDIT
 	if(SSplayer_ranks.is_veteran(user.client))
 		data["is_veteran"] = TRUE
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 	var/list/required_job_playtime = get_required_job_playtime(user)
 	if (!isnull(required_job_playtime))
 		data += required_job_playtime
@@ -147,7 +147,7 @@
 
 	return data
 
-//NOVA EDIT ADDITION BEGIN - CHECKING FOR INCOMPATIBLE SPECIES
+//SKYRAT EDIT ADDITION BEGIN - CHECKING FOR INCOMPATIBLE SPECIES
 //This returns a list of jobs that are unavailable for the player's current species
 /datum/preference_middleware/jobs/proc/get_unavailable_jobs_for_species()
 	var/list/data = list()
@@ -158,4 +158,4 @@
 
 	return data
 
-//NOVA EDIT ADDITION END
+//SKYRAT EDIT ADDITION END

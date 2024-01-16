@@ -3,10 +3,10 @@
 
 /datum/unit_test/paintings/Run()
 	for(var/obj/item/canvas/canvas as anything in typesof(/obj/item/canvas))
-		//NOVA EDIT START
+		//SKYRAT EDIT START
 		if(canvas == /obj/item/canvas/drawingtablet) //This doesn't need frames.
 			continue
-		//NOVA EDIT END
+		//SKYRAT EDIT END
 		canvas = new canvas
 		var/canvas_icons = icon_states(canvas.icon)
 		for(var/frame_type in SSpersistent_paintings.frame_types_by_patronage_tier)

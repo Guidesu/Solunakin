@@ -58,10 +58,8 @@
 #define ALLERGIC_REMOVAL_SKIP "Allergy"
 
 //Used in holder.dm/equlibrium.dm to set values and volume limits
-///The minimum volume of reagents than can be operated on.
+///the minimum volume of reagents than can be operated on.
 #define CHEMICAL_QUANTISATION_LEVEL 0.0001
-///Sanity check limit to clamp chems to sane amounts and prevent rounding errors during transfer.
-#define CHEMICAL_VOLUME_ROUNDING 0.01
 ///Default pH for reagents datum
 #define CHEMICAL_NORMAL_PH 7.000
 ///Minimum pH attainable by a solution
@@ -136,11 +134,11 @@
 #define MAX_ADDICTION_POINTS 1000
 
 ///Addiction start/ends
-#define WITHDRAWAL_STAGE1_START_CYCLE 121 // NOVA EDIT CHANGE - Original 61
-#define WITHDRAWAL_STAGE1_END_CYCLE 240 // NOVA EDIT CHANGE - Original 120
-#define WITHDRAWAL_STAGE2_START_CYCLE 241 // NOVA EDIT CHANGE - Original 121
-#define WITHDRAWAL_STAGE2_END_CYCLE 360 // NOVA EDIT CHANGE - Original 180
-#define WITHDRAWAL_STAGE3_START_CYCLE 361 // NOVA EDIT CHANGE - Original 181
+#define WITHDRAWAL_STAGE1_START_CYCLE 121 // SKYRAT EDIT CHANGE - Original 61
+#define WITHDRAWAL_STAGE1_END_CYCLE 240 // SKYRAT EDIT CHANGE - Original 120
+#define WITHDRAWAL_STAGE2_START_CYCLE 241 // SKYRAT EDIT CHANGE - Original 121
+#define WITHDRAWAL_STAGE2_END_CYCLE 360 // SKYRAT EDIT CHANGE - Original 180
+#define WITHDRAWAL_STAGE3_START_CYCLE 361 // SKYRAT EDIT CHANGE - Original 181
 
 ///reagent tags - used to look up reagents for specific effects. Feel free to add to but comment it
 /// This reagent does brute effects (BOTH damaging and healing)
@@ -151,48 +149,42 @@
 #define REACTION_TAG_TOXIN (1<<2)
 /// This reagent does oxy effects (BOTH damaging and healing)
 #define REACTION_TAG_OXY (1<<3)
+/// This reagent does clone effects (BOTH damaging and healing)
+#define REACTION_TAG_CLONE (1<<4)
 /// This reagent primarily heals, or it's supposed to be used for healing (in the case of c2 - they are healing)
-#define REACTION_TAG_HEALING (1<<4)
+#define REACTION_TAG_HEALING (1<<5)
 /// This reagent primarily damages
-#define REACTION_TAG_DAMAGING (1<<5)
+#define REACTION_TAG_DAMAGING (1<<6)
 /// This reagent explodes as a part of it's intended effect (i.e. not overheated/impure)
-#define REACTION_TAG_EXPLOSIVE (1<<6)
+#define REACTION_TAG_EXPLOSIVE (1<<7)
 /// This reagent does things that are unique and special
-#define REACTION_TAG_OTHER (1<<7)
+#define REACTION_TAG_OTHER (1<<8)
 /// This reagent's reaction is dangerous to create (i.e. explodes if you fail it)
-#define REACTION_TAG_DANGEROUS (1<<8)
+#define REACTION_TAG_DANGEROUS (1<<9)
 /// This reagent's reaction is easy
-#define REACTION_TAG_EASY (1<<9)
+#define REACTION_TAG_EASY (1<<10)
 /// This reagent's reaction is difficult/involved
-#define REACTION_TAG_MODERATE (1<<10)
+#define REACTION_TAG_MODERATE (1<<11)
 /// This reagent's reaction is hard
-#define REACTION_TAG_HARD (1<<11)
+#define REACTION_TAG_HARD (1<<12)
 /// This reagent affects organs
-#define REACTION_TAG_ORGAN (1<<12)
+#define REACTION_TAG_ORGAN (1<<13)
 /// This reaction creates a drink reagent
-#define REACTION_TAG_DRINK (1<<13)
+#define REACTION_TAG_DRINK (1<<14)
 /// This reaction has something to do with food
-#define REACTION_TAG_FOOD (1<<14)
+#define REACTION_TAG_FOOD (1<<15)
 /// This reaction is a slime reaction
-#define REACTION_TAG_SLIME (1<<15)
+#define REACTION_TAG_SLIME (1<<16)
 /// This reaction is a drug reaction
-#define REACTION_TAG_DRUG (1<<16)
+#define REACTION_TAG_DRUG (1<<17)
 /// This reaction is a unique reaction
-#define REACTION_TAG_UNIQUE (1<<17)
+#define REACTION_TAG_UNIQUE (1<<18)
 /// This reaction is produces a product that affects reactions
-#define REACTION_TAG_CHEMICAL (1<<18)
+#define REACTION_TAG_CHEMICAL (1<<19)
 /// This reaction is produces a product that affects plants
-#define REACTION_TAG_PLANT (1<<19)
+#define REACTION_TAG_PLANT (1<<20)
 /// This reaction is produces a product that affects plants
-#define REACTION_TAG_COMPETITIVE (1<<20)
-
-//flags used by holder.dm to locate an reagent
-///Direct type
-#define REAGENT_STRICT_TYPE (1<<0)
-///Parent type but not sub types for e.g. if param is obj/item it will look for obj/item/stack but not obj/item/stack/sheet
-#define REAGENT_PARENT_TYPE (1<<1)
-///same as istype() check
-#define REAGENT_SUB_TYPE (1<<2)
+#define REACTION_TAG_COMPETITIVE (1<<21)
 
 #define RNGCHEM_INPUT "input"
 #define RNGCHEM_CATALYSTS "catalysts"

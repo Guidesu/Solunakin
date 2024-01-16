@@ -3,13 +3,13 @@
 /datum/computer_file/program/secureye
 	filename = "secureye"
 	filedesc = "SecurEye"
-	downloader_category = PROGRAM_CATEGORY_SECURITY
+	category = PROGRAM_CATEGORY_MISC
 	ui_header = "borg_mon.gif"
-	program_open_overlay = "generic"
+	program_icon_state = "generic"
 	extended_desc = "This program allows access to standard security camera networks."
-	program_flags = PROGRAM_ON_NTNET_STORE | PROGRAM_REQUIRES_NTNET
-	download_access = list(ACCESS_SECURITY)
-	can_run_on_flags = PROGRAM_CONSOLE | PROGRAM_LAPTOP
+	requires_ntnet = TRUE
+	transfer_access = list(ACCESS_SECURITY)
+	usage_flags = PROGRAM_CONSOLE | PROGRAM_LAPTOP
 	size = 5
 	tgui_id = "NtosSecurEye"
 	program_icon = "eye"
@@ -39,9 +39,12 @@
 	filename = "syndeye"
 	filedesc = "SyndEye"
 	extended_desc = "This program allows for illegal access to security camera networks."
-	download_access = list()
-	can_run_on_flags = PROGRAM_ALL
-	program_flags = PROGRAM_ON_SYNDINET_STORE | PROGRAM_UNIQUE_COPY
+	transfer_access = list()
+	available_on_ntnet = FALSE
+	available_on_syndinet = TRUE
+	requires_ntnet = FALSE
+	usage_flags = PROGRAM_ALL
+	unique_copy = TRUE
 
 	network = list("ss13", "mine", "rd", "labor", "ordnance", "minisat")
 	spying = TRUE

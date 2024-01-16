@@ -90,9 +90,9 @@
 		return
 
 	//Do pause/unpause/nothing for the hyperloop
-	if(should_loop && hyperloop.status & MOVELOOP_STATUS_PAUSED)
+	if(should_loop && hyperloop.paused)
 		hyperloop.resume_loop()
-	else if(!should_loop && !(hyperloop.status & MOVELOOP_STATUS_PAUSED))
+	else if(!should_loop && !hyperloop.paused)
 		hyperloop.pause_loop()
 
 ///Check if we're "holding on" to the shuttle
@@ -177,7 +177,7 @@
 
 	qdel(src)
 
-/datum/component/shuttle_cling/Destroy(force)
+/datum/component/shuttle_cling/Destroy(force, silent)
 	REMOVE_TRAIT(parent, TRAIT_HYPERSPACED, REF(src))
 	QDEL_NULL(hyperloop)
 

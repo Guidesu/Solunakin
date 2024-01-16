@@ -39,7 +39,7 @@
 	UnregisterSignal(SSdcs, COMSIG_AREA_CREATED)
 	parent_mob.lose_area_sensitivity(type)
 
-/datum/component/hazard_area/Destroy(force)
+/datum/component/hazard_area/Destroy(force, silent)
 	. = ..()
 	area_created = null
 

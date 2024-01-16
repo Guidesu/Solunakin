@@ -48,7 +48,7 @@
 			return
 		cmd_show_exp_panel(M.client)
 
-// NOVA EDIT BEGIN -- ONE CLICK ANTAG
+// SKYRAT EDIT BEGIN -- ONE CLICK ANTAG
 	else if(href_list["makeAntag"])
 
 		message_admins("[key_name_admin(usr)] is attempting to make [href_list["makeAntag"]]")
@@ -56,7 +56,7 @@
 		if(!check_rights(R_ADMIN))
 			return
 
-		if(!SSticker.HasRoundStarted())
+		if (!SSticker.mode)
 			to_chat(usr, "<span class='danger'>Not until the round starts!</span>", confidential = TRUE)
 			return
 
@@ -78,12 +78,10 @@
 				opt = input("How Many", ROLE_OPERATIVE, 3) as num|null
 			if(ROLE_BROTHER)
 				opt = input("How Many", ROLE_BROTHER, 2) as num|null
-			if(ROLE_DRIFTING_CONTRACTOR)
-				opt = input("How Many", ROLE_DRIFTING_CONTRACTOR, 2) as num|null
 		if(src.make_antag(href_list["makeAntag"], opt))
 			message_admins("[key_name_admin(usr)] created '[href_list["makeAntag"]]' with a parameter of '[opt]'.")
 		else message_admins("[key_name_admin(usr)] FAILED to create '[href_list["makeAntag"]]' with a parameter of '[opt]'.")
-// NOVA EDIT END -- ONE CLICK ANTAG
+// SKYRAT EDIT END -- ONE CLICK ANTAG
 
 	else if(href_list["editrightsbrowser"])
 		edit_admin_permissions(0)
@@ -106,7 +104,7 @@
 	else if(href_list["gamemode_panel"])
 		if(!check_rights(R_ADMIN))
 			return
-		SSdynamic.admin_panel()
+		SSticker.mode.admin_panel()
 
 	else if(href_list["call_shuttle"])
 		if(!check_rights(R_ADMIN))
@@ -398,6 +396,19 @@
 		var/target = href_list["showmessageckeylinkless"]
 		browse_messages(target_ckey = target, linkless = 1)
 
+	else if(href_list["messageread"])
+		if(!isnum(href_list["message_id"]))
+			return
+		var/rounded_message_id = round(href_list["message_id"], 1)
+		var/datum/db_query/query_message_read = SSdbcore.NewQuery(
+			"UPDATE [format_table_name("messages")] SET type = 'message sent' WHERE targetckey = :player_key AND id = :id",
+			list("id" = rounded_message_id, "player_key" = usr.ckey)
+		)
+		if(!query_message_read.warn_execute())
+			qdel(query_message_read)
+			return
+		qdel(query_message_read)
+
 	else if(href_list["messageedits"])
 		if(!check_rights(R_ADMIN))
 			return
@@ -424,7 +435,7 @@
 	else if(href_list["f_dynamic_roundstart"])
 		if(!check_rights(R_ADMIN))
 			return
-		if(SSticker.HasRoundStarted())
+		if(SSticker?.mode)
 			return tgui_alert(usr, "The game has already started.")
 		var/roundstart_rules = list()
 		for (var/rule in subtypesof(/datum/dynamic_ruleset/roundstart))
@@ -491,7 +502,7 @@
 		if(!check_rights(R_ADMIN))
 			return
 
-		if(SSticker.HasRoundStarted())
+		if(SSticker?.mode)
 			return tgui_alert(usr, "The game has already started.")
 
 		dynamic_mode_options(usr)
@@ -525,7 +536,7 @@
 		if(!check_rights(R_ADMIN))
 			return
 
-		if(SSticker.HasRoundStarted())
+		if(SSticker?.mode)
 			return tgui_alert(usr, "The game has already started.")
 
 		var/new_value = input(usr, "Enter the forced threat level for dynamic mode.", "Forced threat level") as num
@@ -583,13 +594,13 @@
 		if(tgui_alert(usr, "Send [key_name(M)] to Prison?", "Message", list("Yes", "No")) != "Yes")
 			return
 
-		/// NOVA EDIT START - Immersion-friendly Admin Prison
+		/// SKYRAT EDIT START - Immersion-friendly Admin Prison
 		var/datum/effect_system/spark_spread/quantum/sparks = new
 		sparks.set_up(10, 1, M)
 		sparks.attach(M.loc)
 		sparks.start()
 		M.forceMove(pick(GLOB.prisonwarp))
-		/// NOVA EDIT END
+		/// SKYRAT EDIT END
 
 		to_chat(M, span_adminnotice("You have been sent to Prison!"), confidential = TRUE)
 
@@ -883,7 +894,7 @@
 					status = "<font color='red'><b>Dead</b></font>"
 			health_description = "Status: [status]"
 			health_description += "<br>Brute: [lifer.getBruteLoss()] - Burn: [lifer.getFireLoss()] - Toxin: [lifer.getToxLoss()] - Suffocation: [lifer.getOxyLoss()]"
-			health_description += "<br>Brain: [lifer.get_organ_loss(ORGAN_SLOT_BRAIN)] - Stamina: [lifer.getStaminaLoss()]"
+			health_description += "<br>Clone: [lifer.getCloneLoss()] - Brain: [lifer.get_organ_loss(ORGAN_SLOT_BRAIN)] - Stamina: [lifer.getStaminaLoss()]"
 		else
 			health_description = "This mob type has no health to speak of."
 
@@ -1755,10 +1766,6 @@
 		var/obj/item/nuclear_challenge/button = locate(href_list["force_war"])
 		button.force_war()
 
-	else if(href_list["give_reinforcement"])
-		var/datum/team/nuclear/nuketeam = locate(href_list["give_reinforcement"]) in GLOB.antagonist_teams
-		nuketeam.admin_spawn_reinforcement(usr)
-
 	else if (href_list["interview"])
 		if(!check_rights(R_ADMIN))
 			return
@@ -1830,7 +1837,8 @@
 		if(!check_rights(R_ADMIN))
 			return
 
-		if(!SSdynamic.picking_specific_rule(/datum/dynamic_ruleset/midround/from_living/opfor_candidate, forced = TRUE, ignore_cost = TRUE))
+		var/datum/game_mode/dynamic/dynamic = SSticker.mode
+		if(!dynamic.picking_specific_rule(/datum/dynamic_ruleset/midround/from_living/opfor_candidate, forced = TRUE, ignore_cost = TRUE))
 			message_admins("An OPFOR candidate could not be selected.")
 
 	// SKYRAT ADDITION END

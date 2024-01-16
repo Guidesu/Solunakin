@@ -39,7 +39,7 @@
 		)))
 		if(KIT_RECON)
 			new /obj/item/clothing/glasses/thermal/xray(src) // ~8 tc?
-//			new /obj/item/storage/briefcase/launchpad(src) //6 tc // NOVA EDIT REMOVAL
+//			new /obj/item/storage/briefcase/launchpad(src) //6 tc // SKYRAT EDIT REMOVAL
 			new /obj/item/binoculars(src) // 2 tc?
 			new /obj/item/encryptionkey/syndicate(src) // 2 tc
 			new /obj/item/storage/box/syndie_kit/space(src) //4 tc
@@ -234,6 +234,7 @@
 			new /obj/item/storage/toolbox/syndicate(src) // 1 tc
 			new /obj/item/pen/edagger(src) // 2 tc
 			new /obj/item/gun/energy/wormhole_projector/core_inserted(src) // 5 tc easily
+			new /obj/item/gun/energy/decloner/unrestricted(src) // 5 tc at least also
 
 		if(KIT_BEES)
 			new /obj/item/paper/fluff/bee_objectives(src) // 0 tc (motivation)
@@ -276,7 +277,6 @@
 	new /obj/item/implanter/freedom(src) // 5 tc
 	new /obj/item/stack/telecrystal(src) //The failsafe/self destruct isn't an item we can physically include in the kit, but 1 TC is technically enough to buy the equivalent.
 
-<<<<<<< HEAD
 /obj/item/storage/box/syndicate/contract_kit //SKYRAT EDIT - CHANGED IN MODULAR FOLDER
 	name = "Contract Kit"
 	desc = "Supplied to Symphionia contractors."
@@ -334,21 +334,11 @@
 			<p>Good luck agent. You can burn this document with the supplied lighter.</p>"}
 	return ..()
 
-=======
->>>>>>> Nova/master
 /obj/item/storage/box/syndie_kit
 	name = "box"
 	desc = "A sleek, sturdy box."
 	icon_state = "syndiebox"
 	illustration = "writing_syndie"
-
-/obj/item/storage/box/syndie_kit/rebarxbowsyndie
-	name = "Boxed Rebar Crossbow"
-	desc = "Now features instruction manual for making ammo."
-
-/obj/item/storage/box/syndie_kit/rebarxbowsyndie/PopulateContents()
-	new /obj/item/book/granter/crafting_recipe/dusting/rebarxbowsyndie_ammo(src)
-	new /obj/item/gun/ballistic/rifle/rebarxbow/syndie(src)
 
 /obj/item/storage/box/syndie_kit/origami_bundle
 	name = "origami kit"
@@ -630,7 +620,6 @@
 	new /obj/item/card/emag/doorjack (src)
 	new /obj/item/reagent_containers/hypospray/medipen/stimulants (src)
 	new /obj/item/grenade/c4 (src)
-	new /obj/item/mod/module/energy_shield(src)
 
 /// Surplus Ammo Box
 
@@ -767,13 +756,13 @@
 			human_target.reagents.add_reagent(/datum/reagent/toxin, 2)
 			return FALSE
 
-	/// If all the antag datums are 'fake' or none exist, disallow induction! No self-antagging.
+	/// If all the antag datums are 'fake', disallow induction! No self-antagging.
 	var/faker
 	for(var/datum/antagonist/antag_datum as anything in human_target.mind.antag_datums)
 		if((antag_datum.antag_flags & FLAG_FAKE_ANTAG))
 			faker = TRUE
 
-	if(faker || isnull(human_target.mind.antag_datums)) // GTFO. Technically not foolproof but making a heartbreaker or a paradox clone a nuke op sounds hilarious
+	if(faker) // GTFO. Technically not foolproof but making a heartbreaker or a paradox clone a nuke op sounds hilarious
 		to_chat(human_target, span_notice("Huh? Nothing happened? But you're starting to feel a little ill..."))
 		human_target.reagents.add_reagent(/datum/reagent/toxin, 15)
 		return FALSE
@@ -823,63 +812,6 @@
 		/obj/item/sbeacondrop/horse = 1,
 		/obj/item/food/grown/apple = 1,
 	), src)
-
-/obj/item/storage/box/syndicate/contract_kit
-	name = "Contract Kit"
-	desc = "Supplied to Syndicate contractors."
-	icon_state = "syndiebox"
-	illustration = "writing_syndie"
-
-/obj/item/storage/box/syndicate/contract_kit/PopulateContents()
-	new /obj/item/modular_computer/pda/contractor(src) // NOVA EDIT CHANGE - ORIGINAL : /obj/item/modular_computer/pda/syndicate_contract_uplink(src)
-	new /obj/item/storage/box/syndicate/contractor_loadout(src)
-	new /obj/item/melee/baton/telescopic/contractor_baton(src)
-
-	// All about 4 TC or less - some nukeops only items, but fit nicely to the theme.
-	var/static/list/item_list = list(
-		/obj/item/storage/backpack/duffelbag/syndie/x4,
-		/obj/item/storage/box/syndie_kit/throwing_weapons,
-		/obj/item/gun/syringe/syndicate,
-		/obj/item/pen/edagger,
-		/obj/item/pen/sleepy,
-		/obj/item/flashlight/emp,
-		/obj/item/reagent_containers/syringe/mulligan,
-		/obj/item/clothing/shoes/chameleon/noslip,
-		/obj/item/storage/medkit/tactical,
-		/obj/item/encryptionkey/syndicate,
-		/obj/item/clothing/glasses/thermal/syndi,
-		/obj/item/slimepotion/slime/sentience/nuclear,
-		/obj/item/storage/box/syndie_kit/imp_radio,
-		///obj/item/storage/box/syndie_kit/imp_uplink, // NOVA EDIT REMOVAL
-		///obj/item/clothing/gloves/krav_maga/combatglovesplus, // NOVA EDIT REMOVAL
-		/obj/item/gun/ballistic/automatic/c20r/toy/unrestricted/riot,
-		/obj/item/reagent_containers/hypospray/medipen/stimulants,
-		/obj/item/storage/box/syndie_kit/imp_freedom,
-		/obj/item/toy/eightball/haunted,
-	)
-	for(var/i in 1 to 3)
-		var/selected_item = pick_n_take(item_list + modular_item_list) // NOVA EDIT CHANGE - ORIGINAL : var/selected_item = pick_n_take(item_list)
-		new selected_item(src)
-
-	// Paper guide is always last.
-	new /obj/item/paper/contractor_guide(src)
-
-/obj/item/storage/box/syndicate/contractor_loadout
-	name = "Standard Loadout"
-	desc = "Supplied to Syndicate contractors, providing their specialised space suit and chameleon uniform."
-	icon_state = "syndiebox"
-	illustration = "writing_syndie"
-
-/obj/item/storage/box/syndicate/contractor_loadout/PopulateContents()
-	/* NOVA EDIT REMOVAL BEGIN - Contractors get MODSuits instead, see contractor modular for overrides
-	new /obj/item/clothing/head/helmet/space/syndicate/contract(src)
-	new /obj/item/clothing/suit/space/syndicate/contract(src)
-	NOVA EDIT REMOVAL END */
-	new /obj/item/clothing/under/chameleon(src)
-	new /obj/item/clothing/mask/chameleon(src)
-	new /obj/item/storage/fancy/cigarettes/cigpack_syndicate(src)
-	new /obj/item/card/id/advanced/chameleon(src)
-	new /obj/item/lighter(src)
 
 #undef KIT_RECON
 #undef KIT_BLOODY_SPAI

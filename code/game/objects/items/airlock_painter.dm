@@ -2,7 +2,7 @@
 	name = "airlock painter"
 	desc = "An advanced autopainter preprogrammed with several paintjobs for airlocks. Use it on an airlock during or after construction to change the paintjob."
 	desc_controls = "Alt-Click to remove the ink cartridge."
-	icon = 'icons/obj/devices/tool.dmi'
+	icon = 'icons/obj/device.dmi'
 	icon_state = "paint_sprayer"
 	inhand_icon_state = "paint_sprayer"
 	worn_icon_state = "painter"
@@ -10,7 +10,7 @@
 
 	custom_materials = list(/datum/material/iron= SMALL_MATERIAL_AMOUNT * 0.5, /datum/material/glass= SMALL_MATERIAL_AMOUNT * 0.5)
 
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	item_flags = NOBLUDGEON
 	slot_flags = ITEM_SLOT_BELT
 	usesound = 'sound/effects/spray2.ogg'
@@ -160,7 +160,7 @@
 	name = "decal painter"
 	desc = "An airlock painter, reprogramed to use a different style of paint in order to apply decals for floor tiles as well, in addition to repainting doors. Decals break when the floor tiles are removed."
 	desc_controls = "Alt-Click to remove the ink cartridge."
-	icon = 'icons/obj/devices/tool.dmi'
+	icon = 'icons/obj/device.dmi'
 	icon_state = "decal_sprayer"
 	inhand_icon_state = "decal_sprayer"
 	custom_materials = list(/datum/material/iron= SMALL_MATERIAL_AMOUNT * 0.5, /datum/material/glass= SMALL_MATERIAL_AMOUNT * 0.5)
@@ -327,6 +327,7 @@
 
 /datum/asset/spritesheet/decals
 	name = "floor_decals"
+	cross_round_cachable = TRUE
 
 	/// The floor icon used for blend_preview_floor()
 	var/preview_floor_icon = 'icons/turf/floors.dmi'
@@ -394,7 +395,7 @@
 		list("Neutral", "#D4D4D432"),
 		list("Dark", "#0e0f0f"),
 		list("Bar Burgundy", "#79150082"),
-		list("Sec Blue", "#486091"), // NOVA EDIT CHANGE
+		list("Sec Blue", "#486091"), // SKYRAT EDIT CHANGE
 		list("Cargo Brown", "#A46106"),
 		list("Engi Yellow", "#EFB341"),
 		list("Service Green", "#9FED58"),

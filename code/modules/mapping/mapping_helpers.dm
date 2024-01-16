@@ -6,9 +6,8 @@
 	name = "baseturf editor"
 	icon = 'icons/effects/mapping_helpers.dmi'
 	icon_state = ""
-	/// Replacing a specific turf
+
 	var/list/baseturf_to_replace
-	/// The desired bottom turf
 	var/baseturf
 
 	plane = POINT_PLANE
@@ -34,16 +33,9 @@
 
 	qdel(src)
 
-/// Replaces all the requested baseturfs (usually space/baseturfbottom) with the desired baseturf. Skips if its already there
 /obj/effect/baseturf_helper/proc/replace_baseturf(turf/thing)
 	thing.remove_baseturfs_from_typecache(baseturf_to_replace)
-
-	if(length(thing.baseturfs))
-		var/turf/tile = thing.baseturfs[1]
-		if(tile == baseturf)
-			return
-
-	thing.place_on_bottom(baseturf)
+	thing.PlaceOnBottom(fake_turf_type = baseturf)
 
 /obj/effect/baseturf_helper/space
 	name = "space baseturf editor"
@@ -153,11 +145,11 @@
 			if(1 to 9)
 				var/turf/here = get_turf(src)
 				for(var/turf/closed/T in range(2, src))
-					here.place_on_top(T.type)
+					here.PlaceOnTop(T.type)
 					qdel(airlock)
 					qdel(src)
 					return
-				here.place_on_top(/turf/closed/wall)
+				here.PlaceOnTop(/turf/closed/wall)
 				qdel(airlock)
 				qdel(src)
 				return
@@ -702,9 +694,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_lava)
 /obj/effect/mapping_helpers/atom_injector/trait_injector/check_validity()
 	if(!istext(trait_name))
 		CRASH("Wrong trait in [type] - [trait_name] is not a trait")
-	if(!GLOB.global_trait_name_map)
-		GLOB.global_trait_name_map = generate_global_trait_name_map()
-	if(!GLOB.global_trait_name_map.Find(trait_name))
+	if(!GLOB.trait_name_map)
+		GLOB.trait_name_map = generate_trait_name_map()
+	if(!GLOB.trait_name_map.Find(trait_name))
 		stack_trace("Possibly wrong trait in [type] - [trait_name] is not a trait in the global trait list")
 	return TRUE
 
@@ -917,6 +909,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_lava)
 					if(new_human_species)
 						new_human.set_species(new_human_species)
 						new_human_species = new_human.dna.species
+						new_human_species.randomize_features(new_human)
 						new_human.fully_replace_character_name(new_human.real_name, new_human_species.random_name(new_human.gender, TRUE, TRUE))
 					else
 						stack_trace("failed to spawn cadaver with species ID [species_to_pick]") //if it's invalid they'll just be a human, so no need to worry too much aside from yelling at the server owner lol.
@@ -944,46 +937,39 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_lava)
 	name = "Ian's Bday Helper"
 	late = TRUE
 	icon_state = "iansbdayhelper"
-	/// How many clusters of balloons to spawn.
 	var/balloon_clusters = 2
-	/// if TRUE, we give a map log warning if we can't find Ian's dogbed.
-	var/map_warning = TRUE
 
 /obj/effect/mapping_helpers/ianbirthday/LateInitialize()
-	if(check_holidays(IAN_HOLIDAY))
+	if(check_holidays("Ian's Birthday"))
 		birthday()
 	qdel(src)
 
 /obj/effect/mapping_helpers/ianbirthday/proc/birthday()
-	var/area/celebration_area = get_area(src)
-	var/list/table_turfs = list()
-	var/list/open_turfs = list()
-	var/turf/dogbed_turf
-	for(var/turf/area_turf as anything in celebration_area.get_contained_turfs())
-		if(locate(/obj/structure/table/reinforced) in area_turf)
-			table_turfs += area_turf
-		if(locate(/obj/structure/bed/dogbed/ian) in area_turf)
-			dogbed_turf = area_turf
-		if(isopenturf(area_turf))
-			new /obj/effect/decal/cleanable/confetti(area_turf)
-			open_turfs += area_turf
+	var/area/a = get_area(src)
+	var/list/table = list()//should only be one aka the front desk, but just in case...
+	var/list/openturfs = list()
 
-	if(isnull(dogbed_turf) && map_warning)
-		log_mapping("[src] in [celebration_area] could not find Ian's dogbed.")
+	//confetti and a corgi balloon! (and some list stuff for more decorations)
+	for(var/thing in a.contents)
+		if(istype(thing, /obj/structure/table/reinforced))
+			table += thing
+		if(isopenturf(thing))
+			new /obj/effect/decal/cleanable/confetti(thing)
+			if(locate(/obj/structure/bed/dogbed/ian) in thing)
+				new /obj/item/toy/balloon/corgi(thing)
+			else
+				openturfs += thing
 
-	else
-		new /obj/item/toy/balloon/corgi(dogbed_turf)
-		var/turf/food_turf = length(table_turfs) ? pick(table_turfs) : dogbed_turf
+	//cake + knife to cut it!
+	if(length(table))
+		var/turf/food_turf = get_turf(pick(table))
 		new /obj/item/knife/kitchen(food_turf)
 		var/obj/item/food/cake/birthday/iancake = new(food_turf)
 		iancake.desc = "Happy birthday, Ian!"
 
-	if(!length(open_turfs))
-		return
-
 	//some balloons! this picks an open turf and pops a few balloons in and around that turf, yay.
 	for(var/i in 1 to balloon_clusters)
-		var/turf/clusterspot = pick_n_take(open_turfs)
+		var/turf/clusterspot = pick_n_take(openturfs)
 		new /obj/item/toy/balloon(clusterspot)
 		var/balloons_left_to_give = 3 //the amount of balloons around the cluster
 		var/list/dirs_to_balloon = GLOB.cardinals.Copy()
@@ -1010,7 +996,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_lava)
 /obj/effect/mapping_helpers/ianbirthday/admin//so admins may birthday any room
 	name = "generic birthday setup"
 	icon_state = "bdayhelper"
-	map_warning = FALSE
 
 /obj/effect/mapping_helpers/ianbirthday/admin/LateInitialize()
 	birthday()
@@ -1028,26 +1013,24 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_lava)
 	qdel(src)
 
 /obj/effect/mapping_helpers/iannewyear/proc/fireworks()
-	var/area/celebration_area = get_area(src)
-	var/list/table_turfs = list()
-	var/turf/dogbed_turf
-	for(var/turf/area_turf as anything in celebration_area.get_contained_turfs())
-		if(locate(/obj/structure/table/reinforced) in area_turf)
-			table_turfs += area_turf
-		if(locate(/obj/structure/bed/dogbed/ian) in area_turf)
-			dogbed_turf = area_turf
+	var/area/a = get_area(src)
+	var/list/table = list()//should only be one aka the front desk, but just in case...
+	var/list/openturfs = list()
 
-	if(isnull(dogbed_turf))
-		log_mapping("[src] in [celebration_area] could not find Ian's dogbed.")
-		return
+	for(var/thing in a.contents)
+		if(istype(thing, /obj/structure/table/reinforced))
+			table += thing
+		else if(isopenturf(thing))
+			if(locate(/obj/structure/bed/dogbed/ian) in thing)
+				new /obj/item/clothing/head/costume/festive(thing)
+				var/obj/item/reagent_containers/cup/glass/bottle/champagne/iandrink = new(thing)
+				iandrink.name = "dog champagne"
+				iandrink.pixel_y += 8
+				iandrink.pixel_x += 8
+			else
+				openturfs += thing
 
-	new /obj/item/clothing/head/costume/festive(dogbed_turf)
-	var/obj/item/reagent_containers/cup/glass/bottle/champagne/iandrink = new(dogbed_turf)
-	iandrink.name = "dog champagne"
-	iandrink.pixel_y += 8
-	iandrink.pixel_x += 8
-
-	var/turf/fireworks_turf = length(table_turfs) ? pick(table_turfs) : dogbed_turf
+	var/turf/fireworks_turf = get_turf(pick(table))
 	var/obj/item/storage/box/matches/matchbox = new(fireworks_turf)
 	matchbox.pixel_y += 8
 	matchbox.pixel_x -= 3

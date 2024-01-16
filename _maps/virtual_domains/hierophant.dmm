@@ -37,13 +37,11 @@
 /turf/closed/indestructible/binary,
 /area/lavaland/surface/outdoors/virtual_domain)
 "E" = (
-/mob/living/simple_animal/hostile/megafauna/hierophant,
+/mob/living/simple_animal/hostile/megafauna/hierophant/virtual_domain,
 /turf/open/indestructible/hierophant/two,
 /area/lavaland/surface/outdoors/virtual_domain)
 "H" = (
-/obj/modular_map_root/safehouse{
-	key = "lavaland_boss"
-	},
+/obj/effect/landmark/bitrunning/safehouse_spawn,
 /turf/template_noop,
 /area/virtual_domain/safehouse)
 "K" = (
@@ -53,7 +51,7 @@
 /obj/machinery/light/small/blacklight/directional/south,
 /obj/effect/baseturf_helper/virtual_domain,
 /turf/open/indestructible/hierophant,
-/area/virtual_domain)
+/area/virtual_domain/powered)
 "S" = (
 /obj/effect/mob_spawn/corpse/human/miner,
 /turf/open/indestructible/hierophant,

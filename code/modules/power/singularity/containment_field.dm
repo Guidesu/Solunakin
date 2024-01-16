@@ -3,7 +3,7 @@
 /obj/machinery/field/containment
 	name = "containment field"
 	desc = "An energy field."
-	icon = 'icons/obj/machines/engine/singularity.dmi' // NOVA EDIT CHANGE - ICON OVERRIDEN IN SKYRAT AESTHETICS - SEE MODULE
+	icon = 'icons/obj/machines/engine/singularity.dmi' // SKYRAT EDIT CHANGE - ICON OVERRIDEN IN SKYRAT AESTHETICS - SEE MODULE
 	icon_state = "Contain_F"
 	density = FALSE
 	move_resist = INFINITY
@@ -123,7 +123,7 @@
 	if(isliving(mover))
 		shock(mover)
 		return
-	if(ismachinery(mover) || isstructure(mover) || isvehicle(mover))
+	if(ismachinery(mover) || isstructure(mover) || ismecha(mover))
 		bump_field(mover)
 		return
 

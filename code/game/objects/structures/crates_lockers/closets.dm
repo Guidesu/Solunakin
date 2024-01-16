@@ -26,13 +26,13 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	/// Whether or not this door is being animated
 	var/is_animating_door = FALSE
 	/// Vertical squish of the door
-	var/door_anim_squish = 0.2
+	var/door_anim_squish = 0.12
 	/// The maximum angle the door will be drawn at
-	var/door_anim_angle = 140
-	/// X position of the closet door hinge, relative to the center of the sprite
+	var/door_anim_angle = 136
+	/// X position of the closet door hinge
 	var/door_hinge_x = -6.5
 	/// Amount of time it takes for the door animation to play
-	var/door_anim_time = 2 // set to 0 to make the door not animate at all
+	var/door_anim_time = 1.5 // set to 0 to make the door not animate at all
 	/// Paint jobs for this closet, crates are a subtype of closet so they override these values
 	var/list/paint_jobs = TRUE
 	/// Controls whether a door overlay should be applied using the icon_door value as the icon state
@@ -65,7 +65,6 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	var/delivery_icon = "deliverycloset" //which icon to use when packagewrapped. null to be unwrappable.
 	var/anchorable = TRUE
 	var/icon_welded = "welded"
-	var/icon_broken = "sparking"
 	/// Whether a skittish person can dive inside this closet. Disable if opening the closet causes "bad things" to happen or that it leads to a logical inconsistency.
 	var/divable = TRUE
 	/// true whenever someone with the strong pull component (or magnet modsuit module) is dragging this, preventing opening
@@ -73,8 +72,6 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	/// secure locker or not, also used if overriding a non-secure locker with a secure door overlay to add fancy lights
 	var/secure = FALSE
 	var/can_install_electronics = TRUE
-
-	var/is_maploaded = FALSE
 
 	var/contents_initialized = FALSE
 	/// is this closet locked by an exclusive id, i.e. your own personal locker
@@ -85,14 +82,6 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	var/card_reader_installed = FALSE
 	/// access types for card reader
 	var/list/access_choices = TRUE
-
-	/// Whether this closet is sealed or not. If sealed, it'll have its own internal air
-	var/sealed = FALSE
-
-	/// Internal gas for this closet.
-	var/datum/gas_mixture/internal_air
-	/// Volume of the internal air
-	var/air_volume = TANK_STANDARD_VOLUME * 3
 
 /datum/armor/structure_closet
 	melee = 20
@@ -139,9 +128,8 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		add_to_roundstart_list()
 
 	// if closed, any item at the crate's loc is put in the contents
-	if (mapload)
-		is_maploaded = TRUE
-	. = INITIALIZE_HINT_LATELOAD
+	if (mapload && !opened)
+		. = INITIALIZE_HINT_LATELOAD
 
 	populate_contents_immediate()
 	var/static/list/loc_connections = list(
@@ -159,22 +147,8 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 
 /obj/structure/closet/LateInitialize()
 	. = ..()
-	if(!opened && is_maploaded)
+	if(!opened)
 		take_contents()
-
-	if(sealed)
-		var/datum/gas_mixture/external_air = loc.return_air()
-		if(external_air && is_maploaded)
-			internal_air = external_air.copy()
-		else
-			internal_air = new()
-		START_PROCESSING(SSobj, src)
-
-/obj/structure/closet/return_air()
-	if(sealed)
-		return internal_air
-	else
-		return ..()
 
 //USE THIS TO FILL IT, NOT INITIALIZE OR NEW
 /obj/structure/closet/proc/PopulateContents()
@@ -187,24 +161,9 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 
 /obj/structure/closet/Destroy()
 	id_card = null
-	QDEL_NULL(internal_air)
 	QDEL_NULL(door_obj)
 	GLOB.roundstart_station_closets -= src
 	return ..()
-
-/obj/structure/closet/process(seconds_per_tick)
-	if(!sealed)
-		return PROCESS_KILL
-	process_internal_air(seconds_per_tick)
-
-/obj/structure/closet/proc/process_internal_air(seconds_per_tick)
-	if(opened)
-		var/datum/gas_mixture/current_exposed_air = loc.return_air()
-		if(!current_exposed_air)
-			return
-		if(current_exposed_air.equalize(internal_air))
-			var/turf/location = get_turf(src)
-			location.air_update_turf()
 
 /obj/structure/closet/update_appearance(updates=ALL)
 	. = ..()
@@ -239,11 +198,6 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 
 	if(welded)
 		. += icon_welded
-
-	if(broken && secure)
-		. += mutable_appearance(icon, icon_broken, alpha = alpha)
-		. += emissive_appearance(icon, icon_broken, src, alpha = alpha)
-		return
 
 	if(broken || !secure)
 		return
@@ -333,7 +287,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	if(anchorable && !anchored)
 		. += span_notice("It can be [EXAMINE_HINT("bolted")] to the ground.")
 	if(anchored)
-		. += span_notice("It's [anchorable ? EXAMINE_HINT("bolted") : "attached firmly"] to the ground.")
+		. += span_notice("Its [EXAMINE_HINT("bolted")] to the ground.")
 	if(length(paint_jobs))
 		. += span_notice("It can be [EXAMINE_HINT("painted")] another texture.")
 	if(HAS_TRAIT(user, TRAIT_SKITTISH) && divable)
@@ -365,7 +319,6 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	if(istype(held_item) && held_item.tool_behaviour == TOOL_WELDER)
 		if(opened)
 			context[SCREENTIP_CONTEXT_LMB] = "Deconstruct"
-			screentip_change = TRUE
 		else
 			if(!welded && can_weld_shut)
 				context[SCREENTIP_CONTEXT_LMB] = "Weld"
@@ -374,7 +327,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 				context[SCREENTIP_CONTEXT_LMB] = "Unweld"
 				screentip_change = TRUE
 
-	if(istype(held_item) && held_item.tool_behaviour == TOOL_WRENCH && anchorable)
+	if(istype(held_item) && held_item.tool_behaviour == TOOL_WRENCH)
 		context[SCREENTIP_CONTEXT_RMB] = anchored ? "Unanchor" : "Anchor"
 		screentip_change = TRUE
 
@@ -577,7 +530,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		return open(user)
 
 /obj/structure/closet/deconstruct(disassembled = TRUE)
-	if (!(obj_flags & NO_DECONSTRUCTION))
+	if (!(flags_1 & NODECONSTRUCT_1))
 		if(ispath(material_drop) && material_drop_amount)
 			new material_drop(loc, material_drop_amount)
 		if (secure)
@@ -594,7 +547,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 
 /obj/structure/closet/atom_break(damage_flag)
 	. = ..()
-	if(!broken && !(obj_flags & NO_DECONSTRUCTION))
+	if(!broken && !(flags_1 & NODECONSTRUCT_1))
 		bust_open()
 
 /obj/structure/closet/CheckParts(list/parts_list)
@@ -851,13 +804,13 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 					if(!opened)
 						return
 					user.visible_message(span_notice("[user] slices apart \the [src]."),
-									span_notice("You cut \the [src] apart with \the [weapon]."),
-									span_hear("You hear welding."))
+									span_notice("You cut \the [src] apart weaponith \the [weapon]."),
+									span_hear("You hear weaponelding."))
 					deconstruct(TRUE)
 				return
 			else // for example cardboard box is cut with wirecutters
 				user.visible_message(span_notice("[user] cut apart \the [src]."), \
-									span_notice("You cut \the [src] apart with \the [weapon]."))
+									span_notice("You cut \the [src] apart weaponith \the [weapon]."))
 				deconstruct(TRUE)
 				return
 		if (user.combat_mode)

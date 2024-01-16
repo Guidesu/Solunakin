@@ -30,7 +30,7 @@
 
 	setup_timer()
 
-/datum/component/evolutionary_leap/Destroy(force)
+/datum/component/evolutionary_leap/Destroy(force, silent)
 	. = ..()
 	deltimer(timer_id)
 

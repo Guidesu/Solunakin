@@ -200,7 +200,7 @@ GLOBAL_LIST_EMPTY(req_console_ckey_departments)
 				var/mob/living/L = usr
 				message = L.treat_message(message)["message"]
 
-			minor_announce(message, "[department] Announcement:", html_encode = FALSE, sound_override = ANNOUNCER_DEPARTMENTAL) // NOVA EDIT CHANGE - Announcer Sounds
+			minor_announce(message, "[department] Announcement:", html_encode = FALSE, sound_override = ANNOUNCER_DEPARTMENTAL) // SKYRAT EDIT CHANGE - Announcer Sounds
 			GLOB.news_network.submit_article(message, department, "Station Announcements", null)
 			usr.log_talk(message, LOG_SAY, tag="station announcement from [src]")
 			message_admins("[ADMIN_LOOKUPFLW(usr)] has made a station announcement from [src] at [AREACOORD(usr)].")
@@ -395,7 +395,7 @@ GLOBAL_LIST_EMPTY(req_console_ckey_departments)
 	return ..()
 
 /obj/machinery/requests_console/deconstruct(disassembled = TRUE)
-	if(!(obj_flags & NO_DECONSTRUCTION))
+	if(!(flags_1 & NODECONSTRUCT_1))
 		new /obj/item/wallframe/requests_console(loc)
 	qdel(src)
 

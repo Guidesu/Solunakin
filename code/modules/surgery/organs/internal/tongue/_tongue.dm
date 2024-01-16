@@ -94,10 +94,8 @@
 /obj/item/organ/internal/tongue/proc/handle_speech(datum/source, list/speech_args)
 	SIGNAL_HANDLER
 
-	if(speech_args[SPEECH_LANGUAGE] in languages_native) // Speaking a native language?
-		return FALSE // Don't modify speech
-	if(HAS_TRAIT(source, TRAIT_SIGN_LANG)) // No modifiers for signers - I hate this but I simply cannot get these to combine into one statement
-		return FALSE // Don't modify speech
+	if(speech_args[SPEECH_LANGUAGE] in languages_native)
+		return FALSE //no changes
 	modify_speech(source, speech_args)
 
 /obj/item/organ/internal/tongue/proc/modify_speech(datum/source, list/speech_args)
@@ -120,7 +118,7 @@
 		food_taste_reaction = FOOD_LIKED
 	return food_taste_reaction
 
-/obj/item/organ/internal/tongue/Insert(mob/living/carbon/tongue_owner, special = FALSE, movement_flags)
+/obj/item/organ/internal/tongue/Insert(mob/living/carbon/tongue_owner, special = FALSE, drop_if_replaced = TRUE)
 	. = ..()
 	if(!.)
 		return
@@ -137,7 +135,7 @@
 		ADD_TRAIT(tongue_owner, TRAIT_AGEUSIA, ORGAN_TRAIT)
 	apply_tongue_effects()
 
-/obj/item/organ/internal/tongue/Remove(mob/living/carbon/tongue_owner, special, movement_flags)
+/obj/item/organ/internal/tongue/Remove(mob/living/carbon/tongue_owner, special = FALSE)
 	. = ..()
 	temp_say_mod = ""
 	UnregisterSignal(tongue_owner, COMSIG_MOB_SAY)
@@ -183,7 +181,7 @@
 	say_mod = "hisses"
 	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
 	modifies_speech = TRUE
-	languages_native = list(/datum/language/draconic, /datum/language/ashtongue) //NOVA EDIT: Ashtongue for Ashwalkers
+	languages_native = list(/datum/language/draconic, /datum/language/ashtongue) //SKYRAT EDIT: Ashtongue for Ashwalkers
 	liked_foodtypes = GORE | MEAT | SEAFOOD | NUTS | BUGS
 	disliked_foodtypes = GRAIN | DAIRY | CLOTH | GROSS
 	voice_filter = @{"[0:a] asplit [out0][out2]; [out0] asetrate=%SAMPLE_RATE%*0.9,aresample=%SAMPLE_RATE%,atempo=1/0.9,aformat=channel_layouts=mono,volume=0.2 [p0]; [out2] asetrate=%SAMPLE_RATE%*1.1,aresample=%SAMPLE_RATE%,atempo=1/1.1,aformat=channel_layouts=mono,volume=0.2[p2]; [p0][0][p2] amix=inputs=3"}
@@ -191,7 +189,7 @@
 	var/static/regex/lizard_hiss = new("s+", "g")
 	var/static/regex/lizard_hiSS = new("S+", "g")
 	var/static/regex/lizard_kss = new(@"(\w)x", "g")
-	/* // NOVA EDIT: REMOVAL
+	/* // SKYRAT EDIT: REMOVAL
 	var/static/regex/lizard_kSS = new(@"(\w)X", "g")
 	*/
 	var/static/regex/lizard_ecks = new(@"\bx([\-|r|R]|\b)", "g")
@@ -201,12 +199,12 @@
 		message = lizard_hiss.Replace(message, "sss")
 		message = lizard_hiSS.Replace(message, "SSS")
 		message = lizard_kss.Replace(message, "$1kss")
-		/* // NOVA EDIT: REMOVAL
+		/* // SKYRAT EDIT: REMOVAL
 		message = lizard_kSS.Replace(message, "$1KSS")
 		*/
 		message = lizard_ecks.Replace(message, "ecks$1")
 		message = lizard_eckS.Replace(message, "ECKS$1")
-		//NOVA EDIT START: Adding russian version to autohiss
+		//SKYRAT EDIT START: Adding russian version to autohiss
 		if(CONFIG_GET(flag/russian_text_formation))
 			var/static/regex/lizard_hiss_ru = new("с+", "g")
 			var/static/regex/lizard_hiSS_ru = new("С+", "g")
@@ -216,7 +214,7 @@
 			message = replacetext(message, "Ж", "Ш")
 			message = lizard_hiss_ru.Replace(message, "ссс")
 			message = lizard_hiSS_ru.Replace(message, "ССС")
-		//NOVA EDIT END: Adding russian version to autohiss
+		//SKYRAT EDIT END: Adding russian version to autohiss
 	speech_args[SPEECH_MESSAGE] = message
 
 /obj/item/organ/internal/tongue/lizard/silver
@@ -578,10 +576,10 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 	color = "#96DB00" // TODO proper sprite, rather than recoloured pink tongue
 	modifies_speech = TRUE
 	voice_filter = "atempo=0.5" // makes them talk really slow
-	liked_foodtypes = VEGETABLES | FRUIT | GROSS | RAW //NOVA EDIT - Roundstart Snails - Food Prefs
-	disliked_foodtypes = DAIRY | ORANGES | SUGAR //NOVA EDIT: Roundstart Snails - As it turns out, you can't give a snail processed sugar or citrus.
+	liked_foodtypes = VEGETABLES | FRUIT | GROSS | RAW //SKYRAT EDIT - Roundstart Snails - Food Prefs
+	disliked_foodtypes = DAIRY | ORANGES | SUGAR //SKYRAT EDIT: Roundstart Snails - As it turns out, you can't give a snail processed sugar or citrus.
 
-/* NOVA EDIT START - Roundstart Snails: Less annoying speech.
+/* SKYRAT EDIT START - Roundstart Snails: Less annoying speech.
 /obj/item/organ/internal/tongue/snail/modify_speech(datum/source, list/speech_args)
 	var/new_message
 	var/message = speech_args[SPEECH_MESSAGE]
@@ -591,7 +589,7 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 		else
 			new_message += message[i]
 	speech_args[SPEECH_MESSAGE] = new_message
-*/ // NOVA EDIT END
+*/ // SKYRAT EDIT END
 
 /obj/item/organ/internal/tongue/ethereal
 	name = "electric discharger"

@@ -14,7 +14,7 @@
 	var/obj/item/surgery_tool = parent
 	surgery_tool.item_flags |= ITEM_HAS_CONTEXTUAL_SCREENTIPS
 
-/datum/component/surgery_initiator/Destroy(force)
+/datum/component/surgery_initiator/Destroy(force, silent)
 	last_user_ref = null
 	surgery_target_ref = null
 
@@ -233,9 +233,9 @@
 
 			if (surgery_needs_exposure(surgery, surgery_target))
 				surgery_info["blocked"] = TRUE
-				surgery_info["blocked_reason"] = "Their body is covered!" // NOVA EDIT ADDITION - Surgically unremovable bodyparts
+				surgery_info["blocked_reason"] = "Their body is covered!" // SKYRAT EDIT ADDITION - Surgically unremovable bodyparts
 
-			// NOVA EDIT START - Surgically unremovable bodyparts
+			// SKYRAT EDIT START - Surgically unremovable bodyparts
 			if (surgery.removes_target_bodypart)
 				if (iscarbon(surgery_target))
 					var/mob/living/carbon/carbon_target = surgery_target
@@ -243,7 +243,7 @@
 					if(!affecting_limb.can_be_surgically_removed)
 						surgery_info["blocked"] = TRUE
 						surgery_info["blocked_reason"] = "That limb cannot be surgically removed!"
-			// NOVA EDIT END
+			// SKYRAT EDIT END
 
 			surgeries += list(surgery_info)
 
@@ -314,11 +314,11 @@
 		target.balloon_alert(user, "not the right type of limb!")
 		return
 
-	// NOVA EDIT START - Limbs that can't be surgically removed
+	// SKYRAT EDIT START - Limbs that can't be surgically removed
 	if (surgery.removes_target_bodypart && !isnull(affecting_limb) && !affecting_limb.can_be_surgically_removed)
 		target.balloon_alert(user, "limb can't be surgically removed!")
 		return
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 
 	if (IS_IN_INVALID_SURGICAL_POSITION(target, surgery))
 		target.balloon_alert(user, "patient is not lying down!")

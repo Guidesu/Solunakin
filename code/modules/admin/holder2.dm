@@ -50,7 +50,9 @@ GLOBAL_PROTECT(href_token)
 
 /datum/admins/New(list/datum/admin_rank/ranks, ckey, force_active = FALSE, protected)
 	if(IsAdminAdvancedProcCall())
-		alert_to_permissions_elevation_attempt(usr)
+		var/msg = " has tried to elevate permissions!"
+		message_admins("[key_name_admin(usr)][msg]")
+		log_admin("[key_name(usr)][msg]")
 		if (!target) //only del if this is a true creation (and not just a New() proc call), other wise trialmins/coders could abuse this to deadmin other admins
 			QDEL_IN(src, 0)
 			CRASH("Admin proc call creation of admin datum")
@@ -73,32 +75,38 @@ GLOBAL_PROTECT(href_token)
 		activate()
 	else
 		deactivate()
+	plane_debug = new(src)
 
 /datum/admins/Destroy()
 	if(IsAdminAdvancedProcCall())
-		alert_to_permissions_elevation_attempt(usr)
+		var/msg = " has tried to elevate permissions!"
+		message_admins("[key_name_admin(usr)][msg]")
+		log_admin("[key_name(usr)][msg]")
 		return QDEL_HINT_LETMELIVE
 	. = ..()
 
 /datum/admins/proc/activate()
 	if(IsAdminAdvancedProcCall())
-		alert_to_permissions_elevation_attempt(usr)
+		var/msg = " has tried to elevate permissions!"
+		message_admins("[key_name_admin(usr)][msg]")
+		log_admin("[key_name(usr)][msg]")
 		return
 	GLOB.deadmins -= target
 	GLOB.admin_datums[target] = src
 	deadmined = FALSE
-	plane_debug = new(src)
+	QDEL_NULL(plane_debug)
 	if (GLOB.directory[target])
 		associate(GLOB.directory[target]) //find the client for a ckey if they are connected and associate them with us
 
 
 /datum/admins/proc/deactivate()
 	if(IsAdminAdvancedProcCall())
-		alert_to_permissions_elevation_attempt(usr)
+		var/msg = " has tried to elevate permissions!"
+		message_admins("[key_name_admin(usr)][msg]")
+		log_admin("[key_name(usr)][msg]")
 		return
 	GLOB.deadmins[target] = src
 	GLOB.admin_datums -= target
-	QDEL_NULL(plane_debug)
 	deadmined = TRUE
 
 	var/client/client = owner || GLOB.directory[target]
@@ -111,7 +119,9 @@ GLOBAL_PROTECT(href_token)
 
 /datum/admins/proc/associate(client/client)
 	if(IsAdminAdvancedProcCall())
-		alert_to_permissions_elevation_attempt(usr)
+		var/msg = " has tried to elevate permissions!"
+		message_admins("[key_name_admin(usr)][msg]")
+		log_admin("[key_name(usr)][msg]")
 		return
 
 	if(!istype(client))
@@ -153,7 +163,9 @@ GLOBAL_PROTECT(href_token)
 
 /datum/admins/proc/disassociate()
 	if(IsAdminAdvancedProcCall())
-		alert_to_permissions_elevation_attempt(usr)
+		var/msg = " has tried to elevate permissions!"
+		message_admins("[key_name_admin(usr)][msg]")
+		log_admin("[key_name(usr)][msg]")
 		return
 	if(owner)
 		GLOB.admins -= owner

@@ -12,7 +12,7 @@
 	src.crack_appearances = crack_appearances
 	src.crack_integrity = crack_integrity
 
-/datum/component/cracked/Destroy(force)
+/datum/component/cracked/Destroy(force, silent)
 	RemoveCracks(parent, length(applied_cracks))
 	return ..()
 

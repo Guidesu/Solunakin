@@ -50,15 +50,16 @@
 	if(!.)
 		return FALSE
 
-	LAZYINITLIST(alerted)
+	alerted = null
 	var/do_alert = (COOLDOWN_FINISHED(src, alert_cooldown) && (locate(/mob/living) in contents))
 	if(!do_alert)
-		return TRUE
 
-	alerted.Cut() // just in case we runtimed and the list didn't get cleared in after_open
+		return TRUE
 	// Cache the list before we open the box.
-	for(var/mob/living/alerted_mob in viewers(7, src))
-		alerted += alerted_mob
+	alerted = viewers(7, src)
+	// There are no mobs to alert? clear the list & prevent further action after opening the box
+	if(!(locate(/mob/living) in alerted))
+		alerted = null
 
 	return TRUE
 
@@ -76,7 +77,6 @@
 			alerted_mob.face_atom(src)
 		alerted_mob.do_alert_animation()
 
-	alerted.Cut()
 	playsound(loc, 'sound/machines/chime.ogg', 50, FALSE, -5)
 
 /// Does the MGS ! animation

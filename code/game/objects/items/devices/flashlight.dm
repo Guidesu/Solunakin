@@ -15,7 +15,7 @@
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
 	custom_materials = list(/datum/material/iron= SMALL_MATERIAL_AMOUNT * 0.5, /datum/material/glass= SMALL_MATERIAL_AMOUNT * 0.2)
 	actions_types = list(/datum/action/item_action/toggle_light)
@@ -293,35 +293,27 @@
 	inhand_icon_state = ""
 	worn_icon_state = "pen"
 	w_class = WEIGHT_CLASS_TINY
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	light_range = 2
-	COOLDOWN_DECLARE(holosign_cooldown)
+	var/holo_cooldown = 0
 
 /obj/item/flashlight/pen/afterattack(atom/target, mob/user, proximity_flag)
 	. = ..()
-	if(proximity_flag)
-		return
-
-	if(!COOLDOWN_FINISHED(src, holosign_cooldown))
-		balloon_alert(user, "not ready!")
-		return
-
-	var/target_turf = get_turf(target)
-	var/mob/living/living_target = locate(/mob/living) in target_turf
-
-	if(!living_target || (living_target == user))
-		return
-
-	to_chat(living_target, span_boldnotice("[user] is offering medical assistance; please halt your actions."))
-	new /obj/effect/temp_visual/medical_holosign(target_turf, user) //produce a holographic glow
-	COOLDOWN_START(src, holosign_cooldown, 10 SECONDS)
+	if(!proximity_flag)
+		if(holo_cooldown > world.time)
+			to_chat(user, span_warning("[src] is not ready yet!"))
+			return
+		var/T = get_turf(target)
+		if(locate(/mob/living) in T)
+			new /obj/effect/temp_visual/medical_holosign(T,user) //produce a holographic glow
+			holo_cooldown = world.time + 10 SECONDS
+			return
 
 // see: [/datum/wound/burn/flesh/proc/uv()]
 /obj/item/flashlight/pen/paramedic
 	name = "paramedic penlight"
 	desc = "A high-powered UV penlight intended to help stave off infection in the field on serious burned patients. Probably really bad to look into."
 	icon_state = "penlight_surgical"
-	light_color = LIGHT_COLOR_PURPLE
 	/// Our current UV cooldown
 	COOLDOWN_DECLARE(uv_cooldown)
 	/// How long between UV fryings
@@ -367,7 +359,7 @@
 	light_system = STATIC_LIGHT
 	light_color = LIGHT_COLOR_FAINT_BLUE
 	w_class = WEIGHT_CLASS_BULKY
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	custom_materials = null
 	start_on = TRUE
 
@@ -529,7 +521,7 @@
 	randomize_fuel = FALSE
 	trash_type = /obj/item/trash/candle
 	can_be_extinguished = TRUE
-	var/scented_type //NOVA EDIT ADDITION /// Pollutant type for scented candles
+	var/scented_type //SKYRAT EDIT ADDITION /// Pollutant type for scented candles
 	/// The current wax level, used for drawing the correct icon
 	var/current_wax_level = 1
 	/// The previous wax level, remembered so we only have to make 3 update_appearance calls total as opposed to every tick
@@ -690,8 +682,8 @@
 	light_system = MOVABLE_LIGHT
 
 /obj/item/flashlight/emp
-	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // NOVA EDIT
-	special_desc = "This flashlight is equipped with a miniature EMP generator." //NOVA EDIT
+	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // SKYRAT EDIT
+	special_desc = "This flashlight is equipped with a miniature EMP generator." //SKYRAT EDIT
 	var/emp_max_charges = 4
 	var/emp_cur_charges = 4
 	var/charge_timer = 0
@@ -910,7 +902,7 @@
 	light_system = MOVABLE_LIGHT
 	light_range = 15
 	light_power = 1
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	item_flags = DROPDEL
 	actions_types = list()
 

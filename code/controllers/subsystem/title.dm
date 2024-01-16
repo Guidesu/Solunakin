@@ -1,4 +1,4 @@
-/* NOVA EDIT REMOVAL
+/* SKYRAT EDIT REMOVAL
 SUBSYSTEM_DEF(title)
 	name = "Title Screen"
 	flags = SS_NO_FIRE

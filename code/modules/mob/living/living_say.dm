@@ -20,11 +20,11 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	RADIO_KEY_SYNDICATE = RADIO_CHANNEL_SYNDICATE,
 	RADIO_KEY_UPLINK = RADIO_CHANNEL_UPLINK,
 	RADIO_KEY_CENTCOM = RADIO_CHANNEL_CENTCOM,
-	RADIO_KEY_FACTION = RADIO_CHANNEL_FACTION, //NOVA EDIT ADDITION - FACTION
-	RADIO_KEY_CYBERSUN = RADIO_CHANNEL_CYBERSUN, //NOVA EDIT ADDITION - MAPPING
-	RADIO_KEY_INTERDYNE = RADIO_CHANNEL_INTERDYNE, //NOVA EDIT ADDITION - MAPPING
-	RADIO_KEY_GUILD = RADIO_CHANNEL_GUILD, //NOVA EDIT ADDITION - MAPPING
-	RADIO_KEY_TARKON = RADIO_CHANNEL_TARKON, //NOVA EDIT ADDITION - MAPPING
+	RADIO_KEY_FACTION = RADIO_CHANNEL_FACTION, //SKYRAT EDIT ADDITION - FACTION
+	RADIO_KEY_CYBERSUN = RADIO_CHANNEL_CYBERSUN, //SKYRAT EDIT ADDITION - MAPPING
+	RADIO_KEY_INTERDYNE = RADIO_CHANNEL_INTERDYNE, //SKYRAT EDIT ADDITION - MAPPING
+	RADIO_KEY_GUILD = RADIO_CHANNEL_GUILD, //SKYRAT EDIT ADDITION - MAPPING
+	RADIO_KEY_TARKON = RADIO_CHANNEL_TARKON, //SKYRAT EDIT ADDITION - MAPPING
 
 	// Admin
 	MODE_KEY_ADMIN = MODE_ADMIN,
@@ -147,7 +147,7 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 			say_dead(original_message)
 			return
 
-	if(HAS_TRAIT(src, TRAIT_SOFTSPOKEN) && !HAS_TRAIT(src, TRAIT_SIGN_LANG)) // softspoken trait only applies to spoken languages
+	if(HAS_TRAIT(src, TRAIT_SOFTSPOKEN))
 		message_mods[WHISPER_MODE] = MODE_WHISPER
 
 	if(client && SSlag_switch.measures[SLOWMODE_SAY] && !HAS_TRAIT(src, TRAIT_BYPASS_MEASURES) && !forced && src == usr)
@@ -190,10 +190,11 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 	last_say_args_ref = REF(args)
 #endif
 
-	// Make sure the arglist is passed exactly - don't pass a copy of it. Say signal handlers will modify some of the parameters.
-	var/sigreturn = SEND_SIGNAL(src, COMSIG_MOB_SAY, args)
-	if(sigreturn & COMPONENT_UPPERCASE_SPEECH)
-		message = uppertext(message)
+	if(!HAS_TRAIT(src, TRAIT_SIGN_LANG)) // if using sign language skip sending the say signal
+		// Make sure the arglist is passed exactly - don't pass a copy of it. Say signal handlers will modify some of the parameters.
+		var/sigreturn = SEND_SIGNAL(src, COMSIG_MOB_SAY, args)
+		if(sigreturn & COMPONENT_UPPERCASE_SPEECH)
+			message = uppertext(message)
 
 	var/list/message_data = treat_message(message) // unfortunately we still need this
 	message = message_data["message"]
@@ -217,10 +218,6 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 			succumb()
 		return
 
-	// NOVA EDIT ADDITION START: autopunctuation
-	//ensure EOL punctuation exists and that word-bounded 'i' are capitalized before we do anything else
-	message = autopunct_bare(message)
-	// NOVA EDIT ADDITION END
 	//This is before anything that sends say a radio message, and after all important message type modifications, so you can scumb in alien chat or something
 	if(saymode && !saymode.handle_message(src, message, language))
 		return
@@ -259,7 +256,7 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 
 
 /mob/living/Hear(message, atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, list/message_mods = list(), message_range=0)
-	if((SEND_SIGNAL(src, COMSIG_MOVABLE_PRE_HEAR, args) & COMSIG_MOVABLE_CANCEL_HEARING) || !GET_CLIENT(src))
+	if(!GET_CLIENT(src))
 		return FALSE
 
 	var/deaf_message
@@ -287,7 +284,7 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 	var/dist = get_dist(speaker, src) - message_range
 	if(dist > 0 && dist <= EAVESDROP_EXTRA_RANGE && !HAS_TRAIT(src, TRAIT_GOOD_HEARING) && !isobserver(src)) // ghosts can hear all messages clearly
 		raw_message = stars(raw_message)
-	if (message_range != INFINITY && dist > EAVESDROP_EXTRA_RANGE && !HAS_TRAIT(src, TRAIT_GOOD_HEARING) && !isobserver(src))
+	if (dist > EAVESDROP_EXTRA_RANGE && !HAS_TRAIT(src, TRAIT_GOOD_HEARING) && !isobserver(src))
 		return FALSE // Too far away and don't have good hearing, you can't hear anything
 
 	// we need to send this signal before compose_message() is used since other signals need to modify
@@ -510,11 +507,11 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 	return list("message" = message, "tts_message" = tts_message, "tts_filter" = tts_filter)
 
 /mob/living/proc/radio(message, list/message_mods = list(), list/spans, language)
-	//NOVA EDIT ADDITION BEGIN
-	if((message_mods[MODE_HEADSET] || message_mods[RADIO_EXTENSION]) && !(mobility_flags & MOBILITY_USE) && !isAI(src) && !ispAI(src) && !ismecha(loc)) // If can't use items, you can't press the button
+	//SKYRAT EDIT ADDITION BEGIN
+	if((message_mods[MODE_HEADSET] || message_mods[RADIO_EXTENSION]) && !(mobility_flags & MOBILITY_USE) && !isAI(src) &&  !ispAI(src)) // If can't use items, you can't press the button
 		to_chat(src, span_warning("You can't use the radio right now as you can't reach the button!"))
 		return ITALICS | REDUCE_RANGE
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 	var/obj/item/implant/radio/imp = locate() in src
 	if(imp?.radio.is_on())
 		if(message_mods[MODE_HEADSET])
@@ -540,7 +537,7 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 				I.talk_into(src, message, , spans, language, message_mods)
 			return ITALICS | REDUCE_RANGE
 
-	return NONE
+	return 0
 
 /mob/living/say_mod(input, list/message_mods = list())
 	if(message_mods[WHISPER_MODE] == MODE_WHISPER)

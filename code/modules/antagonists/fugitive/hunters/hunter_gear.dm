@@ -51,8 +51,6 @@
 
 /obj/structure/closet/crate/eva
 	name = "EVA crate"
-	icon_state = "o2crate"
-	base_icon_state = "o2crate"
 
 /obj/structure/closet/crate/eva/PopulateContents()
 	..()
@@ -71,7 +69,7 @@
 	name = "psyker navigation warper"
 	desc = "Uses amplified brainwaves to designate and map a precise transit location for the psyker shuttle."
 	icon_screen = "recharge_comp_on"
-	interaction_flags_machine = INTERACT_MACHINE_ALLOW_SILICON //blind friendly
+	interaction_flags_machine = INTERACT_MACHINE_ALLOW_SILICON | INTERACT_MACHINE_SET_MACHINE //blind friendly
 	x_offset = 0
 	y_offset = 11
 

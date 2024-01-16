@@ -17,6 +17,8 @@
 	/// How long to wait between each rewind
 	var/rewind_interval
 
+	/// The starting value of clone loss at the beginning of the effect
+	var/clone_loss = 0
 	/// The starting value of toxin loss at the beginning of the effect
 	var/tox_loss = 0
 	/// The starting value of oxygen loss at the beginning of the effect
@@ -44,6 +46,7 @@
 
 	if(isliving(parent))
 		var/mob/living/L = parent
+		clone_loss = L.getCloneLoss()
 		tox_loss = L.getToxLoss()
 		oxy_loss = L.getOxyLoss()
 		stamina_loss = L.getStaminaLoss()
@@ -93,6 +96,7 @@
 
 /datum/component/dejavu/proc/rewind_living()
 	var/mob/living/master = parent
+	master.setCloneLoss(clone_loss)
 	master.setToxLoss(tox_loss)
 	master.setOxyLoss(oxy_loss)
 	master.setStaminaLoss(stamina_loss)

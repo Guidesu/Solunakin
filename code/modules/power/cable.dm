@@ -142,7 +142,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 	return ..() // then go ahead and delete the cable
 
 /obj/structure/cable/deconstruct(disassembled = TRUE)
-	if(!(obj_flags & NO_DECONSTRUCTION))
+	if(!(flags_1 & NODECONSTRUCT_1))
 		var/obj/item/stack/cable_coil/cable = new(drop_location(), 1)
 		cable.set_cable_color(cable_color)
 	qdel(src)
@@ -439,7 +439,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 	throw_speed = 3
 	throw_range = 5
 	mats_per_unit = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.1, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.1)
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
 	attack_verb_continuous = list("whips", "lashes", "disciplines", "flogs")
 	attack_verb_simple = list("whip", "lash", "discipline", "flog")
@@ -464,7 +464,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 
 /obj/item/stack/cable_coil/examine(mob/user)
 	. = ..()
-	. += "<b>Use it in hand</b> to change the layer you are placing on, amongst other things."
+	. += "<b>Ctrl+Click</b> to change the layer you are placing on."
 
 /obj/item/stack/cable_coil/update_name()
 	. = ..()
@@ -575,16 +575,16 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 	if(affecting && IS_ROBOTIC_LIMB(affecting))
 		if(user == H)
 			user.visible_message(span_notice("[user] starts to fix some of the wires in [H]'s [affecting.name]."), span_notice("You start fixing some of the wires in [H == user ? "your" : "[H]'s"] [affecting.name]."))
-			/* NOVA EDIT START - ORIGINAL:
+			/* SKYRAT EDIT START - ORIGINAL:
 			if(!do_after(user, 50, H))
 				return
 			*/
-		// NOVA EDIT CHANGE START
+		// SKYRAT EDIT CHANGE START
 		if(!do_after(user, (user == H ? self_delay : other_delay)))
 			return
-		// NOVA EDIT CHANGE END
+		// SKYRAT EDIT CHANGE END
 		if(item_heal_robotic(H, user, 0, 15))
-			user.visible_message(span_green("[user] fixes some of the wires in to [H]'s [affecting.name]."), span_green("You fix some of the wires in [H == user ? "your" : "[H]'s"] [affecting.name].")) // NOVA EDIT ADD
+			user.visible_message(span_green("[user] fixes some of the wires in to [H]'s [affecting.name]."), span_green("You fix some of the wires in [H == user ? "your" : "[H]'s"] [affecting.name].")) // SKYRAT EDIT ADD
 			use(1)
 		return
 	else

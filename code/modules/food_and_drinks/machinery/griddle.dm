@@ -37,7 +37,7 @@
 
 /obj/machinery/griddle/crowbar_act(mob/living/user, obj/item/I)
 	. = ..()
-	if(obj_flags & NO_DECONSTRUCTION)
+	if(flags_1 & NODECONSTRUCT_1)
 		return
 	if(default_deconstruction_crowbar(I, ignore_panel = TRUE))
 		return
@@ -149,7 +149,7 @@
 /obj/machinery/griddle/wrench_act(mob/living/user, obj/item/tool)
 	. = ..()
 	default_unfasten_wrench(user, tool, time = 2 SECONDS)
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/griddle/proc/on_storage_dump(datum/source, obj/item/storage_source, mob/user)
 	SIGNAL_HANDLER

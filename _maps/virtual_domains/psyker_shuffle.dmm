@@ -96,6 +96,10 @@
 /obj/item/gun/ballistic/revolver/mateba,
 /turf/open/indestructible/dark,
 /area/ruin/space/has_grav/powered/virtual_domain)
+"G" = (
+/obj/structure/closet/crate,
+/turf/open/indestructible/dark,
+/area/ruin/space/has_grav/powered/virtual_domain)
 "K" = (
 /obj/structure/closet/crate/eva,
 /turf/open/indestructible/dark,
@@ -129,9 +133,7 @@
 /turf/open/indestructible/dark,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "U" = (
-/obj/modular_map_root/safehouse{
-	key = "bathroom"
-	},
+/obj/effect/landmark/bitrunning/safehouse_spawn,
 /turf/template_noop,
 /area/virtual_domain/safehouse)
 "X" = (
@@ -147,6 +149,118 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 
 (1,1,1) = {"
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+"}
+(2,1,1) = {"
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+"}
+(3,1,1) = {"
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+"}
+(4,1,1) = {"
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+"}
+(5,1,1) = {"
 o
 o
 Y
@@ -174,12 +288,12 @@ o
 o
 o
 "}
-(2,1,1) = {"
+(6,1,1) = {"
 o
 o
 Y
 Y
-Q
+r
 Q
 Q
 Q
@@ -202,7 +316,7 @@ o
 o
 o
 "}
-(3,1,1) = {"
+(7,1,1) = {"
 o
 o
 Y
@@ -230,7 +344,7 @@ o
 o
 o
 "}
-(4,1,1) = {"
+(8,1,1) = {"
 o
 o
 Y
@@ -258,7 +372,7 @@ o
 o
 o
 "}
-(5,1,1) = {"
+(9,1,1) = {"
 o
 o
 Y
@@ -286,7 +400,7 @@ o
 o
 o
 "}
-(6,1,1) = {"
+(10,1,1) = {"
 o
 o
 Y
@@ -314,7 +428,7 @@ o
 o
 o
 "}
-(7,1,1) = {"
+(11,1,1) = {"
 o
 o
 Y
@@ -342,7 +456,7 @@ o
 o
 o
 "}
-(8,1,1) = {"
+(12,1,1) = {"
 o
 o
 Y
@@ -370,7 +484,7 @@ o
 o
 o
 "}
-(9,1,1) = {"
+(13,1,1) = {"
 o
 o
 Y
@@ -398,12 +512,12 @@ Y
 Y
 o
 "}
-(10,1,1) = {"
+(14,1,1) = {"
 o
 o
 Y
 a
-Q
+a
 Y
 Q
 Q
@@ -426,7 +540,7 @@ U
 Y
 Y
 "}
-(11,1,1) = {"
+(15,1,1) = {"
 o
 o
 Y
@@ -434,7 +548,7 @@ Y
 Y
 Y
 Q
-Q
+G
 Q
 Y
 Y
@@ -454,7 +568,7 @@ t
 B
 Y
 "}
-(12,1,1) = {"
+(16,1,1) = {"
 o
 o
 Y
@@ -482,7 +596,7 @@ t
 B
 Y
 "}
-(13,1,1) = {"
+(17,1,1) = {"
 o
 o
 Y
@@ -510,7 +624,7 @@ t
 B
 Y
 "}
-(14,1,1) = {"
+(18,1,1) = {"
 o
 o
 Y
@@ -538,7 +652,7 @@ t
 B
 Y
 "}
-(15,1,1) = {"
+(19,1,1) = {"
 o
 o
 Y
@@ -566,7 +680,7 @@ t
 B
 Y
 "}
-(16,1,1) = {"
+(20,1,1) = {"
 o
 o
 Y
@@ -594,7 +708,7 @@ N
 B
 Y
 "}
-(17,1,1) = {"
+(21,1,1) = {"
 o
 o
 Y
@@ -622,7 +736,7 @@ Y
 B
 Y
 "}
-(18,1,1) = {"
+(22,1,1) = {"
 o
 o
 Y
@@ -650,7 +764,7 @@ Y
 B
 Y
 "}
-(19,1,1) = {"
+(23,1,1) = {"
 o
 o
 o
@@ -678,7 +792,7 @@ Y
 Y
 Y
 "}
-(20,1,1) = {"
+(24,1,1) = {"
 o
 o
 Y
@@ -706,7 +820,7 @@ o
 o
 o
 "}
-(21,1,1) = {"
+(25,1,1) = {"
 Y
 Y
 Y
@@ -734,7 +848,7 @@ o
 o
 o
 "}
-(22,1,1) = {"
+(26,1,1) = {"
 Y
 a
 Q
@@ -762,7 +876,7 @@ o
 o
 o
 "}
-(23,1,1) = {"
+(27,1,1) = {"
 Y
 Q
 Q
@@ -790,7 +904,7 @@ o
 o
 o
 "}
-(24,1,1) = {"
+(28,1,1) = {"
 Y
 Y
 Q
@@ -805,10 +919,10 @@ Q
 F
 Q
 Y
+s
 Q
 Q
-Q
-Q
+a
 Y
 o
 o
@@ -818,7 +932,7 @@ o
 o
 o
 "}
-(25,1,1) = {"
+(29,1,1) = {"
 Y
 Y
 Q
@@ -846,7 +960,7 @@ o
 o
 o
 "}
-(26,1,1) = {"
+(30,1,1) = {"
 Y
 Q
 Q
@@ -874,7 +988,7 @@ o
 o
 o
 "}
-(27,1,1) = {"
+(31,1,1) = {"
 Y
 a
 Q
@@ -902,9 +1016,9 @@ o
 o
 o
 "}
-(28,1,1) = {"
+(32,1,1) = {"
 Y
-Q
+a
 Y
 Y
 Y
@@ -912,7 +1026,7 @@ o
 Y
 Y
 Q
-Q
+a
 Y
 Y
 Y
@@ -930,7 +1044,7 @@ o
 o
 o
 "}
-(29,1,1) = {"
+(33,1,1) = {"
 Y
 Y
 Y

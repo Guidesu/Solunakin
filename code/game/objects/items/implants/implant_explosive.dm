@@ -124,10 +124,11 @@
 	notify_ghosts(
 		"[imp_in] is about to detonate their explosive implant!",
 		source = src,
-		header = "Tick Tick Tick...",
-		notify_flags = NOTIFY_CATEGORY_NOFLASH,
+		action = NOTIFY_ORBIT,
+		flashwindow = FALSE,
 		ghost_sound = 'sound/machines/warning-buzzer.ogg',
-		notify_volume = 75,
+		header = "Tick Tick Tick...",
+		notify_volume = 75
 	)
 
 	playsound(loc, 'sound/items/timer.ogg', 30, FALSE)

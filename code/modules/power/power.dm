@@ -60,8 +60,6 @@
 	return can_change_cable_layer
 
 /obj/machinery/power/multitool_act(mob/living/user, obj/item/tool)
-	. = ITEM_INTERACT_BLOCKING
-
 	if(!can_change_cable_layer || !cable_layer_change_checks(user, tool))
 		return
 
@@ -71,7 +69,7 @@
 
 	cable_layer = GLOB.cable_name_to_layer[choice]
 	balloon_alert(user, "now operating on the [choice]")
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/power/multitool_act_secondary(mob/living/user, obj/item/tool)
 	return multitool_act(user, tool)

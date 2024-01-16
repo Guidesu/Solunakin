@@ -100,6 +100,9 @@ SUBSYSTEM_DEF(shuttle)
 	/// Wishlist items made by crew for cargo to purchase at their leisure.
 	var/list/request_list = list()
 
+	/// A listing of previously delivered supply packs.
+	var/list/order_history = list()
+
 	/// A list of job accesses that are able to purchase any shuttles.
 	var/list/has_purchase_shuttle_access
 
@@ -147,10 +150,10 @@ SUBSYSTEM_DEF(shuttle)
 	while(length(pack_processing))
 		var/datum/supply_pack/pack = pack_processing[length(pack_processing)]
 		pack_processing.len--
-		//NOVA EDIT START
+		//SKYRAT EDIT START
 		if(pack == /datum/supply_pack/armament)
 			continue
-		//NOVA EDIT END
+		//SKYRAT EDIT END
 		if(ispath(pack, /datum/supply_pack))
 			pack = new pack
 
@@ -262,27 +265,13 @@ SUBSYSTEM_DEF(shuttle)
 		message_admins(msg)
 		log_shuttle("[msg] Alive: [alive], Roundstart: [total], Threshold: [threshold]")
 		emergency_no_recall = TRUE
-		priority_announce(
-			text = "Catastrophic casualties detected: crisis shuttle protocols activated - jamming recall signals across all frequencies.",
-			title = "Emergency Shuttle Dispatched",
-			sound = ANNOUNCER_SHUTTLECALLED,
-			sender_override = "Emergency Shuttle Uplink Alert",
-			color_override = "orange",
-		)
+		priority_announce("Catastrophic casualties detected: crisis shuttle protocols activated - jamming recall signals across all frequencies.")
 		if(emergency.timeLeft(1) > emergency_call_time * ALERT_COEFF_AUTOEVAC_CRITICAL)
 			emergency.request(null, set_coefficient = ALERT_COEFF_AUTOEVAC_CRITICAL)
 
 /datum/controller/subsystem/shuttle/proc/block_recall(lockout_timer)
-	if(isnull(lockout_timer))
-		CRASH("Emergency shuttle block was called, but missing a value for the lockout duration")
 	if(admin_emergency_no_recall)
-		priority_announce(
-			text = "Emergency shuttle uplink interference detected, shuttle call disabled while the system reinitializes. Estimated restore in [DisplayTimeText(lockout_timer, round_seconds_to = 60)].",
-			title = "Uplink Interference",
-			sound = ANNOUNCER_SHUTTLE, // NOVA EDIT CHANGE - Announcer Sounds - ORIGINAL: sound = 'sound/misc/announce_dig.ogg',
-			sender_override = "Emergency Shuttle Uplink Alert",
-			color_override = "grey",
-		)
+		priority_announce("Error!", "Emergency Shuttle Uplink Alert", ANNOUNCER_SHUTTLE) // SKYRAT EDIT CHANGE - Announcer Sounds
 		addtimer(CALLBACK(src, PROC_REF(unblock_recall)), lockout_timer)
 		return
 	emergency_no_recall = TRUE
@@ -290,13 +279,7 @@ SUBSYSTEM_DEF(shuttle)
 
 /datum/controller/subsystem/shuttle/proc/unblock_recall()
 	if(admin_emergency_no_recall)
-		priority_announce(
-			text= "Emergency shuttle uplink services are now back online.",
-			title = "Uplink Restored",
-			sound = ANNOUNCER_SHUTTLE, // NOVA EDIT CHANGE - Announcer Sounds - ORIGINAL: sound = 'sound/misc/announce_dig.ogg',
-			sender_override = "Emergency Shuttle Uplink Alert",
-			color_override = "green",
-		)
+		priority_announce("Error!", "Emergency Shuttle Uplink Alert", ANNOUNCER_SHUTTLE) // SKYRAT EDIT CHANGE - Announcer Sounds
 		return
 	emergency_no_recall = FALSE
 
@@ -447,9 +430,9 @@ SUBSYSTEM_DEF(shuttle)
 				return
 		if(SEC_LEVEL_BLUE)
 			//if(emergency.timeLeft(1) < emergency_call_time * 0.5) ORIGINAL
-			if(emergency.timeLeft(1) < emergency_call_time * 0.6) //NOVA EDIT CHANGE - ALERTS
+			if(emergency.timeLeft(1) < emergency_call_time * 0.6) //SKYRAT EDIT CHANGE - ALERTS
 				return
-		//NOVA EDIT ADDITION BEGIN - ALERTS
+		//SKYRAT EDIT ADDITION BEGIN - ALERTS
 		if(SEC_LEVEL_ORANGE)
 			if(emergency.timeLeft(1) < emergency_call_time * 0.4)
 				return
@@ -459,7 +442,7 @@ SUBSYSTEM_DEF(shuttle)
 		if(SEC_LEVEL_AMBER)
 			if(emergency.timeLeft(1) < emergency_call_time * 0.4)
 				return
-		//NOVA EDIT ADDITION END
+		//SKYRAT EDIT ADDITION END
 		else
 			if(emergency.timeLeft(1) < emergency_call_time * 0.25)
 				return
@@ -536,23 +519,15 @@ SUBSYSTEM_DEF(shuttle)
 		emergency.mode = SHUTTLE_STRANDED
 		emergency.timer = null
 		emergency.sound_played = FALSE
-		priority_announce(
-			text = "Departure has been postponed indefinitely pending conflict resolution.",
-			title = "Hostile Environment Detected",
-			sound = 'sound/misc/notice1.ogg',
-			sender_override = "Emergency Shuttle Uplink Alert",
-			color_override = "grey",
-		)
+		priority_announce("Hostile environment detected. \
+			Departure has been postponed indefinitely pending \
+			conflict resolution.", null, 'sound/misc/notice1.ogg', ANNOUNCEMENT_TYPE_PRIORITY)
 	if(!emergency_no_escape && (emergency.mode == SHUTTLE_STRANDED))
 		emergency.mode = SHUTTLE_DOCKED
 		emergency.setTimer(emergency_dock_time)
-		priority_announce(
-			text = "You have [DisplayTimeText(emergency_dock_time)] to board the emergency shuttle.",
-			title = "Hostile Environment Resolved",
-			sound = 'sound/misc/announce_dig.ogg',
-			sender_override = "Emergency Shuttle Uplink Alert",
-			color_override = "green",
-		)
+		priority_announce("Hostile environment resolved. \
+			You have 3 minutes to board the Emergency Shuttle.",
+			null, ANNOUNCER_SHUTTLEDOCK, ANNOUNCEMENT_TYPE_PRIORITY)
 
 //try to move/request to dock_home if possible, otherwise dock_away. Mainly used for admin buttons
 /datum/controller/subsystem/shuttle/proc/toggleShuttle(shuttle_id, dock_home, dock_away, timed)
@@ -742,6 +717,8 @@ SUBSYSTEM_DEF(shuttle)
 		shopping_list = SSshuttle.shopping_list
 	if (istype(SSshuttle.request_list))
 		request_list = SSshuttle.request_list
+	if (istype(SSshuttle.order_history))
+		order_history = SSshuttle.order_history
 
 	if (istype(SSshuttle.shuttle_loan))
 		shuttle_loan = SSshuttle.shuttle_loan

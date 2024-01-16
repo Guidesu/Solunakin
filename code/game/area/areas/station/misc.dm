@@ -31,4 +31,3 @@
 	requires_power = TRUE
 	ambience_index = AMBIENCE_MINING
 	area_flags = UNIQUE_AREA
-	outdoors = TRUE

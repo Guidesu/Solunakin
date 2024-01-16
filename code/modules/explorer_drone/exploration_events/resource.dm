@@ -215,7 +215,7 @@
 	description = "You meet an inhabitant of this site, looking ragged and clearly agitated about something."
 	no_tool_description = "You can't tell what it's trying to convey without a translator."
 	has_tool_description = "Your best translation dictates that it would like to share its hobby with you!"
-	success_log = "Received a gift from a stranger."
+	success_log = "Recieved a gift from a stranger."
 	delay_message = "Enduring..."
 	action_text = "Accept gift."
 	loot_type = /obj/item/cardpack/series_one
@@ -282,7 +282,7 @@
 	has_tool_description = "Your drill will allow you to extract the deposit!"
 	action_text = "Mine"
 	delay_message = "Mining..."
-	var/static/list/possible_materials = list(/datum/material/silver,/datum/material/bananium) //only add materials with sheet type here //NOVA EDIT - REMOVED /datum/material/pizza
+	var/static/list/possible_materials = list(/datum/material/silver,/datum/material/bananium) //only add materials with sheet type here //SKYRAT EDIT - REMOVED /datum/material/pizza
 	var/loot_amount = 30
 	var/chosen_material_type
 

@@ -55,9 +55,7 @@
 
 /datum/component/ranged_attacks/proc/fire_ranged_attack(mob/living/basic/firer, atom/target, modifiers)
 	SIGNAL_HANDLER
-	if(!COOLDOWN_FINISHED(src, fire_cooldown))
-		return
-	if(SEND_SIGNAL(firer, COMSIG_BASICMOB_PRE_ATTACK_RANGED, target, modifiers) & COMPONENT_CANCEL_RANGED_ATTACK)
+	if (!COOLDOWN_FINISHED(src, fire_cooldown))
 		return
 	COOLDOWN_START(src, fire_cooldown, cooldown_time)
 	INVOKE_ASYNC(src, PROC_REF(async_fire_ranged_attack), firer, target, modifiers)

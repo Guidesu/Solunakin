@@ -1,7 +1,7 @@
 /*Power cells are in code\modules\power\cell.dm
 
 If you create T5+ please take a pass at mech_fabricator.dm. The parts being good enough allows it to go into minus values and create materials out of thin air when printing stuff.*/
-/obj/item/storage/part_replacer//NOVA EDIT - ICON OVERRIDEN BY AESTHETICS - SEE MODULE
+/obj/item/storage/part_replacer//SKYRAT EDIT - ICON OVERRIDEN BY AESTHETICS - SEE MODULE
 	name = "rapid part exchange device"
 	desc = "Special mechanical module made to store, sort, and apply standard machine parts."
 	icon_state = "RPED"
@@ -69,7 +69,7 @@ If you create T5+ please take a pass at mech_fabricator.dm. The parts being good
 	else
 		playsound(src, pshoom_or_beepboopblorpzingshadashwoosh, 40, TRUE)
 
-/obj/item/storage/part_replacer/bluespace//NOVA EDIT - ICON OVERRIDEN BY AESTHETICS - SEE MODULE
+/obj/item/storage/part_replacer/bluespace//SKYRAT EDIT - ICON OVERRIDEN BY AESTHETICS - SEE MODULE
 	name = "bluespace rapid part exchange device"
 	desc = "A version of the RPED that allows for replacement of parts and scanning from a distance, along with higher capacity for parts."
 	icon_state = "BS_RPED"
@@ -195,19 +195,13 @@ If you create T5+ please take a pass at mech_fabricator.dm. The parts being good
 		new /obj/item/stock_parts/micro_laser(src)
 		new /obj/item/stock_parts/matter_bin(src)
 
-/obj/item/storage/part_replacer/cyborg //NOVA EDIT - ICON OVERRIDEN BY AESTHETICS - SEE MODULE
+/obj/item/storage/part_replacer/cyborg //SKYRAT EDIT - ICON OVERRIDEN BY AESTHETICS - SEE MODULE
 	name = "rapid part exchange device"
-	desc = "Special mechanical module made to store, sort, and apply standard machine parts. This one has an extra large compartment for more parts."
+	desc = "Special mechanical module made to store, sort, and apply standard machine parts."
 	icon_state = "borgrped"
 	inhand_icon_state = "RPED"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
-
-/obj/item/storage/part_replacer/cyborg/Initialize(mapload)
-	. = ..()
-	atom_storage.max_slots = 400
-	atom_storage.max_total_storage = 800
-	atom_storage.max_specific_storage = WEIGHT_CLASS_GIGANTIC
 
 /obj/item/storage/part_replacer/proc/get_sorted_parts(ignore_stacks = FALSE)
 	var/list/part_list = list()
@@ -230,7 +224,7 @@ If you create T5+ please take a pass at mech_fabricator.dm. The parts being good
 /obj/item/stock_parts
 	name = "stock part"
 	desc = "What?"
-	icon = 'icons/obj/devices/stock_parts.dmi'
+	icon = 'icons/obj/assemblies/stock_parts.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	var/rating = 1
 	///Used when a base part has a different name to higher tiers of part. For example, machine frames want any servo and not just a micro-servo.
@@ -471,6 +465,6 @@ If you create T5+ please take a pass at mech_fabricator.dm. The parts being good
 
 /obj/item/research//Makes testing much less of a pain -Sieve
 	name = "research"
-	icon = 'icons/obj/devices/stock_parts.dmi'
+	icon = 'icons/obj/assemblies/stock_parts.dmi'
 	icon_state = "capacitor"
 	desc = "A debug item for research."

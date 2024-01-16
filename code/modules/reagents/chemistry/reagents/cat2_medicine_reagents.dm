@@ -26,7 +26,6 @@
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/c2/helbital/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
-	. = ..()
 	var/death_is_coming = (affected_mob.getToxLoss() + affected_mob.getOxyLoss() + affected_mob.getFireLoss() + affected_mob.getBruteLoss())*normalise_creation_purity()
 	var/thou_shall_heal = 0
 	var/good_kind_of_healing = FALSE
@@ -46,11 +45,7 @@
 		. = UPDATE_MOB_HEALTH
 
 	if(good_kind_of_healing && !reaping && SPT_PROB(0.00005, seconds_per_tick)) //janken with the grim reaper!
-		notify_ghosts(
-			"[affected_mob] has entered a game of rock-paper-scissors with death!",
-			source = affected_mob,
-			header = "Who Will Win?",
-		)
+		notify_ghosts("[affected_mob] has entered a game of rock-paper-scissors with death!", source = affected_mob, action = NOTIFY_ORBIT, header = "Who Will Win?")
 		reaping = TRUE
 		if(affected_mob.apply_status_effect(/datum/status_effect/necropolis_curse, CURSE_BLINDING))
 			helbent = TRUE
@@ -79,6 +74,7 @@
 				affected_mob.revive(HEAL_ALL)
 				holder.del_reagent(type)
 				return
+	return ..() || .
 
 /datum/reagent/medicine/c2/helbital/overdose_process(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
@@ -98,8 +94,6 @@
 	ph = 8.2
 	taste_description = "bitter with a hint of alcohol"
 	reagent_state = SOLID
-	inverse_chem_val = 0.3
-	inverse_chem = /datum/reagent/inverse/libitoil
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/c2/libital/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
@@ -163,16 +157,13 @@
 /*Suffix: -uri*/
 /datum/reagent/medicine/c2/lenturi
 	name = "Lenturi"
-	description = "Used to treat burns. Applies stomach damage when it leaves your system."
+	description = "Used to treat burns. Makes you move slower while it is in your system. Applies stomach damage when it leaves your system."
 	reagent_state = LIQUID
 	color = "#6171FF"
 	ph = 4.7
 	var/resetting_probability = 0 //What are these for?? Can I remove them?
 	var/spammer = 0
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	inverse_chem_val = 0.4
-	inverse_chem = /datum/reagent/inverse/lentslurri
-
 
 /datum/reagent/medicine/c2/lenturi/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
@@ -191,8 +182,6 @@
 	var/resetting_probability = 0 //same with this? Old legacy vars that should be removed?
 	var/message_cd = 0
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	inverse_chem_val = 0.35
-	inverse_chem = /datum/reagent/inverse/aiuri
 
 /datum/reagent/medicine/c2/aiuri/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
@@ -213,19 +202,19 @@
 	inverse_chem = /datum/reagent/inverse/hercuri
 	inverse_chem_val = 0.3
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	process_flags = REAGENT_ORGANIC | REAGENT_SYNTHETIC // NOVA EDIT ADDITION - Lets hercuri process in synths
+	process_flags = REAGENT_ORGANIC | REAGENT_SYNTHETIC // SKYRAT EDIT ADDITION - Lets hercuri process in synths
 
 /datum/reagent/medicine/c2/hercuri/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
 	var/need_mob_update
-	// NOVA EDIT CHANGE BEGIN -- Adds check for owner_flags; indented the getFireLoss check and everything under it, so synths can get cooled down
+	// SKYRAT EDIT CHANGE BEGIN -- Adds check for owner_flags; indented the getFireLoss check and everything under it, so synths can get cooled down
 	var/owner_flags = affected_mob.dna.species.reagent_flags
 	if (owner_flags & PROCESS_ORGANIC)
 		if(affected_mob.getFireLoss() > 50)
 			need_mob_update = affected_mob.adjustFireLoss(-2 * REM * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 		else
 			need_mob_update = affected_mob.adjustFireLoss(-1.25 * REM * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
-	// NOVA EDIT CHANGE END
+	// SKYRAT EDIT CHANGE END
 	affected_mob.adjust_bodytemperature(rand(-25,-5) * TEMPERATURE_DAMAGE_COEFFICIENT * REM * seconds_per_tick, 50)
 	if(ishuman(affected_mob))
 		var/mob/living/carbon/human/humi = affected_mob
@@ -507,15 +496,13 @@
 		show_message = 0
 	if(!(methods & (PATCH|TOUCH|VAPOR)))
 		return
-	var/current_bruteloss = carbies.getBruteLoss() // because this will be changed after calling adjustBruteLoss()
-	var/current_fireloss = carbies.getFireLoss() // because this will be changed after calling adjustFireLoss()
-	var/harmies = clamp(carbies.adjustBruteLoss(-1.25 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, current_bruteloss)
-	var/burnies = clamp(carbies.adjustFireLoss(-1.25 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, current_fireloss)
+	var/harmies = min(carbies.getBruteLoss(), carbies.adjustBruteLoss(-1.25 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype)*-1)
+	var/burnies = min(carbies.getFireLoss(), carbies.adjustFireLoss(-1.25 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype)*-1)
 	for(var/i in carbies.all_wounds)
 		var/datum/wound/iter_wound = i
 		iter_wound.on_synthflesh(reac_volume)
 	var/need_mob_update = harmies + burnies
-	need_mob_update = carbies.adjustToxLoss((harmies + burnies)*(0.5 + (0.25*(1-creation_purity))), updating_health = FALSE, required_biotype = affected_biotype) || need_mob_update //0.5 - 0.75
+	need_mob_update += carbies.adjustToxLoss((harmies+burnies)*(0.5 + (0.25*(1-creation_purity))), updating_health = FALSE, required_biotype = affected_biotype) //0.5 - 0.75
 
 	if(need_mob_update)
 		carbies.updatehealth()
@@ -526,11 +513,11 @@
 	if(HAS_TRAIT_FROM(exposed_mob, TRAIT_HUSK, BURN) && carbies.getFireLoss() < UNHUSK_DAMAGE_THRESHOLD && (carbies.reagents.get_reagent_amount(/datum/reagent/medicine/c2/synthflesh) + reac_volume >= SYNTHFLESH_UNHUSK_AMOUNT))
 		carbies.cure_husk(BURN)
 		carbies.visible_message("<span class='nicegreen'>A rubbery liquid coats [carbies]'s burns. [carbies] looks a lot healthier!") //we're avoiding using the phrases "burnt flesh" and "burnt skin" here because carbies could be a skeleton or a golem or something
-	// NOVA EDIT ADDITION BEGIN - non-modular changeling balancing
+	// SKYRAT EDIT ADDITION BEGIN - non-modular changeling balancing
 	if(HAS_TRAIT_FROM(exposed_mob, TRAIT_HUSK, CHANGELING_DRAIN) && (carbies.reagents.get_reagent_amount(/datum/reagent/medicine/c2/synthflesh) + reac_volume >= SYNTHFLESH_LING_UNHUSK_AMOUNT))//Costs a little more than a normal husk
 		carbies.cure_husk(CHANGELING_DRAIN)
 		carbies.visible_message("<span class='nicegreen'>A rubbery liquid coats [carbies]'s tissues. [carbies] looks a lot healthier!")
-	// NOVA EDIT ADDITION END
+	// SKYRAT EDIT ADDITION END
 
 /******ORGAN HEALING******/
 /*Suffix: -rite*/
@@ -574,7 +561,7 @@
 /datum/reagent/medicine/c2/penthrite/on_mob_life(mob/living/carbon/human/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
 	var/need_mob_update
-	need_mob_update = affected_mob.adjustStaminaLoss(-12.5 * REM * seconds_per_tick, updating_stamina = FALSE) //NOVA EDIT ADDITION - COMBAT - makes your heart beat faster, fills you with energy. For miners
+	need_mob_update = affected_mob.adjustStaminaLoss(-12.5 * REM * seconds_per_tick, updating_stamina = FALSE) //SKYRAT EDIT ADDITION - COMBAT - makes your heart beat faster, fills you with energy. For miners
 	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_STOMACH, 0.25 * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
 	if(affected_mob.health <= HEALTH_THRESHOLD_CRIT && affected_mob.health > (affected_mob.crit_threshold + HEALTH_THRESHOLD_FULLCRIT * (2 * normalise_creation_purity()))) //we cannot save someone below our lowered crit threshold.
 

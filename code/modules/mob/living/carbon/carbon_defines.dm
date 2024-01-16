@@ -2,7 +2,7 @@
 	blood_volume = BLOOD_VOLUME_NORMAL
 	gender = MALE
 	pressure_resistance = 15
-	hud_possible = list(HEALTH_HUD,STATUS_HUD,ANTAG_HUD,GLAND_HUD, DNR_HUD) // NOVA EDIT ADDITION - DNR ICON
+	hud_possible = list(HEALTH_HUD,STATUS_HUD,ANTAG_HUD,GLAND_HUD, DNR_HUD) // SKYRAT EDIT ADDITION - DNR ICON
 	has_limbs = TRUE
 	held_items = list(null, null)
 	num_legs = 0 //Populated on init through list/bodyparts
@@ -15,6 +15,8 @@
 	var/list/obj/item/organ/organs = list()
 	///Same as [above][/mob/living/carbon/var/organs], but stores "slot ID" - "organ" pairs for easy access.
 	var/list/organs_slot = list()
+	///How many dream images we have left to send
+	var/dreaming = 0
 
 	///Whether or not the mob is handcuffed
 	var/obj/item/handcuffed = null
@@ -123,4 +125,4 @@
 	COOLDOWN_DECLARE(bleeding_message_cd)
 
 
-	var/next_smell = 0 //NOVA EDIT ADDITION /// Cooldown for the next smell
+	var/next_smell = 0 //SKYRAT EDIT ADDITION /// Cooldown for the next smell

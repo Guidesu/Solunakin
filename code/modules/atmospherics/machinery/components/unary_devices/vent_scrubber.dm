@@ -268,11 +268,11 @@
 
 			environment.garbage_collect()
 
-			// NOVA EDIT ADDITION
+			// SKYRAT EDIT ADDITION
 			if(isopenturf(tile))
 				var/turf/open/floor_turf = tile
 				floor_turf.pollution?.scrub_amount(1)
-			// NOVA EDIT END
+			// SKYRAT EDIT END
 
 			//Remix the resulting gases
 			air_contents.merge(filtered_out)

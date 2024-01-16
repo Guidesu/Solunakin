@@ -6,4 +6,5 @@
  */
 /datum/computer_file/program/maintenance
 	filetype = "MNT"
-	program_flags = PROGRAM_UNIQUE_COPY
+	available_on_ntnet = FALSE
+	unique_copy = TRUE

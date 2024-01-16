@@ -26,7 +26,7 @@
 		PROC_REF(delete_self),
 	)
 
-/datum/component/admin_popup/Destroy(force)
+/datum/component/admin_popup/Destroy(force, silent)
 	var/client/parent_client = parent
 
 	parent_client?.screen -= admin_popup

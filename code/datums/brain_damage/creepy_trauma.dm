@@ -17,6 +17,7 @@
 	var/obsession_hug_count = 0
 
 /datum/brain_trauma/special/obsessed/on_gain()
+
 	//setup, linking, etc//
 	if(!obsession)//admins didn't set one
 		obsession = find_obsession()
@@ -33,7 +34,6 @@
 	//antag stuff//
 	antagonist.forge_objectives(obsession.mind)
 	antagonist.greet()
-	log_game("[key_name(antagonist)] has developed an obsession with [key_name(obsession)].")
 	RegisterSignal(owner, COMSIG_CARBON_HELPED, PROC_REF(on_hug))
 
 /datum/brain_trauma/special/obsessed/on_life(seconds_per_tick, times_fired)
@@ -69,7 +69,6 @@
 	owner.mind.remove_antag_datum(/datum/antagonist/obsessed)
 	owner.clear_mood_event("creeping")
 	if(obsession)
-		log_game("[key_name(owner)] is no longer obsessed with [key_name(obsession)].")
 		UnregisterSignal(obsession, COMSIG_MOB_EYECONTACT)
 
 /datum/brain_trauma/special/obsessed/handle_speech(datum/source, list/speech_args)
@@ -136,10 +135,10 @@
 			continue
 		if(!(player.mind.assigned_role.job_flags & JOB_CREW_MEMBER))
 			continue
-		// NOVA EDIT ADDITION START - Players in the interlink can't be obsession targets
+		// SKYRAT EDIT ADDITION START - Players in the interlink can't be obsession targets
 		if(SSticker.IsRoundInProgress() && istype(get_area(player), /area/centcom/interlink))
 			continue
-		// NOVA EDIT END
+		// SKYRAT EDIT END
 		viable_minds += player.mind
 	for(var/datum/mind/possible_target as anything in viable_minds)
 		if(possible_target != owner && ishuman(possible_target.current))

@@ -67,8 +67,7 @@
 	max_integrity = 99999;
 	name = "Station Night Shutters"
 	},
-/obj/effect/spawner/structure/window/reinforced/indestructible,
-/turf/open/space/basic,
+/turf/closed/indestructible/fakeglass,
 /area/centcom/mafia)
 "q" = (
 /turf/open/floor/iron/dark,
@@ -92,12 +91,8 @@
 /obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating,
 /area/centcom/mafia)
-"E" = (
-/turf/template_noop,
-/area/template_noop)
 
 (1,1,1) = {"
-E
 a
 a
 a
@@ -119,10 +114,10 @@ a
 a
 a
 a
-E
+a
+a
 "}
 (2,1,1) = {"
-E
 a
 b
 b
@@ -143,12 +138,13 @@ b
 b
 b
 b
+b
+b
 a
-E
 "}
 (3,1,1) = {"
-E
 a
+b
 b
 c
 c
@@ -168,12 +164,12 @@ c
 c
 c
 b
+b
 a
-E
 "}
 (4,1,1) = {"
-E
 a
+b
 b
 c
 g
@@ -193,12 +189,12 @@ h
 k
 c
 b
+b
 a
-E
 "}
 (5,1,1) = {"
 a
-a
+b
 b
 c
 h
@@ -218,7 +214,7 @@ i
 h
 c
 b
-a
+b
 a
 "}
 (6,1,1) = {"
@@ -548,7 +544,7 @@ a
 "}
 (19,1,1) = {"
 a
-a
+b
 b
 c
 h
@@ -568,12 +564,12 @@ d
 h
 c
 b
-a
+b
 a
 "}
 (20,1,1) = {"
-E
 a
+b
 b
 c
 k
@@ -593,12 +589,12 @@ h
 v
 c
 b
+b
 a
-E
 "}
 (21,1,1) = {"
-E
 a
+b
 b
 c
 c
@@ -618,11 +614,10 @@ c
 c
 c
 b
+b
 a
-E
 "}
 (22,1,1) = {"
-E
 a
 b
 b
@@ -643,11 +638,11 @@ b
 b
 b
 b
+b
+b
 a
-E
 "}
 (23,1,1) = {"
-E
 a
 a
 a
@@ -669,5 +664,6 @@ a
 a
 a
 a
-E
+a
+a
 "}

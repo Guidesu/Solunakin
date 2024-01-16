@@ -129,9 +129,7 @@
  * * target - The atom that is being cleaned
  * * user - The mob that is using the soap to clean.
  */
-/obj/item/soap/proc/decreaseUses(datum/source, atom/target, mob/living/user, clean_succeeded)
-	if(!clean_succeeded)
-		return
+/obj/item/soap/proc/decreaseUses(datum/source, atom/target, mob/living/user)
 	var/skillcheck = 1
 	if(user?.mind)
 		skillcheck = user.mind.get_skill_modifier(/datum/skill/cleaning, SKILL_SPEED_MODIFIER)

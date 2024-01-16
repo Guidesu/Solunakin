@@ -9,10 +9,10 @@
 	var/obscure_name
 	var/obscure_examine
 
-	// NOVA EDIT START
+	// SKYRAT EDIT START
 	var/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 
 	if(isliving(user))
 		var/mob/living/L = user
@@ -22,7 +22,7 @@
 			obscure_name = TRUE
 			obscure_examine = TRUE
 
-	//NOVA EDIT CHANGE BEGIN - CUSTOMIZATION
+	//SKYRAT EDIT CHANGE BEGIN - CUSTOMIZATION
 	var/species_visible
 	var/species_name_string
 	if(skipface || get_visible_name() == "Unknown")
@@ -40,15 +40,15 @@
 	else
 		species_name_string = ", [prefix_a_or_an(dna.species.name)] <EM>[dna.species.name]</EM>!"
 
-	. = list("<span class='info'>This is <EM>[!obscure_name ? name : "Unknown"]</EM>[species_name_string]", EXAMINE_SECTION_BREAK) //NOVA EDIT CHANGE
+	. = list("<span class='info'>This is <EM>[!obscure_name ? name : "Unknown"]</EM>[species_name_string]", EXAMINE_SECTION_BREAK) //SKYRAT EDIT CHANGE
 	if(species_visible) //If they have a custom species shown, show the real one too
 		if(!dna.species.lore_protected && dna.features["custom_species"])
 			. += "[t_He] [t_is] [prefix_a_or_an(dna.species.name)] [dna.species.name]!"
 	else
 		. += "You can't make out what species they are."
-	//NOVA EDIT CHANGE END
+	//SKYRAT EDIT CHANGE END
 
-	/* NOVA EDIT REMOVAL
+	/* SKYRAT EDIT REMOVAL
 	var/apparent_species
 	if(dna?.species && !skipface)
 		apparent_species = ", \an [dna.species.name]"
@@ -61,7 +61,7 @@
 
 	var/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
-	*/ //NOVA EDIT END
+	*/ //SKYRAT EDIT END
 
 	//uniform
 	if(w_uniform && !(obscured & ITEM_SLOT_ICLOTHING) && !(w_uniform.item_flags & EXAMINE_SKIP))
@@ -141,7 +141,7 @@
 
 		. += wear_id.get_id_examine_strings(user)
 
-	. += EXAMINE_SECTION_BREAK // NOVA EDIT ADDITION - hr sections
+	. += EXAMINE_SECTION_BREAK // SKYRAT EDIT ADDITION - hr sections
 
 	//Status effects
 	var/list/status_examines = get_status_effect_examinations()
@@ -243,6 +243,16 @@
 				msg += "[t_He] [t_has] <b>moderate</b> [damage_desc[BURN]]!\n"
 			else
 				msg += "<B>[t_He] [t_has] severe [damage_desc[BURN]]!</B>\n"
+
+		temp = getCloneLoss()
+		if(temp)
+			if(temp < 25)
+				msg += "[t_He] [t_has] minor [damage_desc[CLONE]].\n"
+			else if(temp < 50)
+				msg += "[t_He] [t_has] <b>moderate</b> [damage_desc[CLONE]]!\n"
+			else
+				msg += "<b>[t_He] [t_has] severe [damage_desc[CLONE]]!</b>\n"
+
 
 	if(has_status_effect(/datum/status_effect/fire_handler/fire_stacks))
 		msg += "[t_He] [t_is] covered in something flammable.\n"
@@ -366,7 +376,8 @@
 			if(!key)
 				msg += "[span_deadsay("[t_He] [t_is] totally catatonic. The stresses of life in deep-space must have been too much for [t_him]. Any recovery is unlikely.")]\n"
 			else if(!client)
-				msg += "[span_deadsay("[t_He] [t_has] a blank, absent-minded stare and [t_has] been completely unresponsive to anything for [round(((world.time - lastclienttime) / (1 MINUTES)),1)] minutes. [t_He] may snap out of it soon.")]\n" // NOVA EDIT CHANGE - SSD_INDICATOR - ORIGINAL: msg += "[span_deadsay("[t_He] [t_has] a blank, absent-minded stare and appears completely unresponsive to anything. [t_He] may snap out of it soon.")]\n"
+				//msg += "[t_He] [t_has] a blank, absent-minded stare and appears completely unresponsive to anything. [t_He] may snap out of it soon.\n" //ORIGINAL
+				msg += "[t_He] [t_has] a blank, absent-minded stare and [t_has] been completely unresponsive to anything for [round(((world.time - lastclienttime) / (1 MINUTES)),1)] minutes. [t_He] may snap out of it soon.\n" //SKYRAT CHANGE ADDITION - SSD_INDICATOR
 
 	var/scar_severity = 0
 	for(var/i in all_scars)
@@ -422,13 +433,13 @@
 			if(target_record)
 				. += "<a href='?src=[REF(src)];hud=m;evaluation=1;examine_time=[world.time]'>\[Medical evaluation\]</a><br>"
 			. += "<a href='?src=[REF(src)];hud=m;quirk=1;examine_time=[world.time]'>\[See quirks\]</a>"
-			//NOVA EDIT ADDITION BEGIN - EXAMINE RECORDS
+			//SKYRAT EDIT ADDITION BEGIN - EXAMINE RECORDS
 			if(target_record && length(target_record.past_medical_records) > RECORDS_INVISIBLE_THRESHOLD)
 				. += "<a href='?src=[REF(src)];hud=m;medrecords=1;examine_time=[world.time]'>\[View medical records\]</a>"
-			//NOVA EDIT END
+			//SKYRAT EDIT END
 
 		if(HAS_TRAIT(user, TRAIT_SECURITY_HUD))
-			if((user.stat == CONSCIOUS || isobserver(user)) && user != src)
+			if(!user.stat && user != src)
 			//|| !user.canmove || user.restrained()) Fluff: Sechuds have eye-tracking technology and sets 'arrest' to people that the wearer looks and blinks at.
 				var/wanted_status = WANTED_NONE
 				var/security_note = "None."
@@ -438,28 +449,24 @@
 					wanted_status = target_record.wanted_status
 					if(target_record.security_note)
 						security_note = target_record.security_note
-				if(ishuman(user))
-					. += "<span class='deptradio'>Criminal status:</span> <a href='?src=[REF(src)];hud=s;status=1;examine_time=[world.time]'>\[[wanted_status]\]</a>"
-				else
-					. += "<span class='deptradio'>Criminal status:</span> [wanted_status]"
+
+				. += "<span class='deptradio'>Criminal status:</span> <a href='?src=[REF(src)];hud=s;status=1;examine_time=[world.time]'>\[[wanted_status]\]</a>"
 				. += "<span class='deptradio'>Important Notes: [security_note]"
-				. += "<span class='deptradio'>Security record:</span> <a href='?src=[REF(src)];hud=s;view=1;examine_time=[world.time]'>\[View\]</a>"
-				if(ishuman(user))
-					. += jointext(list("<a href='?src=[REF(src)];hud=s;add_citation=1;examine_time=[world.time]'>\[Add citation\]</a>",
-						"<a href='?src=[REF(src)];hud=s;add_crime=1;examine_time=[world.time]'>\[Add crime\]</a>",
-						"<a href='?src=[REF(src)];hud=s;add_note=1;examine_time=[world.time]'>\[Add note\]</a>"), "")
-				// NOVA EDIT ADDITION BEGIN - EXAMINE RECORDS
+				. += jointext(list("<span class='deptradio'>Security record:</span> <a href='?src=[REF(src)];hud=s;view=1;examine_time=[world.time]'>\[View\]</a>",
+					"<a href='?src=[REF(src)];hud=s;add_citation=1;examine_time=[world.time]'>\[Add citation\]</a>",
+					"<a href='?src=[REF(src)];hud=s;add_crime=1;examine_time=[world.time]'>\[Add crime\]</a>",
+					"<a href='?src=[REF(src)];hud=s;add_note=1;examine_time=[world.time]'>\[Add note\]</a>"), "")
+				// SKYRAT EDIT ADDITION BEGIN - EXAMINE RECORDS
 				if(target_record && length(target_record.past_security_records) > RECORDS_INVISIBLE_THRESHOLD)
 					. += "<span class='deptradio'>Past security records:</span> <a href='?src=[REF(src)];hud=s;secrecords=1;examine_time=[world.time]'>\[View past security records\]</a>"
 
-		if(target_record && length(target_record.past_general_records) > RECORDS_INVISIBLE_THRESHOLD)
+		if (target_record && length(target_record.past_general_records) > RECORDS_INVISIBLE_THRESHOLD)
 			. += "<a href='?src=[REF(src)];hud=[HAS_TRAIT(user, TRAIT_SECURITY_HUD) ? "s" : "m"];genrecords=1;examine_time=[world.time]'>\[View general records\]</a>"
-		//NOVA EDIT ADDITION END
+		//SKYRAT EDIT ADDITION END
 	else if(isobserver(user))
-		. += span_info("<b>Quirks:</b> [get_quirk_string(FALSE, CAT_QUIRK_ALL)]")
-	. += "</span>"
+		. += span_info("<b>Traits:</b> [get_quirk_string(FALSE, CAT_QUIRK_ALL)]")
 
-	//NOVA EDIT ADDITION BEGIN - EXAMINE RECORDS
+	//SKYRAT EDIT ADDITION BEGIN - EXAMINE RECORDS
 	if(isobserver(user) || user.mind?.can_see_exploitables || user.mind?.has_exploitables_override)
 		var/datum/record/crew/target_records = find_record(perpname)
 		if(target_records)
@@ -469,22 +476,22 @@
 				. += "<a href='?src=[REF(src)];bgrecords=1'>\[View background info\]</a>"
 			if((length(exploitable_text) > RECORDS_INVISIBLE_THRESHOLD) && ((exploitable_text) != EXPLOITABLE_DEFAULT_TEXT))
 				. += "<a href='?src=[REF(src)];exprecords=1'>\[View exploitable info\]</a>"
-	//NOVA EDIT END
-	//NOVA EDIT ADDITION BEGIN - GUNPOINT
+	//SKYRAT EDIT END
+	//SKYRAT EDIT ADDITION BEGIN - GUNPOINT
 	if(gunpointing)
 		. += "<span class='warning'><b>[t_He] [t_is] holding [gunpointing.target.name] at gunpoint with [gunpointing.aimed_gun.name]!</b></span>\n"
 	if(length(gunpointed))
 		for(var/datum/gunpoint/GP in gunpointed)
 			. += "<span class='warning'><b>[GP.source.name] [GP.source.p_are()] holding [t_him] at gunpoint with [GP.aimed_gun.name]!</b></span>\n"
-	//NOVA EDIT ADDITION END
+	//SKYRAT EDIT ADDITION END
 
-	//NOVA EDIT ADDITION BEGIN - CUSTOMIZATION
-	for(var/genital in GLOB.possible_genitals)
+	//SKYRAT EDIT ADDITION BEGIN - CUSTOMIZATION
+	for(var/genital in possible_genitals)
 		if(dna.species.mutant_bodyparts[genital])
 			var/datum/sprite_accessory/genital/G = GLOB.sprite_accessories[genital][dna.species.mutant_bodyparts[genital][MUTANT_INDEX_NAME]]
 			if(G)
 				if(!(G.is_hidden(src)))
-					. += "<span class='notice'>[t_He] [t_has] exposed genitals... <a href='?src=[REF(src)];lookup_info=genitals'>\[Look closer...\]</a></span>"
+					. += "<span class='notice'>[t_He] [t_has] exposed genitals... <a href='?src=[REF(src)];lookup_info=genitals'>Look closer...</a></span>"
 					break
 
 	var/flavor_text_link
@@ -494,9 +501,9 @@
 	var/face_obscured = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
 
 	if (!(face_obscured))
-		flavor_text_link = span_notice("[preview_text]... <a href='?src=[REF(src)];lookup_info=open_examine_panel'>\[Look closer?\]</a>")
+		flavor_text_link = span_notice("[preview_text]... <a href='?src=[REF(src)];lookup_info=open_examine_panel'>Look closer?</a>")
 	else
-		flavor_text_link = span_notice("<a href='?src=[REF(src)];lookup_info=open_examine_panel'>\[Examine closely...\]</a>")
+		flavor_text_link = span_notice("<a href='?src=[REF(src)];lookup_info=open_examine_panel'>Examine closely...</a>")
 	if (flavor_text_link)
 		. += flavor_text_link
 
@@ -538,10 +545,10 @@
 		return
 	var/age_text
 	switch(age)
-		if(-INFINITY to 17) // NOVA EDIT ADD START -- AGE EXAMINE
+		if(-INFINITY to 17) // SKYRAT EDIT ADD START -- AGE EXAMINE
 			age_text = "too young to be here"
 		if(18 to 25)
-			age_text = "a young adult" // NOVA EDIT END
+			age_text = "a young adult" // SKYRAT EDIT END
 		if(26 to 35)
 			age_text = "of adult age"
 		if(36 to 55)

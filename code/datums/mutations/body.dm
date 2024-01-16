@@ -119,24 +119,24 @@
 /datum/mutation/human/dwarfism/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
 		return
-	// NOVA EDIT BEGIN
+	// SKYRAT EDIT BEGIN
 	if(owner.dna.features["body_size"] < 1)
 		to_chat(owner, "You feel your body shrinking even further, but your organs aren't! Uh oh!")
 		owner.adjustBruteLoss(25)
 		return
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 	ADD_TRAIT(owner, TRAIT_DWARF, GENETIC_MUTATION)
 	owner.visible_message(span_danger("[owner] suddenly shrinks!"), span_notice("Everything around you seems to grow.."))
 
 /datum/mutation/human/dwarfism/on_losing(mob/living/carbon/human/owner)
 	if(..())
 		return
-	// NOVA EDIT BEGIN
+	// SKYRAT EDIT BEGIN
 	if(owner.dna.features["body_size"] < 1)
 		to_chat(owner, "You feel relief as your organs cease to strain against your insides.")
 		REMOVE_TRAIT(owner, TRAIT_DWARF, GENETIC_MUTATION)
 		return
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 	REMOVE_TRAIT(owner, TRAIT_DWARF, GENETIC_MUTATION)
 	owner.visible_message(span_danger("[owner] suddenly grows!"), span_notice("Everything around you seems to shrink.."))
 
@@ -220,7 +220,7 @@
 	. = owner.monkeyize()
 
 /datum/mutation/human/race/on_losing(mob/living/carbon/human/owner)
-	if(!QDELETED(owner) && owner.stat != DEAD && (owner.dna.mutations.Remove(src)) && ismonkey(owner))
+	if(owner && owner.stat != DEAD && (owner.dna.mutations.Remove(src)) && ismonkey(owner))
 		owner.fully_replace_character_name(null, original_name)
 		. = owner.humanize(original_species)
 
@@ -391,12 +391,12 @@
 /datum/mutation/human/gigantism/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
 		return
-	// NOVA EDIT BEGIN
+	// SKYRAT EDIT BEGIN
 	if(owner.dna.features["body_size"] > 1)
 		to_chat(owner, "You feel your body expanding even further, but it feels like your bones are expanding too much!")
 		owner.adjustBruteLoss(25) // take some DAMAGE
 		return
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 	ADD_TRAIT(owner, TRAIT_GIANT, GENETIC_MUTATION)
 	owner.update_transform(1.25)
 	owner.visible_message(span_danger("[owner] suddenly grows!"), span_notice("Everything around you seems to shrink.."))
@@ -404,12 +404,12 @@
 /datum/mutation/human/gigantism/on_losing(mob/living/carbon/human/owner)
 	if(..())
 		return
-	// NOVA EDIT BEGIN
+	// SKYRAT EDIT BEGIN
 	if(owner.dna.features["body_size"] > 1)
 		to_chat(owner, "You feel relief as your bones cease their growth spurt.")
 		REMOVE_TRAIT(owner, TRAIT_GIANT, GENETIC_MUTATION)
 		return
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 	REMOVE_TRAIT(owner, TRAIT_GIANT, GENETIC_MUTATION)
 	owner.update_transform(0.8)
 	owner.visible_message(span_danger("[owner] suddenly shrinks!"), span_notice("Everything around you seems to grow.."))
@@ -524,16 +524,14 @@
 
 	var/obj/item/organ/internal/brain/brain = owner.get_organ_slot(ORGAN_SLOT_BRAIN)
 	if(brain)
-		brain.Remove(owner, special = TRUE)
 		brain.zone = BODY_ZONE_CHEST
-		brain.Insert(owner, special = TRUE)
 
 	var/obj/item/bodypart/head/head = owner.get_bodypart(BODY_ZONE_HEAD)
 	if(head)
 		owner.visible_message(span_warning("[owner]'s head splatters with a sickening crunch!"), ignored_mobs = list(owner))
 		new /obj/effect/gibspawner/generic(get_turf(owner), owner)
-		head.drop_organs()
 		head.dismember(dam_type = BRUTE, silent = TRUE)
+		head.drop_organs()
 		qdel(head)
 	RegisterSignal(owner, COMSIG_ATTEMPT_CARBON_ATTACH_LIMB, PROC_REF(abort_attachment))
 
@@ -541,18 +539,14 @@
 	. = ..()
 	if(.)
 		return TRUE
-
+	var/obj/item/organ/internal/brain/brain = owner.get_organ_slot(ORGAN_SLOT_BRAIN)
+	if(brain) //so this doesn't instantly kill you. we could delete the brain, but it lets people cure brain issues they /really/ shouldn't be
+		brain.zone = initial(brain.zone)
 	UnregisterSignal(owner, COMSIG_ATTEMPT_CARBON_ATTACH_LIMB)
 	var/successful = owner.regenerate_limb(BODY_ZONE_HEAD)
 	if(!successful)
 		stack_trace("HARS mutation head regeneration failed! (usually caused by headless syndrome having a head)")
 		return TRUE
-	var/obj/item/organ/internal/brain/brain = owner.get_organ_slot(ORGAN_SLOT_BRAIN)
-	if(brain)
-		brain.Remove(owner, special = TRUE)
-		brain.zone = initial(brain.zone)
-		brain.Insert(owner, special = TRUE)
-
 	owner.dna.species.regenerate_organs(owner, replace_current = FALSE, excluded_zones = list(BODY_ZONE_CHEST)) //replace_current needs to be FALSE to prevent weird adding and removing mutation healing
 	owner.apply_damage(damage = 50, damagetype = BRUTE, def_zone = BODY_ZONE_HEAD) //and this to DISCOURAGE organ farming, or at least not make it free.
 	owner.visible_message(span_warning("[owner]'s head returns with a sickening crunch!"), span_warning("Your head regrows with a sickening crack! Ouch."))

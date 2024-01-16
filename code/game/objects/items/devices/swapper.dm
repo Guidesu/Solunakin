@@ -1,7 +1,7 @@
 /obj/item/swapper
 	name = "quantum spin inverter"
 	desc = "An experimental device that is able to swap the locations of two entities by switching their particles' spin values. Must be linked to another device to function."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = 'icons/obj/device.dmi'
 	icon_state = "swapper"
 	inhand_icon_state = "electronic"
 	w_class = WEIGHT_CLASS_SMALL
@@ -45,12 +45,12 @@
 	if(world.time < next_use)
 		to_chat(user, span_warning("[src] is still recharging."))
 		return
-	//NOVA EDIT BEGIN
+	//SKYRAT EDIT BEGIN
 	var/turf/my_turf = get_turf(src)
 	if(is_away_level(my_turf.z))
 		to_chat(user, "<span class='warning'>[src] cannot be used here!</span>")
 		return
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 	if(QDELETED(linked_swapper))
 		to_chat(user, span_warning("[src] is not linked with another swapper."))
 		return

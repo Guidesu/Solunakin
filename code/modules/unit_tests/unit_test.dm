@@ -320,7 +320,7 @@ GLOBAL_VAR_INIT(focused_tests, focused_tests())
 	returnable_list += typesof(/turf/open/space/openspace)
 	returnable_list += typesof(/turf/open/openspace)
 
-	//NOVA EDIT ADDITION START - OUR UNCREATABLES DOWN HERE
+	//SKYRAT EDIT ADDITION START - OUR UNCREATABLES DOWN HERE
 	//Not designed to be spawned without a turf.
 	returnable_list += typesof(/obj/effect/abstract/liquid_turf)
 	//Not designed to be spawned individually.
@@ -334,7 +334,7 @@ GLOBAL_VAR_INIT(focused_tests, focused_tests())
 	// These two are locked to one type only, and shouldn't be widely available, hence why they runtime otherwise.
 	// Can't be bothered adding more to them.
 	returnable_list += list(/obj/item/organ/external/neck_accessory, /obj/item/organ/external/head_accessory)
-	//NOVA EDIT ADDITION END
+	//SKYRAT EDIT ADDITION END
 
 	return returnable_list
 

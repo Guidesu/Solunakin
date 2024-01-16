@@ -46,28 +46,20 @@
 /datum/emote/help/run_emote(mob/user, params, type_override, intentional)
 	. = ..()
 	var/list/keys = list()
-	var/list/message = list("Available emotes, you can use them with say [span_bold("\"*emote\"")]: \n")
-	message += span_smallnoticeital("Note - emotes highlighted in blue play a sound \n\n")
+	var/list/message = list("Available emotes, you can use them with say \"*emote\": ")
 
 	for(var/key in GLOB.emote_list)
-		for(var/datum/emote/emote_action in GLOB.emote_list[key])
-			if(emote_action.key in keys)
+		for(var/datum/emote/P in GLOB.emote_list[key])
+			if(P.key in keys)
 				continue
-			if(emote_action.can_run_emote(user, status_check = FALSE , intentional = TRUE))
-				keys += emote_action.key
+			if(P.can_run_emote(user, status_check = FALSE , intentional = TRUE))
+				keys += P.key
 
 	keys = sort_list(keys)
-
-	// the span formatting will mess up sorting so need to do it afterwards
-	for(var/i in 1 to keys.len)
-		for(var/datum/emote/emote_action in GLOB.emote_list[keys[i]])
-			if(emote_action.get_sound(user) && emote_action.should_play_sound(user, intentional = TRUE))
-				keys[i] = span_boldnotice(keys[i])
-
 	message += keys.Join(", ")
 	message += "."
 	message = message.Join("")
-	to_chat(user, examine_block(message))
+	to_chat(user, message)
 
 /datum/emote/flip
 	key = "flip"

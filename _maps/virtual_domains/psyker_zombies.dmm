@@ -11,11 +11,6 @@
 /obj/structure/sign/warning/directional/west,
 /turf/open/chasm,
 /area/ruin/space/has_grav/powered/virtual_domain)
-"e" = (
-/obj/effect/mob_spawn/corpse/human/cyber_police,
-/obj/effect/landmark/bitrunning/cache_spawn,
-/turf/open/indestructible/dark,
-/area/ruin/space/has_grav/powered/virtual_domain)
 "h" = (
 /obj/structure/rack,
 /turf/open/indestructible/dark,
@@ -74,9 +69,7 @@
 /turf/open/indestructible/dark,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "O" = (
-/obj/modular_map_root/safehouse{
-	key = "bathroom"
-	},
+/obj/effect/landmark/bitrunning/safehouse_spawn,
 /turf/template_noop,
 /area/virtual_domain/safehouse)
 "Q" = (
@@ -119,6 +112,8 @@ o
 o
 o
 o
+o
+o
 a
 a
 a
@@ -127,6 +122,7 @@ a
 a
 a
 a
+o
 o
 o
 o
@@ -144,6 +140,8 @@ o
 o
 o
 o
+o
+o
 a
 a
 a
@@ -152,9 +150,10 @@ Y
 Y
 Y
 Y
-U
+Y
 a
 a
+o
 o
 o
 o
@@ -165,6 +164,8 @@ o
 o
 "}
 (3,1,1) = {"
+o
+o
 a
 a
 a
@@ -190,10 +191,13 @@ o
 o
 o
 o
+o
 "}
 (4,1,1) = {"
+o
+o
 a
-e
+W
 X
 Y
 B
@@ -217,8 +221,11 @@ o
 o
 o
 o
+o
 "}
 (5,1,1) = {"
+o
+o
 a
 b
 b
@@ -244,8 +251,11 @@ o
 o
 o
 o
+o
 "}
 (6,1,1) = {"
+o
+o
 a
 a
 a
@@ -265,6 +275,7 @@ a
 Y
 Y
 a
+o
 o
 o
 o
@@ -273,6 +284,8 @@ o
 o
 "}
 (7,1,1) = {"
+o
+o
 a
 a
 a
@@ -292,6 +305,7 @@ Y
 Y
 Y
 a
+o
 o
 o
 o
@@ -300,6 +314,8 @@ o
 o
 "}
 (8,1,1) = {"
+o
+o
 a
 a
 X
@@ -325,8 +341,11 @@ o
 o
 o
 o
+o
 "}
 (9,1,1) = {"
+o
+o
 a
 a
 W
@@ -352,8 +371,11 @@ o
 o
 o
 o
+o
 "}
 (10,1,1) = {"
+o
+o
 a
 a
 Y
@@ -372,6 +394,7 @@ Q
 Q
 Y
 a
+o
 o
 o
 o
@@ -381,6 +404,8 @@ o
 o
 "}
 (11,1,1) = {"
+o
+o
 a
 Y
 Y
@@ -399,6 +424,7 @@ Q
 Q
 Y
 a
+o
 o
 o
 o
@@ -408,6 +434,8 @@ o
 o
 "}
 (12,1,1) = {"
+o
+o
 a
 Y
 Y
@@ -433,8 +461,11 @@ o
 o
 o
 o
+o
 "}
 (13,1,1) = {"
+o
+o
 a
 Y
 Y
@@ -453,6 +484,7 @@ Y
 Y
 Y
 a
+o
 o
 o
 o
@@ -462,6 +494,8 @@ o
 o
 "}
 (14,1,1) = {"
+o
+o
 a
 Y
 Y
@@ -480,6 +514,7 @@ Y
 Y
 Y
 a
+o
 o
 o
 o
@@ -489,6 +524,8 @@ o
 o
 "}
 (15,1,1) = {"
+o
+o
 a
 Y
 R
@@ -514,8 +551,11 @@ o
 o
 o
 o
+o
 "}
 (16,1,1) = {"
+o
+o
 a
 Y
 Y
@@ -541,8 +581,11 @@ a
 a
 a
 a
+o
 "}
 (17,1,1) = {"
+o
+o
 a
 Y
 V
@@ -568,10 +611,13 @@ t
 t
 O
 a
+o
 "}
 (18,1,1) = {"
+o
+o
 a
-U
+Y
 a
 Q
 a
@@ -595,8 +641,11 @@ t
 t
 t
 a
+o
 "}
 (19,1,1) = {"
+o
+o
 a
 Q
 Q
@@ -622,14 +671,17 @@ t
 t
 t
 a
+o
 "}
 (20,1,1) = {"
+o
+o
 a
 Q
 Q
 Q
 a
-U
+Y
 Y
 Y
 a
@@ -649,8 +701,11 @@ t
 t
 t
 a
+o
 "}
 (21,1,1) = {"
+o
+o
 a
 a
 Q
@@ -676,8 +731,11 @@ t
 t
 t
 a
+o
 "}
 (22,1,1) = {"
+o
+o
 a
 a
 Q
@@ -703,8 +761,11 @@ t
 t
 t
 a
+o
 "}
 (23,1,1) = {"
+o
+o
 a
 a
 Q
@@ -730,8 +791,11 @@ t
 t
 r
 a
+o
 "}
 (24,1,1) = {"
+o
+o
 a
 a
 Q
@@ -757,8 +821,11 @@ a
 a
 a
 a
+o
 "}
 (25,1,1) = {"
+o
+o
 a
 c
 Q
@@ -784,8 +851,11 @@ o
 o
 o
 o
+o
 "}
 (26,1,1) = {"
+o
+o
 a
 Q
 Q
@@ -803,6 +873,7 @@ Y
 Y
 Y
 a
+o
 o
 o
 o
@@ -813,6 +884,8 @@ o
 o
 "}
 (27,1,1) = {"
+o
+o
 a
 Y
 Y
@@ -838,8 +911,11 @@ o
 o
 o
 o
+o
 "}
 (28,1,1) = {"
+o
+o
 a
 Y
 X
@@ -856,6 +932,7 @@ Y
 Y
 R
 a
+o
 o
 o
 o
@@ -867,6 +944,8 @@ o
 o
 "}
 (29,1,1) = {"
+o
+o
 a
 Y
 a
@@ -883,6 +962,7 @@ a
 a
 a
 a
+o
 o
 o
 o
@@ -894,6 +974,8 @@ o
 o
 "}
 (30,1,1) = {"
+o
+o
 a
 Y
 Y
@@ -910,6 +992,7 @@ Y
 Y
 X
 a
+o
 o
 o
 o
@@ -921,6 +1004,8 @@ o
 o
 "}
 (31,1,1) = {"
+o
+o
 a
 Y
 Y
@@ -937,6 +1022,7 @@ Y
 M
 a
 a
+o
 o
 o
 o
@@ -948,6 +1034,8 @@ o
 o
 "}
 (32,1,1) = {"
+o
+o
 a
 Y
 Y
@@ -967,6 +1055,7 @@ a
 a
 a
 a
+o
 o
 o
 o
@@ -975,6 +1064,8 @@ o
 o
 "}
 (33,1,1) = {"
+o
+o
 a
 a
 R
@@ -994,6 +1085,7 @@ Y
 Q
 Q
 a
+o
 o
 o
 o
@@ -1002,6 +1094,8 @@ o
 o
 "}
 (34,1,1) = {"
+o
+o
 o
 a
 Y
@@ -1016,7 +1110,7 @@ a
 a
 Y
 M
-U
+Y
 W
 i
 Q
@@ -1027,11 +1121,14 @@ o
 o
 o
 o
+o
 "}
 (35,1,1) = {"
 o
+o
+o
 a
-U
+Y
 Y
 Y
 Y
@@ -1054,8 +1151,11 @@ o
 o
 o
 o
+o
 "}
 (36,1,1) = {"
+o
+o
 o
 a
 a
@@ -1064,6 +1164,37 @@ a
 a
 a
 a
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+"}
+(37,1,1) = {"
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
 o
 o
 o

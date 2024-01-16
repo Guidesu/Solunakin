@@ -1,7 +1,7 @@
 /obj/item/implant/uplink
 	name = "uplink implant"
 	desc = "Sneeki breeki."
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = 'icons/obj/radio.dmi'
 	icon_state = "radio"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
@@ -16,7 +16,7 @@
 	if(!uplink_flag)
 		uplink_flag = src.uplink_flag
 	src.uplink_handler = uplink_handler
-	RegisterSignal(src, COMSIG_COMPONENT_REMOVING, PROC_REF(on_component_removing))
+	RegisterSignal(src, COMSIG_COMPONENT_REMOVING, PROC_REF(_component_removal))
 
 /obj/item/implant/uplink/implant(mob/living/carbon/target, mob/user, silent, force)
 	. = ..()
@@ -34,40 +34,26 @@
  * generally by admin verbs or var editing. Implant does nothing without
  * the component, so delete itself.
  */
-/obj/item/implant/uplink/proc/on_component_removing(datum/source, datum/component/component)
+/obj/item/implant/uplink/proc/_component_removal(datum/source, datum/component/component)
 	SIGNAL_HANDLER
-
-	if (QDELING(src))
-		return
-
 	if(istype(component, /datum/component/uplink))
 		qdel(src)
 
 /obj/item/implanter/uplink
-	name = "implanter" // NOVA EDIT , original was implanter (uplink)
+	name = "implanter" // Skyrat edit , original was implanter (uplink)
 	imp_type = /obj/item/implant/uplink
-<<<<<<< HEAD
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // Skyrat edit
 	special_desc = "A Symphionia implanter for an uplink" // Skyrat edit
-=======
-	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // NOVA EDIT
-	special_desc = "A Syndicate implanter for an uplink" // NOVA EDIT
->>>>>>> Nova/master
 
 /obj/item/implanter/uplink/Initialize(mapload, uplink_handler)
 	imp = new imp_type(src, uplink_handler)
 	return ..()
 
 /obj/item/implanter/uplink/precharged
-	name = "implanter" // NOVA EDIT , original was implanter (precharged uplink)
+	name = "implanter" // Skyrat edit , original was implanter (precharged uplink)
 	imp_type = /obj/item/implant/uplink/precharged
-<<<<<<< HEAD
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // Skyrat edit
 	special_desc = "A Symphionia implanter for a precharged uplink" // Skyrat edit
-=======
-	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // NOVA EDIT
-	special_desc = "A Syndicate implanter for a precharged uplink" // NOVA EDIT
->>>>>>> Nova/master
 
 /obj/item/implant/uplink/precharged
 	starting_tc = TELECRYSTALS_PRELOADED_IMPLANT

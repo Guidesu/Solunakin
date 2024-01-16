@@ -1,4 +1,4 @@
-//NOVA EDIT REMOVAL BEGIN: Removes Spread Infestation due to NRP usage and abuse by changelings
+//SKYRAT EDIT REMOVAL BEGIN: Removes Spread Infestation due to NRP usage and abuse by changelings
 /*
 /datum/action/changeling/spiders
 	name = "Spread Infestation"
@@ -15,4 +15,4 @@
 	new /obj/effect/mob_spawn/ghost_role/spider/bloody(user.loc)
 	return TRUE
 */
-//NOVA EDIT REMOVAL END
+//SKYRAT EDIT REMOVAL END

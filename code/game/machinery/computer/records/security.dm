@@ -129,10 +129,10 @@
 			rank = target.rank,
 			species = target.species,
 			wanted_status = target.wanted_status,
-			// NOVA EDIT ADDITION - RP Records
+			// SKYRAT EDIT ADDITION - RP Records
 			past_general_records = target.past_general_records,
 			past_security_records = target.past_security_records,
-			// NOVA EDIT END
+			// SKYRAT EDIT END
 		))
 
 	data["records"] = records
@@ -354,12 +354,12 @@
 			printable = wanted_poster
 
 		if("rapsheet")
-		/// NOVA EDIT REMOVE - REMOVE CRIMES REQUIREMENT FOR PRINTING RECORDS
+		/// SKYRAT EDIT REMOVE - REMOVE CRIMES REQUIREMENT FOR PRINTING RECORDS
 			//var/list/crimes = target.crimes
 			//if(!length(crimes))
 				//balloon_alert(user, "no crimes")
 				//return FALSE
-		/// NOVA EDIT REMOVE END
+		/// SKYRAT EDIT REMOVE END
 
 			var/obj/item/paper/rapsheet = target.get_rapsheet(input_alias, input_header, input_description)
 			printable = rapsheet

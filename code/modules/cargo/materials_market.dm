@@ -41,17 +41,17 @@
 /obj/machinery/materials_market/wrench_act(mob/living/user, obj/item/tool)
 	. = ..()
 	if(default_unfasten_wrench(user, tool, time = 1.5 SECONDS) == SUCCESSFUL_UNFASTEN)
-		return ITEM_INTERACT_SUCCESS
+		return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/materials_market/screwdriver_act(mob/living/user, obj/item/tool)
 	. = ..()
 	if(default_deconstruction_screwdriver(user, "[base_icon_state]_open", "[base_icon_state]", tool))
-		return ITEM_INTERACT_SUCCESS
+		return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/materials_market/crowbar_act(mob/living/user, obj/item/tool)
 	. = ..()
 	if(default_deconstruction_crowbar(tool))
-		return ITEM_INTERACT_SUCCESS
+		return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/materials_market/attackby(obj/item/O, mob/user, params)
 	if(is_type_in_list(O, exportable_material_items))
@@ -104,10 +104,6 @@
 	if(!ui)
 		ui = new(user, src, "MatMarket", name)
 		ui.open()
-
-/obj/machinery/materials_market/ui_static_data(mob/user)
-	. = list()
-	.["CARGO_CRATE_VALUE"] = CARGO_CRATE_VALUE
 
 /obj/machinery/materials_market/ui_data(mob/user)
 	. = list()
@@ -251,6 +247,9 @@
 				return
 
 			var/cost = SSstock_market.materials_prices[material_bought] * quantity
+			if(cost > account_payable.account_balance)
+				say("Not enough money to start purchase!")
+				return
 
 			var/list/things_to_order = list()
 			things_to_order += (sheet_to_buy)
@@ -286,14 +285,13 @@
 				current_order.append_order(things_to_order, cost)
 				return TRUE
 
-
 			//Place a new order
 			var/datum/supply_pack/custom/minerals/mineral_pack = new(
 				purchaser = is_ordering_private ? living_user : "Cargo", \
 				cost = cost, \
 				contains = things_to_order, \
 			)
-			var/datum/supply_order/disposable/materials/new_order = new(
+			var/datum/supply_order/materials/new_order = new(
 				pack = mineral_pack,
 				orderer = living_user,
 				orderer_rank = GALATIC_MATERIAL_ORDER,
@@ -302,12 +300,6 @@
 				cost_type = "cr",
 				can_be_cancelled = FALSE
 			)
-			//first time order compute the correct cost and compare
-			if(new_order.get_final_cost() > account_payable.account_balance)
-				say("Not enough money to start purchase!")
-				qdel(new_order)
-				return
-
 			say("Thank you for your purchase! It will arrive on the next cargo shuttle!")
 			SSshuttle.shopping_list += new_order
 			return TRUE

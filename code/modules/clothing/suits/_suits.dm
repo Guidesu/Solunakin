@@ -17,23 +17,30 @@
 	var/blood_overlay_type = "suit"
 	limb_integrity = 0 // disabled for most exo-suits
 
-/obj/item/clothing/suit/worn_overlays(mutable_appearance/standing, isinhands = FALSE, file2use = null, mutant_styles = NONE) // NOVA EDIT CHANGE - TAURS AND TESHIS - ORIGINAL: /obj/item/clothing/suit/worn_overlays(mutable_appearance/standing, isinhands = FALSE)
+/obj/item/clothing/suit/Initialize(mapload)
+	. = ..()
+	setup_shielding()
+
+/// SKYRAT EDIT CHANGE BEGIN - taurs and teshis
+// /obj/item/clothing/suit/worn_overlays(mutable_appearance/standing, isinhands = FALSE) // ORIGINAL
+/obj/item/clothing/suit/worn_overlays(mutable_appearance/standing, isinhands = FALSE, file2use = null, mutant_styles = NONE)
+// SKYRAT EDIT CHANGE END
 	. = ..()
 	if(isinhands)
 		return
 
 	if(damaged_clothes)
-		//NOVA EDIT CHANGE BEGIN
+		//SKYRAT EDIT CHANGE BEGIN
 		//. += mutable_appearance('icons/effects/item_damage.dmi', "damaged[blood_overlay_type]") //ORIGINAL
-		var/damagefile2use = (mutant_styles & STYLE_TAUR_ALL) ? 'modular_nova/master_files/icons/mob/64x32_item_damage.dmi' : 'icons/effects/item_damage.dmi'
+		var/damagefile2use = (mutant_styles & STYLE_TAUR_ALL) ? 'modular_skyrat/master_files/icons/mob/64x32_item_damage.dmi' : 'icons/effects/item_damage.dmi'
 		. += mutable_appearance(damagefile2use, "damaged[blood_overlay_type]")
-		//NOVA EDIT CHANGE END
+		//SKYRAT EDIT CHANGE END
 	if(GET_ATOM_BLOOD_DNA_LENGTH(src))
-		//NOVA EDIT CHANGE BEGIN
+		//SKYRAT EDIT CHANGE BEGIN
 		//. += mutable_appearance('icons/effects/blood.dmi', "[blood_overlay_type]blood") //ORIGINAL
-		var/bloodfile2use = (mutant_styles & STYLE_TAUR_ALL) ? 'modular_nova/master_files/icons/mob/64x32_blood.dmi' : 'icons/effects/blood.dmi'
+		var/bloodfile2use = (mutant_styles & STYLE_TAUR_ALL) ? 'modular_skyrat/master_files/icons/mob/64x32_blood.dmi' : 'icons/effects/blood.dmi'
 		. += mutable_appearance(bloodfile2use, "[blood_overlay_type]blood")
-		//NOVA EDIT CHANGE END
+		//SKYRAT EDIT CHANGE END
 
 	var/mob/living/carbon/human/wearer = loc
 	if(!ishuman(wearer) || !wearer.w_uniform)
@@ -44,10 +51,19 @@
 
 	var/obj/item/clothing/accessory/displayed = undershirt.attached_accessories[1]
 	if(displayed.above_suit)
-		. += undershirt.modify_accessory_overlay() // NOVA EDIT CHANGE - ORIGINAL: . += undershirt.accessory_overlay
+		. += undershirt.modify_accessory_overlay() // SKYRAT EDIT CHANGE - ORIGINAL: . += undershirt.accessory_overlay
 
 /obj/item/clothing/suit/update_clothes_damaged_state(damaged_state = CLOTHING_DAMAGED)
 	..()
 	if(ismob(loc))
 		var/mob/M = loc
 		M.update_worn_oversuit()
+
+/**
+ * Wrapper proc to apply shielding through AddComponent().
+ * Called in /obj/item/clothing/Initialize().
+ * Override with an AddComponent(/datum/component/shielded, args) call containing the desired shield statistics.
+ * See /datum/component/shielded documentation for a description of the arguments
+ **/
+/obj/item/clothing/suit/proc/setup_shielding()
+	return

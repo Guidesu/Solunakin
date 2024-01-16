@@ -1,21 +1,15 @@
 /datum/computer_file/program/science
 	filename = "experi_track"
-<<<<<<< HEAD
 	filedesc = "Symphionia Science Hub"
 	category = PROGRAM_CATEGORY_SCI
 	program_icon_state = "research"
-=======
-	filedesc = "Nanotrasen Science Hub"
-	downloader_category = PROGRAM_CATEGORY_SCIENCE
-	program_open_overlay = "research"
->>>>>>> Nova/master
 	extended_desc = "Connect to the internal science server in order to assist in station research efforts."
-	program_flags = PROGRAM_ON_NTNET_STORE | PROGRAM_REQUIRES_NTNET
+	requires_ntnet = TRUE
 	size = 10
 	tgui_id = "NtosTechweb"
 	program_icon = "atom"
-	run_access = list(ACCESS_COMMAND, ACCESS_RESEARCH)
-	download_access = list(ACCESS_RESEARCH)
+	required_access = list(ACCESS_COMMAND, ACCESS_RESEARCH)
+	transfer_access = list(ACCESS_RESEARCH)
 	/// Reference to global science techweb
 	var/datum/techweb/stored_research
 	/// Access needed to lock/unlock the console

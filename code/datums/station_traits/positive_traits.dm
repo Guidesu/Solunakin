@@ -72,7 +72,6 @@
 /datum/station_trait/strong_supply_lines/on_round_start()
 	SSeconomy.pack_price_modifier *= 0.8
 
-<<<<<<< HEAD
 /datum/station_trait/scarves
 	name = "Scarves"
 	trait_type = STATION_TRAIT_POSITIVE
@@ -106,8 +105,6 @@
 	spawned.equip_to_slot_or_del(new scarf_type(spawned), ITEM_SLOT_NECK, initial = FALSE)
 
 
-=======
->>>>>>> Nova/master
 /datum/station_trait/filled_maint
 	name = "Filled up maintenance"
 	trait_type = STATION_TRAIT_POSITIVE
@@ -234,6 +231,46 @@
 	deathrattle_group.register(implant_to_give)
 	implant_to_give.implant(spawned, spawned, TRUE, TRUE)
 
+
+/datum/station_trait/wallets
+	name = "Wallets!"
+	trait_type = STATION_TRAIT_POSITIVE
+	show_in_report = TRUE
+	weight = 10
+	report_message = "It has become temporarily fashionable to use a wallet, so everyone on the station has been issued one."
+
+/datum/station_trait/wallets/New()
+	. = ..()
+	RegisterSignal(SSdcs, COMSIG_GLOB_JOB_AFTER_SPAWN, PROC_REF(on_job_after_spawn))
+
+/datum/station_trait/wallets/proc/on_job_after_spawn(datum/source, datum/job/job, mob/living/living_mob, mob/M, joined_late)
+	SIGNAL_HANDLER
+
+	var/obj/item/card/id/advanced/id_card = living_mob.get_item_by_slot(ITEM_SLOT_ID)
+	if(!istype(id_card))
+		return
+
+	living_mob.temporarilyRemoveItemFromInventory(id_card, force=TRUE)
+
+	// "Doc, what's wrong with me?"
+	var/obj/item/storage/wallet/wallet = new(src)
+	// "You've got a wallet embedded in your chest."
+	wallet.add_fingerprint(living_mob, ignoregloves = TRUE)
+
+	living_mob.equip_to_slot_if_possible(wallet, ITEM_SLOT_ID, initial=TRUE)
+
+	id_card.forceMove(wallet)
+
+	var/holochip_amount = id_card.registered_account.account_balance
+	new /obj/item/holochip(wallet, holochip_amount)
+	id_card.registered_account.adjust_money(-holochip_amount, "System: Withdrawal")
+
+	new /obj/effect/spawner/random/entertainment/wallet_storage(wallet)
+
+	// Put our filthy fingerprints all over the contents
+	for(var/obj/item/item in wallet)
+		item.add_fingerprint(living_mob, ignoregloves = TRUE)
+
 /datum/station_trait/cybernetic_revolution
 	name = "Cybernetic Revolution"
 	trait_type = STATION_TRAIT_POSITIVE
@@ -278,7 +315,7 @@
 		/datum/job/station_engineer = /obj/item/organ/internal/cyberimp/arm/toolset,
 		/datum/job/virologist = /obj/item/organ/internal/lungs/cybernetic/tier2,
 		/datum/job/warden = /obj/item/organ/internal/cyberimp/eyes/hud/security,
-		// NOVA EDIT ADDITION START - MODULAR JOBS
+		// SKYRAT EDIT ADDITION START - MODULAR JOBS
 		/datum/job/blueshield = /obj/item/organ/internal/cyberimp/brain/anti_stun,
 		/datum/job/nanotrasen_consultant = /obj/item/organ/internal/heart/cybernetic/tier3,
 		/datum/job/barber = /obj/item/organ/internal/ears/cybernetic/whisper,
@@ -288,7 +325,7 @@
 		/datum/job/customs_agent = /obj/item/organ/internal/cyberimp/eyes/hud/security,
 		/datum/job/bouncer = /obj/item/organ/internal/cyberimp/arm/muscle,
 		/datum/job/engineering_guard = /obj/item/organ/internal/cyberimp/arm/flash,
-		// NOVA EDIT END
+		// SKYRAT EDIT END
 	)
 
 /datum/station_trait/cybernetic_revolution/New()
@@ -308,7 +345,7 @@
 			ai.eyeobj.relay_speech = TRUE //surveillance upgrade. the ai gets cybernetics too.
 		return
 	var/obj/item/organ/internal/cybernetic = new cybernetic_type()
-	cybernetic.Insert(spawned, special = TRUE, movement_flags = DELETE_IF_REPLACED)
+	cybernetic.Insert(spawned, special = TRUE, drop_if_replaced = FALSE)
 
 /datum/station_trait/luxury_escape_pods
 	name = "Luxury Escape Pods"
@@ -324,12 +361,12 @@
 	trait_type = STATION_TRAIT_POSITIVE
 	weight = 5
 	show_in_report = TRUE
-	report_message = "Your station's medibots have received a hardware upgrade, enabling expanded healing capabilities."
+	report_message = "Your station's medibots have recieved a hardware upgrade, enabling expanded healing capabilities."
 	trait_to_give = STATION_TRAIT_MEDBOT_MANIA
 
 /datum/station_trait/random_event_weight_modifier/shuttle_loans
 	name = "Loaner Shuttle"
-	report_message = "Due to an uptick in pirate attacks around your sector, there are few supply vessels in nearby space willing to assist with special requests. Expect to receive more shuttle loan opportunities, with slightly higher payouts."
+	report_message = "Due to an uptick in pirate attacks around your sector, there are few supply vessels in nearby space willing to assist with special requests. Expect to recieve more shuttle loan opportunities, with slightly higher payouts."
 	trait_type = STATION_TRAIT_POSITIVE
 	weight = 4
 	event_control_path = /datum/round_event_control/shuttle_loan

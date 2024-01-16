@@ -283,7 +283,7 @@
 
 /obj/machinery/limbgrower/fullupgrade //Inherently cheaper organ production. This is to NEVER be inherently emagged, no valids.
 	desc = "It grows new limbs using Synthflesh. This alien model seems more efficient."
-	obj_flags = /obj::obj_flags | NO_DECONSTRUCTION
+	flags_1 = NODECONSTRUCT_1
 	circuit = /obj/item/circuitboard/machine/limbgrower/fullupgrade
 
 /obj/machinery/limbgrower/fullupgrade/Initialize(mapload)

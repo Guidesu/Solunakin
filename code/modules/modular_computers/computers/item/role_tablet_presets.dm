@@ -47,7 +47,6 @@
 	name = "head of security PDA"
 	greyscale_config = /datum/greyscale_config/tablet/head
 	greyscale_colors = "#EA3232#0000CC"
-	inserted_item = /obj/item/pen/red/security
 	starting_programs = list(
 		/datum/computer_file/program/crew_manifest,
 		/datum/computer_file/program/status,
@@ -123,7 +122,6 @@
 /obj/item/modular_computer/pda/security
 	name = "security PDA"
 	greyscale_colors = "#EA3232#0000cc"
-	inserted_item = /obj/item/pen/red/security
 	starting_programs = list(
 		/datum/computer_file/program/records/security,
 		/datum/computer_file/program/crew_manifest,
@@ -133,7 +131,6 @@
 /obj/item/modular_computer/pda/detective
 	name = "detective PDA"
 	greyscale_colors = "#805A2F#990202"
-	inserted_item = /obj/item/pen/red/security
 	starting_programs = list(
 		/datum/computer_file/program/records/security,
 		/datum/computer_file/program/crew_manifest,
@@ -144,7 +141,6 @@
 	name = "warden PDA"
 	greyscale_config = /datum/greyscale_config/tablet/stripe_double
 	greyscale_colors = "#EA3232#0000CC#363636"
-	inserted_item = /obj/item/pen/red/security
 	starting_programs = list(
 		/datum/computer_file/program/records/security,
 		/datum/computer_file/program/crew_manifest,
@@ -396,12 +392,12 @@
 		/datum/computer_file/program/newscaster,
 	)
 
-/* // NOVA EDIT REMOVAL BEGIN - Mutes the Curator's ringer on spawn
+/* // SKYRAT EDIT REMOVAL BEGIN - Mutes the Curator's ringer on spawn
 /obj/item/modular_computer/pda/curator/Initialize(mapload)
 	. = ..()
 	for(var/datum/computer_file/program/messenger/msg in stored_files)
 		msg.alert_silenced = TRUE
-*/ // NOVA EDIT REMOVAL END
+*/ // SKYRAT EDIT REMOVAL END
 
 /obj/item/modular_computer/pda/psychologist
 	name = "psychologist PDA"

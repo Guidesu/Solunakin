@@ -20,7 +20,7 @@
 	UnregisterSignal(parent, list(COMSIG_LIVING_UNARMED_ATTACK, COMSIG_HOSTILE_PRE_ATTACKINGTARGET))
 	return ..()
 
-/datum/component/shovel_hands/Destroy(force)
+/datum/component/shovel_hands/Destroy(force, silent)
 	if (internal_shovel)
 		UnregisterSignal(internal_shovel, COMSIG_QDELETING)
 	QDEL_NULL(internal_shovel)

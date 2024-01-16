@@ -1,11 +1,11 @@
 /datum/computer_file/program/alarm_monitor
 	filename = "alarmmonitor"
 	filedesc = "Canary"
-	downloader_category = PROGRAM_CATEGORY_ENGINEERING
+	category = PROGRAM_CATEGORY_ENGI
 	ui_header = "alarm_green.gif"
-	program_open_overlay = "alert-green"
+	program_icon_state = "alert-green"
 	extended_desc = "This program provides visual interface for a station's alarm system."
-	program_flags = PROGRAM_ON_NTNET_STORE | PROGRAM_REQUIRES_NTNET
+	requires_ntnet = 1
 	size = 4
 	tgui_id = "NtosStationAlertConsole"
 	program_icon = "bell"
@@ -37,12 +37,12 @@
 	has_alert = (length(alert_control.listener.alarms) > 0)
 
 	if(!has_alert)
-		program_open_overlay = "alert-green"
+		program_icon_state = "alert-green"
 		ui_header = "alarm_green.gif"
 	else
 		// If we don't know the status, assume the worst.
 		// Technically we should never have anything other than a truthy or falsy value
 		// but this will allow for unknown values to fall through to be an actual alert.
-		program_open_overlay = "alert-red"
+		program_icon_state = "alert-red"
 		ui_header = "alarm_red.gif"
 	update_computer_icon() // Always update the icon after we check our conditional because we might've changed it

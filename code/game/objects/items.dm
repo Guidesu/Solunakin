@@ -217,10 +217,10 @@
 	var/override_notes = FALSE
 	/// Used if we want to have a custom verb text for throwing. "John Spaceman flicks the ciggerate" for example.
 	var/throw_verb
-	// NOVA EDIT ADDITION START
+	// SKYRAT EDIT ADDITION START
 	/// Does this use the advanced reskinning setup?
 	var/uses_advanced_reskins = FALSE
-	// NOVA EDIT ADDITION END
+	// SKYRAT EDIT ADDITION END
 
 	/// A lazylist used for applying fantasy values, contains the actual modification applied to a variable.
 	var/list/fantasy_modifications = null
@@ -371,11 +371,9 @@
 		return
 	if(greyscale_config_worn)
 		worn_icon = SSgreyscale.GetColoredIconByType(greyscale_config_worn, greyscale_colors)
-	// NOVA EDIT ADD START
+	// SKYRAT EDIT ADD START
 	if(greyscale_config_worn_digi)
 		worn_icon_digi = SSgreyscale.GetColoredIconByType(greyscale_config_worn_digi, greyscale_colors)
-	if(greyscale_config_worn_muzzled)
-		worn_icon_muzzled = SSgreyscale.GetColoredIconByType(greyscale_config_worn_muzzled, greyscale_colors)
 	if(greyscale_config_worn_monkey)
 		worn_icon_monkey = SSgreyscale.GetColoredIconByType(greyscale_config_worn_monkey, greyscale_colors)
 	if(greyscale_config_worn_vox)
@@ -390,7 +388,7 @@
 		worn_icon_taur_paw = SSgreyscale.GetColoredIconByType(greyscale_config_worn_taur_paw, greyscale_colors)
 	if(greyscale_config_worn_taur_hoof)
 		worn_icon_taur_hoof = SSgreyscale.GetColoredIconByType(greyscale_config_worn_taur_hoof, greyscale_colors)
-	// NOVA EDIT ADD END
+	// SKYRAT EDIT ADD END
 	if(greyscale_config_inhand_left)
 		lefthand_file = SSgreyscale.GetColoredIconByType(greyscale_config_inhand_left, greyscale_colors)
 	if(greyscale_config_inhand_right)
@@ -445,7 +443,7 @@
 	///Separator between the items on the list
 	var/sep = ""
 	///Nodes that can be boosted
-	var/list/boostable_nodes = techweb_item_unlock_check(src)
+	var/list/boostable_nodes = techweb_item_boost_check(src)
 	if (boostable_nodes)
 		for(var/id in boostable_nodes)
 			var/datum/techweb_node/node = SSresearch.techweb_node_by_id(id)
@@ -493,9 +491,8 @@
 	if(!.)
 		return
 
-	if(href_list[VV_HK_ADD_FANTASY_AFFIX])
-		if(!check_rights(R_FUN))
-			return
+	if(href_list[VV_HK_ADD_FANTASY_AFFIX] && check_rights(R_FUN))
+
 		//gathering all affixes that make sense for this item
 		var/list/prefixes = list()
 		var/list/suffixes = list()
@@ -508,11 +505,13 @@
 					prefixes[affix_choice.name] = affix_choice
 				else
 					suffixes[affix_choice.name] = affix_choice
+
 		//making it more presentable here
 		var/list/affixes = list("---PREFIXES---")
 		affixes.Add(prefixes)
 		affixes.Add("---SUFFIXES---")
 		affixes.Add(suffixes)
+
 		//admin picks, cleanup the ones we didn't do and handle chosen
 		var/picked_affix_name = tgui_input_list(usr, "Affix to add to [src]", "Enchant [src]", affixes)
 		if(isnull(picked_affix_name))
@@ -526,6 +525,7 @@
 			fantasy_quality++
 		else
 			fantasy_quality--
+
 		//name gets changed by the component so i want to store it for feedback later
 		var/before_name = name
 		//naming these vars that i'm putting into the fantasy component to make it more readable
@@ -535,6 +535,7 @@
 		if(AddComponent(/datum/component/fantasy, fantasy_quality, list(affix), canFail, announce) == COMPONENT_INCOMPATIBLE)
 			to_chat(usr, span_warning("Fantasy component not compatible with [src]."))
 			CRASH("fantasy component incompatible with object of type: [type]")
+
 		to_chat(usr, span_notice("[before_name] now has [picked_affix_name]!"))
 		log_admin("[key_name(usr)] has added [picked_affix_name] fantasy affix to [before_name]")
 		message_admins(span_notice("[key_name(usr)] has added [picked_affix_name] fantasy affix to [before_name]"))
@@ -616,6 +617,9 @@
 		if(!R.low_power_mode) //can't equip modules with an empty cell.
 			R.activate_module(src)
 			R.hud_used.update_robot_modules_display()
+
+/obj/item/proc/GetDeconstructableContents()
+	return get_all_contents() - src
 
 // afterattack() and attack() prototypes moved to _onclick/item_attack.dm for consistency
 
@@ -796,12 +800,10 @@
 /obj/item/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	if(QDELETED(hit_atom))
 		return
-	if(SEND_SIGNAL(src, COMSIG_MOVABLE_PRE_IMPACT, hit_atom, throwingdatum) & COMPONENT_MOVABLE_IMPACT_NEVERMIND)
+	if(SEND_SIGNAL(src, COMSIG_MOVABLE_IMPACT, hit_atom, throwingdatum) & COMPONENT_MOVABLE_IMPACT_NEVERMIND)
 		return
 	if(SEND_SIGNAL(hit_atom, COMSIG_ATOM_PREHITBY, src, throwingdatum) & COMSIG_HIT_PREVENTED)
 		return
-
-	SEND_SIGNAL(src, COMSIG_MOVABLE_IMPACT, hit_atom, throwingdatum)
 	if(get_temperature() && isliving(hit_atom))
 		var/mob/living/L = hit_atom
 		L.ignite_mob()
@@ -1176,8 +1178,7 @@
 	return ..()
 
 /obj/item/proc/embedded(atom/embedded_target, obj/item/bodypart/part)
-	SHOULD_CALL_PARENT(TRUE)
-	SEND_SIGNAL(src, COMSIG_ITEM_EMBEDDED, embedded_target, part)
+	return
 
 /obj/item/proc/unembedded()
 	if(item_flags & DROPDEL && !QDELETED(src))
@@ -1189,13 +1190,13 @@
 	return !HAS_TRAIT(src, TRAIT_NODROP) && !(item_flags & ABSTRACT)
 
 /obj/item/proc/doStrip(mob/stripper, mob/owner)
-	//NOVA EDIT CHANGE BEGIN - THIEVING GLOVES - ORIGINAL: return owner.dropItemToGround(src)
+	//SKYRAT EDIT CHANGE BEGIN - THIEVING GLOVES - ORIGINAL: return owner.dropItemToGround(src)
 	if (!owner.dropItemToGround(src))
 		return FALSE
 	if (HAS_TRAIT(stripper, TRAIT_STICKY_FINGERS))
 		stripper.put_in_hands(src)
 	return TRUE
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 
 
 
@@ -1206,8 +1207,6 @@
 
 ///In case we want to do something special (like self delete) upon failing to embed in something.
 /obj/item/proc/failedEmbed()
-	SHOULD_CALL_PARENT(TRUE)
-	SEND_SIGNAL(src, COMSIG_ITEM_FAILED_EMBED)
 	if(item_flags & DROPDEL && !QDELETED(src))
 		qdel(src)
 
@@ -1222,7 +1221,7 @@
 	return src
 
 /**
- * tryEmbed() is for when you want to try embedding something without dealing with the damage + hit messages of calling hitby() on the item while targeting the target.
+ * tryEmbed() is for when you want to try embedding something without dealing with the damage + hit messages of calling hitby() on the item while targetting the target.
  *
  * Really, this is used mostly with projectiles with shrapnel payloads, from [/datum/element/embed/proc/checkEmbedProjectile], and called on said shrapnel. Mostly acts as an intermediate between different embed elements.
  *
@@ -1409,7 +1408,7 @@
 	if(SEND_SIGNAL(src, COMSIG_ITEM_OFFER_TAKEN, offerer, taker) & COMPONENT_OFFER_INTERRUPT)
 		return TRUE
 
-/// NOVA EDIT ADDITION START
+/// SKYRAT EDIT ADDITION START
 /obj/item/reskin_obj(mob/M)
 	if(!uses_advanced_reskins)
 		return ..()
@@ -1475,7 +1474,7 @@
 /obj/item/proc/post_reskin(mob/our_mob)
 	return
 
-/// NOVA EDIT ADDITION END
+/// SKYRAT EDIT ADDITION END
 
 /// Special stuff you want to do when an outfit equips this item.
 /obj/item/proc/on_outfit_equip(mob/living/carbon/human/outfit_wearer, visuals_only, item_slot)
@@ -1734,6 +1733,3 @@
 	if (!isnull(tool_behaviour))
 		return list(tool_behaviour)
 	return null
-
-/obj/item/animate_atom_living(mob/living/owner)
-	new /mob/living/simple_animal/hostile/mimic/copy(drop_location(), src, owner)

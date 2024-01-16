@@ -7,7 +7,7 @@
 	singular_name = "cannonball"
 	merge_type = /obj/item/stack/cannonball
 	throwforce = 10
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	custom_materials = list(/datum/material/alloy/plasteel=SHEET_MATERIAL_AMOUNT)
 	resistance_flags = FIRE_PROOF
 	throw_speed = 5

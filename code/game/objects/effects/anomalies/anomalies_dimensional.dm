@@ -8,7 +8,7 @@
 	/// Range of effect, if left alone anomaly will convert a 2(range)+1 squared area.
 	var/range = 3
 	/// List of turfs this anomaly will try to transform before relocating
-	var/list/turf/target_turfs = list()
+	var/list/turf/target_turfs = new()
 	/// Current anomaly 'theme', dictates what tiles to create.
 	var/datum/dimension_theme/theme
 	/// Effect displaying on the anomaly to represent the theme.
@@ -38,7 +38,7 @@
 	var/turf/affected_turf = target_turfs[1]
 	new /obj/effect/temp_visual/transmute_tile_flash(affected_turf)
 	theme.apply_theme(affected_turf)
-	target_turfs -= affected_turf
+	target_turfs.Remove(affected_turf)
 
 /**
  * Prepare a new area for transformation into a new theme.
@@ -50,10 +50,11 @@
 	theme = new new_theme_path()
 	apply_theme_icon()
 
-	target_turfs = list()
-	for (var/turf/turf as anything in spiral_range_turfs(range, src))
+	target_turfs = new()
+	var/list/turfs = spiral_range_turfs(range, src)
+	for (var/turf/turf in turfs)
 		if (theme.can_convert(turf))
-			target_turfs += turf
+			target_turfs.Add(turf)
 
 /**
  * Applies an overlay icon based on the current theme.

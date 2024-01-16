@@ -266,9 +266,6 @@
 ///Used to determine the new valid current_holder from the parent's loc.
 /datum/component/overlay_lighting/proc/check_holder()
 	var/atom/movable/movable_parent = GET_PARENT
-	if(QDELETED(movable_parent))
-		set_holder(null)
-		return
 	if(isturf(movable_parent.loc))
 		set_holder(movable_parent)
 		return
@@ -277,11 +274,7 @@
 		set_holder(null)
 		return
 	if(isturf(inside.loc))
-		// storage items block light, also don't be moving into a qdeleted item
-		if(QDELETED(inside) || istype(inside, /obj/item/storage))
-			set_holder(null)
-		else
-			set_holder(inside)
+		set_holder(inside)
 		return
 	set_holder(null)
 
@@ -290,7 +283,6 @@
 /datum/component/overlay_lighting/proc/on_holder_qdel(atom/movable/source, force)
 	SIGNAL_HANDLER
 	if(QDELETED(current_holder))
-		set_holder(null)
 		return
 	UnregisterSignal(current_holder, list(COMSIG_QDELETING, COMSIG_MOVABLE_MOVED))
 	if(directional)

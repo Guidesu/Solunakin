@@ -88,7 +88,7 @@
 
 //Give cyborgs hotkey clicks without breaking existing uses of hotkey clicks
 // for non-doors/apcs
-/mob/living/silicon/robot/CtrlShiftClickOn(atom/target) // Procs overriden in modular_nova/modules/Silicon_QoL
+/mob/living/silicon/robot/CtrlShiftClickOn(atom/target) // Procs overriden in modular_skyrat/modules/Silicon_QoL
 	target.BorgCtrlShiftClick(src)
 
 /mob/living/silicon/robot/ShiftClickOn(atom/target)
@@ -190,21 +190,21 @@
 	change attack_robot() above to the proper function
 */
 /mob/living/silicon/robot/UnarmedAttack(atom/A, proximity_flag, list/modifiers)
-	if(!can_unarmed_attack())
+	if(HAS_TRAIT(src, TRAIT_HANDS_BLOCKED))
 		return
 	A.attack_robot(src)
 
 /mob/living/silicon/robot/RangedAttack(atom/A)
 	A.attack_robot(src)
 
-/*	//NOVA EDIT - MOVED TO modular_nova/master_files/code/_onclick/cyborg.dm
+/*	//SKYRAT EDIT - MOVED TO modular_skyrat/master_files/code/_onclick/cyborg.dm
 /atom/proc/attack_robot(mob/user)
 	if (SEND_SIGNAL(src, COMSIG_ATOM_ATTACK_ROBOT, user) & COMPONENT_CANCEL_ATTACK_CHAIN)
 		return
 
 	attack_ai(user)
 	return
-*/	//NOVA EDIT END
+*/	//SKYRAT EDIT END
 
 /**
  * What happens when the cyborg without active module holds right-click on an item. Returns a SECONDARY_ATTACK_* value.

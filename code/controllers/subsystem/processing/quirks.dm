@@ -12,30 +12,25 @@ GLOBAL_LIST_INIT_TYPED(quirk_blacklist, /list/datum/quirk, list(
 	list(/datum/quirk/item_quirk/clown_enjoyer, /datum/quirk/item_quirk/mime_fan, /datum/quirk/item_quirk/pride_pin),
 	list(/datum/quirk/bad_touch, /datum/quirk/friendly),
 	list(/datum/quirk/extrovert, /datum/quirk/introvert),
-	list(/datum/quirk/prosthetic_limb, /datum/quirk/quadruple_amputee, /datum/quirk/transhumanist, /datum/quirk/body_purist),
+	list(/datum/quirk/prosthetic_limb, /datum/quirk/quadruple_amputee, /datum/quirk/body_purist),
 	list(/datum/quirk/prosthetic_organ, /datum/quirk/tin_man, /datum/quirk/body_purist),
 	list(/datum/quirk/quadruple_amputee, /datum/quirk/paraplegic, /datum/quirk/hemiplegic),
-	//list(/datum/quirk/quadruple_amputee, /datum/quirk/frail), // NOVA EDIT REMOVAL- Since we have synth wounds now, frail has a large downside for prosthetics and such
+	//list(/datum/quirk/quadruple_amputee, /datum/quirk/frail), // SKYRAT EDIT REMOVAL- Since we have synth wounds now, frail has a large downside for prosthetics and such
 	list(/datum/quirk/social_anxiety, /datum/quirk/mute),
 	list(/datum/quirk/mute, /datum/quirk/softspoken),
 	list(/datum/quirk/poor_aim, /datum/quirk/bighands),
 	list(/datum/quirk/bilingual, /datum/quirk/foreigner),
-	list(/datum/quirk/spacer_born, /datum/quirk/item_quirk/settler),
+	list(/datum/quirk/spacer_born, /datum/quirk/paraplegic, /datum/quirk/item_quirk/settler),
 	list(/datum/quirk/photophobia, /datum/quirk/nyctophobia),
 	list(/datum/quirk/item_quirk/settler, /datum/quirk/freerunning),
 	list(/datum/quirk/numb, /datum/quirk/selfaware),
-	//NOVA EDIT ADDITION BEGIN
+	//SKYRAT EDIT ADDITION BEGIN
 	list(/datum/quirk/equipping/nerve_staple, /datum/quirk/nonviolent),
 	list(/datum/quirk/equipping/nerve_staple, /datum/quirk/item_quirk/nearsighted),
 	list(/datum/quirk/no_guns, /datum/quirk/bighands, /datum/quirk/poor_aim),
 	list(/datum/quirk/no_guns, /datum/quirk/nonviolent),
 	list(/datum/quirk/spacer_born, /datum/quirk/oversized),
-	list(/datum/quirk/feline_aspect, /datum/quirk/item_quirk/canine, /datum/quirk/item_quirk/avian),
-	list(/datum/quirk/all_nighter, /datum/quirk/heavy_sleeper),
-	list(/datum/quirk/light_drinker, /datum/quirk/drunkhealing),
-	list(/datum/quirk/oversized, /datum/quirk/freerunning),
-	list(/datum/quirk/oversized, /datum/quirk/item_quirk/settler),
-	//NOVA EDIT ADDITION END
+	//SKYRAT EDIT ADDITION END
 ))
 
 GLOBAL_LIST_INIT(quirk_string_blacklist, generate_quirk_string_blacklist())
@@ -86,13 +81,13 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 		if(initial(quirk_type.abstract_parent_type) == type)
 			continue
 
-		// NOVA EDIT ADDITION START
+		// SKYRAT EDIT ADDITION START
 		if(initial(quirk_type.erp_quirk) && CONFIG_GET(flag/disable_erp_preferences))
 			continue
 		// Hidden quirks aren't visible to TGUI or the player
 		if (initial(quirk_type.hidden_quirk))
 			continue
-		// NOVA EDIT ADDITION END
+		// SKYRAT EDIT ADDITION END
 
 		quirks[initial(quirk_type.name)] = quirk_type
 		quirk_points[initial(quirk_type.name)] = initial(quirk_type.value)
@@ -109,7 +104,7 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 		var/datum/quirk/quirk_type = quirks[quirk_name]
 		if(ispath(quirk_type))
 			if(user.add_quirk(quirk_type, override_client = applied_client))
-				SSblackbox.record_feedback("tally", "quirks_taken", 1, "[quirk_name]")
+				SSblackbox.record_feedback("nested tally", "quirks_taken", 1, list("[quirk_name]"))
 		else
 			stack_trace("Invalid quirk \"[quirk_name]\" in client [applied_client.ckey] preferences")
 			applied_client.prefs.all_quirks -= quirk_name
@@ -184,18 +179,18 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 /// be valid.
 /// If no changes need to be made, will return the same list.
 /// Expects all quirk names to be unique, but makes no other expectations.
-/datum/controller/subsystem/processing/quirks/proc/filter_invalid_quirks(list/quirks, list/augments) // NOVA EDIT - AUGMENTS+
+/datum/controller/subsystem/processing/quirks/proc/filter_invalid_quirks(list/quirks, list/augments) // SKYRAT EDIT - AUGMENTS+
 	var/list/new_quirks = list()
 	var/list/positive_quirks = list()
 	var/balance = 0
 
 	var/list/all_quirks = get_quirks()
 
-	// NOVA EDIT BEGIN - AUGMENTS+
+	// SKYRAT EDIT BEGIN - AUGMENTS+
 	for(var/key in augments)
 		var/datum/augment_item/aug = GLOB.augment_items[augments[key]]
 		balance += aug.cost
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 	for (var/quirk_name in quirks)
 		var/datum/quirk/quirk = all_quirks[quirk_name]
 		if (isnull(quirk))

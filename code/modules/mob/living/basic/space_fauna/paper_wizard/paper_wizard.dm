@@ -36,19 +36,24 @@
 	AddElement(/datum/element/effect_trail, /obj/effect/temp_visual/paper_scatter)
 
 /mob/living/basic/paper_wizard/proc/grant_abilities()
-	var/static/list/innate_actions = list(
-		/datum/action/cooldown/spell/conjure/wizard_summon_minions = BB_WIZARD_SUMMON_MINIONS,
-		/datum/action/cooldown/spell/pointed/wizard_mimic = BB_WIZARD_MIMICS,
-	)
-
-	grant_actions_by_list(innate_actions)
+	summon = new(src)
+	summon.Grant(src)
+	ai_controller.set_blackboard_key(BB_WIZARD_SUMMON_MINIONS, summon)
+	mimic = new(src)
+	mimic.Grant(src)
+	ai_controller.set_blackboard_key(BB_WIZARD_MIMICS, mimic)
 
 /mob/living/basic/paper_wizard/proc/grant_loot()
 	AddElement(/datum/element/death_drops, dropped_loot)
 
+/mob/living/basic/paper_wizard/Destroy()
+	QDEL_NULL(summon)
+	QDEL_NULL(mimic)
+	return ..()
+
 /datum/ai_controller/basic_controller/paper_wizard
 	blackboard = list(
-		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic,
+		BB_TARGETTING_DATUM = new /datum/targetting_datum/basic,
 		BB_WRITING_LIST = list(
 			"I can turn the paper into gold and ink into diamonds!",
 			"Your fate is written and sealed!",

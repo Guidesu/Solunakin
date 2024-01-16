@@ -52,7 +52,7 @@
 		message = fly_buZZ.Replace(message, "ZZZ")
 		message = replacetext(message, "s", "z")
 		message = replacetext(message, "S", "Z")
-//NOVA EDIT START: Adding russian version to autohiss
+//SKYRAT EDIT START: Adding russian version to autohiss
 		if(CONFIG_GET(flag/russian_text_formation))
 			var/static/regex/fly_buzz_ru = new("з+", "g")
 			var/static/regex/fly_buZZ_ru = new("З+", "g")
@@ -60,7 +60,7 @@
 			message = fly_buZZ_ru.Replace(message, "ЗЗЗ")
 			message = replacetext(message, "с", "з")
 			message = replacetext(message, "С", "З")
-//NOVA EDIT END: Adding russian version to autohiss
+//SKYRAT EDIT END: Adding russian version to autohiss
 	speech_args[SPEECH_MESSAGE] = message
 
 /obj/item/organ/internal/tongue/fly/Initialize(mapload)
@@ -78,7 +78,10 @@
 	name = odd_organ_name()
 	icon_state = FLY_INFUSED_ORGAN_ICON
 	AddElement(/datum/element/organ_set_bonus, /datum/status_effect/organ_set_bonus/fly)
-	AddElement(/datum/element/update_icon_blocker)
+
+/obj/item/organ/internal/heart/fly/update_icon_state()
+	SHOULD_CALL_PARENT(FALSE)
+	return //don't set icon thank you
 
 /obj/item/organ/internal/lungs/fly
 	desc = FLY_INFUSED_ORGAN_DESC

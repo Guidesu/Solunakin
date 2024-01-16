@@ -52,7 +52,7 @@
 	RegisterSignal(parent, COMSIG_ATOM_UPDATE_OVERLAYS, PROC_REF(on_update_overlays))
 	engraved_wall.update_appearance()
 
-/datum/component/engraved/Destroy(force)
+/datum/component/engraved/Destroy(force, silent)
 	if(!parent)
 		return ..()
 	parent.RemoveElement(/datum/element/art)

@@ -14,6 +14,8 @@
 	the hostile creatures, and the ash drakes swooping down from the cloudless skies, all you can wish for is the feel of soft grass between your toes and \
 	the fresh air of Earth. These thoughts are dispelled by yet another recollection of how you got here... "
 	spawner_job_path = /datum/job/hermit
+	quirks_enabled = TRUE // SKYRAT EDIT ADDITION - ghost role loadouts
+	random_appearance = FALSE // SKYRAT EDIT ADDITION
 
 /obj/effect/mob_spawn/ghost_role/human/hermit/Initialize(mapload)
 	. = ..()
@@ -79,6 +81,8 @@
 	flavour_text = "Ch'yea. You came here, like, on spring break, hopin' to pick up some bangin' hot chicks, y'knaw?"
 	spawner_job_path = /datum/job/beach_bum
 	outfit = /datum/outfit/beachbum
+	quirks_enabled = TRUE // SKYRAT EDIT ADDITION - ghost role loadouts
+	random_appearance = FALSE // SKYRAT EDIT ADDITION
 
 /obj/effect/mob_spawn/ghost_role/human/beach/lifeguard
 	you_are_text = "You're a spunky lifeguard!"
@@ -119,6 +123,7 @@
 	flavour_text = "Time to mix drinks and change lives. Smoking space drugs makes it easier to understand your patrons' odd dialect."
 	spawner_job_path = /datum/job/space_bartender
 	outfit = /datum/outfit/spacebartender
+	random_appearance = FALSE // SKYRAT EDIT ADDITION
 
 /datum/outfit/spacebartender
 	name = "Space Bartender"
@@ -154,6 +159,8 @@
 	and eventually bring life to this desolate planet while waiting for contact from your creators. \
 	Estimated time of last contact: Deployment, 5000 millennia ago."
 	spawner_job_path = /datum/job/lifebringer
+	restricted_species = list(/datum/species/pod) //SKYRAT EDIT ADDITION
+	random_appearance = FALSE // SKYRAT EDIT ADDITION
 
 /obj/effect/mob_spawn/ghost_role/human/seed_vault/Initialize(mapload)
 	. = ..()
@@ -221,6 +228,8 @@
 	spawner_job_path = /datum/job/ash_walker
 	var/datum/team/ashwalkers/team
 	var/obj/structure/ash_walker_eggshell/eggshell
+	restricted_species = list(/datum/species/lizard/ashwalker) //SKYRAT EDIT ADDITION
+	random_appearance = FALSE // SKYRAT EDIT ADDITION
 
 /obj/effect/mob_spawn/ghost_role/human/ash_walker/Destroy()
 	eggshell = null
@@ -234,17 +243,12 @@
 	return FALSE
 
 /obj/effect/mob_spawn/ghost_role/human/ash_walker/special(mob/living/carbon/human/spawned_human)
-	/*
-	 * 2024/01/03 TODO:
-	 * MOVE THE MODULAR STUFF IN THIS PROC TO
-	 * /modular_nova/master_files/code/modules/mob_spawn/ghost_roles/mining_roles.dm
-	 * There's an ashwalker camp section ready for you to slot it into
-	 */
-	// NOVA EDIT BEGIN
-	spawned_human.fully_replace_character_name(null,random_unique_lizard_name(gender)) // NOVA EDIT MOVE - Moving before parent call prevents char name randomization
-	quirks_enabled = TRUE // NOVA EDIT ADDITION - ghost role quirks
+	// SKYRAT EDIT MOVE
+	// Moved lizard name randomizer before parent call (so character names are preserved)
+	spawned_human.fully_replace_character_name(null,random_unique_lizard_name(gender))
+	quirks_enabled = TRUE //SKYRAT EDIT ADDITION
 	. = ..()
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 	to_chat(spawned_human, "<b>Drag the corpses of men and beasts to your nest. It will absorb them to create more of your kind. Invade the strange structure of the outsiders if you must. Do not cause unnecessary destruction, as littering the wastes with ugly wreckage is certain to not gain you favor. Glory to the Necropolis!</b>")
 
 	spawned_human.mind.add_antag_datum(/datum/antagonist/ashwalker, team)
@@ -262,14 +266,7 @@
 	eggshell.egg = src
 	src.forceMove(eggshell)
 	if(spawner_area)
-		notify_ghosts(
-			"An ash walker egg is ready to hatch in \the [spawner_area.name].",
-			source = src,
-			header = "Ash Walker Egg",
-			click_interact = TRUE,
-			ignore_key = POLL_IGNORE_ASHWALKER,
-			notify_flags = NOTIFY_CATEGORY_NOFLASH,
-		)
+		notify_ghosts("An ash walker egg is ready to hatch in \the [spawner_area.name].", source = src, action = NOTIFY_PLAY, flashwindow = FALSE, ignore_key = POLL_IGNORE_ASHWALKER)
 
 /datum/outfit/ashwalker
 	name = "Ash Walker"
@@ -292,10 +289,13 @@
 	important_text = "The base is rigged with explosives, DO NOT abandon it or let it fall into enemy hands!"
 	outfit = /datum/outfit/lavaland_syndicate
 	spawner_job_path = /datum/job/lavaland_syndicate
+	loadout_enabled = TRUE // SKYRAT EDIT ADDITION - ghost role loadouts
+	quirks_enabled = TRUE // SKYRAT EDIT ADDITION - ghost role loadouts
+	random_appearance = FALSE // SKYRAT EDIT ADDITION
 
 /obj/effect/mob_spawn/ghost_role/human/lavaland_syndicate/special(mob/living/new_spawn)
 	. = ..()
-	new_spawn.grant_language(/datum/language/codespeak, source = LANGUAGE_MIND)
+	new_spawn.grant_language(/datum/language/codespeak, source = LANGUAGE_SPAWNER) // SKYRAT EDIT CHANGE - ORIGINAL: new_spawn.grant_language(/datum/language/codespeak, source = LANGUAGE_MIND)
 
 /obj/effect/mob_spawn/ghost_role/human/lavaland_syndicate/comms
 	name = "Symphionia Comms Agent"
@@ -316,12 +316,17 @@
 	ears = /obj/item/radio/headset/syndicate/alt
 	shoes = /obj/item/clothing/shoes/combat
 	r_pocket = /obj/item/gun/ballistic/automatic/pistol
-	r_hand = /obj/item/gun/ballistic/rifle/sniper_rifle
+	r_hand = /obj/item/storage/toolbox/guncase/skyrat/carwo_large_case/sindano/evil // SKYRAT EDIT - Original: /obj/item/gun/ballistic/rifle/sniper_rifle
 
 	implants = list(/obj/item/implant/weapons_auth)
+	id_trim = /datum/id_trim/syndicom/skyrat/interdyne //SKYRAT EDIT
 
+// SKYRAT EDIT REMOVAL BEGIN -- mapping
+/*
 /datum/outfit/lavaland_syndicate/post_equip(mob/living/carbon/human/syndicate, visualsOnly = FALSE)
 	syndicate.faction |= ROLE_SYNDICATE
+*/
+// SKYRAT EDIT REMOVAL END
 
 /datum/outfit/lavaland_syndicate/comms
 	name = "Lavaland Symphionia Comms Agent"

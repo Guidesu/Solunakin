@@ -43,8 +43,8 @@
 		var/threatlevel = 0
 		if(nearby_carbon.incapacitated())
 			continue
-		threatlevel = nearby_carbon.assess_threat(judgement_criteria)
-		if(threatlevel < THREAT_ASSESS_DANGEROUS)
+		threatlevel = nearby_carbon.assess_threat(judgement_criteria, weaponcheck=CALLBACK(src, PROC_REF(check_for_weapons)))
+		if(threatlevel < 4 )
 			continue
 		var/dst = get_dist(src, nearby_carbon)
 		if(dst <= 1 || dst > 7)

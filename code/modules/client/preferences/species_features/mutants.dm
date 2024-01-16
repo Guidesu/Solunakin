@@ -1,4 +1,4 @@
-/* NOVA EDIT REMOVAL
+/* SKYRAT EDIT REMOVAL
 /datum/preference/color/mutant_color
 	savefile_key = "feature_mcolor"
 	savefile_identifier = PREFERENCE_CHARACTER

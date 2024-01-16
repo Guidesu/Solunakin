@@ -37,7 +37,7 @@
 /obj/structure/tank_dispenser/wrench_act(mob/living/user, obj/item/tool)
 	. = ..()
 	default_unfasten_wrench(user, tool)
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/structure/tank_dispenser/attackby(obj/item/I, mob/living/user, params)
 	var/full
@@ -104,7 +104,7 @@
 
 
 /obj/structure/tank_dispenser/deconstruct(disassembled = TRUE)
-	if(!(obj_flags & NO_DECONSTRUCTION))
+	if(!(flags_1 & NODECONSTRUCT_1))
 		for(var/X in src)
 			var/obj/item/I = X
 			I.forceMove(loc)

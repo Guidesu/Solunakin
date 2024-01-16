@@ -27,8 +27,7 @@
 	if(. || !istype(target)) // was it caught or is the target not a living mob
 		return .
 
-	var/mob/thrower = throwingdatum?.get_thrower()
-	if(!thrower) // if a mob didn't throw it (need two people to play 52 pickup)
+	if(!throwingdatum?.thrower) // if a mob didn't throw it (need two people to play 52 pickup)
 		return
 
 	if(count_cards() == 0)

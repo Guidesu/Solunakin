@@ -53,7 +53,7 @@ Stabilized extracts:
 	if (holder.has_status_effect(effectpath))
 		return
 	holder.apply_status_effect(effectpath, src)
-	return PROCESS_KILL
+	STOP_PROCESSING(SSobj,src)
 
 //Colors and subtypes:
 /obj/item/slimecross/stabilized/grey

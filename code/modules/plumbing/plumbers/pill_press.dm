@@ -37,7 +37,7 @@
 			CAT_PILLS = GLOB.reagent_containers[CAT_PILLS],
 			CAT_PATCHES = GLOB.reagent_containers[CAT_PATCHES],
 			"Bottles" = list(/obj/item/reagent_containers/cup/bottle),
-			CAT_HYPOS = GLOB.reagent_containers[CAT_HYPOS], // NOVA EDIT ADDITION - Hypovials
+			CAT_HYPOS = GLOB.reagent_containers[CAT_HYPOS], // SKYRAT EDIT ADDITION - Hypovials
 
 		)
 
@@ -71,10 +71,10 @@
 		packaging_category = CAT_PATCHES
 	else if(ispath(container, /obj/item/reagent_containers/pill))
 		packaging_category = CAT_PILLS
-	// NOVA EDIT ADDITION START - HYPOVIALS
+	// SKYRAT EDIT ADDITION START - HYPOVIALS
 	else if(ispath(container, /obj/item/reagent_containers/cup/vial))
 		packaging_category = CAT_HYPOS
-	// NOVA EDIT ADDITION END
+	// SKYRAT EDIT ADDITION END
 	else
 		packaging_category = "Bottles"
 	return container
@@ -84,7 +84,7 @@
 		return
 
 	//shift & check to account for floating point inaccuracies
-	if(reagents.total_volume >= current_volume)
+	if(reagents.total_volume + 0.01 >= current_volume)
 		var/obj/item/reagent_containers/container = locate(packaging_type)
 		container = new container(src)
 		var/suffix
@@ -93,10 +93,10 @@
 				suffix = "Pill"
 			if(CAT_PATCHES)
 				suffix = "Patch"
-			//NOVA EDIT ADDITION BEGIN - HYPOVIALS
+			//SKYRAT EDIT ADDITION BEGIN - HYPOVIALS
 			if (CAT_HYPOS)
 				suffix = "Vial"
-			//NOVA EDIT ADDITION END - HYPOVIALS
+			//SKYRAT EDIT ADDITION END - HYPOVIALS
 			else
 				suffix = "Bottle"
 		container.name = "[product_name] [suffix]"

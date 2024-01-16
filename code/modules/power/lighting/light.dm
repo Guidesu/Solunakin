@@ -5,6 +5,7 @@
 	icon_state = "tube"
 	desc = "A lighting fixture."
 	layer = WALL_OBJ_LAYER
+	plane = GAME_PLANE_UPPER
 	max_integrity = 100
 	use_power = ACTIVE_POWER_USE
 	idle_power_usage = BASE_MACHINE_IDLE_CONSUMPTION * 0.02
@@ -72,9 +73,7 @@
 	///The minimum value for the light's power in low power mode
 	var/bulb_low_power_pow_min = 0.5
 	///The Light range to use when working in fire alarm status
-	var/fire_brightness = 9
-	///The Light power to use when working in fire alarm status
-	var/fire_power = 0.5
+	var/fire_brightness = 4
 	///The Light colour to use when working in fire alarm status
 	var/fire_colour = COLOR_FIRE_LIGHT_RED
 
@@ -102,7 +101,7 @@
 			qdel(on_turf)
 
 	if(!mapload) //sync up nightshift lighting for player made lights
-		var/area/our_area = get_room_area()
+		var/area/our_area = get_room_area(src)
 		var/obj/machinery/power/apc/temp_apc = our_area.apc
 		nightshift_enabled = temp_apc?.nightshift_lights
 
@@ -132,7 +131,7 @@
 	update(trigger = FALSE)
 
 /obj/machinery/light/Destroy()
-	var/area/local_area = get_room_area()
+	var/area/local_area = get_room_area(src)
 	if(local_area)
 		on = FALSE
 	QDEL_NULL(cell)
@@ -155,7 +154,7 @@
 /obj/machinery/light/update_icon_state()
 	switch(status) // set icon_states
 		if(LIGHT_OK)
-			var/area/local_area = get_room_area()
+			var/area/local_area = get_area(src)
 			if(low_power_mode || major_emergency || (local_area?.fire))
 				icon_state = "[base_state]_emergency"
 			else
@@ -175,7 +174,7 @@
 
 	. += emissive_appearance(overlay_icon, "[base_state]", src, alpha = src.alpha)
 
-	var/area/local_area = get_room_area()
+	var/area/local_area = get_room_area(src)
 
 	if(low_power_mode || major_emergency || (local_area?.fire))
 		. += mutable_appearance(overlay_icon, "[base_state]_emergency")
@@ -186,10 +185,10 @@
 	. += mutable_appearance(overlay_icon, base_state)
 
 
-//NOVA EDIT ADDITION BEGIN - AESTHETICS
+//SKYRAT EDIT ADDITION BEGIN - AESTHETICS
 #define LIGHT_ON_DELAY_UPPER (2 SECONDS)
 #define LIGHT_ON_DELAY_LOWER (0.25 SECONDS)
-//NOVA EDIT END
+//SKYRAT EDIT END
 
 // Area sensitivity is traditionally tied directly to power use, as an optimization
 // But since we want it for fire reacting, we disregard that
@@ -197,7 +196,7 @@
 	. = ..()
 	if(!.)
 		return
-	var/area/our_area = get_room_area()
+	var/area/our_area = get_room_area(src)
 	RegisterSignal(our_area, COMSIG_AREA_FIRE_CHANGED, PROC_REF(handle_fire))
 
 /obj/machinery/light/on_enter_area(datum/source, area/area_to_register)
@@ -211,16 +210,16 @@
 
 /obj/machinery/light/proc/handle_fire(area/source, new_fire)
 	SIGNAL_HANDLER
-	update(instant = TRUE, play_sound = FALSE) //NOVA EDIT CHANGE
+	update(instant = TRUE, play_sound = FALSE) //SKYRAT EDIT CHANGE
 
 // update the icon_state and luminosity of the light depending on its state
-/obj/machinery/light/proc/update(trigger = TRUE, instant = FALSE, play_sound = TRUE) //NOVA EDIT CHANGE
+/obj/machinery/light/proc/update(trigger = TRUE, instant = FALSE, play_sound = TRUE) //SKYRAT EDIT CHANGE
 	switch(status)
 		if(LIGHT_BROKEN,LIGHT_BURNED,LIGHT_EMPTY)
 			on = FALSE
 	low_power_mode = FALSE
 	if(on)
-	/* NOVA EDIT ORIGINAL
+	/* SKYRAT EDIT ORIGINAL
 		var/brightness_set = brightness
 		var/power_set = bulb_power
 		var/color_set = bulb_colour
@@ -228,10 +227,9 @@
 			color_set = color
 		if(reagents)
 			START_PROCESSING(SSmachines, src)
-		var/area/local_area = get_room_area()
+		var/area/local_area =get_room_area(src)
 		if (local_area?.fire)
 			color_set = fire_colour
-			power_set = fire_power
 			brightness_set = fire_brightness
 		else if (nightshift_enabled)
 			brightness_set = nightshift_brightness
@@ -255,7 +253,7 @@
 					l_color = color_set
 					)
 		*/
-		//NOVA EDIT CHANGE BEGIN - AESTHETICS
+		//SKYRAT EDIT CHANGE BEGIN - AESTHETICS
 		if(instant)
 			turn_on(trigger, play_sound)
 		else if(maploaded)
@@ -264,7 +262,7 @@
 		else if(!turning_on)
 			turning_on = TRUE
 			addtimer(CALLBACK(src, PROC_REF(turn_on), trigger, play_sound), rand(LIGHT_ON_DELAY_LOWER, LIGHT_ON_DELAY_UPPER))
-		//NOVA EDIT END
+		//SKYRAT EDIT END
 	else if(has_emergency_power(LIGHT_EMERGENCY_POWER_USE) && !turned_off())
 		use_power = IDLE_POWER_USE
 		low_power_mode = TRUE
@@ -277,10 +275,10 @@
 	broken_sparks(start_only=TRUE)
 
 
-//NOVA EDIT ADDITION BEGIN - AESTHETICS
+//SKYRAT EDIT ADDITION BEGIN - AESTHETICS
 #undef LIGHT_ON_DELAY_UPPER
 #undef LIGHT_ON_DELAY_LOWER
-//NOVA EDIT END
+//SKYRAT EDIT END
 
 /obj/machinery/light/update_current_power_usage()
 	if(!on && static_power_used > 0) //Light is off but still powered
@@ -288,7 +286,7 @@
 		static_power_used = 0
 	else if(on) //Light is on, just recalculate usage
 		var/static_power_used_new = 0
-		var/area/local_area = get_room_area()
+		var/area/local_area = get_room_area(src)
 		if (nightshift_enabled && !local_area?.fire)
 			static_power_used_new = nightshift_brightness * nightshift_light_power * power_consumption_rate
 		else
@@ -355,10 +353,10 @@
 			. += "The [fitting] has been smashed."
 	if(cell || has_mock_cell)
 		. += "Its backup power charge meter reads [has_mock_cell ? 100 : round((cell.charge / cell.maxcharge) * 100, 0.1)]%."
-	//NOVA EDIT ADDITION
+	//SKYRAT EDIT ADDITION
 	if(constant_flickering)
 		. += span_danger("The lighting ballast appears to be damaged, this could be fixed with a multitool.")
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 
 
 
@@ -407,13 +405,13 @@
 		deconstruct()
 		return
 	to_chat(user, span_userdanger("You stick \the [tool] into the light socket!"))
-	if(has_power() && (tool.obj_flags & CONDUCTS_ELECTRICITY))
+	if(has_power() && (tool.flags_1 & CONDUCT_1))
 		do_sparks(3, TRUE, src)
 		if (prob(75))
 			electrocute_mob(user, get_area(src), src, (rand(7,10) * 0.1), TRUE)
 
 /obj/machinery/light/deconstruct(disassembled = TRUE)
-	if(obj_flags & NO_DECONSTRUCTION)
+	if(flags_1 & NODECONSTRUCT_1)
 		qdel(src)
 		return
 	var/obj/structure/light_construct/new_light = null
@@ -450,7 +448,7 @@
 	..()
 	if(status != LIGHT_BROKEN && status != LIGHT_EMPTY)
 		return
-	if(!on || !(attacking_object.obj_flags & CONDUCTS_ELECTRICITY))
+	if(!on || !(attacking_object.flags_1 & CONDUCT_1))
 		return
 	if(prob(12))
 		electrocute_mob(user, get_area(src), src, 0.3, TRUE)
@@ -477,17 +475,17 @@
 // returns if the light has power /but/ is manually turned off
 // if a light is turned off, it won't activate emergency power
 /obj/machinery/light/proc/turned_off()
-	var/area/local_area = get_room_area()
-	return !local_area.lightswitch && local_area.power_light || flickering || constant_flickering //NOVA EDIT CHANGE - ORIGINAL : return !local_area.lightswitch && local_area.power_light || flickering
+	var/area/local_area = get_room_area(src)
+	return !local_area.lightswitch && local_area.power_light || flickering || constant_flickering //SKYRAT EDIT CHANGE
 
 // returns whether this light has power
 // true if area has power and lightswitch is on
 /obj/machinery/light/proc/has_power()
-	var/area/local_area = get_room_area()
-	//NOVA EDIT ADDITION BEGIN
+	var/area/local_area =get_room_area(src)
+	//SKYRAT EDIT ADDITION BEGIN
 	if(isnull(local_area))
 		return FALSE
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 	return local_area.lightswitch && local_area.power_light
 
 // returns whether this light has emergency power
@@ -529,13 +527,13 @@
 			if(status != LIGHT_OK || !has_power())
 				break
 			on = !on
-			update(FALSE, TRUE) //NOVA EDIT CHANGE
+			update(FALSE, TRUE) //SKYRAT EDIT CHANGE
 			sleep(rand(5, 15))
 		if(has_power())
 			on = (status == LIGHT_OK)
 		else
 			on = FALSE
-		update(FALSE, TRUE) // NOVA EDIT CHANGE
+		update(FALSE, TRUE) // SKYRAT EDIT CHANGE
 		. = TRUE //did we actually flicker?
 	flickering = FALSE
 
@@ -689,7 +687,7 @@
 // called when area power state changes
 /obj/machinery/light/power_change()
 	SHOULD_CALL_PARENT(FALSE)
-	var/area/local_area = get_room_area()
+	var/area/local_area =get_room_area(src)
 	set_on(local_area.lightswitch && local_area.power_light)
 
 // called when heated
@@ -750,7 +748,7 @@
 	light_type = /obj/item/light/bulb
 	fitting = "bulb"
 	nightshift_brightness = 3
-	fire_brightness = 4.5
+	fire_brightness = 2
 
 /obj/machinery/light/floor/get_light_offset()
 	return list(0, 0)

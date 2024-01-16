@@ -62,8 +62,7 @@
 	max_integrity = 99999;
 	name = "Station Night Shutters"
 	},
-/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
-/turf/open/space/basic,
+/turf/closed/indestructible/opsglass,
 /area/centcom/mafia)
 "q" = (
 /turf/open/floor/carpet/red,
@@ -86,9 +85,6 @@
 /obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating,
 /area/centcom/mafia)
-"y" = (
-/turf/template_noop,
-/area/template_noop)
 "D" = (
 /obj/effect/landmark/mafia,
 /turf/open/floor/iron/chapel{
@@ -135,9 +131,6 @@
 	dir = 8
 	},
 /area/centcom/mafia)
-"U" = (
-/turf/closed/wall/r_wall,
-/area/centcom/mafia)
 "X" = (
 /turf/open/floor/iron/chapel{
 	dir = 1
@@ -145,7 +138,6 @@
 /area/centcom/mafia)
 
 (1,1,1) = {"
-y
 a
 a
 a
@@ -167,37 +159,38 @@ a
 a
 a
 a
-y
+a
+a
 "}
 (2,1,1) = {"
-y
 a
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
 a
-y
 "}
 (3,1,1) = {"
-y
 a
-U
+b
+b
 c
 c
 c
@@ -215,14 +208,14 @@ c
 c
 c
 c
-U
+b
+b
 a
-y
 "}
 (4,1,1) = {"
-y
 a
-U
+b
+b
 c
 g
 h
@@ -240,14 +233,14 @@ d
 h
 k
 c
-U
+b
+b
 a
-y
 "}
 (5,1,1) = {"
 a
-a
-U
+b
+b
 c
 h
 d
@@ -265,14 +258,14 @@ d
 i
 h
 c
-U
-a
+b
+b
 a
 "}
 (6,1,1) = {"
 a
-U
-U
+b
+b
 c
 i
 b
@@ -290,13 +283,13 @@ b
 b
 d
 c
-U
-U
+b
+b
 a
 "}
 (7,1,1) = {"
 a
-U
+b
 c
 c
 d
@@ -316,12 +309,12 @@ b
 d
 c
 c
-U
+b
 a
 "}
 (8,1,1) = {"
 a
-U
+b
 c
 d
 d
@@ -341,12 +334,12 @@ b
 d
 d
 c
-U
+b
 a
 "}
 (9,1,1) = {"
 a
-U
+b
 c
 d
 b
@@ -366,12 +359,12 @@ b
 b
 d
 c
-U
+b
 a
 "}
 (10,1,1) = {"
 a
-U
+b
 c
 d
 b
@@ -391,12 +384,12 @@ Q
 b
 d
 c
-U
+b
 a
 "}
 (11,1,1) = {"
 a
-U
+b
 c
 d
 j
@@ -416,12 +409,12 @@ O
 j
 i
 c
-U
+b
 a
 "}
 (12,1,1) = {"
 a
-U
+b
 c
 i
 b
@@ -441,12 +434,12 @@ b
 b
 d
 c
-U
+b
 a
 "}
 (13,1,1) = {"
 a
-U
+b
 c
 d
 j
@@ -466,12 +459,12 @@ q
 j
 d
 c
-U
+b
 a
 "}
 (14,1,1) = {"
 a
-U
+b
 c
 d
 b
@@ -491,12 +484,12 @@ l
 b
 i
 c
-U
+b
 a
 "}
 (15,1,1) = {"
 a
-U
+b
 c
 d
 b
@@ -516,12 +509,12 @@ b
 b
 d
 c
-U
+b
 a
 "}
 (16,1,1) = {"
 a
-U
+b
 c
 f
 d
@@ -541,12 +534,12 @@ b
 d
 d
 c
-U
+b
 a
 "}
 (17,1,1) = {"
 a
-U
+b
 c
 c
 d
@@ -566,13 +559,13 @@ b
 d
 c
 c
-U
+b
 a
 "}
 (18,1,1) = {"
 a
-U
-U
+b
+b
 c
 d
 b
@@ -590,14 +583,14 @@ b
 b
 d
 c
-U
-U
+b
+b
 a
 "}
 (19,1,1) = {"
 a
-a
-U
+b
+b
 c
 h
 i
@@ -615,14 +608,14 @@ i
 d
 h
 c
-U
-a
+b
+b
 a
 "}
 (20,1,1) = {"
-y
 a
-U
+b
+b
 c
 k
 h
@@ -640,14 +633,14 @@ d
 h
 v
 c
-U
+b
+b
 a
-y
 "}
 (21,1,1) = {"
-y
 a
-U
+b
+b
 c
 c
 c
@@ -665,37 +658,36 @@ c
 c
 c
 c
-U
+b
+b
 a
-y
 "}
 (22,1,1) = {"
-y
 a
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
-U
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
 a
-y
 "}
 (23,1,1) = {"
-y
 a
 a
 a
@@ -717,5 +709,6 @@ a
 a
 a
 a
-y
+a
+a
 "}

@@ -2,25 +2,18 @@ Any time you make a change to the schema files, remember to increment the databa
 
 Make sure to also update `DB_MAJOR_VERSION` and `DB_MINOR_VERSION`, which can be found in `code/__DEFINES/subsystem.dm`.
 
-The latest database version is 5.28 (5.26 for /tg/); The query to update the schema revision table is:
+The latest database version is 5.27 (5.25 for /tg/); The query to update the schema revision table is:
 
 ```sql
-INSERT INTO `schema_revision` (`major`, `minor`) VALUES (5, 28);
+INSERT INTO `schema_revision` (`major`, `minor`) VALUES (5, 25);
 ```
 or
 
 ```sql
-INSERT INTO `SS13_schema_revision` (`major`, `minor`) VALUES (5, 28);
+INSERT INTO `SS13_schema_revision` (`major`, `minor`) VALUES (5, 25);
 ```
 
 In any query remember to add a prefix to the table names if you use one.
-
------------------------------------------------------
-Version 5.28, 03 December 2023, by distributivgesetz
-Set the default value of cloneloss to 0, as it's obsolete and it won't be set by blackbox anymore.
-```sql
-ALTER TABLE `death` MODIFY COLUMN `cloneloss` SMALLINT(5) UNSIGNED DEFAULT '0';
-```
 
 -----------------------------------------------------
 Version 5.27, 27 September 2023, by Jimmyl
@@ -131,7 +124,7 @@ Version 5.18, 23 August 2021, by GoldenAlpharex
 Added `discord_report` column to the `ban table`
 
 ```sql
-`discord_reported` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0', /* NOVA EDIT - Labelling bans for ease of reporting them over Discord. */
+`discord_reported` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0', /* SKYRAT EDIT - Labelling bans for ease of reporting them over Discord. */
 ```
 
 -----------------------------------------------------

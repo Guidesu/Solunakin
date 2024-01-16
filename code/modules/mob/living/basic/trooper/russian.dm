@@ -2,7 +2,7 @@
 /mob/living/basic/trooper/russian
 	name = "Russian Mobster"
 	desc = "For the Motherland!"
-	speed = 1.2
+	speed = 0
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 	unsuitable_cold_damage = 1

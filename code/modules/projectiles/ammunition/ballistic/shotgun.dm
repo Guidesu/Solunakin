@@ -27,7 +27,7 @@
 	icon_state = "bshell"
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*2.5)
 	projectile_type = /obj/projectile/bullet/shotgun_beanbag
-	harmful = FALSE //NOVA EDIT ADDITION
+	harmful = FALSE //SKYRAT EDIT ADDITION
 
 /obj/item/ammo_casing/shotgun/incendiary
 	name = "incendiary slug"

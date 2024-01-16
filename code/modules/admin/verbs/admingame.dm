@@ -32,7 +32,7 @@
 
 	if(M.client)
 		body += "<br>\[<b>First Seen:</b> [M.client.player_join_date]\]\[<b>Byond account registered on:</b> [M.client.account_join_date]\]"
-		// NOVA EDIT ADDITION START - Player Ranks
+		// SKYRAT EDIT ADDITION START - Player Ranks
 		var/list/player_ranks = list()
 
 		if(SSplayer_ranks.is_donator(M.client, admin_bypass = FALSE))
@@ -45,7 +45,7 @@
 			player_ranks += "Veteran"
 
 		body += "<br><br><b>Player Ranks: </b>[length(player_ranks) ? player_ranks.Join(", ") : "None"]"
-		// NOVA EDIT END
+		// SKYRAT EDIT END
 		body += "<br><br><b>CentCom Galactic Ban DB: </b> "
 		if(CONFIG_GET(string/centcom_ban_db))
 			body += "<a href='?_src_=holder;[HrefToken()];centcomlookup=[M.client.ckey]'>Search</a>"
@@ -81,15 +81,6 @@
 	body += "<a href='?_src_=holder;[HrefToken()];individuallog=[REF(M)];log_src=[source]'>LOGS</a>\] <br>"
 
 	body += "<b>Mob type</b> = [M.type]<br><br>"
-
-	if(M.client)
-		body += "<b>Old names:</b> "
-		var/datum/player_details/deets = GLOB.player_details[M.ckey]
-		if(deets)
-			body += deets.get_played_names()
-		else
-			body += "<i>None?!</i>"
-		body += "<br><br>"
 
 	body += "<A href='?_src_=holder;[HrefToken()];boot2=[REF(M)]'>Kick</A> | "
 	if(M.client)
@@ -172,7 +163,7 @@
 	body += "</body></html>"
 
 	usr << browse(body, "window=adminplayeropts-[REF(M)];size=550x515")
-	BLACKBOX_LOG_ADMIN_VERB("Player Panel")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Player Panel") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
 /client/proc/cmd_admin_godmode(mob/M in GLOB.mob_list)
 	set category = "Admin.Game"
@@ -307,7 +298,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!record_found && (new_character.mind.assigned_role.job_flags & JOB_CREW_MEMBER))
 		//Power to the user!
 		if(tgui_alert(new_character,"Warning: No data core entry detected. Would you like to announce the arrival of this character by adding them to various databases, such as medical records?",,list("No","Yes")) == "Yes")
-			GLOB.manifest.inject(new_character, src)	// NOVA EDIT CHANGE - ALTERNATIVE_JOB_TITLES - Original: GLOB.manifest.inject(new_character)
+			GLOB.manifest.inject(new_character, src)	// SKYRAT EDIT CHANGE - ALTERNATIVE_JOB_TITLES - Original: GLOB.manifest.inject(new_character)
 
 		if(tgui_alert(new_character,"Would you like an active AI to announce this character?",,list("No","Yes")) == "Yes")
 			announce_arrival(new_character, new_character.mind.assigned_role.title)
@@ -318,7 +309,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 	to_chat(new_character, "You have been fully respawned. Enjoy the game.", confidential = TRUE)
 
-	BLACKBOX_LOG_ADMIN_VERB("Respawn Character")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Respawn Character") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 	return new_character
 
 /client/proc/cmd_admin_list_open_jobs()
@@ -328,7 +319,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!check_rights(R_ADMIN))
 		return
 	holder.manage_free_slots()
-	BLACKBOX_LOG_ADMIN_VERB("Manage Job Slots")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Manage Job Slots") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
 /datum/admins/proc/manage_free_slots()
 	if(!check_rights())
@@ -447,7 +438,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		to_chat(usr, "This can only be used on instances of type /mob and /mind", confidential = TRUE)
 		return
 	target_mind.traitor_panel()
-	BLACKBOX_LOG_ADMIN_VERB("Traitor Panel")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Traitor Panel") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
 /datum/admins/proc/show_skill_panel(target)
 	set category = "Admin.Game"

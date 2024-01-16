@@ -53,10 +53,10 @@
 	loc.balloon_alert(user, "[src] dismantled")
 
 	deconstruct(TRUE)
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/igniter/deconstruct(disassembled)
-	if(!(obj_flags & NO_DECONSTRUCTION))
+	if(!(flags_1 & NODECONSTRUCT_1))
 		new /obj/item/stack/sheet/iron(loc, 5)
 		new /obj/item/assembly/igniter(loc)
 	return ..()
@@ -68,7 +68,7 @@
 	id = change_id
 	balloon_alert(user, "id set to [id]")
 	to_chat(user, span_notice("You change the ID to [id]."))
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/igniter/incinerator_ordmix
 	id = INCINERATOR_ORDMIX_IGNITER
@@ -198,10 +198,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/sparker, 26)
 	loc.balloon_alert(user, "[src] dismantled")
 
 	deconstruct(TRUE)
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/sparker/deconstruct(disassembled)
-	if(!(obj_flags & NO_DECONSTRUCTION))
+	if(!(flags_1 & NODECONSTRUCT_1))
 		new /obj/item/wallframe/sparker(loc)
 	return ..()
 
@@ -212,7 +212,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/sparker, 26)
 	id = change_id
 	balloon_alert(user, "id set to [id]")
 	to_chat(user, span_notice("You change the ID to [id]."))
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/sparker/update_icon_state()
 	if(disable)

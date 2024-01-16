@@ -236,7 +236,10 @@
 
 /// What to process when the beam is connected to a target
 /datum/status_effect/cosmic_beam/proc/on_beam_tick(mob/living/target)
-	if(target.adjustFireLoss(3, updating_health = FALSE))
+	var/need_mob_update
+	need_mob_update = target.adjustFireLoss(3, updating_health = FALSE)
+	need_mob_update += target.adjustCloneLoss(1, updating_health = FALSE)
+	if(need_mob_update)
 		target.updatehealth()
 
 /// What to remove when the beam disconnects from a target

@@ -5,7 +5,7 @@
 // simultaneously is an annoying distraction.
 /obj/item/uplink
 	name = "station bounced radio"
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = 'icons/obj/radio.dmi'
 	icon_state = "radio"
 	inhand_icon_state = "radio"
 	worn_icon_state = "radio"
@@ -14,7 +14,7 @@
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	dog_fashion = /datum/dog_fashion/back
 
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
 	throw_speed = 3
 	throw_range = 7
@@ -110,12 +110,12 @@
 
 // Multitool uplink
 ////obj/item/multitool/uplink/Initialize(mapload, owner, tc_amount = 20, datum/uplink_handler/uplink_handler_override = null) //ORIGINAL
-/obj/item/multitool/uplink/Initialize(mapload, owner, tc_amount = 35, datum/uplink_handler/uplink_handler_override = null) //NOVA EDIT CHANGE
+/obj/item/multitool/uplink/Initialize(mapload, owner, tc_amount = 35, datum/uplink_handler/uplink_handler_override = null) //SKYRAT EDIT CHANGE
 	. = ..()
 	AddComponent(/datum/component/uplink, owner, FALSE, TRUE, UPLINK_TRAITORS, tc_amount)
 
 // Pen uplink
 ///obj/item/pen/uplink/Initialize(mapload, owner, tc_amount = 20, datum/uplink_handler/uplink_handler_override = null) //ORIGINAL
-/obj/item/pen/uplink/Initialize(mapload, owner, tc_amount = 35, datum/uplink_handler/uplink_handler_override = null) //NOVA EDIT CHANGE
+/obj/item/pen/uplink/Initialize(mapload, owner, tc_amount = 35, datum/uplink_handler/uplink_handler_override = null) //SKYRAT EDIT CHANGE
 	. = ..()
 	AddComponent(/datum/component/uplink, owner, TRUE, FALSE, UPLINK_TRAITORS, tc_amount)

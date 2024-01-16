@@ -4,6 +4,7 @@
 	icon = 'icons/obj/antags/abductor.dmi'
 	icon_state = "gland"
 	organ_flags = ORGAN_ROBOTIC // weird?
+	beating = TRUE
 	/// Shows name of the gland as well as a description of what it does upon examination by abductor scientists and observers.
 	var/abductor_hint = "baseline placebo referencer"
 
@@ -25,15 +26,11 @@
 /obj/item/organ/internal/heart/gland/Initialize(mapload)
 	. = ..()
 	icon_state = pick(list("health", "spider", "slime", "emp", "species", "egg", "vent", "mindshock", "viral"))
-	AddElement(/datum/element/update_icon_blocker)
 
 /obj/item/organ/internal/heart/gland/examine(mob/user)
 	. = ..()
 	if(HAS_MIND_TRAIT(user, TRAIT_ABDUCTOR_SCIENTIST_TRAINING) || isobserver(user))
 		. += span_notice("It is \a [abductor_hint]")
-
-/obj/item/organ/internal/heart/gland/Stop()
-	return FALSE
 
 /obj/item/organ/internal/heart/gland/proc/ownerCheck()
 	if(ishuman(owner))
@@ -84,7 +81,7 @@
 	active_mind_control = FALSE
 	return TRUE
 
-/obj/item/organ/internal/heart/gland/Remove(mob/living/carbon/gland_owner, special, movement_flags)
+/obj/item/organ/internal/heart/gland/Remove(mob/living/carbon/gland_owner, special = FALSE)
 	. = ..()
 	active = FALSE
 	if(initial(uses) == 1)
@@ -93,7 +90,7 @@
 	hud.remove_atom_from_hud(gland_owner)
 	clear_mind_control()
 
-/obj/item/organ/internal/heart/gland/Insert(mob/living/carbon/gland_owner, special = FALSE, movement_flags = DELETE_IF_REPLACED)
+/obj/item/organ/internal/heart/gland/Insert(mob/living/carbon/gland_owner, special = FALSE, drop_if_replaced = TRUE)
 	. = ..()
 	if(!.)
 		return
@@ -105,6 +102,9 @@
 	update_gland_hud()
 
 /obj/item/organ/internal/heart/gland/on_life(seconds_per_tick, times_fired)
+	if(!beating)
+		// alien glands are immune to stopping.
+		beating = TRUE
 	if(!active)
 		return
 	if(!ownerCheck())

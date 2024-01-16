@@ -61,16 +61,13 @@
 		reagents.add_reagent(/datum/reagent/blood, disease_amount, data)
 	add_initial_reagents()
 
-/obj/item/reagent_containers/examine(mob/user)
+/obj/item/reagent_containers/examine()
 	. = ..()
 	if(has_variable_transfer_amount)
 		if(possible_transfer_amounts.len > 1)
 			. += span_notice("Left-click or right-click in-hand to increase or decrease its transfer amount.")
 		else if(possible_transfer_amounts.len)
 			. += span_notice("Left-click or right-click in-hand to view its transfer amount.")
-	if(isliving(user) && HAS_TRAIT(user, TRAIT_REMOTE_TASTING))
-		var/mob/living/living_user = user
-		living_user.taste(reagents)
 
 /obj/item/reagent_containers/create_reagents(max_vol, flags)
 	. = ..()
@@ -240,14 +237,14 @@
 			log_combat(thrown_by, M, "splashed", R)
 		reagents.expose(target, TOUCH, splash_multiplier)
 		reagents.expose(target_turf, TOUCH, (1 - splash_multiplier)) // 1 - splash_multiplier because it's what didn't hit the target
-		target_turf.add_liquid_from_reagents(reagents, reagent_multiplier = (1 - splash_multiplier)) // NOVA EDIT ADDITION - liquid spills (molotov buff) (huge)
+		target_turf.add_liquid_from_reagents(reagents, reagent_multiplier = (1 - splash_multiplier)) // SKYRAT EDIT ADDITION - liquid spills (molotov buff) (huge)
 
 	else if(bartender_check(target) && thrown)
 		visible_message(span_notice("[src] lands onto the [target.name] without spilling a single drop."))
 		return
 
 	else
-		//NOVA EDIT CHANGE START - liquid spills on non-mobs
+		//SKYRAT EDIT CHANGE START - liquid spills on non-mobs
 		if(target.can_liquid_spill_on_hit())
 			target.add_liquid_from_reagents(reagents, thrown_from = src, thrown_to = target)
 			if(reagents.reagent_list.len && thrown_by)
@@ -256,9 +253,9 @@
 				message_admins("[ADMIN_LOOKUPFLW(thrown_by)] splashed (thrown) [english_list(reagents.reagent_list)] on [target] in [ADMIN_VERBOSEJMP(target)].")
 		else
 			reagents.expose(target, TOUCH)
-		//NOVA EDIT END
+		//SKYRAT EDIT END
 		visible_message("<span class='notice'>[src] spills its contents all over [target].</span>")
-		//reagents.expose(target, TOUCH) //NOVA EDIT REMOVAL
+		//reagents.expose(target, TOUCH) //SKYRAT EDIT REMOVAL
 		if(QDELETED(src))
 			return
 

@@ -11,7 +11,6 @@
 	tastes = list("spicy cabbage" = 1)
 	foodtypes = VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/inferno_kimchi
 	name = "inferno kimchi"
@@ -25,7 +24,6 @@
 	tastes = list("very spicy cabbage" = 1)
 	foodtypes = VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/garlic_kimchi
 	name = "garlic kimchi"
@@ -40,7 +38,6 @@
 	tastes = list("spicy cabbage" = 1, "garlic" = 1)
 	foodtypes = VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/surimi
 	name = "surimi"
@@ -54,7 +51,6 @@
 	tastes = list("fish" = 1)
 	foodtypes = SEAFOOD
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/surimi/Initialize(mapload)
 	. = ..()
@@ -72,7 +68,6 @@
 	tastes = list("fish" = 1)
 	foodtypes = SEAFOOD
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/kamaboko/Initialize(mapload)
 	. = ..()
@@ -95,7 +90,6 @@
 	tastes = list("fish" = 1)
 	foodtypes = SEAFOOD
 	w_class = WEIGHT_CLASS_TINY
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/sambal
 	name = "sambal"
@@ -109,7 +103,6 @@
 	tastes = list("chilli heat" = 1, "umami" = 1)
 	foodtypes = SEAFOOD | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/katsu_fillet
 	name = "katsu fillet"
@@ -124,7 +117,6 @@
 	tastes = list("meat" = 1, "breadcrumbs" = 1)
 	foodtypes = MEAT | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/rice_dough
 	name = "rice dough"
@@ -136,7 +128,6 @@
 	)
 	tastes = list("rice" = 1)
 	foodtypes = GRAIN
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/rice_dough/make_bakeable()
 	AddComponent(/datum/component/bakeable, /obj/item/food/bread/reispan, rand(30 SECONDS, 45 SECONDS), TRUE, TRUE)
@@ -155,7 +146,6 @@
 	)
 	tastes = list("rice" = 1)
 	foodtypes = GRAIN
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/spaghetti/boilednoodles
 	name = "cooked noodles"
@@ -167,7 +157,6 @@
 	)
 	tastes = list("rice" = 1)
 	foodtypes = GRAIN
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/bread/reispan
 	name = "reispan"
@@ -178,9 +167,8 @@
 		/datum/reagent/consumable/nutriment = 15
 	)
 	tastes = list("bread" = 10)
-	foodtypes = GRAIN
+	foodtypes = GRAIN 
 	venue_value = FOOD_PRICE_TRASH
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/bread/reispan/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/reispan, 5, 3 SECONDS, table_required = TRUE)
@@ -194,7 +182,6 @@
 		/datum/reagent/consumable/nutriment = 3
 	)
 	foodtypes = GRAIN | VEGETABLES
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 // Fried Rice
 
@@ -211,7 +198,6 @@
 	tastes = list("rice" = 1, "meat" = 1, "pineapple" = 1, "veggies" = 1)
 	foodtypes = MEAT | GRAIN | PINEAPPLE | FRUIT | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/ikareis
 	name = "ikareis"
@@ -227,7 +213,6 @@
 	tastes = list("rice" = 1, "squid ink" = 1, "veggies" = 1, "sausage" = 1, "chilli heat" = 1)
 	foodtypes = MEAT | GRAIN | SEAFOOD | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_4
 
 /obj/item/food/salad/hawaiian_fried_rice
 	name = "\improper Hawaiian fried rice"
@@ -242,7 +227,6 @@
 	tastes = list("rice" = 1, "pork" = 1, "pineapple" = 1, "soy sauce" = 1, "veggies" = 1)
 	foodtypes = MEAT | GRAIN | VEGETABLES | FRUIT | PINEAPPLE
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/ketchup_fried_rice
 	name = "ketchup fried rice"
@@ -258,7 +242,6 @@
 	tastes = list("rice" = 1, "sausage" = 1, "ketchup" = 1, "veggies" = 1)
 	foodtypes = MEAT | GRAIN | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/mediterranean_fried_rice
 	name = "mediterranean fried rice"
@@ -273,7 +256,6 @@
 	tastes = list("rice" = 1, "cheese" = 1, "meatball" = 1, "olives" = 1, "herbs" = 1)
 	foodtypes = MEAT | GRAIN | VEGETABLES | DAIRY
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/egg_fried_rice
 	name = "egg fried rice"
@@ -287,7 +269,6 @@
 	tastes = list("rice" = 1, "egg" = 1, "soy sauce" = 1)
 	foodtypes = MEAT | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/salad/egg_fried_rice/Initialize(mapload)
 	. = ..()
@@ -307,7 +288,6 @@
 	tastes = list("rice" = 1, "spicy cabbage" = 1, "chilli heat" = 1, "egg" = 1, "meat" = 1)
 	foodtypes = MEAT | VEGETABLES | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/bibimbap/Initialize(mapload)
 	. = ..()
@@ -327,7 +307,6 @@
 	tastes = list("barbecue meat" = 1, "noodles" = 1, "chilli heat" = 1)
 	foodtypes = MEAT | GRAIN | VEGETABLES | FRUIT
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/yakisoba_katsu
 	name = "yakisoba katsu"
@@ -342,7 +321,6 @@
 	tastes = list("fried noodles" = 1, "meat" = 1, "breadcrumbs" = 1, "veggies" = 1)
 	foodtypes = MEAT | VEGETABLES | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/martian_fried_noodles
 	name = "\improper Martian fried noodles"
@@ -357,7 +335,6 @@
 	tastes = list("noodles" = 1, "meat" = 1, "nuts" = 1, "onion" = 1, "egg" = 1)
 	foodtypes = GRAIN | NUTS | MEAT | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/simple_fried_noodles
 	name = "simple fried noodles"
@@ -372,7 +349,6 @@
 	tastes = list("noodles" = 1, "soy sauce" = 1)
 	foodtypes = GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/salad/simple_fried_noodles/Initialize(mapload)
 	. = ..()
@@ -393,7 +369,6 @@
 	tastes = list("masterful curry" = 1, "rice" = 1)
 	foodtypes = GRAIN | MEAT | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_5 //Extensive and secretly guarded. Was previously 2 and I thought it was pathetic.
 
 // Burgers and Sandwiches
 /obj/item/food/burger/big_blue
@@ -409,7 +384,6 @@
 	tastes = list("bun" = 1, "burger" = 2, "teriyaki onions" = 1, "cheese" = 1, "bacon" = 1, "pineapple" = 1)
 	foodtypes = MEAT | GRAIN | DAIRY | VEGETABLES | FRUIT | PINEAPPLE
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_4 //It's THE big blue, Baby!
 
 /obj/item/food/burger/chappy
 	name = "\improper Chappy patty"
@@ -423,7 +397,6 @@
 	tastes = list("bun" = 1, "fried pork" = 2, "egg" = 1, "cheese" = 1, "ketchup" = 1)
 	foodtypes = MEAT | GRAIN | DAIRY | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/king_katsu_sandwich
 	name = "\improper King Katsu sandwich"
@@ -439,7 +412,6 @@
 	tastes = list("meat" = 1, "bacon" = 1, "kimchi" = 1, "salad" = 1, "rice bread" = 1)
 	foodtypes = MEAT | GRAIN | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/marte_cubano_sandwich
 	name = "\improper Marte Cubano sandwich"
@@ -454,7 +426,6 @@
 	tastes = list("bacon" = 1, "pickles" = 1, "cheese" = 1, "rice bread" = 1)
 	foodtypes = MEAT | DAIRY | VEGETABLES | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/little_shiro_sandwich
 	name = "\improper Little Shiro sandwich"
@@ -470,7 +441,6 @@
 	tastes = list("egg" = 1, "meat" = 1, "kimchi" = 1, "mozzarella" = 1)
 	foodtypes = MEAT | DAIRY | VEGETABLES | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/croque_martienne
 	name = "croque-martienne"
@@ -485,7 +455,6 @@
 	tastes = list("egg" = 1, "toast" = 1, "pork" = 1, "pineapple" = 1, "cheese" = 1)
 	foodtypes = MEAT | DAIRY | VEGETABLES | GRAIN | PINEAPPLE | BREAKFAST
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/prospect_sunrise
 	name = "\improper Prospect Sunrise"
@@ -500,7 +469,6 @@
 	tastes = list("egg" = 1, "toast" = 1, "bacon" = 1, "pickles" = 1, "cheese" = 1)
 	foodtypes = MEAT | DAIRY | VEGETABLES | GRAIN | BREAKFAST
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 // Snacks
 /obj/item/food/takoyaki
@@ -516,7 +484,6 @@
 	tastes = list("octopus" = 1, "batter" = 1, "onion" = 1, "worcestershire sauce" = 1)
 	foodtypes = SEAFOOD | GRAIN | FRIED | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/takoyaki/russian
 	name = "russian takoyaki"
@@ -531,7 +498,6 @@
 	tastes = list("octopus" = 1, "batter" = 1, "onion" = 1, "chilli heat" = 1)
 	foodtypes = SEAFOOD | GRAIN | FRIED | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/takoyaki/taco
 	name = "tacoyaki"
@@ -546,7 +512,6 @@
 	tastes = list("taco meat" = 1, "batter" = 1, "corn" = 1, "cheese" = 1)
 	foodtypes = MEAT | GRAIN | FRIED | VEGETABLES | DAIRY
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_4 //Batter AND Cargo ingredients.
 
 /obj/item/food/okonomiyaki
 	name = "okonomiyaki"
@@ -560,7 +525,6 @@
 	tastes = list("batter" = 1, "cabbage" = 1, "onion" = 1, "worcestershire sauce" = 1)
 	foodtypes = SEAFOOD | GRAIN | FRIED | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_4 //Cargo stuff and batter.
 
 //hey, the name literally means "grilled how you like it", it'd be crazy to not make it customisable
 /obj/item/food/okonomiyaki/Initialize(mapload)
@@ -581,7 +545,6 @@
 	tastes = list("spicy cabbage" = 1, "sausage" = 1)
 	foodtypes = MEAT | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/tonkatsuwurst
 	name = "tonkatsuwurst"
@@ -596,7 +559,6 @@
 	tastes = list("sausage" = 1, "spicy sauce" = 1, "fries" = 1)
 	foodtypes = MEAT | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_4 //Cargo ingredients and a few steps.
 
 /obj/item/food/kebab/ti_hoeh_koe
 	name = "ti hoeh koe skewer"
@@ -611,7 +573,6 @@
 	tastes = list("blood" = 1, "nuts" = 1, "herbs" = 1)
 	foodtypes = MEAT | NUTS | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/kitzushi
 	name = "kitzushi"
@@ -626,7 +587,6 @@
 	tastes = list("rice" = 1, "tofu" = 1, "chilli cheese" = 1)
 	foodtypes = GRAIN | FRIED | VEGETABLES | DAIRY
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/epok_epok
 	name = "epok-epok"
@@ -640,7 +600,6 @@
 	tastes = list("curry" = 1, "egg" = 1, "pastry" = 1)
 	foodtypes = GRAIN | MEAT | VEGETABLES | FRIED
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/roti_john
 	name = "roti john"
@@ -655,7 +614,6 @@
 	tastes = list("bread" = 1, "egg" = 1, "meat" = 1, "onion" = 1)
 	foodtypes = GRAIN | MEAT | VEGETABLES | FRIED | BREAKFAST
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_4
 
 /obj/item/food/izakaya_fries
 	name = "izakaya fries"
@@ -671,7 +629,6 @@
 	tastes = list("fries" = 1, "mars" = 1)
 	foodtypes = VEGETABLES | FRIED
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3 //Extra complexity due to cargo ingredient.
 
 /obj/item/food/kurry_ok_subsando
 	name = "kurry-ok subsando"
@@ -686,7 +643,6 @@
 	tastes = list("bread" = 1, "spicy fries" = 1, "mayonnaise" = 1, "curry" = 1, "meat" = 1)
 	foodtypes = MEAT | GRAIN | VEGETABLES | FRIED
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_4
 
 /obj/item/food/loco_moco
 	name = "loco moco"
@@ -700,7 +656,6 @@
 	tastes = list("rice" = 1, "burger" = 1, "gravy" = 1, "egg" = 1)
 	foodtypes = MEAT | GRAIN | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/wild_duck_fries
 	name = "wild duck fries"
@@ -716,7 +671,6 @@
 	tastes = list("fries" = 1, "duck" = 1, "ketchup" = 1, "mayo" = 1, "spicy seasoning" = 1)
 	foodtypes = MEAT | VEGETABLES | FRIED
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_4 //Requires a complex 3 as an ingredient.
 
 /obj/item/food/little_hawaii_hotdog
 	name = "\improper Little Hawaii hotdog"
@@ -731,7 +685,6 @@
 	tastes = list("sausage" = 1, "pineapple" = 1, "onion" = 1, "teriyaki" = 1)
 	foodtypes = MEAT | VEGETABLES | FRUIT | PINEAPPLE
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_4
 
 /obj/item/food/salt_chilli_fries
 	name = "salt n' chilli fries"
@@ -747,7 +700,6 @@
 	tastes = list("fries" = 1, "garlic" = 1, "ginger" = 1, "numbing heat" = 1, "salt" = 1)
 	foodtypes = VEGETABLES | FRIED
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/grilled_octopus
 	name = "grilled octopus tentacle"
@@ -761,7 +713,6 @@
 	tastes = list("octopus" = 1)
 	foodtypes = SEAFOOD | FRIED
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/steak_croquette
 	name = "steak croquette"
@@ -775,7 +726,6 @@
 	tastes = list("steak" = 1, "potato" = 1)
 	foodtypes = MEAT | VEGETABLES | FRIED
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/chapsilog
 	name = "chapsilog"
@@ -791,7 +741,6 @@
 	tastes = list("ham" = 1, "garlic rice" = 1, "egg" = 1)
 	foodtypes = MEAT | GRAIN | VEGETABLES | BREAKFAST
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/chap_hash
 	name = "chap hash"
@@ -806,7 +755,6 @@
 	tastes = list("ham" = 1, "onion" = 1, "pepper" = 1, "potato" = 1)
 	foodtypes = MEAT | VEGETABLES | BREAKFAST
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/agedashi_tofu
 	name = "agedashi tofu"
@@ -821,7 +769,6 @@
 	tastes = list("umami broth" = 1, "tofu" = 1)
 	foodtypes = SEAFOOD | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 // Curries and Stews
 /obj/item/food/salad/po_kok_gai
@@ -837,7 +784,6 @@
 	tastes = list("chicken" = 1, "coconut" = 1, "curry" = 1)
 	foodtypes = MEAT | VEGETABLES | FRUIT
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/huoxing_tofu
 	name = "\improper Huoxing tofu"
@@ -853,7 +799,6 @@
 	tastes = list("meat" = 1, "chilli heat" = 1, "tofu" = 1)
 	foodtypes = MEAT | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/feizhou_ji
 	name = "fēizhōu jī"
@@ -868,8 +813,6 @@
 	tastes = list("chicken" = 1, "chilli heat" = 1, "vinegar" = 1)
 	foodtypes = MEAT | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
-
 
 /obj/item/food/salad/galinha_de_cabidela
 	name = "galinha de cabidela"
@@ -883,7 +826,6 @@
 	tastes = list("chicken" = 1, "iron" = 1, "vinegar" = 1, "rice" = 1)
 	foodtypes = MEAT | VEGETABLES | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/katsu_curry
 	name = "katsu curry"
@@ -897,7 +839,6 @@
 	tastes = list("curry" = 1, "meat" = 1, "breadcrumbs" = 1, "rice" = 1)
 	foodtypes = MEAT | VEGETABLES | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/beef_bowl
 	name = "beef bowl"
@@ -912,7 +853,6 @@
 	tastes = list("beef" = 25, "onion" = 25, "chili heat" = 15, "rice" = 34, "soul" = 1) //I pour my soul into this bowl
 	foodtypes = MEAT | VEGETABLES | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/salt_chilli_bowl
 	name = "salt n' chilli octopus bowl"
@@ -929,7 +869,6 @@
 	tastes = list("seafood" = 1, "rice" = 1, "garlic" = 1, "ginger" = 1, "numbing heat" = 1, "salt" = 1)
 	foodtypes = SEAFOOD | VEGETABLES | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_4 //A few Cargo ingredients
 
 /obj/item/food/salad/kansai_bowl
 	name = "\improper Kansai bowl"
@@ -944,7 +883,6 @@
 	tastes = list("seafood" = 1, "rice" = 1, "egg" = 1, "onion" = 1)
 	foodtypes = SEAFOOD | MEAT | VEGETABLES | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/eigamudo_curry //curry is meant to be really spicy or kinda mild, this just stinks!
 	name = "\improper Eigamudo curry"
@@ -959,7 +897,6 @@
 	tastes = list("grit" = 1, "slime" = 1, "gristle" = 1, "rice" = 1, "Mystery Food X" = 1)
 	foodtypes = GROSS | GRAIN | TOXIC
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 // Entrees
 /obj/item/food/cilbir
@@ -977,7 +914,6 @@
 	tastes = list("yoghurt" = 1, "garlic" = 1, "lemon" = 1, "egg" = 1, "chilli heat" = 1)
 	foodtypes = DAIRY | VEGETABLES | FRUIT | BREAKFAST
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/peking_duck_crepes
 	name = "\improper Peking duck crepes a l'orange"
@@ -993,7 +929,6 @@
 	tastes = list("meat" = 1, "crepes" = 1, "orange" = 1)
 	foodtypes = MEAT | DAIRY | VEGETABLES | FRUIT
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 // Desserts
 /obj/item/food/cake/spekkoek
@@ -1007,7 +942,6 @@
 	)
 	tastes = list("winter spices" = 2, "ambrosia vulgaris" = 2, "cake" = 5)
 	foodtypes = GRAIN | SUGAR | DAIRY
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/cake/spekkoek/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/spekkoek, 5, 3 SECONDS, table_required = TRUE)
@@ -1019,7 +953,6 @@
 	icon_state = "spekkoek_slice"
 	tastes = list("winter spices" = 2, "ambrosia vulgaris" = 2, "cake" = 5)
 	foodtypes = GRAIN | SUGAR | DAIRY
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/salad/pineapple_foster
 	name = "pineapple foster"
@@ -1036,7 +969,6 @@
 	tastes = list("pineapple" = 1, "vanilla" = 1, "caramel" = 1, "ice cream" = 1)
 	foodtypes = FRUIT | DAIRY | PINEAPPLE
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/pastel_de_nata
 	name = "pastel de nata"
@@ -1051,7 +983,6 @@
 	tastes = list("custard" = 1, "vanilla" = 1, "sweet pastry" = 1)
 	foodtypes = DAIRY | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/boh_loh_yah
 	name = "boh loh yah"
@@ -1065,7 +996,6 @@
 	tastes = list("cookie" = 1, "butter" = 1)
 	foodtypes = DAIRY | GRAIN | PINEAPPLE //it's funny
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/banana_fritter
 	name = "banana fritter"
@@ -1080,7 +1010,6 @@
 	tastes = list("banana" = 1, "batter" = 1)
 	foodtypes = GRAIN | FRUIT | FRIED
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3 //Fried goodness, oil scawy.
 
 /obj/item/food/pineapple_fritter
 	name = "pineapple fritter"
@@ -1095,7 +1024,6 @@
 	tastes = list("pineapple" = 1, "batter" = 1)
 	foodtypes = GRAIN | FRUIT | FRIED | PINEAPPLE
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/kebab/kasei_dango
 	name = "kasei dango"
@@ -1111,7 +1039,6 @@
 	tastes = list("pomegranate" = 1, "orange" = 1)
 	foodtypes = FRUIT | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 // Frozen
 /obj/item/food/pb_ice_cream_mochi
@@ -1128,7 +1055,6 @@
 	tastes = list("peanut butter" = 1, "mochi" = 1)
 	foodtypes = NUTS | GRAIN | DAIRY | SUGAR
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/popsicle/pineapple_pop
 	name = "frozen pineapple pop"
@@ -1142,7 +1068,6 @@
 	)
 	tastes = list("cold pineapple" = 1, "chocolate" = 1)
 	foodtypes = SUGAR | PINEAPPLE
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/popsicle/sea_salt
 	name = "sea salt ice-cream bar"
@@ -1157,7 +1082,6 @@
 	)
 	tastes = list("salt" = 1, "sweet" = 1)
 	foodtypes = SUGAR | DAIRY
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 // topsicles, also known as tofu popsicles
 /obj/item/food/popsicle/topsicle
@@ -1171,7 +1095,6 @@
 	)
 	tastes = list("berry" = 1, "tofu" = 1)
 	foodtypes = FRUIT | VEGETABLES
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/popsicle/topsicle/banana
 	name = "banana topsicle"
@@ -1209,7 +1132,6 @@
 	tastes = list("sausage" = 1, "relish" = 1, "onion" = 1, "fruity salsa" = 1)
 	foodtypes = FRUIT | MEAT | PINEAPPLE | VEGETABLES | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_4 //Uses Sambal
 
 /obj/item/food/frickles
 	name = "frickles"
@@ -1224,7 +1146,6 @@
 	tastes = list("frickles" = 1)
 	foodtypes = VEGETABLES | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3 //batter and cargo stuff.
 
 /obj/item/food/raw_ballpark_pretzel
 	name = "raw pretzel"
@@ -1238,7 +1159,6 @@
 	tastes = list("bread" = 1, "salt" = 1)
 	foodtypes = GRAIN | RAW
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/raw_ballpark_pretzel/make_bakeable()
 	AddComponent(/datum/component/bakeable, /obj/item/food/ballpark_pretzel, rand(15 SECONDS, 25 SECONDS), TRUE, TRUE)
@@ -1258,7 +1178,6 @@
 	tastes = list("bread" = 1, "salt" = 1)
 	foodtypes = GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/kebab/raw_ballpark_tsukune
 	name = "raw tsukune"
@@ -1272,7 +1191,6 @@
 	tastes = list("raw chicken" = 7, "salmonella" = 1)
 	foodtypes = MEAT | RAW
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/kebab/raw_ballpark_tsukune/make_grillable()
 	AddComponent(/datum/component/grillable, /obj/item/food/kebab/ballpark_tsukune, rand(15 SECONDS, 25 SECONDS), TRUE, TRUE)
@@ -1289,7 +1207,6 @@
 	tastes = list("chicken" = 1, "umami sauce" = 1)
 	foodtypes = MEAT
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 // Ethereal-suitable cross-culture food
 /*	Ethereals are, as part of the uplifting process, considered as citizens of the Terran Federation.
@@ -1311,7 +1228,6 @@
 	tastes = list("sour radish" = 1)
 	foodtypes = VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2 //If it comes straight from cargo, should be worth paying for.
 
 // 24-Volt Energy
 /obj/item/food/volt_fish
@@ -1326,7 +1242,6 @@
 	tastes = list("fish" = 1, "sour pear" = 1)
 	foodtypes = SEAFOOD
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3
 
 // Sprout Bowl
 /obj/item/food/salad/sprout_bowl
@@ -1342,4 +1257,3 @@
 	tastes = list("fish" = 1, "sour radish" = 1, "rice" = 1)
 	foodtypes = SEAFOOD | VEGETABLES | GRAIN
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_3

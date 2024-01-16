@@ -5,6 +5,7 @@
 	id = SPECIES_LIZARD
 	inherent_traits = list(
 		TRAIT_MUTANT_COLORS,
+		TRAIT_CAN_USE_FLIGHT_POTION,
 		TRAIT_TACKLING_TAILED_DEFENDER,
 	)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_REPTILE
@@ -27,6 +28,7 @@
 	exotic_bloodtype = "L"
 	inert_mutation = /datum/mutation/human/firebreath
 	death_sound = 'sound/voice/lizard/deathsound.ogg'
+	wing_types = list(/obj/item/organ/external/wings/functional/dragon)
 	species_language_holder = /datum/language_holder/lizard
 	digitigrade_customization = DIGITIGRADE_OPTIONAL
 
@@ -72,14 +74,13 @@
 
 	return randname
 
-//NOVA EDIT REMOVAL BEGIN
+//SKYRAT EDIT REMOVAL BEGIN
 /*
 /datum/species/lizard/randomize_features(mob/living/carbon/human/human_mob)
-	var/list/features = ..()
-	features["body_markings"] = pick(GLOB.body_markings_list)
-	return features
+	human_mob.dna.features["body_markings"] = pick(GLOB.body_markings_list)
+	randomize_external_organs(human_mob)
 */
-//NOVA EDIT REMOVAL END
+//SKYRAT EDIT REMOVAL END
 
 /datum/species/lizard/get_scream_sound(mob/living/carbon/human/lizard)
 	return pick(
@@ -158,7 +159,7 @@ Lizard subspecies: ASHWALKERS
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/lizard,
 	)
 
-/datum/species/lizard/ashwalker/get_physical_attributes()
+/datum/species/lizard/get_physical_attributes()
 	return "Ash Walkers are identical to lizardpeople in almost all aspects. \
 		Unlike them, they're always digitigrade, they can breathe Lavaland's often noxious atmosphere and resist viruses. They are usually illiterate."
 

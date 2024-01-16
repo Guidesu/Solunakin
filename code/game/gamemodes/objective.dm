@@ -1,5 +1,5 @@
 GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
-GLOBAL_LIST_EMPTY(objectives) //NOVA EDIT ADDITION
+GLOBAL_LIST_EMPTY(objectives) //SKYRAT EDIT ADDITION
 
 /datum/objective
 	var/datum/mind/owner //The primary owner of the objective. !!SOMEWHAT DEPRECATED!! Prefer using 'team' for new code.
@@ -17,13 +17,13 @@ GLOBAL_LIST_EMPTY(objectives) //NOVA EDIT ADDITION
 	var/admin_grantable = FALSE
 
 /datum/objective/New(text)
-	GLOB.objectives += src //NOVA EDIT ADDITION
+	GLOB.objectives += src //SKYRAT EDIT ADDITION
 	if(text)
 		explanation_text = text
 
 //Apparently objectives can be qdel'd. Learn a new thing every day
 /datum/objective/Destroy()
-	GLOB.objectives -= src //NOVA EDIT ADDITION
+	GLOB.objectives -= src //SKYRAT EDIT ADDITION
 	return ..()
 
 /datum/objective/proc/get_owners() // Combine owner and team into a single list.
@@ -125,27 +125,6 @@ GLOBAL_LIST_EMPTY(objectives) //NOVA EDIT ADDITION
 /datum/objective/proc/get_target()
 	return target
 
-/datum/objective/proc/is_valid_target(datum/mind/possible_target)
-	if(!ishuman(possible_target.current))
-		return FALSE
-
-	if(possible_target.current.stat == DEAD)
-		return FALSE
-
-	var/target_area = get_area(possible_target.current)
-	if(!HAS_TRAIT(SSstation, STATION_TRAIT_LATE_ARRIVALS) && istype(target_area, /area/shuttle/arrival))
-		return FALSE
-
-	// NOVA EDIT ADDITION
-	if(SSticker.IsRoundInProgress() && istype(target_area, /area/centcom/interlink))
-		return FALSE
-	if(!count_space_areas)
-		if(istype(target_area, /area/space) || istype(target_area, /area/ruin) || istype(target_area, /area/icemoon) || istype(target_area, /area/lavaland))
-			return FALSE
-	// NOVA EDIT END
-
-	return TRUE
-
 //dupe_search_range is a list of antag datums / minds / teams
 /datum/objective/proc/find_target(dupe_search_range, list/blacklist)
 	var/list/datum/mind/owners = get_owners()
@@ -158,14 +137,26 @@ GLOBAL_LIST_EMPTY(objectives) //NOVA EDIT ADDITION
 		if(O.late_joiner)
 			try_target_late_joiners = TRUE
 	for(var/datum/mind/possible_target in get_crewmember_minds())
+		var/target_area = get_area(possible_target.current)
 		if(possible_target in owners)
+			continue
+		if(!ishuman(possible_target.current))
+			continue
+		if(possible_target.current.stat == DEAD)
 			continue
 		if(!is_unique_objective(possible_target,dupe_search_range))
 			continue
+		if(!HAS_TRAIT(SSstation, STATION_TRAIT_LATE_ARRIVALS) && istype(target_area, /area/shuttle/arrival))
+			continue
 		if(possible_target in blacklist)
 			continue
-		if(!is_valid_target(possible_target))
+		// SKYRAT EDIT ADDITION
+		if(SSticker.IsRoundInProgress() && istype(target_area, /area/centcom/interlink))
 			continue
+		if(!count_space_areas)
+			if(istype(target_area, /area/space) || istype(target_area, /area/ruin) || istype(target_area, /area/icemoon) || istype(target_area, /area/lavaland))
+				continue
+		// SKYRAT EDIT END
 		possible_targets += possible_target
 	if(try_target_late_joiners)
 		var/list/all_possible_targets = possible_targets.Copy()
@@ -179,6 +170,7 @@ GLOBAL_LIST_EMPTY(objectives) //NOVA EDIT ADDITION
 		target = pick(possible_targets)
 	update_explanation_text()
 	return target
+
 
 /datum/objective/proc/update_explanation_text()
 	if(team_explanation_text && LAZYLEN(get_owners()) > 1)
@@ -200,7 +192,7 @@ GLOBAL_LIST_EMPTY(objectives) //NOVA EDIT ADDITION
 /datum/action/special_equipment_fallback
 	name = "Request Objective-specific Equipment"
 	desc = "Call down a supply pod containing the equipment required for specific objectives."
-	button_icon = 'icons/obj/devices/tracker.dmi'
+	button_icon = 'icons/obj/device.dmi'
 	button_icon_state = "beacon"
 
 /datum/action/special_equipment_fallback/Trigger(trigger_flags)
@@ -225,7 +217,7 @@ GLOBAL_LIST_EMPTY(objectives) //NOVA EDIT ADDITION
 	return TRUE
 
 /datum/objective/assassinate
-	name = "assassinate"
+	name = "assasinate"
 	martyr_compatible = TRUE
 	admin_grantable = TRUE
 	var/target_role_type = FALSE
@@ -237,7 +229,7 @@ GLOBAL_LIST_EMPTY(objectives) //NOVA EDIT ADDITION
 /datum/objective/assassinate/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Assassinate [target.name], the [!target_role_type ? target.assigned_role.title : target.special_role] ONCE." //NOVA EDIT CHANGE
+		explanation_text = "Assassinate [target.name], the [!target_role_type ? target.assigned_role.title : target.special_role] ONCE." //SKYRAT EDIT CHANGE
 	else
 		explanation_text = "Free objective."
 
@@ -524,11 +516,6 @@ GLOBAL_LIST_EMPTY(objectives) //NOVA EDIT ADDITION
 	target = ..()
 	update_explanation_text()
 
-/datum/objective/escape/escape_with_identity/is_valid_target(datum/mind/possible_target)
-	if(HAS_TRAIT(possible_target.current, TRAIT_NO_DNA_COPY))
-		return FALSE
-	return ..()
-
 /datum/objective/escape/escape_with_identity/update_explanation_text()
 	if(target?.current)
 		target_real_name = target.current.real_name
@@ -543,12 +530,12 @@ GLOBAL_LIST_EMPTY(objectives) //NOVA EDIT ADDITION
 		explanation_text += "." //Proper punctuation is important!
 
 	else
-		explanation_text = "Escape on the shuttle or an escape pod alive and without being in custody."
+		explanation_text = "Free objective."
 
 /datum/objective/escape/escape_with_identity/check_completion()
-	var/list/datum/mind/owners = get_owners()
 	if(!target || !target_real_name)
-		return ..()
+		return TRUE
+	var/list/datum/mind/owners = get_owners()
 	for(var/datum/mind/M in owners)
 		if(!ishuman(M.current) || !considered_escaped(M))
 			continue

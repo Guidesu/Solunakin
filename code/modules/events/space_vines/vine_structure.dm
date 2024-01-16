@@ -7,6 +7,7 @@
 	anchored = TRUE
 	density = FALSE
 	layer = SPACEVINE_LAYER
+	plane = GAME_PLANE_UPPER_FOV_HIDDEN
 	mouse_opacity = MOUSE_OPACITY_OPAQUE //Clicking anywhere on the turf is good enough
 	pass_flags = PASSTABLE | PASSGRILLE
 	max_integrity = 50
@@ -67,10 +68,10 @@
 	for(var/datum/spacevine_mutation/mutation in mutations)
 		override += mutation.on_chem(src, chem)
 	if(!override && prob(75) && istype(chem, /datum/reagent/toxin/plantbgone))
-		// NOVA EDIT ADD START
+		// SKYRAT EDIT ADD START
 		if(plantbgone_resist && prob(50))
 			return
-		// NOVA EDIT ADD END
+		// SKYRAT EDIT ADD END
 		qdel(src)
 
 /obj/structure/spacevine/proc/eat(mob/eater)

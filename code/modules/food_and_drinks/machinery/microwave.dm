@@ -312,21 +312,21 @@
 /obj/machinery/microwave/wrench_act(mob/living/user, obj/item/tool)
 	if(default_unfasten_wrench(user, tool))
 		update_appearance()
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/microwave/crowbar_act(mob/living/user, obj/item/tool)
 	if(!default_deconstruction_crowbar(tool))
 		return
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/microwave/screwdriver_act(mob/living/user, obj/item/tool)
 	if(default_deconstruction_screwdriver(user, icon_state, icon_state, tool))
 		update_appearance()
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/microwave/wirecutter_act(mob/living/user, obj/item/tool)
 	if(broken != REALLY_BROKEN)
-		return NONE
+		return
 
 	user.visible_message(
 		span_notice("[user] starts to fix part of [src]."),
@@ -334,7 +334,7 @@
 	)
 
 	if(!tool.use_tool(src, user, 2 SECONDS, volume = 50))
-		return ITEM_INTERACT_BLOCKING
+		return TOOL_ACT_SIGNAL_BLOCKING
 
 	user.visible_message(
 		span_notice("[user] fixes part of [src]."),
@@ -342,11 +342,11 @@
 	)
 	broken = KINDA_BROKEN // Fix it a bit
 	update_appearance()
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/microwave/welder_act(mob/living/user, obj/item/tool)
 	if(broken != KINDA_BROKEN)
-		return NONE
+		return
 
 	user.visible_message(
 		span_notice("[user] starts to fix part of [src]."),
@@ -354,7 +354,7 @@
 	)
 
 	if(!tool.use_tool(src, user, 2 SECONDS, amount = 1, volume = 50))
-		return ITEM_INTERACT_BLOCKING
+		return TOOL_ACT_SIGNAL_BLOCKING
 
 	user.visible_message(
 		span_notice("[user] fixes [src]."),
@@ -362,23 +362,21 @@
 	)
 	broken = NOT_BROKEN
 	update_appearance()
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
-/obj/machinery/microwave/item_interaction(mob/living/user, obj/item/tool, list/modifiers, is_right_clicking)
+/obj/machinery/microwave/tool_act(mob/living/user, obj/item/tool, tool_type, is_right_clicking)
 	if(operating)
 		return
 	if(dirty >= MAX_MICROWAVE_DIRTINESS)
 		return
 
 	. = ..()
-	if(. & ITEM_INTERACT_ANY_BLOCKER)
-		return .
+	if(. & TOOL_ACT_MELEE_CHAIN_BLOCKING)
+		return
 
 	if(panel_open && is_wire_tool(tool))
 		wires.interact(user)
-		return ITEM_INTERACT_SUCCESS
-
-	return .
+		return TOOL_ACT_SIGNAL_BLOCKING
 
 /obj/machinery/microwave/attackby(obj/item/item, mob/living/user, params)
 	if(operating)
@@ -418,8 +416,8 @@
 			return TRUE
 		return ..()
 
-	if(vampire_charging_capable && istype(item, /obj/item/modular_computer) && ingredients.len > 0)
-		balloon_alert(user, "max 1 device!")
+	if(vampire_charging_capable && istype(item, /obj/item/modular_computer/pda) && ingredients.len > 0)
+		balloon_alert(user, "max 1 pda!")
 		return FALSE
 
 	if(istype(item, /obj/item/storage))
@@ -486,7 +484,7 @@
 
 /obj/machinery/microwave/CtrlClick(mob/user)
 	. = ..()
-	if(user.can_perform_action(src) && cell_powered && !isnull(cell) && anchored)
+	if(cell_powered && !isnull(cell) && anchored)
 		user.put_in_hands(cell)
 		balloon_alert(user, "removed cell")
 		cell = null
@@ -518,6 +516,7 @@
 	if(isAI(user) && (machine_stat & NOPOWER))
 		return
 
+	user.set_machine(src)
 	switch(choice)
 		if("eject")
 			eject()
@@ -577,7 +576,7 @@
 
 	if(cell_powered && cell?.charge < TIER_1_CELL_CHARGE_RATE * efficiency)
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 50, FALSE)
-		balloon_alert(cooker, "no power draw!")
+		balloon_alert(cooker, "replace cell!")
 		return
 
 	if(cooker && HAS_TRAIT(cooker, TRAIT_CURSED) && prob(7))
@@ -593,14 +592,9 @@
 	for(var/atom/movable/potential_fooditem as anything in ingredients)
 		if(IS_EDIBLE(potential_fooditem))
 			non_food_ingedients--
-		if(istype(potential_fooditem, /obj/item/modular_computer) && prob(75))
+		if(istype(potential_fooditem, /obj/item/modular_computer/pda) && prob(75))
 			pda_failure = TRUE
-			notify_ghosts(
-				"[cooker] has overheated their PDA!",
-				source = src,
-				notify_flags = NOTIFY_CATEGORY_NOFLASH,
-				header = "Hunger Games: Catching Fire",
-			)
+			notify_ghosts("[cooker] has overheated their PDA!", source = src, action = NOTIFY_JUMP, flashwindow = FALSE, header = "Hunger Games: Catching Fire")
 
 	// If we're cooking non-food items we can fail randomly
 	if(length(non_food_ingedients) && prob(min(dirty * 5, 100)))
@@ -610,13 +604,11 @@
 	start(cooker)
 
 /obj/machinery/microwave/proc/wzhzhzh()
-	if(cell_powered && !isnull(cell))
-		if(!cell.use(TIER_1_CELL_CHARGE_RATE * efficiency))
-			playsound(src, 'sound/machines/buzz-sigh.ogg', 50, FALSE)
-			return
-
 	visible_message(span_notice("\The [src] turns on."), null, span_hear("You hear a microwave humming."))
 	operating = TRUE
+	if(cell_powered && !isnull(cell))
+		cell.use(TIER_1_CELL_CHARGE_RATE * efficiency)
+
 	set_light(l_range = 1.5, l_power = 1.2, l_on = TRUE)
 	soundloop.start()
 	update_appearance()
@@ -766,7 +758,7 @@
  * * cooker - The mob that initiated the cook cycle, can be null if no apparent mob triggered it (such as via emp)
  */
 /obj/machinery/microwave/proc/vampire(mob/cooker)
-	var/obj/item/modular_computer/vampire_pda = LAZYACCESS(ingredients, 1)
+	var/obj/item/modular_computer/pda/vampire_pda = LAZYACCESS(ingredients, 1)
 	if(isnull(vampire_pda))
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 50, FALSE)
 		after_finish_loop()
@@ -798,7 +790,7 @@
 
 	// We should only be charging PDAs
 	for(var/atom/movable/potential_item as anything in ingredients)
-		if(!istype(potential_item, /obj/item/modular_computer))
+		if(!istype(potential_item, /obj/item/modular_computer/pda))
 			balloon_alert(cooker, "pda only!")
 			playsound(src, 'sound/machines/buzz-sigh.ogg', 50, FALSE)
 			eject()
@@ -819,7 +811,7 @@
 		pre_fail()
 		return
 
-	if(!vampire_charge_amount || !length(ingredients) || isnull(cell) || !cell.charge || vampire_charge_amount < 25)
+	if(!vampire_charge_amount || !length(ingredients) || (!isnull(cell) && !cell.charge) || vampire_charge_amount < 25)
 		vampire_cell = null
 		charge_loop_finish(cooker)
 		return

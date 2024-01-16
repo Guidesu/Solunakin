@@ -142,10 +142,10 @@
 /obj/machinery/reagentgrinder/wrench_act(mob/living/user, obj/item/tool)
 	. = ..()
 	default_unfasten_wrench(user, tool)
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/reagentgrinder/screwdriver_act(mob/living/user, obj/item/tool)
-	. = ITEM_INTERACT_SUCCESS
+	. = TOOL_ACT_TOOLTYPE_SUCCESS
 	if(!beaker && !length(holdingitems))
 		return default_deconstruction_screwdriver(user, icon_state, icon_state, tool)
 

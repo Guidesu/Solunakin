@@ -8,8 +8,7 @@
 	belt_icon_state = "screwdriver"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
-	flags_1 = IS_PLAYER_COLORABLE_1
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1 | IS_PLAYER_COLORABLE_1
 	slot_flags = ITEM_SLOT_BELT
 	force = 5
 	demolition_mod = 0.5

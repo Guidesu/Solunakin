@@ -17,30 +17,6 @@
 /datum/station_trait/distant_supply_lines/on_round_start()
 	SSeconomy.pack_price_modifier *= 1.2
 
-///A negative trait that stops mail from arriving (or the inverse if on holiday). It also enables a specific shuttle loan situation.
-/datum/station_trait/mail_blocked
-	name = "Postal workers strike"
-	trait_type = STATION_TRAIT_NEGATIVE
-	weight = 2
-	show_in_report = TRUE
-	report_message = "Due to an ongoing strike announced by the postal workers union, mail won't be delivered this shift."
-
-/datum/station_trait/mail_blocked/on_round_start()
-	//This is either a holiday or sunday... well then, let's flip the situation.
-	if(SSeconomy.mail_blocked)
-		name = "Postal system overtime"
-		report_message = "Despite being a day off, the postal system is working overtime today. Mail will be delivered this shift."
-	else
-		var/datum/round_event_control/shuttle_loan/our_event = locate() in SSevents.control
-		our_event.unavailable_situations -= /datum/shuttle_loan_situation/mail_strike
-	SSeconomy.mail_blocked = !SSeconomy.mail_blocked
-
-/datum/station_trait/mail_blocked/hangover/revert()
-	var/datum/round_event_control/shuttle_loan/our_event = locate() in SSevents.control
-	our_event.unavailable_situations |= /datum/shuttle_loan_situation/mail_strike
-	SSeconomy.mail_blocked = !SSeconomy.mail_blocked
-	return ..()
-
 ///A negative trait that reduces the amount of products available from vending machines throughout the station.
 /datum/station_trait/vending_shortage
 	name = "Vending products shortage"
@@ -180,7 +156,7 @@
 /datum/station_trait/bot_languages/on_round_start()
 	. = ..()
 	// All bots that exist round start on station Z OR on the escape shuttle have their set language randomized.
-	for(var/mob/living/found_bot as anything in GLOB.bots_list)
+	for(var/mob/living/simple_animal/bot/found_bot as anything in GLOB.bots_list)
 		found_bot.randomize_language_if_on_station()
 
 /datum/station_trait/revenge_of_pun_pun
@@ -482,11 +458,6 @@
 	var/list/shielding = list()
 
 /datum/station_trait/nebula/hostile/process(seconds_per_tick)
-	// NOVA EDIT ADDITION START
-	if(!storms_enabled)
-		get_shielding_level() // So shields still produce tritium
-		return
-	// NOVA EDIT ADDITION END
 	calculate_nebula_strength()
 
 	apply_nebula_effect(nebula_intensity - get_shielding_level())
@@ -502,7 +473,7 @@
 
 ///Calculate how strong we currently are
 /datum/station_trait/nebula/hostile/proc/calculate_nebula_strength()
-	nebula_intensity = min(STATION_TIME_PASSED(), maximum_nebula_intensity) / intensity_increment_time
+	nebula_intensity = min(STATION_TIME_PASSED() / intensity_increment_time, maximum_nebula_intensity)
 
 ///Check how strong the stations shielding is
 /datum/station_trait/nebula/hostile/proc/get_shielding_level()
@@ -552,7 +523,7 @@
 	threat_reduction = 30
 	dynamic_threat_id = "Radioactive Nebula"
 
-	intensity_increment_time = 10 MINUTES // NOVA EDIT longer shield duration - ORIGINAL: intensity_increment_time = 5 MINUTES /
+	intensity_increment_time = 10 MINUTES // SKYRAT EDIT longer shield duration - ORIGINAL: intensity_increment_time = 5 MINUTES /
 	maximum_nebula_intensity = 1 HOURS + 40 MINUTES
 
 	nebula_layer = /atom/movable/screen/parallax_layer/random/space_gas/radioactive
@@ -623,7 +594,7 @@
 
 /datum/station_trait/nebula/hostile/radiation/apply_nebula_effect(effect_strength = 0)
 	//big bombad now
-	if(effect_strength > 0 && !SSmapping.is_planetary()) //admins can force this
+	if(effect_strength > 0)
 		if(!SSweather.get_weather_by_type(/datum/weather/rad_storm/nebula))
 			COOLDOWN_START(src, send_care_package_at, send_care_package_time)
 			SSweather.run_weather(/datum/weather/rad_storm/nebula)
@@ -653,7 +624,6 @@
 	new /obj/effect/pod_landingzone (get_safe_random_station_turf(), new /obj/structure/closet/supplypod/centcompod (), new /obj/machinery/nebula_shielding/emergency/radiation ())
 
 /datum/station_trait/nebula/hostile/radiation/send_instructions()
-	/* NOVA EDIT REMOVAL START - No more radiation storms on station
 	var/obj/machinery/nebula_shielding/shielder = /obj/machinery/nebula_shielding/radiation
 	var/obj/machinery/gravity_generator/main/innate_shielding = /obj/machinery/gravity_generator/main
 	//How long do we have untill the first shielding unit needs to be up?
@@ -672,12 +642,6 @@
 		You have [deadline] before the nebula enters the station. \
 		Every shielding unit will provide an additional [shielder_time] of protection, fully protecting the station with [max_shielders] shielding units.
 	"}
-	NOVA EDIT REMOVAL END */
-	// NOVA EDIT CHANGE START - ORIGINAL: See above
-	var/announcement = {"Your station has been constructed inside a radioactive nebula. \
-		Standard spacesuits will not protect against the nebula and using them is strongly discouraged.
-	"}
-	// NOVA EDIT CHANGE END
 
 	priority_announce(announcement, sound = 'sound/misc/notice1.ogg')
 

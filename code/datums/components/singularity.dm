@@ -108,7 +108,7 @@
 
 	GLOB.singularities |= src
 
-/datum/component/singularity/Destroy(force)
+/datum/component/singularity/Destroy(force, silent)
 	GLOB.singularities -= src
 	consume_callback = null
 	target = null

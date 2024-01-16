@@ -10,15 +10,10 @@
 "u" = (
 /turf/open/floor/plating,
 /area/virtual_domain/safehouse)
-"U" = (
-/obj/effect/landmark/bitrunning/hololadder_spawn,
-/obj/modular_map_connector,
-/turf/open/floor/plating,
-/area/virtual_domain/safehouse)
 
 (1,1,1) = {"
 u
-U
+d
 "}
 (2,1,1) = {"
 u

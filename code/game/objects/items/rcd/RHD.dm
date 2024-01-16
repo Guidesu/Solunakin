@@ -8,7 +8,7 @@
 	opacity = FALSE
 	density = FALSE
 	anchored = FALSE
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	item_flags = NOBLUDGEON
 	force = 0
 	throwforce = 10
@@ -284,7 +284,7 @@
 /obj/item/rcd_upgrade
 	name = "RCD advanced design disk"
 	desc = "It seems to be empty."
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = 'icons/obj/assemblies/module.dmi'
 	icon_state = "datadisk3"
 	var/upgrade
 

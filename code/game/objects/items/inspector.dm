@@ -5,13 +5,8 @@
  */
 /obj/item/inspector
 	name = "\improper N-spect scanner"
-<<<<<<< HEAD
 	desc = "Conglomeration of Colonists-issued inspection device. Performs inspections according to Symphionia protocols when activated, then prints an encrypted report regarding the maintenance of the station. Definitely not giving you cancer."
 	icon = 'icons/obj/device.dmi'
-=======
-	desc = "Central Command-issued inspection device. Performs inspections according to Nanotrasen protocols when activated, then prints an encrypted report regarding the maintenance of the station. Definitely not giving you cancer."
-	icon = 'icons/obj/devices/scanner.dmi'
->>>>>>> Nova/master
 	icon_state = "inspector"
 	worn_icon_state = "salestagger"
 	inhand_icon_state = "electronic"

@@ -8,4 +8,3 @@
 	use_reverb = FALSE
 	direct = TRUE
 	sound_channel = CHANNEL_ELEVATOR
-

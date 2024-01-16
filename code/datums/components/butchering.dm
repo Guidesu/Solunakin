@@ -34,7 +34,7 @@
 	if(isitem(parent))
 		RegisterSignal(parent, COMSIG_ITEM_ATTACK, PROC_REF(onItemAttack))
 
-/datum/component/butchering/Destroy(force)
+/datum/component/butchering/Destroy(force, silent)
 	butcher_callback = null
 	return ..()
 

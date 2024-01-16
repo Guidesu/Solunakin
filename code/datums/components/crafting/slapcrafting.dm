@@ -38,7 +38,7 @@
 		return
 	src.slapcraft_recipes += slapcraft_recipes
 
-/datum/component/slapcrafting/Destroy(force)
+/datum/component/slapcrafting/Destroy(force, silent)
 	UnregisterSignal(parent, list(COMSIG_ATOM_ATTACKBY, COMSIG_ATOM_EXAMINE, COMSIG_ATOM_EXAMINE_MORE))
 	return ..()
 

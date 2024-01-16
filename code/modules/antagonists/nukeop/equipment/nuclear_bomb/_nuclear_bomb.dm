@@ -463,6 +463,7 @@ GLOBAL_VAR(station_nuke_source)
 		"A nuclear device has been armed in [get_area_name(src)]!",
 		source = src,
 		header = "Nuke Armed",
+		action = NOTIFY_ORBIT,
 	)
 	update_appearance()
 
@@ -520,11 +521,11 @@ GLOBAL_VAR(station_nuke_source)
 	safety = TRUE
 	update_appearance()
 	sound_to_playing_players('sound/machines/alarm.ogg')
-	sound_to_playing_players('modular_nova/modules/alerts/sound/misc/delta_countdown.ogg') // NOVA EDIT ADDITION
+	sound_to_playing_players('modular_skyrat/modules/alerts/sound/misc/delta_countdown.ogg') // SKYRAT EDIT ADDITION
 
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_NUKE_DEVICE_DETONATING, src)
 
-	if(SSticker.HasRoundStarted())
+	if(SSticker?.mode)
 		SSticker.roundend_check_paused = TRUE
 	addtimer(CALLBACK(src, PROC_REF(actually_explode)), 10 SECONDS)
 	return TRUE

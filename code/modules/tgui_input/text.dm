@@ -23,11 +23,7 @@
 			var/client/client = user
 			user = client.mob
 		else
-			return null
-
-	if(isnull(user.client))
-		return null
-
+			return
 	// Client does NOT have tgui_input on: Returns regular input
 	if(!user.client.prefs.read_preference(/datum/preference/toggle/tgui_input))
 		if(encode)
@@ -90,7 +86,7 @@
 		start_time = world.time
 		QDEL_IN(src, timeout)
 
-/datum/tgui_input_text/Destroy(force)
+/datum/tgui_input_text/Destroy(force, ...)
 	SStgui.close_uis(src)
 	state = null
 	return ..()

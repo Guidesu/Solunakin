@@ -18,7 +18,7 @@
 /obj/item/mod/module/magnetic_harness/Initialize(mapload)
 	. = ..()
 	if(!guns_typecache)
-		guns_typecache = typecacheof(list(/obj/item/gun/ballistic, /obj/item/gun/energy, /obj/item/gun/grenadelauncher, /obj/item/gun/chem, /obj/item/gun/syringe, /obj/item/gun/microfusion)) //NOVA EDIT - MICROFUSION
+		guns_typecache = typecacheof(list(/obj/item/gun/ballistic, /obj/item/gun/energy, /obj/item/gun/grenadelauncher, /obj/item/gun/chem, /obj/item/gun/syringe, /obj/item/gun/microfusion)) //SKYRAT EDIT - MICROFUSION
 
 /obj/item/mod/module/magnetic_harness/on_install()
 	already_allowed_guns = guns_typecache & mod.chestplate.allowed
@@ -67,10 +67,10 @@
 	overlay_state_use = "module_pepper_used"
 
 /obj/item/mod/module/pepper_shoulders/on_suit_activation()
-	RegisterSignal(mod.wearer, COMSIG_LIVING_CHECK_BLOCK, PROC_REF(on_check_block))
+	RegisterSignal(mod.wearer, COMSIG_HUMAN_CHECK_SHIELDS, PROC_REF(on_check_shields))
 
 /obj/item/mod/module/pepper_shoulders/on_suit_deactivation(deleting = FALSE)
-	UnregisterSignal(mod.wearer, COMSIG_LIVING_CHECK_BLOCK)
+	UnregisterSignal(mod.wearer, COMSIG_HUMAN_CHECK_SHIELDS)
 
 /obj/item/mod/module/pepper_shoulders/on_use()
 	. = ..()
@@ -84,7 +84,7 @@
 	smoke.start(log = TRUE)
 	QDEL_NULL(capsaicin_holder) // Reagents have a ref to their holder which has a ref to them. No leaks please.
 
-/obj/item/mod/module/pepper_shoulders/proc/on_check_block()
+/obj/item/mod/module/pepper_shoulders/proc/on_check_shields()
 	SIGNAL_HANDLER
 
 	if(!COOLDOWN_FINISHED(src, cooldown_timer))
@@ -424,7 +424,7 @@
 
 		if(oldgroup == newgroup)
 			return
-
+			
 		sorted_creatures[oldgroup] -= creature
 
 	sorted_creatures[newgroup] += creature

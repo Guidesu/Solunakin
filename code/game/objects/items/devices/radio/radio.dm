@@ -1,17 +1,17 @@
 #define FREQ_LISTENING (1<<0)
 
 /obj/item/radio
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = 'icons/obj/radio.dmi'
 	name = "station bounced radio"
 	icon_state = "walkietalkie"
-	inhand_icon_state = "walkietalkie"
+	inhand_icon_state = "radio"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	worn_icon_state = "radio"
 	desc = "A basic handheld radio that communicates with local telecommunication networks."
 	dog_fashion = /datum/dog_fashion/back
 
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
 	throw_speed = 3
 	throw_range = 7
@@ -320,7 +320,7 @@
 	var/datum/signal/subspace/vocal/signal = new(src, freq, speaker, language, message, spans, message_mods)
 
 	// Independent radios, on the CentCom frequency, reach all independent radios
-	if (independent && (freq == FREQ_CENTCOM || freq == FREQ_CTF_RED || freq == FREQ_CTF_BLUE || freq == FREQ_CTF_GREEN || freq == FREQ_CTF_YELLOW || freq == FREQ_FACTION || freq == FREQ_CYBERSUN || freq == FREQ_INTERDYNE || freq == FREQ_GUILD || freq == FREQ_TARKON || freq == FREQ_SOLFED)) //NOVA EDIT CHANGE - FACTION, MAPPING, SOLFED
+	if (independent && (freq == FREQ_CENTCOM || freq == FREQ_CTF_RED || freq == FREQ_CTF_BLUE || freq == FREQ_CTF_GREEN || freq == FREQ_CTF_YELLOW || freq == FREQ_FACTION || freq == FREQ_CYBERSUN || freq == FREQ_INTERDYNE || freq == FREQ_GUILD || freq == FREQ_TARKON || freq == FREQ_SOLFED)) //SKYRAT EDIT CHANGE - FACTION, MAPPING, SOLFED
 		signal.data["compression"] = 0
 		signal.transmission_method = TRANSMISSION_SUPERSPACE
 		signal.levels = list(0)
@@ -388,8 +388,7 @@
 				return TRUE
 	return FALSE
 
-/obj/item/radio/proc/on_receive_message(list/data)
-	SEND_SIGNAL(src, COMSIG_RADIO_RECEIVE_MESSAGE, data)
+/obj/item/radio/proc/on_recieve_message()
 	flick_overlay_view(overlay_speaker_active, 5 SECONDS)
 
 /obj/item/radio/ui_state(mob/user)
@@ -532,7 +531,7 @@
 	subspace_transmission = TRUE
 	subspace_switchable = TRUE
 	dog_fashion = null
-	canhear_range = 0
+	canhear_range = 0 // Skyrat Edit - Stops borgs being a loudspeaker and contains it to the tile they're on
 
 /obj/item/radio/borg/resetChannels()
 	. = ..()

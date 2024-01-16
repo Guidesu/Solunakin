@@ -8,7 +8,8 @@
 /obj/machinery/camera/process()
 	// motion camera event loop
 	if(!isMotion())
-		return PROCESS_KILL
+		. = PROCESS_KILL
+		return
 	if(machine_stat & EMPED)
 		return
 	if (detectTime > 0)

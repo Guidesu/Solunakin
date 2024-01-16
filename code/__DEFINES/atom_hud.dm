@@ -14,9 +14,9 @@
 /// loyality implant
 #define IMPLOYAL_HUD "5"
 /// chemical implant
-#define IMPSEC_FIRST_HUD "6"
+#define IMPCHEM_HUD "6"
 /// tracking implant
-#define IMPSEC_SECOND_HUD "7"
+#define IMPTRACK_HUD "7"
 /// Silicon/Mech/Circuit Status
 #define DIAG_STAT_HUD "8"
 /// Silicon health bar
@@ -45,10 +45,8 @@
 #define FAN_HUD "21"
 /// Mech camera HUD
 #define DIAG_CAMERA_HUD "22"
-/// Steady Hacked APC effect, visible only to Malf AIs
-#define MALF_APC_HUD "23"
 
-// NOVA EDIT ADDITION BEGIN - gun permits and DNR
+// SKYRAT EDIT ADDITION BEGIN - gun permits and DNR
 /// ammo of guns
 #define AMMO_HUD "25"
 /// if they have a gun permit
@@ -56,7 +54,7 @@
 
 /// If they have the DNR trait
 #define DNR_HUD "27"
-// NOVA EDIT ADDITION END
+// SKYRAT EDIT ADDITION END
 
 //by default everything in the hud_list of an atom is an image
 //a value in hud_list with one of these will change that behavior
@@ -74,12 +72,17 @@
 #define DATA_HUD_SENTIENT_DISEASE 8
 #define DATA_HUD_AI_DETECT 9
 #define DATA_HUD_FAN 10
-#define DATA_HUD_MALF_APC 11
-#define DATA_HUD_PERMIT 12 //NOVA EDIT
-#define DATA_HUD_DNR 13 // NOVA EDIT
+#define DATA_HUD_PERMIT 11 //SKYRAT EDIT
+#define DATA_HUD_DNR 12 // SKYRAT EDIT
+
+// Notification action types
+#define NOTIFY_JUMP "jump"
+#define NOTIFY_PLAY "play"
+#define NOTIFY_ORBIT "orbit"
 
 /// cooldown for being shown the images for any particular data hud
 #define ADD_HUD_TO_COOLDOWN 20
+
 
 // Security HUD icon_state defines
 

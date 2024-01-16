@@ -103,7 +103,6 @@
 	contains = list(/obj/item/stack/tile/carpet/fifty = 2,
 					/obj/item/stack/tile/carpet/black/fifty = 2)
 	crate_name = "premium carpet crate"
-	discountable = SUPPLY_PACK_UNCOMMON_DISCOUNTABLE
 
 /datum/supply_pack/service/carpet_exotic
 	name = "Exotic Carpet Crate"
@@ -120,7 +119,6 @@
 					/obj/item/stack/tile/carpet/royalblack/fifty = 2,
 				)
 	crate_name = "exotic carpet crate"
-	discountable = SUPPLY_PACK_UNCOMMON_DISCOUNTABLE
 
 /datum/supply_pack/service/carpet_neon
 	name = "Simple Neon Carpet Crate"
@@ -142,7 +140,6 @@
 					/obj/item/stack/tile/carpet/neon/simple/pink/sixty = 2,
 				)
 	crate_name = "neon carpet crate"
-	discountable = SUPPLY_PACK_UNCOMMON_DISCOUNTABLE
 
 /datum/supply_pack/service/lightbulbs
 	name = "Replacement Lights"
@@ -163,7 +160,7 @@
 	access_view = ACCESS_MINING_STATION
 	contains = list(/obj/item/storage/backpack/duffelbag/mining_conscript)
 	crate_name = "shaft miner starter kit"
-	crate_type = /obj/structure/closet/crate/secure/cargo/mining
+	crate_type = /obj/structure/closet/crate/secure
 
 /datum/supply_pack/service/survivalknives
 	name = "Survival Knives Crate"
@@ -172,7 +169,6 @@
 	cost = CARGO_CRATE_VALUE * 3
 	contains = list(/obj/item/knife/combat/survival = 3)
 	crate_name = "survival knife crate"
-	crate_type = /obj/structure/closet/crate/cargo/mining
 
 /datum/supply_pack/service/wedding
 	name = "Wedding Crate"
@@ -193,7 +189,7 @@
 
 /// Box of 7 grey IDs.
 /datum/supply_pack/service/greyidbox
-	name = "Grey ID Card Multipack Crate"
+	name = "Grey ID Card Multipack Cate"
 	desc = "A convenient crate containing a box of seven cheap ID cards in a handy wallet-sized form factor. \
 		Cards come in every colour you can imagne, as long as it's grey."
 	cost = CARGO_CRATE_VALUE * 3
@@ -228,7 +224,6 @@
 					/obj/item/storage/box/donkpockets/donkpockethonk,
 				)
 	crate_name = "donk pocket crate"
-	crate_type = /obj/structure/closet/crate/freezer/food
 
 /datum/supply_pack/service/randomized/donkpockets/fill(obj/structure/closet/crate/C)
 	for(var/i in 1 to 3)
@@ -245,8 +240,6 @@
 					/obj/item/food/ready_donk/donkhiladas,
 				)
 	crate_name = "\improper Ready-Donk crate"
-	crate_type = /obj/structure/closet/crate/freezer/food
-	discountable = SUPPLY_PACK_UNCOMMON_DISCOUNTABLE
 
 /datum/supply_pack/service/randomized/ready_donk/fill(obj/structure/closet/crate/C)
 	for(var/i in 1 to 3)
@@ -269,7 +262,6 @@
 		/obj/item/reagent_containers/cup/bottle/syrup_bottle/caramel, //one extra syrup as a treat
 	)
 	crate_name = "coffee equipment crate"
-	discountable = SUPPLY_PACK_UNCOMMON_DISCOUNTABLE
 
 /datum/supply_pack/service/coffeemaker
 	name = "Impressa Coffeemaker Crate"
@@ -278,7 +270,6 @@
 	contains = list(/obj/machinery/coffeemaker/impressa)
 	crate_name = "coffeemaker crate"
 	crate_type = /obj/structure/closet/crate/large
-	discountable = SUPPLY_PACK_UNCOMMON_DISCOUNTABLE
 
 /datum/supply_pack/service/aquarium_kit
 	name = "Aquarium Kit"
@@ -293,13 +284,3 @@
 				)
 	crate_name = "aquarium kit crate"
 	crate_type = /obj/structure/closet/crate/wooden
-	discountable = SUPPLY_PACK_UNCOMMON_DISCOUNTABLE
-
-/// Spare bar sign wallmount
-/datum/supply_pack/service/bar_sign
-	name = "Bar Sign Replacement Kit"
-	desc = "A replacement bar sign, perfect for drawing in customers to your bar, tavern, inn, nightclub, or even coffeehouse!"
-	cost = CARGO_CRATE_VALUE * 14
-	contains = list(/obj/item/wallframe/barsign/all_access)
-	crate_name = "bar sign crate"
-	discountable = SUPPLY_PACK_RARE_DISCOUNTABLE

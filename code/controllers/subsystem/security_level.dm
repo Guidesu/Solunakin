@@ -28,9 +28,8 @@ SUBSYSTEM_DEF(security_level)
  *
  * Arguments:
  * * new_level - The new security level that will become our current level
- * * announce - Play the announcement, set FALSE if you're doing your own custom announcement to prevent duplicates
  */
-/datum/controller/subsystem/security_level/proc/set_level(new_level, announce = TRUE)
+/datum/controller/subsystem/security_level/proc/set_level(new_level)
 	new_level = istext(new_level) ? new_level : number_level_to_text(new_level)
 	if(new_level == current_security_level.name) // If we are already at the desired level, do nothing
 		return
@@ -43,8 +42,7 @@ SUBSYSTEM_DEF(security_level)
 	if(SSnightshift.can_fire && (selected_level.number_level >= SEC_LEVEL_RED || current_security_level.number_level >= SEC_LEVEL_RED))
 		SSnightshift.next_fire = world.time + 7 SECONDS // Fire nightshift after the security level announcement is complete
 
-	if(announce)
-		level_announce(selected_level, current_security_level.number_level) // We want to announce BEFORE updating to the new level
+	level_announce(selected_level, current_security_level.number_level) // We want to announce BEFORE updating to the new level
 
 	SSsecurity_level.current_security_level = selected_level
 

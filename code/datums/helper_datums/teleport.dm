@@ -66,7 +66,6 @@
 
 	if(!forced)
 		if(!check_teleport_valid(teleatom, destination, channel))
-			teleatom.balloon_alert(teleatom, "something holds you back!")
 			return FALSE
 
 	if(isobserver(teleatom))

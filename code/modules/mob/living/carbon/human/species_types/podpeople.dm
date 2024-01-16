@@ -8,7 +8,7 @@
 		TRAIT_PLANT_SAFE,
 	)
 	external_organs = list(
-		// /obj/item/organ/external/pod_hair = "None", // NOVA EDIT REMOVAL - Customization (it messes up unit tests.)
+		// /obj/item/organ/external/pod_hair = "None", // SKYRAT EDIT REMOVAL - Customization (it messes up unit tests.)
 	)
 	inherent_biotypes = MOB_ORGANIC | MOB_HUMANOID | MOB_PLANT
 	inherent_factions = list(FACTION_PLANTS, FACTION_VINES)
@@ -105,3 +105,6 @@
 	))
 
 	return to_add
+
+/datum/species/pod/randomize_features(mob/living/carbon/human_mob)
+	randomize_external_organs(human_mob)

@@ -1,12 +1,13 @@
 /datum/computer_file/program/newscaster
 	filename = "newscasterapp"
 	filedesc = "Newscaster"
-	download_access = list(ACCESS_LIBRARY)
-	downloader_category = PROGRAM_CATEGORY_GAMES
-	program_open_overlay = "bountyboard"
+	transfer_access = list(ACCESS_LIBRARY)
+	category = PROGRAM_CATEGORY_CREW
+	program_icon_state = "bountyboard"
 	extended_desc = "This program allows any user to access the Newscaster network from anywhere."
 	size = 2
-	program_flags = PROGRAM_ON_NTNET_STORE | PROGRAM_REQUIRES_NTNET
+	requires_ntnet = TRUE
+	available_on_ntnet = TRUE
 	tgui_id = "NtosNewscaster"
 	program_icon = "newspaper"
 	///The UI we use for the newscaster

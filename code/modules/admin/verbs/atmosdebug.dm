@@ -4,7 +4,7 @@
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.", confidential = TRUE)
 		return
-	BLACKBOX_LOG_ADMIN_VERB("Check Plumbing")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Check Plumbing") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
 	//all plumbing - yes, some things might get stated twice, doesn't matter.
 	for(var/obj/machinery/atmospherics/components/pipe as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/atmospherics/components))
@@ -30,7 +30,7 @@
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.", confidential = TRUE)
 		return
-	BLACKBOX_LOG_ADMIN_VERB("Check Power")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Check Power") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 	var/list/results = list()
 
 	for (var/datum/powernet/PN in SSmachines.powernets)

@@ -6,7 +6,7 @@
 	var/t_has = p_have()
 	var/t_is = p_are()
 
-	. = list("<span class='info'>This is [icon2html(src, user)] \a <EM>[src]</EM>!", EXAMINE_SECTION_BREAK) // NOVA EDIT CHANGE - HR padding
+	. = list("<span class='info'>This is [icon2html(src, user)] \a <EM>[src]</EM>!", EXAMINE_SECTION_BREAK) // SKYRAT EDIT CHANGE - HR padding
 	var/obscured = check_obscured_slots()
 
 	if (handcuffed)
@@ -26,7 +26,7 @@
 	if (back)
 		. += "[t_He] [t_has] [back.get_examine_string(user)] on [t_his] back."
 
-	. += EXAMINE_SECTION_BREAK // NOVA EDIT ADDITION - hr sections
+	. += EXAMINE_SECTION_BREAK // SKYRAT EDIT ADDITION - hr sections
 
 	var/appears_dead = FALSE
 	if (stat == DEAD)
@@ -84,6 +84,15 @@
 				msg += "[t_He] [t_has] <b>moderate</b> burns!\n"
 			else
 				msg += "<B>[t_He] [t_has] severe burns!</B>\n"
+
+		temp = getCloneLoss()
+		if(temp)
+			if(temp < 25)
+				msg += "[t_He] [t_is] slightly deformed.\n"
+			else if (temp < 50)
+				msg += "[t_He] [t_is] <b>moderately</b> deformed!\n"
+			else
+				msg += "<b>[t_He] [t_is] severely deformed!</b>\n"
 
 	if(HAS_TRAIT(src, TRAIT_DUMB))
 		msg += "[t_He] seem[p_s()] to be clumsy and unable to think.\n"
@@ -145,6 +154,8 @@
 
 	SEND_SIGNAL(src, COMSIG_ATOM_EXAMINE, user, .)
 
+//SKYRAT EDIT REMOVAL - MOVED - MEDICAL - carbon_examine.dm
+/*
 /mob/living/carbon/examine_more(mob/user)
 	. = ..()
 	. += span_notice("<i>You examine [src] closer, and note the following...</i>")
@@ -171,3 +182,4 @@
 			. += "[scar_text]"
 
 	return .
+*/

@@ -112,7 +112,7 @@
 		multi_tool.set_buffer(src)
 		balloon_alert(user, "sensor added to buffer")
 
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /**
  * A portable version of the /obj/machinery/air_sensor
@@ -207,22 +207,23 @@
 
 /obj/item/air_sensor/wrench_act(mob/living/user, obj/item/tool)
 	if(default_unfasten_wrench(user, tool) == SUCCESSFUL_UNFASTEN)
-		return ITEM_INTERACT_SUCCESS
+		return TOOL_ACT_TOOLTYPE_SUCCESS
+	return
 
 /obj/item/air_sensor/welder_act(mob/living/user, obj/item/tool)
 	if(!tool.tool_start_check(user, amount = 1))
-		return ITEM_INTERACT_BLOCKING
+		return
 
 	loc.balloon_alert(user, "dismantling sensor")
 	if(!tool.use_tool(src, user, 2 SECONDS, volume = 30, amount = 1))
-		return ITEM_INTERACT_BLOCKING
+		return
 	loc.balloon_alert(user, "sensor dismanteled")
 
 	deconstruct(TRUE)
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/item/air_sensor/deconstruct(disassembled)
-	if(!(obj_flags & NO_DECONSTRUCTION))
+	if(!(flags_1 & NODECONSTRUCT_1))
 		new /obj/item/analyzer(loc)
 		new /obj/item/stack/sheet/iron(loc, 1)
 	return ..()

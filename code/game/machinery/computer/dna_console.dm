@@ -400,6 +400,7 @@
 	. = TRUE
 
 	add_fingerprint(usr)
+	usr.set_machine(src)
 
 	switch(action)
 		// Connect this DNA Console to a nearby DNA Scanner
@@ -710,11 +711,11 @@
 				var/datum/mutation/human/matched_mutation = null
 				//Go through all sequences for matching gene, and set the mutation
 				for (var/M in subtypesof(/datum/mutation/human))
-					// NOVA EDIT ADDITION
+					// SKYRAT EDIT ADDITION
 					var/datum/mutation/human/iterating_mutation = M
 					if(initial(iterating_mutation.disabled))
 						continue
-					// NOVA EDIT END
+					// SKYRAT EDIT END
 					var/true_sequence = GET_SEQUENCE(M)
 					if (new_sequence == true_sequence)
 						matched_mutation = M

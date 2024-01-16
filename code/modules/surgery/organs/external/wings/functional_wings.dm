@@ -26,16 +26,18 @@
 	///Are our wings open or closed?
 	var/wings_open = FALSE
 
-	// grind_results = list(/datum/reagent/flightpotion = 5)
-	food_reagents = list(/datum/reagent/flightpotion = 5)
+// SKYRAT EDIT START - No free fall softening for everyone
+/obj/item/organ/external/wings/functional/can_soften_fall()
+	return TRUE
+// SKYRAT EDIT END
 
-/obj/item/organ/external/wings/functional/Insert(mob/living/carbon/receiver, special, movement_flags)
+/obj/item/organ/external/wings/functional/Insert(mob/living/carbon/receiver, special, drop_if_replaced)
 	. = ..()
 	if(. && isnull(fly))
 		fly = new
 		fly.Grant(receiver)
 
-/obj/item/organ/external/wings/functional/Remove(mob/living/carbon/organ_owner, special, movement_flags)
+/obj/item/organ/external/wings/functional/Remove(mob/living/carbon/organ_owner, special, moving)
 	. = ..()
 
 	fly.Remove(organ_owner)
@@ -138,17 +140,17 @@
 	var/open_feature_key = "wingsopen"
 
 /datum/bodypart_overlay/mutant/wings/functional/get_global_feature_list()
-	/* NOVA EDIT - CUSTOMIZATION - ORIGINAL:
+	/* SKYRAT EDIT - CUSTOMIZATION - ORIGINAL:
 	if(wings_open)
 		return GLOB.wings_open_list
 	else
 		return GLOB.wings_list
-	*/ // ORIGINAL END - NOVA EDIT START - CUSTOMIZATION - TODO: Add support for wings_open
+	*/ // ORIGINAL END - SKYRAT EDIT START - CUSTOMIZATION - TODO: Add support for wings_open
 	if(wings_open)
 		return GLOB.sprite_accessories["wings_open"]
 
 	return GLOB.sprite_accessories["wings"]
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 
 ///Update our wingsprite to the open wings variant
 /datum/bodypart_overlay/mutant/wings/functional/proc/open_wings()
@@ -210,9 +212,3 @@
 	name = "fly wings"
 	desc = "Fly as a fly."
 	sprite_accessory_override = /datum/sprite_accessory/wings/fly
-
-///slime wings, which relate to slimes.
-/obj/item/organ/external/wings/functional/slime
-	name = "slime wings"
-	desc = "How does something so squishy even fly?"
-	sprite_accessory_override = /datum/sprite_accessory/wings/slime

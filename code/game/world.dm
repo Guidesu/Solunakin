@@ -190,7 +190,7 @@ GLOBAL_VAR(restart_counter)
 	data["tick_usage"] = world.tick_usage
 	data["tick_lag"] = world.tick_lag
 	data["time"] = world.time
-	data["timestamp"] = rustg_unix_timestamp()
+	data["timestamp"] = logger.unix_timestamp_string()
 	return data
 
 /world/proc/SetupLogs()
@@ -326,7 +326,6 @@ GLOBAL_VAR(restart_counter)
 			shutdown_logging() // See comment below.
 			auxcleanup()
 			TgsEndProcess()
-			return ..()
 
 	log_world("World rebooted at [time_stamp()]")
 
@@ -342,13 +341,13 @@ GLOBAL_VAR(restart_counter)
 	AUXTOOLS_FULL_SHUTDOWN(AUXLUA)
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
-		call_ext(debug_server, "auxtools_shutdown")()
+		LIBCALL(debug_server, "auxtools_shutdown")()
 
 /world/Del()
 	auxcleanup()
 	. = ..()
 
-/* NOVA EDIT REMOVAL - OVERRIDDEN
+/* SKYRAT EDIT REMOVAL - OVERRIDEN
 /world/proc/update_status()
 
 	var/list/features = list()
@@ -381,23 +380,12 @@ GLOBAL_VAR(restart_counter)
 	if(length(features))
 		new_status += ": [jointext(features, ", ")]"
 
-	if(!SSticker || SSticker?.current_state == GAME_STATE_STARTUP)
-		new_status += "<br><b>STARTING</b>"
-	else if(SSticker)
-		if(SSticker.current_state == GAME_STATE_PREGAME && SSticker.GetTimeLeft() > 0)
-			new_status += "<br>Starting: <b>[round((SSticker.GetTimeLeft())/10)]</b>"
-		else if(SSticker.current_state == GAME_STATE_SETTING_UP)
-			new_status += "<br>Starting: <b>Now</b>"
-		else if(SSticker.IsRoundInProgress())
-			new_status += "<br>Time: <b>[time2text(((world.time - SSticker.round_start_time)/10), "hh:mm")]</b>"
-			if(SSshuttle?.emergency && SSshuttle?.emergency?.mode != (SHUTTLE_IDLE || SHUTTLE_ENDGAME))
-				new_status += " | Shuttle: <b>[SSshuttle.emergency.getModeStr()] [SSshuttle.emergency.getTimerStr()]</b>"
-		else if(SSticker.current_state == GAME_STATE_FINISHED)
-			new_status += "<br><b>RESTARTING</b>"
+	new_status += "<br>Time: <b>[gameTimestamp("hh:mm")]</b>"
 	if(SSmapping.config)
 		new_status += "<br>Map: <b>[SSmapping.config.map_path == CUSTOM_MAP_PATH ? "Uncharted Territory" : SSmapping.config.map_name]</b>"
-	if(SSmapping.next_map_config)
-		new_status += "[SSmapping.config ? " | " : "<br>"]Next: <b>[SSmapping.next_map_config.map_path == CUSTOM_MAP_PATH ? "Uncharted Territory" : SSmapping.next_map_config.map_name]</b>"
+	var/alert_text = SSsecurity_level.get_current_level_as_text()
+	if(alert_text)
+		new_status += "<br>Alert: <b>[capitalize(alert_text)]</b>"
 
 	status = new_status
 */
@@ -481,14 +469,14 @@ GLOBAL_VAR(restart_counter)
 		else
 			CRASH("Unsupported platform: [system_type]")
 
-	var/init_result = call_ext(library, "init")("block")
+	var/init_result = LIBCALL(library, "init")("block")
 	if (init_result != "0")
 		CRASH("Error initializing byond-tracy: [init_result]")
 
 /world/proc/init_debugger()
 	var/dll = GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (dll)
-		call_ext(dll, "auxtools_init")()
+		LIBCALL(dll, "auxtools_init")()
 		enable_debugging()
 
 /world/Profile(command, type, format)

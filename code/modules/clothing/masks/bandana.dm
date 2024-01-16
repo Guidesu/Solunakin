@@ -35,12 +35,12 @@
 	if(slot_flags & ITEM_SLOT_NECK)
 		to_chat(user, span_warning("You must undo [src] in order to push it into a hat!"))
 		return
-	//NOVA EDIT START: BANDANA HATS FOR MUTANTS
+	//SKYRAT EDIT START: BANDANA HATS FOR MUTANTS
 	if(slot_flags & ITEM_SLOT_HEAD)
 		supports_variations_flags = NONE
 	if(slot_flags & ITEM_SLOT_MASK)
 		supports_variations_flags = initial(supports_variations_flags)
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 
 	adjustmask(user)
 

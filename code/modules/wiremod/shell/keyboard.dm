@@ -27,7 +27,7 @@
 	var/datum/port/output/output
 
 /obj/item/circuit_component/keyboard_shell/populate_ports()
-	entity = add_output_port("User", PORT_TYPE_USER)
+	entity = add_output_port("User", PORT_TYPE_ATOM)
 	output = add_output_port("Message", PORT_TYPE_STRING)
 	signal = add_output_port("Signal", PORT_TYPE_SIGNAL)
 
@@ -52,4 +52,5 @@
 	entity.set_output(user)
 	output.set_output(message)
 	signal.set_output(COMPONENT_SIGNAL)
+
 

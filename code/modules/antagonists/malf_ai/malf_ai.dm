@@ -33,12 +33,12 @@
 	owner.special_role = job_rank
 	if(give_objectives)
 		forge_ai_objectives()
-	// NOVA EDIT START - Moving voice changing to Malf only
+	// SKYRAT EDIT START - Moving voice changing to Malf only
 #ifdef AI_VOX
 	var/mob/living/silicon/ai/malf_ai = owner.current
 	malf_ai.vox_voices += VOX_MIL
 #endif
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 
 	employer = pick(GLOB.ai_employers)
 	if(!employer)
@@ -50,9 +50,6 @@
 	owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/malf.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 	owner.current.grant_language(/datum/language/codespeak, source = LANGUAGE_MALF)
 
-	var/datum/atom_hud/data/hackyhud = GLOB.huds[DATA_HUD_MALF_APC]
-	hackyhud.show_to(owner.current)
-
 	return ..()
 
 /datum/antagonist/malf_ai/on_removal()
@@ -60,12 +57,12 @@
 		var/mob/living/silicon/ai/malf_ai = owner.current
 		malf_ai.set_zeroth_law("")
 		malf_ai.remove_malf_abilities()
-		// NOVA EDIT START - Moving voice changing to Malf only
+		// SKYRAT EDIT START - Moving voice changing to Malf only
 #ifdef AI_VOX
 		malf_ai.vox_voices -= VOX_MIL
 		malf_ai.vox_type = VOX_NORMAL
 #endif
-		// NOVA EDIT END
+		// SKYRAT EDIT END
 		QDEL_NULL(malf_ai.malf_picker)
 
 	owner.special_role = null
@@ -96,7 +93,7 @@
 
 /// Generates a special objective and adds it to the objective list.
 /datum/antagonist/malf_ai/proc/forge_special_objective()
-	var/special_pick = rand(3,4) // NOVA EDIT - REMOVING PURGE/BLOCK
+	var/special_pick = rand(3,4) // SKYRAT EDIT - REMOVING PURGE/BLOCK
 	switch(special_pick)
 		if(1)
 			var/datum/objective/block/block_objective = new
@@ -247,7 +244,7 @@
 /datum/antagonist/malf_ai/roundend_report()
 	var/list/result = list()
 
-	//var/malf_ai_won = TRUE // NOVA EDIT REMOVAL
+	//var/malf_ai_won = TRUE // SKYRAT EDIT REMOVAL
 
 	result += printplayer(owner)
 
@@ -255,19 +252,19 @@
 	if(objectives.len) //If the traitor had no objectives, don't need to process this.
 		var/count = 1
 		for(var/datum/objective/objective in objectives)
-			// NOVA EDIT START - No greentext
+			// SKYRAT EDIT START - No greentext
 			/*
 			if(!objective.check_completion())
 				malf_ai_won = FALSE
 			objectives_text += "<br><B>Objective #[count]</B>: [objective.explanation_text] [objective.get_roundend_success_suffix()]"
 			*/
 			objectives_text += "<br><B>Objective #[count]</B>: [objective.explanation_text]"
-			// NOVA EDIT END - No greentext
+			// SKYRAT EDIT END - No greentext
 			count++
 
 	result += objectives_text
 
-	// NOVA EDIT REMOVAL START
+	// SKYRAT EDIT REMOVAL START
 	/*
 	var/special_role_text = lowertext(name)
 

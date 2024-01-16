@@ -72,7 +72,7 @@ GLOBAL_DATUM_INIT(acid_overlay, /mutable_appearance, mutable_appearance('icons/e
 		particle_effect = new(atom_parent, acid_particles, isitem(atom_parent) ? NONE : PARTICLE_ATTACH_MOB)
 	START_PROCESSING(SSacid, src)
 
-/datum/component/acid/Destroy(force)
+/datum/component/acid/Destroy(force, silent)
 	STOP_PROCESSING(SSacid, src)
 	if(sizzle)
 		QDEL_NULL(sizzle)
@@ -254,7 +254,7 @@ GLOBAL_DATUM_INIT(acid_overlay, /mutable_appearance, mutable_appearance('icons/e
 	if(!isliving(arrived))
 		return
 	var/mob/living/crosser = arrived
-	if(crosser.movement_type & MOVETYPES_NOT_TOUCHING_GROUND)
+	if(crosser.movement_type & FLYING)
 		return
 	if(crosser.move_intent == MOVE_INTENT_WALK)
 		return

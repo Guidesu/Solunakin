@@ -49,10 +49,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/misc/asteroid,
 /area/virtual_domain/safehouse)
-"s" = (
-/obj/modular_map_connector,
-/turf/closed/mineral/asteroid,
-/area/virtual_domain/safehouse)
 "u" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 8
@@ -117,7 +113,7 @@ H
 A
 A
 H
-s
+H
 "}
 (2,1,1) = {"
 A

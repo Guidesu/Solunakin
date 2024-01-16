@@ -1,19 +1,11 @@
 /datum/computer_file/program/budgetorders
 	filename = "orderapp"
 	filedesc = "NT IRN"
-<<<<<<< HEAD
 	category = PROGRAM_CATEGORY_SUPL
 	program_icon_state = "request"
 	extended_desc = "Symphionia Internal Requisition Network interface for supply purchasing using a department budget account."
 	requires_ntnet = TRUE
 	usage_flags = PROGRAM_LAPTOP | PROGRAM_TABLET
-=======
-	downloader_category = PROGRAM_CATEGORY_SUPPLY
-	program_open_overlay = "request"
-	extended_desc = "Nanotrasen Internal Requisition Network interface for supply purchasing using a department budget account."
-	program_flags = PROGRAM_ON_NTNET_STORE | PROGRAM_REQUIRES_NTNET
-	can_run_on_flags = PROGRAM_LAPTOP | PROGRAM_PDA
->>>>>>> Nova/master
 	size = 10
 	tgui_id = "NtosCargo"
 	///Are you actually placing orders with it?
@@ -311,7 +303,7 @@
 		if("toggleprivate")
 			self_paid = !self_paid
 			. = TRUE
-		//NOVA EDIT START
+		//SKYRAT EDIT START
 		if("company_import_window")
 			var/datum/component/armament/company_imports/gun_comp = computer.GetComponent(/datum/component/armament/company_imports)
 			if(!gun_comp)
@@ -320,7 +312,7 @@
 			gun_comp.parent_prog ||= src
 			gun_comp.ui_interact(usr)
 			. = TRUE
-		//NOVA EDIT END
+		//SKYRAT EDIT END
 	if(.)
 		post_signal(cargo_shuttle)
 

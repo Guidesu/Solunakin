@@ -6,6 +6,7 @@
 	use_power = ACTIVE_POWER_USE
 	active_power_usage = BASE_MACHINE_ACTIVE_CONSUMPTION * 0.02
 	layer = WALL_OBJ_LAYER
+	plane = GAME_PLANE_UPPER
 	resistance_flags = FIRE_PROOF
 	damage_deflection = 12
 	armor_type = /datum/armor/machinery_camera
@@ -115,11 +116,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/xray, 0)
 /obj/machinery/camera/proc/create_prox_monitor()
 	if(!proximity_monitor)
 		proximity_monitor = new(src, 1)
-		RegisterSignal(proximity_monitor, COMSIG_QDELETING, PROC_REF(proximity_deleted))
-
-/obj/machinery/camera/proc/proximity_deleted()
-	SIGNAL_HANDLER
-	proximity_monitor = null
 
 /obj/machinery/camera/proc/set_area_motion(area/A)
 	area_motion = A
@@ -346,7 +342,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/xray, 0)
 			return
 
 	// OTHER
-	if(istype(attacking_item, /obj/item/modular_computer))
+	if(istype(attacking_item, /obj/item/modular_computer/pda))
 		var/itemname = ""
 		var/info = ""
 
@@ -444,7 +440,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/xray, 0)
 		toggle_cam(null, 0)
 
 /obj/machinery/camera/deconstruct(disassembled = TRUE)
-	if(!(obj_flags & NO_DECONSTRUCTION))
+	if(!(flags_1 & NODECONSTRUCT_1))
 		if(disassembled)
 			var/obj/structure/camera_assembly/assembly = assembly_ref?.resolve()
 			if(!assembly)

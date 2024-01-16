@@ -19,7 +19,7 @@ GLOBAL_LIST_EMPTY(undershirt_f)  //stores only undershirt name
 	//Socks
 GLOBAL_LIST_EMPTY(socks_list) //stores /datum/sprite_accessory/socks indexed by name
 	//Lizard Bits (all datum lists indexed by name)
-//NOVA EDIT REMOVAL - CUSTOMIZATION
+//SKYRAT EDIT REMOVAL - CUSTOMIZATION
 /*
 GLOBAL_LIST_EMPTY(body_markings_list)
 GLOBAL_LIST_EMPTY(snouts_list)
@@ -30,9 +30,9 @@ GLOBAL_LIST_EMPTY(legs_list)
 GLOBAL_LIST_EMPTY(animated_spines_list)
 
 	//Mutant Human bits
-GLOBAL_LIST_EMPTY(tails_list_human)
-GLOBAL_LIST_EMPTY(tails_list_lizard)
-GLOBAL_LIST_EMPTY(tails_list_monkey)
+GLOBAL_LIST_EMPTY(tails_list)
+GLOBAL_LIST_EMPTY(tails_list_human) //Only exists for preference choices. Use "tails_list" otherwise.
+GLOBAL_LIST_EMPTY(tails_list_lizard) //See above!
 GLOBAL_LIST_EMPTY(ears_list)
 GLOBAL_LIST_EMPTY(wings_list)
 GLOBAL_LIST_EMPTY(wings_open_list)
@@ -41,9 +41,8 @@ GLOBAL_LIST_EMPTY(moth_antennae_list)
 GLOBAL_LIST_EMPTY(moth_markings_list)
 GLOBAL_LIST_EMPTY(caps_list)
 */
-//NOVA EDIT REMOVAL END
-GLOBAL_LIST_EMPTY(moth_wings_list) // NOVA EDIT ADDITION - Customization
-GLOBAL_LIST_EMPTY(tails_list_monkey) // NOVA EDIT ADDITION - Customization
+//SKYRAT EDIT REMOVAL END
+GLOBAL_LIST_EMPTY(moth_wings_list) // SKYRAT EDIT ADDITION - Customization
 GLOBAL_LIST_EMPTY(pod_hair_list)
 
 GLOBAL_LIST_INIT(color_list_ethereal, list(
@@ -301,12 +300,12 @@ GLOBAL_LIST_INIT(status_display_approved_pictures, list(
 	"lockdown",
 	"greenalert",
 	"bluealert",
-	"violetalert", // NOVA EDIT ADD - Alert Levels
-	"orangealert", // NOVA EDIT ADD - Alert Levels
-	"amberalert", // NOVA EDIT ADD - Alert Levels
+	"violetalert", // SKYRAT EDIT ADD - Alert Levels
+	"orangealert", // SKYRAT EDIT ADD - Alert Levels
+	"amberalert", // SKYRAT EDIT ADD - Alert Levels
 	"redalert",
 	"deltaalert",
-	"gammaalert", // NOVA EDIT ADD - Alert Levels
+	"gammaalert", // SKYRAT EDIT ADD - Alert Levels
 	"radiation",
 	"currentalert", //For automatic set of status display on current level
 ))

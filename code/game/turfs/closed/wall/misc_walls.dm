@@ -45,20 +45,21 @@
 /turf/closed/wall/rust
 	//SDMM supports colors, this is simply for easier mapping
 	//and should be removed on initialize
-	color = MAP_SWITCH(null, COLOR_ORANGE_BROWN)
+	color = COLOR_ORANGE_BROWN
 
 /turf/closed/wall/rust/Initialize(mapload)
 	. = ..()
+	color = null
 	AddElement(/datum/element/rust)
 
 /turf/closed/wall/r_wall/rust
 	//SDMM supports colors, this is simply for easier mapping
 	//and should be removed on initialize
-	color = MAP_SWITCH(null, COLOR_ORANGE_BROWN)
-	base_decon_state = "rusty_r_wall"
+	color = COLOR_ORANGE_BROWN
 
 /turf/closed/wall/r_wall/rust/Initialize(mapload)
 	. = ..()
+	color = null
 	AddElement(/datum/element/rust)
 
 /turf/closed/wall/mineral/bronze

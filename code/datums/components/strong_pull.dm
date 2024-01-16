@@ -10,7 +10,7 @@ Basically, the items they pull cannot be pulled (except by the puller)
 	if(!isliving(parent))
 		return COMPONENT_INCOMPATIBLE
 
-/datum/component/strong_pull/Destroy(force)
+/datum/component/strong_pull/Destroy(force, silent)
 	if(strongpulling)
 		lose_strong_grip()
 	return ..()

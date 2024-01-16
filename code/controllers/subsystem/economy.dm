@@ -13,7 +13,7 @@ SUBSYSTEM_DEF(economy)
 										ACCOUNT_MED = ACCOUNT_MED_NAME,
 										ACCOUNT_SRV = ACCOUNT_SRV_NAME,
 										ACCOUNT_CAR = ACCOUNT_CAR_NAME,
-										ACCOUNT_CMD = ACCOUNT_CMD_NAME, // NOVA EDIT
+										ACCOUNT_CMD = ACCOUNT_CMD_NAME, // SKYRAT EDIT
 										ACCOUNT_SEC = ACCOUNT_SEC_NAME)
 	var/list/departmental_accounts = list()
 	/**
@@ -53,6 +53,10 @@ SUBSYSTEM_DEF(economy)
 	 */
 	var/list/audit_log = list()
 
+	/// Total value of exported materials.
+	var/export_total = 0
+	/// Total value of imported goods.
+	var/import_total = 0
 	/// Number of mail items generated.
 	var/mail_waiting = 0
 	/// Mail Holiday: AKA does mail arrive today? Always blocked on Sundays.

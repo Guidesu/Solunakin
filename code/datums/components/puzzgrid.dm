@@ -55,7 +55,7 @@
 		addtimer(CALLBACK(src, PROC_REF(out_of_time)), timer)
 		time_to_finish = world.time + timer
 
-/datum/component/puzzgrid/Destroy(force)
+/datum/component/puzzgrid/Destroy(force, silent)
 	puzzgrid = null
 	on_victory_callback = null
 	on_fail_callback = null

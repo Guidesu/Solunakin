@@ -22,7 +22,7 @@
 	if(laugh_delay)
 		src.laugh_delay = laugh_delay
 
-/datum/component/wearertargeting/sitcomlaughter/Destroy(force)
+/datum/component/wearertargeting/sitcomlaughter/Destroy(force, silent)
 	post_comedy_callback = null
 	return ..()
 

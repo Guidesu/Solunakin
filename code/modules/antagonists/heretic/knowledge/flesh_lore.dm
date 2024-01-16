@@ -13,6 +13,7 @@
  * Imperfect Ritual
  * > Sidepaths:
  *   Void Cloak
+ *   Ashen Eyes
  *
  * Mark of Flesh
  * Ritual of Knowledge
@@ -20,13 +21,13 @@
  * Raw Ritual
  * > Sidepaths:
  *   Blood Siphon
- *   Opening Blast
+ *   Curse of Paralysis
  *
  * Bleeding Steel
  * Lonely Ritual
  * > Sidepaths:
+ *   Ashen Ritual
  *   Cleave
- *   Aptera Vulnera
  *
  * Priest's Final Hymn
  */
@@ -34,7 +35,7 @@
 	name = "Principle of Hunger"
 	desc = "Opens up the Path of Flesh to you. \
 		Allows you to transmute a knife and a pool of blood into a Bloody Blade. \
-		You can only create twenty at a time." //NOVA EDIT three to twenty
+		You can only create twenty at a time." //SKYRAT EDIT three to twenty
 	gain_text = "Hundreds of us starved, but not me... I found strength in my greed."
 	next_knowledge = list(/datum/heretic_knowledge/limited_amount/flesh_grasp)
 	required_atoms = list(
@@ -125,9 +126,11 @@
 		Voiceless Dead are mute ghouls and only have 50 health, but can use Bloody Blades effectively. \
 		You can only create two at a time."
 	gain_text = "I found notes of a dark ritual, unfinished... yet still, I pushed forward."
+	adds_sidepath_points = 1
 	next_knowledge = list(
 		/datum/heretic_knowledge/mark/flesh_mark,
 		/datum/heretic_knowledge/void_cloak,
+		/datum/heretic_knowledge/medallion,
 	)
 	required_atoms = list(
 		/mob/living/carbon/human = 1,
@@ -167,7 +170,7 @@
 
 	if(!soon_to_be_ghoul.mind || !soon_to_be_ghoul.client)
 		message_admins("[ADMIN_LOOKUPFLW(user)] is creating a voiceless dead of a body with no player.")
-		var/list/mob/dead/observer/candidates = SSpolling.poll_ghost_candidates_for_mob("Do you want to play as a [soon_to_be_ghoul.real_name], a voiceless dead?", check_jobban = ROLE_HERETIC, role = ROLE_HERETIC, poll_time = 5 SECONDS, target_mob = soon_to_be_ghoul, pic_source = soon_to_be_ghoul, role_name_text = "voiceless dead")
+		var/list/mob/dead/observer/candidates = poll_candidates_for_mob("Do you want to play as a [soon_to_be_ghoul.real_name], a voiceless dead?", ROLE_HERETIC, ROLE_HERETIC, 5 SECONDS, soon_to_be_ghoul)
 		if(!LAZYLEN(candidates))
 			loc.balloon_alert(user, "ritual failed, no ghosts!")
 			return FALSE
@@ -236,11 +239,12 @@
 		the ability to link minds to communicate with ease, but are very fragile and weak in combat."
 	gain_text = "I could not continue alone. I was able to summon The Uncanny Man to help me see more. \
 		The screams... once constant, now silenced by their wretched appearance. Nothing was out of reach."
+	adds_sidepath_points = 1
 	next_knowledge = list(
 		/datum/heretic_knowledge/blade_upgrade/flesh,
 		/datum/heretic_knowledge/reroll_targets,
 		/datum/heretic_knowledge/spell/blood_siphon,
-		/datum/heretic_knowledge/spell/opening_blast,
+		/datum/heretic_knowledge/curse/paralysis,
 	)
 	required_atoms = list(
 		/obj/item/organ/internal/eyes = 1,
@@ -277,9 +281,10 @@
 		Stalkers can jaunt, release EMPs, shapeshift into animals or automatons, and are strong in combat."
 	gain_text = "I was able to combine my greed and desires to summon an eldritch beast I had never seen before. \
 		An ever shapeshifting mass of flesh, it knew well my goals. The Marshal approved."
+	adds_sidepath_points = 1
 	next_knowledge = list(
 		/datum/heretic_knowledge/ultimate/flesh_final,
-		/datum/heretic_knowledge/spell/apetra_vulnera,
+		/datum/heretic_knowledge/summon/ashy,
 		/datum/heretic_knowledge/spell/cleave,
 	)
 	required_atoms = list(
@@ -312,12 +317,7 @@
 
 /datum/heretic_knowledge/ultimate/flesh_final/on_finished_recipe(mob/living/user, list/selected_atoms, turf/loc)
 	. = ..()
-	priority_announce(
-		text = "[generate_heretic_text()] Ever coiling vortex. Reality unfolded. ARMS OUTREACHED, THE LORD OF THE NIGHT, [user.real_name] has ascended! Fear the ever twisting hand! [generate_heretic_text()]",
-		title = "[generate_heretic_text()]",
-		sound = ANNOUNCER_SPANOMALIES,
-		color_override = "pink",
-	)
+	priority_announce("[generate_heretic_text()] Ever coiling vortex. Reality unfolded. ARMS OUTREACHED, THE LORD OF THE NIGHT, [user.real_name] has ascended! Fear the ever twisting hand! [generate_heretic_text()]", "[generate_heretic_text()]", ANNOUNCER_SPANOMALIES)
 
 	var/datum/action/cooldown/spell/shapeshift/shed_human_form/worm_spell = new(user.mind)
 	worm_spell.Grant(user)

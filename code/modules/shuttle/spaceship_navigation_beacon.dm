@@ -5,7 +5,7 @@
 	icon_state = "beacon_active"
 	base_icon_state = "beacon"
 	density = TRUE
-	obj_flags = /obj::obj_flags | NO_DECONSTRUCTION
+	flags_1 = NODECONSTRUCT_1
 
 	/// Locked beacons cannot be jumped to by ships.
 	var/locked = FALSE

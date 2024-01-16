@@ -128,11 +128,7 @@
 			new gib_type(get_turf(possible_vent))
 			playsound(possible_vent, 'sound/effects/reee.ogg', 75, TRUE)
 
-<<<<<<< HEAD
 	priority_announce("We detected a pipe blockage around [get_area(get_turf(cast_on))], please dispatch someone to investigate.", "Conglomeration of Colonists")
-=======
-	priority_announce("We detected a pipe blockage around [get_area(get_turf(cast_on))], please dispatch someone to investigate.", "[command_name()]")
->>>>>>> Nova/master
 	// Gib our caster, and make sure to leave nothing behind
 	// (If we leave something behind, it'll drop on the turf of the pipe, which is kinda wrong.)
 	cast_on.investigate_log("has been gibbed by shapeshifting while ventcrawling.", INVESTIGATE_DEATHS)

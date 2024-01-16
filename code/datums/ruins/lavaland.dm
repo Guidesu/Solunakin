@@ -46,17 +46,17 @@
 	cost = 10
 	allow_duplicates = FALSE
 
-// NOVA EDIT REMOVAL BEGIN - MAPPING
-/*
 /datum/map_template/ruin/lavaland/ash_walker
 	name = "Ash Walker Nest"
 	id = "ash-walker"
 	description = "A race of unbreathing lizards live here, that run faster than a human can, worship a broken dead city, and are capable of reproducing by something involving tentacles? \
 	Probably best to stay clear."
-	suffix = "lavaland_surface_ash_walker1.dmm"
-	cost = 20
+	prefix = "_maps/RandomRuins/LavaRuins/skyrat/" // SKYRAT ADDITION
+	suffix = "lavaland_surface_ash_walker1_skyrat.dmm" // SKYRAT EDIT - ORIGINAL: lavaland_surface_ash_walker1.dmm
+	cost = 1000 //SKYRAT EDIT: Original: 20
 	allow_duplicates = FALSE
-
+//SKYRAT EDIT REMOVAL BEGIN - MAPPING
+/*
 /datum/map_template/ruin/lavaland/syndicate_base
 	name = "Symphionia Lava Base"
 	id = "lava-base"
@@ -65,8 +65,7 @@
 	cost = 20
 	allow_duplicates = FALSE
 */
-//NOVA EDIT REMOVAL END
-
+//SKYRAT EDIT REMOVAL END
 /datum/map_template/ruin/lavaland/free_golem
 	name = "Free Golem Ship"
 	id = "golem-ship"

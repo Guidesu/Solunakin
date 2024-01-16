@@ -40,7 +40,7 @@
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = SMOOTH_GROUP_PAPERFRAME
 	canSmoothWith = SMOOTH_GROUP_PAPERFRAME
-	var/static/mutable_appearance/indestructible_paper = mutable_appearance('icons/obj/smooth_structures/structure_variations.dmi',icon_state = "paper-whole", layer = CLOSED_TURF_LAYER - 0.1)
+	var/static/mutable_appearance/indestructible_paper = mutable_appearance('icons/obj/smooth_structures/paperframes.dmi',icon_state = "paper", layer = CLOSED_TURF_LAYER - 0.1)
 
 /turf/closed/indestructible/weeb/Initialize(mapload)
 	. = ..()
@@ -67,12 +67,12 @@
 	desc = null
 	icon = 'icons/blanks/blank_title.png'
 	icon_state = ""
-	pixel_x = 0 // NOVA EDIT - Re-centering the title screen - ORIGINAL: pixel_x = -64
+	pixel_x = 0 // SKYRAT EDIT - Re-centering the title screen - ORIGINAL: pixel_x = -64
 	plane = SPLASHSCREEN_PLANE
 	bullet_bounce_sound = null
 
 INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
-/* NOVA EDIT REMOVAL
+/* SKYRAT EDIT REMOVAL
 /turf/closed/indestructible/splashscreen/Initialize(mapload)
 	. = ..()
 	SStitle.splash_turf = src
@@ -88,10 +88,10 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 		pixel_x = 0
 	else if(width == 608) // 608x480 is widescreen
 		pixel_x = -64
-	// NOVA EDIT START - Wider widescreen
+	// SKYRAT EDIT START - Wider widescreen
 	else if(width == 672) // Skyrat's widescreen is slightly wider than /tg/'s, so we need to accomodate that too.
 		pixel_x = -96
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 
 /turf/closed/indestructible/splashscreen/vv_edit_var(var_name, var_value)
 	. = ..()
@@ -104,7 +104,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 /turf/closed/indestructible/splashscreen/examine()
 	desc = pick(strings(SPLASH_FILE, "splashes"))
 	return ..()
-NOVA EDIT REMOVAL END */
+SKYRAT EDIT REMOVAL END */
 
 /turf/closed/indestructible/start_area
 	name = null
@@ -198,8 +198,8 @@ NOVA EDIT REMOVAL END */
 
 /turf/closed/indestructible/fakeglass
 	name = "window"
-	icon = MAP_SWITCH('icons/obj/smooth_structures/reinforced_window.dmi', 'icons/obj/smooth_structures/structure_variations.dmi')
-	icon_state = MAP_SWITCH("reinforced_window-0", "fake_window")
+	icon = 'icons/obj/smooth_structures/reinforced_window.dmi'
+	icon_state = "fake_window"
 	base_icon_state = "reinforced_window"
 	opacity = FALSE
 	smoothing_flags = SMOOTH_BITMASK
@@ -368,9 +368,9 @@ NOVA EDIT REMOVAL END */
 /turf/closed/indestructible/meat
 	name = "dense meat wall"
 	desc = "A huge chunk of dense, packed meat. Effectively impervious to conventional methods of destruction."
-	icon = 'icons/turf/walls/meat_wall.dmi'
-	icon_state = "meat_wall-0"
-	base_icon_state = "meat_wall"
+	icon = 'icons/turf/walls/meat.dmi'
+	icon_state = "meatwall-0"
+	base_icon_state = "meatwall"
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = SMOOTH_GROUP_WALLS
 	canSmoothWith = SMOOTH_GROUP_WALLS

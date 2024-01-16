@@ -1,12 +1,12 @@
 /obj/item/extinguisher
 	name = "fire extinguisher"
 	desc = "A traditional red fire extinguisher."
-	icon = 'icons/obj/tools.dmi' // NOVA EDIT CHANGE - ICON OVERRIDEN IN SKYRAT AESTHETICS - SEE MODULE
+	icon = 'icons/obj/tools.dmi' // SKYRAT EDIT CHANGE - ICON OVERRIDEN IN SKYRAT AESTHETICS - SEE MODULE
 	icon_state = "fire_extinguisher0"
 	worn_icon_state = "fire_extinguisher"
 	inhand_icon_state = "fire_extinguisher"
 	hitsound = 'sound/weapons/smash.ogg'
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	throwforce = 10
 	w_class = WEIGHT_CLASS_NORMAL
 	throw_speed = 2
@@ -62,7 +62,7 @@
 	worn_icon_state = "miniFE"
 	inhand_icon_state = "miniFE"
 	hitsound = null //it is much lighter, after all.
-	obj_flags = NONE //doesn't conduct electricity
+	flags_1 = null //doesn't CONDUCT_1
 	throwforce = 2
 	w_class = WEIGHT_CLASS_SMALL
 	force = 3
@@ -81,7 +81,7 @@
 	worn_icon_state = "miniFE"
 	inhand_icon_state = "miniFE"
 	hitsound = null	//it is much lighter, after all.
-	obj_flags = NONE //doesn't conduct electricity
+	flags_1 = null //doesn't CONDUCT_1
 	throwforce = 1
 	w_class = WEIGHT_CLASS_SMALL
 	force = 3

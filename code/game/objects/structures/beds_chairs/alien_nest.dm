@@ -12,8 +12,7 @@
 	smoothing_groups = SMOOTH_GROUP_ALIEN_NEST
 	canSmoothWith = SMOOTH_GROUP_ALIEN_NEST
 	build_stack_type = null
-	obj_flags = /obj::obj_flags | NO_DECONSTRUCTION
-	elevation = 0
+	flags_1 = NODECONSTRUCT_1
 	var/static/mutable_appearance/nest_overlay = mutable_appearance('icons/mob/nonhuman-player/alien.dmi', "nestoverlay", LYING_MOB_LAYER)
 
 /obj/structure/bed/nest/user_unbuckle_mob(mob/living/buckled_mob, mob/living/user)

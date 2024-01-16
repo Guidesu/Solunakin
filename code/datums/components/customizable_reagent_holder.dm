@@ -55,7 +55,7 @@
 			handle_fill(ingredient)
 
 
-/datum/component/customizable_reagent_holder/Destroy(force)
+/datum/component/customizable_reagent_holder/Destroy(force, silent)
 	QDEL_NULL(top_overlay)
 	return ..()
 

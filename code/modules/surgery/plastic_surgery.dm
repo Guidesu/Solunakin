@@ -16,9 +16,7 @@
 	)
 
 /datum/surgery/plastic_surgery/advanced
-	name = "Advanced plastic surgery"
-	desc =  "Surgery allows one-self to completely remake someone's face with that of another. Provided they have a picture of them in their offhand when reshaping the face."
-	requires_tech = TRUE
+	name = "advanced plastic surgery"
 	steps = list(
 		/datum/surgery_step/incise,
 		/datum/surgery_step/retract_skin,

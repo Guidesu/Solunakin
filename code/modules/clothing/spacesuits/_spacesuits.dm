@@ -48,7 +48,7 @@
 		)
 	slowdown = 1
 	armor_type = /datum/armor/suit_space
-	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDESEXTOY|HIDETAIL //NOVA EDIT CHANGE - ADDED HIDETAIL. ADDED HIDESEXTOY TO PREVENT VISUAL BUGS.
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDESEXTOY|HIDETAIL //SKYRAT EDIT CHANGE - ADDED HIDETAIL. ADDED HIDESEXTOY TO PREVENT VISUAL BUGS.
 	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT_OFF
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -160,7 +160,7 @@
 
 /obj/item/clothing/suit/space/crowbar_act(mob/living/user, obj/item/tool)
 	toggle_spacesuit_cell(user)
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/item/clothing/suit/space/screwdriver_act(mob/living/user, obj/item/tool)
 	var/range_low = 20 // Default min temp c
@@ -174,7 +174,7 @@
 	if(deg_c && deg_c >= range_low && deg_c <= range_high)
 		temperature_setting = round(T0C + deg_c, 0.1)
 		to_chat(user, span_notice("You see the readout change to [deg_c] c."))
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 // object handling for accessing features of the suit
 /obj/item/clothing/suit/space/attackby(obj/item/I, mob/user, params)
@@ -226,7 +226,7 @@
  * Toggle the space suit's thermal regulator status...
  * Can't do it if it has no charge.
  * Arguments:
- * * toggler - User mob who receives the to_chat messages.
+ * * toggler - User mob who recieves the to_chat messages.
  * * manual_toggle - If false get a differently-flavored message about it being disabled by itself
  */
 /obj/item/clothing/suit/space/proc/toggle_spacesuit(mob/toggler, manual_toggle = TRUE)

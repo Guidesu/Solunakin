@@ -79,7 +79,7 @@
 	var/obj/machinery/power/emitter/energycannon/magical/our_statue
 	var/list/mob/living/sleepers = list()
 	var/never_spoken = TRUE
-	obj_flags = /obj::obj_flags | NO_DECONSTRUCTION
+	flags_1 = NODECONSTRUCT_1
 
 /obj/structure/table/abductor/wabbajack/Initialize(mapload)
 	. = ..()
@@ -90,14 +90,17 @@
 	. = ..()
 
 /obj/structure/table/abductor/wabbajack/process()
-	if(isnull(our_statue))
-		our_statue = locate() in orange(4, src)
+	var/area = orange(4, src)
+	if(!our_statue)
+		for(var/obj/machinery/power/emitter/energycannon/magical/M in area)
+			our_statue = M
+			break
 
-	if(isnull(our_statue))
+	if(!our_statue)
 		name = "inert [initial(name)]"
 		return
-
-	name = initial(name)
+	else
+		name = initial(name)
 
 	var/turf/T = get_turf(src)
 	var/list/found = list()
@@ -198,7 +201,7 @@
 
 /obj/structure/table/wood/shuttle_bar
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-	obj_flags = /obj::obj_flags | NO_DECONSTRUCTION
+	flags_1 = NODECONSTRUCT_1
 	max_integrity = 1000
 	var/boot_dir = 1
 

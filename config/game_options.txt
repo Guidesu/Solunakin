@@ -251,7 +251,7 @@ SPECIFIED_LAWS asimovpp
 ## See datums\ai_laws.dm for the full law lists
 
 ## standard-ish laws. These are fairly ok to run
-#NOVA EDIT ADDITION BEGIN
+#SKYRAT EDIT ADDITION BEGIN
 RANDOM_LAWS armadyne_safeguard
 RANDOM_LAWS asimov
 RANDOM_LAWS asimovpp
@@ -288,16 +288,11 @@ RANDOM_LAWS dagothbot
 LAW_WEIGHT custom,0
 
 ## standard-ish laws. These are fairly ok to run
-<<<<<<< HEAD
 ## Unique AI outpost trait uses weights so we don't want asimov
 #SKYRAT EDIT ADDITION BEGIN
-=======
-## Unique AI station trait uses weights so we don't want asimov
-#NOVA EDIT ADDITION BEGIN
->>>>>>> Nova/master
 LAW_WEIGHT armadyne_safeguard,40
 LAW_WEIGHT dagothbot,8
-#NOVA EDIT ADDITION END
+#SKYRAT EDIT ADDITION END
 LAW_WEIGHT asimov,0
 LAW_WEIGHT asimovpp,5
 LAW_WEIGHT paladin,5
@@ -407,7 +402,7 @@ ROUNDSTART_RACES ethereal
 #ROUNDSTART_RACES military_synth
 #ROUNDSTART_RACES agent
 
-## NOVA SECTOR RACES DOWN THERE
+## SKYRAT RACES DOWN THERE
 ROUNDSTART_RACES mammal
 ROUNDSTART_RACES vulpkanin
 ROUNDSTART_RACES tajaran

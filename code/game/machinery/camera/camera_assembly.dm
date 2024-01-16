@@ -269,7 +269,7 @@
 
 
 /obj/structure/camera_assembly/deconstruct(disassembled = TRUE)
-	if(!(obj_flags & NO_DECONSTRUCTION))
+	if(!(flags_1 & NODECONSTRUCT_1))
 		new /obj/item/stack/sheet/iron(loc)
 	qdel(src)
 

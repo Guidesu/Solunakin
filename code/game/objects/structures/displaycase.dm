@@ -82,7 +82,7 @@
 			playsound(src, 'sound/items/welder.ogg', 100, TRUE)
 
 /obj/structure/displaycase/deconstruct(disassembled = TRUE)
-	if(!(obj_flags & NO_DECONSTRUCTION))
+	if(!(flags_1 & NODECONSTRUCT_1))
 		dump()
 		if(!disassembled)
 			new /obj/item/shard(drop_location())
@@ -91,7 +91,7 @@
 
 /obj/structure/displaycase/atom_break(damage_flag)
 	. = ..()
-	if(!broken && !(obj_flags & NO_DECONSTRUCTION))
+	if(!broken && !(flags_1 & NODECONSTRUCT_1))
 		set_density(FALSE)
 		broken = TRUE
 		new /obj/item/shard(drop_location())
@@ -103,8 +103,8 @@
 /obj/structure/displaycase/proc/trigger_alarm()
 	if(!alert)
 		return
-	//var/area/alarmed = get_area(src) NOVA EDIT REMOVAL
-	//alarmed.burglaralert(src) NOVA EDIT REMOVAL
+	//var/area/alarmed = get_area(src) SKYRAT EDIT REMOVAL
+	//alarmed.burglaralert(src) SKYRAT EDIT REMOVAL
 
 	alarm_manager.send_alarm(ALARM_BURGLAR)
 	addtimer(CALLBACK(alarm_manager, TYPE_PROC_REF(/datum/alarm_handler, clear_alarm), ALARM_BURGLAR), 1 MINUTES)
@@ -272,7 +272,7 @@
 			electronics.forceMove(drop_location())
 			electronics = null
 		qdel(src)
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/structure/displaycase_chassis/attackby(obj/item/attacking_item, mob/user, params)
 	if(istype(attacking_item, /obj/item/electronics/airlock))
@@ -317,7 +317,7 @@
 //The lab cage and captain's display case do not spawn with electronics, which is why req_access is needed.
 /obj/structure/displaycase/captain
 	start_showpiece_type = /obj/item/gun/energy/laser/captain
-	req_access = list(ACCESS_CAPTAIN)	//NOVA EDIT CHANGE - ORIGINAL: req_access = list(ACCESS_CENT_SPECOPS) //this was intentional, presumably to make it slightly harder for caps to grab their gun roundstart
+	req_access = list(ACCESS_CAPTAIN)	//SKYRAT EDIT CHANGE - ORIGINAL: req_access = list(ACCESS_CENT_SPECOPS) //this was intentional, presumably to make it slightly harder for caps to grab their gun roundstart
 
 /obj/structure/displaycase/labcage
 	name = "lab cage"
@@ -673,7 +673,7 @@
 
 /obj/structure/displaycase/forsale/atom_break(damage_flag)
 	. = ..()
-	if(!broken && !(obj_flags & NO_DECONSTRUCTION))
+	if(!broken && !(flags_1 & NODECONSTRUCT_1))
 		broken = TRUE
 		playsound(src, SFX_SHATTER, 70, TRUE)
 		update_appearance()

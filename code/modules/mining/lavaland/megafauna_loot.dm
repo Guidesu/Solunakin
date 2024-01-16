@@ -268,7 +268,7 @@
 	greyscale_colors = "#4d4d4d#808080"
 	greyscale_config = /datum/greyscale_config/heck_suit
 	greyscale_config_worn = /datum/greyscale_config/heck_suit/worn
-	greyscale_config_worn_digi = /datum/greyscale_config/heck_suit/worn/digi //NOVA EDIT ADDITION - DigiGreyscale
+	greyscale_config_worn_digi = /datum/greyscale_config/heck_suit/worn/digi //SKYRAT EDIT ADDITION - DigiGreyscale
 	flags_1 = IS_PLAYER_COLORABLE_1
 
 /datum/armor/hooded_hostile_environment
@@ -286,6 +286,7 @@
 	AddElement(/datum/element/gags_recolorable)
 
 /obj/item/clothing/suit/hooded/hostile_environment/process(seconds_per_tick)
+	. = ..()
 	var/mob/living/carbon/wearer = loc
 	if(istype(wearer) && SPT_PROB(1, seconds_per_tick)) //cursed by bubblegum
 		if(prob(7.5))
@@ -313,7 +314,7 @@
 	greyscale_colors = "#4d4d4d#808080#ff3300"
 	greyscale_config = /datum/greyscale_config/heck_helmet
 	greyscale_config_worn = /datum/greyscale_config/heck_helmet/worn
-	greyscale_config_worn_digi = /datum/greyscale_config/heck_helmet/worn/snouted //NOVA EDIT ADDITION - MuzzledGreyscale (Why does this use worn_digi)
+	greyscale_config_worn_digi = /datum/greyscale_config/heck_helmet/worn/snouted //SKYRAT EDIT ADDITION - MuzzledGreyscale (Why does this use worn_digi)
 	flags_1 = IS_PLAYER_COLORABLE_1
 
 /obj/item/clothing/head/hooded/hostile_environment/Initialize(mapload)
@@ -636,7 +637,7 @@
 	inhand_icon_state = "spectral"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	sharpness = SHARP_EDGED
 	w_class = WEIGHT_CLASS_BULKY
 	force = 1
@@ -673,14 +674,17 @@
 		return
 	to_chat(user, span_notice("You call out for aid, attempting to summon spirits to your side."))
 
-	notify_ghosts(
-		"[user] is raising [user.p_their()] [name], calling for your help!",
-		source = user,
-		ignore_key = POLL_IGNORE_SPECTRAL_BLADE,
-		header = "Spectral blade",
-	)
+	notify_ghosts("[user] is raising [user.p_their()] [name], calling for your help!",
+		enter_link="<a href=?src=[REF(src)];orbit=1>(Click to help)</a>",
+		source = user, ignore_key = POLL_IGNORE_SPECTRAL_BLADE, header = "Spectral blade")
 
 	summon_cooldown = world.time + 600
+
+/obj/item/melee/ghost_sword/Topic(href, href_list)
+	if(href_list["orbit"])
+		var/mob/dead/observer/ghost = usr
+		if(istype(ghost))
+			ghost.ManualFollow(src)
 
 /obj/item/melee/ghost_sword/process()
 	ghost_check()
@@ -729,7 +733,7 @@
 		return
 
 	var/mob/living/carbon/human/consumer = user
-	var/random = rand(2,4) //NOVA EDIT - Commenting out #1 because it makes people invisible.
+	var/random = rand(2,4) //SKYRAT EDIT - Commenting out #1 because it makes people invisible.
 
 	switch(random)
 		if(1)

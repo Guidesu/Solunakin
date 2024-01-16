@@ -16,6 +16,7 @@
 	icon = 'icons/mob/spacevines.dmi'
 	icon_state = "bud0"
 	layer = SPACEVINE_MOB_LAYER
+	plane = GAME_PLANE_UPPER_FOV_HIDDEN
 	opacity = FALSE
 	canSmoothWith = null
 	smoothing_flags = NONE
@@ -134,6 +135,7 @@
 	health_doll_icon = "venus_human_trap"
 	mob_biotypes = MOB_ORGANIC | MOB_PLANT
 	layer = SPACEVINE_MOB_LAYER
+	plane = GAME_PLANE_UPPER_FOV_HIDDEN
 	health = 100
 	maxHealth = 100
 	obj_damage = 60
@@ -163,7 +165,7 @@
 	melee_attack_cooldown = 1.2 SECONDS
 	ai_controller = /datum/ai_controller/basic_controller/human_trap
 	///how much damage we take out of weeds
-	var/no_weed_damage = 12.5
+	var/no_weed_damage = 20
 	///how much do we heal in weeds
 	var/weed_heal = 10
 	///if the balloon alert was shown atleast once, reset after healing in weeds
@@ -172,15 +174,14 @@
 /mob/living/basic/venus_human_trap/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/lifesteal, 5)
-	var/static/list/innate_actions = list(
-		/datum/action/cooldown/vine_tangle = BB_TARGETED_ACTION,
-	)
-	grant_actions_by_list(innate_actions)
+	var/datum/action/cooldown/vine_tangle/tangle = new(src)
+	tangle.Grant(src)
+	ai_controller.set_blackboard_key(BB_TARGETTED_ACTION, tangle)
 
 /mob/living/basic/venus_human_trap/RangedAttack(atom/victim)
 	if(!combat_mode)
 		return
-	var/datum/action/cooldown/mob_cooldown/tangle_ability = ai_controller.blackboard[BB_TARGETED_ACTION]
+	var/datum/action/cooldown/mob_cooldown/tangle_ability = ai_controller.blackboard[BB_TARGETTED_ACTION]
 	if(!istype(tangle_ability))
 		return
 	tangle_ability.Trigger(target = victim)
@@ -197,7 +198,7 @@
 	else if(vines_in_range)
 		alert_shown = FALSE
 
-	adjustBruteLoss(vines_in_range ? -weed_heal : no_weed_damage) //every life tick take 20 damage if not near vines or heal 10 if near vines, 5 times out of weeds = u ded
+	apply_damage(vines_in_range ? -weed_heal : no_weed_damage, BRUTE) //every life tick take 20 brute if not near vines or heal 10 if near vines, 5 times out of weeds = u ded
 
 /datum/action/cooldown/vine_tangle
 	name = "Tangle"
@@ -253,7 +254,7 @@
 
 /datum/ai_controller/basic_controller/human_trap
 	blackboard = list(
-		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic,
+		BB_TARGETTING_DATUM = new /datum/targetting_datum/basic,
 	)
 
 	ai_movement = /datum/ai_movement/basic_avoidance

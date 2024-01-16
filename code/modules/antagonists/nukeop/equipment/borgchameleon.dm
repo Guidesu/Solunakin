@@ -1,8 +1,8 @@
 /obj/item/borg_chameleon
 	name = "cyborg chameleon projector"
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
+	icon = 'icons/obj/device.dmi'
 	icon_state = "shield0"
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	item_flags = NOBLUDGEON
 	inhand_icon_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'

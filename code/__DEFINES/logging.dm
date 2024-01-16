@@ -88,9 +88,8 @@
 #define LOG_ENTRY_KEY_ID "id"
 #define LOG_ENTRY_KEY_SCHEMA_VERSION "s-ver"
 
-// Internal categories
-#define LOG_CATEGORY_INTERNAL_CATEGORY_NOT_FOUND "internal-category-not-found"
-#define LOG_CATEGORY_INTERNAL_ERROR "internal-error"
+// Category for invalid/missing categories
+#define LOG_CATEGORY_NOT_FOUND "invalid-category"
 
 // Misc categories
 #define LOG_CATEGORY_ATTACK "attack"

@@ -27,10 +27,6 @@
 /obj/item/newspaper,
 /turf/open/indestructible/hotelwood,
 /area/virtual_domain/safehouse)
-"w" = (
-/obj/modular_map_connector,
-/turf/closed/wall/mineral/wood,
-/area/virtual_domain/safehouse)
 "x" = (
 /obj/structure/railing/corner/end{
 	dir = 4
@@ -72,7 +68,7 @@ G
 i
 G
 G
-w
+G
 "}
 (2,1,1) = {"
 i

@@ -14,7 +14,7 @@
 	icon_state = "secdrobe"
 	product_ads = "Beat perps in style!;It's red so you can't see the blood!;You have the right to be fashionable!;Now you can be the fashion police you always wanted to be!"
 	vend_reply = "Thank you for using the SecDrobe!"
-	/* NOVA EDIT - LISTS OVERRIDDEN IN 'modular_nova\modules\sec_haul\code\misc\vending.dm'
+	/* SKYRAT EDIT - LISTS OVERRIDDEN IN 'modular_skyrat\modules\sec_haul\code\misc\vending.dm'
 	products = list(
 		/obj/item/clothing/head/beret/sec = 3,
 		/obj/item/clothing/head/soft/sec = 3,
@@ -24,7 +24,6 @@
 		/obj/item/clothing/under/rank/security/officer/grey = 3,
 		/obj/item/clothing/under/pants/slacks = 3,
 		/obj/item/clothing/under/rank/security/officer/blueshirt = 3,
-		/obj/item/clothing/suit/armor/vest/secjacket = 3,
 		/obj/item/clothing/suit/hooded/wintercoat/security = 3,
 		/obj/item/clothing/suit/armor/vest = 3,
 		/obj/item/clothing/gloves/color/black = 3,
@@ -173,9 +172,6 @@
 		/obj/item/storage/backpack/messenger = 3,
 		/obj/item/storage/bag/mail = 3,
 		/obj/item/radio/headset/headset_cargo = 3,
-		/obj/item/clothing/accessory/pocketprotector = 3,
-		/obj/item/clothing/head/utility/hardhat/orange = 3,
-		/obj/item/clothing/suit/hazardvest = 3,
 	)
 	premium = list(
 		/obj/item/clothing/head/costume/mailman = 1,
@@ -642,7 +638,6 @@
 		/obj/item/clothing/under/rank/security/detective = 2,
 		/obj/item/clothing/under/rank/security/detective/skirt = 2,
 		/obj/item/clothing/suit/jacket/det_suit = 2,
-		/obj/item/clothing/suit/jacket/det_suit/brown = 2,
 		/obj/item/clothing/shoes/sneakers/brown = 2,
 		/obj/item/clothing/gloves/latex = 2,
 		/obj/item/clothing/gloves/color/black = 2,

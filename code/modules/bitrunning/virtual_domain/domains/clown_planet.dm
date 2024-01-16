@@ -10,3 +10,4 @@
 	key = "clown_planet"
 	map_name = "clown_planet"
 	reward_points = BITRUNNER_REWARD_LOW
+	safehouse_path = /datum/map_template/safehouse/mine

@@ -45,8 +45,6 @@
 #define PORT_TYPE_ATOM "entity"
 /// Datum datatype
 #define PORT_TYPE_DATUM "datum"
-/// User datatype
-#define PORT_TYPE_USER "user"
 
 
 /// The maximum range between a port and an atom

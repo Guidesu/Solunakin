@@ -61,11 +61,11 @@
 
 	var/atom/target = holding || get_turf(src)
 	scrub(target.return_air())
-	//NOVA EDIT ADDITION
+	//SKYRAT EDIT ADDITION
 	for(var/turf/open/open_turf in view(3, src))
 		if(open_turf.pollution)
 			open_turf.pollution.scrub_amount(POLLUTION_HEIGHT_DIVISOR)
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 	return ..()
 
 /**
@@ -224,5 +224,5 @@
 	if(default_unfasten_wrench(user, tool))
 		if(!movable)
 			on = FALSE
-		return ITEM_INTERACT_SUCCESS
+		return TOOL_ACT_TOOLTYPE_SUCCESS
 	return FALSE

@@ -52,10 +52,9 @@
 	human.put_in_hands(head)
 
 	// We want to give the head some boring old eyes just so it doesn't look too jank on the head sprite.
-	var/obj/item/organ/internal/eyes/eyes = new /obj/item/organ/internal/eyes(head)
-	eyes.eye_color_left = human.eye_color_left
-	eyes.eye_color_right = human.eye_color_right
-	eyes.bodypart_insert(my_head)
+	head.eyes = new /obj/item/organ/internal/eyes(head)
+	head.eyes.eye_color_left = human.eye_color_left
+	head.eyes.eye_color_right = human.eye_color_right
 	human.update_body()
 	head.update_icon_dropped()
 	human.set_safe_hunger_level()
@@ -249,8 +248,7 @@
 		return // It's so over
 	detached_head.real_name = wearer.real_name
 	detached_head.name = wearer.real_name
-	var/obj/item/organ/internal/brain/brain = locate(/obj/item/organ/internal/brain) in detached_head
-	brain.name = "[wearer.name]'s brain"
+	detached_head.brain.name = "[wearer.name]'s brain"
 
 /obj/item/dullahan_relay/proc/examinate_check(mob/user, atom/source)
 	SIGNAL_HANDLER

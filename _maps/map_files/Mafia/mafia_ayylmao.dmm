@@ -9,10 +9,6 @@
 /obj/effect/landmark/mafia,
 /turf/open/floor/plating/abductor,
 /area/centcom/mafia)
-"f" = (
-/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
-/turf/closed/indestructible/alien,
-/area/centcom/mafia)
 "g" = (
 /obj/mafia_game_board,
 /obj/effect/mapping_helpers/broken_floor,
@@ -52,6 +48,15 @@
 /obj/item/abductor/gizmo,
 /turf/open/floor/plating/abductor2,
 /area/centcom/mafia)
+"p" = (
+/obj/machinery/door/poddoor/preopen{
+	desc = "When it's time to sleep, the lights will go out. Remember - no one in space can hear you scream.";
+	id = "mafia";
+	max_integrity = 99999;
+	name = "Station Night Shutters"
+	},
+/turf/closed/indestructible/fakeglass,
+/area/centcom/mafia)
 "q" = (
 /turf/open/floor/plating/abductor,
 /area/centcom/mafia)
@@ -78,8 +83,8 @@
 	max_integrity = 99999;
 	name = "Station Night Shutters"
 	},
-/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
-/turf/open/space/basic,
+/obj/structure/window/reinforced/plasma/plastitanium,
+/turf/open/floor/plating/abductor2,
 /area/centcom/mafia)
 "z" = (
 /obj/structure/grille/indestructible,
@@ -345,7 +350,7 @@ i
 N
 o
 r
-x
+p
 m
 q
 x
@@ -573,7 +578,7 @@ q
 b
 b
 r
-f
+b
 q
 b
 b

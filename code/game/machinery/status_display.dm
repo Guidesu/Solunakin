@@ -14,7 +14,7 @@
 /obj/machinery/status_display
 	name = "status display"
 	desc = null
-	icon = 'icons/obj/machines/status_display.dmi' //// NOVA EDIT CHANGE - ICON OVERRIDEN IN SKYRAT AESTHETICS - SEE MODULE
+	icon = 'icons/obj/machines/status_display.dmi' //// SKYRAT EDIT CHANGE - ICON OVERRIDEN IN SKYRAT AESTHETICS - SEE MODULE
 	icon_state = "frame"
 	verb_say = "beeps"
 	verb_ask = "beeps"
@@ -73,7 +73,7 @@
 	return TRUE
 
 /obj/machinery/status_display/deconstruct(disassembled = TRUE)
-	if(obj_flags & NO_DECONSTRUCTION)
+	if(flags_1 & NODECONSTRUCT_1)
 		return
 	if(!disassembled)
 		new /obj/item/stack/sheet/iron(drop_location(), 2)
@@ -190,7 +190,7 @@
 			if(message1 == "" && message2 == "")
 				return
 
-	. += emissive_appearance('modular_nova/modules/aesthetics/status_display/icons/status_display.dmi', "outline", src, alpha = src.alpha) // NOVA EDIT CHANGE - AESTHETICS
+	. += emissive_appearance('modular_skyrat/modules/aesthetics/status_display/icons/status_display.dmi', "outline", src, alpha = src.alpha) // SKYRAT EDIT CHANGE - AESTHETICS
 
 // Timed process - performs nothing in the base class
 /obj/machinery/status_display/process()
@@ -499,10 +499,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/status_display/ai, 32)
 		"Red Alert" = "redalert",
 		"Blue Alert" = "bluealert",
 		"Green Alert" = "greenalert",
-		"Violet Alert" = "violetalert", // NOVA EDIT ADD - Alert Levels
-		"Orange Alert" = "orangealert", // NOVA EDIT ADD - Alert Levels
-		"Amber Alert" = "amberalert", // NOVA EDIT ADD - Alert Levels
-		"Gamma Alert" = "gammaalert", // NOVA EDIT ADD - Alert Levels
+		"Violet Alert" = "violetalert", // SKYRAT EDIT ADD - Alert Levels
+		"Orange Alert" = "orangealert", // SKYRAT EDIT ADD - Alert Levels
+		"Amber Alert" = "amberalert", // SKYRAT EDIT ADD - Alert Levels
+		"Gamma Alert" = "gammaalert", // SKYRAT EDIT ADD - Alert Levels
 		"Biohazard" = "biohazard",
 		"Lockdown" = "lockdown",
 		"Radiation" = "radiation",

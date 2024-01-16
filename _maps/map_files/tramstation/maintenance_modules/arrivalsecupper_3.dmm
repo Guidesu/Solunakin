@@ -56,16 +56,6 @@
 /obj/item/stack/ore/glass,
 /turf/open/misc/asteroid/dug,
 /area/station/asteroid)
-"x" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	name = "Security Maintenance Hatch"
-	},
-/obj/effect/mapping_helpers/airlock/access/any/security/maintenance,
-/turf/open/floor/plating,
-/area/station/maintenance/department/eva)
-"y" = (
-/turf/closed/wall/r_wall,
-/area/station/maintenance/department/eva)
 "E" = (
 /turf/open/misc/asteroid,
 /area/station/asteroid)
@@ -286,7 +276,7 @@ N
 N
 "}
 (11,1,1) = {"
-y
+t
 t
 L
 t
@@ -301,7 +291,7 @@ a
 a
 "}
 (12,1,1) = {"
-y
+t
 r
 k
 t
@@ -316,7 +306,7 @@ a
 a
 "}
 (13,1,1) = {"
-y
+t
 d
 d
 t
@@ -331,7 +321,7 @@ a
 a
 "}
 (14,1,1) = {"
-x
+t
 e
 e
 K
@@ -346,7 +336,7 @@ a
 a
 "}
 (15,1,1) = {"
-y
+t
 Y
 e
 t

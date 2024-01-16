@@ -2,10 +2,12 @@
 	filename = "themeify"
 	filedesc = "Themeify"
 	extended_desc = "This program allows configuration of your device's theme."
-	program_open_overlay = "generic"
+	program_icon_state = "generic"
 	undeletable = TRUE
 	size = 0
-	program_flags = PROGRAM_ON_NTNET_STORE | PROGRAM_HEADER
+	header_program = TRUE
+	available_on_ntnet = TRUE
+	requires_ntnet = FALSE
 	tgui_id = "NtosThemeConfigure"
 	program_icon = "paint-roller"
 

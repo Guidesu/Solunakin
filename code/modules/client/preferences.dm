@@ -9,7 +9,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	/// Ensures that we always load the last used save, QOL
 	var/default_slot = 1
 	/// The maximum number of slots we're allowed to contain
-	var/max_save_slots = 30 //NOVA EDIT - ORIGINAL 3
+	var/max_save_slots = 30 //SKYRAT EDIT - ORIGINAL 3
 
 	/// Bitflags for communications that are muted
 	var/muted = NONE
@@ -88,14 +88,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	/// If set to TRUE, will update character_profiles on the next ui_data tick.
 	var/tainted_character_profiles = FALSE
 
-/datum/preferences/Destroy(force)
+/datum/preferences/Destroy(force, ...)
 	QDEL_NULL(character_preview_view)
 	QDEL_LIST(middleware)
 	value_cache = null
-	//NOVA EDIT ADDITION
+	//SKYRAT EDIT ADDITION
 	if(pref_species)
 		QDEL_NULL(pref_species)
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 	return ..()
 
 /datum/preferences/New(client/parent)
@@ -109,10 +109,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		load_path(parent.ckey)
 		if(load_and_save && !fexists(path))
 			try_savefile_type_migration()
-		unlock_content = !!parent.IsByondMember()
-		donator_status = !!GLOB.donator_list[parent.ckey] //NOVA EDIT ADD - DONATOR CHECK
-		if(unlock_content || donator_status) //NOVA EDIT CHANGE - ADD DONATOR CHECK
-			max_save_slots = 50 //NOVA EDIT - ORIGINAL 8
+		unlock_content = !!parent.IsByondMember() || GLOB.donator_list[parent.ckey] //SKYRAT EDIT - ADDED DONATOR CHECK
+		if(unlock_content)
+			max_save_slots = 50 //SKYRAT EDIT - ORIGINAL 8
 	else
 		CRASH("attempted to create a preferences datum without a client or mock!")
 	load_savefile()
@@ -125,11 +124,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/loaded_preferences_successfully = load_preferences()
 	if(loaded_preferences_successfully)
 		if(load_character())
-			// NOVA EDIT START - Sanitizing preferences
+			// SKYRAT EDIT START - Sanitizing preferences
 			sanitize_languages()
 			sanitize_quirks()
-			// NOVA EDIT END
-			return // NOVA EDIT - Don't remove this. Just don't. Nothing is worth forced random characters.
+			// SKYRAT EDIT END
+			return // SKYRAT EDIT - Don't remove this. Just don't. Nothing is worth forced random characters.
 	//we couldn't load character data so just randomize the character appearance + name
 	randomise_appearance_prefs() //let's create a random character then - rather than a fat, bald and naked man.
 	if(parent)
@@ -175,12 +174,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		data["character_profiles"] = create_character_profiles()
 		tainted_character_profiles = FALSE
 
-	//NOVA EDIT BEGIN
+	//SKYRAT EDIT BEGIN
 	data["preview_selection"] = preview_pref
 
 	data["quirks_balance"] = GetQuirkBalance()
 	data["positive_quirk_count"] = GetPositiveQuirkCount()
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 
 	data["character_preferences"] = compile_character_preferences(user)
 
@@ -194,12 +193,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 /datum/preferences/ui_static_data(mob/user)
 	var/list/data = list()
 
-	// NOVA EDIT ADDITION START
+	// SKYRAT EDIT ADDITION START
 	if(CONFIG_GET(flag/disable_erp_preferences))
 		data["preview_options"] = list(PREVIEW_PREF_JOB, PREVIEW_PREF_LOADOUT, PREVIEW_PREF_UNDERWEAR, PREVIEW_PREF_NAKED)
 	else
 		data["preview_options"] = list(PREVIEW_PREF_JOB, PREVIEW_PREF_LOADOUT, PREVIEW_PREF_UNDERWEAR, PREVIEW_PREF_NAKED, PREVIEW_PREF_NAKED_AROUSED)
-	// NOVA EDIT ADDITION END
+	// SKYRAT EDIT ADDITION END
 
 	data["character_profiles"] = create_character_profiles()
 
@@ -247,10 +246,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				randomise_appearance_prefs()
 				save_character()
 
-			// NOVA EDIT START - Sanitizing languages
+			// SKYRAT EDIT START - Sanitizing languages
 			if(sanitize_languages())
 				save_character()
-			// NOVA EDIT END
+			// SKYRAT EDIT END
 
 			for (var/datum/preference_middleware/preference_middleware as anything in middleware)
 				preference_middleware.on_new_character(usr)
@@ -259,12 +258,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			return TRUE
 		if ("rotate")
-			/* NOVA EDIT - Bi-directional prefs menu rotation - ORIGINAL:
+			/* SKYRAT EDIT - Bi-directional prefs menu rotation - ORIGINAL:
 			character_preview_view.dir = turn(character_preview_view.dir, -90)
-			*/ // ORIGINAL END - NOVA EDIT START:
+			*/ // ORIGINAL END - SKYRAT EDIT START:
 			var/backwards = params["backwards"]
 			character_preview_view.dir = turn(character_preview_view.dir, backwards ? 90 : -90)
-			// NOVA EDIT END
+			// SKYRAT EDIT END
 
 			return TRUE
 		if ("set_preference")
@@ -285,12 +284,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			if (istype(requested_preference, /datum/preference/name))
 				tainted_character_profiles = TRUE
-			//NOVA EDIT
+			//SKYRAT EDIT
 			update_mutant_bodyparts(requested_preference)
 			for (var/datum/preference_middleware/preference_middleware as anything in middleware)
 				if (preference_middleware.post_set_preference(usr, requested_preference_key, value))
 					return TRUE
-			//NOVA EDIT END
+			//SKYRAT EDIT END
 			return TRUE
 		if ("set_color_preference")
 			var/requested_preference_key = params["preference"]
@@ -319,22 +318,19 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				return FALSE
 
 			return TRUE
-		//NOVA EDIT ADDITION
+		//SKYRAT EDIT ADDITION
 		if("update_preview")
 			preview_pref = params["updated_preview"]
 			character_preview_view.update_body()
 			return TRUE
 
 		if ("open_loadout")
-			var/datum/loadout_manager/open_loadout_ui = parent.open_loadout_ui?.resolve()
-			if(open_loadout_ui)
-				open_loadout_ui.ui_interact(usr)
+			if(parent.open_loadout_ui)
+				parent.open_loadout_ui.ui_interact(usr)
 			else
-				parent.open_loadout_ui = null
 				var/datum/loadout_manager/tgui = new(usr)
 				tgui.ui_interact(usr)
 			return TRUE
-
 		if ("set_tricolor_preference")
 			var/requested_preference_key = params["preference"]
 			var/index_key = params["value"]
@@ -372,7 +368,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		// For the quirks in the prefs menu.
 		if ("get_quirks_balance")
 			return TRUE
-		//NOVA EDIT END
+		//SKYRAT EDIT END
 
 
 	for (var/datum/preference_middleware/preference_middleware as anything in middleware)
@@ -413,12 +409,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		if (!preference.is_accessible(src))
 			continue
 
+		LAZYINITLIST(preferences[preference.category])
+
 		var/value = read_preference(preference.type)
 		var/data = preference.compile_ui_data(user, value)
 
-		LAZYINITLIST(preferences[preference.category])
 		preferences[preference.category][preference.savefile_key] = data
-
 
 	for (var/datum/preference_middleware/preference_middleware as anything in middleware)
 		var/list/append_character_preferences = preference_middleware.get_character_preferences(user)
@@ -475,7 +471,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	body = new
 
 	// Without this, it doesn't show up in the menu
-	body.appearance_flags |= KEEP_TOGETHER // NOVA EDIT - Fix pixel scaling - ORIGINAL: body.appearance_flags &= ~KEEP_TOGETHER
+	body.appearance_flags |= KEEP_TOGETHER // SKYRAT EDIT - Fix pixel scaling - ORIGINAL: body.appearance_flags &= ~KEEP_TOGETHER
 
 /datum/preferences/proc/create_character_profiles()
 	var/list/profiles = list()
@@ -526,11 +522,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	for(var/V in all_quirks)
 		var/datum/quirk/T = SSquirks.quirks[V]
 		bal -= initial(T.value)
-	//NOVA EDIT ADDITION
+	//SKYRAT EDIT ADDITION
 	for(var/key in augments)
 		var/datum/augment_item/aug = GLOB.augment_items[augments[key]]
 		bal -= aug.cost
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 	return bal
 
 /datum/preferences/proc/GetPositiveQuirkCount()
@@ -598,8 +594,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	apply_prefs_to(character, icon_updates)
 
 /// Applies the given preferences to a human mob.
-/datum/preferences/proc/apply_prefs_to(mob/living/carbon/human/character, icon_updates = TRUE, visuals_only = FALSE)  // NOVA EDIT - Customization - ORIGINAL: /datum/preferences/proc/apply_prefs_to(mob/living/carbon/human/character, icon_updates = TRUE)
-	character.dna.features = MANDATORY_FEATURE_LIST //NOVA EDIT CHANGE - We need to instansiate the list with the basic features.
+/datum/preferences/proc/apply_prefs_to(mob/living/carbon/human/character, icon_updates = TRUE, visuals_only = FALSE)  // SKYRAT EDIT - Customization - ORIGINAL: /datum/preferences/proc/apply_prefs_to(mob/living/carbon/human/character, icon_updates = TRUE)
+	character.dna.features = MANDATORY_FEATURE_LIST //SKYRAT EDIT CHANGE - We need to instansiate the list with the basic features.
 
 	for (var/datum/preference/preference as anything in get_preferences_in_priority_order())
 		if (preference.savefile_identifier != PREFERENCE_CHARACTER)
@@ -607,10 +603,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 		preference.apply_to_human(character, read_preference(preference.type), src)
 
-	// NOVA EDIT ADDITION START - middleware apply human prefs
+	// SKYRAT EDIT ADDITION START - middleware apply human prefs
 	for (var/datum/preference_middleware/preference_middleware as anything in middleware)
 		preference_middleware.apply_to_human(character, src, visuals_only = visuals_only)
-	// NOVA EDIT ADDITION END
+	// SKYRAT EDIT ADDITION END
 
 	character.dna.real_name = character.real_name
 
@@ -624,7 +620,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 /datum/preferences/proc/should_be_random_hardcore(datum/job/job, datum/mind/mind)
 	if(!read_preference(/datum/preference/toggle/random_hardcore))
 		return FALSE
-	if(job.job_flags & JOB_HEAD_OF_STAFF) //No heads of staff
+	if(job.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND) //No command staff
 		return FALSE
 	for(var/datum/antagonist/antag as anything in mind.antag_datums)
 		if(antag.get_team()) //No team antags

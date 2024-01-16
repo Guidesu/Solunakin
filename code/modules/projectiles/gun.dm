@@ -8,7 +8,7 @@
 	icon_state = "revolver"
 	inhand_icon_state = "gun"
 	worn_icon_state = "gun"
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	appearance_flags = TILE_BOUND|PIXEL_SCALE|LONG_GLIDE|KEEP_TOGETHER
 	slot_flags = ITEM_SLOT_BELT
 	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT)
@@ -45,7 +45,7 @@
 	var/weapon_weight = WEAPON_LIGHT
 	var/dual_wield_spread = 24 //additional spread when dual wielding
 	///Can we hold up our target with this? Default to yes
-	var/can_hold_up = FALSE // NOVA EDIT - DISABLED ORIGINAL: TRUE
+	var/can_hold_up = FALSE // SKYRAT EDIT - DISABLED ORIGINAL: TRUE
 
 	/// Just 'slightly' snowflakey way to modify projectile damage for projectiles fired from this gun.
 	var/projectile_damage_multiplier = 1
@@ -82,8 +82,8 @@
 		pin = new pin(src)
 
 	add_seclight_point()
-	give_gun_safeties() // NOVA EDIT ADDITION - GUN SAFETIES
-	give_manufacturer_examine() // NOVA EDIT ADDITON - MANUFACTURER EXAMINE
+	give_gun_safeties() // SKYRAT EDIT ADDITION - GUN SAFETIES
+	give_manufacturer_examine() // SKYRAT EDIT ADDITON - MANUFACTURER EXAMINE
 
 /obj/item/gun/Destroy()
 	if(isobj(pin)) //Can still be the initial path, then we skip
@@ -271,8 +271,7 @@
 
 /obj/item/gun/afterattack(atom/target, mob/living/user, flag, params)
 	..()
-	fire_gun(target, user, flag, params)
-	return AFTERATTACK_PROCESSED_ITEM
+	return fire_gun(target, user, flag, params) | AFTERATTACK_PROCESSED_ITEM
 
 /obj/item/gun/proc/fire_gun(atom/target, mob/living/user, flag, params)
 	if(QDELETED(target))
@@ -404,7 +403,6 @@
 	update_appearance()
 	return TRUE
 
-///returns true if the gun successfully fires
 /obj/item/gun/proc/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	var/base_bonus_spread = 0
 	if(user)
@@ -514,7 +512,7 @@
 
 		if(Adjacent(user) && !issilicon(user))
 			user.put_in_hands(bayonet)
-		return ITEM_INTERACT_SUCCESS
+		return TOOL_ACT_TOOLTYPE_SUCCESS
 
 	else if(pin?.pin_removable && user.is_holding(src))
 		user.visible_message(span_warning("[user] attempts to remove [pin] from [src] with [I]."),
@@ -525,7 +523,7 @@
 			user.visible_message(span_notice("[pin] is pried out of [src] by [user], destroying the pin in the process."),
 								span_warning("You pry [pin] out with [I], destroying the pin in the process."), null, 3)
 			QDEL_NULL(pin)
-			return ITEM_INTERACT_SUCCESS
+			return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/item/gun/welder_act(mob/living/user, obj/item/I)
 	. = ..()
@@ -573,9 +571,6 @@
 		knife_overlay.pixel_x = knife_x_offset
 		knife_overlay.pixel_y = knife_y_offset
 		. += knife_overlay
-
-/obj/item/gun/animate_atom_living(mob/living/owner)
-	new /mob/living/simple_animal/hostile/mimic/copy/ranged(drop_location(), src, owner)
 
 /obj/item/gun/proc/handle_suicide(mob/living/carbon/human/user, mob/living/carbon/human/target, params, bypass_timer)
 	if(!ishuman(user) || !ishuman(target))

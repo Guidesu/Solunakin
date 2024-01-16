@@ -35,14 +35,20 @@
 
 /obj/item/soulstone/update_appearance(updates)
 	. = ..()
-	for(var/mob/living/basic/shade/sharded_shade in src)
+	for(var/mob/living/simple_animal/shade/sharded_shade in src)
 		switch(theme)
 			if(THEME_HOLY)
 				sharded_shade.name = "Purified [sharded_shade.real_name]"
-			else
+				sharded_shade.icon_state = "shade_holy"
+				sharded_shade.loot = list(/obj/item/ectoplasm/angelic)
+			if(THEME_CULT)
 				sharded_shade.name = sharded_shade.real_name
-		sharded_shade.theme = theme
-		sharded_shade.update_appearance(UPDATE_ICON_STATE)
+				sharded_shade.icon_state = "shade_cult"
+				sharded_shade.loot = list(/obj/item/ectoplasm)
+			if(THEME_WIZARD)
+				sharded_shade.name = sharded_shade.real_name
+				sharded_shade.icon_state = "shade_wizard"
+				sharded_shade.loot = list(/obj/item/ectoplasm/mystic)
 
 /obj/item/soulstone/update_icon_state()
 	. = ..()
@@ -64,7 +70,7 @@
 		// "dull soulstone"
 		name = "dull [name]"
 
-	var/mob/living/basic/shade/shade = locate() in src
+	var/mob/living/simple_animal/shade/shade = locate() in src
 	if(shade)
 		// "(dull) soulstone: Urist McCaptain"
 		name = "[name]: [shade.real_name]"
@@ -153,7 +159,7 @@
 			. += span_cult("This shard is spent; it is now just a creepy rock.")
 
 /obj/item/soulstone/Destroy() //Stops the shade from being qdel'd immediately and their ghost being sent back to the arrival shuttle.
-	for(var/mob/living/basic/shade/shade in src)
+	for(var/mob/living/simple_animal/shade/shade in src)
 		INVOKE_ASYNC(shade, TYPE_PROC_REF(/mob/living, death))
 	return ..()
 
@@ -188,11 +194,11 @@
 	if(HAS_TRAIT(M, TRAIT_NO_SOUL))
 		to_chat(user, span_warning("This body does not possess a soul to capture."))
 		return
-	// NOVA EDIT START
+	// SKYRAT EDIT START
 	if(!do_after(user, 5 SECONDS, M))
 		to_chat(user, span_warning("You must stand still to capture their soul!"))
 		return
-	// NOVA EDIT END
+	// SKYRAT EDIT END
 	log_combat(user, M, "captured [M.name]'s soul", src)
 	capture_soul(M, user)
 
@@ -211,7 +217,7 @@
 	release_shades(user)
 
 /obj/item/soulstone/proc/release_shades(mob/user, silent = FALSE)
-	for(var/mob/living/basic/shade/captured_shade in src)
+	for(var/mob/living/simple_animal/shade/captured_shade in src)
 		captured_shade.forceMove(get_turf(user))
 		captured_shade.cancel_camera()
 		update_appearance()
@@ -228,7 +234,7 @@
 		on_release_spirits()
 
 /obj/item/soulstone/pre_attack(atom/A, mob/living/user, params)
-	var/mob/living/basic/shade/occupant = (locate() in src)
+	var/mob/living/simple_animal/shade/occupant = (locate() in src)
 	var/obj/item/storage/toolbox/mechanical/target_toolbox = A
 	if(!occupant || !istype(target_toolbox) || target_toolbox.has_soul)
 		return ..()
@@ -329,7 +335,7 @@
 	return TRUE //it'll probably get someone ;)
 
 ///captures a shade that was previously released from a soulstone.
-/obj/item/soulstone/proc/capture_shade(mob/living/basic/shade/shade, mob/living/user)
+/obj/item/soulstone/proc/capture_shade(mob/living/simple_animal/shade/shade, mob/living/user)
 	if(isliving(user) && !role_check(user))
 		user.Unconscious(10 SECONDS)
 		to_chat(user, span_userdanger("Your body is wracked with debilitating pain!"))
@@ -352,7 +358,7 @@
 
 ///transfer the mind of the shade to a construct mob selected by the user, then deletes both the shade and src.
 /obj/item/soulstone/proc/transfer_to_construct(obj/structure/constructshell/shell, mob/user)
-	var/mob/living/basic/shade/shade = locate() in src
+	var/mob/living/simple_animal/shade/shade = locate() in src
 	if(!shade)
 		to_chat(user, "[span_userdanger("Creation failed!")]: [src] is empty! Go kill someone!")
 		return FALSE
@@ -384,7 +390,7 @@
 	if(!shade_controller)
 		shade_controller = victim
 	victim.stop_sound_channel(CHANNEL_HEARTBEAT)
-	var/mob/living/basic/shade/soulstone_spirit = new /mob/living/basic/shade(src)
+	var/mob/living/simple_animal/shade/soulstone_spirit = new /mob/living/simple_animal/shade(src)
 	soulstone_spirit.AddComponent(/datum/component/soulstoned, src)
 	soulstone_spirit.name = "Shade of [victim.real_name]"
 	soulstone_spirit.real_name = "Shade of [victim.real_name]"
@@ -503,7 +509,7 @@
 		SM.Grant(newstruct)
 	newstruct.key = target.key
 	var/atom/movable/screen/alert/bloodsense/BS
-	if(newstruct.mind && ((stoner && IS_CULTIST(stoner)) || cultoverride) && SSticker.HasRoundStarted())
+	if(newstruct.mind && ((stoner && IS_CULTIST(stoner)) || cultoverride) && SSticker?.mode)
 		newstruct.mind.add_antag_datum(/datum/antagonist/cult/construct)
 	if(IS_CULTIST(stoner) || cultoverride)
 		to_chat(newstruct, "<b>You are still bound to serve the cult[stoner ? " and [stoner]":""], follow [stoner ? stoner.p_their() : "their"] orders and help [stoner ? stoner.p_them() : "them"] complete [stoner ? stoner.p_their() : "their"] goals at all costs.</b>")

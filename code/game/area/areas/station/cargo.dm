@@ -1,7 +1,7 @@
 /area/station/cargo
 	name = "Quartermasters"
 	icon_state = "quart"
-	airlock_wires = /datum/wires/airlock/cargo
+	airlock_wires = /datum/wires/airlock/service
 	sound_environment = SOUND_AREA_STANDARD_STATION
 
 /area/station/cargo/sorting

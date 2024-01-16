@@ -7,7 +7,6 @@
 	base_icon_state = "pdapainter"
 	density = TRUE
 	max_integrity = 200
-	integrity_failure = 0.5
 	/// Current ID card inserted into the machine.
 	var/obj/item/card/id/stored_id_card = null
 	/// Current PDA inserted into the machine.
@@ -107,7 +106,7 @@
 	. = ..()
 	if(default_unfasten_wrench(user, tool))
 		power_change()
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/pdapainter/attackby(obj/item/O, mob/living/user, params)
 	if(machine_stat & BROKEN)
@@ -160,6 +159,9 @@
 	else
 		eject_id_card(user)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+/obj/machinery/pdapainter/deconstruct(disassembled = TRUE)
+	atom_break()
 
 /**
  * Insert a PDA into the machine.

@@ -80,8 +80,10 @@
 #define UPSTATE_BROKE (1<<3)
 /// The APC is undergoing maintenance.
 #define UPSTATE_MAINT (1<<4)
+/// The APC is emagged or malfed.
+#define UPSTATE_BLUESCREEN (1<<5)
 /// The APCs wires are exposed.
-#define UPSTATE_WIREEXP (1<<5)
+#define UPSTATE_WIREEXP (1<<6)
 
 // update_overlay
 // Bitflags:

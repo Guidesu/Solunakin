@@ -77,7 +77,7 @@ GLOBAL_PROTECT(admin_verbs_debug_mapping)
 				seen[T]++
 		for(var/turf/T in seen)
 			T.maptext = MAPTEXT(seen[T])
-	BLACKBOX_LOG_ADMIN_VERB("Show Camera Range")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Show Camera Range") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
 #ifdef TESTING
 GLOBAL_LIST_EMPTY(dirty_vars)
@@ -134,7 +134,7 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 
 	output += "</ul>"
 	usr << browse(output,"window=airreport;size=1000x500")
-	BLACKBOX_LOG_ADMIN_VERB("Show Camera Report")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Show Camera Report") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
 /client/proc/intercom_view()
 	set category = "Mapping"
@@ -151,7 +151,7 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 			for(var/obj/item/radio/intercom/intercom in GLOB.all_radios[frequency])
 				for(var/turf/turf in view(7,intercom.loc))
 					new /obj/effect/abstract/marker/intercom(turf)
-	BLACKBOX_LOG_ADMIN_VERB("Show Intercom Range")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Show Intercom Range") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
 /client/proc/show_map_reports()
 	set category = "Mapping"
@@ -180,7 +180,7 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 
 	usr << browse(dat, "window=at_list")
 
-	BLACKBOX_LOG_ADMIN_VERB("Show Roundstart Active Turfs")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Show Roundstart Active Turfs") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
 /client/proc/cmd_show_at_markers()
 	set category = "Mapping"
@@ -200,7 +200,7 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 			count++
 		to_chat(usr, "[count] AT markers placed.", confidential = TRUE)
 
-	BLACKBOX_LOG_ADMIN_VERB("Show Roundstart Active Turf Markers")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Show Roundstart Active Turf Markers")
 
 /client/proc/enable_mapping_verbs()
 	set category = "Debug"
@@ -209,14 +209,14 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 		return
 	remove_verb(src, /client/proc/enable_mapping_verbs)
 	add_verb(src, list(/client/proc/disable_mapping_verbs, GLOB.admin_verbs_debug_mapping))
-	BLACKBOX_LOG_ADMIN_VERB("Enable Debug Verbs")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Enable Debug Verbs") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
 /client/proc/disable_mapping_verbs()
 	set category = "Debug"
 	set name = "Mapping verbs - Disable"
 	remove_verb(src, list(/client/proc/disable_mapping_verbs, GLOB.admin_verbs_debug_mapping))
 	add_verb(src, /client/proc/enable_mapping_verbs)
-	BLACKBOX_LOG_ADMIN_VERB("Disable Debug Verbs")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Disable Debug Verbs") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
 /client/proc/count_objects_on_z_level()
 	set category = "Mapping"
@@ -255,7 +255,7 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 					atom_list += A
 
 	to_chat(world, "There are [count] objects of type [type_path] on z-level [num_level]", confidential = TRUE)
-	BLACKBOX_LOG_ADMIN_VERB("Count Objects Zlevel")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Count Objects Zlevel") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
 /client/proc/count_objects_all()
 	set category = "Mapping"
@@ -275,7 +275,7 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 			count++
 
 	to_chat(world, "There are [count] objects of type [type_path] in the game world", confidential = TRUE)
-	BLACKBOX_LOG_ADMIN_VERB("Count Objects All")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Count Objects All") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
 
 //This proc is intended to detect lag problems relating to communication procs
@@ -289,7 +289,7 @@ GLOBAL_VAR_INIT(say_disabled, FALSE)
 		message_admins("[key] used 'Disable all communication verbs', killing all communication methods.")
 	else
 		message_admins("[key] used 'Disable all communication verbs', restoring all communication methods.")
-/* NOVA EDIT: lol, lmao, fuck icon bugs from byond
+/* SKYRAT EDIT: lol, lmao, fuck icon bugs from byond
 //This generates the icon states for job starting location landmarks.
 /client/proc/create_mapping_job_icons()
 	set name = "Generate job landmarks icons"
@@ -317,7 +317,7 @@ GLOBAL_VAR_INIT(say_disabled, FALSE)
 		final.Insert(icon('icons/hud/screen_gen.dmi', "x[x_number == 1 ? "" : x_number]"), "x[x_number == 1 ? "" : x_number]")
 	fcopy(final, "icons/mob/landmarks.dmi")
 */
-// NOVA EDIT BEGIN: THIS SHIT WAS BROKEN due to an issue with byond and how icons cache
+// SKYRAT EDIT BEGIN: THIS SHIT WAS BROKEN due to an issue with byond and how icons cache
 //This generates the icon states for job starting location landmarks.
 /client/proc/create_mapping_job_icons()
 	set name = "Generate job landmarks icons"
@@ -349,7 +349,7 @@ GLOBAL_VAR_INIT(say_disabled, FALSE)
 		final.Insert(icon('icons/hud/screen_gen.dmi', "x[x_number == 1 ? "" : x_number]"), "x[x_number == 1 ? "" : x_number]")
 	fcopy(final, "icons/mob/landmarks.dmi")
 	to_chat(world, "Done generating landmarks.dmi.")
-// NOVA EDIT END
+// SKYRAT EDIT END
 /client/proc/debug_z_levels()
 	set name = "Debug Z-Levels"
 	set category = "Mapping"
@@ -470,7 +470,7 @@ GLOBAL_VAR_INIT(say_disabled, FALSE)
 		to_chat(src, "Only administrators may use this command.", confidential = TRUE)
 		return
 	message_admins(span_adminnotice("[key_name_admin(usr)] is checking for obstructed atmospherics through the debug command."))
-	BLACKBOX_LOG_ADMIN_VERB("Check For Obstructed Atmospherics")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Check For Obstructed Atmospherics") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
 	var/list/results = list()
 

@@ -20,10 +20,6 @@
 "i" = (
 /turf/closed/wall/mineral/titanium/overspace,
 /area/virtual_domain/safehouse)
-"k" = (
-/obj/modular_map_connector,
-/turf/closed/wall/mineral/titanium/overspace,
-/area/virtual_domain/safehouse)
 "l" = (
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
@@ -183,7 +179,7 @@ N
 a
 a
 N
-k
+i
 "}
 (2,1,1) = {"
 a

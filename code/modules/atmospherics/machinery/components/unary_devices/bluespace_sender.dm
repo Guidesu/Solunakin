@@ -49,6 +49,10 @@ GLOBAL_LIST_EMPTY_TYPED(bluespace_senders, /obj/machinery/atmospherics/component
 	register_context()
 
 /obj/machinery/atmospherics/components/unary/bluespace_sender/Destroy()
+	if(bluespace_network.total_moles())
+		var/turf/local_turf = get_turf(src)
+		local_turf.assume_air(bluespace_network)
+
 	GLOB.bluespace_senders -= src
 
 	return ..()
@@ -70,11 +74,6 @@ GLOBAL_LIST_EMPTY_TYPED(bluespace_senders, /obj/machinery/atmospherics/component
 			context[SCREENTIP_CONTEXT_LMB] = "Rotate"
 			context[SCREENTIP_CONTEXT_RMB] = "[anchored ? "Unan" : "An"]chor"
 	return CONTEXTUAL_SCREENTIP_SET
-
-/obj/machinery/atmospherics/components/unary/bluespace_sender/is_connectable()
-	if(!anchored)
-		return FALSE
-	. = ..()
 
 /obj/machinery/atmospherics/components/unary/bluespace_sender/update_icon_state()
 	if(panel_open)
@@ -102,26 +101,24 @@ GLOBAL_LIST_EMPTY_TYPED(bluespace_senders, /obj/machinery/atmospherics/component
 	bluespace_network.temperature = T20C
 	update_parents()
 
-/obj/machinery/atmospherics/components/unary/bluespace_sender/relocate_airs()
-	if(bluespace_network.total_moles() > 0)
-		airs[1].merge(bluespace_network)
-		airs[1].garbage_collect()
-	return ..()
-
 /obj/machinery/atmospherics/components/unary/bluespace_sender/screwdriver_act(mob/living/user, obj/item/tool)
 	if(on)
 		balloon_alert(user, "turn off!")
-		return ITEM_INTERACT_SUCCESS
+		return TOOL_ACT_TOOLTYPE_SUCCESS
 	if(!anchored)
 		balloon_alert(user, "anchor!")
-		return ITEM_INTERACT_SUCCESS
-	if(default_deconstruction_screwdriver(user, "[base_icon_state]_open", "[base_icon_state]_off", tool))
-		return ITEM_INTERACT_SUCCESS
+		return TOOL_ACT_TOOLTYPE_SUCCESS
+	if(default_deconstruction_screwdriver(user, "[base_icon_state]_open", "[base_icon_state]", tool))
+		change_pipe_connection(panel_open)
+		return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/atmospherics/components/unary/bluespace_sender/crowbar_act(mob/living/user, obj/item/tool)
-	if(panel_open && bluespace_network.total_moles() > 0 && !nodes[1])
-		say("WARNING - Bluespace network can contain hazardous gases, deconstruct with caution!")
-	return crowbar_deconstruction_act(user, tool)
+	default_deconstruction_crowbar(tool, custom_deconstruct = bluespace_network.total_moles() > 0 ? TRUE : FALSE)
+	say("WARNING - Bluespace network can contain hazardous gases, deconstruct with caution!")
+	if(!do_after(user, 3 SECONDS, src))
+		return
+	tool.play_tool_sound(src, 50)
+	deconstruct(TRUE)
 
 /obj/machinery/atmospherics/components/unary/bluespace_sender/multitool_act(mob/living/user, obj/item/item)
 	var/obj/item/multitool/multitool = item
@@ -137,8 +134,7 @@ GLOBAL_LIST_EMPTY_TYPED(bluespace_senders, /obj/machinery/atmospherics/component
 		balloon_alert(user, "open panel!")
 		return
 	if(default_unfasten_wrench(user, tool))
-		change_pipe_connection(!anchored)
-		return ITEM_INTERACT_SUCCESS
+		return TOOL_ACT_TOOLTYPE_SUCCESS
 	return
 
 /obj/machinery/atmospherics/components/unary/bluespace_sender/default_change_direction_wrench(mob/user, obj/item/item)

@@ -63,7 +63,7 @@
 			span_warning("[user] fed you from [src]."))
 		log_combat(user, M, "fed", reagents.get_reagent_log_string())
 
-	SEND_SIGNAL(M, COMSIG_GLASS_DRANK, src, user) // NOVA EDIT ADDITION - Hemophages can't casually drink what's not going to regenerate their blood
+	SEND_SIGNAL(M, COMSIG_GLASS_DRANK, src, user) // SKYRAT EDIT ADDITION - Hemophages can't casually drink what's not going to regenerate their blood
 	reagents.trans_to(M, 10, transferred_by = user, methods = INGEST)
 	playsound(M.loc,'sound/items/drink.ogg', rand(10,50), TRUE)
 	return TRUE
@@ -466,12 +466,9 @@
 /// Handles reagents getting added to the condiment pack.
 /obj/item/reagent_containers/condiment/pack/proc/on_reagent_add(datum/reagents/reagents)
 	SIGNAL_HANDLER
-
-	var/datum/reagent/main_reagent = reagents.get_master_reagent()
-
-	var/main_reagent_type = main_reagent?.type
-	if(main_reagent_type in possible_states)
-		var/list/temp_list = possible_states[main_reagent_type]
+	var/main_reagent = reagents.get_master_reagent_id()
+	if(main_reagent in possible_states)
+		var/list/temp_list = possible_states[main_reagent]
 		icon_state = temp_list[1]
 		desc = temp_list[3]
 	else

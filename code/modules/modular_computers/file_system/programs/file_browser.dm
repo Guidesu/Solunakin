@@ -2,9 +2,10 @@
 	filename = "filemanager"
 	filedesc = "File Manager"
 	extended_desc = "This program allows management of files."
-	program_open_overlay = "generic"
+	program_icon_state = "generic"
 	size = 8
-	program_flags = NONE
+	requires_ntnet = FALSE
+	available_on_ntnet = FALSE
 	undeletable = TRUE
 	tgui_id = "NtosFileManager"
 	program_icon = "folder"

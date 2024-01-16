@@ -63,7 +63,7 @@
 
 	return setup_growth_tracking()
 
-/datum/component/growth_and_differentiation/Destroy(force)
+/datum/component/growth_and_differentiation/Destroy(force, silent)
 	STOP_PROCESSING(SSdcs, src)
 	deltimer(timer_id)
 	optional_checks = null

@@ -28,7 +28,7 @@ export const savefile_key_here: Feature<T> = {
   // Necessary for game preferences, unused for others
   category: "CATEGORY",
 
-  // Optional, shown as a tooltip
+  // Optional, only shown in game preferences
   description: "This preference will blow your mind!",
 }
 ```

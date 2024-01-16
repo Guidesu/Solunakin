@@ -41,7 +41,7 @@
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/jelly,
 	)
 	var/datum/action/innate/regenerate_limbs/regenerate_limbs
-	var/datum/action/innate/alter_form/alter_form //NOVA EDIT ADDITION - CUSTOMIZATION
+	var/datum/action/innate/alter_form/alter_form //SKYRAT EDIT ADDITION - CUSTOMIZATION
 
 /datum/species/jelly/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species, pref_load)
 	. = ..()
@@ -49,19 +49,19 @@
 		regenerate_limbs = new
 		regenerate_limbs.Grant(new_jellyperson)
 		update_mail_goodies(new_jellyperson)
-		//NOVA EDIT ADDITION BEGIN - CUSTOMIZATION
+		//SKYRAT EDIT ADDITION BEGIN - CUSTOMIZATION
 		alter_form = new
 		alter_form.Grant(new_jellyperson)
-		//NOVA EDIT ADDITION END
+		//SKYRAT EDIT ADDITION END
 	new_jellyperson.AddElement(/datum/element/soft_landing)
 
 /datum/species/jelly/on_species_loss(mob/living/carbon/former_jellyperson, datum/species/new_species, pref_load)
 	if(regenerate_limbs)
 		regenerate_limbs.Remove(former_jellyperson)
-	//NOVA EDIT ADDITION BEGIN - CUSTOMIZATION
+	//SKYRAT EDIT ADDITION BEGIN - CUSTOMIZATION
 	if(alter_form)
 		alter_form.Remove(former_jellyperson)
-	//NOVA EDIT ADDITION END
+	//SKYRAT EDIT ADDITION END
 	former_jellyperson.RemoveElement(/datum/element/soft_landing)
 
 	return ..()
@@ -215,7 +215,6 @@
 	// so if someone mindswapped into them, they'd still be shared.
 	bodies = null
 	C.blood_volume = min(C.blood_volume, BLOOD_VOLUME_NORMAL)
-	UnregisterSignal(C, COMSIG_LIVING_DEATH)
 	..()
 
 /datum/species/jelly/slime/on_species_gain(mob/living/carbon/C, datum/species/old_species)
@@ -231,25 +230,20 @@
 		else
 			bodies |= C
 
-	RegisterSignal(C, COMSIG_LIVING_DEATH, PROC_REF(on_death_move_body))
+/datum/species/jelly/slime/spec_death(gibbed, mob/living/carbon/human/H)
+	if(slime_split)
+		if(!H.mind || !H.mind.active)
+			return
 
-/datum/species/jelly/slime/proc/on_death_move_body(mob/living/carbon/human/source, gibbed)
-	SIGNAL_HANDLER
+		var/list/available_bodies = (bodies - H)
+		for(var/mob/living/L in available_bodies)
+			if(!swap_body.can_swap(L))
+				available_bodies -= L
 
-	if(!slime_split)
-		return
-	if(!source.mind?.active)
-		return
+		if(!LAZYLEN(available_bodies))
+			return
 
-	var/list/available_bodies = bodies - source
-	for(var/mob/living/other_body as anything in available_bodies)
-		if(!swap_body.can_swap(other_body))
-			available_bodies -= other_body
-
-	if(!length(available_bodies))
-		return
-
-	swap_body.swap_to_dupe(source.mind, pick(available_bodies))
+		swap_body.swap_to_dupe(H.mind, pick(available_bodies))
 
 //If you're cloned you get your body pool back
 /datum/species/jelly/slime/copy_properties_from(datum/species/jelly/slime/old_species)
@@ -613,7 +607,7 @@
 
 	else
 		var/obj/item/slime_extract/to_integrate = human_owner.get_active_held_item()
-		if(!istype(to_integrate) || to_integrate.extract_uses <= 0)
+		if(!istype(to_integrate) || to_integrate.Uses <= 0)
 			human_owner.balloon_alert(human_owner, "need an unused slime extract!")
 			return
 		if(!human_owner.temporarilyRemoveItemFromInventory(to_integrate))

@@ -47,11 +47,11 @@
 		var/obj/machinery/air_sensor/sensor = multi_tool.buffer
 		multi_tool.set_buffer(src)
 		sensor.multitool_act(user, multi_tool)
-		return ITEM_INTERACT_SUCCESS
+		return TOOL_ACT_TOOLTYPE_SUCCESS
 
 	balloon_alert(user, "injector saved in buffer")
 	multi_tool.set_buffer(src)
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/atmospherics/components/unary/outlet_injector/CtrlClick(mob/user)
 	if(can_interact(user))

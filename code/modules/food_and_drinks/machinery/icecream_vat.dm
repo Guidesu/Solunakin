@@ -10,7 +10,6 @@
 	use_power = NO_POWER_USE
 	layer = BELOW_OBJ_LAYER
 	max_integrity = 300
-	interaction_flags_machine = INTERACT_MACHINE_WIRES_IF_OPEN|INTERACT_MACHINE_ALLOW_SILICON|INTERACT_MACHINE_OPEN_SILICON|INTERACT_MACHINE_SET_MACHINE
 	var/list/product_types = list()
 	var/selected_flavour = ICE_CREAM_VANILLA
 	var/obj/item/reagent_containers/beaker
@@ -111,7 +110,7 @@
 		return
 	for(var/datum/reagent/R in beaker.reagents.reagent_list)
 		if(R.type in icecream_vat_reagents)
-			beaker.reagents.trans_to(src, R.volume, target_id = R.type)
+			beaker.reagents.trans_id_to(src, R.type, R.volume)
 			say("Internalizing reagent.")
 			playsound(src, 'sound/items/drink.ogg', 25, TRUE)
 	return
@@ -190,7 +189,7 @@
 	return
 
 /obj/machinery/icecream_vat/deconstruct(disassembled = TRUE)
-	if(!(obj_flags & NO_DECONSTRUCTION))
+	if(!(flags_1 & NODECONSTRUCT_1))
 		new /obj/item/stack/sheet/iron(loc, 4)
 	qdel(src)
 

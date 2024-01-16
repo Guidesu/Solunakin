@@ -207,18 +207,12 @@
 	var/lose_multiple_charges = TRUE
 	var/show_charge_as_alpha = TRUE
 
-/obj/item/clothing/suit/armor/vest/ctf/Initialize(mapload)
+/obj/item/clothing/suit/armor/vest/ctf/equipped(mob/user, slot)
 	. = ..()
-	AddComponent( \
-		/datum/component/shielded, \
-		max_charges = max_charges, \
-		recharge_start_delay = recharge_start_delay, \
-		charge_increment_delay = charge_increment_delay, \
-		charge_recovery = charge_recovery, \
-		lose_multiple_charges = lose_multiple_charges, \
-		show_charge_as_alpha = show_charge_as_alpha, \
-		shield_icon = team_shield_icon, \
-	)
+	if(!slot || slot & ITEM_SLOT_HANDS)
+		return
+	AddComponent(/datum/component/shielded, max_charges = max_charges, recharge_start_delay = recharge_start_delay, charge_increment_delay = charge_increment_delay, \
+	charge_recovery = charge_recovery, lose_multiple_charges = lose_multiple_charges, show_charge_as_alpha = show_charge_as_alpha, shield_icon = team_shield_icon)
 
 // LIGHT SHIELDED VEST
 

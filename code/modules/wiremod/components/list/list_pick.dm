@@ -27,24 +27,39 @@
 
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL
 
+	var/index_type = PORT_TYPE_NUMBER
+
+/obj/item/circuit_component/list_pick/populate_options()
+	list_options = add_option_port("List Type", GLOB.wiremod_basic_types)
+
 /obj/item/circuit_component/list_pick/proc/make_list_port()
-	input_list = add_input_port("List", PORT_TYPE_LIST(PORT_TYPE_STRING))
+	input_list = add_input_port("List", PORT_TYPE_LIST(PORT_TYPE_ANY))
 
 /obj/item/circuit_component/list_pick/populate_ports()
 	input_name = add_input_port("Input Name", PORT_TYPE_STRING)
-	user = add_input_port("User", PORT_TYPE_USER)
+	user = add_input_port("User", PORT_TYPE_ATOM)
 	make_list_port()
 
-	output = add_output_port("Picked Item", PORT_TYPE_STRING)
+	output = add_output_port("Picked Item", PORT_TYPE_NUMBER)
+	trigger_output = add_output_port("Triggered", PORT_TYPE_SIGNAL)
 	failure = add_output_port("On Failure", PORT_TYPE_SIGNAL)
-	success = add_output_port("On Success", PORT_TYPE_SIGNAL)
+	success = add_output_port("On Succes", PORT_TYPE_SIGNAL)
+
+
+/obj/item/circuit_component/list_pick/pre_input_received(datum/port/input/port)
+	if(port == list_options)
+		var/new_type = list_options.value
+		input_list.set_datatype(PORT_TYPE_LIST(new_type))
+		output.set_datatype(new_type)
+
 
 /obj/item/circuit_component/list_pick/input_received(datum/port/input/port)
-	var/mob/mob_user = user.value
-	if(!ismob(mob_user) || HAS_TRAIT_FROM(parent, TRAIT_CIRCUIT_UI_OPEN, REF(mob_user)))
-		failure.set_output(COMPONENT_SIGNAL)
+	if(parent.Adjacent(user.value))
 		return
-	INVOKE_ASYNC(src, PROC_REF(show_list), mob_user, input_name.value, input_list.value)
+
+	if(ismob(user.value))
+		trigger_output.set_output(COMPONENT_SIGNAL)
+		INVOKE_ASYNC(src, PROC_REF(show_list), user.value, input_name.value, input_list.value)
 
 /// Show a list of options to the user using standed TGUI input list
 /obj/item/circuit_component/list_pick/proc/show_list(mob/user, message, list/showed_list)
@@ -53,17 +68,10 @@
 		return
 	if(!message)
 		message = "circuit input"
-	if(!(user.can_perform_action(parent.shell, FORBID_TELEKINESIS_REACH|ALLOW_SILICON_REACH|ALLOW_RESTING)))
-		failure.set_output(COMPONENT_SIGNAL)
+	if(!(user.can_perform_action(src, FORBID_TELEKINESIS_REACH)))
 		return
-	var/user_ref = REF(user)
-	ADD_TRAIT(parent, TRAIT_CIRCUIT_UI_OPEN, user_ref)
 	var/picked = tgui_input_list(user, message = message, items = showed_list)
-	REMOVE_TRAIT(parent, TRAIT_CIRCUIT_UI_OPEN, user_ref)
-	if(QDELETED(src))
-		return
-	if(!(user.can_perform_action(parent.shell, FORBID_TELEKINESIS_REACH|ALLOW_SILICON_REACH|ALLOW_RESTING)))
-		failure.set_output(COMPONENT_SIGNAL)
+	if(!(user.can_perform_action(src, FORBID_TELEKINESIS_REACH)))
 		return
 	choose_item(picked, showed_list)
 

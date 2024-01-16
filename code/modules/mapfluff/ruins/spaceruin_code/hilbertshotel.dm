@@ -8,12 +8,12 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 	icon_state = "hilbertshotel"
 	w_class = WEIGHT_CLASS_SMALL
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
-	//NOVA EDIT ADDITION - GHOST HOTEL UPDATE
+	//SKYRAT EDIT ADDITION - GHOST HOTEL UPDATE
 	var/list/static/hotel_maps = list("Generic", "Apartment")
 	//standart - hilber's hotel room
 	//apartment - see /datum/map_template/ghost_cafe_rooms
 	var/datum/map_template/ghost_cafe_rooms/ghost_cafe_rooms_apartment
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 	var/datum/map_template/hilbertshotel/hotelRoomTemp
 	var/datum/map_template/hilbertshotel/empty/hotelRoomTempEmpty
 	var/datum/map_template/hilbertshotel/lore/hotelRoomTempLore
@@ -32,9 +32,9 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 	hotelRoomTemp = new()
 	hotelRoomTempEmpty = new()
 	hotelRoomTempLore = new()
-	//NOVA EDIT ADDITION - GHOST HOTEL UPDATE
+	//SKYRAT EDIT ADDITION - GHOST HOTEL UPDATE
 	ghost_cafe_rooms_apartment = new()
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 	var/area/currentArea = get_area(src)
 	if(currentArea.type == /area/ruin/space/has_grav/powered/hilbertresearchfacility/secretroom)
 		ruinSpawned = TRUE
@@ -85,8 +85,8 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 		to_chat(target, span_warning("You aren't able to activate \the [src] anymore!"))
 
 	// Has the user thrown it away or otherwise disposed of it such that it's no longer in their hands or in some storage connected to them?
-	// if(!(get_atom_on_turf(src, /mob) == user)) NOVA EDIT ORIGINAL
-	if(!Adjacent(user)) // NOVA EDIT -- Ghost Cafe Static Hilbertspawner
+	// if(!(get_atom_on_turf(src, /mob) == user)) SKYRAT EDIT ORIGINAL
+	if(!Adjacent(user)) // SKYRAT EDIT -- Ghost Cafe Static Hilbertspawner
 		if(user == target)
 			to_chat(user, span_warning("\The [src] is no longer in your possession!"))
 		else
@@ -104,11 +104,11 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 		else if(!user.dropItemToGround(src))
 			to_chat(user, span_warning("You can't seem to drop \the [src]! It must be stuck to your hand somehow! Prepare for unforeseen consequences..."))
 
-	//NOVA EDIT ADDITION - GHOST HOTEL UPDATE
+	//SKYRAT EDIT ADDITION - GHOST HOTEL UPDATE
 	var/chosen_room = "Nothing"
 	if(istype(src, /obj/item/hilbertshotel/ghostdojo)) //to don't add another one var
 		chosen_room = tgui_input_list(user, "Choose desired room:", "Time to choose", hotel_maps)
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 	if(!storageTurf) //Blame subsystems for not allowing this to be in Initialize
 		if(!GLOB.hhStorageTurf)
 			var/datum/map_template/hilbertshotelstorage/storageTemp = new()
@@ -122,7 +122,7 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 		return
 	if(tryStoredRoom(chosenRoomNumber, target))
 		return
-	sendToNewRoom(chosenRoomNumber, target, chosen_room) //NOVA EDIT ADDITION - GHOST HOTEL UPDATE. Was sendToNewRoom(chosenRoomNumber, target)
+	sendToNewRoom(chosenRoomNumber, target, chosen_room) //SKYRAT EDIT ADDITION - GHOST HOTEL UPDATE. Was sendToNewRoom(chosenRoomNumber, target)
 
 /obj/item/hilbertshotel/proc/tryActiveRoom(roomNumber, mob/user)
 	if(activeRooms["[roomNumber]"])
@@ -168,17 +168,17 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 		return TRUE
 	return FALSE
 
-/obj/item/hilbertshotel/proc/sendToNewRoom(roomNumber, mob/user, chosen_room) //NOVA EDIT ADDITION - GHOST HOTEL UPDATE. Was sendToNewRoom(roomNumber, mob/user)
+/obj/item/hilbertshotel/proc/sendToNewRoom(roomNumber, mob/user, chosen_room) //SKYRAT EDIT ADDITION - GHOST HOTEL UPDATE. Was sendToNewRoom(roomNumber, mob/user)
 	var/datum/turf_reservation/roomReservation = SSmapping.request_turf_block_reservation(hotelRoomTemp.width, hotelRoomTemp.height, 1)
 	var/turf/bottom_left = roomReservation.bottom_left_turfs[1]
 	var/datum/map_template/load_from = hotelRoomTemp
 
 	if(ruinSpawned && roomNumber == GLOB.hhMysteryRoomNumber)
 		load_from = hotelRoomTempLore
-	//NOVA EDIT ADDITION START - GHOST HOTEL UPDATE
+	//SKYRAT EDIT ADDITION START - GHOST HOTEL UPDATE
 	else if(chosen_room == "Apartment")
 		load_from = ghost_cafe_rooms_apartment
-	//NOVA EDIT ADDITION END
+	//SKYRAT EDIT ADDITION END
 
 	load_from.load(bottom_left)
 	activeRooms["[roomNumber]"] = roomReservation
@@ -198,15 +198,10 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 	currentArea.storageTurf = storageTurf
 	currentArea.roomnumber = currentRoomnumber
 	currentArea.reservation = currentReservation
-
-	for(var/turf/closed/indestructible/hoteldoor/door in currentReservation.reserved_turfs)
+	for(var/turf/closed/indestructible/hoteldoor/door in currentArea)
 		door.parentSphere = src
-		door.desc = "The door to this hotel room. \
-			The placard reads 'Room [currentRoomnumber]'. \
-			Strangely, this door doesn't even seem openable. \
-			The doorknob, however, seems to buzz with unusual energy...<br/>\
-			[span_info("Alt-Click to look through the peephole.")]"
-	for(var/turf/open/space/bluespace/BSturf in currentReservation.reserved_turfs)
+		door.desc = "The door to this hotel room. The placard reads 'Room [currentRoomnumber]'. Strangely, this door doesn't even seem openable. The doorknob, however, seems to buzz with unusual energy...<br />[span_info("Alt-Click to look through the peephole.")]"
+	for(var/turf/open/space/bluespace/BSturf in currentArea)
 		BSturf.parentSphere = src
 
 /obj/item/hilbertshotel/proc/ejectRooms()
@@ -359,6 +354,9 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 /turf/closed/indestructible/hoteldoor/attack_larva(mob/user, list/modifiers)
 	promptExit(user)
 
+/turf/closed/indestructible/hoteldoor/attack_slime(mob/user, list/modifiers)
+	promptExit(user)
+
 /turf/closed/indestructible/hoteldoor/attack_robot(mob/user)
 	if(get_dist(get_turf(src), get_turf(user)) <= 1)
 		promptExit(user)
@@ -400,9 +398,9 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 	has_gravity = TRUE
 	area_flags = NOTELEPORT | HIDDEN_AREA
 	static_lighting = TRUE
-	/* 	NOVA EDIT REMOVAL - GHOST HOTEL UPDATE
+	/* 	SKYRAT EDIT REMOVAL - GHOST HOTEL UPDATE
 	ambientsounds = list('sound/ambience/servicebell.ogg')
-	NOVA EDIT END */
+	SKYRAT EDIT END */
 	var/roomnumber = 0
 	var/obj/item/hilbertshotel/parentSphere
 	var/datum/turf_reservation/reservation
@@ -438,10 +436,12 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 			targetturf = get_turf(pick(GLOB.blobstart))
 		else
 			CRASH("Unable to find a blobstart landmark")
-
+	var/turf/T = get_turf(H)
+	var/area/A = T.loc
 	log_game("[H] entered itself. Moving it to [loc_name(targetturf)].")
 	message_admins("[H] entered itself. Moving it to [ADMIN_VERBOSEJMP(targetturf)].")
-	H.visible_message(span_danger("[H] almost implodes in upon itself, but quickly rebounds, shooting off into a random point in space!"))
+	for(var/mob/M in A)
+		to_chat(M, span_danger("[H] almost implodes in upon itself, but quickly rebounds, shooting off into a random point in space!"))
 	H.forceMove(targetturf)
 
 /area/misc/hilbertshotel/Exited(atom/movable/gone, direction)

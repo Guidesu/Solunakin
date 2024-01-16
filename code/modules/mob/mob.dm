@@ -28,9 +28,8 @@
 	if(client)
 		stack_trace("Mob with client has been deleted.")
 	else if(ckey)
-		stack_trace("Mob without client but with associated ckey, [ckey], has been deleted.")
+		stack_trace("Mob without client but with associated ckey has been deleted.")
 
-	unset_machine()
 	remove_from_mob_list()
 	remove_from_dead_mob_list()
 	remove_from_alive_mob_list()
@@ -47,7 +46,7 @@
 
 	qdel(hud_used)
 	QDEL_LIST(client_colours)
-	ghostize(can_reenter_corpse = FALSE) //False, since we're deleting it currently
+	ghostize() //False, since we're deleting it currently
 	if(mind?.current == src) //Let's just be safe yeah? This will occasionally be cleared, but not always. Can't do it with ghostize without changing behavior
 		mind.set_current(null)
 
@@ -181,7 +180,7 @@
 			hud_list[hud] = list()
 
 		else
-			var/image/I = image('modular_nova/master_files/icons/mob/huds/hud.dmi', src, "")	//NOVA EDIT: original filepath 'icons/mob/huds/hud.dmi'
+			var/image/I = image('modular_skyrat/master_files/icons/mob/huds/hud.dmi', src, "")	//SKYRAT EDIT: original filepath 'icons/mob/huds/hud.dmi'
 			I.appearance_flags = RESET_COLOR|RESET_TRANSFORM
 			hud_list[hud] = I
 		set_hud_image_active(hud, update_huds = FALSE) //by default everything is active. but dont add it to huds to keep control.
@@ -267,7 +266,7 @@
  * * vision_distance (optional) define how many tiles away the message can be seen.
  * * ignored_mob (optional) doesn't show any message to a given mob if TRUE.
  */
-/atom/proc/visible_message(message, self_message, blind_message, vision_distance = DEFAULT_MESSAGE_RANGE, list/ignored_mobs, visible_message_flags = NONE, separation = " ", pref_to_check) // NOVA EDIT ADDITION - separation, pref checks
+/atom/proc/visible_message(message, self_message, blind_message, vision_distance = DEFAULT_MESSAGE_RANGE, list/ignored_mobs, visible_message_flags = NONE, separation = " ") // SKYRAT EDIT ADDITION - SEPERATION
 	var/turf/T = get_turf(src)
 	if(!T)
 		return
@@ -277,7 +276,7 @@
 	var/list/hearers = get_hearers_in_view(vision_distance, src) //caches the hearers and then removes ignored mobs.
 	hearers -= ignored_mobs
 
-	//NOVA EDIT ADDITION BEGIN - AI QoL
+	//SKYRAT EDIT ADDITION BEGIN - AI QoL
 	for(var/mob/camera/ai_eye/ai_eye in hearers)
 		if(ai_eye.ai?.client && !(ai_eye.ai.stat == DEAD))
 			hearers -= ai_eye
@@ -286,22 +285,18 @@
 	for(var/obj/effect/overlay/holo_pad_hologram/holo in hearers)
 		if(holo.Impersonation?.client)
 			hearers |= holo.Impersonation
-	//NOVA EDIT ADDITION END - AI QoL
+	//SKYRAT EDIT ADDITION END - AI QoL
 
 	if(self_message)
 		hearers -= src
 
 	var/raw_msg = message
 	if(visible_message_flags & EMOTE_MESSAGE)
-		message = "<span class='emote'><b>[src]</b>[separation][message]</span>" // NOVA EDIT - Better emotes
+		message = "<span class='emote'><b>[src]</b>[separation][message]</span>" // SKYRAT EDIT - Better emotes
 
 	for(var/mob/M in hearers)
 		if(!M.client)
 			continue
-		// NOVA EDIT ADDITION - Emote pref checks
-		if(pref_to_check && !M.client?.prefs.read_preference(pref_to_check))
-			continue
-		// NOVA EDIT END
 
 		//This entire if/else chain could be in two lines but isn't for readibilties sake.
 		var/msg = message
@@ -327,7 +322,7 @@
 
 
 ///Adds the functionality to self_message.
-/mob/visible_message(message, self_message, blind_message, vision_distance = DEFAULT_MESSAGE_RANGE, list/ignored_mobs, visible_message_flags = NONE, separation = " ", pref_to_check)  // NOVA EDIT ADDITION - Better emotes, pref checks
+/mob/visible_message(message, self_message, blind_message, vision_distance = DEFAULT_MESSAGE_RANGE, list/ignored_mobs, visible_message_flags = NONE, separation = " ")  // SKYRAT EDIT ADDITION - Better emotes
 	. = ..()
 	if(self_message)
 		show_message(self_message, MSG_VISUAL, blind_message, MSG_AUDIBLE)
@@ -342,10 +337,10 @@
  * * deaf_message (optional) is what deaf people will see.
  * * hearing_distance (optional) is the range, how many tiles away the message can be heard.
  */
-/atom/proc/audible_message(message, deaf_message, hearing_distance = DEFAULT_MESSAGE_RANGE, self_message, audible_message_flags = NONE, separation = " ", pref_to_check) // NOVA EDIT ADDITION - Better emotes, pref checks
+/atom/proc/audible_message(message, deaf_message, hearing_distance = DEFAULT_MESSAGE_RANGE, self_message, audible_message_flags = NONE, separation = " ") // SKYRAT EDIT ADDITION - Better emotes
 	var/list/hearers = get_hearers_in_view(hearing_distance, src)
 
-	//NOVA EDIT ADDITION BEGIN - AI QoL
+	//SKYRAT EDIT ADDITION BEGIN - AI QoL
 	for(var/mob/camera/ai_eye/ai_eye in hearers)
 		if(ai_eye.ai?.client && !(ai_eye.ai.stat == DEAD))
 			hearers -= ai_eye
@@ -354,18 +349,14 @@
 	for(var/obj/effect/overlay/holo_pad_hologram/holo in hearers)
 		if(holo.Impersonation?.client)
 			hearers |= holo.Impersonation
-	//NOVA EDIT ADDITION END - AI QoL
+	//SKYRAT EDIT ADDITION END - AI QoL
 
 	if(self_message)
 		hearers -= src
 	var/raw_msg = message
 	if(audible_message_flags & EMOTE_MESSAGE)
-		message = "<span class='emote'><b>[src]</b>[separation][message]</span>" //NOVA EDIT CHANGE
+		message = "<span class='emote'><b>[src]</b>[separation][message]</span>" //SKYRAT EDIT CHANGE
 	for(var/mob/M in hearers)
-	// NOVA EDIT ADDITION - Emote pref checks
-		if(pref_to_check && !M.client?.prefs.read_preference(pref_to_check))
-			continue
-	// NOVA EDIT END
 		if(audible_message_flags & EMOTE_MESSAGE && runechat_prefs_check(M, audible_message_flags) && M.can_hear())
 			M.create_chat_message(src, raw_message = raw_msg, runechat_flags = audible_message_flags)
 		M.show_message(message, MSG_AUDIBLE, deaf_message, MSG_VISUAL)
@@ -381,7 +372,7 @@
  * * deaf_message (optional) is what deaf people will see.
  * * hearing_distance (optional) is the range, how many tiles away the message can be heard.
  */
-/mob/audible_message(message, deaf_message, hearing_distance = DEFAULT_MESSAGE_RANGE, self_message, audible_message_flags = NONE, separation = " ", pref_to_check) // NOVA EDIT ADDITION - Better emotes, pref checks
+/mob/audible_message(message, deaf_message, hearing_distance = DEFAULT_MESSAGE_RANGE, self_message, audible_message_flags = NONE, separation = " ") // SKYRAT EDIT ADDITION - Better emotes
 	. = ..()
 	if(self_message)
 		show_message(self_message, MSG_AUDIBLE, deaf_message, MSG_VISUAL)
@@ -502,7 +493,7 @@
  *
  * returns 0 if it cannot, 1 if successful
  */
-/mob/proc/equip_to_appropriate_slot(obj/item/W, qdel_on_fail = FALSE, indirect_action = FALSE, blacklist, initial) //NOVA EDIT CHANGE
+/mob/proc/equip_to_appropriate_slot(obj/item/W, qdel_on_fail = FALSE, indirect_action = FALSE, blacklist, initial) //SKYRAT EDIT CHANGE
 
 	if(!istype(W))
 		return FALSE
@@ -520,7 +511,7 @@
 			ITEM_SLOT_DEX_STORAGE\
 		)
 
-	//NOVA EDIT CHANGE BEGIN - CUSTOMIZATION
+	//SKYRAT EDIT CHANGE BEGIN - CUSTOMIZATION
 	/*
 	for(var/slot in slot_priority)
 		if(equip_to_slot_if_possible(W, slot, FALSE, TRUE, TRUE, FALSE, FALSE)) //qdel_on_fail = FALSE; disable_warning = TRUE; redraw_mob = TRUE;
@@ -529,7 +520,7 @@
 		slot_priority -= blacklist
 	for(var/slot in slot_priority)
 		if(equip_to_slot_if_possible(W, slot, FALSE, TRUE, TRUE, FALSE, initial, indirect_action = indirect_action)) //qdel_on_fail = FALSE; disable_warning = TRUE; redraw_mob = TRUE;
-	//NOVA EDIT CHANGE END
+	//SKYRAT EDIT CHANGE END
 			return TRUE
 
 	if(qdel_on_fail)
@@ -618,14 +609,13 @@
 				result += span_notice("<i>You examine [examinify] closer, but find nothing of interest...</i>")
 		else
 			result = examinify.examine(src)
-			SEND_SIGNAL(src, COMSIG_MOB_EXAMINING, examinify, result)
 			client.recent_examines[ref_to_atom] = world.time // set to when we last normal examine'd them
 			addtimer(CALLBACK(src, PROC_REF(clear_from_recent_examines), ref_to_atom), RECENT_EXAMINE_MAX_WINDOW)
 			handle_eye_contact(examinify)
 	else
 		result = examinify.examine(src) // if a tree is examined but no client is there to see it, did the tree ever really exist?
 
-	//NOVA EDIT CHANGE
+	//SKYRAT EDIT CHANGE
 	if(result.len)
 		for(var/i = 1; i <= length(result); i++)
 			if(result[i] != EXAMINE_SECTION_BREAK)
@@ -635,10 +625,11 @@
 				if((i == 1) || (i == length(result)) || (result[i - 1] == EXAMINE_SECTION_BREAK))
 					result.Cut(i, i + 1)
 					i--
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 
 	to_chat(src, examine_block("<span class='infoplain'>[result.Join()]</span>"))
 	SEND_SIGNAL(src, COMSIG_MOB_EXAMINATE, examinify)
+
 
 /mob/proc/blind_examine_check(atom/examined_thing)
 	return TRUE //The non-living will always succeed at this check.
@@ -753,8 +744,6 @@
 /mob/proc/can_resist()
 	return FALSE //overridden in living.dm
 
-#define SPIN_PROC_TRAIT "trait_from_spin()"
-
 ///Spin this mob around it's central axis
 /mob/proc/spin(spintime, speed)
 	set waitfor = 0
@@ -762,7 +751,7 @@
 	if((spintime < 1) || (speed < 1) || !spintime || !speed)
 		return
 
-	ADD_TRAIT(src, TRAIT_SPINNING, SPIN_PROC_TRAIT)
+	flags_1 |= IS_SPINNING_1
 	while(spintime >= speed)
 		sleep(speed)
 		switch(D)
@@ -776,9 +765,7 @@
 				D = NORTH
 		setDir(D)
 		spintime -= speed
-	REMOVE_TRAIT(src, TRAIT_SPINNING, SPIN_PROC_TRAIT)
-
-#undef SPIN_PROC_TRAIT
+	flags_1 &= ~IS_SPINNING_1
 
 ///Update the pulling hud icon
 /mob/proc/update_pull_hud_icon()
@@ -849,12 +836,12 @@
 	if(!check_respawn_delay())
 		return
 
-	//NOVA EDIT ADDITION
+	//SKYRAT EDIT ADDITION
 	if(ckey)
 		if(is_banned_from(ckey, BAN_RESPAWN))
 			to_chat(usr, "<span class='boldnotice'>You are respawn banned, you can't respawn!</span>")
 			return
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 
 	usr.log_message("used the respawn button.", LOG_GAME)
 
@@ -1050,11 +1037,11 @@
 	if(mind)
 		return mind.grab_ghost(force = force)
 
-///Notify a ghost that its body is being revived
-/mob/proc/notify_revival(message = "Someone is trying to revive you. Re-enter your corpse if you want to be revived!", sound = 'sound/effects/genetics.ogg', atom/source = null, flashwindow = TRUE)
+///Notify a ghost that it's body is being cloned
+/mob/proc/notify_ghost_cloning(message = "Someone is trying to revive you. Re-enter your corpse if you want to be revived!", sound = 'sound/effects/genetics.ogg', atom/source = null, flashwindow)
 	var/mob/dead/observer/ghost = get_ghost()
 	if(ghost)
-		ghost.send_revival_notification(message, sound, source, flashwindow)
+		ghost.notify_cloning(message, sound, source, flashwindow)
 		return ghost
 
 /**
@@ -1254,24 +1241,14 @@
 
 	log_message("[src] name changed from [oldname] to [newname]", LOG_OWNERSHIP)
 
-	log_played_names(
-		ckey,
-		list(
-			"[newname]" = tag,
-		),
-	)
+	log_played_names(ckey, newname)
 
 	real_name = newname
 	name = newname
 	if(mind)
 		mind.name = newname
 		if(mind.key)
-			log_played_names(
-				ckey(mind.key),
-				list(
-					"[newname]" = tag,
-				),
-			) //Just in case the mind is unsynced at the moment.
+			log_played_names(mind.key,newname) //Just in case the mind is unsynced at the moment.
 
 	if(oldname)
 		//update the datacore records! This is goig to be a bit costly.
@@ -1285,11 +1262,7 @@
 				// Only update if this player is a target
 				if(obj.target && obj.target.current && obj.target.current.real_name == name)
 					obj.update_explanation_text()
-		if(client) // NOVA EDIT ADDITION - Update the mob chat color list, removing the old name
-			GLOB.chat_colors_by_mob_name -= oldname // NOVA EDIT ADDITION
 
-	if(client) // NOVA EDIT ADDITION - Update the mob chat color list, adding the new name
-		GLOB.chat_colors_by_mob_name[name] = list(chat_color, chat_color_darkened) // NOVA EDIT ADDITION
 	log_mob_tag("TAG: [tag] RENAMED: [key_name(src)]")
 
 	return TRUE
@@ -1397,6 +1370,10 @@
 			to_chat(src, span_warning("You can't write with the [writing_instrument]!"))
 		return FALSE
 
+	if(HAS_MIND_TRAIT(src, TRAIT_MIMING) && !istype(writing_instrument, /obj/item/toy/crayon/mime))
+		to_chat(src, span_warning("Your vow of silence is preventing you from talking with text."))
+		return FALSE
+
 	if(!is_literate())
 		to_chat(src, span_warning("You try to write, but don't know how to spell anything!"))
 		return FALSE
@@ -1475,80 +1452,62 @@
 
 /mob/vv_do_topic(list/href_list)
 	. = ..()
-
-	if(!.)
-		return
-
 	if(href_list[VV_HK_REGEN_ICONS])
 		if(!check_rights(NONE))
 			return
 		regenerate_icons()
-
 	if(href_list[VV_HK_PLAYER_PANEL])
 		if(!check_rights(NONE))
 			return
 		usr.client.holder.show_player_panel(src)
-
 	if(href_list[VV_HK_GODMODE])
 		if(!check_rights(R_ADMIN))
 			return
 		usr.client.cmd_admin_godmode(src)
-
 	if(href_list[VV_HK_GIVE_MOB_ACTION])
 		if(!check_rights(NONE))
 			return
 		usr.client.give_mob_action(src)
-
 	if(href_list[VV_HK_REMOVE_MOB_ACTION])
 		if(!check_rights(NONE))
 			return
 		usr.client.remove_mob_action(src)
-
 	if(href_list[VV_HK_GIVE_SPELL])
 		if(!check_rights(NONE))
 			return
 		usr.client.give_spell(src)
-
 	if(href_list[VV_HK_REMOVE_SPELL])
 		if(!check_rights(NONE))
 			return
 		usr.client.remove_spell(src)
-
 	if(href_list[VV_HK_GIVE_DISEASE])
 		if(!check_rights(NONE))
 			return
 		usr.client.give_disease(src)
-
 	if(href_list[VV_HK_GIB])
 		if(!check_rights(R_FUN))
 			return
 		usr.client.cmd_admin_gib(src)
-
 	if(href_list[VV_HK_BUILDMODE])
 		if(!check_rights(R_BUILD))
 			return
 		togglebuildmode(src)
-
 	if(href_list[VV_HK_DROP_ALL])
 		if(!check_rights(NONE))
 			return
 		usr.client.cmd_admin_drop_everything(src)
-
 	if(href_list[VV_HK_DIRECT_CONTROL])
 		if(!check_rights(NONE))
 			return
 		usr.client.cmd_assume_direct_control(src)
-
 	if(href_list[VV_HK_GIVE_DIRECT_CONTROL])
 		if(!check_rights(NONE))
 			return
 		usr.client.cmd_give_direct_control(src)
-
 	if(href_list[VV_HK_OFFER_GHOSTS])
 		if(!check_rights(NONE))
 			return
 		offer_control(src)
-
 	if(href_list[VV_HK_VIEW_PLANES])
 		if(!check_rights(R_DEBUG))
 			return
@@ -1612,6 +1571,10 @@
 
 /mob/vv_edit_var(var_name, var_value)
 	switch(var_name)
+		if(NAMEOF(src, control_object))
+			var/obj/O = var_value
+			if(!istype(O) || (O.obj_flags & DANGEROUS_POSSESSION))
+				return FALSE
 		if(NAMEOF(src, machine))
 			set_machine(var_value)
 			. = TRUE

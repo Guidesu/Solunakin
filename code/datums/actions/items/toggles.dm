@@ -15,8 +15,8 @@
 	name = "Toggle Hood"
 
 /datum/action/item_action/toggle_firemode
-	button_icon = 'modular_nova/master_files/icons/mob/actions/actions_items.dmi' //NOVA EDIT ADDITION
-	button_icon_state = "fireselect_no" //NOVA EDIT ADDITION
+	button_icon = 'modular_skyrat/master_files/icons/mob/actions/actions_items.dmi' //SKYRAT EDIT ADDITION
+	button_icon_state = "fireselect_no" //SKYRAT EDIT ADDITION
 	name = "Toggle Firemode"
 
 /datum/action/item_action/toggle_gunlight
@@ -81,17 +81,6 @@
 	if(!istype(linked_jetpack) || !linked_jetpack.on)
 		return FALSE
 	return ..()
-
-/datum/action/item_action/toggle_hud
-	name = "Toggle Implant HUD"
-	desc = "Disables your HUD implant's visuals. You can still access examine information."
-
-/datum/action/item_action/toggle_hud/Trigger(trigger_flags)
-	. = ..()
-	if(!.)
-		return
-	var/obj/item/organ/internal/cyberimp/eyes/hud/hud_implant = target
-	hud_implant.toggle_hud(owner)
 
 /datum/action/item_action/wheelys
 	name = "Toggle Wheels"

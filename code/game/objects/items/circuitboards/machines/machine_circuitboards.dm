@@ -255,8 +255,7 @@
 	build_path = /obj/machinery/ntnet_relay
 	req_components = list(
 		/obj/item/stack/cable_coil = 2,
-		/datum/stock_part/filter = 1,
-	)
+		/datum/stock_part/filter = 1)
 
 /obj/item/circuitboard/machine/pacman
 	name = "PACMAN-type Generator"
@@ -283,7 +282,7 @@
 /obj/item/circuitboard/machine/turbine_compressor
 	name = "Turbine - Inlet Compressor"
 	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-	build_path = /obj/machinery/power/turbine/inlet_compressor
+	build_path = /obj/machinery/power/turbine/inlet_compressor/constructed
 	req_components = list(
 		/obj/item/stack/cable_coil = 5,
 		/obj/item/stack/sheet/iron = 5)
@@ -291,7 +290,7 @@
 /obj/item/circuitboard/machine/turbine_rotor
 	name = "Turbine - Core Rotor"
 	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-	build_path = /obj/machinery/power/turbine/core_rotor
+	build_path = /obj/machinery/power/turbine/core_rotor/constructed
 	req_components = list(
 		/obj/item/stack/cable_coil = 5,
 		/obj/item/stack/sheet/iron = 5)
@@ -299,7 +298,7 @@
 /obj/item/circuitboard/machine/turbine_stator
 	name = "Turbine - Turbine Outlet"
 	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-	build_path = /obj/machinery/power/turbine/turbine_outlet
+	build_path = /obj/machinery/power/turbine/turbine_outlet/constructed
 	req_components = list(
 		/obj/item/stack/cable_coil = 5,
 		/obj/item/stack/sheet/iron = 5)
@@ -551,7 +550,7 @@
 
 /obj/item/circuitboard/machine/smartfridge/apply_default_parts(obj/machinery/smartfridge/smartfridge)
 	build_path = smartfridge.base_build_path
-	if(!fridges_name_paths.Find(build_path))
+	if(!fridges_name_paths.Find(build_path, fridges_name_paths))
 		name = "[initial(smartfridge.name)]" //if it's a unique type, give it a unique name.
 		is_special_type = TRUE
 	return ..()
@@ -656,17 +655,17 @@
 		/obj/machinery/vending/robotics = "Robotech Deluxe",
 		/obj/machinery/vending/engineering = "Robco Tool Maker",
 		/obj/machinery/vending/sovietsoda = "BODA",
-		/obj/machinery/vending/security = "Armadyne Peacekeeper Equipment Vendor", //NOVA EDIT CHANGE - SEC_HUAL - ORIGINAL: /obj/machinery/vending/security = "SecTech",
+		/obj/machinery/vending/security = "Armadyne Peacekeeper Equipment Vendor", //SKYRAT EDIT CHANGE - SEC_HUAL - ORIGINAL: /obj/machinery/vending/security = "SecTech",
 		/obj/machinery/vending/modularpc = "Deluxe Silicate Selections",
 		/obj/machinery/vending/tool = "YouTool",
 		/obj/machinery/vending/custom = "Custom Vendor",
-		/obj/machinery/vending/dorms = "LustWish",	//NOVA EDIT CHANGE - ERP UPDATE - ORIGINAL: /obj/machinery/vending/dorms = "KinkVend"
-		/obj/machinery/vending/access/command = "Command Outfitting Station", //NOVA EDIT ADDITION
-		/obj/machinery/vending/barbervend = "Fab-O-Vend", //NOVA EDIT ADDITION
-		/obj/machinery/vending/imported = "NT Sustenance Supplier", //NOVA EDIT ADDITION
-		/obj/machinery/vending/imported/yangyu = "Fudobenda", //NOVA EDIT ADDITION
-		/obj/machinery/vending/imported/mothic = "Nomad Fleet Ration Chit Exchange", //NOVA EDIT ADDITION
-		/obj/machinery/vending/imported/tiziran = "Tiziran Imported Delicacies",) //NOVA EDIT ADDITION
+		/obj/machinery/vending/dorms = "LustWish",	//SKYRAT EDIT CHANGE - ERP UPDATE - ORIGINAL: /obj/machinery/vending/dorms = "KinkVend"
+		/obj/machinery/vending/access/command = "Command Outfitting Station", //SKYRAT EDIT ADDITION
+		/obj/machinery/vending/barbervend = "Fab-O-Vend", //SKYRAT EDIT ADDITION
+		/obj/machinery/vending/imported = "NT Sustenance Supplier", //SKYRAT EDIT ADDITION
+		/obj/machinery/vending/imported/yangyu = "Fudobenda", //SKYRAT EDIT ADDITION
+		/obj/machinery/vending/imported/mothic = "Nomad Fleet Ration Chit Exchange", //SKYRAT EDIT ADDITION
+		/obj/machinery/vending/imported/tiziran = "Tiziran Imported Delicacies",) //SKYRAT EDIT ADDITION
 
 /obj/item/circuitboard/machine/vendor/screwdriver_act(mob/living/user, obj/item/tool)
 	var/static/list/display_vending_names_paths
@@ -968,8 +967,7 @@
 	req_components = list(
 		/datum/stock_part/scanning_module = 1,
 		/datum/stock_part/servo = 1,
-		/datum/stock_part/micro_laser = 1,
-	)
+		/datum/stock_part/micro_laser = 1)
 
 /obj/item/circuitboard/machine/experimentor
 	name = "E.X.P.E.R.I-MENTOR"
@@ -1564,12 +1562,3 @@
 		/obj/item/stack/sheet/plasteel = 2,
 	)
 
-/obj/item/circuitboard/machine/shieldwallgen
-	name = "Shield Wall Generator"
-	greyscale_colors = CIRCUIT_COLOR_SCIENCE
-	build_path = /obj/machinery/power/shieldwallgen
-	req_components = list(
-		/datum/stock_part/capacitor/tier2 = 2,
-		/datum/stock_part/micro_laser/tier2 = 2,
-		/obj/item/stack/sheet/plasteel = 2,
-	)

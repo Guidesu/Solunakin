@@ -95,11 +95,10 @@ GLOBAL_LIST_INIT(testing_global_profiler, list("_PROFILE_NAME" = "Global"))
  * * color - color of the log text
  * * log_globally - boolean checking whether or not we write this log to the log file
  */
-/atom/proc/log_message(message, message_type, color = null, log_globally = TRUE, list/data)
+/atom/proc/log_message(message, message_type, color = null, log_globally = TRUE)
 	if(!log_globally)
 		return
-
-	//NOVA EDIT ADDITION BEGIN
+	//SKYRAT EDIT ADDITION BEGIN
 	#ifndef SPACEMAN_DMM
 	if(CONFIG_GET(flag/sql_game_log) && CONFIG_GET(flag/sql_enabled))
 		SSdbcore.add_log_to_mass_insert_queue(
@@ -116,61 +115,61 @@ GLOBAL_LIST_INIT(testing_global_profiler, list("_PROFILE_NAME" = "Global"))
 		if(!CONFIG_GET(flag/file_game_log))
 			return
 	#endif
-	//NOVA EDIT ADDITION END
-	var/log_text = "[key_name_and_tag(src)] [message] [loc_name(src)]"
+	//SKYRAT EDIT ADDITION END
+	var/log_text = "[key_name(src)] [message] [loc_name(src)]"
 	switch(message_type)
 		/// ship both attack logs and victim logs to the end of round attack.log just to ensure we don't lose information
 		if(LOG_ATTACK, LOG_VICTIM)
-			log_attack(log_text, data)
+			log_attack(log_text)
 		if(LOG_SAY)
-			log_say(log_text, data)
+			log_say(log_text)
 		if(LOG_WHISPER)
-			log_whisper(log_text, data)
+			log_whisper(log_text)
 		if(LOG_EMOTE)
-			log_emote(log_text, data)
-		//NOVA EDIT ADDITION BEGIN
+			log_emote(log_text)
+		//SKYRAT EDIT ADDITION BEGIN
 		if(LOG_SUBTLE)
-			log_subtle(log_text, data)
+			log_subtle(log_text)
 		if(LOG_SUBTLER)
-			log_subtler(log_text, data)
-		//NOVA EDIT ADDITION END
+			log_subtler(log_text)
+		//SKYRAT EDIT ADDITION END
 		if(LOG_RADIO_EMOTE)
-			log_radio_emote(log_text, data)
+			log_radio_emote(log_text)
 		if(LOG_DSAY)
-			log_dsay(log_text, data)
+			log_dsay(log_text)
 		if(LOG_PDA)
-			log_pda(log_text, data)
+			log_pda(log_text)
 		if(LOG_CHAT)
-			log_chat(log_text, data)
+			log_chat(log_text)
 		if(LOG_COMMENT)
-			log_comment(log_text, data)
+			log_comment(log_text)
 		if(LOG_TELECOMMS)
-			log_telecomms(log_text, data)
+			log_telecomms(log_text)
 		if(LOG_TRANSPORT)
-			log_transport(log_text, data)
+			log_transport(log_text)
 		if(LOG_ECON)
-			log_econ(log_text, data)
+			log_econ(log_text)
 		if(LOG_OOC)
-			log_ooc(log_text, data)
+			log_ooc(log_text)
 		if(LOG_ADMIN)
-			log_admin(log_text, data)
+			log_admin(log_text)
 		if(LOG_ADMIN_PRIVATE)
-			log_admin_private(log_text, data)
+			log_admin_private(log_text)
 		if(LOG_ASAY)
-			log_adminsay(log_text, data)
+			log_adminsay(log_text)
 		if(LOG_OWNERSHIP)
-			log_game(log_text, data)
+			log_game(log_text)
 		if(LOG_GAME)
-			log_game(log_text, data)
+			log_game(log_text)
 		if(LOG_MECHA)
-			log_mecha(log_text, data)
+			log_mecha(log_text)
 		if(LOG_SHUTTLE)
-			log_shuttle(log_text, data)
+			log_shuttle(log_text)
 		if(LOG_SPEECH_INDICATORS)
-			log_speech_indicators(log_text, data)
+			log_speech_indicators(log_text)
 		else
 			stack_trace("Invalid individual logging type: [message_type]. Defaulting to [LOG_GAME] (LOG_GAME).")
-			log_game(log_text, data)
+			log_game(log_text)
 
 /* For logging round startup. */
 /proc/start_log(log)
@@ -266,13 +265,6 @@ GLOBAL_LIST_INIT(testing_global_profiler, list("_PROFILE_NAME" = "Global"))
 
 /proc/key_name_admin(whom, include_name = TRUE)
 	return key_name(whom, TRUE, include_name)
-
-/proc/key_name_and_tag(whom, include_link = null, include_name = TRUE)
-	var/tag = "!tagless!" // whom can be null in key_name() so lets set this as a safety
-	if(isatom(whom))
-		var/atom/subject = whom
-		tag = subject.tag
-	return "[key_name(whom, include_link, include_name)] ([tag])"
 
 /proc/loc_name(atom/A)
 	if(!istype(A))

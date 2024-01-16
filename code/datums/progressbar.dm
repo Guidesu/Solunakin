@@ -80,7 +80,9 @@
 		clean_user_client()
 
 	bar_loc = null
-	bar = null
+
+	if(bar)
+		QDEL_NULL(bar)
 
 	return ..()
 

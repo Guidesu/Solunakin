@@ -97,9 +97,7 @@
 /turf/open/floor/grass,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "O" = (
-/obj/modular_map_root/safehouse{
-	key = "shuttle_space"
-	},
+/obj/effect/landmark/bitrunning/safehouse_spawn,
 /turf/template_noop,
 /area/virtual_domain/safehouse)
 "Q" = (

@@ -7,7 +7,7 @@
 	icon = 'icons/mob/mech_construct.dmi'
 	icon_state = "blank"
 	w_class = WEIGHT_CLASS_GIGANTIC
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 
 /obj/item/mecha_parts/proc/try_attach_part(mob/user, obj/vehicle/sealed/mecha/M, attach_right = FALSE) //For attaching parts to a finished mech
 	if(!user.transferItemToLoc(src, M))
@@ -336,12 +336,12 @@
 
 /obj/item/circuitboard/mecha
 	name = "exosuit circuit board"
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = 'icons/obj/assemblies/module.dmi'
 	icon_state = "std_mod"
 	inhand_icon_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	force = 5
 	w_class = WEIGHT_CLASS_SMALL
 	throwforce = 0

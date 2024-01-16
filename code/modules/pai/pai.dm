@@ -31,7 +31,7 @@
 
 	/// If someone has enabled/disabled the pAIs ability to holo
 	var/can_holo = TRUE
-	/// Whether this pAI can receive radio messages
+	/// Whether this pAI can recieve radio messages
 	var/can_receive = TRUE
 	/// Whether this pAI can transmit radio messages
 	var/can_transmit = TRUE
@@ -71,6 +71,8 @@
 	// Onboard Items
 	/// Atmospheric analyzer
 	var/obj/item/analyzer/atmos_analyzer
+	/// Health analyzer
+	var/obj/item/healthanalyzer/host_scan
 	/// GPS
 	var/obj/item/gps/pai/internal_gps
 	/// Music Synthesizer
@@ -151,6 +153,7 @@
 /mob/living/silicon/pai/Destroy()
 	QDEL_NULL(atmos_analyzer)
 	QDEL_NULL(hacking_cable)
+	QDEL_NULL(host_scan)
 	QDEL_NULL(instrument)
 	QDEL_NULL(internal_gps)
 	QDEL_NULL(newscaster)
@@ -166,9 +169,9 @@
 /mob/living/silicon/pai/examine(mob/user)
 	. = ..()
 	. += "Its master ID string seems to be [(!master_name || emagged) ? "empty" : master_name]."
-	//NOVA EDIT ADDITION BEGIN - CUSTOMIZATION
+	//SKYRAT EDIT ADDITION BEGIN - CUSTOMIZATION
 	. += get_silicon_flavortext()
-	//NOVA EDIT ADDITION END
+	//SKYRAT EDIT ADDITION END
 
 /mob/living/silicon/pai/get_status_tab_items()
 	. += ..()
@@ -182,6 +185,8 @@
 		atmos_analyzer = null
 	else if(gone == aicamera)
 		aicamera = null
+	else if(gone == host_scan)
+		host_scan = null
 	else if(gone == internal_gps)
 		internal_gps = null
 	else if(gone == instrument)
@@ -258,15 +263,6 @@
 	icon_state = resting ? "[chassis]_rest" : "[chassis]"
 	held_state = "[chassis]"
 	return ..()
-
-/mob/living/silicon/pai/set_stat(new_stat)
-	. = ..()
-	update_stat()
-
-/mob/living/silicon/pai/on_knockedout_trait_loss(datum/source)
-	. = ..()
-	set_stat(CONSCIOUS)
-	update_stat()
 
 /**
  * Resolves the weakref of the pai's master.

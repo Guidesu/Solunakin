@@ -21,10 +21,10 @@
  * is handled by the hotspot itself, specifically perform_exposure().
  */
 /turf/open/hotspot_expose(exposed_temperature, exposed_volume, soh)
-	//NOVA EDIT ADDITION
+	//SKYRAT EDIT ADDITION
 	if(liquids && !liquids.fire_state && liquids.check_fire(TRUE))
 		SSliquids.processing_fire[src] = TRUE
-	//NOVA EDIT END
+	//SKYRAT EDIT END
 
 	//If the air doesn't exist we just return false
 	var/list/air_gases = air?.gases

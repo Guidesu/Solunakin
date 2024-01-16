@@ -15,8 +15,7 @@
 /obj/item/reagent_containers/cup/glass/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum, do_splash = TRUE)
 	. = ..()
 	if(!.) //if the bottle wasn't caught
-		var/mob/thrower = throwingdatum?.get_thrower()
-		smash(hit_atom, thrower, TRUE)
+		smash(hit_atom, throwingdatum?.thrower, TRUE)
 
 /obj/item/reagent_containers/cup/glass/proc/smash(atom/target, mob/thrower, ranged = FALSE, break_top = FALSE)
 	if(!isGlass)
@@ -52,7 +51,7 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT)
 	has_variable_transfer_amount = FALSE
 	volume = 5
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	spillable = TRUE
 	resistance_flags = FIRE_PROOF
 	isGlass = FALSE
@@ -315,9 +314,9 @@
 		return
 	if(prob(flip_chance)) // landed upright
 		src.visible_message(span_notice("[src] lands upright!"))
-		var/mob/living/thrower = throwingdatum?.get_thrower()
-		if(thrower)
-			thrower.add_mood_event("bottle_flip", /datum/mood_event/bottle_flip)
+		if(throwingdatum.thrower)
+			var/mob/living/living_thrower = throwingdatum.thrower
+			living_thrower.add_mood_event("bottle_flip", /datum/mood_event/bottle_flip)
 	else // landed on it's side
 		animate(src, transform = matrix(prob(50)? 90 : -90, MATRIX_ROTATE), time = 3, loop = 0)
 

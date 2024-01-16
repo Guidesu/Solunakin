@@ -2,7 +2,7 @@
 	name = "\improper T-ray scanner"
 	desc = "A terahertz-ray emitter and scanner used to detect underfloor objects such as cables and pipes."
 	custom_price = PAYCHECK_LOWER * 0.7
-	icon = 'icons/obj/devices/scanner.dmi'
+	icon = 'icons/obj/device.dmi'
 	icon_state = "t-ray0"
 	var/on = FALSE
 	slot_flags = ITEM_SLOT_BELT
@@ -35,7 +35,8 @@
 
 /obj/item/t_scanner/process()
 	if(!on)
-		return PROCESS_KILL
+		STOP_PROCESSING(SSobj, src)
+		return null
 	scan()
 
 /obj/item/t_scanner/proc/scan()

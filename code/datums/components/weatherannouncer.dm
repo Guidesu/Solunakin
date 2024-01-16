@@ -38,7 +38,7 @@
 	speaker.update_appearance(UPDATE_ICON)
 	update_light_color()
 
-/datum/component/weather_announcer/Destroy(force)
+/datum/component/weather_announcer/Destroy(force, silent)
 	STOP_PROCESSING(SSprocessing, src)
 	return ..()
 

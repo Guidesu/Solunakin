@@ -60,7 +60,6 @@
 	spawn_amt_left--
 	if(spawn_amt_left <= 0)
 		qdel(src)
-		return PROCESS_KILL
 
 /obj/effect/rend/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/nullrod))

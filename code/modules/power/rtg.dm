@@ -22,6 +22,7 @@
 	connect_to_network()
 
 /obj/machinery/power/rtg/process()
+	..()
 	add_avail(power_gen)
 
 /obj/machinery/power/rtg/RefreshParts()

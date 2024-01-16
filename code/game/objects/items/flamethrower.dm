@@ -6,7 +6,7 @@
 	inhand_icon_state = "flamethrower_0"
 	lefthand_file = 'icons/mob/inhands/weapons/flamethrower_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/flamethrower_righthand.dmi'
-	obj_flags = CONDUCTS_ELECTRICITY
+	flags_1 = CONDUCT_1
 	force = 3
 	throwforce = 10
 	throw_speed = 1
@@ -52,7 +52,8 @@
 
 /obj/item/flamethrower/process()
 	if(!lit || !igniter)
-		return PROCESS_KILL
+		STOP_PROCESSING(SSobj, src)
+		return null
 	var/turf/location = loc
 	if(ismob(location))
 		var/mob/M = location

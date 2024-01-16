@@ -10,7 +10,7 @@
 	circuit = /obj/item/circuitboard/machine/dish_drive
 	pass_flags = PASSTABLE
 	/// List of dishes the drive can hold
-	var/list/collectable_items = list(/obj/item/trash/waffles, // NOVA EDIT CHANGE - non-static list
+	var/list/collectable_items = list(/obj/item/trash/waffles, // SKYRAT EDIT CHANGE - non-static list
 		/obj/item/trash/waffles,
 		/obj/item/broken_bottle,
 		/obj/item/kitchen/fork,
@@ -37,7 +37,7 @@
 	var/list/dish_drive_contents
 	/// Distance this is capable of sucking dishes up over. (2 + servo tier)
 	var/suck_distance = 0
-	var/binrange = 7 //NOVA EDIT ADDITION - SEC_HAUL
+	var/binrange = 7 //SKYRAT EDIT ADDITION - SEC_HAUL
 
 	COOLDOWN_DECLARE(time_since_dishes)
 
@@ -83,7 +83,7 @@
 /obj/machinery/dish_drive/wrench_act(mob/living/user, obj/item/tool)
 	. = ..()
 	default_unfasten_wrench(user, tool)
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/dish_drive/attackby(obj/item/dish, mob/living/user, params)
 	if(is_type_in_list(dish, collectable_items) && !user.combat_mode)
@@ -152,7 +152,7 @@
 		if(manual)
 			visible_message(span_notice("[src] is empty!"))
 		return
-	var/obj/machinery/disposal/bin/bin = locate() in view(binrange, src) //NOVA EDIT CHANGE
+	var/obj/machinery/disposal/bin/bin = locate() in view(binrange, src) //SKYRAT EDIT CHANGE
 	if(!bin)
 		if(manual)
 			visible_message(span_warning("[src] buzzes. There are no disposal bins in range!"))

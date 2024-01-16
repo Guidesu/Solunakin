@@ -79,7 +79,7 @@
 	if(!reagents.total_volume)
 		RegisterSignal(reagents, COMSIG_REAGENTS_NEW_REAGENT, PROC_REF(start_autofeed))
 		return PROCESS_KILL
-	if(world.time < last_feeding + feeding_interval)
+	if(world.time + feeding_interval > last_feeding)
 		return
 	last_feeding = world.time
 	var/list/fishes = get_fishes()
@@ -159,7 +159,7 @@
 /obj/structure/aquarium/wrench_act(mob/living/user, obj/item/tool)
 	. = ..()
 	default_unfasten_wrench(user, tool)
-	return ITEM_INTERACT_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/structure/aquarium/plunger_act(obj/item/plunger/P, mob/living/user, reinforced)
 	if(!panel_open)

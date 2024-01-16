@@ -259,11 +259,11 @@
 				var/mob/living/carbon/carbon_target_mob = target_living
 				for(var/obj/item/organ/organ_to_yeet as anything in carbon_target_mob.organs)
 					var/destination = get_edge_target_turf(turf_underneath, pick(GLOB.alldirs)) //Pick a random direction to toss them in
-					// NOVA EDIT START - Non-spillable organs
+					// SKYRAT EDIT START - Non-spillable organs
 					if(!organ_to_yeet.drop_when_organ_spilling)
 						qdel(organ_to_yeet)
 						continue
-					// NOVA EDIT END
+					// SKYRAT EDIT END
 					organ_to_yeet.Remove(carbon_target_mob) //Note that this isn't the same proc as for lists
 					organ_to_yeet.forceMove(turf_underneath) //Move the organ outta the body
 					organ_to_yeet.throw_at(destination, 2, 3) //Thow the organ at a random tile 3 spots away
@@ -319,7 +319,7 @@
 	if (openingSound)
 		playsound(get_turf(holder), openingSound, soundVolume, FALSE, FALSE) //Special admin sound to play
 	for (var/turf_type in turfs_in_cargo)
-		turf_underneath.place_on_top(turf_type)
+		turf_underneath.PlaceOnTop(turf_type)
 	for (var/cargo in holder.contents)
 		var/atom/movable/movable_cargo = cargo
 		movable_cargo.forceMove(turf_underneath)
@@ -703,13 +703,8 @@
 //------------------------------------UPGRADES-------------------------------------//
 /obj/item/disk/cargo/bluespace_pod //Disk that can be inserted into the Express Console to allow for Advanced Bluespace Pods
 	name = "Bluespace Drop Pod Upgrade"
-<<<<<<< HEAD
 	desc = "This disk provides a firmware update to the Express Supply Console, granting the use of Symphionia's Bluespace Drop Pods to the supply department."
 	icon = 'icons/obj/assemblies/module.dmi'
-=======
-	desc = "This disk provides a firmware update to the Express Supply Console, granting the use of Nanotrasen's Bluespace Drop Pods to the supply department."
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
->>>>>>> Nova/master
 	icon_state = "cargodisk"
 	inhand_icon_state = "card-id"
 	w_class = WEIGHT_CLASS_SMALL

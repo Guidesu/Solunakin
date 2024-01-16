@@ -58,7 +58,7 @@
 /proc/random_backpack()
 	return pick(GLOB.backpacklist)
 
-// NOVA EDIT REMOVAL - CUSTOMIZATION (moved to modular)
+//SKYRAT EDIT REMOVAL - CUSTOMIZATION (moved to modular)
 /*
 /proc/random_features()
 	if(!GLOB.tails_list.len)
@@ -113,8 +113,9 @@
 		"tail_monkey" = "Monkey",
 		"pod_hair" = pick(GLOB.pod_hair_list),
 	))
-*/
-//NOVA EDIT REMOVAL END
+	*/
+	//SKYRAT EDIT REMOVAL END
+
 
 /proc/random_hairstyle(gender)
 	switch(gender)
@@ -218,7 +219,7 @@ GLOBAL_LIST_EMPTY(species_list)
 
 /proc/age2agedescription(age)
 	switch(age)
-		if(0 to 30) //NOVA EDIT CHANGE - NO
+		if(0 to 30) //SKYRAT EDIT CHANGE - NO
 			return "young adult"
 		if(30 to 45)
 			return "adult"
@@ -588,6 +589,8 @@ GLOBAL_LIST_EMPTY(species_list)
 
 #define ISADVANCEDTOOLUSER(mob) (HAS_TRAIT(mob, TRAIT_ADVANCEDTOOLUSER) && !HAS_TRAIT(mob, TRAIT_DISCOORDINATED_TOOL_USER))
 
+#define IS_IN_STASIS(mob) (mob.has_status_effect(/datum/status_effect/grouped/stasis) || mob.has_status_effect(/datum/status_effect/embryonic))
+
 /// Gets the client of the mob, allowing for mocking of the client.
 /// You only need to use this if you know you're going to be mocking clients somewhere else.
 #define GET_CLIENT(mob) (##mob.client || ##mob.mock_client)
@@ -623,11 +626,12 @@ GLOBAL_LIST_EMPTY(species_list)
 		moblist += mob_to_sort
 	for(var/mob/living/basic/mob_to_sort in sortmob)
 		moblist += mob_to_sort
-	// NOVA EDIT START - SOULCATCHERS
+	// SKYRAT EDIT START - SOULCATCHERS
 	for(var/mob/living/soulcatcher_soul/mob_to_sort in sortmob)
 		moblist += mob_to_sort
-	// NOVA EDIT END - SOULCATCHERS
+	// SKYRAT EDIT END - SOULCATCHERS
 	return moblist
+
 ///returns a mob type controlled by a specified ckey
 /proc/get_mob_by_ckey(key)
 	if(!key)
@@ -706,6 +710,11 @@ GLOBAL_LIST_EMPTY(species_list)
 
 	if(isliving(occupant))
 		mob_occupant = occupant
+
+	else if(isbodypart(occupant))
+		var/obj/item/bodypart/head/head = occupant
+
+		mob_occupant = head.brainmob
 
 	else if(isorgan(occupant))
 		var/obj/item/organ/internal/brain/brain = occupant

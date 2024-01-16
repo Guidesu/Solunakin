@@ -29,7 +29,7 @@
 	else if(!isnull(remove_on))
 		RegisterSignal(parent, remove_on, PROC_REF(handle_removal))
 
-/datum/component/area_sound_manager/Destroy(force)
+/datum/component/area_sound_manager/Destroy(force, silent)
 	QDEL_NULL(our_loop)
 	. = ..()
 

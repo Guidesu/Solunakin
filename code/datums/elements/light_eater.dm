@@ -4,10 +4,6 @@
  * The temporary equivalent is [/datum/component/light_eater]
  */
 /datum/element/light_eater
-	var/static/list/blacklisted_areas = typecacheof(list(
-		/turf/open/space,
-		/turf/open/lava,
-	))
 
 /datum/element/light_eater/Attach(datum/target)
 	if(isatom(target))
@@ -87,9 +83,8 @@
  * - [eater][/datum]: The light eater eating the morsel. This is the datum that the element is attached to that started this chain.
  */
 /datum/element/light_eater/proc/devour(atom/morsel, datum/eater)
-	if(is_type_in_typecache(morsel, blacklisted_areas))
-		return FALSE
-	if(istransparentturf(morsel))
+	var/static/list/undevourable = typecacheof(list(/turf/open/space))
+	if(is_type_in_typecache(morsel, undevourable))
 		return FALSE
 	if(morsel.light_power <= 0 || morsel.light_range <= 0 || !morsel.light_on)
 		return FALSE

@@ -197,14 +197,14 @@
 				continue
 			regurgitate_guardian(guardian)
 
-/obj/item/clothing/neck/necklace/memento_mori/proc/consume_guardian(mob/living/basic/guardian/guardian)
+/obj/item/clothing/neck/necklace/memento_mori/proc/consume_guardian(mob/living/simple_animal/hostile/guardian/guardian)
 	new /obj/effect/temp_visual/guardian/phase/out(get_turf(guardian))
 	guardian.locked = TRUE
 	guardian.forceMove(src)
 	to_chat(guardian, span_userdanger("You have been locked away in your summoner's pendant!"))
 	guardian.playsound_local(get_turf(guardian), 'sound/magic/summonitems_generic.ogg', 50, TRUE)
 
-/obj/item/clothing/neck/necklace/memento_mori/proc/regurgitate_guardian(mob/living/basic/guardian/guardian)
+/obj/item/clothing/neck/necklace/memento_mori/proc/regurgitate_guardian(mob/living/simple_animal/hostile/guardian/guardian)
 	guardian.locked = FALSE
 	guardian.recall(forced = TRUE)
 	to_chat(guardian, span_notice("You have been returned back from your summoner's pendant!"))
@@ -538,11 +538,8 @@
 	. = ..()
 	if(!ishuman(exposed_mob) || exposed_mob.stat == DEAD)
 		return
-	if(!(methods & (INGEST | TOUCH)))
-		return
 	var/mob/living/carbon/human/exposed_human = exposed_mob
-	var/obj/item/bodypart/chest/chest = exposed_human.get_bodypart(BODY_ZONE_CHEST)
-	if(!chest.wing_types || reac_volume < 5 || !exposed_human.dna)
+	if(!HAS_TRAIT(exposed_human, TRAIT_CAN_USE_FLIGHT_POTION) || reac_volume < 5 || !exposed_human.dna)
 		if((methods & INGEST) && show_message)
 			to_chat(exposed_human, span_notice("<i>You feel nothing but a terrible aftertaste.</i>"))
 		return
@@ -550,23 +547,23 @@
 		to_chat(exposed_human, span_userdanger("A terrible pain travels down your back as your wings change shape!"))
 	else
 		to_chat(exposed_human, span_userdanger("A terrible pain travels down your back as wings burst out!"))
-	var/obj/item/organ/external/wings/functional/wings = get_wing_choice(exposed_human, chest)
+	var/obj/item/organ/external/wings/functional/wings = get_wing_choice(exposed_human)
 	wings = new wings()
 	wings.Insert(exposed_human)
 	exposed_human.dna.species.handle_mutant_bodyparts(exposed_human)
 	playsound(exposed_human.loc, 'sound/items/poster_ripped.ogg', 50, TRUE, -1)
-	exposed_human.apply_damage(20, def_zone = BODY_ZONE_CHEST, forced = TRUE, wound_bonus = CANT_WOUND)
+	exposed_human.adjustBruteLoss(20)
 	exposed_human.emote("scream")
 
-/datum/reagent/flightpotion/proc/get_wing_choice(mob/needs_wings, obj/item/bodypart/chest/chest)
-	var/list/wing_types = chest.wing_types.Copy()
+/datum/reagent/flightpotion/proc/get_wing_choice(mob/living/carbon/human/needs_wings)
+	var/list/wing_types = needs_wings.dna.species.wing_types.Copy()
 	if(wing_types.len == 1 || !needs_wings.client)
 		return wing_types[1]
 	var/list/radial_wings = list()
 	var/list/name2type = list()
 	for(var/obj/item/organ/external/wings/functional/possible_type as anything in wing_types)
 		var/datum/sprite_accessory/accessory = initial(possible_type.sprite_accessory_override) //get the type
-		accessory = GLOB.sprite_accessories[initial(accessory.key)][initial(accessory.name)] //NOVA EDIT CHANGE - ORIGINAL: accessory = GLOB.wings_list[initial(accessory.name)] //get the singleton instance
+		accessory = GLOB.sprite_accessories[initial(accessory.key)][initial(accessory.name)] //SKYRAT EDIT CHANGE - ORIGINAL: accessory = GLOB.wings_list[initial(accessory.name)] //get the singleton instance
 		var/image/img = image(icon = accessory.icon, icon_state = "m_wingsopen_[accessory.icon_state]_BEHIND") //Process the HUD elements
 		img.transform *= 0.5
 		img.pixel_x = -32
@@ -591,10 +588,10 @@
 	var/turf/T = get_turf(src)
 	var/ladder_x = T.x
 	var/ladder_y = T.y
-	to_chat(user, span_notice("You unfold the ladder. It does some unknowable, eldritch twisting and turning in a dance of form, seeming to invert and fold into itself - before a satisfying click rings out.")) //NOVA EDIT - Attempts to explain why it sometimes just 'dissapears' on some z-levels.
+	to_chat(user, span_notice("You unfold the ladder. It does some unknowable, eldritch twisting and turning in a dance of form, seeming to invert and fold into itself - before a satisfying click rings out.")) //Skyrat Edit - Attempts to explain why it sometimes just 'dissapears' on some z-levels.
 	var/last_ladder = null
 	for(var/i in 1 to world.maxz)
-		if(is_centcom_level(i) || is_reserved_level(i) || is_away_level(i) || is_spaceruins_level(i)) //NOVA EDIT: Stops Jacob's ladder from piercing problematic space ruins.
+		if(is_centcom_level(i) || is_reserved_level(i) || is_away_level(i) || is_spaceruins_level(i)) //Skyrat Edit: Stops Jacob's ladder from piercing problematic space ruins.
 			continue
 		var/turf/T2 = locate(ladder_x, ladder_y, i)
 		last_ladder = new /obj/structure/ladder/unbreakable/jacob(T2, null, last_ladder)
@@ -663,7 +660,7 @@
 	icon_state = "berserker"
 	icon = 'icons/obj/clothing/suits/armor.dmi'
 	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
-	worn_icon_digi = 'modular_nova/master_files/icons/mob/clothing/suit_digi.dmi'
+	worn_icon_digi = 'modular_skyrat/master_files/icons/mob/clothing/suit_digi.dmi'
 	hoodtype = /obj/item/clothing/head/hooded/berserker
 	armor_type = /datum/armor/hooded_berserker
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -1003,8 +1000,8 @@
 	return ..()
 
 /obj/item/cursed_katana/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK, damage_type = BRUTE)
-	if(attack_type == PROJECTILE_ATTACK || attack_type == LEAP_ATTACK)
-		final_block_chance = 0 //Don't bring a sword to a gunfight, and also you aren't going to really block someone full body tackling you with a sword
+	if(attack_type == PROJECTILE_ATTACK)
+		final_block_chance = 0 //Don't bring a sword to a gunfight
 	return ..()
 
 /obj/item/cursed_katana/proc/can_combo_attack(mob/user, mob/living/target)
