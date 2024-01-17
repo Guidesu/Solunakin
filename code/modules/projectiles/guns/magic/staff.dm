@@ -136,7 +136,7 @@
 		/obj/projectile/magic/antimagic,
 		/obj/projectile/magic/arcane_barrage,
 		/obj/projectile/magic/bounty,
-		///obj/projectile/magic/change, //SKYRAT EDIT REMOVAL
+		///obj/projectile/magic/change, //NOVA EDIT REMOVAL
 		/obj/projectile/magic/death,
 		/obj/projectile/magic/door,
 		/obj/projectile/magic/fetch,
@@ -199,7 +199,6 @@
 		/obj/projectile/bullet/honker,
 		/obj/projectile/bullet/mime,
 		/obj/projectile/curse_hand,
-		/obj/projectile/energy/declone,
 		/obj/projectile/energy/electrode,
 		/obj/projectile/energy/net,
 		/obj/projectile/energy/nuclear_particle,
@@ -263,8 +262,8 @@
 	)
 
 /obj/item/gun/magic/staff/spellblade/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK, damage_type = BRUTE)
-	if(attack_type == PROJECTILE_ATTACK)
-		final_block_chance = 0
+	if(attack_type == PROJECTILE_ATTACK || attack_type == LEAP_ATTACK)
+		final_block_chance = 0 //Don't bring a sword to a gunfight, and also you aren't going to really block someone full body tackling you with a sword
 	return ..()
 
 /obj/item/gun/magic/staff/locker

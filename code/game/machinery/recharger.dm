@@ -13,8 +13,8 @@
 	var/finished_recharging = FALSE
 
 	var/static/list/allowed_devices = typecacheof(list(
-		/obj/item/stock_parts/cell/microfusion, //SKYRAT EDIT ADDITION
-		/obj/item/gun/microfusion, // SKYRAT EDIT ADDITION
+		/obj/item/stock_parts/cell/microfusion, //NOVA EDIT ADDITION
+		/obj/item/gun/microfusion, // NOVA EDIT ADDITION
 		/obj/item/gun/energy,
 		/obj/item/melee/baton/security,
 		/obj/item/ammo_box/magazine/recharge,
@@ -100,7 +100,7 @@
 			to_chat(user, span_notice("Your gun has no external power connector."))
 			return TRUE
 
-	//SKYRAT EDIT ADDITION
+	//NOVA EDIT ADDITION
 	if (istype(attacking_item, /obj/item/gun/microfusion))
 		var/obj/item/gun/microfusion/microfusion_gun = attacking_item
 		if(microfusion_gun.cell?.chargerate <= 0)
@@ -112,7 +112,7 @@
 		if(inserting_cell.chargerate <= 0)
 			to_chat(user, span_notice("[inserting_cell] cannot be recharged!"))
 			return TRUE
-	//SKYRAT EDIT END
+	//NOVA EDIT END
 
 	user.transferItemToLoc(attacking_item, src)
 	return TRUE
@@ -120,22 +120,22 @@
 /obj/machinery/recharger/wrench_act(mob/living/user, obj/item/tool)
 	if(charging)
 		to_chat(user, span_notice("Remove the charging item first!"))
-		return TOOL_ACT_SIGNAL_BLOCKING
+		return ITEM_INTERACT_BLOCKING
 	set_anchored(!anchored)
 	power_change()
 	to_chat(user, span_notice("You [anchored ? "attached" : "detached"] [src]."))
 	tool.play_tool_sound(src)
-	return TOOL_ACT_TOOLTYPE_SUCCESS
+	return ITEM_INTERACT_SUCCESS
 
 /obj/machinery/recharger/screwdriver_act(mob/living/user, obj/item/tool)
 	if(!anchored || charging)
-		return TOOL_ACT_SIGNAL_BLOCKING
+		return ITEM_INTERACT_BLOCKING
 	. = default_deconstruction_screwdriver(user, base_icon_state, base_icon_state, tool)
 	if(.)
 		update_appearance()
 
 /obj/machinery/recharger/crowbar_act(mob/living/user, obj/item/tool)
-	return (!anchored || charging) ? TOOL_ACT_SIGNAL_BLOCKING : default_deconstruction_crowbar(tool)
+	return (!anchored || charging) ? ITEM_INTERACT_BLOCKING : default_deconstruction_crowbar(tool)
 
 /obj/machinery/recharger/attack_hand(mob/user, list/modifiers)
 	. = ..()
@@ -196,13 +196,6 @@
 		var/obj/item/melee/baton/security/batong = charging
 		if(batong.cell)
 			batong.cell.charge = 0
-
-/obj/machinery/recharger/update_appearance(updates)
-	. = ..()
-	if((machine_stat & (NOPOWER|BROKEN)) || panel_open || !anchored)
-		luminosity = 0
-		return
-	luminosity = 1
 
 /obj/machinery/recharger/update_overlays()
 	. = ..()

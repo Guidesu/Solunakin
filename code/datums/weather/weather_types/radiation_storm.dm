@@ -60,7 +60,7 @@
 /datum/weather/rad_storm/end()
 	if(..())
 		return
-	priority_announce("The radiation threat has passed. Please return to your workplaces.", "Anomaly Alert", ANNOUNCER_RADIATIONPASSED) //SKYRAT EDIT CHANGE
+	priority_announce("The radiation threat has passed. Please return to your workplaces.", "Anomaly Alert", ANNOUNCER_RADIATIONPASSED) //NOVA EDIT CHANGE
 	status_alarm(FALSE)
 
 /datum/weather/rad_storm/proc/do_mutate(mob/living/carbon/human/mutant)
@@ -87,7 +87,7 @@
 
 /// Used by the radioactive nebula when the station doesnt have enough shielding
 /datum/weather/rad_storm/nebula
-	protected_areas = list(/area/shuttle)
+	protected_areas = list(/area/shuttle, /area/station/maintenance/radshelter)
 
 	weather_overlay = "nebula_radstorm"
 	weather_duration_lower = 100 HOURS

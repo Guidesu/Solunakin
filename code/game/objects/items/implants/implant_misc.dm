@@ -26,17 +26,17 @@
 		qdel(src)
 
 /obj/item/implanter/emp
-	name = "implanter" // Skyrat edit, was implanter (EMP)
+	name = "implanter" // NOVA EDIT, was implanter (EMP)
 	imp_type = /obj/item/implant/emp
-	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // Skyrat edit
-	special_desc = "A Symphionia implanter used for a EMP implant" // Skyrat edit
+	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // NOVA EDIT
+	special_desc = "A Syndicate implanter used for a EMP implant" // NOVA EDIT
 
 /obj/item/implant/radio
 	name = "internal radio implant"
 	var/obj/item/radio/radio
 	var/radio_key
 	var/subspace_transmission = FALSE
-	icon = 'icons/obj/radio.dmi'
+	icon = 'icons/obj/devices/voice.dmi'
 	icon_state = "walkietalkie"
 
 /obj/item/implant/radio/activate()
@@ -65,7 +65,7 @@
 	radio_key = /obj/item/encryptionkey/headset_cargo
 
 /obj/item/implant/radio/syndicate
-	desc = "Are you there God? It's me, Symphionia Comms Agent."
+	desc = "Are you there God? It's me, Syndicate Comms Agent."
 	radio_key = /obj/item/encryptionkey/syndicate
 	subspace_transmission = TRUE
 
@@ -88,8 +88,8 @@
 	imp_type = /obj/item/implant/radio
 
 /obj/item/implanter/radio/syndicate
-	name = "implanter" // Skyrat edit , was originally implanter (internal syndicate radio)
+	name = "implanter" // NOVA EDIT , was originally implanter (internal syndicate radio)
 	imp_type = /obj/item/implant/radio/syndicate
-	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // Skyrat edit
-	special_desc = "A Symphionia implanter used for a internal radio implant" // Skyrat edit
+	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // NOVA EDIT
+	special_desc = "A Syndicate implanter used for a internal radio implant" // NOVA EDIT
 

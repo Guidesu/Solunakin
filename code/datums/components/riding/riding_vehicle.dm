@@ -178,7 +178,7 @@
 	set_vehicle_dir_layer(WEST, OBJ_LAYER)
 
 /datum/component/riding/vehicle/scooter/skateboard/wheelys
-	vehicle_move_delay = 1.75 // SKYRAT EDIT - ORIGINAL: 0
+	vehicle_move_delay = 1.75 // NOVA EDIT - ORIGINAL: 0
 
 /datum/component/riding/vehicle/scooter/skateboard/wheelys/handle_specials()
 	. = ..()
@@ -263,12 +263,9 @@
 	return ..()
 
 /datum/component/riding/vehicle/wheelchair/motorized/driver_move(obj/vehicle/vehicle_parent, mob/living/user, direction)
-	var/speed = 1 // Should never be under 1
-	var/delay_multiplier = 6.7 // magic number from wheelchair code
-
 	var/obj/vehicle/ridden/wheelchair/motorized/our_chair = parent
-	for(var/datum/stock_part/servo/servo in our_chair.component_parts)
-		speed += servo.tier
+	var/speed = our_chair.speed
+	var/delay_multiplier = our_chair.delay_multiplier
 	vehicle_move_delay = round(CONFIG_GET(number/movedelay/run_delay) * delay_multiplier) / speed
 	return ..()
 

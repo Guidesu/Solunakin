@@ -53,21 +53,14 @@
 /// Universal Scanner mode for using the price tagger.
 #define SCAN_PRICE_TAG 3
 
-GLOBAL_LIST_EMPTY(supplypod_loading_bays)
+///Used by coupons to define that they're cursed
+#define COUPON_OMEN "omen"
 
-GLOBAL_LIST_INIT(podstyles, list(\
-	list(POD_SHAPE_NORML, "pod",         TRUE, "default", "yellow",   RUBBLE_NORMAL, "supply pod",     "A Symphionia supply drop pod."),\
-	list(POD_SHAPE_NORML, "advpod",      TRUE, "bluespace", "blue",     RUBBLE_NORMAL, "bluespace supply pod" ,     "A Symphionia Bluespace supply pod. Teleports back to CentCom after delivery."),\
-	list(POD_SHAPE_NORML, "advpod",      TRUE, "centcom", "blue",     RUBBLE_NORMAL, "\improper CentCom supply pod", "A Symphionia supply pod, this one has been marked with Conglomeration of Colonists's designations. Teleports back to CentCom after delivery."),\
-	list(POD_SHAPE_NORML, "darkpod",     TRUE, "syndicate", "red",      RUBBLE_NORMAL, "blood-red supply pod", "An intimidating supply pod, covered in the blood-red markings of the Symphionia. It's probably best to stand back from this."),\
-	list(POD_SHAPE_NORML, "darkpod",     TRUE, "deathsquad", "blue",     RUBBLE_NORMAL, "\improper Deathsquad drop pod",     "A Symphionia drop pod. This one has been marked the markings of Symphionia's elite strike team."),\
-	list(POD_SHAPE_NORML, "pod",         TRUE, "cultist", "red",      RUBBLE_NORMAL, "bloody supply pod",     "A Symphionia supply pod covered in scratch-marks, blood, and strange runes."),\
-	list(POD_SHAPE_OTHER, "missile",     FALSE, FALSE, FALSE,   RUBBLE_THIN,     "cruise missile", "A big ass missile that didn't seem to fully detonate. It was likely launched from some far-off deep space missile silo. There appears to be an auxillery payload hatch on the side, though manually opening it is likely impossible."),\
-	list(POD_SHAPE_OTHER, "smissile",    FALSE, FALSE,         FALSE,   RUBBLE_THIN,     "\improper Symphionia cruise missile", "A big ass, blood-red missile that didn't seem to fully detonate. It was likely launched from some deep space Symphionia missile silo. There appears to be an auxillery payload hatch on the side, though manually opening it is likely impossible."),\
-	list(POD_SHAPE_OTHER, "box",         TRUE, FALSE,            FALSE,   RUBBLE_WIDE, "\improper Aussec supply crate", "An incredibly sturdy supply crate, designed to withstand orbital re-entry. Has 'Aussec Armory - 2532' engraved on the side."),\
-	list(POD_SHAPE_NORML, "clownpod",    TRUE, "clown", "green",    RUBBLE_NORMAL, "\improper HONK pod",     "A brightly-colored supply pod. It likely originated from the Clown Federation."),\
-	list(POD_SHAPE_OTHER, "orange",      TRUE, FALSE, FALSE,   RUBBLE_NONE,     "\improper Orange", "An angry orange."),\
-	list(POD_SHAPE_OTHER, FALSE,         FALSE,    FALSE,            FALSE,   RUBBLE_NONE,     "\improper S.T.E.A.L.T.H. pod MKVII", "A supply pod that, under normal circumstances, is completely invisible to conventional methods of detection. How are you even seeing this?"),\
-	list(POD_SHAPE_OTHER, "gondola",     FALSE, FALSE, FALSE,   RUBBLE_NONE,     "gondola",     "The silent walker. This one seems to be part of a delivery agency."),\
-	list(POD_SHAPE_OTHER, FALSE,         FALSE,    FALSE,            FALSE,   RUBBLE_NONE,         FALSE,      FALSE,      "rl_click", "give_po")\
-))
+///Discount categories for coupons. This one is for anything that isn't discountable.
+#define SUPPLY_PACK_NOT_DISCOUNTABLE null
+///Discount category for the standard stuff, mostly goodies.
+#define SUPPLY_PACK_STD_DISCOUNTABLE "standard_discount"
+///Discount category for stuff that's mostly niche and/or that might be useful.
+#define SUPPLY_PACK_UNCOMMON_DISCOUNTABLE "uncommon_discount"
+///Discount category for the silly, overpriced, joke content, sometimes useful or plain bad.
+#define SUPPLY_PACK_RARE_DISCOUNTABLE "rare_discount"

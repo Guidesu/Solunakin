@@ -5,7 +5,7 @@
 	icon = 'icons/mob/human/human.dmi'
 	icon_state = "human_basic"
 	appearance_flags = KEEP_TOGETHER|TILE_BOUND|PIXEL_SCALE|LONG_GLIDE
-	hud_possible = list(HEALTH_HUD,STATUS_HUD,ID_HUD,WANTED_HUD,IMPLOYAL_HUD,IMPCHEM_HUD,IMPTRACK_HUD,ANTAG_HUD,GLAND_HUD,SENTIENT_DISEASE_HUD,FAN_HUD,PERMIT_HUD, DNR_HUD) //SKYRAT EDIT ADDITION - PERMIT_HUD, DNR_HUD
+	hud_possible = list(HEALTH_HUD,STATUS_HUD,ID_HUD,WANTED_HUD,IMPLOYAL_HUD,IMPSEC_FIRST_HUD,IMPSEC_SECOND_HUD,ANTAG_HUD,GLAND_HUD,SENTIENT_DISEASE_HUD,FAN_HUD,PERMIT_HUD, DNR_HUD) //NOVA EDIT ADDITION - PERMIT_HUD, DNR_HUD
 	hud_type = /datum/hud/human
 	pressure_resistance = 25
 	can_buckle = TRUE
@@ -13,9 +13,10 @@
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	can_be_shoved_into = TRUE
 	initial_language_holder = /datum/language_holder/empty // We get stuff from our species
+	flags_1 = PREVENT_CONTENTS_EXPLOSION_1
 
-	maxHealth = HUMAN_MAXHEALTH //SKYRAT EDIT ADDITION
-	health = HUMAN_MAXHEALTH //SKYRAT EDIT ADDITION
+	maxHealth = HUMAN_MAXHEALTH //NOVA EDIT ADDITION
+	health = HUMAN_MAXHEALTH //NOVA EDIT ADDITION
 
 	//Hair colour and style
 	var/hair_color = "#000000"
@@ -55,7 +56,7 @@
 	var/jumpsuit_style = PREF_SUIT //suit/skirt
 
 	var/datum/scream_type/selected_scream //SKRYAT EDIT ADDITION
-	var/datum/laugh_type/selected_laugh //SKYRAT EDIT ADDITION
+	var/datum/laugh_type/selected_laugh //NOVA EDIT ADDITION
 
 	//Equipment slots
 	var/obj/item/clothing/wear_suit = null
@@ -73,7 +74,11 @@
 	var/list/datum/bioware/biowares
 
 	/// What types of mobs are allowed to ride/buckle to this mob
-	var/static/list/can_ride_typecache = typecacheof(list(/mob/living/carbon/human, /mob/living/simple_animal/slime, /mob/living/simple_animal/parrot))
+	var/static/list/can_ride_typecache = typecacheof(list(
+		/mob/living/basic/parrot,
+		/mob/living/carbon/human,
+		/mob/living/simple_animal/slime,
+	))
 	var/lastpuke = 0
 	var/account_id
 

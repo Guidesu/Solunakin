@@ -1,4 +1,4 @@
-/obj/machinery/gibber//SKYRAT EDIT - ICON OVERRIDEN BY AESTHETICS - SEE MODULE
+/obj/machinery/gibber//NOVA EDIT - ICON OVERRIDEN BY AESTHETICS - SEE MODULE
 	name = "gibber"
 	desc = "The name isn't descriptive enough?"
 	icon = 'icons/obj/machines/kitchen.dmi'
@@ -111,7 +111,7 @@
 /obj/machinery/gibber/wrench_act(mob/living/user, obj/item/tool)
 	. = ..()
 	default_unfasten_wrench(user, tool)
-	return TOOL_ACT_TOOLTYPE_SUCCESS
+	return ITEM_INTERACT_SUCCESS
 
 /obj/machinery/gibber/attackby(obj/item/P, mob/user, params)
 	if(default_deconstruction_screwdriver(user, "grinder_open", "grinder", P))

@@ -221,10 +221,10 @@
 		user.socks = initial(socks.name)
 
 
-	// SKYRAT EDIT ADDITION START - Underwear and bra split
+	// NOVA EDIT ADDITION START - Underwear and bra split
 	if(bra)
 		user.bra = initial(bra.name)
-	// SKYRAT EDIT END
+	// NOVA EDIT END
 
 	if(accessory)
 		var/obj/item/clothing/under/U = user.w_uniform
@@ -342,7 +342,7 @@
 		item.add_fingerprint(user, ignoregloves = TRUE)
 	return TRUE
 
-//SKYRAT EDIT
+//NOVA EDIT
 /**
  * Copies the outfit from a human to itself.
  **/
@@ -374,7 +374,7 @@
 	if(H.belt)
 		belt = H.belt.type
 	return TRUE
-// SKYRAT EDIT END
+// NOVA EDIT END
 
 /// Return a list of all the types that are required to disguise as this outfit type
 /datum/outfit/proc/get_chameleon_disguise_info()
@@ -416,7 +416,7 @@
 	for(var/skillpath in skillchips)
 		preload += skillpath
 
-	preload -= typesof(/obj/item/clothing/under/color/random) // SKYRAT EDIT - Don't preload random jumpsuit spawners that delete themselves
+	preload -= typesof(/obj/item/clothing/under/color/random) // NOVA EDIT - Don't preload random jumpsuit spawners that delete themselves
 
 	return preload
 
@@ -532,5 +532,11 @@
 
 /datum/outfit/vv_do_topic(list/href_list)
 	. = ..()
+
+	if(!.)
+		return
+
 	if(href_list[VV_HK_TO_OUTFIT_EDITOR])
+		if(!check_rights(NONE))
+			return
 		usr.client.open_outfit_editor(src)

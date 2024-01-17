@@ -22,13 +22,13 @@
 	if(istype(object,/turf) && left_click && !alt_click && !ctrl_click)
 		var/turf/clicked_turf = object
 		if(isplatingturf(object))
-			clicked_turf.PlaceOnTop(/turf/open/floor/iron, flags = CHANGETURF_INHERIT_AIR)
+			clicked_turf.place_on_top(/turf/open/floor/iron, flags = CHANGETURF_INHERIT_AIR)
 		else if(isfloorturf(object))
-			clicked_turf.PlaceOnTop(/turf/closed/wall)
+			clicked_turf.place_on_top(/turf/closed/wall)
 		else if(iswallturf(object))
-			clicked_turf.PlaceOnTop(/turf/closed/wall/r_wall)
+			clicked_turf.place_on_top(/turf/closed/wall/r_wall)
 		else
-			clicked_turf.PlaceOnTop(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR) // Gotta do something
+			clicked_turf.place_on_top(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR) // Gotta do something
 		log_admin("Build Mode: [key_name(c)] built [clicked_turf] at [AREACOORD(clicked_turf)]")
 		return
 	else if(right_click)
@@ -37,7 +37,7 @@
 			var/turf/T = object
 			T.ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 		else if(isobj(object))
-			// SKYRAT EDIT -- BS delete sparks. Original was just qdel(object)
+			// NOVA EDIT -- BS delete sparks. Original was just qdel(object)
 			var/turf/T = get_turf(object)
 			qdel(object)
 			if(T && c.prefs.read_preference(/datum/preference/toggle/admin/delete_sparks))

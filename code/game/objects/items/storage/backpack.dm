@@ -102,7 +102,7 @@
 		return
 	if(HAS_MIND_TRAIT(user, TRAIT_CANNOT_OPEN_PRESENTS))
 		var/turf/floor = get_turf(src)
-		var/obj/item/thing = new /obj/item/a_gift/anything(floor)
+		var/obj/item/thing = new /obj/item/gift/anything(floor)
 		if(!atom_storage.attempt_insert(thing, user, override = TRUE, force = STORAGE_SOFT_LOCKED))
 			qdel(thing)
 
@@ -152,7 +152,7 @@
 
 /obj/item/storage/backpack/captain
 	name = "captain's backpack"
-	desc = "It's a special backpack made exclusively for Symphionia officers."
+	desc = "It's a special backpack made exclusively for Nanotrasen officers."
 	icon_state = "backpack-captain"
 	inhand_icon_state = "captainpack"
 
@@ -370,7 +370,7 @@
 
 /obj/item/storage/backpack/satchel/cap
 	name = "captain's satchel"
-	desc = "An exclusive satchel for Symphionia officers."
+	desc = "An exclusive satchel for Nanotrasen officers."
 	icon_state = "satchel-captain"
 	inhand_icon_state = "satchel-cap"
 
@@ -383,7 +383,7 @@
 
 /obj/item/storage/backpack/satchel/flat/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/undertile, TRAIT_T_RAY_VISIBLE, INVISIBILITY_MAXIMUM, use_anchor = TRUE) // SKYRAT EDIT - Ghosts can't see smuggler's satchels
+	AddElement(/datum/element/undertile, TRAIT_T_RAY_VISIBLE, INVISIBILITY_MAXIMUM, use_anchor = TRUE) // NOVA EDIT - Ghosts can't see smuggler's satchels
 	atom_storage.max_total_storage = 15
 	atom_storage.set_holdable(cant_hold_list = list(/obj/item/storage/backpack/satchel/flat)) //muh recursive backpacks)
 
@@ -590,7 +590,7 @@
 	new /obj/item/surgicaldrill(src)
 	new /obj/item/cautery(src)
 	new /obj/item/surgical_drapes(src)
-	new /obj/item/clothing/suit/toggle/labcoat/skyrat/hospitalgown(src)	//SKYRAT EDIT ADDITION
+	new /obj/item/clothing/suit/toggle/labcoat/hospitalgown(src)	//NOVA EDIT ADDITION
 	new /obj/item/clothing/mask/surgical(src)
 	new /obj/item/blood_filter(src)
 
@@ -643,16 +643,16 @@
 	unzip_duration = 0.5 SECONDS
 	unzip_sfx = 'sound/items/zip_up.ogg'
 
-//SKYRAT EDIT CHANGE START - It's just a black duffel.
+//NOVA EDIT CHANGE START - It's just a black duffel.
 /obj/item/storage/backpack/duffelbag/syndie
 	name = "tactical duffel bag"
 	desc = "A large duffel bag for holding extra tactical supplies."
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE
-	special_desc = "This duffel bag has the Symphionia logo stiched on the inside. It appears to be made from lighter yet sturdier materials, and features an oiled plastitanium zipper for maximum speed tactical zipping."
-//SKYRAT EDIT CHANGE END
+	special_desc = "This duffel bag has the Syndicate logo stiched on the inside. It appears to be made from lighter yet sturdier materials, and features an oiled plastitanium zipper for maximum speed tactical zipping."
+//NOVA EDIT CHANGE END
 
 /obj/item/storage/backpack/duffelbag/syndie/hitman
-	desc = "A large duffel bag for holding extra things. There is a Symphionia logo on the back."
+	desc = "A large duffel bag for holding extra things. There is a Nanotrasen logo on the back."
 	icon_state = "duffel-syndieammo"
 	inhand_icon_state = "duffel-syndieammo"
 
@@ -674,11 +674,11 @@
 
 /obj/item/storage/backpack/duffelbag/syndie/surgery
 	name = "surgery duffel bag"
-	desc = "A large duffel bag for holding extra supplies - this one has a material inlay with space for various sharp-looking tools." //SKYRAT EDIT CHANGE, to match the security surgery bag
+	desc = "A large duffel bag for holding extra supplies - this one has a material inlay with space for various sharp-looking tools." //NOVA EDIT CHANGE, to match the security surgery bag
 	icon_state = "duffel-syndiemed"
 	inhand_icon_state = "duffel-syndiemed"
-	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // SKYRAT EDIT ADDITION
-	special_desc = "This duffel bag has the Symphionia logo stiched on the inside. It appears to be made from lighter yet sturdier materials." // SKYRAT EDIT ADDITION
+	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // NOVA EDIT ADDITION
+	special_desc = "This duffel bag has the Syndicate logo stiched on the inside. It appears to be made from lighter yet sturdier materials." // NOVA EDIT ADDITION
 
 /obj/item/storage/backpack/duffelbag/syndie/surgery/PopulateContents()
 	new /obj/item/scalpel/advanced(src)
@@ -886,7 +886,7 @@
 
 /obj/item/storage/backpack/messenger/cap
 	name = "captain's messenger bag"
-	desc = "An exclusive messenger bag for Symphionia officers, made of real whale leather."
+	desc = "An exclusive messenger bag for Nanotrasen officers, made of real whale leather."
 	icon_state = "messenger_captain"
 	inhand_icon_state = "messenger_captain"
 

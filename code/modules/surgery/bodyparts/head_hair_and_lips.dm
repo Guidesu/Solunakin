@@ -39,7 +39,7 @@
 	//HIDDEN CHECKS END
 
 	if(owner)
-		if(!hair_hidden && !owner.get_organ_slot(ORGAN_SLOT_BRAIN) && !HAS_TRAIT(owner, TRAIT_NO_DEBRAIN_OVERLAY))
+		if(!hair_hidden && !owner.get_organ_slot(ORGAN_SLOT_BRAIN) && !HAS_TRAIT(owner, TRAIT_NO_DEBRAIN_OVERLAY) && !istype(src, /obj/item/bodypart/head/robot/synth)) // NOVA EDIT CHANGE - ORIGINAL: if(!hair_hidden && !owner.get_organ_slot(ORGAN_SLOT_BRAIN) && !HAS_TRAIT(owner, TRAIT_NO_DEBRAIN_OVERLAY))
 			show_debrained = TRUE
 		else
 			show_debrained = FALSE
@@ -49,12 +49,12 @@
 		else
 			show_eyeless = FALSE
 	else
-		if(!hair_hidden && !brain)
+		if(!hair_hidden && !(locate(/obj/item/organ/internal/brain) in src) && !istype(src, /obj/item/bodypart/head/robot/synth)) // NOVA EDIT CHANGE - ORIGINAL: if(!hair_hidden && !(locate(/obj/item/organ/internal/brain) in src))
 			show_debrained = TRUE
 		else
 			show_debrained = FALSE
 
-		if(!eyes)
+		if(!(locate(/obj/item/organ/internal/eyes) in src))
 			show_eyeless = TRUE
 		else
 			show_eyeless = FALSE
@@ -65,7 +65,7 @@
 	lip_style = human_head_owner.lip_style
 	lip_color = human_head_owner.lip_color
 	hairstyle = human_head_owner.hairstyle
-	hair_alpha = human_head_owner.hair_alpha ? human_head_owner.hair_alpha : owner_species.hair_alpha // SKYRAT EDIT - Customization - Hair alpha - ORIGINAL: hair_alpha = owner_species.hair_alpha
+	hair_alpha = human_head_owner.hair_alpha ? human_head_owner.hair_alpha : owner_species.hair_alpha // NOVA EDIT - Customization - Hair alpha - ORIGINAL: hair_alpha = owner_species.hair_alpha
 	hair_color = human_head_owner.hair_color
 	facial_hairstyle = human_head_owner.facial_hairstyle
 	facial_hair_alpha = owner_species.facial_hair_alpha

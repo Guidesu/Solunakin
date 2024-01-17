@@ -7,9 +7,9 @@
 #define MUTE_ADMINHELP (1<<3)
 #define MUTE_DEADCHAT (1<<4)
 #define MUTE_INTERNET_REQUEST (1<<5)
-// Skyrat Edit Addition - Mute LOOC
+// NOVA EDIT Addition - Mute LOOC
 #define MUTE_LOOC (1<<6)
-// Skyrat Edit End
+// NOVA EDIT End
 #define MUTE_ALL ALL
 
 //Some constants for DB_Ban
@@ -102,7 +102,7 @@
 #define AHELP_RESOLVED 3
 
 /// Amount of time after the round starts that the player disconnect report is issued.
-#define ROUNDSTART_LOGOUT_REPORT_TIME (21 MINUTES) // SKYRAT EDIT CHANGE - ORIGINAL: 10 MINUTES
+#define ROUNDSTART_LOGOUT_REPORT_TIME (21 MINUTES) // NOVA EDIT CHANGE - ORIGINAL: 10 MINUTES
 
 /// Threshold in minutes for counting a player as AFK on the roundstart report.
 #define ROUNDSTART_LOGOUT_AFK_THRESHOLD (ROUNDSTART_LOGOUT_REPORT_TIME * 0.7)
@@ -173,3 +173,8 @@ GLOBAL_VAR_INIT(ghost_role_flags, ALL)
 #define INTERVIEW_DENIED "interview_denied"
 /// State when an interview has had no action on it yet
 #define INTERVIEW_PENDING "interview_pending"
+
+/// Used in logging uses of admin verbs (and sometimes some non-admin or debug verbs) to the blackbox
+/// Only pass it a string key, the verb being used.
+#define BLACKBOX_LOG_ADMIN_VERB(the_verb) SSblackbox.record_feedback("tally", "admin_verb", 1, the_verb)
+

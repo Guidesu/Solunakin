@@ -42,36 +42,36 @@
 #define JOB_ASSISTANT "Assistant"
 #define JOB_PRISONER "Prisoner"
 //Command
-#define JOB_CAPTAIN "Outpost Overseer"
-#define JOB_HEAD_OF_PERSONNEL "Steward"
-#define JOB_HEAD_OF_SECURITY "Warrant Officer"
-#define JOB_RESEARCH_DIRECTOR "Research Overseer"
-#define JOB_CHIEF_ENGINEER "Master Engineer"
-#define JOB_CHIEF_MEDICAL_OFFICER "Senior Medical Officer"
+#define JOB_CAPTAIN "Captain"
+#define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
+#define JOB_HEAD_OF_SECURITY "Head of Security"
+#define JOB_RESEARCH_DIRECTOR "Research Director"
+#define JOB_CHIEF_ENGINEER "Chief Engineer"
+#define JOB_CHIEF_MEDICAL_OFFICER "Chief Medical Officer"
 //Silicon
 #define JOB_AI "AI"
 #define JOB_CYBORG "Cyborg"
 #define JOB_PERSONAL_AI "Personal AI"
-//Marshal
-#define JOB_WARDEN "Supply Warden"
-#define JOB_DETECTIVE "Marshal Investigation Agent"
-#define JOB_SECURITY_OFFICER "Marshal Officer"
-#define JOB_SECURITY_OFFICER_MEDICAL "Marshal Officer (Medical)"
-#define JOB_SECURITY_OFFICER_ENGINEERING "Marshal Officer (Engineering)"
-#define JOB_SECURITY_OFFICER_SCIENCE "Marshal Officer (Science)"
-#define JOB_SECURITY_OFFICER_SUPPLY "Marshal Officer (Cargo)"
-#define JOB_CORRECTIONS_OFFICER "Corrections Officer" // SKYRAT EDIT ADDITION
+//Security
+#define JOB_WARDEN "Warden"
+#define JOB_DETECTIVE "Detective"
+#define JOB_SECURITY_OFFICER "Security Officer"
+#define JOB_SECURITY_OFFICER_MEDICAL "Security Officer (Medical)"
+#define JOB_SECURITY_OFFICER_ENGINEERING "Security Officer (Engineering)"
+#define JOB_SECURITY_OFFICER_SCIENCE "Security Officer (Science)"
+#define JOB_SECURITY_OFFICER_SUPPLY "Security Officer (Cargo)"
+#define JOB_CORRECTIONS_OFFICER "Corrections Officer" // NOVA EDIT ADDITION
 //Engineering
-#define JOB_STATION_ENGINEER "Outpost Engineer"
+#define JOB_STATION_ENGINEER "Station Engineer"
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
-#define JOB_ENGINEERING_GUARD "Engineering Guard" // SKYRAT EDIT ADDITION
+#define JOB_ENGINEERING_GUARD "Engineering Guard" // NOVA EDIT ADDITION
 //Medical
 #define JOB_CORONER "Coroner"
 #define JOB_MEDICAL_DOCTOR "Medical Doctor"
 #define JOB_PARAMEDIC "Paramedic"
 #define JOB_CHEMIST "Chemist"
 #define JOB_VIROLOGIST "Virologist"
-#define JOB_ORDERLY "Orderly" // SKYRAT EDIT ADDITION
+#define JOB_ORDERLY "Orderly" // NOVA EDIT ADDITION
 //Science
 #define JOB_SCIENTIST "Scientist"
 #define JOB_ROBOTICIST "Roboticist"
@@ -82,7 +82,7 @@
 #define JOB_CARGO_TECHNICIAN "Cargo Technician"
 #define JOB_SHAFT_MINER "Shaft Miner"
 #define JOB_BITRUNNER "Bitrunner"
-#define JOB_CUSTOMS_AGENT "Customs Agent" // SKYRAT EDIT ADDITION
+#define JOB_CUSTOMS_AGENT "Customs Agent" // NOVA EDIT ADDITION
 //Service
 #define JOB_BARTENDER "Bartender"
 #define JOB_BOTANIST "Botanist"
@@ -94,19 +94,19 @@
 #define JOB_LAWYER "Lawyer"
 #define JOB_CHAPLAIN "Chaplain"
 #define JOB_PSYCHOLOGIST "Psychologist"
-#define JOB_BARBER "Barber" // SKYRAT EDIT ADDITION
-#define JOB_BOUNCER "Service Guard" // SKYRAT EDIT ADDITION
+#define JOB_BARBER "Barber" // NOVA EDIT ADDITION
+#define JOB_BOUNCER "Service Guard" // NOVA EDIT ADDITION
 //ERTs
 #define JOB_ERT_DEATHSQUAD "Death Commando"
 #define JOB_ERT_COMMANDER "Emergency Response Team Commander"
-#define JOB_ERT_OFFICER "Marshal Response Officer"
+#define JOB_ERT_OFFICER "Security Response Officer"
 #define JOB_ERT_ENGINEER "Engineering Response Officer"
 #define JOB_ERT_MEDICAL_DOCTOR "Medical Response Officer"
 #define JOB_ERT_CHAPLAIN "Religious Response Officer"
 #define JOB_ERT_JANITOR "Janitorial Response Officer"
 #define JOB_ERT_CLOWN "Entertainment Response Officer"
 //CentCom
-#define JOB_CENTCOM "Conglomeration of Colonists"
+#define JOB_CENTCOM "Central Command"
 #define JOB_CENTCOM_OFFICIAL "CentCom Official"
 #define JOB_CENTCOM_ADMIRAL "Admiral"
 #define JOB_CENTCOM_COMMANDER "CentCom Commander"
@@ -117,11 +117,11 @@
 #define JOB_CENTCOM_MEDICAL_DOCTOR "Medical Officer"
 #define JOB_CENTCOM_RESEARCH_OFFICER "Research Officer"
 #define JOB_CENTCOM_SPECIAL_OFFICER "Special Ops Officer"
-#define JOB_CENTCOM_PRIVATE_SECURITY "Private Marshal Force"
-// SKYRAT EDIT ADDITION START
+#define JOB_CENTCOM_PRIVATE_SECURITY "Private Security Force"
+// NOVA EDIT ADDITION START
 #define JOB_BLUESHIELD "Blueshield"
-#define JOB_NT_REP "Symphionia Consultant"
-// Symphionia Naval Command jobs
+#define JOB_NT_REP "Nanotrasen Consultant"
+// Nanotrasen Naval Command jobs
 #define JOB_NAVAL_ENSIGN "Ensign"
 #define JOB_NAVAL_LIEUTENANT "Lieutenant"
 #define JOB_NAVAL_LTCR "Lieutenant Commander"
@@ -134,7 +134,7 @@
 #define JOB_SPACE_POLICE "Space Police"
 #define JOB_SOLFED "SolFed"
 #define JOB_SOLFED_LIASON "SolFed Liason"
-// SKYRAT EDIT ADDITION END
+// NOVA EDIT ADDITION END
 
 #define JOB_GROUP_ENGINEERS list( \
 	JOB_STATION_ENGINEER, \
@@ -179,23 +179,23 @@
 #define JOB_DISPLAY_ORDER_DETECTIVE 35
 #define JOB_DISPLAY_ORDER_SECURITY_OFFICER 36
 #define JOB_DISPLAY_ORDER_PRISONER 37
-#define JOB_DISPLAY_ORDER_SECURITY_MEDIC 38 //SKYRAT EDIT ADDITON
-#define JOB_DISPLAY_ORDER_CORRECTIONS_OFFICER 39 //SKYRAT EDIT ADDITON
-#define JOB_DISPLAY_ORDER_NANOTRASEN_CONSULTANT 40 //SKYRAT EDIT ADDITON
-#define JOB_DISPLAY_ORDER_BLUESHIELD 41 //SKYRAT EDIT ADDITON
-#define JOB_DISPLAY_ORDER_ORDERLY 42 //SKYRAT EDIT ADDITION
-#define JOB_DISPLAY_ORDER_SCIENCE_GUARD 43 //SKYRAT EDIT ADDITION
-#define JOB_DISPLAY_ORDER_BOUNCER 44 //SKYRAT EDIT ADDITION
-#define JOB_DISPLAY_ORDER_ENGINEER_GUARD 45 //SKYRAT EDIT ADDITION
-#define JOB_DISPLAY_ORDER_CUSTOMS_AGENT 46 //SKYRAT EDIT ADDITION
-#define JOB_DISPLAY_ORDER_EXP_CORPS 47 //SKYRAT EDIT ADDITON
+#define JOB_DISPLAY_ORDER_SECURITY_MEDIC 38 //NOVA EDIT ADDITON
+#define JOB_DISPLAY_ORDER_CORRECTIONS_OFFICER 39 //NOVA EDIT ADDITON
+#define JOB_DISPLAY_ORDER_NANOTRASEN_CONSULTANT 40 //NOVA EDIT ADDITON
+#define JOB_DISPLAY_ORDER_BLUESHIELD 41 //NOVA EDIT ADDITON
+#define JOB_DISPLAY_ORDER_ORDERLY 42 //NOVA EDIT ADDITION
+#define JOB_DISPLAY_ORDER_SCIENCE_GUARD 43 //NOVA EDIT ADDITION
+#define JOB_DISPLAY_ORDER_BOUNCER 44 //NOVA EDIT ADDITION
+#define JOB_DISPLAY_ORDER_ENGINEER_GUARD 45 //NOVA EDIT ADDITION
+#define JOB_DISPLAY_ORDER_CUSTOMS_AGENT 46 //NOVA EDIT ADDITION
+#define JOB_DISPLAY_ORDER_EXP_CORPS 47 //NOVA EDIT ADDITON
 
 #define DEPARTMENT_UNASSIGNED "No Department"
 
 #define DEPARTMENT_BITFLAG_SECURITY (1<<0)
-#define DEPARTMENT_SECURITY "Marshal"
+#define DEPARTMENT_SECURITY "Security"
 #define DEPARTMENT_BITFLAG_COMMAND (1<<1)
-#define DEPARTMENT_COMMAND "Council"
+#define DEPARTMENT_COMMAND "Command"
 #define DEPARTMENT_BITFLAG_SERVICE (1<<2)
 #define DEPARTMENT_SERVICE "Service"
 #define DEPARTMENT_BITFLAG_CARGO (1<<3)
@@ -212,8 +212,8 @@
 #define DEPARTMENT_ASSISTANT "Assistant"
 #define DEPARTMENT_BITFLAG_CAPTAIN (1<<9)
 #define DEPARTMENT_CAPTAIN "Captain"
-#define DEPARTMENT_BITFLAG_CENTRAL_COMMAND (1<<10) //SKYRAT EDIT CHANGE
-#define DEPARTMENT_CENTRAL_COMMAND "Symphonia" //SKYRAT EDIT CHANGE
+#define DEPARTMENT_BITFLAG_CENTRAL_COMMAND (1<<10) //NOVA EDIT CHANGE
+#define DEPARTMENT_CENTRAL_COMMAND "Central Command" //NOVA EDIT CHANGE
 
 /* Job datum job_flags */
 /// Whether the mob is announced on arrival.
@@ -236,18 +236,31 @@
 #define JOB_CAN_BE_INTERN (1<<8)
 /// This job cannot have more slots opened by the Head of Personnel (but admins or other random events can still do this).
 #define JOB_CANNOT_OPEN_SLOTS (1<<9)
+/// This job will not display on the job menu when there are no slots available, instead of appearing greyed out
+#define JOB_HIDE_WHEN_EMPTY (1<<10)
+/// This job cannot be signed up for at round start or recorded in your preferences
+#define JOB_LATEJOIN_ONLY (1<<11)
+/// This job is a head of staff.
+#define JOB_HEAD_OF_STAFF (1<<12)
 
 /// Combination flag for jobs which are considered regular crew members of the station.
 #define STATION_JOB_FLAGS (JOB_ANNOUNCE_ARRIVAL|JOB_CREW_MANIFEST|JOB_EQUIP_RANK|JOB_CREW_MEMBER|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS|JOB_CAN_BE_INTERN)
+/// Combination flag for jobs which are considered heads of staff.
+#define HEAD_OF_STAFF_JOB_FLAGS (JOB_BOLD_SELECT_TEXT|JOB_CANNOT_OPEN_SLOTS|JOB_HEAD_OF_STAFF)
+/// Combination flag for jobs which are enabled by station traits.
+#define STATION_TRAIT_JOB_FLAGS (JOB_CANNOT_OPEN_SLOTS|JOB_HIDE_WHEN_EMPTY|JOB_LATEJOIN_ONLY&~JOB_REOPEN_ON_ROUNDSTART_LOSS)
 
 #define FACTION_NONE "None"
 #define FACTION_STATION "Station"
 
 // Variable macros used to declare who is the supervisor for a given job, announced to the player when they join as any given job.
 #define SUPERVISOR_CAPTAIN "the Captain"
-#define SUPERVISOR_CE "the Master Engineer"
-#define SUPERVISOR_CMO "the Senior Medical Officer"
-#define SUPERVISOR_HOP "Steward"
-#define SUPERVISOR_HOS "the Head of Marshal"
+#define SUPERVISOR_CE "the Chief Engineer"
+#define SUPERVISOR_CMO "the Chief Medical Officer"
+#define SUPERVISOR_HOP "the Head of Personnel"
+#define SUPERVISOR_HOS "the Head of Security"
 #define SUPERVISOR_QM "the Quartermaster"
 #define SUPERVISOR_RD "the Research Director"
+
+/// Mind traits that should be shared by every head of staff. has to be this way cause byond lists lol
+#define HEAD_OF_STAFF_MIND_TRAITS TRAIT_FAST_TYING, TRAIT_HIGH_VALUE_RANSOM

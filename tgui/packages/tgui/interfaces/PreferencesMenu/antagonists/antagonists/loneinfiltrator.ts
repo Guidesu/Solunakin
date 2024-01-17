@@ -1,4 +1,6 @@
+// THIS IS A NOVA SECTOR UI FILE
 import { multiline } from 'common/string';
+
 import { Antagonist, Category } from '../base';
 
 const LoneInfiltrator: Antagonist = {

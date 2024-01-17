@@ -16,10 +16,10 @@
 #define ROLE_OPERATIVE "Operative"
 #define ROLE_TRAITOR "Traitor"
 #define ROLE_WIZARD "Wizard"
-// SKYRAT EDIT START
+// NOVA EDIT START
 #define ROLE_ASSAULT_OPERATIVE "Assault Operative"
 #define ROLE_OPFOR_CANDIDATE "OPFOR Candidate"
-// SKYRAT EDIT END
+// NOVA EDIT END
 
 // Midround roles
 #define ROLE_ABDUCTOR "Abductor"
@@ -27,7 +27,6 @@
 #define ROLE_BLOB "Blob"
 #define ROLE_BLOB_INFECTION "Blob Infection"
 #define ROLE_CHANGELING_MIDROUND "Changeling (Midround)"
-#define ROLE_CYBER_POLICE "Cyber Police"
 #define ROLE_FUGITIVE "Fugitive"
 #define ROLE_LONE_OPERATIVE "Lone Operative"
 #define ROLE_MALF_MIDROUND "Malf AI (Midround)"
@@ -38,23 +37,23 @@
 #define ROLE_PARADOX_CLONE "Paradox Clone"
 #define ROLE_REV_HEAD "Head Revolutionary"
 #define ROLE_SENTIENT_DISEASE "Sentient Disease"
-#define ROLE_SLEEPER_AGENT "Symphionia Sleeper Agent"
+#define ROLE_SLEEPER_AGENT "Syndicate Sleeper Agent"
 #define ROLE_SPACE_DRAGON "Space Dragon"
 #define ROLE_SPIDER "Spider"
 #define ROLE_WIZARD_MIDROUND "Wizard (Midround)"
-//SKYRAT EDIT START
+//NOVA EDIT START
 #define ROLE_BORER "Borer"
 #define ROLE_DRIFTING_CONTRACTOR "Drifting Contractor"
 #define ROLE_LONE_INFILTRATOR "Lone Infiltrator"
 #define ROLE_MUTANT "Mutated Abomination"
 #define ROLE_CLOCK_CULTIST "Clock Cultist"
-// SKYRAT EDIT END
+// NOVA EDIT END
 
 // Latejoin roles
 #define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
 #define ROLE_PROVOCATEUR "Provocateur"
 #define ROLE_STOWAWAY_CHANGELING "Stowaway Changeling"
-#define ROLE_SYNDICATE_INFILTRATOR "Symphionia Infiltrator"
+#define ROLE_SYNDICATE_INFILTRATOR "Syndicate Infiltrator"
 
 // Other roles
 #define ROLE_ANOMALY_GHOST "Ectoplasmic Anomaly Ghost"
@@ -69,14 +68,14 @@
 #define ROLE_LAZARUS_GOOD "Friendly Revived Mob"
 #define ROLE_MIND_TRANSFER "Mind Transfer Potion"
 #define ROLE_MONKEY_HELMET "Monkey Mind Magnification Helmet"
-#define ROLE_OVERTHROW "Symphionia Mutineer" //Role removed, left here for safety.
+#define ROLE_OVERTHROW "Syndicate Mutineer" //Role removed, left here for safety.
 #define ROLE_PAI "pAI"
 #define ROLE_POSIBRAIN "Posibrain"
 #define ROLE_PYROCLASTIC_SLIME "Pyroclastic Anomaly Slime"
 #define ROLE_REV "Revolutionary"
 #define ROLE_REVENANT "Revenant"
 #define ROLE_SENTIENCE "Sentience Potion Spawn"
-#define ROLE_SYNDICATE "Symphionia"
+#define ROLE_SYNDICATE "Syndicate"
 
 #define ROLE_CLOWN_OPERATIVE "Clown Operative"
 #define ROLE_FREE_GOLEM "Free Golem"
@@ -103,7 +102,16 @@
 #define ROLE_GHOST_ROLE "Ghost Role"
 #define ROLE_HERMIT "Hermit"
 #define ROLE_HOTEL_STAFF "Hotel Staff"
-#define ROLE_LAVALAND_SYNDICATE "Lavaland Symphionia"
+#define ROLE_LAVALAND_SYNDICATE "Syndicate Lavaland Personnel" // NOVA EDIT CHANGE - Original: #define ROLE_LAVALAND_SYNDICATE "Lavaland Syndicate"
+//NOVA EDIT START - Nova Sector Spawner roles
+#define ROLE_INTERDYNE_PLANETARY_BASE "Interdyne Lavaland Personnel"
+#define ROLE_INTERDYNE_PLANETARY_BASE_ICEBOX "Interdyne Icemoon Personnel"
+#define ROLE_DS2 "Syndicate DS-2 Crew"
+#define ROLE_GHOST_CAFE "Ghost Cafe Visitor"
+#define ROLE_BLACK_MARKET_DEALER "Black Market Dealer"
+#define ROLE_FREIGHTER_CREW "Freighter Crew"
+#define ROLE_PORT_TARKON "Port Tarkon Survivor"
+// NOVA EDIT ADDITION END
 #define ROLE_LIFEBRINGER "Lifebringer"
 #define ROLE_MAINTENANCE_DRONE "Maintenance Drone"
 #define ROLE_SKELETON "Skeleton"
@@ -111,19 +119,18 @@
 #define ROLE_SPACE_BARTENDER "Space Bartender"
 #define ROLE_SPACE_DOCTOR "Space Doctor"
 #define ROLE_SPACE_PIRATE "Space Pirate"
-#define ROLE_SPACE_SYNDICATE "Space Symphionia"
-#define ROLE_SYNDICATE_CYBERSUN "Cybersun Space Symphionia" //Ghost role syndi from Forgottenship ruin
-#define ROLE_SYNDICATE_CYBERSUN_CAPTAIN "Cybersun Space Symphionia Captain" //Forgottenship captain syndie
-#define ROLE_SYNDICATE_DRONE "Symphionia Drone"
+#define ROLE_SPACE_SYNDICATE "Syndicate Space Personnel" // NOVA EDIT CHANGE - Original: "Space Syndicate"
+#define ROLE_SYNDICATE_CYBERSUN "Syndicate Cybersun Crew" //Ghost role syndi from Forgottenship ruin // NOVA EDIT CHANGE - Original: "Cybersun Space Syndicate"
+#define ROLE_SYNDICATE_CYBERSUN_CAPTAIN "Syndicate Cybersun Captain" //Forgottenship captain syndie // NOVA EDIT CHANGE - Original: "Cybersun Space Syndicate Captain"
+#define ROLE_SYNDICATE_DRONE "Syndicate Drone"
 #define ROLE_VENUSHUMANTRAP "Venus Human Trap"
 #define ROLE_ZOMBIE "Zombie"
-//SKYRAT EDIT START
-#define ROLE_BLACK_MARKET_DEALER "Black Market Dealer"
-#define ROLE_DS2 "DS2 Symphionia"
-#define ROLE_FREIGHTER_CREW "Freighter Crew"
-#define ROLE_GHOST_CAFE "Ghost Cafe Visitor"
-#define ROLE_PORT_TARKON "Port Tarkon Survivor"
-//SKYRAT EDIT END
+
+// Virtual dom related
+#define ROLE_GLITCH "Glitch" // the parent type of all vdom roles
+#define ROLE_CYBER_POLICE "Cyber Police"
+#define ROLE_CYBER_TAC "Cyber Tac"
+#define ROLE_NETGUARDIAN "NetGuardian Prime"
 
 /// This defines the antagonists you can operate with in the settings.
 /// Keys are the antagonist, values are the number of days since the player's
@@ -140,9 +147,9 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_REV_HEAD = 14,
 	ROLE_TRAITOR = 0,
 	ROLE_WIZARD = 14,
-	// SKYRAT EDIT ADDITION
+	// NOVA EDIT ADDITION
 	ROLE_ASSAULT_OPERATIVE = 14,
-	// SKYRAT EDIT END
+	// NOVA EDIT END
 
 	// Midround
 	ROLE_ABDUCTOR = 0,
@@ -150,7 +157,6 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_BLOB = 0,
 	ROLE_BLOB_INFECTION = 0,
 	ROLE_CHANGELING_MIDROUND = 0,
-	ROLE_CYBER_POLICE = 0,
 	ROLE_FUGITIVE = 0,
 	ROLE_LONE_OPERATIVE = 14,
 	ROLE_MALF_MIDROUND = 0,
@@ -165,12 +171,12 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_SPACE_DRAGON = 0,
 	ROLE_SPIDER = 0,
 	ROLE_WIZARD_MIDROUND = 14,
-	//SKYRAT EDIT START
+	//NOVA EDIT START
 	ROLE_LONE_INFILTRATOR = 0,
 	ROLE_BORER = 0,
 	ROLE_DRIFTING_CONTRACTOR = 14,
 	ROLE_MUTANT = 0,
-	//SKYRAT EDIT END
+	//NOVA EDIT END
 
 	// Latejoin
 	ROLE_HERETIC_SMUGGLER = 0,
@@ -179,6 +185,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_STOWAWAY_CHANGELING = 0,
 
 	// I'm not too sure why these are here, but they're not moving.
+	ROLE_GLITCH = 0,
 	ROLE_PAI = 0,
 	ROLE_SENTIENCE = 0,
 ))
