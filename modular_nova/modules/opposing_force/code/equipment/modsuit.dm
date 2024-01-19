@@ -51,7 +51,7 @@
 
 /datum/opposing_force_equipment/modsuit/interdyne
 	name = "Interdyne's Response"
-	description = "While Scarborough and Azik Interstellar provide the means, Donk Co., Tiger Cooperative, Animal Rights Consortium and Gorlex Marauders willing or easily bribable brawn, S.E.L.F. and MI13 information, the clear syndicate tech providers would be Interdyne and Cybersun, their combined knowledge in technologies rivaled by only the most enigmatic of aliens, and certainly not by any Nanotrasen scientist."
+	description = "While Scarborough and Azik Interstellar provide the means, Donk Co., Tiger Cooperative, Animal Rights Consortium and Gorlex Marauders willing or easily bribable brawn, S.E.L.F. and MI13 information, the clear syndicate tech providers would be Interdyne and Cybersun, their combined knowledge in technologies rivaled by only the most enigmatic of aliens, and certainly not by any Symphionia scientist."
 	admin_note = "Gives a significant speedboost."
 	item_type = /obj/item/mod/control/pre_equipped/interdyne
 

@@ -459,7 +459,7 @@
   - rscadd: Penthrite now has Balloon alerts for when it first starts processing and
       when it finishes processing.
   - imageadd: The mega arachnid's flesh snare now has a visible sprite.
-  - bugfix: Captains can sleep tight at night knowing that Disky no longer fears escape
+  - bugfix: Premiers can sleep tight at night knowing that Disky no longer fears escape
       shuttle rides at the end of the shift. The nuke disk will no longer teleport
       itself back to the station from the emergency shuttle when the emergency shuttle
       departs.

@@ -46,7 +46,7 @@
 	default_raw_text = "The next person who takes one of my screwdrivers gets stabbed with one. They are MINE. - Love, Madsen"
 
 /obj/item/paper/fluff/ruins/crashedship/captains_log
-	name = "Captain's log entry"
+	name = "Premier's log entry"
 	default_raw_text = "This has got to be the least interesting assignment ever. We are about halfway through the planets we've got to survey and most of them are lifeless rocks. That being said, this next planet seems promising. \
 	Fighting demons beats fighting boredom!"
 

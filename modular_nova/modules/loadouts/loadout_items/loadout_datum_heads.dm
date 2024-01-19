@@ -486,7 +486,7 @@ GLOBAL_LIST_INIT(loadout_helmets, generate_loadout_items(/datum/loadout_item/hea
 */
 
 /datum/loadout_item/head/imperial_cap
-	name = "Captain's Naval Cap"
+	name = "Premier's Naval Cap"
 	item_path = /obj/item/clothing/head/hats/imperial/cap
 	restricted_roles = list(JOB_CAPTAIN, JOB_NT_REP)
 

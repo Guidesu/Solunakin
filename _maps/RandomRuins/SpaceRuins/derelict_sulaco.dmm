@@ -263,7 +263,7 @@
 /area/ruin/space/has_grav/derelictsulaco)
 "jo" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Captain's Quarters"
+	name = "Premier's Quarters"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating/airless,
@@ -833,7 +833,7 @@
 /area/ruin/space/has_grav/derelictsulaco)
 "Cs" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Captain's Quarters"
+	name = "Premier's Quarters"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -930,7 +930,7 @@
 /area/ruin/space/has_grav/derelictsulaco)
 "FK" = (
 /obj/machinery/door/airlock/command{
-	name = "Captain's Washroom"
+	name = "Premier's Washroom"
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/ruin/space/has_grav/derelictsulaco)

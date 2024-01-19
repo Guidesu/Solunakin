@@ -305,7 +305,7 @@
 /obj/item/shield/energy/advanced
 	name = "advanced combat energy shield"
 	desc = "A hardlight shield capable of reflecting all energy projectiles, as well las providing well-rounded defense from most all other attacks. \
-		Often employed by Nanotrasen deathsquads."
+		Often employed by Symphionia deathsquads."
 	icon_state = "advanced_eshield"
 	inhand_icon_state = "advanced_eshield"
 	reflection_probability = 100 //Guaranteed reflection

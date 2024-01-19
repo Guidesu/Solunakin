@@ -161,7 +161,7 @@
 	r_pocket = /obj/item/modular_computer/pda/nukeops
 
 /obj/effect/mob_spawn/ghost_role/human/syndicate/battlecruiser/captain
-	name = "Symphionia Battlecruiser Captain"
+	name = "Symphionia Battlecruiser Premier"
 	you_are_text = "You are the captain aboard the syndicate flagship: the SBC Starfury."
 	flavour_text = "Your job is to oversee your crew, defend the ship, and destroy Space Station 13. The ship has an armory, multiple ships, beam cannons, and multiple crewmembers to accomplish this goal."
 	important_text = "As the captain, this whole operation falls on your shoulders. Help your assault operatives detonate a nuke on the station."
@@ -172,7 +172,7 @@
 	uses = 1
 
 /datum/outfit/syndicate_empty/battlecruiser/assault/captain
-	name = "Symphionia Battlecruiser Captain"
+	name = "Symphionia Battlecruiser Premier"
 	id = /obj/item/card/id/advanced/black/syndicate_command/captain_id
 	id_trim = /datum/id_trim/battlecruiser/captain
 	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate

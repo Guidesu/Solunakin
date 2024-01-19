@@ -70,7 +70,7 @@
 		return
 	var/datum/objective/missionobj = new ()
 	missionobj.owner = owner
-	missionobj.explanation_text = "Conduct a routine performance review of [station_name()] and its Captain."
+	missionobj.explanation_text = "Conduct a routine performance review of [station_name()] and its Premier."
 	missionobj.completed = TRUE
 	mission = missionobj
 	objectives |= mission

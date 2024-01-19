@@ -60,8 +60,8 @@ export const RecordManifest = (props) => {
                         <Icon className="CrewManifest__Icon" name="infinity" />
                       </Tooltip>
                     )}
-                    {crewMember.rank === 'Captain' && (
-                      <Tooltip content="Captain" position="bottom">
+                    {crewMember.rank === 'Premier' && (
+                      <Tooltip content="Premier" position="bottom">
                         <Icon
                           className={classes([
                             'CrewManifest__Icon',

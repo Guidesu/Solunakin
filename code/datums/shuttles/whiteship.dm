@@ -19,7 +19,7 @@
 /datum/map_template/shuttle/whiteship/cere
 	suffix = "cere"
 	name = "NT Heavy Salvage Vessel"
-	description = "A beefy, well-rounded salvage vessel with a pair of corpses (miner and engineer) and a Captain's hat. Equipped with solar sails and a PACMAN generator."
+	description = "A beefy, well-rounded salvage vessel with a pair of corpses (miner and engineer) and a Premier's hat. Equipped with solar sails and a PACMAN generator."
 
 /datum/map_template/shuttle/whiteship/birdshot
 	suffix = "birdshot"

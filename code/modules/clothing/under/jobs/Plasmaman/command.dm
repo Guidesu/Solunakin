@@ -1,6 +1,6 @@
 /obj/item/clothing/under/plasmaman/captain
 	name = "captain's plasma envirosuit"
-	desc = "It's a blue envirosuit with some gold markings denoting the rank of \"Captain\"."
+	desc = "It's a blue envirosuit with some gold markings denoting the rank of \"Premier\"."
 	icon_state = "captain_envirosuit"
 	inhand_icon_state = null
 	sensor_mode = SENSOR_COORDS

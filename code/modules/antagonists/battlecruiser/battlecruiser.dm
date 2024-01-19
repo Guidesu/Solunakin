@@ -36,7 +36,7 @@
 	show_to_ghosts = FALSE
 
 /datum/antagonist/battlecruiser/captain
-	name = "Battlecruiser Captain"
+	name = "Battlecruiser Premier"
 	antag_hud_name = "battlecruiser_lead"
 	job_rank = ROLE_BATTLECRUISER_CAPTAIN
 

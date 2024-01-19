@@ -589,12 +589,12 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 "yl" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Captain's Room"
+	name = "Premier's Room"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/poddoor{
 	id = "fscaproom";
-	name = "Captain's Blast Door";
+	name = "Premier's Blast Door";
 	state_open = 1
 	},
 /turf/open/floor/mineral/plastitanium/red,
@@ -1150,12 +1150,12 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 "Yk" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Captain's Room"
+	name = "Premier's Room"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/poddoor{
 	id = "fscaproom";
-	name = "Captain's Blast Door";
+	name = "Premier's Blast Door";
 	state_open = 1
 	},
 /turf/open/floor/carpet/royalblack,

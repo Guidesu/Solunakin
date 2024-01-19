@@ -70,18 +70,18 @@
       has now been upgraded with a tgui interface. It can be used to paint PDAs the
       same as before, but can now also change the trim on ID cards. This procedure
       will remove all access levels from the ID card in the process, leaving you with
-      a freshly trimmed blank ID card. tweak: Captain job trims now have a white star
+      a freshly trimmed blank ID card. tweak: Premier job trims now have a white star
       instead of a dull grey star. removed: Mining Conscript Card has been removed
       and replaced with a spare mining ID that holds and has the access the Conscript
-      card gave. tweak: The Captain''s Spare ID has been moved from the Captain''s
+      card gave. tweak: The Premier''s Spare ID has been moved from the Premier''s
       locker to a secure safe on the bridge. The highest ranking Command member on
       shift start is given the codes to this safe, generally following the chain of
       command. The QM is part of this and can, in exceptional circumstances where
-      no other heads join the shift, become Acting Captain. Their ID card would be
-      given Bridge access if they were picked as Acting Captain to allow them to access
+      no other heads join the shift, become Acting Premier. Their ID card would be
+      given Bridge access if they were picked as Acting Premier to allow them to access
       the captain''s spare. If nobody in the chain of command joins the shift, the
       next latejoined player from the chain of command will be given the codes for
-      the spare and promoted to Acting Captain automatically. tweak: The secure safe
+      the spare and promoted to Acting Premier automatically. tweak: The secure safe
       on the bridge is a special variant that is immune to conventional weaponry and
       lacks the hacking mechanic of ordinary wall safes. Maybe if you could examine
       it close enough, you''d find hints to its weaknesses... tweak: Examining players
@@ -999,7 +999,7 @@
   Timberpoes:
   - bugfix: Admins can once again open the stat panels to look at active, disconnected,
       closed and resolved tickets.
-  - bugfix: Admins should no longer be triggered by simple bots creating Captain's
+  - bugfix: Admins should no longer be triggered by simple bots creating Premier's
       Spares in nullspace.
   TiviPlus:
   - code_imp: Cleaned up scooter/skate code

@@ -91,7 +91,7 @@
 //Spawner roles
 #define ROLE_ANCIENT_CREW "Ancient Crew"
 #define ROLE_ASHWALKER "Ash Walker"
-#define ROLE_BATTLECRUISER_CAPTAIN "Battlecruiser Captain"
+#define ROLE_BATTLECRUISER_CAPTAIN "Battlecruiser Premier"
 #define ROLE_BATTLECRUISER_CREW "Battlecruiser Crew"
 #define ROLE_BEACH_BUM "Beach Bum"
 #define ROLE_BOT "Bot"
@@ -121,7 +121,7 @@
 #define ROLE_SPACE_PIRATE "Space Pirate"
 #define ROLE_SPACE_SYNDICATE "Syndicate Space Personnel" // NOVA EDIT CHANGE - Original: "Space Syndicate"
 #define ROLE_SYNDICATE_CYBERSUN "Syndicate Cybersun Crew" //Ghost role syndi from Forgottenship ruin // NOVA EDIT CHANGE - Original: "Cybersun Space Syndicate"
-#define ROLE_SYNDICATE_CYBERSUN_CAPTAIN "Syndicate Cybersun Captain" //Forgottenship captain syndie // NOVA EDIT CHANGE - Original: "Cybersun Space Syndicate Captain"
+#define ROLE_SYNDICATE_CYBERSUN_CAPTAIN "Syndicate Cybersun Premier" //Forgottenship captain syndie // NOVA EDIT CHANGE - Original: "Cybersun Space Syndicate Premier"
 #define ROLE_SYNDICATE_DRONE "Syndicate Drone"
 #define ROLE_VENUSHUMANTRAP "Venus Human Trap"
 #define ROLE_ZOMBIE "Zombie"

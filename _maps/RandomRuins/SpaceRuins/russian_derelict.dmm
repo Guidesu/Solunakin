@@ -4973,7 +4973,7 @@
 /area/ruin/space/ks13/command/bridge)
 "JC" = (
 /obj/machinery/door/window/left/directional/south{
-	name = "Captain's Quarters";
+	name = "Premier's Quarters";
 	req_access = list("captain")
 	},
 /obj/structure/grille,

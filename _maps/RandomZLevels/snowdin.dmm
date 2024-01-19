@@ -10653,7 +10653,7 @@
 /area/awaymission/snowdin/post)
 "NY" = (
 /mob/living/basic/skeleton/ice{
-	name = "Captain Bones"
+	name = "Premier Bones"
 	},
 /turf/open/misc/asteroid/snow{
 	floor_variance = 0;

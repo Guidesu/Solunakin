@@ -562,10 +562,10 @@
   - rscdel: Removed CQC+
 2022-09-15:
   OrionTheFox:
-  - rscdel: Removed the Humble Captain's Uniform. It carried us to the light of less-garish
+  - rscdel: Removed the Humble Premier's Uniform. It carried us to the light of less-garish
       captain garb, but sadly will not be joining us in these holy lands. Mourn, for
       we've lost a real one. Stay Humble.
-  - imageadd: updated the Captain's Kilt, and all Captain Digi Sprites to the new
+  - imageadd: updated the Premier's Kilt, and all Premier Digi Sprites to the new
       midnight blue palette
   ShizCalev:
   - bugfix: Fixed messages sometimes not showing properly when melting shards with
@@ -1002,7 +1002,7 @@
   - rscadd: Rotten zombie tongue has a new speech modifier that converts spoken language
       into zombie sentences. If the person speaking is a high-functioning zombie this
       is bypassed.
-  - balance: Captain Jetpack now fits on MODsuit and EVA suit storage slot.
+  - balance: Premier Jetpack now fits on MODsuit and EVA suit storage slot.
   - code_imp: Jetpacks were de-hardcoded and can now support being equipped to other
       slots.
   - bugfix: Monkey mind magnification helmets once again poll all ghosts

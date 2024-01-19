@@ -93,7 +93,7 @@
 
 /datum/opposing_force_equipment/uplink/market_crash
 	name = "Market Crash"
-	description = "Some forged documents will be given to Nanotrasen, skyrocketing the price of all on-station vendors for a short while."
+	description = "Some forged documents will be given to Symphionia, skyrocketing the price of all on-station vendors for a short while."
 	item_type = /obj/effect/gibspawner/generic
 	admin_note = "Equivalent to the Market Crash random event."
 	max_amount = 1

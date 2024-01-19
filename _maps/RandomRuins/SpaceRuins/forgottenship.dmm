@@ -344,12 +344,12 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "bx" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Captain's Room"
+	name = "Premier's Room"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/poddoor{
 	id = "fscaproom";
-	name = "Captain's Blast Door";
+	name = "Premier's Blast Door";
 	state_open = 1
 	},
 /turf/open/floor/carpet/royalblack,
@@ -554,12 +554,12 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "ch" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Captain's Room"
+	name = "Premier's Room"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/poddoor{
 	id = "fscaproom";
-	name = "Captain's Blast Door";
+	name = "Premier's Blast Door";
 	state_open = 1
 	},
 /turf/open/floor/mineral/plastitanium/red,

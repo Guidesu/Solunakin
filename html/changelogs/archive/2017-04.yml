@@ -40,7 +40,7 @@
   - bugfix: Removed rogue bits of Vault area.
   - bugfix: Medbay escape pod no longer juts out far enough to block the disposal's
       path.
-  - bugfix: Captain's spare ID is now real and not just a gold ID card.
+  - bugfix: Premier's spare ID is now real and not just a gold ID card.
   Penguaro:
   - tweak: '[Meta] The Chapel Security Hatches were very intimidating. They have been
       changed to more inviting glass doors.'

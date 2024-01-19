@@ -136,7 +136,7 @@
 
 /obj/item/clothing/head/caphat/beret/alt
 	name = "captain's beret"
-	desc = "For the Captains known for their sense of fashion. This one is made out of white fabric. Fancy"
+	desc = "For the Premiers known for their sense of fashion. This one is made out of white fabric. Fancy"
 	greyscale_colors = "#FFFFFF#FFCE5B"
 
 /obj/item/clothing/head/hopcap/beret

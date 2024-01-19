@@ -15421,8 +15421,8 @@
 "dWu" = (
 /obj/structure/table/wood,
 /obj/machinery/fax{
-	fax_name = "Captain's Office";
-	name = "Captain's Fax Machine"
+	fax_name = "Premier's Office";
+	name = "Premier's Fax Machine"
 	},
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
@@ -28381,7 +28381,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "captain_privacy";
-	name = "Captain's Private Room Shutters"
+	name = "Premier's Private Room Shutters"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -28669,7 +28669,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/silver{
-	name = "Captain's Bathroom"
+	name = "Premier's Bathroom"
 	},
 /obj/machinery/duct,
 /turf/open/floor/iron/white,
@@ -33894,7 +33894,7 @@
 /area/station/hallway/secondary/exit/escape_pod)
 "iUS" = (
 /obj/machinery/modular_computer/preset/id{
-	name = "Captain's Computer"
+	name = "Premier's Computer"
 	},
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/carpet,
@@ -50854,7 +50854,7 @@
 /obj/item/radio/intercom/directional/north{
 	freerange = 1;
 	listening = 0;
-	name = "Captain's Intercom"
+	name = "Premier's Intercom"
 	},
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
@@ -54085,7 +54085,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/command{
-	name = "Captain's Office"
+	name = "Premier's Office"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
@@ -60243,8 +60243,8 @@
 /area/station/security/mechbay)
 "pIS" = (
 /obj/machinery/requests_console/directional/east{
-	department = "Captain's Desk";
-	name = "Captain's Requests Console"
+	department = "Premier's Desk";
+	name = "Premier's Requests Console"
 	},
 /obj/effect/mapping_helpers/requests_console/announcement,
 /obj/effect/mapping_helpers/requests_console/information,
@@ -71964,7 +71964,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
 /obj/machinery/door/airlock/command{
-	name = "Captain's Quarters"
+	name = "Premier's Quarters"
 	},
 /obj/machinery/duct,
 /turf/open/floor/wood/tile,
@@ -82241,7 +82241,7 @@
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/command{
-	name = "Captain's Quarters"
+	name = "Premier's Quarters"
 	},
 /obj/machinery/duct,
 /turf/open/floor/wood/tile,
@@ -85008,7 +85008,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/command{
-	name = "Captain's Quarters"
+	name = "Premier's Quarters"
 	},
 /turf/open/floor/wood/tile,
 /area/station/command/heads_quarters/captain/private)

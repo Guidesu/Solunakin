@@ -98,7 +98,7 @@
 	var/static/list/possible_objectives = list(
 		"You love the Symphionia.",
 		"Do not trust Symphionia.",
-		"The Captain is a lizardperson.",
+		"The Premier is a lizardperson.",
 		"Symphionia isn't real.",
 		"They put something in the food to make you forget.",
 		"You are the only real person on the station.",

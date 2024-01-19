@@ -155,7 +155,7 @@
 
 /obj/item/paper/fluff/awaymissions/moonoutpost19/welcome
 	name = "Welcome Notice"
-	default_raw_text = "<p><p align=center><h2>Welcome to Moon Outpost 19! Property of Symphionia Inc.</h2></p><hr><br><br>Staff Roster:<br>-Dr. Gerald Rosswell: Research Director & Acting Captain<br>-Dr. Sakuma Sano: Xenobiologist<br>-Dr. Mark Douglas: Xenobiologist<br>-Kenneth Cunningham: Security Officer-Ivan Volodin: Engineer<br>-Mathias Kuester: Bartender<br>-Sven Edling: Chef<br>-Steve: Assistant<br><br>Please enjoy your stay, and report any abnormalities to an officer."
+	default_raw_text = "<p><p align=center><h2>Welcome to Moon Outpost 19! Property of Symphionia Inc.</h2></p><hr><br><br>Staff Roster:<br>-Dr. Gerald Rosswell: Research Director & Acting Premier<br>-Dr. Sakuma Sano: Xenobiologist<br>-Dr. Mark Douglas: Xenobiologist<br>-Kenneth Cunningham: Security Officer-Ivan Volodin: Engineer<br>-Mathias Kuester: Bartender<br>-Sven Edling: Chef<br>-Steve: Assistant<br><br>Please enjoy your stay, and report any abnormalities to an officer."
 
 /obj/item/paper/fluff/awaymissions/moonoutpost19/goodbye_note
 	name = "Note"

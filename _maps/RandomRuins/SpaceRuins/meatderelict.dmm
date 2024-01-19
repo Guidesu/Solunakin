@@ -438,7 +438,7 @@
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock_note_placer{
 	note_name = "notice";
-	note_info = "This area is condemned by Nanotrasen. Employees seen near or in this area will be fined or punished otherwise."
+	note_info = "This area is condemned by Symphionia. Employees seen near or in this area will be fined or punished otherwise."
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/powered/biooutpost)

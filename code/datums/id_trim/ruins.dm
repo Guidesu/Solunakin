@@ -113,7 +113,7 @@
 
 /// Trim for the pirate captain.
 /datum/id_trim/pirate/captain
-	assignment = "Pirate Captain"
+	assignment = "Pirate Premier"
 	trim_state = "trim_captain"
 
 /datum/id_trim/pirate/silverscale

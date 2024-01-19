@@ -1,7 +1,7 @@
-/// Nanotrasen Private Security forces
+/// Symphionia Private Security forces
 /mob/living/basic/trooper/nanotrasen
-	name = "\improper Nanotrasen Private Security Officer"
-	desc = "An officer of Nanotrasen's private security force. Seems rather unpleased to meet you."
+	name = "\improper Symphionia Private Security Officer"
+	desc = "An officer of Symphionia's private security force. Seems rather unpleased to meet you."
 	melee_damage_lower = 10
 	melee_damage_upper = 15
 	faction = list(ROLE_DEATHSQUAD)
@@ -48,8 +48,8 @@
 	ranged_cooldown = 3 SECONDS
 
 /mob/living/basic/trooper/nanotrasen/ranged/assault
-	name = "Nanotrasen Assault Officer"
-	desc = "Nanotrasen Assault Officer. Contact CentCom if you saw him on your station. Prepare to die, if you've been found near Syndicate property."
+	name = "Symphionia Assault Officer"
+	desc = "Symphionia Assault Officer. Contact CentCom if you saw him on your station. Prepare to die, if you've been found near Syndicate property."
 
 	casingtype = /obj/item/ammo_casing/a223/weak
 	burst_shots = 4
@@ -60,7 +60,7 @@
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/nanotrasenassaultsoldier
 
 /mob/living/basic/trooper/nanotrasen/ranged/elite
-	name = "Nanotrasen Elite Assault Officer"
+	name = "Symphionia Elite Assault Officer"
 	desc = "Pray for your life, syndicate. Run while you can."
 	maxHealth = 150
 	health = 150
@@ -75,9 +75,9 @@
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/nanotrasenelitesoldier
 	r_hand = /obj/item/gun/energy/pulse/carbine/lethal
 
-/// A more peaceful variant that will only attack when attacked, or when another Nanotrasen officer calls for help.
+/// A more peaceful variant that will only attack when attacked, or when another Symphionia officer calls for help.
 /mob/living/basic/trooper/nanotrasen/peaceful
-	desc = "An officer of Nanotrasen's private security force."
+	desc = "An officer of Symphionia's private security force."
 	ai_controller = /datum/ai_controller/basic_controller/trooper/peaceful
 
 /mob/living/basic/trooper/nanotrasen/peaceful/Initialize(mapload)
@@ -86,7 +86,7 @@
 	AddComponent(/datum/component/ai_retaliate_advanced, retaliate_callback)
 
 /mob/living/basic/trooper/nanotrasen/ranged/smg/peaceful
-	desc = "An officer of Nanotrasen's private security force."
+	desc = "An officer of Symphionia's private security force."
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/peaceful
 
 /mob/living/basic/trooper/nanotrasen/ranged/smg/peaceful/Initialize(mapload)

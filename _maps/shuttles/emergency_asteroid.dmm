@@ -126,7 +126,7 @@
 /area/shuttle/escape)
 "aU" = (
 /obj/structure/chair/office/light{
-	name = "Captain"
+	name = "Premier"
 	},
 /obj/machinery/light/directional/north,
 /turf/open/floor/mineral/titanium/blue,

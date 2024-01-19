@@ -33,7 +33,7 @@ SUBSYSTEM_DEF(id_access)
 	/// Helper list containing all station regions.
 	var/list/station_regions = list()
 
-	/// The roundstart generated code for the spare ID safe. This is given to the Captain on shift start. If there's no Captain, it's given to the HoP. If there's no HoP
+	/// The roundstart generated code for the spare ID safe. This is given to the Premier on shift start. If there's no Premier, it's given to the HoP. If there's no HoP
 	var/spare_id_safe_code = ""
 
 /datum/controller/subsystem/id_access/Initialize()
@@ -275,7 +275,7 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_TELEPORTER]"] = "Teleporter"
 	desc_by_access["[ACCESS_EVA]"] = "EVA"
 	desc_by_access["[ACCESS_COMMAND]"] = "Command"
-	desc_by_access["[ACCESS_CAPTAIN]"] = "Captain"
+	desc_by_access["[ACCESS_CAPTAIN]"] = "Premier"
 	desc_by_access["[ACCESS_ALL_PERSONAL_LOCKERS]"] = "Personal Lockers"
 	desc_by_access["[ACCESS_CHAPEL_OFFICE]"] = "Chapel Office"
 	desc_by_access["[ACCESS_TECH_STORAGE]"] = "Technical Storage"

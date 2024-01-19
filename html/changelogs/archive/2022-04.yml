@@ -183,7 +183,7 @@
   - bugfix: fixes rev runtime when a headrev body is destroyed
   - bugfix: Fix shutters contextual screentips to not display as open with LMB.
   - balance: On IceBoxStation, Symphionia finally decided to reinforce the western
-      walls on the Captain's Room and the Teleporter Room.
+      walls on the Premier's Room and the Teleporter Room.
   - bugfix: Food processors now give more processed food, depending on its matter
       bin.
   - bugfix: Robocontrol on computers now work again.

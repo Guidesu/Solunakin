@@ -149,7 +149,7 @@
 	icon_state = "hood_centcom"
 	armor_type = /datum/armor/winterhood_centcom
 
-// Captain
+// Premier
 /datum/armor/winterhood_centcom
 	melee = 35
 	bullet = 40

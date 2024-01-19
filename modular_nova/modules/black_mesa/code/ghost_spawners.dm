@@ -185,7 +185,7 @@
 	spawned_human.grant_language(/datum/language/yangyu, source = LANGUAGE_SPAWNER)
 
 /datum/outfit/hecu/leader
-	name = "HECU Captain"
+	name = "HECU Premier"
 	uniform = /obj/item/clothing/under/rank/security/officer/hecu
 	head = /obj/item/clothing/head/beret/sec
 	mask = /obj/item/clothing/mask/gas/hecu2
@@ -211,6 +211,6 @@
 	equipped_human.faction |= FACTION_HECU
 
 /datum/id_trim/hecu_leader
-	assignment = "HECU Captain"
+	assignment = "HECU Premier"
 	trim_state = "trim_securityofficer"
 	access = list(ACCESS_BRIG_ENTRANCE, ACCESS_SECURITY, ACCESS_AWAY_SEC)

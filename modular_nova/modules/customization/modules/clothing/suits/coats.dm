@@ -107,7 +107,7 @@
 
 /obj/item/clothing/suit/toggle/peacoat
 	name = "peacoat"
-	desc = "The way you guys are blending in with the local colour. I mean, Flag Girl was bad enough, but U-Boat Captain?"
+	desc = "The way you guys are blending in with the local colour. I mean, Flag Girl was bad enough, but U-Boat Premier?"
 	icon_state = "peacoat"
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 	greyscale_config = /datum/greyscale_config/peacoat

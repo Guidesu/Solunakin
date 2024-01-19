@@ -1,5 +1,5 @@
 /obj/item/clothing/under/rank/captain
-	desc = "It's a blue jumpsuit with some gold markings denoting the rank of \"Captain\"."
+	desc = "It's a blue jumpsuit with some gold markings denoting the rank of \"Premier\"."
 	name = "captain's jumpsuit"
 	icon_state = "captain"
 	inhand_icon_state = "b_suit"
@@ -14,7 +14,7 @@
 
 /obj/item/clothing/under/rank/captain/skirt
 	name = "captain's jumpskirt"
-	desc = "It's a blue jumpskirt with some gold markings denoting the rank of \"Captain\"."
+	desc = "It's a blue jumpskirt with some gold markings denoting the rank of \"Premier\"."
 	icon_state = "captain_skirt"
 	inhand_icon_state = "b_suit"
 	body_parts_covered = CHEST|GROIN|ARMS

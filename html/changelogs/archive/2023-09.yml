@@ -125,9 +125,9 @@
       notice3.ogg, announce_syndi.ogg'
   - sound: Code Red, Delta, and other extreme emergencies now possess more unique
       alarm sound effect
-  - sound: Captain's arrival now is announced by Captain's announcement sound, but
-      not for Acting Captain's
-  - sound: Making Captain announcement through emagged console; hijacking or fully
+  - sound: Premier's arrival now is announced by Premier's announcement sound, but
+      not for Acting Premier's
+  - sound: Making Premier announcement through emagged console; hijacking or fully
       corrupting evacuation shuttle now plays more ominous sound
   - sound: Making announcements through Requests Console now plays a more noticeable
       sound
@@ -1226,7 +1226,7 @@
   - rscadd: Adds in the ability for certain NIFSofts to be kept between rounds.
 2023-09-30:
   DrDiasyl aka DrTuxedo:
-  - balance: Holsters can now be clipped to any suit, and house Captain antique gun
+  - balance: Holsters can now be clipped to any suit, and house Premier antique gun
       and HoS gun. You now can buy holsters from the SecTech premium section.
   Paxilmaniac:
   - qol: The half mask respirator can have its TTS voice muffling properties toggled

@@ -368,7 +368,7 @@
   - rscadd: New research node for bot launchpad and bot launch pad controller.
   - imageadd: added icons for bot launchpad and bot launch pad controller.
   - rscadd: Add mail goodies for curator. (random books)
-  - rscadd: Adds easter egg - Captain's Log. Tape recorder that spawns on derelict
+  - rscadd: Adds easter egg - Premier's Log. Tape recorder that spawns on derelict
       station.
   - rscadd: Adds easter egg - Woody's Got Wood.  Will rarely appear as a mail goodie
       for curator.
@@ -524,7 +524,7 @@
       applicable to help distinguish the two
   - imageadd: The Keyhole Sweater has been updated and Greyscaled! Recolor it to your
       heart's content!
-  - imageadd: the updated Captains/Curators/Teal suit now have digi icons, as well
+  - imageadd: the updated Premiers/Curators/Teal suit now have digi icons, as well
       as the updated CC palette. The HoS's turtleneck and formal uniform have also
       received some slight improvement visually.
   - bugfix: Light Paramedic Uniforms now have proper Object icons

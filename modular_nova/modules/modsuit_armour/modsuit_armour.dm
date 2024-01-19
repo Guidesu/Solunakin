@@ -140,7 +140,7 @@
 	acid = 95
 	wound = 25
 
-/datum/mod_theme/magnate // Captain
+/datum/mod_theme/magnate // Premier
 	armor_type = /datum/armor/mod_theme_magnate
 
 /datum/armor/mod_theme_magnate

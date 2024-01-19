@@ -504,7 +504,7 @@
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/uniform.dmi'
 	worn_icon_digi = 'modular_nova/master_files/icons/donator/mob/clothing/uniform_digi.dmi'
 	name = "captain's dress"
-	desc = "It's a blue dress with some worn-gold markings denoting the rank of \"Captain\"."
+	desc = "It's a blue dress with some worn-gold markings denoting the rank of \"Premier\"."
 	icon_state = "dress_cap_s"
 	worn_icon_state = "dress_cap_s"
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -673,7 +673,7 @@
 // Donation reward for asky / Zulie
 /obj/item/clothing/suit/hooded/cloak/zuliecloak
 	name = "Project: Zul-E"
-	desc = "A standard version of a prototype cloak given out by Nanotrasen higher ups. It's surprisingly thick and heavy for a cloak despite having most of it's tech stripped. It also comes with a bluespace trinket which calls it's accompanying hat onto the user. A worn inscription on the inside of the cloak reads 'Fleuret' ...the rest is faded away."
+	desc = "A standard version of a prototype cloak given out by Symphionia higher ups. It's surprisingly thick and heavy for a cloak despite having most of it's tech stripped. It also comes with a bluespace trinket which calls it's accompanying hat onto the user. A worn inscription on the inside of the cloak reads 'Fleuret' ...the rest is faded away."
 	icon_state = "zuliecloak"
 	icon = 'modular_nova/master_files/icons/donator/obj/clothing/cloaks.dmi'
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/neck.dmi'
@@ -1119,7 +1119,7 @@
 // Donation reward for Fuzlet
 /obj/item/card/fuzzy_license
 	name = "license to hug"
-	desc = "A very official looking license. Not actually endorsed by Nanotrasen."
+	desc = "A very official looking license. Not actually endorsed by Symphionia."
 	icon = 'modular_nova/master_files/icons/donator/obj/custom.dmi'
 	icon_state = "license"
 
@@ -1383,7 +1383,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 // Donation reward for Razurath
 
 /obj/item/clothing/under/bimpcap
-	name = "Formal Matte Black Captain Uniform"
+	name = "Formal Matte Black Premier Uniform"
 	desc = "A professional looking matte black uniform cladded with medals of distintive service and valor, only worn by the highest of station officials."
 	icon = 'modular_nova/master_files/icons/donator/obj/clothing/uniform.dmi'
 	icon_state = "bimpcap"
@@ -1469,16 +1469,16 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 
 //Donation reward for Razurath
 /obj/item/clothing/head/razurathhat
-	name = "Golden Nanotrasen Officer Cap"
-	desc = "A Nanotrasen officer cap. Now darker, golder, and cooler!"
+	name = "Golden Symphionia Officer Cap"
+	desc = "A Symphionia officer cap. Now darker, golder, and cooler!"
 	icon = 'modular_nova/master_files/icons/donator/obj/clothing/hats.dmi'
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/head.dmi'
 	icon_state = "razurath_hat"
 
 //Donation reward for Razurath
 /obj/item/clothing/suit/razurathcoat
-	name = "Golden Nanotrasen Officer Coat"
-	desc = "A fancy Nanotrasen officer coat. Now darker, golder, and cooler than ever!"
+	name = "Golden Symphionia Officer Coat"
+	desc = "A fancy Symphionia officer coat. Now darker, golder, and cooler than ever!"
 	icon = 'modular_nova/master_files/icons/donator/obj/clothing/suits.dmi'
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/suit.dmi'
 	icon_state = "razurath_coat"

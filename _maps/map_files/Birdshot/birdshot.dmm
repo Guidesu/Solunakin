@@ -6527,7 +6527,7 @@
 "cCD" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/maintenance/external{
-	name = "Captain's Quarters Maintenance"
+	name = "Premier's Quarters Maintenance"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /obj/effect/mapping_helpers/airlock/locked,
@@ -12077,8 +12077,8 @@
 	dir = 1
 	},
 /obj/machinery/requests_console/directional/east{
-	department = "Captain's Desk";
-	name = "Captain's Requests Console";
+	department = "Premier's Desk";
+	name = "Premier's Requests Console";
 	pixel_x = 0;
 	pixel_y = -30
 	},
@@ -24397,7 +24397,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command/glass{
-	name = "Captain's Office"
+	name = "Premier's Office"
 	},
 /turf/open/floor/iron/dark/textured_half{
 	dir = 1
@@ -24919,7 +24919,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/motion/directional/south{
-	c_tag = "Captain's Office - Emergency"
+	c_tag = "Premier's Office - Emergency"
 	},
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
@@ -26297,7 +26297,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/command{
-	name = "Captain's Quarters"
+	name = "Premier's Quarters"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /obj/machinery/door/firedoor,
@@ -26359,7 +26359,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/command{
-	name = "Captain's Bedroom"
+	name = "Premier's Bedroom"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /obj/machinery/door/firedoor,
@@ -31319,8 +31319,8 @@
 /obj/structure/cable,
 /obj/structure/table/glass,
 /obj/machinery/fax{
-	fax_name = "Captain's Office";
-	name = "Captain's Fax Machine";
+	fax_name = "Premier's Office";
+	name = "Premier's Fax Machine";
 	pixel_y = 11
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
@@ -34791,7 +34791,7 @@
 	pixel_y = 15;
 	pixel_x = 6;
 	name = "monkey cube";
-	desc = "A new Nanotrasen classic, the monkey cube. Tastes like everything!"
+	desc = "A new Symphionia classic, the monkey cube. Tastes like everything!"
 	},
 /turf/open/floor/iron/dark,
 /area/station/commons/storage/tools)
@@ -56247,7 +56247,7 @@
 /area/station/hallway/primary/starboard)
 "tyr" = (
 /obj/machinery/door/airlock/maintenance/external{
-	name = "Captain's Escape"
+	name = "Premier's Escape"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /turf/open/floor/plating,

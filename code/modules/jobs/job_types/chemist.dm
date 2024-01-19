@@ -35,7 +35,7 @@
 		/obj/item/paper/secretrecipe = 1
 	)
 	rpg_title = "Alchemist"
-	job_flags = STATION_JOB_FLAGS
+	job_flags = DISABLED_STATION_JOB_FLAGS
 
 
 /datum/outfit/job/chemist

@@ -1,7 +1,7 @@
 /* Toys!
  * Contains
  * Balloons
- * Captain's Aid
+ * Premier's Aid
  * Fake singularity
  * Toy gun
  * Toy swords
@@ -201,12 +201,12 @@
 #undef BALLOON_COLORS
 
 /*
-* Captain's Aid
+* Premier's Aid
 */
 #define CAPTAINSAID_MODE_OFF 1
 
 /obj/item/toy/captainsaid
-	name = "\improper Captain's Aid"
+	name = "\improper Premier's Aid"
 	desc = "Every captain's greatest ally when exploring the vast emptiness of space, now with a color display!"
 	icon = 'icons/obj/toys/toy.dmi'
 	icon_state = "captainsaid_off"
@@ -241,8 +241,8 @@
 #undef CAPTAINSAID_MODE_OFF
 
 /obj/item/toy/captainsaid/collector
-	name = "\improper Collector's Edition Captain's Aid"
-	desc = "A copy of the first run of Captain's Aid ever released. Functionally the same as the later batches, just more expensive. For the truly aristocratic."
+	name = "\improper Collector's Edition Premier's Aid"
+	desc = "A copy of the first run of Premier's Aid ever released. Functionally the same as the later batches, just more expensive. For the truly aristocratic."
 
 /*
  * Fake singularity
@@ -1053,7 +1053,7 @@
 	toysay = "Blaze it!"
 
 /obj/item/toy/figure/captain
-	name = "\improper Captain action figure"
+	name = "\improper Premier action figure"
 	icon_state = "captain"
 	toysay = "Any heads of staff?"
 

@@ -243,7 +243,7 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 				return
 			make_announcement(usr)
 		if ("messageAssociates")
-			if (!authenticated_as_ai_or_captain(usr)) //NOVA EDIT | Allows AI and Captain to send messages
+			if (!authenticated_as_ai_or_captain(usr)) //NOVA EDIT | Allows AI and Premier to send messages
 				return
 			if (!COOLDOWN_FINISHED(src, important_action_cooldown))
 				return
@@ -458,10 +458,10 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 				usr.log_message("enabled emergency maintenance access.", LOG_GAME)
 				message_admins("[ADMIN_LOOKUPFLW(usr)] enabled emergency maintenance access.")
 				deadchat_broadcast(" enabled emergency maintenance access at [span_name("[get_area_name(usr, TRUE)]")].", span_name("[usr.real_name]"), usr, message_type = DEADCHAT_ANNOUNCEMENT)
-		// Request codes for the Captain's Spare ID safe.
+		// Request codes for the Premier's Spare ID safe.
 		if("requestSafeCodes")
 			if(SSjob.assigned_captain)
-				to_chat(usr, span_warning("There is already an assigned Captain or Acting Captain on deck!"))
+				to_chat(usr, span_warning("There is already an assigned Premier or Acting Premier on deck!"))
 				return
 
 			if(SSjob.safe_code_timer_id)
@@ -481,7 +481,7 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 			SSjob.safe_code_request_loc = pod_location
 			SSjob.safe_code_requested = TRUE
 			SSjob.safe_code_timer_id = addtimer(CALLBACK(SSjob, TYPE_PROC_REF(/datum/controller/subsystem/job, send_spare_id_safe_code), pod_location), 120 SECONDS, TIMER_UNIQUE | TIMER_STOPPABLE)
-			minor_announce("Due to staff shortages, your station has been approved for delivery of access codes to secure the Captain's Spare ID. Delivery via drop pod at [get_area(pod_location)]. ETA 120 seconds.")
+			minor_announce("Due to staff shortages, your station has been approved for delivery of access codes to secure the Premier's Spare ID. Delivery via drop pod at [get_area(pod_location)]. ETA 120 seconds.")
 		// NOVA EDIT ADDITION START
 		if ("callThePolice")
 			if(!pre_911_check(usr))
@@ -951,7 +951,7 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 
 		if(HACK_THREAT) // Force an unfavorable situation on the crew
 			priority_announce(
-				"Attention crew, the Nanotrasen Department of Intelligence has received intel suggesting increased enemy activity in your sector beyond that initially reported in today's threat advisory.",
+				"Attention crew, the Symphionia Department of Intelligence has received intel suggesting increased enemy activity in your sector beyond that initially reported in today's threat advisory.",
 				"[command_name()] High-Priority Update",
 			)
 

@@ -105,7 +105,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/indestructible{
 	id = "ntrep_shutters";
-	name = "Nanotrasen Consultant's Shutters"
+	name = "Symphionia Consultant's Shutters"
 	},
 /turf/open/floor/plating,
 /area/centcom/interlink)
@@ -11078,7 +11078,7 @@
 /area/centcom/interlink)
 "nOb" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Nanotrasen Consultant's Office"
+	name = "Symphionia Consultant's Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/cent_com/rep_door,
 /obj/effect/turf_decal/siding/white{
@@ -14992,7 +14992,7 @@
 /area/centcom/holding/cafepark)
 "uqJ" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Nanotrasen Consultant's Office"
+	name = "Symphionia Consultant's Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/cent_com/rep_door,
 /obj/effect/turf_decal/siding/white{

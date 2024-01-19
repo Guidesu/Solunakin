@@ -17,7 +17,7 @@
 	icon_state = "goldenplaque"
 
 /obj/structure/plaque/static_plaque/golden/captain
-	name = "The Most Robust Captain Award for Robustness"
+	name = "The Most Robust Premier Award for Robustness"
 
 /obj/structure/plaque/static_plaque/tram
 	/// The tram we have info about

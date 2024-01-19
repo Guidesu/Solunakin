@@ -10825,7 +10825,7 @@
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp,
 /obj/machinery/requests_console/directional/north{
-	department = "Captain's Desk";
+	department = "Premier's Desk";
 	name = "CentCom Requests Console"
 	},
 /obj/effect/mapping_helpers/requests_console/announcement,

@@ -18,7 +18,7 @@
 	<center><font size=3>Conditions of Employment</center><font size=2>\
 	<br><hr><br>\
 	This Agreement is made and entered into as of the date of last signature below, by and between [employee_name] (hereafter referred to as the <i><u>employee</u></i>),\
-	and Nanotrasen (hereafter referred to as the <i><u>employer</u></i>).\
+	and Symphionia (hereafter referred to as the <i><u>employer</u></i>).\
 	<br>\
 	<br><font size=3>WITNESSETH:<font size=2>\
 	<br>\
@@ -42,7 +42,7 @@
 	<br>Finally, the <i><u>employee</u></i> understands that the <i><u>employer</u></i> is not bound by the same contract principles as them and may terminate the contract at any time, \
 	for any reason, and without warning if need be. The <i><u>employee</u></i> agrees to approach any and all employment disputes through the assigned Head of Personnel \
 	or Central Command Representative aboard the station at the time of the dispute. An <i><u>employer</u></i> contracted lawyer may be present for the dispute \
-	if requested by the <i><u>employee</u></i>. Wages are non-negotiable and no individual, including the Captain, on the station has the option to raise pay, \
+	if requested by the <i><u>employee</u></i>. Wages are non-negotiable and no individual, including the Premier, on the station has the option to raise pay, \
 	so the <i><u>employee</u></i> agrees to handle payment disputes through the proper channels or risk breach of contract.\
 	<br><br>Signed, \
 	<br><span style=\"color:black;font-family:'Segoe Script';\"><p><b>[employee_name]</b></p></span>\

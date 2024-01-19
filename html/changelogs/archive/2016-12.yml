@@ -100,8 +100,8 @@
       and a cable piece.
   kilkun:
   - rscadd: New lore surrounding the various SWAT suits.
-  - tweak: Captain's hardsuit/SWAT suit got a few buffs. It's now much more robust.
-  - bugfix: Captain's space suit is now heat proof as well as fireproof. Long overlooked
+  - tweak: Premier's hardsuit/SWAT suit got a few buffs. It's now much more robust.
+  - bugfix: Premier's space suit is now heat proof as well as fireproof. Long overlooked
       no longer.
 2016-12-07:
   Cyberboss:
@@ -317,7 +317,7 @@
   - rscadd: You can put a variety of hats on cyborgs using help intent (the engiborg
       can't wear hats though, as it is shaped too oddly. Sorry!)
   - rscadd: 'The complete list of currently equippable hats is as follows: Cakehat,
-      Captains Hat, Centcomm Hat, Witch Hunter Hat, HoS Cap, HoP Cap, Sombrero, Wizard
+      Premiers Hat, Centcomm Hat, Witch Hunter Hat, HoS Cap, HoP Cap, Sombrero, Wizard
       Hat, Nurse Hat.'
   Lzimann:
   - bugfix: Mjor the Creative will drop his loot correctly now.

@@ -24,7 +24,7 @@
 
 /obj/item/clothing/under/syndicate/tacticool //Overwrites the 'fake' one. Zero armor, sensors, and default blue. More Balanced to make station-available.
 	name = "tacticool turtleneck"
-	desc = "A snug turtleneck, in fabulous Nanotrasen-blue. Just looking at it makes you want to buy a NT-certifed coffee, go into the office, and -work-."
+	desc = "A snug turtleneck, in fabulous Symphionia-blue. Just looking at it makes you want to buy a NT-certifed coffee, go into the office, and -work-."
 	icon = 'modular_nova/master_files/icons/obj/clothing/under/syndicate.dmi' //Since its an overwrite it needs new icon linking. Woe.
 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/syndicate.dmi'
 	icon_state = "tactifool_blue"
@@ -47,7 +47,7 @@
 
 /obj/item/clothing/under/syndicate/tacticool/skirt //Overwrites the 'fake' one. Zero armor, sensors, and default blue. More Balanced to make station-available.
 	name = "tacticool skirtleneck"
-	desc = "A snug skirtleneck, in fabulous Nanotrasen-blue. Just looking at it makes you want to buy a NT-certifed coffee, go into the office, and -work-."
+	desc = "A snug skirtleneck, in fabulous Symphionia-blue. Just looking at it makes you want to buy a NT-certifed coffee, go into the office, and -work-."
 	icon_state = "tactifool_blue_skirt"
 	armor_type = /datum/armor/clothing_under/none
 	body_parts_covered = CHEST|GROIN|ARMS

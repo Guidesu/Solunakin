@@ -62,7 +62,7 @@
   - rscadd: "R&amp;D; teams have released an urgent update to station teleporters.\
       \ To eliminate the risk of mutation, personnel are advised to calibrate teleporters\
       \ before attempting each use.\n\t\t"
-  - rscadd: "Centcom has approved the Captain's request to rig the display case in\
+  - rscadd: "Centcom has approved the Premier's request to rig the display case in\
       \ his office with a burglar alarm. Any attempts to breach the case will now\
       \ trigger a lockdown of the room.\n\t\t"
   - bugfix: "**Crew Monitoring Consoles now scan their own Z-level for suit sensors,\

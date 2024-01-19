@@ -316,7 +316,7 @@
 /area/ruin/space/has_grav/crashedship/aft)
 "on" = (
 /obj/machinery/door/airlock/command{
-	name = "Captain's Office"
+	name = "Premier's Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /turf/open/floor/iron/airless,

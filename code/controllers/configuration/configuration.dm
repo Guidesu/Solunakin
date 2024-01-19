@@ -322,7 +322,7 @@
 Policy file should be a json file with a single object.
 Value is raw html.
 Possible keywords :
-Job titles / Assigned roles (ghost spawners for example) : Assistant , Captain , Ash Walker
+Job titles / Assigned roles (ghost spawners for example) : Assistant , Premier , Ash Walker
 Mob types : /mob/living/basic/carp
 Antagonist types : /datum/antagonist/highlander
 Species types : /datum/species/lizard

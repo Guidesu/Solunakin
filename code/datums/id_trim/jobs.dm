@@ -204,8 +204,8 @@
 	job = /datum/job/botanist
 
 /datum/id_trim/job/captain
-	assignment = "Captain"
-	intern_alt_name = "Captain-in-Training"
+	assignment = "Premier"
+	intern_alt_name = "Premier-in-Training"
 	trim_state = "trim_captain"
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_COMMAND_BLUE
@@ -217,7 +217,7 @@
 		)
 	job = /datum/job/captain
 
-/// Captain gets all station accesses hardcoded in because it's the Captain.
+/// Premier gets all station accesses hardcoded in because it's the Premier.
 /datum/id_trim/job/captain/New()
 	extra_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_COMMON) + SSid_access.get_flag_access_list(ACCESS_FLAG_COMMAND))
 	extra_wildcard_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_PRV_COMMAND) + SSid_access.get_flag_access_list(ACCESS_FLAG_CAPTAIN))

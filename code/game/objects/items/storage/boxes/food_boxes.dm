@@ -64,7 +64,7 @@
 	. = ..()
 	papersack_designs = sort_list(list(
 		"None" = image(icon = src.icon, icon_state = "paperbag_None"),
-		"NanotrasenStandard" = image(icon = src.icon, icon_state = "paperbag_NanotrasenStandard"),
+		"SymphioniaStandard" = image(icon = src.icon, icon_state = "paperbag_SymphioniaStandard"),
 		"SyndiSnacks" = image(icon = src.icon, icon_state = "paperbag_SyndiSnacks"),
 		"Heart" = image(icon = src.icon, icon_state = "paperbag_Heart"),
 		"SmileyFace" = image(icon = src.icon, icon_state = "paperbag_SmileyFace")
@@ -84,7 +84,7 @@
 	switch(design_choice)
 		if("None")
 			desc = "A sack neatly crafted out of paper."
-		if("NanotrasenStandard")
+		if("SymphioniaStandard")
 			desc = "A standard Symphionia paper lunch sack for loyal employees on the go."
 		if("SyndiSnacks")
 			desc = "The design on this paper sack is a remnant of the notorious 'SyndieSnacks' program."

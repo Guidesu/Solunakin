@@ -135,7 +135,7 @@
   - tweak: you can burn your brains out with a flashlight if you're tired of life
 2017-06-07:
   Expletive:
-  - rscadd: New plasma medals have been added to the Captain's medal box. Don't get
+  - rscadd: New plasma medals have been added to the Premier's medal box. Don't get
       them too warm.
   - imageadd: New sprites for plasma medals.
   - imageadd: Icon and worn sprites for all medals and the lawyer's badge have been
@@ -219,7 +219,7 @@
   - rscadd: You can now add a commendation message when pinning a medal on someone.
   - rscadd: Medal commendations will be displayed when the round ends.
   - tweak: Refactored the outfit datum to allow accessories as part of an outfit.
-  - bugfix: The Captain spawns with the Medal of Captaincy again.
+  - bugfix: The Premier spawns with the Medal of Premiercy again.
   TrustyGun:
   - rscadd: Some of the clown's toys have been moved into a crate in the theater.
       If you think you are missing something, check in there.
@@ -300,7 +300,7 @@
   - tweak: NT now provides education on the proper response for experiencing the excrutiating
       pain of varying degree burns (You scream when burning)
   Expletive:
-  - rscadd: The Captain now starts with a deluxe fountain pen in their PDA.
+  - rscadd: The Premier now starts with a deluxe fountain pen in their PDA.
   - rscadd: The quartermaster, curator, research director, lawyer, and bartender start
       with normal fountain pens in their PDAs.
   - rscadd: Cargo can order fountain pens via the Calligraphy Crate.
@@ -468,7 +468,7 @@
       one hundred years after they fell to slumber. Can the surviving crew, using
       old, broken and out of date equipment, overcome all odds and survive, or will
       the cold embrace of the stars become their new home?
-  - tweak: Nanotrasens Corps of Engineers has refitted and refurbished NTSS Boxstations
+  - tweak: Symphionias Corps of Engineers has refitted and refurbished NTSS Boxstations
       Engineering area into, what Centcom believes,  a more efficient design.
   That Really Good Soda Flavor:
   - experiment: Added the ability for a holiday to start on the nth weekday of a month.

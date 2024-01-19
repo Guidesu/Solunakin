@@ -86,7 +86,7 @@
 /obj/structure/drain,
 /obj/structure/curtain,
 /obj/machinery/shower/directional/west{
-	desc = "A borrowed Nanotrasen Hygiene Division HS-452. It's one of the older 2550's series. A small sticker on the side insists it \"observes 2560 lead compliance!\"; passively replenishes itself with water when not in use."
+	desc = "A borrowed Symphionia Hygiene Division HS-452. It's one of the older 2550's series. A small sticker on the side insists it \"observes 2560 lead compliance!\"; passively replenishes itself with water when not in use."
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/ruin/interdyne_planetary_base/cargo/deck)
@@ -3789,7 +3789,7 @@
 	dir = 1
 	},
 /obj/machinery/shower/directional/west{
-	desc = "A borrowed Nanotrasen Hygiene Division HS-452. It's one of the older 2550's series. A small sticker on the side insists it \"observes 2560 lead compliance!\"; passively replenishes itself with water when not in use."
+	desc = "A borrowed Symphionia Hygiene Division HS-452. It's one of the older 2550's series. A small sticker on the side insists it \"observes 2560 lead compliance!\"; passively replenishes itself with water when not in use."
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/ruin/interdyne_planetary_base/serv/rstrm)

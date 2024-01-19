@@ -1,9 +1,9 @@
 /datum/computer_file/program/news_archive
 	filename = "NewsArchive"
-	filedesc = "Nanotrasen News Archives"
+	filedesc = "Symphionia News Archives"
 	downloader_category = PROGRAM_CATEGORY_DEVICE
 	program_open_overlay = "generic"
-	extended_desc = "This program lets you view out-of-circulation articles from the Nanotrasen News Network."
+	extended_desc = "This program lets you view out-of-circulation articles from the Symphionia News Network."
 	can_run_on_flags = PROGRAM_ALL
 	program_flags = PROGRAM_ON_NTNET_STORE | PROGRAM_REQUIRES_NTNET
 	size = 6
@@ -40,7 +40,7 @@
 
 		// the TGUI needs _all_ of these to work
 		if(!("title" in uncompiled_stories[story]))
-			uncompiled_stories[story]["title"] = "Nanotrasen News Broadcast"
+			uncompiled_stories[story]["title"] = "Symphionia News Broadcast"
 		if(!("text" in uncompiled_stories[story]))
 			uncompiled_stories[story]["text"] = "Someone forgot to fill out the article!"
 		if(!("year" in uncompiled_stories[story]))

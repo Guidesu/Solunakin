@@ -64,7 +64,7 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 	item_path = /obj/item/clothing/under/akula_wetsuit
 
 /datum/loadout_item/under/jumpsuit/impcap
-	name = "Captain's Naval Jumpsuit"
+	name = "Premier's Naval Jumpsuit"
 	item_path = /obj/item/clothing/under/rank/captain/nova/imperial
 	restricted_roles = list(JOB_CAPTAIN, JOB_NT_REP)
 
@@ -912,6 +912,6 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 	donator_only = TRUE
 
 /datum/loadout_item/under/donator/captain_black
-	name  = "Captains Black Uniform"
+	name  = "Premiers Black Uniform"
 	item_path = /obj/item/clothing/under/rank/captain/nova/black
 	restricted_roles = list(JOB_CAPTAIN)

@@ -488,7 +488,7 @@
   - bugfix: you can now get a circuit from destroying the lipid extractor
   Jared-Fogle:
   - bugfix: Fixed SWAT and Armored beat cops spawning without a weapon.
-  - bugfix: Fixed the Symphionia Ship Captain outfit not having a jumpsuit, ID, or
+  - bugfix: Fixed the Symphionia Ship Premier outfit not having a jumpsuit, ID, or
       belt.
   - bugfix: Armored fugitive bounty hunters now correctly start with an extra tank
       of plasma in their hand.
@@ -876,7 +876,7 @@
   Ryll/Shaps:
   - tweak: The "Disk, Please!" achievement will now be granted to any nuclear operative
       who holds up any conscious non-nukie holding the disk, rather than needing the
-      Captain. Good luck!
+      Premier. Good luck!
   Skoglol:
   - tweak: Express supply console has had emagged pod amount reduced slightly and
       now has a cooldown.

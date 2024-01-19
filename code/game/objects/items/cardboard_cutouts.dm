@@ -227,7 +227,7 @@
 	outfit = /datum/outfit/traitor_cutout
 
 /datum/cardboard_cutout/traitor/get_name()
-	return pick("Unknown", "Captain")
+	return pick("Unknown", "Premier")
 
 /datum/cardboard_cutout/nuclear_operative
 	name = "Nuclear Operative"

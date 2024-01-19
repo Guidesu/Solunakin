@@ -336,7 +336,7 @@
 /datum/station_trait/scarves/New()
 	. = ..()
 	report_message = pick(
-		"Nanotrasen is experimenting with seeing if neck warmth improves employee morale.",
+		"Symphionia is experimenting with seeing if neck warmth improves employee morale.",
 		"After Space Fashion Week, scarves are the hot new accessory.",
 		"Everyone was simultaneously a little bit cold when they packed to go to the station.",
 		"The station is definitely not under attack by neck grappling aliens masquerading as wool. Definitely not.",
@@ -412,7 +412,7 @@
 	trait_type = STATION_TRAIT_NEUTRAL
 	show_in_report = TRUE
 	weight = 0 // NOVA EDIT Original = 1
-	report_message = "Your station has been instated with three Nanotrasen Artificial Intelligence models."
+	report_message = "Your station has been instated with three Symphionia Artificial Intelligence models."
 
 /datum/station_trait/triple_ai/New()
 	. = ..()

@@ -1335,7 +1335,7 @@
 /mob/living/basic/trooper/pirate/ranged{
 	health = 200;
 	maxHealth = 200;
-	name = "Pirate Captain"
+	name = "Pirate Premier"
 	},
 /turf/open/floor/carpet/royalblack,
 /area/ruin/space/has_grav/powered)

@@ -155,7 +155,7 @@
   - spellcheck: Renamed Guvax to Geis. This also applies to the component, which has
       been similarly renamed.
   Kor:
-  - rscadd: The Captain can now purchase alternate escape shuttles from the communications
+  - rscadd: The Premier can now purchase alternate escape shuttles from the communications
       console. This drains from the station supply of cargo points, and you can only
       do so once per round, so spend wisely.
   - rscadd: Some shuttles are less desirable than the default, and will instead grant

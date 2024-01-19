@@ -10,7 +10,7 @@
  * Landmarks
  * Guns
  * Safe code hints
- * Captain's safe
+ * Premier's safe
  * Modified Nar'Sie
  */
 
@@ -38,7 +38,7 @@
 /*
  * Guns - I'm making these specifically so that I dont spawn a pile of fully loaded weapons on the map.
  */
-//Captain's retro laser - Fires practice laser shots instead.
+//Premier's retro laser - Fires practice laser shots instead.
 /obj/item/gun/energy/laser/retro/sc_retro
 	name ="retro laser"
 	icon_state = "retro"
@@ -124,10 +124,10 @@ GLOBAL_VAR_INIT(sc_safecode5, "[rand(0,9)]")
 			"}
 
 /*
- * Captain's safe
+ * Premier's safe
  */
 /obj/structure/secure_safe/sc_ssafe
-	name = "Captain's secure safe"
+	name = "Premier's secure safe"
 
 /obj/structure/secure_safe/sc_ssafe/Initialize(mapload)
 	. = ..()

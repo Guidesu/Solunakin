@@ -3,7 +3,7 @@
 	icon = 'icons/obj/scrolls.dmi'
 	icon_state = "charter"
 	desc = "An official document entrusting the governance of the station \
-		and surrounding space to the Captain."
+		and surrounding space to the Premier."
 	var/used = FALSE
 	var/name_type = "station"
 
@@ -81,12 +81,12 @@
 
 /obj/item/station_charter/proc/rename_station(designation, uname, ureal_name, ukey)
 	set_station_name(designation)
-	minor_announce("[ureal_name] has designated your station as [html_decode(station_name())]", "Captain's Charter") //decode station_name to avoid minor_announce double encode
+	minor_announce("[ureal_name] has designated your station as [html_decode(station_name())]", "Premier's Charter") //decode station_name to avoid minor_announce double encode
 	log_game("[ukey] has renamed the station as [station_name()].")
 
 	name = "station charter for [station_name()]"
 	desc = "An official document entrusting the governance of \
-		[station_name()] and surrounding space to Captain [uname]."
+		[station_name()] and surrounding space to Premier [uname]."
 	SSblackbox.record_feedback("text", "station_renames", 1, "[station_name()]")
 	if(!unlimited_uses)
 		used = TRUE
@@ -110,10 +110,10 @@
 
 /obj/item/station_charter/banner/rename_station(designation, uname, ureal_name, ukey)
 	set_station_name(designation)
-	minor_announce("[ureal_name] has designated the [name_type] as [html_decode(station_name())]", "Captain's Banner") //decode station_name to avoid minor_announce double encode
+	minor_announce("[ureal_name] has designated the [name_type] as [html_decode(station_name())]", "Premier's Banner") //decode station_name to avoid minor_announce double encode
 	log_game("[ukey] has renamed the [name_type] as [station_name()].")
 	name = "banner of [station_name()]"
-	desc = "The banner bears the official coat of arms of Symphionia, signifying that [station_name()] has been claimed by Captain [uname] in the name of the company."
+	desc = "The banner bears the official coat of arms of Symphionia, signifying that [station_name()] has been claimed by Premier [uname] in the name of the company."
 	SSblackbox.record_feedback("text", "station_renames", 1, "[station_name()]")
 	if(!unlimited_uses)
 		used = TRUE
