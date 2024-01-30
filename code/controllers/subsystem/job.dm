@@ -40,7 +40,7 @@ SUBSYSTEM_DEF(job)
 	 * Keys should be assigned job roles. Values should be >= 1.
 	 * Represents the chain of command on the station. Lower numbers mean higher priority.
 	 * Used to give the Cap's Spare safe code to a an appropriate player.
-	 * Assumed Premier is always the highest in the chain of command.
+	 * Assumed Captain is always the highest in the chain of command.
 	 * See [/datum/controller/subsystem/ticker/proc/equip_characters]
 	 */
 	var/list/chain_of_command = list(
@@ -53,9 +53,9 @@ SUBSYSTEM_DEF(job)
 		JOB_QUARTERMASTER = 7,
 	)
 
-	/// If TRUE, some player has been assigned Premiercy or Acting Premiercy at some point during the shift and has been given the spare ID safe code.
+	/// If TRUE, some player has been assigned Captaincy or Acting Captaincy at some point during the shift and has been given the spare ID safe code.
 	var/assigned_captain = FALSE
-	/// Whether the emergency safe code has been requested via a comms console on shifts with no Premier or Acting Premier.
+	/// Whether the emergency safe code has been requested via a comms console on shifts with no Captain or Acting Captain.
 	var/safe_code_requested = FALSE
 	/// Timer ID for the emergency safe code request.
 	var/safe_code_timer_id
@@ -786,27 +786,27 @@ SUBSYSTEM_DEF(job)
 
 /obj/item/paper/paperslip/corporate/fluff/spare_id_safe_code
 	name = "Symphionia-Approved Spare ID Safe Code"
-	desc = "Proof that you have been approved for Premiercy, with all its glory and all its horror."
+	desc = "Proof that you have been approved for Captaincy, with all its glory and all its horror."
 
 /obj/item/paper/paperslip/corporate/fluff/spare_id_safe_code/Initialize(mapload)
 	var/safe_code = SSid_access.spare_id_safe_code
-	default_raw_text = "Premier's Spare ID safe code combination: [safe_code ? safe_code : "\[REDACTED\]"]<br><br>The spare ID can be found in its dedicated safe on the bridge.<br><br>If your job would not ordinarily have Head of Staff access, your ID card has been specially modified to possess it."
+	default_raw_text = "Captain's Spare ID safe code combination: [safe_code ? safe_code : "\[REDACTED\]"]<br><br>The spare ID can be found in its dedicated safe on the bridge.<br><br>If your job would not ordinarily have Head of Staff access, your ID card has been specially modified to possess it."
 	return ..()
 
 /obj/item/paper/paperslip/corporate/fluff/emergency_spare_id_safe_code
 	name = "Emergency Spare ID Safe Code Requisition"
-	desc = "Proof that nobody has been approved for Premiercy. A skeleton key for a skeleton shift."
+	desc = "Proof that nobody has been approved for Captaincy. A skeleton key for a skeleton shift."
 
 /obj/item/paper/paperslip/corporate/fluff/emergency_spare_id_safe_code/Initialize(mapload)
 	var/safe_code = SSid_access.spare_id_safe_code
-	default_raw_text = "Premier's Spare ID safe code combination: [safe_code ? safe_code : "\[REDACTED\]"]<br><br>The spare ID can be found in its dedicated safe on the bridge."
+	default_raw_text = "Captain's Spare ID safe code combination: [safe_code ? safe_code : "\[REDACTED\]"]<br><br>The spare ID can be found in its dedicated safe on the bridge."
 	return ..()
 
 /datum/controller/subsystem/job/proc/promote_to_captain(mob/living/carbon/human/new_captain, acting_captain = FALSE)
 	var/id_safe_code = SSid_access.spare_id_safe_code
 
 	if(!id_safe_code)
-		CRASH("Cannot promote [new_captain.real_name] to Premier, there is no id_safe_code.")
+		CRASH("Cannot promote [new_captain.real_name] to Captain, there is no id_safe_code.")
 
 	var/paper = new /obj/item/folder/biscuit/confidential/spare_id_safe_code()
 	var/list/slots = list(
@@ -818,7 +818,7 @@ SUBSYSTEM_DEF(job)
 	var/where = new_captain.equip_in_one_of_slots(paper, slots, FALSE, indirect_action = TRUE) || "at your feet"
 
 	if(acting_captain)
-		to_chat(new_captain, span_notice("Due to your position in the chain of command, you have been promoted to Acting Premier. You can find in important note about this [where]."))
+		to_chat(new_captain, span_notice("Due to your position in the chain of command, you have been promoted to Acting Captain. You can find in important note about this [where]."))
 	else
 		to_chat(new_captain, span_notice("You can find the code to obtain your spare ID from the secure safe on the Bridge [where]."))
 		new_captain.add_mob_memory(/datum/memory/key/captains_spare_code, safe_code = SSid_access.spare_id_safe_code)

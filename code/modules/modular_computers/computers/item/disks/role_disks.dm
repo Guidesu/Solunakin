@@ -19,7 +19,7 @@
 
 /obj/item/computer_disk/command/captain
 	name = "captain data disk"
-	desc = "Removable disk used to download essential Premier tablet apps."
+	desc = "Removable disk used to download essential Captain tablet apps."
 	icon_state = "datadisk10"
 	starting_programs = list(
 		/datum/computer_file/program/records/security,

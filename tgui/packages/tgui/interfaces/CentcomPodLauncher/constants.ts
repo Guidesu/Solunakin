@@ -132,7 +132,7 @@ export const SOUNDS = [
 export const STYLES = [
   { title: 'Standard' },
   { title: 'Advanced' },
-  { title: 'Symphionia' },
+  { title: 'Nanotrasen' },
   { title: 'Syndicate' },
   { title: 'Deathsquad' },
   { title: 'Cultist' },

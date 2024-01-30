@@ -56,7 +56,7 @@
 	icon_state = "sleeper_s"
 	prompt_name = "an Interdyne bioweapon scientist"
 	you_are_text = "You are a science technician employed in an Interdyne research facility developing biological weapons."
-	flavour_text = "Interdyne middle management has relayed that Symphionia is actively mining in this sector. A deal with the Syndicate remains, powering the quantum pad to their rumored starship in the system. Continue your research as best you can, and try to keep out of trouble."
+	flavour_text = "Interdyne middle management has relayed that Nanotrasen is actively mining in this sector. A deal with the Syndicate remains, powering the quantum pad to their rumored starship in the system. Continue your research as best you can, and try to keep out of trouble."
 	important_text = "The base is rigged with explosives, DO NOT abandon it or let it fall into enemy hands!"
 	outfit = /datum/outfit/interdyne_planetary_base
 	spawner_job_path = /datum/job/interdyne_planetary_base
@@ -71,7 +71,7 @@
 /obj/effect/mob_spawn/ghost_role/human/interdyne_planetary_base/ice
 	outfit = /datum/outfit/interdyne_planetary_base/ice
 	interdyne_planetary_base_icebox
-	flavour_text = "Interdyne middle management has relayed that Symphionia is actively mining in this sector. A deal with the Syndicate remains, but their starship has left the system, leaving our quantum pad without a purpose. Continue your research as best you can, and try to keep out of trouble."
+	flavour_text = "Interdyne middle management has relayed that Nanotrasen is actively mining in this sector. A deal with the Syndicate remains, but their starship has left the system, leaving our quantum pad without a purpose. Continue your research as best you can, and try to keep out of trouble."
 	spawner_job_path = /datum/job/interdyne_planetary_base_icebox
 
 /obj/effect/mob_spawn/ghost_role/human/interdyne_planetary_base/shaftminer
@@ -82,7 +82,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human/interdyne_planetary_base/shaftminer/ice
 	outfit = /datum/outfit/interdyne_planetary_base/shaftminer/ice
-	flavour_text = "Interdyne middle management has relayed that Symphionia is actively mining in this sector. A deal with the Syndicate remains, but their starship has left the system, leaving our quantum pad without a purpose. Continue your research as best you can, and try to keep out of trouble."
+	flavour_text = "Interdyne middle management has relayed that Nanotrasen is actively mining in this sector. A deal with the Syndicate remains, but their starship has left the system, leaving our quantum pad without a purpose. Continue your research as best you can, and try to keep out of trouble."
 	spawner_job_path = /datum/job/interdyne_planetary_base_icebox
 
 /obj/effect/mob_spawn/ghost_role/human/interdyne_planetary_base/deck_officer
@@ -92,7 +92,7 @@
 	outfit = /datum/outfit/interdyne_planetary_base/shaftminer/deckofficer
 
 /obj/effect/mob_spawn/ghost_role/human/interdyne_planetary_base/deck_officer/ice
-	flavour_text = "Interdyne middle management has relayed that Symphionia is actively mining in this sector. A deal with the Syndicate remains, but their starship has left the system, leaving our quantum pad without a purpose. Continue your research as best you can, and try to keep out of trouble."
+	flavour_text = "Interdyne middle management has relayed that Nanotrasen is actively mining in this sector. A deal with the Syndicate remains, but their starship has left the system, leaving our quantum pad without a purpose. Continue your research as best you can, and try to keep out of trouble."
 	spawner_job_path = /datum/job/interdyne_planetary_base_icebox
 
 // OUTFITS

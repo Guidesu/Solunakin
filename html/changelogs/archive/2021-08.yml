@@ -658,7 +658,7 @@
   - imageadd: added double bedsheets
   - bugfix: fixed e_gun subtypes using the AC-2 worn icon
   - rscadd: Added Command and CC budgets
-  - rscadd: Added Premier to Command Budget
+  - rscadd: Added Captain to Command Budget
   - rscadd: Added the Titan Crew, Blueshield, NT Rep to CC budget.
   goatking-ss13:
   - bugfix: Latejoin prisoners will now spawn in the permabrig, as intended.

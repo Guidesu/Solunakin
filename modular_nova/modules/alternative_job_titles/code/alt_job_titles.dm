@@ -102,10 +102,10 @@
 
 /datum/job/captain
 	alt_titles = list(
-		"Premier",
+		"Captain",
 		"Commanding Officer",
 		"Site Manager",
-		"Colony Commander",
+		"Station Commander",
 	)
 
 /datum/job/cargo_technician

@@ -25,7 +25,7 @@
 // CAPTAIN
 /obj/item/clothing/suit/armor/vest/capcarapace/jacket
 	name = "captain's jacket"
-	desc = "A lightweight armored jacket in the Premier's colors. For when you want something sleeker."
+	desc = "A lightweight armored jacket in the Captain's colors. For when you want something sleeker."
 	icon = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi'
 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi'
 	icon_state = "capjacket_casual"

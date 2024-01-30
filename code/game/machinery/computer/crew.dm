@@ -96,7 +96,7 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 	/// Map of job to ID for sorting purposes
 	var/list/jobs = list(
 		// Note that jobs divisible by 10 are considered heads of staff, and bolded
-		// 00: Premier
+		// 00: Captain
 		JOB_CAPTAIN = 00,
 		// 10-19: Security
 		JOB_HEAD_OF_SECURITY = 10,

@@ -815,8 +815,8 @@
 "Kf" = (
 /obj/structure/table,
 /obj/machinery/fax{
-	fax_name = "Premier's Office";
-	name = "Premier's Fax Machine"
+	fax_name = "Captain's Office";
+	name = "Captain's Fax Machine"
 	},
 /obj/item/paper,
 /obj/effect/turf_decal/tile/dark_blue/opposingcorners,

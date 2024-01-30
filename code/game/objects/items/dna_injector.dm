@@ -551,7 +551,7 @@
 
 /obj/item/dnainjector/xraymut
 	name = "\improper DNA injector (X-ray)"
-	desc = "Finally you can see what the Premier does."
+	desc = "Finally you can see what the Captain does."
 	add_mutations = list(/datum/mutation/human/xray)
 
 /obj/item/dnainjector/antixray

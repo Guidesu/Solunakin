@@ -10137,7 +10137,7 @@
 /area/station/maintenance/tram/mid)
 "cvf" = (
 /obj/machinery/door/window{
-	name = "Premier's Desk";
+	name = "Captain's Desk";
 	req_access = list("captain")
 	},
 /obj/structure/cable,
@@ -22983,8 +22983,8 @@
 /area/station/service/library)
 "hhJ" = (
 /obj/machinery/requests_console/directional/east{
-	department = "Premier's Desk";
-	name = "Premier's Requests Console"
+	department = "Captain's Desk";
+	name = "Captain's Requests Console"
 	},
 /obj/effect/mapping_helpers/requests_console/announcement,
 /obj/effect/mapping_helpers/requests_console/assistance,
@@ -33406,7 +33406,7 @@
 /area/station/security/checkpoint/arrivals)
 "kRm" = (
 /obj/machinery/door/airlock/command{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
@@ -41395,7 +41395,7 @@
 "nFZ" = (
 /obj/machinery/airalarm/directional/east,
 /obj/machinery/camera/directional/east{
-	c_tag = "Command - Premier's Office"
+	c_tag = "Command - Captain's Office"
 	},
 /obj/structure/table/wood,
 /obj/machinery/coffeemaker/impressa,
@@ -43901,7 +43901,7 @@
 /obj/machinery/door/window{
 	base_state = "right";
 	icon_state = "right";
-	name = "Premier's Desk";
+	name = "Captain's Desk";
 	req_access = list("captain")
 	},
 /turf/open/floor/wood,
@@ -44954,7 +44954,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/directional/north{
-	c_tag = "Command - Premier's Quarters"
+	c_tag = "Command - Captain's Quarters"
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain/private)
@@ -52591,7 +52591,7 @@
 /area/station/command/heads_quarters/rd)
 "rKP" = (
 /obj/machinery/door/airlock/command{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /obj/structure/cable,
@@ -67309,8 +67309,8 @@
 /obj/structure/table/wood,
 /obj/item/radio/intercom/directional/east,
 /obj/machinery/fax{
-	fax_name = "Premier's Office";
-	name = "Premier's Fax Machine"
+	fax_name = "Captain's Office";
+	name = "Captain's Fax Machine"
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)

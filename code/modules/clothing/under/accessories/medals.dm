@@ -19,7 +19,7 @@
 
 /// Input a reason for the medal for the round end screen
 /obj/item/clothing/accessory/medal/proc/provide_reason(mob/living/carbon/human/distinguished, mob/user)
-	commendation_message = tgui_input_text(user, "Reason for this commendation? It will be recorded by Symphionia.", "Commendation", max_length = 140)
+	commendation_message = tgui_input_text(user, "Reason for this commendation? It will be recorded by Nanotrasen.", "Commendation", max_length = 140)
 	return !!commendation_message
 
 /obj/item/clothing/accessory/medal/attach(obj/item/clothing/under/attach_to, mob/living/attacher)
@@ -47,7 +47,7 @@
 
 /obj/item/clothing/accessory/medal/conduct
 	name = "distinguished conduct medal"
-	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is the most basic award given by Symphionia. It is often awarded by a captain to a member of his crew."
+	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is the most basic award given by Nanotrasen. It is often awarded by a captain to a member of his crew."
 
 /obj/item/clothing/accessory/medal/bronze_heart
 	name = "bronze heart medal"
@@ -76,15 +76,15 @@
 
 /obj/item/clothing/accessory/medal/silver/security
 	name = "robust security award"
-	desc = "An award for distinguished combat and sacrifice in defence of Symphionia's commercial interests. Often awarded to security staff."
+	desc = "An award for distinguished combat and sacrifice in defence of Nanotrasen's commercial interests. Often awarded to security staff."
 
 /obj/item/clothing/accessory/medal/silver/excellence
 	name = "\proper the head of personnel award for outstanding achievement in the field of excellence"
-	desc = "Symphionia's dictionary defines excellence as \"the quality or condition of being excellent\". This is awarded to those rare crewmembers who fit that definition."
+	desc = "Nanotrasen's dictionary defines excellence as \"the quality or condition of being excellent\". This is awarded to those rare crewmembers who fit that definition."
 
 /obj/item/clothing/accessory/medal/silver/bureaucracy
 	name = "\improper Excellence in Bureaucracy Medal"
-	desc = "Awarded for exemplary managerial services rendered while under contract with Symphionia."
+	desc = "Awarded for exemplary managerial services rendered while under contract with Nanotrasen."
 
 /obj/item/clothing/accessory/medal/gold
 	name = "gold medal"
@@ -105,7 +105,7 @@
 
 /obj/item/clothing/accessory/medal/gold/captain
 	name = "medal of captaincy"
-	desc = "A golden medal awarded exclusively to those promoted to the rank of captain. It signifies the codified responsibilities of a captain to Symphionia, and their undisputable authority over their crew."
+	desc = "A golden medal awarded exclusively to those promoted to the rank of captain. It signifies the codified responsibilities of a captain to Nanotrasen, and their undisputable authority over their crew."
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/item/clothing/accessory/medal/gold/heroism
@@ -137,7 +137,7 @@
 
 /obj/item/clothing/accessory/medal/silver/emergency_services
 	name = "emergency services award"
-	desc = "A silver medal awarded to the outstanding emergency service workers of Symphionia, those who work tirelessly together through adversity to keep their crew safe and breathing in the harsh environments of outer space."
+	desc = "A silver medal awarded to the outstanding emergency service workers of Nanotrasen, those who work tirelessly together through adversity to keep their crew safe and breathing in the harsh environments of outer space."
 	icon_state = "emergencyservices"
 
 	/// Flavor text that is appended to the description.

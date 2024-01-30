@@ -33,7 +33,7 @@
 
 	family_heirlooms = list(/obj/item/bikehorn/golden)
 	rpg_title = "Jester"
-	job_flags = DISABLED_STATION_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS
 
 	job_tone = "honk"
 

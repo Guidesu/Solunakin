@@ -7,7 +7,7 @@
 	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
 
 /datum/id_trim/syndicom/nova/captain
-	assignment = "Syndicate Ship Premier"
+	assignment = "Syndicate Ship Captain"
 	trim_state = "trim_captain"
 	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
 

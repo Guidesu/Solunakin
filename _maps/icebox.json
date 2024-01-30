@@ -46,7 +46,7 @@
 	"minetype": "none",
 	"blacklist_file": "iceruinblacklist.txt",
 	"job_changes": {
-		"Premier": {
+		"Captain": {
 			"special_charter": "moon"
 		}
 	}

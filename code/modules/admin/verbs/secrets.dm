@@ -565,7 +565,7 @@ GLOBAL_DATUM(everyone_a_traitor, /datum/everyone_is_a_traitor_controller)
 			if(teamsize <= 0)
 				return FALSE
 
-			candidates = SSpolling.poll_ghost_candidates("Do you wish to be considered for a Symphionia emergency response drone?", check_jobban = ROLE_DRONE, pic_source = /mob/living/basic/drone/classic, role_name_text = "nanotrasen emergency response drone")
+			candidates = SSpolling.poll_ghost_candidates("Do you wish to be considered for a Nanotrasen emergency response drone?", check_jobban = ROLE_DRONE, pic_source = /mob/living/basic/drone/classic, role_name_text = "nanotrasen emergency response drone")
 
 			if(length(candidates) == 0)
 				return FALSE
@@ -575,7 +575,7 @@ GLOBAL_DATUM(everyone_a_traitor, /datum/everyone_is_a_traitor_controller)
 				candidates -= chosen_candidate
 				nerd = new /mob/living/basic/drone/classic(spawnpoint)
 				nerd.key = chosen_candidate.key
-				nerd.log_message("has been selected as a Symphionia emergency response drone.", LOG_GAME)
+				nerd.log_message("has been selected as a Nanotrasen emergency response drone.", LOG_GAME)
 				teamsize--
 
 			return TRUE

@@ -31,7 +31,7 @@
   - bugfix: Fixes tesla zaps being weird.
   - admin: Logs explosions from explosive zaps.
   - rscadd: The Ethereal Vintner's Union has been "convinced" to trade their signature
-      Lanternfruit with Symphionia!
+      Lanternfruit with Nanotrasen!
   - image: Sprites for the aforementioned fruit.
   - bugfix: Cargo will remove/cancel orders from its cart if that order exceeds the
       available budget (both private or cargo) and the player cannot cancel this order
@@ -269,10 +269,10 @@
   - bugfix: tails will no longer keep wagging even in death
   - qol: Make notepad available for everyone, who has only laptop or console.
   SpaceLove:
-  - rscadd: Symphionia has removed combat restrictions over Nightvision Cybernetic
+  - rscadd: Nanotrasen has removed combat restrictions over Nightvision Cybernetic
       Eyes and it is now readily available in advanced cybernetic implants for all
       your nightly adventurers!
-  - rscdel: Symphionia medical ethics boards has deemed the militarygrade implants
+  - rscdel: Nanotrasen medical ethics boards has deemed the militarygrade implants
       such as Thermal eyes implant too risky to keep around in medical techfab, therefore
       they have been handed over to Robotics only.
   nikothedude:
@@ -355,7 +355,7 @@
   - rscadd: Saltcane can be dried into a replacement seaweedsheet for sushi.
   - balance: Venus human traps now take 12.5 damage per second instead of 20 while
       off kudzu.
-  - bugfix: Symphionia has clarified an issue with their manual publishers, and these
+  - bugfix: Nanotrasen has clarified an issue with their manual publishers, and these
       guides should now contain actual user-pertinent content.
   - qol: machines/devices that ask you to pick a reagent name from an input list have
       their names sorted alphabetically & preserves white space between words making
@@ -512,7 +512,7 @@
   - bugfix: fixes holodeck missing medical tools
   - spellcheck: Made the remembrance day greeting message more tasteful.
   - bugfix: The Dread Disciples of Maint Khan, notorious Tunnel Arts practitioner
-      and maintenance warlord, have been driven from Symphionia stations within the
+      and maintenance warlord, have been driven from Nanotrasen stations within the
       Spinward Sector. The average punch accuracy has been increased as a direct result,
       with the most exhausted puncher now having a  max potential inaccuracy of 80%,
       rather than the absurd 20% of the Disciples.
@@ -918,7 +918,7 @@
       go non-verbal. Other effects are maintained.
   - rscadd: The battle against Maint Khan's forces rages on in the periphery stations
       of the Spinward Sector. And with it, a new breed of unarmed warrior has emerged;
-      the cybernetic martial artist. Symphionia, rather than quell the minor maintenance
+      the cybernetic martial artist. Nanotrasen, rather than quell the minor maintenance
       civil war brewing in their sector, have chosen to exploit this conflict to push
       their weapons and cybernetics research to new heights!
   - rscadd: Advanced cybernetic arms can be printed at the Robotics exofabricator
@@ -1024,8 +1024,8 @@
   - bugfix: fullupgrade chem dispensers will now spawn with all their chems
   - balance: Judo Joe, archnemesis of Maint Khan, has begun re-airing his midnight
       infomercials shilling his extremely expensive Tackle Supreme Judo Karate Training
-      video tapes. Unable to pass up a 'bargain', Symphionia has purchased these tapes
-      en masse. Tackling techniques have started to improve, as well as Symphionia's
+      video tapes. Unable to pass up a 'bargain', Nanotrasen has purchased these tapes
+      en masse. Tackling techniques have started to improve, as well as Nanotrasen's
       tackling instructional algorithms within tackle gloves.
   - balance: The outcomes for tackling are more equalized. It isn't as feast or famine,
       and should be somewhat more controllable without becoming too severe.

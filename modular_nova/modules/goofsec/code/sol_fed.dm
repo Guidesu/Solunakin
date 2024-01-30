@@ -72,7 +72,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 	EMERGENCY_RESPONSE_EMT = "You SHOULD call EMTs for:\n\
 		Large or excessive amounts of dead bodies, emergency medical situations that the station can't handle, etc.\n\
 		You SHOULD NOT call EMTs for:\n\
-		The Premier stubbing their toe, one or two dead bodies, minor viral outbreaks, etc.\n\
+		The Captain stubbing their toe, one or two dead bodies, minor viral outbreaks, etc.\n\
 		Are you sure you want to call EMTs?",
 	EMERGENCY_RESPONSE_POLICE = "You SHOULD call Marshals for:\n\
 		Security ignoring Command, Security violating civil rights, Security engaging in Mutiny, \

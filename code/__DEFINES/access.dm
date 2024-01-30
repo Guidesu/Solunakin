@@ -28,7 +28,7 @@
 #define ACCESS_ALL_PERSONAL_LOCKERS "all_personal_lockers"
 /// Access used for Access-Changing Programs, this one will unlock all options that can be ever given via that program.
 #define ACCESS_CHANGE_IDS "change_ids"
-/// Access used for the Premier's personal quarters in mapping, as well as what allows one to order emergency shuttles.
+/// Access used for the Captain's personal quarters in mapping, as well as what allows one to order emergency shuttles.
 #define ACCESS_CAPTAIN "captain"
 /// Access used for the Head of Personnel's personal quarters in mapping, as well as the security console and other HoP-related things.
 #define ACCESS_HOP "hop"
@@ -180,7 +180,7 @@
 #define ACCESS_CENT_TELEPORTER "cent_teleporter"
 #define ACCESS_CENT_CAPTAIN "cent_captain"
 #define ACCESS_CENT_BAR "cent_bar"
-/// Special Ops. Premier's display case, Marauder and Seraph mechs.
+/// Special Ops. Captain's display case, Marauder and Seraph mechs.
 #define ACCESS_CENT_SPECOPS 188 ///Remind me to separate to captain, centcom, and syndicate mech access later -SonofSpace
 
 /// - - - ANTAGONIST - - -
@@ -216,9 +216,9 @@
 #define ACCESS_FLAG_PRV_COMMAND_NAME "Private Command"
 /// Bitflag for Private Command ID card accesses. See PRIVATE_COMMAND_ACCESS.
 #define ACCESS_FLAG_PRV_COMMAND (1 << 2)
-/// Displayed name for Premier ID card accesses.
-#define ACCESS_FLAG_CAPTAIN_NAME "Premier"
-/// Bitflag for Premier ID card accesses. See CAPTAIN_ACCESS.
+/// Displayed name for Captain ID card accesses.
+#define ACCESS_FLAG_CAPTAIN_NAME "Captain"
+/// Bitflag for Captain ID card accesses. See CAPTAIN_ACCESS.
 #define ACCESS_FLAG_CAPTAIN (1 << 3)
 /// Displayed name for Centcom ID card accesses.
 #define ACCESS_FLAG_CENTCOM_NAME "Centcom"
@@ -362,7 +362,7 @@
 	ACCESS_RD, \
 ) // NOVA EDIT - Added ACCESS_CE and ACCESS_CMO to PRIVATE_COMMAND_ACCESS
 
-/// Premiers private rooms. Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_CAPTAIN)
+/// Captains private rooms. Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_CAPTAIN)
 #define CAPTAIN_ACCESS list( \
 	ACCESS_CAPTAIN, \
 )
@@ -507,7 +507,7 @@
 )
 /// Name for the Command region.
 #define REGION_COMMAND "Command"
-/// Used to seed the accesses_by_region list in SSid_access. A list of all command regional accesses that are overseen by the Premier.
+/// Used to seed the accesses_by_region list in SSid_access. A list of all command regional accesses that are overseen by the Captain.
 #define REGION_ACCESS_COMMAND list( \
 	ACCESS_AI_UPLOAD, \
 	ACCESS_ALL_PERSONAL_LOCKERS, \

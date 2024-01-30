@@ -5,7 +5,7 @@
 
 /obj/item/gbp_punchcard
 	name = "Good Assistant Points punchcard"
-	desc = "The Good Assistant Points program is designed to supplement the income of otherwise unemployed or unpaid individuals on board Symphionia vessels and colonies.<br>\
+	desc = "The Good Assistant Points program is designed to supplement the income of otherwise unemployed or unpaid individuals on board Nanotrasen vessels and colonies.<br>\
 	Simply get your punchcard stamped by a Head of Staff to earn 100 credits per punch upon turn-in at a Good Assistant Point machine!<br>\
 	Maximum of six punches per any given card. Card replaced upon redemption of existing card. Do not lose your punchcard."
 	icon = 'modular_nova/modules/cargo/icons/punchcard.dmi'

@@ -469,7 +469,7 @@
 /obj/structure/table/wood,
 /obj/item/storage/box/matches,
 /obj/item/reagent_containers/cup/glass/bottle/rum{
-	name = "Premier Pete's Private Reserve Cuban Spaced Rum";
+	name = "Captain Pete's Private Reserve Cuban Spaced Rum";
 	pixel_x = -6;
 	pixel_y = 8
 	},
@@ -881,7 +881,7 @@
 "zw" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/door/airlock{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/cutaiwire,

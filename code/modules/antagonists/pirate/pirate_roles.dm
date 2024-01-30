@@ -60,7 +60,7 @@
 	fluff_spawn = null
 
 /obj/effect/mob_spawn/ghost_role/human/pirate/skeleton/captain
-	rank = "Premier"
+	rank = "Captain"
 	outfit = /datum/outfit/pirate/captain/skeleton
 
 /obj/effect/mob_spawn/ghost_role/human/pirate/skeleton/gunner

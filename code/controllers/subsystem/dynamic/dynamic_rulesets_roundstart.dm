@@ -264,7 +264,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	restricted_roles = list(
 		JOB_CAPTAIN,
 		JOB_HEAD_OF_SECURITY,
-	) // Just to be sure that a wizard getting picked won't ever imply a Premier or HoS not getting drafted
+	) // Just to be sure that a wizard getting picked won't ever imply a Captain or HoS not getting drafted
 	required_candidates = 1
 	weight = 2
 	cost = 20
@@ -406,7 +406,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	restricted_roles = list(
 		JOB_CAPTAIN,
 		JOB_HEAD_OF_SECURITY,
-	) // Just to be sure that a nukie getting picked won't ever imply a Premier or HoS not getting drafted
+	) // Just to be sure that a nukie getting picked won't ever imply a Captain or HoS not getting drafted
 	required_candidates = 5
 	weight = 3
 	cost = 20

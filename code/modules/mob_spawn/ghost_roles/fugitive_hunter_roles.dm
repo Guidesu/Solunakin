@@ -81,7 +81,7 @@
 	outfit = /datum/outfit/psyker
 
 /obj/effect/mob_spawn/ghost_role/human/fugitive/psyker/captain
-	prompt_name = "a psyker Premier"
+	prompt_name = "a psyker Captain"
 	back_story = HUNTER_PACK_PSYKER
 	outfit = /datum/outfit/psyker/captain
 

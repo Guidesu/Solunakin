@@ -1,5 +1,5 @@
 /datum/outfit/faction_captain
-	name = "Faction - Premier"
+	name = "Faction - Captain"
 	head = /obj/item/clothing/head/hats/hos/beret/faction
 	uniform = /obj/item/clothing/under/syndicate
 	suit = /obj/item/clothing/suit/armor/hos/trenchcoat

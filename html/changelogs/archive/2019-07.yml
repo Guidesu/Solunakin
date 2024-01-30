@@ -17,7 +17,7 @@
       windoor in the cargo bay that kept MULEbots from leaving their area.'
   - bugfix: 'Mining station: Fixed unconnected air supply pipes.'
   - bugfix: Replaced the CentCom admin storage vault door with bomb-proof shutters
-      (require CentCom Premier level access to open). Removed broken intercoms from
+      (require CentCom Captain level access to open). Removed broken intercoms from
       the wizard shuttle and replaced them with two headsets.
   - bugfix: Deleted random duplicate and broken atmos piping in most maps.
   - bugfix: 'Donutstation: The AI chamber SMES is now correctly connected to the AI

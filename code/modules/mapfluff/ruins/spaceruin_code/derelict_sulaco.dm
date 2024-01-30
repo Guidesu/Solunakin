@@ -3,7 +3,7 @@
 /obj/item/paper/crumpled/ruins/derelict_sulaco/captain
 	name = "bloody paper scrap"
 	icon_state = "scrap_bloodied"
-	default_raw_text = "We gave it our all, yet we still lost. Now we're just waiting for the self-destruct to go off. But I had a good run. We all did. I led and fought with the bravest, most sincere people I ever had the pleasure of meeting.<BR><BR>Semper fi.<BR><BR>*Premier Romero Hernan*"
+	default_raw_text = "We gave it our all, yet we still lost. Now we're just waiting for the self-destruct to go off. But I had a good run. We all did. I led and fought with the bravest, most sincere people I ever had the pleasure of meeting.<BR><BR>Semper fi.<BR><BR>*Captain Romero Hernan*"
 
 /obj/item/paper/ruins/derelict_sulaco/birthday
 	name = "to our captain"

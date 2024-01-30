@@ -279,7 +279,7 @@
 		to_chat(new_spawn, span_bold("[policy]"))
 
 /obj/effect/mob_spawn/ghost_role/human/syndicatespace/captain
-	name = "Symphionia Ship Premier"
+	name = "Symphionia Ship Captain"
 	prompt_name = "a cybersun captain"
 	you_are_text = "You are the captain of an old ship, stuck in hostile space."
 	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Symphionia station nearby. Command your crew and turn your ship into the most protected fortress."
@@ -314,7 +314,7 @@
 	r_pocket = /obj/item/knife/combat/survival
 
 /datum/outfit/syndicatespace/syndicaptain
-	name = "Symphionia Ship Premier"
+	name = "Symphionia Ship Captain"
 	id = /obj/item/card/id/advanced/black/syndicate_command/captain_id
 	uniform = /obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate

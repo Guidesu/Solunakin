@@ -110,7 +110,7 @@
 	icon_state = "abductor_agent_combat"
 	icon_living = "abductor_agent_combat"
 	icon_gib = "syndicate_gib"
-	gps_name = "Premier's Signal"
+	gps_name = "Captain's Signal"
 	mouse_opacity = MOUSE_OPACITY_ICON
 
 	health = 1750

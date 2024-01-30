@@ -209,7 +209,7 @@ GLOBAL_LIST_INIT(pride_pin_reskins, list(
 /// Self-identify as a dangerous subversive
 /obj/item/clothing/accessory/anti_sec_pin
 	name = "subversive pin"
-	desc = "A badge which loudly and proudly proclaims your hostility to the Symphionia Security Team, and authority in general."
+	desc = "A badge which loudly and proudly proclaims your hostility to the Nanotrasen Security Team, and authority in general."
 	icon_state = "anti_sec"
 
 /obj/item/clothing/accessory/anti_sec_pin/Initialize(mapload)

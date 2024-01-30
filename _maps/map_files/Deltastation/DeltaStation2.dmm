@@ -12279,7 +12279,7 @@
 "cXB" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -27970,7 +27970,7 @@
 /area/station/medical/paramedic)
 "gQm" = (
 /obj/machinery/camera/motion/directional/west{
-	c_tag = "Bridge - Premier's Emergency Escape";
+	c_tag = "Bridge - Captain's Emergency Escape";
 	name = "motion-sensitive command camera"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -29362,7 +29362,7 @@
 /area/station/security/prison/visit)
 "hjN" = (
 /obj/machinery/door/window/brigdoor/left/directional/north{
-	name = "Premier's Desk";
+	name = "Captain's Desk";
 	req_access = list("captain")
 	},
 /turf/open/floor/iron/grimy,
@@ -44987,7 +44987,7 @@
 /area/station/command/bridge)
 "lgN" = (
 /obj/machinery/door/window/brigdoor/left/directional/west{
-	name = "Premier's Bedroom";
+	name = "Captain's Bedroom";
 	req_access = list("captain")
 	},
 /obj/structure/cable,
@@ -53568,7 +53568,7 @@
 "nrd" = (
 /obj/item/kirbyplants/random,
 /obj/machinery/camera/directional/south{
-	c_tag = "Bridge - Premier's Quarters";
+	c_tag = "Bridge - Captain's Quarters";
 	name = "command camera"
 	},
 /obj/machinery/firealarm/directional/south,
@@ -54013,8 +54013,8 @@
 	dir = 4
 	},
 /obj/machinery/requests_console/directional/west{
-	department = "Premier's Desk";
-	name = "Premier's Requests Console"
+	department = "Captain's Desk";
+	name = "Captain's Requests Console"
 	},
 /obj/effect/mapping_helpers/requests_console/announcement,
 /obj/effect/mapping_helpers/requests_console/information,
@@ -61628,7 +61628,7 @@
 /obj/item/pen/fourcolor,
 /obj/item/stamp/head/captain,
 /obj/machinery/door/window/brigdoor/left/directional/north{
-	name = "Premier's Desk";
+	name = "Captain's Desk";
 	req_access = list("captain")
 	},
 /turf/open/floor/carpet,
@@ -64878,7 +64878,7 @@
 "qig" = (
 /obj/structure/table/wood,
 /obj/machinery/camera/directional/west{
-	c_tag = "Bridge - Premier's Office";
+	c_tag = "Bridge - Captain's Office";
 	name = "command camera"
 	},
 /obj/structure/window/reinforced/spawner/directional/north,
@@ -74020,8 +74020,8 @@
 "swj" = (
 /obj/structure/table/wood,
 /obj/machinery/fax{
-	fax_name = "Premier's Office";
-	name = "Premier's Fax Machine"
+	fax_name = "Captain's Office";
+	name = "Captain's Fax Machine"
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
@@ -82145,7 +82145,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
-	name = "Premier's Office"
+	name = "Captain's Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /turf/open/floor/wood,

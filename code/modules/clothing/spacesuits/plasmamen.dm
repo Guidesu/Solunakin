@@ -403,7 +403,7 @@
 
 /obj/item/clothing/head/helmet/space/plasmaman/captain
 	name = "captain's plasma envirosuit helmet"
-	desc = "A special containment helmet designed for the Premier. Embarrassingly enough, it looks way too much like the Head of Personnel's design save for the gold stripes. I mean, come on. Gold stripes can fix anything."
+	desc = "A special containment helmet designed for the Captain. Embarrassingly enough, it looks way too much like the Head of Personnel's design save for the gold stripes. I mean, come on. Gold stripes can fix anything."
 	icon_state = "captain_envirohelm"
 	inhand_icon_state = null
 	armor_type = /datum/armor/hats_caphat/plasmaman

@@ -11,7 +11,7 @@ const commandJobs = [
   'Research Director',
   'Chief Medical Officer',
   'Quartermaster', // NOVA EDIT
-  'Symphionia Consultant', // NOVA EDIT
+  'Nanotrasen Consultant', // NOVA EDIT
 ];
 
 // NOVA EDIT CHANGE BEGIN - ALTERNATIVE_JOB_TITLES
@@ -60,8 +60,8 @@ export const CrewManifest = (props) => {
                         <Icon className="CrewManifest__Icon" name="infinity" />
                       </Tooltip>
                     )}
-                    {crewMember.trim === 'Premier' && (
-                      <Tooltip content="Premier" position="bottom">
+                    {crewMember.trim === 'Captain' && (
+                      <Tooltip content="Captain" position="bottom">
                         <Icon
                           className={classes([
                             'CrewManifest__Icon',

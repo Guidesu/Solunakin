@@ -52,10 +52,10 @@
 	greyscale_colors = "#313c6e"
 	flags_1 = IS_PLAYER_COLORABLE_1
 
-//Premier
+//Captain
 /obj/item/clothing/suit/jacket/capjacket
 	name = "captain's parade jacket"
-	desc = "Worn by a Premier to show their class."
+	desc = "Worn by a Captain to show their class."
 	icon_state = "capjacket"
 	inhand_icon_state = "bio_suit"
 	body_parts_covered = CHEST|GROIN|ARMS

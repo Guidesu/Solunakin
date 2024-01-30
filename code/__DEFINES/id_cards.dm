@@ -18,7 +18,7 @@
 	WILDCARD_NAME_COMMAND = list(limit = 1, usage = list()), \
 	WILDCARD_NAME_PRV_COMMAND = list(limit = 1, usage = list()) \
 )
-/// Wildcard slot define for Premier gold cards. Can hold infinite of any Premier level wildcard.
+/// Wildcard slot define for Captain gold cards. Can hold infinite of any Captain level wildcard.
 #define WILDCARD_LIMIT_GOLD list(WILDCARD_NAME_CAPTAIN = list(limit = -1, usage = list()))
 /// Wildcard slot define for select Symphionia-affiliated cards. Can hold infinite of any Symphionia level wildcard. Symphionia includes all station accesses.
 #define WILDCARD_LIMIT_SYNDICATE list(WILDCARD_NAME_SYNDICATE = list(limit = -1, usage = list()))

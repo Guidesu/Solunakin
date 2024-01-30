@@ -6910,7 +6910,7 @@
 /obj/machinery/disposal/bin,
 /obj/machinery/light/directional/east,
 /obj/machinery/camera/directional/east{
-	c_tag = "Bridge - Premier's Office";
+	c_tag = "Bridge - Captain's Office";
 	name = "command camera"
 	},
 /obj/structure/disposalpipe/trunk{
@@ -9479,11 +9479,11 @@
 /obj/item/radio/intercom{
 	dir = 8;
 	freerange = 1;
-	name = "Station Intercom (Premier)";
+	name = "Station Intercom (Captain)";
 	pixel_y = 20
 	},
 /obj/machinery/button/door/directional/west{
-	id = "Premierprivacy";
+	id = "Captainprivacy";
 	name = "Privacy Shutters Control";
 	pixel_x = 5;
 	pixel_y = 37;
@@ -13900,11 +13900,11 @@
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 4;
 	id_tag = "Capoffice";
-	name = "Premier's Office"
+	name = "Captain's Office"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters/preopen{
-	id = "Premierprivacy";
+	id = "Captainprivacy";
 	name = "Privacy Shutters"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
@@ -19294,7 +19294,7 @@
 /obj/item/reagent_containers/pill/patch/aiuri,
 /obj/effect/turf_decal/tile/yellow/full,
 /obj/item/paper/fluff{
-	default_raw_text = "Chief Engineer, we would like to inform you that BlueShift may be unlike any vessel or station you've been on before. The power net is divided up into power banks which supply the departments. These can be found in the tunnels behind, or around most departments. Please inform yourself, and your engineers, to NEVER directly wire you main power net into these departments. If you ever run into issues, please contact your Premier so they may send us a message. Have a secure shift.";
+	default_raw_text = "Chief Engineer, we would like to inform you that BlueShift may be unlike any vessel or station you've been on before. The power net is divided up into power banks which supply the departments. These can be found in the tunnels behind, or around most departments. Please inform yourself, and your engineers, to NEVER directly wire you main power net into these departments. If you ever run into issues, please contact your Captain so they may send us a message. Have a secure shift.";
 	name = "Note to the Chief Engineer"
 	},
 /turf/open/floor/iron/large,
@@ -20328,7 +20328,7 @@
 "dQD" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/machinery/door/airlock/captain{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -30658,7 +30658,7 @@
 /obj/machinery/computer/security/telescreen/entertainment/directional/north,
 /obj/machinery/light/directional/east,
 /obj/machinery/camera/directional/east{
-	c_tag = "Bridge - Premier's Office";
+	c_tag = "Bridge - Captain's Office";
 	name = "command camera"
 	},
 /obj/structure/noticeboard/captain{
@@ -31185,7 +31185,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/door/poddoor/shutters/preopen{
-	id = "Premierprivacy";
+	id = "Captainprivacy";
 	name = "Privacy Shutters"
 	},
 /turf/open/floor/plating,
@@ -31208,7 +31208,7 @@
 /area/station/hallway/primary/upper)
 "fUa" = (
 /obj/machinery/door/airlock/captain{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -35083,7 +35083,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/door/airlock/captain{
-	name = "Premier's Suite"
+	name = "Captain's Suite"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -41201,7 +41201,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
 /obj/machinery/door/poddoor/shutters/preopen{
-	id = "Premierprivacy";
+	id = "Captainprivacy";
 	name = "Privacy Shutters"
 	},
 /turf/open/floor/plating,
@@ -46395,7 +46395,7 @@
 /obj/item/melee/chainofcommand,
 /obj/machinery/door/window/brigdoor/left{
 	dir = 8;
-	name = "Premier's Desk";
+	name = "Captain's Desk";
 	req_access = list("captain")
 	},
 /turf/open/floor/carpet/blue,
@@ -50071,7 +50071,7 @@
 "jCr" = (
 /obj/structure/table/reinforced,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 8
 	},
@@ -51359,7 +51359,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/public/glass{
-	name = "Premiers Office Access"
+	name = "Captains Office Access"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -51810,7 +51810,7 @@
 	pixel_x = -7
 	},
 /obj/machinery/camera/directional/north{
-	c_tag = "Bridge - Premier's Quarters";
+	c_tag = "Bridge - Captain's Quarters";
 	name = "command camera"
 	},
 /obj/structure/window/reinforced/tinted/spawner/directional/east,
@@ -52643,20 +52643,20 @@
 "jZr" = (
 /obj/structure/table,
 /obj/item/storage/box/papersack{
-	icon_state = "paperbag_SymphioniaStandard_closed"
+	icon_state = "paperbag_NanotrasenStandard_closed"
 	},
 /obj/item/storage/box/papersack{
-	icon_state = "paperbag_SymphioniaStandard_closed"
+	icon_state = "paperbag_NanotrasenStandard_closed"
 	},
 /obj/item/storage/box/papersack{
-	icon_state = "paperbag_SymphioniaStandard_closed"
+	icon_state = "paperbag_NanotrasenStandard_closed"
 	},
 /obj/item/storage/box/papersack{
-	icon_state = "paperbag_SymphioniaStandard_closed"
+	icon_state = "paperbag_NanotrasenStandard_closed"
 	},
 /obj/item/knife/butcher,
 /obj/item/storage/box/papersack{
-	icon_state = "paperbag_SymphioniaStandard_closed"
+	icon_state = "paperbag_NanotrasenStandard_closed"
 	},
 /obj/item/knife{
 	pixel_x = -13
@@ -53653,8 +53653,8 @@
 /obj/effect/turf_decal/siding/wood,
 /obj/structure/window/reinforced/tinted/spawner/directional/east,
 /obj/machinery/fax{
-	fax_name = "Premier's Office";
-	name = "Premier's Fax Machine";
+	fax_name = "Captain's Office";
+	name = "Captain's Fax Machine";
 	pixel_y = 6
 	},
 /turf/open/floor/carpet,
@@ -54406,7 +54406,7 @@
 "kpW" = (
 /obj/structure/table/wood/fancy/blue,
 /obj/item/reagent_containers/cup/glass/trophy/silver_cup{
-	name = "#2nd prize for the Symphionia official comdom competition";
+	name = "#2nd prize for the Nanotrasen official comdom competition";
 	pixel_y = 6
 	},
 /turf/open/floor/carpet,
@@ -83897,7 +83897,7 @@
 "pZm" = (
 /obj/machinery/computer/security/telescreen/entertainment/directional/west,
 /obj/machinery/camera/directional/west{
-	c_tag = "Bridge - Premier's Lounge";
+	c_tag = "Bridge - Captain's Lounge";
 	name = "command camera"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -90020,7 +90020,7 @@
 /obj/structure/table/wood,
 /obj/structure/window/spawner/directional/north,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -92028,7 +92028,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/captain{
 	id_tag = "Capoffice2";
-	name = "Premier's Suite"
+	name = "Captain's Suite"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -98305,8 +98305,8 @@
 /area/station/maintenance/department/science/ordnance_maint)
 "sKx" = (
 /obj/machinery/requests_console/directional/east{
-	department = "Premier's Desk";
-	name = "Premier's Requests Console"
+	department = "Captain's Desk";
+	name = "Captain's Requests Console"
 	},
 /obj/effect/mapping_helpers/requests_console/announcement,
 /obj/effect/mapping_helpers/requests_console/information,
@@ -100065,7 +100065,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters/preopen{
-	id = "Premierprivacy";
+	id = "Captainprivacy";
 	name = "Privacy Shutters"
 	},
 /turf/open/floor/wood,
@@ -103809,7 +103809,7 @@
 "tMy" = (
 /obj/structure/table/wood/fancy/blue,
 /obj/item/reagent_containers/cup/glass/trophy/gold_cup{
-	name = "#1st prize for Symphionia's finest captain's office";
+	name = "#1st prize for Nanotrasen's finest captain's office";
 	pixel_y = 4
 	},
 /obj/structure/cable,
@@ -104061,7 +104061,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/captain{
 	id_tag = "Capoffice";
-	name = "Premier's Office"
+	name = "Captain's Office"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -108323,7 +108323,7 @@
 "uDH" = (
 /obj/structure/table/reinforced,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -111579,7 +111579,7 @@
 	},
 /obj/machinery/door/window/brigdoor/right{
 	dir = 8;
-	name = "Premier's Desk";
+	name = "Captain's Desk";
 	req_access = list("captain")
 	},
 /obj/structure/disposalpipe/segment{
@@ -115133,7 +115133,7 @@
 /obj/structure/curtain/cloth/fancy,
 /obj/structure/cable,
 /obj/machinery/door/poddoor/shutters/preopen{
-	id = "Premierprivacy";
+	id = "Captainprivacy";
 	name = "Privacy Shutters"
 	},
 /turf/open/floor/plating,
@@ -117168,7 +117168,7 @@
 "wlJ" = (
 /obj/structure/bookcase/random/fiction,
 /obj/machinery/camera{
-	c_tag = "Bridge - Premier's Upper Office";
+	c_tag = "Bridge - Captain's Upper Office";
 	dir = 9;
 	name = "command camera"
 	},
@@ -119036,7 +119036,7 @@
 /obj/item/radio/intercom{
 	dir = 8;
 	freerange = 1;
-	name = "Station Intercom (Premier)";
+	name = "Station Intercom (Captain)";
 	pixel_y = 20
 	},
 /turf/open/floor/carpet,
@@ -120159,7 +120159,7 @@
 "wPb" = (
 /obj/structure/table/reinforced,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
 	pixel_x = -5;
 	pixel_y = 6
 	},

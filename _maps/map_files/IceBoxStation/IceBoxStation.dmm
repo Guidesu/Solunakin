@@ -12421,7 +12421,7 @@
 /area/station/commons/fitness)
 "dGU" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Premier's Office Maintenance"
+	name = "Captain's Office Maintenance"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/structure/cable,
@@ -15380,8 +15380,8 @@
 "eEC" = (
 /obj/structure/table/wood,
 /obj/machinery/fax{
-	fax_name = "Premier's Office";
-	name = "Premier's Fax Machine"
+	fax_name = "Captain's Office";
+	name = "Captain's Fax Machine"
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
@@ -19558,7 +19558,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/directional/south{
-	c_tag = "Premier's Quarters"
+	c_tag = "Captain's Quarters"
 	},
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
@@ -23782,7 +23782,7 @@
 "hpe" = (
 /obj/structure/table/wood,
 /obj/machinery/camera/directional/east{
-	c_tag = "Premier's Office"
+	c_tag = "Captain's Office"
 	},
 /obj/item/storage/lockbox/medal{
 	pixel_y = 8
@@ -45716,7 +45716,7 @@
 /area/station/commons/lounge)
 "nVZ" = (
 /obj/machinery/door/airlock/command{
-	name = "Premier's Office"
+	name = "Captain's Office"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -46590,7 +46590,7 @@
 /area/station/commons/dorms)
 "olH" = (
 /obj/machinery/door/airlock/command{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -64455,8 +64455,8 @@
 "tHi" = (
 /obj/structure/filingcabinet,
 /obj/machinery/requests_console/directional/west{
-	department = "Premier's Desk";
-	name = "Premier's Requests Console"
+	department = "Captain's Desk";
+	name = "Captain's Requests Console"
 	},
 /obj/effect/mapping_helpers/requests_console/announcement,
 /obj/effect/mapping_helpers/requests_console/information,
@@ -77627,7 +77627,7 @@
 	base_state = "right";
 	dir = 4;
 	icon_state = "right";
-	name = "Premier's Desk Door";
+	name = "Captain's Desk Door";
 	req_access = list("captain")
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,

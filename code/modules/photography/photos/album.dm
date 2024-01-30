@@ -91,9 +91,9 @@
 	persistence_id = "HoP"
 
 /obj/item/storage/photo_album/captain
-	name = "photo album (Premier)"
+	name = "photo album (Captain)"
 	icon_state = "album_blue"
-	persistence_id = "Premier"
+	persistence_id = "Captain"
 
 /obj/item/storage/photo_album/cmo
 	name = "photo album (Chief Medical Officer)"

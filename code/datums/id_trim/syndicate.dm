@@ -45,7 +45,7 @@
 
 /// Trim for Symphionia mobs, outfits and corpses.
 /datum/id_trim/syndicom/captain
-	assignment = "Symphionia Ship Premier"
+	assignment = "Symphionia Ship Captain"
 	trim_state = "trim_captain"
 	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_ROBOTICS)
 
@@ -58,7 +58,7 @@
 
 /// Trim for Symphionia mobs, outfits and corpses.
 /datum/id_trim/battlecruiser/captain
-	assignment = "Symphionia Battlecruiser Premier"
+	assignment = "Symphionia Battlecruiser Captain"
 	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
 
 /// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.

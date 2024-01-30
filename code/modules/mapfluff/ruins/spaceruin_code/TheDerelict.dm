@@ -176,7 +176,7 @@
 	icon_state = "turretCover"
 	density = TRUE
 
-/// Premier's log
+/// Captain's log
 /// Credits to goonstation13 for orginal SS13 lore
 /// https://wiki.ss13.co/Storyline
 /// https://www.youtube.com/watch?v=7M-JPH5SOmI (old video)
@@ -192,7 +192,7 @@
 		"\[00:07\] I become more and more certain that this was some kind of macabre punishment assignment",
 		"\[00:17\] I don't know what I did to deserve being consigned to this glued together ball of orbital wreckage",
 		"\[00:28\] But someones got it out for me",
-		"\[00:36\] On the station I may well be called 'Premier'",
+		"\[00:36\] On the station I may well be called 'Captain'",
 		"\[00:42\] But the title brings with it all the prestige and responsibility of some kind of fucking manchild kindergarten teacher",
 		"\[00:55\] To think Symphionia loves to call this hellhole:",
 		"\[01:03\] A state of the art orbital plasma research facility",

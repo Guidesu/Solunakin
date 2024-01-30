@@ -714,7 +714,7 @@
 /area/shuttle/abandoned/crew)
 "dh" = (
 /obj/machinery/door/window/brigdoor{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8

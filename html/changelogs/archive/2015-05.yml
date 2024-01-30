@@ -142,7 +142,7 @@
   - bugfix: Fixed borg's cells draining much faster than they're meant to.
   Gun Hog:
   - tweak: Station bot performance greatly increased.
-  - rscadd: Premier PDA cartridge now includes nearly all utilities and functions,
+  - rscadd: Captain PDA cartridge now includes nearly all utilities and functions,
       including signaller and all bots! HoP now has janitor and quartermaster functions!
       The RD and Roboticists now have access to Floor, Clean, and Medibots!
   - tweak: Bot access on PDA is now one button across all PDAs. You will only see

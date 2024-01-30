@@ -25,7 +25,7 @@
 		"Cook": {
 			"additional_cqc_areas": ["/area/station/commons/lounge"]
 		},
-		"Premier": {
+		"Captain": {
 			"special_charter": "asteroid"
 		}
 	}

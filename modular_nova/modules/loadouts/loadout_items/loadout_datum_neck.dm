@@ -267,7 +267,7 @@ GLOBAL_LIST_INIT(loadout_necks, generate_loadout_items(/datum/loadout_item/neck)
 	restricted_roles = list(JOB_BLUESHIELD)
 
 /datum/loadout_item/neck/mantle_cap
-	name = "Premier's Mantle"
+	name = "Captain's Mantle"
 	item_path = /obj/item/clothing/neck/mantle/capmantle
 	restricted_roles = list(JOB_CAPTAIN)
 

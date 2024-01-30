@@ -6,12 +6,12 @@
 
 // Command areas
 /area/station/command/captain_kitchen
-	name = "Premier's Kitchen"
+	name = "Captain's Kitchen"
 	icon = 'modular_nova/modules/mapping/icons/areas/areas_station.dmi'
 	icon_state = "capt_kitchen"
 
 /area/station/command/captain_dining
-	name = "Premier's Dining Room"
+	name = "Captain's Dining Room"
 	icon = 'modular_nova/modules/mapping/icons/areas/areas_station.dmi'
 	icon_state = "capt_dining"
 
@@ -27,7 +27,7 @@
 
 // NT Consultant area
 /area/station/command/heads_quarters/nt_rep
-	name = "Symphionia Consultant's Office"
+	name = "Nanotrasen Consultant's Office"
 	icon = 'modular_nova/modules/mapping/icons/areas/areas_station.dmi'
 	icon_state = "nt_rep"
 

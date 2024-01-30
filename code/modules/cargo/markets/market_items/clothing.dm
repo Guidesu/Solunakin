@@ -71,7 +71,7 @@
 
 /datum/market_item/clothing/anti_sec_pin
 	name = "Subversive Pin"
-	desc = "Exclusive and fashionable red pin from a limited run, proclaiming your allegiance to enemies of the Symphionia corporation. \
+	desc = "Exclusive and fashionable red pin from a limited run, proclaiming your allegiance to enemies of the Nanotrasen corporation. \
 		Contains an RFID chip which interferes with common scanning equipment, to ensure that they know you are serious. Share them with your friends!"
 	item = /obj/item/clothing/accessory/anti_sec_pin
 

@@ -2321,7 +2321,7 @@
 /area/shuttle/sbc_starfury)
 "ii" = (
 /obj/machinery/door/airlock{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2418,7 +2418,7 @@
 /obj/structure/closet/secure_closet{
 	anchored = 1;
 	icon_state = "hos";
-	name = "Premier's Locker";
+	name = "Captain's Locker";
 	req_access = list("syndicate_leader")
 	},
 /obj/item/storage/lockbox/medal{

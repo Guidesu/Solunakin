@@ -31,13 +31,13 @@
 		equipped.update_suit_sensors()
 
 /datum/outfit/pirate/captain
-	name = "Space Pirate Premier"
+	name = "Space Pirate Captain"
 
 	id_trim = /datum/id_trim/pirate/captain
 	head = /obj/item/clothing/head/costume/pirate/armored
 
 /datum/outfit/pirate/captain/skeleton
-	name = "Space Pirate Premier (Skeleton)"
+	name = "Space Pirate Captain (Skeleton)"
 
 	belt = /obj/item/gun/magic/midas_hand
 	l_pocket = /obj/item/coin/gold/doubloon
@@ -51,7 +51,7 @@
 	mask = /obj/item/clothing/mask/breath
 
 /datum/outfit/pirate/space/captain
-	name = "Space Pirate Premier (EVA)"
+	name = "Space Pirate Captain (EVA)"
 
 	head = /obj/item/clothing/head/helmet/space/pirate
 
@@ -68,7 +68,7 @@
 	shoes = /obj/item/clothing/shoes/laceup
 
 /datum/outfit/pirate/silverscale/captain
-	name = "Silver Scale Premier"
+	name = "Silver Scale Captain"
 
 	id_trim = /datum/id_trim/pirate/captain/silverscale
 	head = /obj/item/clothing/head/costume/crown

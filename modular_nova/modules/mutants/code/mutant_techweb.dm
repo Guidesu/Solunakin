@@ -51,7 +51,7 @@
 
 /datum/design/board/rna_recombinator
 	name = "Machine Design (RNA Recombinator)"
-	desc = "The MRNA Recombinator is one of Symphionias most advanced technologies and allows the exact recombination of virus RNA."
+	desc = "The MRNA Recombinator is one of Nanotrasens most advanced technologies and allows the exact recombination of virus RNA."
 	id = "rna_recombinator"
 	build_path = /obj/item/circuitboard/machine/rna_recombinator
 	category = list(

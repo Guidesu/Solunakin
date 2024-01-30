@@ -2020,8 +2020,8 @@
 "aDA" = (
 /obj/machinery/modular_computer/preset/id,
 /obj/machinery/requests_console/directional/north{
-	department = "Premier's Desk";
-	name = "Premier's Requests Console"
+	department = "Captain's Desk";
+	name = "Captain's Requests Console"
 	},
 /obj/effect/mapping_helpers/requests_console/announcement,
 /obj/effect/mapping_helpers/requests_console/information,
@@ -19956,11 +19956,11 @@
 /area/station/medical/medbay/central)
 "fOR" = (
 /obj/machinery/camera/directional/south{
-	c_tag = "Bridge - Premier's Quarters";
+	c_tag = "Bridge - Captain's Quarters";
 	name = "command camera"
 	},
 /obj/machinery/door/window/brigdoor/left/directional/north{
-	name = "Secure Premier Storage";
+	name = "Secure Captain Storage";
 	req_access = list("captain")
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -23501,8 +23501,8 @@
 /area/station/maintenance/department/engine/atmos/lesser)
 "gOd" = (
 /obj/machinery/requests_console/directional/north{
-	department = "Premier's Desk";
-	name = "Premier's Requests Console"
+	department = "Captain's Desk";
+	name = "Captain's Requests Console"
 	},
 /obj/effect/mapping_helpers/requests_console/announcement,
 /obj/effect/mapping_helpers/requests_console/information,
@@ -23587,7 +23587,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/captain{
 	id_tag = "Capoffice";
-	name = "Premier's Office"
+	name = "Captain's Office"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -26881,7 +26881,7 @@
 /area/station/commons/vacant_room/office)
 "hLD" = (
 /obj/machinery/door/airlock/captain{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -28937,12 +28937,12 @@
 /obj/structure/table/wood,
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/door/window/brigdoor/right/directional/east{
-	name = "Premier's Desk";
+	name = "Captain's Desk";
 	req_access = list("captain")
 	},
 /obj/machinery/fax{
-	fax_name = "Premier's Office";
-	name = "Premier's Fax Machine";
+	fax_name = "Captain's Office";
+	name = "Captain's Fax Machine";
 	pixel_x = -2;
 	pixel_y = 3
 	},
@@ -29419,7 +29419,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/light/warm/directional/west,
 /obj/machinery/door/window/brigdoor/left/directional/south{
-	name = "Premier's Desk";
+	name = "Captain's Desk";
 	req_access = list("captain")
 	},
 /obj/machinery/status_display/ai/directional/west,
@@ -29509,7 +29509,7 @@
 /obj/item/lighter{
 	color = "#d4af37";
 	desc = "Cap's Lucky Lighter. Given to him by NT staff for being the most capable person to secure the disk.";
-	name = "The Premier's Lucky Lighter";
+	name = "The Captain's Lucky Lighter";
 	pixel_x = 5;
 	pixel_y = 4
 	},
@@ -53999,7 +53999,7 @@
 	name = "Kitchen Counter Shutters"
 	},
 /obj/item/storage/box/papersack{
-	icon_state = "paperbag_SymphioniaStandard_closed";
+	icon_state = "paperbag_NanotrasenStandard_closed";
 	pixel_y = 4
 	},
 /turf/open/floor/iron/large,
@@ -55230,7 +55230,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/effect/landmark/start/captain,
 /obj/machinery/camera/directional/west{
-	c_tag = "Bridge - Premier's Office";
+	c_tag = "Bridge - Captain's Office";
 	name = "command camera"
 	},
 /turf/open/floor/carpet/royalblue,
@@ -55364,7 +55364,7 @@
 /area/station/maintenance/starboard/fore)
 "pwH" = (
 /obj/machinery/door/airlock/command{
-	name = "Premier's Emergency Escape"
+	name = "Captain's Emergency Escape"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -61722,7 +61722,7 @@
 	pixel_y = 16
 	},
 /obj/machinery/door/window/brigdoor/left/directional/east{
-	name = "Premier's Desk";
+	name = "Captain's Desk";
 	req_access = list("captain")
 	},
 /turf/open/floor/carpet/royalblue,
@@ -63351,7 +63351,7 @@
 /area/station/engineering/storage)
 "rGr" = (
 /obj/machinery/door/airlock/bathroom{
-	name = "Premier's Restroom"
+	name = "Captain's Restroom"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/stripes/line,
@@ -83470,7 +83470,7 @@
 /obj/structure/table/reinforced/plastitaniumglass,
 /obj/item/toy/captainsaid/collector,
 /obj/item/taperecorder{
-	name = "Premier's Log"
+	name = "Captain's Log"
 	},
 /obj/effect/turf_decal/tile/dark_blue/half{
 	dir = 4

@@ -97,7 +97,7 @@
 	base_icon_state = "maintenance"
 	label_examine = FALSE
 
-//Premier's special mental recharge gear
+//Captain's special mental recharge gear
 
 /obj/item/clothing/suit/armor/reactive/psykerboost
 	name = "reactive psykerboost armor"

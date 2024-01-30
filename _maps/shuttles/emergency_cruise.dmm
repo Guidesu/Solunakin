@@ -257,7 +257,7 @@
 "gJ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
-	name = "Premier's Quarters Privacy Shutters";
+	name = "Captain's Quarters Privacy Shutters";
 	dir = 8;
 	id = "cqpriv"
 	},
@@ -475,7 +475,7 @@
 "ky" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/machinery/door/window/brigdoor/right/directional/north{
-	name = "Premier's Bed";
+	name = "Captain's Bed";
 	req_access = list("captain")
 	},
 /obj/structure/window/reinforced/spawner/directional/west,
@@ -489,12 +489,12 @@
 "kC" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
-	name = "Premier's Quarters Privacy Shutters";
+	name = "Captain's Quarters Privacy Shutters";
 	dir = 8;
 	id = "cqpriv"
 	},
 /obj/machinery/door/window/brigdoor/left/directional/west{
-	name = "Premier's Desk";
+	name = "Captain's Desk";
 	req_access = list("captain")
 	},
 /obj/item/folder/blue,
@@ -634,7 +634,7 @@
 	req_access = list("cent_captain")
 	},
 /obj/item/paper{
-	default_raw_text = "The lift to the dorms is currently down for maintenance. Symphionia is sorry for any inconveniences this may cause.";
+	default_raw_text = "The lift to the dorms is currently down for maintenance. Nanotrasen is sorry for any inconveniences this may cause.";
 	name = "Lift Notice"
 	},
 /obj/structure/noticeboard/directional/south{
@@ -1041,7 +1041,7 @@
 /area/shuttle/escape)
 "vX" = (
 /obj/machinery/door/airlock/command{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/command/captain,
 /obj/effect/turf_decal/trimline/dark_blue/arrow_cw{
@@ -1339,7 +1339,7 @@
 	pixel_y = 17
 	},
 /obj/structure{
-	desc = "This is the shuttle we're on. It's amazing what Symphionia can do once they actually put more than ten seconds of effort into their projects.";
+	desc = "This is the shuttle we're on. It's amazing what Nanotrasen can do once they actually put more than ten seconds of effort into their projects.";
 	icon = 'icons/obj/machines/shuttle_manipulator.dmi';
 	icon_state = "hologram_whiteship";
 	layer = 4;
@@ -1540,7 +1540,7 @@
 "Hk" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
-	name = "Premier's Quarters Privacy Shutters";
+	name = "Captain's Quarters Privacy Shutters";
 	dir = 8;
 	id = "cqpriv"
 	},

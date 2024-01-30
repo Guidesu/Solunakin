@@ -198,7 +198,7 @@
 	ckeywhitelist = list("random516")
 
 /datum/loadout_item/under/jumpsuit/captain_dress
-	name = "Premier's Dress"
+	name = "Captain's Dress"
 	item_path = /obj/item/clothing/under/rank/captain/dress
 	ckeywhitelist = list("netrakyram")
 	restricted_roles = list(JOB_CAPTAIN)
@@ -562,7 +562,7 @@
 	ckeywhitelist = list("thedragmeme")
 
 /datum/loadout_item/under/jumpsuit/bimpcap
-	name = "Formal Matte Black Premier Uniform"
+	name = "Formal Matte Black Captain Uniform"
 	item_path = /obj/item/clothing/under/bimpcap
 	restricted_roles = list(JOB_CAPTAIN)
 	ckeywhitelist = list("razurath")

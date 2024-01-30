@@ -165,7 +165,7 @@
       decomposition factor.
   - bugfix: fixed shotguns not clearing their "mag" correctly
   - balance: Jousting now works on anything you're buckled to, not just Cyborgs.
-  - balance: Brooms, Pitchforks, the Premier's Sabre, and Energy swords can now be
+  - balance: Brooms, Pitchforks, the Captain's Sabre, and Energy swords can now be
       used for jousting.
   - balance: Spears need to travel a longer distance to joust now.
   - balance: Jousting's knockdown and damage now only gets stronger after you've traveled
@@ -628,7 +628,7 @@
       ends when the revolution is successful. The round continues as normal if the
       revolution fails.
   - rscadd: When the station is rolled in a state of Post-Revolutionary Fervor, the
-      Premier will find their bedsheets replaced with an anti-Symphionia variant.
+      Captain will find their bedsheets replaced with an anti-Symphionia variant.
   - rscadd: You can now swab plasmaman clown clothes to get clown microbes.
   - rscadd: Clown phobia makes you fear plasmaman clown's gloves and helmet.
   SomeRandomOwl:

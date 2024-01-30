@@ -41,7 +41,7 @@
       around security.
   - unknown: Redid the brig to make it bigger and so that people can break others
       more easily out since it isn't right in security.
-  - unknown: Moved and redid captains quarters/heads quarters. Premiers made much
+  - unknown: Moved and redid captains quarters/heads quarters. Captains made much
       smaller and heads is now more of a meeting room.
   - unknown: Added Stungloves and an axe - right now only admin spawnable.
   - unknown: Implemented Persh's adminjump back in - admins can now jump to set locations.
@@ -52,7 +52,7 @@
 2009-01-31:
   /tg/station ss13 team:
   - unknown: Added a bartender job + Bar
-  - unknown: Premiers panic room
+  - unknown: Captains panic room
   - unknown: Voice changer traitor item
   - unknown: Bartender suit
   - unknown: Made taking a table apart take longer

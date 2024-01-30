@@ -2226,7 +2226,7 @@
 	name = "syndicate access change console"
 	},
 /obj/item/paper{
-	default_raw_text = "<h1>DS2 Corporate Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Symphionia installations. Reboot of shuttle engines in progress...</p><p>The Sothran Syndicate welcomes you onboard, Corporate Liaison. It is deeply suggested you help our crew via informing them of their corporate investors' goal and to help maintain cohesion. Don't hurt yourself now, and stay winning.</p>";
+	default_raw_text = "<h1>DS2 Corporate Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Nanotrasen installations. Reboot of shuttle engines in progress...</p><p>The Sothran Syndicate welcomes you onboard, Corporate Liaison. It is deeply suggested you help our crew via informing them of their corporate investors' goal and to help maintain cohesion. Don't hurt yourself now, and stay winning.</p>";
 	name = "paper- 'DS2 Corporate Report'"
 	},
 /turf/open/floor/wood/large,
@@ -3339,7 +3339,7 @@
 	name = "syndicate communications console"
 	},
 /obj/item/paper{
-	default_raw_text = "<h1>DS2 Transfer Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Symphionia installations. Reboot of shuttle engines in progress...</p><p>Active syndicate operatives have been transferred over to the target NT workplace and are NOT to be interacted with under any circumstances, unless Syndicate Command allows it. Permission to monitor their activities is granted and heavily suggested.</p><p>Stay winning.</p>";
+	default_raw_text = "<h1>DS2 Transfer Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Nanotrasen installations. Reboot of shuttle engines in progress...</p><p>Active syndicate operatives have been transferred over to the target NT workplace and are NOT to be interacted with under any circumstances, unless Syndicate Command allows it. Permission to monitor their activities is granted and heavily suggested.</p><p>Stay winning.</p>";
 	name = "paper- 'DS2 Transfer Report'"
 	},
 /turf/open/floor/iron/dark/textured_large,
@@ -4929,7 +4929,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/item/paper{
-	default_raw_text = "<h1>DS2 Long-Term Brig Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Symphionia installations. Reboot of shuttle engines in progress...</p><p>The Sothran Syndicate has been capable of kidnapping a few key NT workers of various hierarchy levels. It is your task to interrogate, question and break their wills in order to find more intel on our enemy, Symphionia.</p><p>Stay winning.";
+	default_raw_text = "<h1>DS2 Long-Term Brig Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Nanotrasen installations. Reboot of shuttle engines in progress...</p><p>The Sothran Syndicate has been capable of kidnapping a few key NT workers of various hierarchy levels. It is your task to interrogate, question and break their wills in order to find more intel on our enemy, Nanotrasen.</p><p>Stay winning.";
 	name = "paper- 'DS2 Long-Term Brig Report'"
 	},
 /obj/machinery/airalarm/directional/north,
@@ -7128,7 +7128,7 @@
 	pixel_y = 6
 	},
 /obj/item/paper{
-	default_raw_text = "<h1>DS2 Command Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Symphionia installations. Reboot of shuttle engines in progress...</p><p>The Sothran Syndicate is glad to have you on-field, admiral. Symphionia is in the direct sector and, as such, is the direct target of our operatives. Manage your crew well and with respect, and leave all your anger to the gravel that is Symphionia. Remember that Interdyne has an unaffiliated facade to keep up, as such, advise against your crew flaunting their affiliation to non-crew.</p><p>Stay winning.</p>";
+	default_raw_text = "<h1>DS2 Command Report</h1><p>The Deep Space 2 Forward Operating Base has successfully relocated itself near active Nanotrasen installations. Reboot of shuttle engines in progress...</p><p>The Sothran Syndicate is glad to have you on-field, admiral. Nanotrasen is in the direct sector and, as such, is the direct target of our operatives. Manage your crew well and with respect, and leave all your anger to the gravel that is Nanotrasen. Remember that Interdyne has an unaffiliated facade to keep up, as such, advise against your crew flaunting their affiliation to non-crew.</p><p>Stay winning.</p>";
 	name = "paper- 'DS2 Command Report'"
 	},
 /turf/open/floor/wood/large,

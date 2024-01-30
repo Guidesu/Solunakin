@@ -103,7 +103,7 @@ As a Shaft Miner, you can craft a variety of equipment from the local fauna. Bon
 As a Shaft Miner, you can harvest goliath plates from goliaths and upgrade your explorer's suit, greatly reducing incoming melee damage.
 As a Traitor, plasma can be injected into many things to sabotage them. Power cells, light bulbs, welding tools, cigars and e-cigs will all explode when used.
 As a Traitor, subverting the AI to serve you can make it an extremely powerful ally. However, be careful of the wording in the laws you give it, as it may use your poorly written laws against you!
-As a Traitor, the Premier and the Head of Security are two of the most difficult to kill targets on the station. If either one is your target, plan carefully.
+As a Traitor, the Captain and the Head of Security are two of the most difficult to kill targets on the station. If either one is your target, plan carefully.
 As a Traitor, the cryptographic sequencer (emag) can not only open lockers, crates, APCs and more. It can also do things like hack cyborgs, and even cause bots to go berserk. Use it on the right machines, and you can even contact the Symphionia. Experiment!
 As a Traitor, the syndicate encryption key is very useful for coordinating plans with your fellow traitors -- or, of course, betraying them.
 As a Traitor, you can manufacture and recycle revolver bullets at a hacked autolathe, making the revolver an extremely powerful tool.
@@ -158,10 +158,10 @@ As the Blob, you can place your core at any clear, unobserved, spot you can move
 As the Blob, you can produce a Blobbernaut from a factory for 40 resources. Blobbernauts are player-controlled, gradually regenerate near nodes, and apply your chemical when attacking, but die when too far from the blob or if their factory is killed. However, the factory used becomes fragile and stops spawning spores.
 As the Blob, you can re-pick your reagent type from six random options if the crew has adapted and protected themselves against your current one.
 As the Blob, you fight a war of attrition: Take out medbay and fight in choke points to prevent continued assaults and coordinated burst damage attacks!
-As the Premier, always take the nuclear disk and pinpointer with you every shift. It's a good idea to give one of these to another head you can trust with keeping it safe.
-As the Premier, you are one of the highest priority targets on the station. Everything from revolutions, to nuclear operatives, to traitors that need to rob you of your unique lasgun or your life are things to worry about.
-As the Premier, you can purchase a new emergency shuttle using a communications console. Some require cash, while others give you cash in exchange. Keep in mind that purchasing dangerous shuttles may instigate the ire of your crew.
-As the Premier, you have absolute access and control over the station, but this does not mean that being a horrible person won't result in mutiny and a ban.
+As the Captain, always take the nuclear disk and pinpointer with you every shift. It's a good idea to give one of these to another head you can trust with keeping it safe.
+As the Captain, you are one of the highest priority targets on the station. Everything from revolutions, to nuclear operatives, to traitors that need to rob you of your unique lasgun or your life are things to worry about.
+As the Captain, you can purchase a new emergency shuttle using a communications console. Some require cash, while others give you cash in exchange. Keep in mind that purchasing dangerous shuttles may instigate the ire of your crew.
+As the Captain, you have absolute access and control over the station, but this does not mean that being a horrible person won't result in mutiny and a ban.
 As the Chaplain, you are much more likely to get a response by praying to the gods than most people. To boost your chances, make altars with colorful crayon runes, lit candles, and wire art.
 As the Chaplain, your bible is also a container that can store small items. Depending on your god, your starting bible may come with a surprise!
 As the Chaplain, your null rod has anti magic functions: it can destroy cultist runes by hitting them, and it makes you immune to wizard spells and cult magic.
@@ -181,12 +181,12 @@ As the Curator, you are not completely defenseless. Your whip easily disarms peo
 As the Detective, people leave fingerprints everywhere and on everything. With the exception of white latex, gloves will hide them. All is not lost, however, as gloves leave fibers specific to their kind such as black or nitrile, pointing to a general department.
 As the Detective, you can use your forensics scanner from a distance. Use this to scan boxes or other storage containers.
 As the Detective, your revolver can be loaded with .357 ammunition obtained from a hacked autolathe. Firing it has a decent chance to blow up your revolver.
-As the Head of Personnel, you are not higher ranking than other heads of staff, even though you are expected to take the Premier's place first should he go missing. If the situation seems too rough for you, consider allowing another head to become temporary Premier.
+As the Head of Personnel, you are not higher ranking than other heads of staff, even though you are expected to take the Captain's place first should he go missing. If the situation seems too rough for you, consider allowing another head to become temporary Captain.
 As the Head of Security, don't let the power go to your head. You may have high access, great equipment, and a miniature army at your side, but being a terrible person without a good reason is grounds for banning.
 As the Head of Security, you are expected to coordinate your security force to handle any threat that comes to the station. Sometimes it means making use of the armory to handle a blob, sometimes it means being ruthless during a revolution or cult.
-As the Head of Security, you can call for executions or forced cyborgization, which require the Premier's or the Prisoner's consent, respectively.
+As the Head of Security, you can call for executions or forced cyborgization, which require the Captain's or the Prisoner's consent, respectively.
 As the Lawyer, try to negotiate with the Warden if sentences seem too high for the crime.
-As the Lawyer, you can try to convince the Premier and Head of Security to hold trials for prisoners in the courtroom.
+As the Lawyer, you can try to convince the Captain and Head of Security to hold trials for prisoners in the courtroom.
 As the Malfunctioning AI, look into flooding the station with plasma fires to kill off large portions of the crew, letting you pick off the remaining few with space suits who escaped.
 As the Malfunctioning AI, you can shunt to an APC if the situation gets bad. This disables your doomsday device if it is active.
 As the Malfunctioning AI, you should either order your cyborgs to dismantle the robotics console or blow it up yourself in order to protect them.

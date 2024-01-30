@@ -11,7 +11,7 @@ const BASEICONS = {
   'Bit Avatar': 'code',
   Bitrunner: 'gamepad',
   Botanist: 'seedling',
-  Premier: 'crown',
+  Captain: 'crown',
   'Cargo Technician': 'box',
   'CentCom Commander': 'star',
   'CentCom Head Intern': 'pen-fancy',
@@ -61,7 +61,7 @@ const BASEICONS = {
   'Corrections Officer': 'hands-bound',
   'Customs Agent': 'shield-heart',
   'Engineering Guard': 'shield-heart',
-  'Symphionia Consultant': 'clipboard-check',
+  'Nanotrasen Consultant': 'clipboard-check',
   Orderly: 'shield-heart',
   'Science Guard': 'shield-heart',
   'Security Medic': 'heart-pulse',
@@ -108,10 +108,10 @@ const ALTTITLES = {
   Florist: BASEICONS['Botanist'],
   // Bouncer - shield-heart
   'Service Guard': BASEICONS['Bouncer'],
-  // Premier - crown
-  'Station Commander': BASEICONS['Premier'],
-  'Commanding Officer': BASEICONS['Premier'],
-  'Site Manager': BASEICONS['Premier'],
+  // Captain - crown
+  'Station Commander': BASEICONS['Captain'],
+  'Commanding Officer': BASEICONS['Captain'],
+  'Site Manager': BASEICONS['Captain'],
   // Cargo Technician - box
   'Warehouse Technician': BASEICONS['Cargo Technician'],
   'Deck Worker': BASEICONS['Cargo Technician'],
@@ -197,8 +197,8 @@ const ALTTITLES = {
   Physician: BASEICONS['Medical Doctor'],
   // Mime - comment-slash
   Pantomimist: BASEICONS['Mime'],
-  // Symphionia Consultant - clipboard-check
-  'Symphionia Diplomat': BASEICONS['Symphionia Consultant'],
+  // Nanotrasen Consultant - clipboard-check
+  'Nanotrasen Diplomat': BASEICONS['Nanotrasen Consultant'],
   // Paramedic - truck-medical
   'Emergency Medical Technician': BASEICONS['Paramedic'],
   'Search and Rescue Technician': BASEICONS['Paramedic'],

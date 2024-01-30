@@ -240,7 +240,7 @@
 
 // High risk steal objectives
 
-// Will always generate even with no Premier due to its security and temptation to use it
+// Will always generate even with no Captain due to its security and temptation to use it
 /datum/objective_item/steal/caplaser
 	name = "the captain's antique laser gun"
 	targetitem = /obj/item/gun/energy/laser/captain
@@ -281,7 +281,7 @@
 	return add_item_to_steal(src, /obj/item/hand_tele)
 
 /datum/objective_item/steal/jetpack
-	name = "the Premier's jetpack"
+	name = "the Captain's jetpack"
 	targetitem = /obj/item/tank/jetpack/oxygen/captain
 	excludefromjob = list(JOB_CAPTAIN)
 	item_owner = list(JOB_CAPTAIN)

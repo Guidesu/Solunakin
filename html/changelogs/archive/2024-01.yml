@@ -120,7 +120,7 @@
   yooriss:
   - balance: Light Drinker and Drunken Resilience quirks can no longer be chosen together.
   - balance: Oversized and Freerunning quirks can no longer be chosen together.
-  - balance: The Oversized Rights Enclave (ORE) has successfully petitioned Symphionia
+  - balance: The Oversized Rights Enclave (ORE) has successfully petitioned Nanotrasen
       to install a galactic minimum standard upper-joist crumple zone in their station
       airlocks, meaning that oversized individuals will no longer take brain damage
       from hitting their head. All other safety warnings still apply.
@@ -310,7 +310,7 @@
   - qol: Morgue now contains an autopsy scanner
   - qol: Improved window blast door grouping
   - qol: Enabled extended_inventory on some Interdyne vendors where reasonable (these
-      guys don't follow Symphionia's corporate restrictions!)
+      guys don't follow Nanotrasen's corporate restrictions!)
   - qol: Added gun case to Vault
   - qol: Moved the stethoscope to Medical (Should at least act like that item isn't
       included in the game only for safe-cracking!)

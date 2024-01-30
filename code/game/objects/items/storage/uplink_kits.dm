@@ -416,7 +416,7 @@
 
 /obj/item/storage/box/syndie_kit/nuke
 	name = "nuke core extraction kit"
-	desc = "A box containing the equipment and instructions for extracting the plutonium cores of most Symphionia nuclear explosives."
+	desc = "A box containing the equipment and instructions for extracting the plutonium cores of most Nanotrasen nuclear explosives."
 
 /obj/item/storage/box/syndie_kit/nuke/PopulateContents()
 	new /obj/item/screwdriver/nuke(src)
@@ -740,7 +740,7 @@
 
 /obj/item/storage/box/syndie_kit/poster_box
 	name = "syndicate poster pack"
-	desc = "Contains a variety of demotivational posters to ensure minimum productivity for the crew of any Symphionia station."
+	desc = "Contains a variety of demotivational posters to ensure minimum productivity for the crew of any Nanotrasen station."
 
 	/// Number of posters this box contains when spawning.
 	var/poster_count = 3

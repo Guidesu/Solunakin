@@ -1,12 +1,12 @@
-/// Become the official Premier of the station
+/// Become the official Captain of the station
 /datum/grand_finale/usurp
 	name = "Usurpation"
-	desc = "The ultimate use of your gathered power! Rewrite time such that you have been Premier of this station the whole time."
+	desc = "The ultimate use of your gathered power! Rewrite time such that you have been Captain of this station the whole time."
 	icon = 'icons/obj/card.dmi'
 	icon_state = "card_gold"
 
 /datum/grand_finale/usurp/trigger(mob/living/carbon/human/invoker)
-	message_admins("[key_name(invoker)] has replaced the Premier")
+	message_admins("[key_name(invoker)] has replaced the Captain")
 	var/list/former_captains = list()
 	var/list/other_crew = list()
 	SEND_SOUND(world, sound('sound/magic/timeparadox2.ogg'))
@@ -22,7 +22,7 @@
 			the stars rush back to greet each other at the beginning of things and then... you snap back to the present. \n\
 			Everything is just as it was and always has been. \n\n\
 			A stray thought sticks in the forefront of your mind. \n\
-			[span_hypnophrase("I'm so glad that [invoker.real_name] is our legally appointed Premier!")] \n\
+			[span_hypnophrase("I'm so glad that [invoker.real_name] is our legally appointed Captain!")] \n\
 			Is... that right?"))
 		if (is_captain_job(crewmate.mind.assigned_role))
 			former_captains += crewmate
@@ -33,7 +33,7 @@
 
 	dress_candidate(invoker)
 	GLOB.manifest.modify(invoker.real_name, JOB_CAPTAIN, JOB_CAPTAIN)
-	minor_announce("Premier [invoker.real_name] on deck!")
+	minor_announce("Captain [invoker.real_name] on deck!")
 
 	// Enlist some crew to try and restore the natural order
 	for (var/mob/living/carbon/human/former_captain as anything in former_captains)
@@ -43,7 +43,7 @@
 			create_vendetta(random_crewmate.mind, invoker.mind)
 
 /**
- * Anyone who thought they were Premier is in for a nasty surprise, and won't be very happy about it
+ * Anyone who thought they were Captain is in for a nasty surprise, and won't be very happy about it
  */
 /datum/grand_finale/usurp/proc/demote_to_assistant(mob/living/carbon/human/former_captain)
 	var/obj/effect/particle_effect/fluid/smoke/exit_poof = new(get_turf(former_captain))
@@ -68,7 +68,7 @@
 	enter_poof.lifetime = 2 SECONDS
 
 /**
- * Does some item juggling to try to dress you as both a Wizard and Premier without deleting any items you have bought.
+ * Does some item juggling to try to dress you as both a Wizard and Captain without deleting any items you have bought.
  * ID, headset, and uniform are forcibly replaced. Other slots are only filled if unoccupied.
  * We could forcibly replace shoes and gloves too but people might miss their insuls or... meown shoes?
  */
@@ -95,7 +95,7 @@
 
 /// An outfit which replaces parts of a wizard's clothes with captain's clothes but keeps the robes
 /datum/outfit/job/wizard_captain
-	name = "Premier (Wizard Transformation)"
+	name = "Captain (Wizard Transformation)"
 	jobtype = /datum/job/captain
 	id = /obj/item/card/id/advanced/gold
 	id_trim = /datum/id_trim/job/captain

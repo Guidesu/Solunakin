@@ -6381,7 +6381,7 @@
 	},
 /obj/structure/table/wood,
 /obj/item/toy/talking/ai{
-	name = "\improper Symphionia-brand toy AI";
+	name = "\improper Nanotrasen-brand toy AI";
 	pixel_y = 6
 	},
 /turf/open/floor/carpet,
@@ -6937,7 +6937,7 @@
 /obj/structure/table/wood,
 /obj/item/toy/plush/carpplushie{
 	greyscale_colors = "#ff5050#000000";
-	name = "\improper Symphionia wildlife department space carp plushie"
+	name = "\improper Nanotrasen wildlife department space carp plushie"
 	},
 /turf/open/floor/carpet,
 /area/station/command/corporate_showroom)
@@ -7740,7 +7740,7 @@
 /obj/item/bedsheet/captain,
 /obj/effect/landmark/start/captain,
 /obj/machinery/camera/directional/east{
-	c_tag = "Premier's Quarters"
+	c_tag = "Captain's Quarters"
 	},
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/wood,
@@ -12912,8 +12912,8 @@
 "eLa" = (
 /obj/structure/table/wood,
 /obj/item/storage/briefcase/secure{
-	desc = "A large briefcase with a digital locking system, and the Symphionia logo emblazoned on the sides.";
-	name = "\improper Symphionia-brand secure briefcase exhibit";
+	desc = "A large briefcase with a digital locking system, and the Nanotrasen logo emblazoned on the sides.";
+	name = "\improper Nanotrasen-brand secure briefcase exhibit";
 	pixel_y = 2
 	},
 /turf/open/floor/carpet,
@@ -16605,7 +16605,7 @@
 "gfk" = (
 /obj/structure/table/wood,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -17178,7 +17178,7 @@
 /area/station/engineering/atmos)
 "gpS" = (
 /obj/machinery/camera/directional/east{
-	c_tag = "Premier's Office"
+	c_tag = "Captain's Office"
 	},
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain/private)
@@ -25368,7 +25368,7 @@
 /area/station/engineering/atmos)
 "jgy" = (
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -26434,8 +26434,8 @@
 "jxv" = (
 /obj/structure/table/wood,
 /obj/machinery/fax{
-	fax_name = "Premier's Office";
-	name = "Premier's Fax Machine"
+	fax_name = "Captain's Office";
+	name = "Captain's Fax Machine"
 	},
 /obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/wood,
@@ -28589,7 +28589,7 @@
 "kkU" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/camera/directional/west{
-	c_tag = "Premier's Office - Emergency Escape"
+	c_tag = "Captain's Office - Emergency Escape"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -36839,7 +36839,7 @@
 /area/station/commons/vacant_room/office)
 "njP" = (
 /obj/machinery/door/window{
-	name = "Premier's Desk";
+	name = "Captain's Desk";
 	req_access = list("captain")
 	},
 /obj/structure/cable,
@@ -38002,8 +38002,8 @@
 	},
 /obj/machinery/light/small/directional/east,
 /obj/machinery/requests_console/directional/east{
-	department = "Premier's Desk";
-	name = "Premier's Requests Console"
+	department = "Captain's Desk";
+	name = "Captain's Requests Console"
 	},
 /obj/effect/mapping_helpers/requests_console/announcement,
 /obj/effect/mapping_helpers/requests_console/information,
@@ -49208,7 +49208,7 @@
 "rEg" = (
 /obj/machinery/door/window{
 	dir = 1;
-	name = "Premier's Bedroom";
+	name = "Captain's Bedroom";
 	req_access = list("captain")
 	},
 /turf/open/floor/wood,
@@ -51100,7 +51100,7 @@
 /obj/machinery/door/window{
 	base_state = "right";
 	icon_state = "right";
-	name = "Premier's Desk";
+	name = "Captain's Desk";
 	req_access = list("captain")
 	},
 /obj/structure/disposalpipe/segment,
@@ -51676,7 +51676,7 @@
 /area/station/security/brig)
 "syL" = (
 /obj/machinery/door/airlock/command{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -52857,7 +52857,7 @@
 "sSx" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/access/any/command/captain,
@@ -52969,7 +52969,7 @@
 	pixel_y = 32
 	},
 /obj/item/phone{
-	desc = "Supposedly a direct line to Symphionia Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -55402,8 +55402,8 @@
 	pixel_y = 32
 	},
 /obj/item/pai_card{
-	desc = "A real Symphionia success, these personal AIs provide all of the companionship of an AI without any law related red-tape.";
-	name = "\improper Symphionia-brand personal AI device exhibit"
+	desc = "A real Nanotrasen success, these personal AIs provide all of the companionship of an AI without any law related red-tape.";
+	name = "\improper Nanotrasen-brand personal AI device exhibit"
 	},
 /turf/open/floor/wood,
 /area/station/command/corporate_showroom)
@@ -67729,7 +67729,7 @@
 "xXN" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
-	name = "Premier's Quarters"
+	name = "Captain's Quarters"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/command/captain,
 /obj/effect/landmark/navigate_destination,

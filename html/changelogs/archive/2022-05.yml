@@ -706,7 +706,7 @@
   - rscadd: Added new areas to BlueShift (a lot, too many to count).
   - rscadd: 'The following maintenance areas were added: Atmospherics maints, Departures
       maints (near the escape PODS), salon and nightclub maints and many more.'
-  - rscadd: 'The following command areas were added: Premiers kitchen and Dining rooms.'
+  - rscadd: 'The following command areas were added: Captains kitchen and Dining rooms.'
   - rscadd: The Asylum specific area and Tele Sci specific area were added.
   - rscadd: BlueShifts maintenance has been made a lot dirtier. The bottom most layer
       was also rusted more.
@@ -756,7 +756,7 @@
   - bugfix: KiloStation maintenance airlock in EVA is properly named
   - bugfix: Fix wizard modsuit not having antimagic protection
   - bugfix: The new cult altar can't be spammed anymore.
-  - bugfix: The Premier's PDA now works, and their cartridge now spawns in their locker.
+  - bugfix: The Captain's PDA now works, and their cartridge now spawns in their locker.
   - bugfix: 'fix delimber anomaly from round removing you and other griefs remove:
       delimber anomaly doesn''t change your organs anymore'
   - balance: Mini-fridges can now hold slightly more things.
@@ -1054,7 +1054,7 @@
   - bugfix: 'Snowy floors should be snowy instead of being... Counter-Strike: Source
       Missing Textures.'
   - bugfix: Fixed ethereal revive crystal bugging out when buckled
-  - bugfix: Restores Premiers pen and QM survial pen in respective Pdas
+  - bugfix: Restores Captains pen and QM survial pen in respective Pdas
   - bugfix: proximity monitors now work on stuff that was created inside it
   - refactor: Converted the airlock controller to TypeScript, added some visual effects
   - bugfix: There are no longer two turfs on one tile in Hilbert's Research Facility.

@@ -171,7 +171,7 @@
 	assignment = "Psyker-gang Shikari"
 
 /datum/id_trim/bounty_hunter/psykers/captain
-	assignment = "Psyker-gang Shikari Premier"
+	assignment = "Psyker-gang Shikari Captain"
 
 /datum/id_trim/bounty_hunter/psykers/seer
 	assignment = "Psyker-gang Shikari Seer"

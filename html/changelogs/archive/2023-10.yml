@@ -13,7 +13,7 @@
       boxes into the Void Raptor's armory.
   Melbert:
   - qol: Examine blocked out roundstart / latejoin job information.
-  - qol: Premier gets a little bit more information about how their radio works roundstart.
+  - qol: Captain gets a little bit more information about how their radio works roundstart.
   - bugfix: Fixed roundstart players not getting radio information.
   Paxilmaniac:
   - image: The buttondown shirts (underwear) have been updated with a better look
@@ -1253,7 +1253,7 @@
   OrionTheFox:
   - balance: the flatpacked Fabricator and RTG are now restricted-access imports
   SkyratBot:
-  - refactor: Hostile Symphionia mobs now use the basic mob framework. This should
+  - refactor: Hostile Nanotrasen mobs now use the basic mob framework. This should
       make them a little smarter and more dangerous. Please report any bugs.
   - bugfix: Russian mobs will now actually use those knives they're holding.
   - bugfix: fixed hair gradients not applying correctly to huge afros
@@ -1361,7 +1361,7 @@
   SkyratBot:
   - bugfix: Mobs without the "advanced tool user" trait - such as monkeys - are no
       longer able to interact with camera consoles.
-  - bugfix: Every misaligned railing ending has been corrected by the Symphionia Hall
+  - bugfix: Every misaligned railing ending has been corrected by the Nanotrasen Hall
       Monitor's Lunchclub.
   - bugfix: Wigs now properly follow your head when you're any non-standard height
   - bugfix: If a mob you are shapeshifted into attempts to grow up into a different

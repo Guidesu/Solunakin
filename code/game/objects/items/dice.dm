@@ -453,7 +453,7 @@
 			new /obj/item/storage/box/syndicate/bundle_a(drop_location())
 			do_smoke(0, holder = src, location = drop_location())
 		if(18)
-			//Premier ID
+			//Captain ID
 			selected_turf.visible_message(span_userdanger("A golden identification card appears!"))
 			new /obj/item/card/id/advanced/gold/captains_spare(drop_location())
 			do_smoke(0, holder = src, location = drop_location())

@@ -46,7 +46,7 @@
 	)
 
 	rpg_title = "Tavern Chef"
-	job_flags = DISABLED_STATION_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS
 
 /datum/job/cook/award_service(client/winner, award)
 	winner.give_award(award, winner.mob)

@@ -38,7 +38,7 @@
   - rscadd: Conglomeration of Colonists has released a new, more functional run of their most
       stylish fashion line.
   - rscadd: Head of Staff cloaks can now hold specific items - the antique laser gun
-      for the Premier, the replica energy gun for the Head of Security, the hypospray
+      for the Captain, the replica energy gun for the Head of Security, the hypospray
       for the Chief Medical Officer, the Hand Teleporter or RPED for the Research
       Director, and the RCD or RPD for the Chief Engineer.
 2016-04-03:
@@ -200,7 +200,7 @@
   - rscadd: Ash walker starting gear has been rebalanced.
   - rscadd: Ash walkers can no longer use guns.
   TrustyGun:
-  - rscadd: After carefully investing in the market, the Premier had enough money
+  - rscadd: After carefully investing in the market, the Captain had enough money
       to replace his silver flask with a golden one!
   - rscadd: The Detective is now bringing his personalized flask to work, due to the
       grim work he has to do.

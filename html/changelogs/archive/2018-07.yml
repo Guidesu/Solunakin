@@ -366,7 +366,7 @@
   CthulhuOnIce:
   - spellcheck: Fixed 'Cybogs' in research nodes.
   Denton:
-  - admin: Added hardsuit outfits for the Premier, HoS, and CMO. Removed old Shaft
+  - admin: Added hardsuit outfits for the Captain, HoS, and CMO. Removed old Shaft
       Miner (Asteroid) outfits. Gave Chief Engineer (Hardsuit) engineering scanner
       goggles. Added debug outfit for testing.
   - tweak: Most wardrobe vendor contents have been tweaked. CargoDrobe now has the
@@ -418,7 +418,7 @@
   Epoc:
   - rscadd: Adds "Toggle Flashlight" to PDA context menu.
   Hathkar:
-  - tweak: Premier's Door Remote now has vault access again.
+  - tweak: Captain's Door Remote now has vault access again.
   Mickyan:
   - bugfix: 'Deltastation: replaced blood decals in maintenance with their dried counterparts'
   SpaceManiac:

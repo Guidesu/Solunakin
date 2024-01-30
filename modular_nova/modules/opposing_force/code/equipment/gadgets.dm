@@ -71,7 +71,7 @@
 /datum/opposing_force_equipment/gadget_stealth/syndiejaws
 	name = "Syndicate Jaws of Life"
 	item_type = /obj/item/crowbar/power/syndicate
-	description = "Based on a Symphionia model, this powerful tool can be used as both a crowbar and a pair of wirecutters. \
+	description = "Based on a Nanotrasen model, this powerful tool can be used as both a crowbar and a pair of wirecutters. \
 	In its crowbar configuration, it can be used to force open airlocks. Very useful for entering the station or its departments."
 
 /datum/opposing_force_equipment/gadget_stealth/hair_tie
@@ -170,7 +170,7 @@
 /datum/opposing_force_equipment/gadget_stealth/microlaser
 	name = "Radioactive Microlaser"
 	item_type = /obj/item/healthanalyzer/rad_laser
-	description = "A radioactive microlaser disguised as a standard Symphionia health analyzer. When used, it emits a \
+	description = "A radioactive microlaser disguised as a standard Nanotrasen health analyzer. When used, it emits a \
 			powerful burst of radiation, which, after a short delay, can incapacitate all but the most protected \
 			of humanoids."
 	admin_note = "WARNING: Is a knockout weapon with no warning, and 'infinite' use."

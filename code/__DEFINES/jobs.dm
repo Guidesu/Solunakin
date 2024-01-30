@@ -1,4 +1,3 @@
-#define DISABLED_STATION_JOB_FLAGS (JOB_ANNOUNCE_ARRIVAL|JOB_CREW_MANIFEST|JOB_EQUIP_RANK|JOB_CREW_MEMBER|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS|JOB_CAN_BE_INTERN)
 #define JOB_AVAILABLE 0
 #define JOB_UNAVAILABLE_GENERIC 1
 #define JOB_UNAVAILABLE_BANNED 2
@@ -43,7 +42,7 @@
 #define JOB_ASSISTANT "Assistant"
 #define JOB_PRISONER "Prisoner"
 //Command
-#define JOB_CAPTAIN "Premier"
+#define JOB_CAPTAIN "Captain"
 #define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
 #define JOB_HEAD_OF_SECURITY "Head of Security"
 #define JOB_RESEARCH_DIRECTOR "Research Director"
@@ -121,13 +120,13 @@
 #define JOB_CENTCOM_PRIVATE_SECURITY "Private Security Force"
 // NOVA EDIT ADDITION START
 #define JOB_BLUESHIELD "Blueshield"
-#define JOB_NT_REP "Symphionia Consultant"
-// Symphionia Naval Command jobs
+#define JOB_NT_REP "Nanotrasen Consultant"
+// Nanotrasen Naval Command jobs
 #define JOB_NAVAL_ENSIGN "Ensign"
 #define JOB_NAVAL_LIEUTENANT "Lieutenant"
 #define JOB_NAVAL_LTCR "Lieutenant Commander"
 #define JOB_NAVAL_COMMANDER "Commander"
-#define JOB_NAVAL_CAPTAIN "Premier"
+#define JOB_NAVAL_CAPTAIN "Captain"
 #define JOB_NAVAL_REAR_ADMIRAL "Rear Admiral"
 #define JOB_NAVAL_ADMIRAL "Admiral"
 #define JOB_NAVAL_FLEET_ADMIRAL "Fleet Admiral"
@@ -212,7 +211,7 @@
 #define DEPARTMENT_BITFLAG_ASSISTANT (1<<8)
 #define DEPARTMENT_ASSISTANT "Assistant"
 #define DEPARTMENT_BITFLAG_CAPTAIN (1<<9)
-#define DEPARTMENT_CAPTAIN "Premier"
+#define DEPARTMENT_CAPTAIN "Captain"
 #define DEPARTMENT_BITFLAG_CENTRAL_COMMAND (1<<10) //NOVA EDIT CHANGE
 #define DEPARTMENT_CENTRAL_COMMAND "Central Command" //NOVA EDIT CHANGE
 
@@ -255,7 +254,7 @@
 #define FACTION_STATION "Station"
 
 // Variable macros used to declare who is the supervisor for a given job, announced to the player when they join as any given job.
-#define SUPERVISOR_CAPTAIN "the Premier"
+#define SUPERVISOR_CAPTAIN "the Captain"
 #define SUPERVISOR_CE "the Chief Engineer"
 #define SUPERVISOR_CMO "the Chief Medical Officer"
 #define SUPERVISOR_HOP "the Head of Personnel"

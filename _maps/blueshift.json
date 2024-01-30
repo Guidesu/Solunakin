@@ -25,7 +25,7 @@
 		"Cook": {
 			"additional_cqc_areas": ["/area/station/service/kitchen/diner"]
 		},
-		"Premier": {
+		"Captain": {
 			"special_charter": "ship"
 		}
 	}
