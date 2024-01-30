@@ -42,7 +42,7 @@ Assistant
 /datum/outfit/job/assistant
 	name = JOB_ASSISTANT
 	jobtype = /datum/job/assistant
-	id_trim = /datum/id_trim/job/captain
+	id_trim = /datum/id_trim/job/assistant
 	uniform = /obj/item/clothing/under/color/random // NOVA EDIT ADD
 	belt = /obj/item/modular_computer/pda/assistant
 

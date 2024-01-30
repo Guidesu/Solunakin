@@ -15,12 +15,12 @@
 	if(!check_rights(R_ADMIN))
 		return
 
-	var/input = input(usr, "Please input a new name for Conglomeration of Colonists.", "What?", "") as text|null
+	var/input = input(usr, "Please input a new name for Conglomeration.", "What?", "") as text|null
 	if(!input)
 		return
 	change_command_name(input)
-	message_admins("[key_name_admin(src)] has changed Conglomeration of Colonists's name to [input]")
-	log_admin("[key_name(src)] has changed the Conglomeration of Colonists name to: [input]")
+	message_admins("[key_name_admin(src)] has changed Conglomeration name to [input]")
+	log_admin("[key_name(src)] has changed the Conglomeration name to: [input]")
 
 /// Verb to open the create command report window and send command reports.
 /client/proc/cmd_admin_create_centcom_report()
