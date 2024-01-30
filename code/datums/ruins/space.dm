@@ -179,7 +179,7 @@
 
 /datum/map_template/ruin/space/spacehotel
 	id = "spacehotel"
-	suffix = "spacehotel_skyrat.dmm"	// SKYRAT EDIT CHANGE - ORIGINAL: suffix = "spacehotel.dmm"
+	suffix = "spacehotel.dmm"
 	name = "The Twin-Nexus Hotel"
 	description = "An interstellar hotel, where the weary spaceman can rest their head and relax, assured that the residental staff will not murder them in their sleep. Probably."
 
@@ -283,16 +283,9 @@
 	name = "Gondoland"
 	description = "Just an ordinary rock- wait, what's that thing?"
 
-// SKYRAT EDIT CHANGE START -- Reworked whiteship ruin
-/* SKYRAT EDIT CHANGE -- ORIGINAL COMMENTED OUT
 /datum/map_template/ruin/space/whiteshipruin_box
-id = "whiteshipruin_box"
-suffix = "whiteshipruin_box.dmm"*/
-
-/datum/map_template/ruin/space/whiteshipruin_box_skyrat//Skyrat Edit
-	id = "whiteshipruin_box_skyrat"
-	suffix = "whiteshipruin_box_skyrat.dmm"
-	// SKYRAT EDIT CHANGE END
+	id = "whiteshipruin_box"
+	suffix = "whiteshipruin_box.dmm"
 	name = "NT Medical Ship"
 	description = "An ancient ship, said to be among the first discovered derelicts near Space Station 13 that was still in working order. \
 	Aged and deprecated by time, this relic of a vessel is now broken beyond repair."
@@ -490,3 +483,28 @@ suffix = "whiteshipruin_box.dmm"*/
 	suffix = "infested_frigate.dmm"
 	name = "SYN-C Brutus"
 	description = "This wasn't an outbreak, this was a repelled attack."
+
+/datum/map_template/ruin/space/garbagetruck1
+	id = "garbagetruck1"
+	suffix = "garbagetruck1.dmm"
+	name = "Decommissioned Garbage Truck NX1"
+	description = "An NX-760 interstellar transport barge. At the end of their life cycle, they are often filled with trash and launched into unexplored space to become someone else's problem. This one is full of kitchen waste, and rodents."
+
+/datum/map_template/ruin/space/garbagetruck2
+	id = "garbagetruck2"
+	suffix = "garbagetruck2.dmm"
+	name = "Decommissioned Garbage Truck NX2"
+	description = "An NX-760 interstellar transport barge. At the end of their life cycle, they are often filled with trash and launched into unexplored space to become someone else's problem. This one is full of medical waste, and a syndicate agent."
+
+/datum/map_template/ruin/space/garbagetruck3
+	id = "garbagetruck3"
+	suffix = "garbagetruck3.dmm"
+	name = "Decommissioned Garbage Truck NX3"
+	description = "An NX-760 interstellar transport barge. At the end of their life cycle, they are often filled with trash and launched into unexplored space to become someone else's problem. This one is full of industrial garbage, and a russian drug den."
+
+/datum/map_template/ruin/space/garbagetruck4
+	id = "garbagetruck4"
+	suffix = "garbagetruck4.dmm"
+	name = "Decommissioned Garbage Truck NX4"
+	description = "An NX-760 interstellar transport barge. At the end of their life cycle, they are often filled with trash and launched into unexplored space to become someone else's problem. This one is full of commercial trash, and spiders."
+

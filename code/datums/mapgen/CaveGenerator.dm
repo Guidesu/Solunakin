@@ -35,7 +35,7 @@
 	///Base chance of spawning flora
 	var/flora_spawn_chance = 2
 	///Base chance of spawning features
-	var/feature_spawn_chance = 0.15
+	var/feature_spawn_chance = 0.25
 	///Unique ID for this spawner
 	var/string_gen
 
@@ -73,7 +73,10 @@
 		)
 	flora_spawn_list = expand_weights(weighted_flora_spawn_list)
 	if(!weighted_feature_spawn_list)
-		weighted_feature_spawn_list = list(/obj/structure/geyser/random = 1)
+		weighted_feature_spawn_list = list(
+			/obj/structure/geyser/random = 1,
+			/obj/structure/ore_vent/random = 1,
+		)
 	feature_spawn_list = expand_weights(weighted_feature_spawn_list)
 	open_turf_types = expand_weights(weighted_open_turf_types)
 	closed_turf_types = expand_weights(weighted_closed_turf_types)
@@ -88,10 +91,10 @@
 	string_gen = rustg_cnoise_generate("[initial_closed_chance]", "[smoothing_iterations]", "[birth_limit]", "[death_limit]", "[world.maxx]", "[world.maxy]") //Generate the raw CA data
 
 	for(var/turf/gen_turf as anything in turfs) //Go through all the turfs and generate them
-		//SKYRAT EDIT ADDITION
+		//NOVA EDIT ADDITION
 		if(istype(gen_turf, /turf/open/space/mirage))
 			continue
-		//SKYRAT EDIT END
+		//NOVA EDIT END
 
 		var/closed = string_gen[world.maxx * (gen_turf.y - 1) + gen_turf.x] != "0"
 		var/turf/new_turf = pick(closed ? closed_turf_types : open_turf_types)
@@ -115,6 +118,7 @@
 	var/megas_allowed = (generate_in.area_flags & MEGAFAUNA_SPAWN_ALLOWED) && length(megafauna_spawn_list)
 
 	var/start_time = REALTIMEOFDAY
+	SSore_generation.ore_vent_minerals = (SSore_generation.ore_vent_minerals_default).Copy() //reset the ore vent minerals to the default
 
 	for(var/turf/target_turf as anything in turfs)
 		if(!(target_turf.type in open_turf_types)) //only put stuff on open turfs we generated, so closed walls and rivers and stuff are skipped
@@ -192,5 +196,5 @@
 		CHECK_TICK
 
 	var/message = "[name] terrain population finished in [(REALTIMEOFDAY - start_time)/10]s!"
-	add_startup_message(message) //SKYRAT EDIT CHANGE - ORIGINAL: to_chat(world, span_boldannounce("[message]"))
+	add_startup_message(message) //NOVA EDIT CHANGE - ORIGINAL: to_chat(world, span_boldannounce("[message]"))
 	log_world(message)

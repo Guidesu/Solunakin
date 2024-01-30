@@ -82,7 +82,7 @@
 	only_forced_audio = TRUE
 	vary = TRUE
 
-/* - SKYRAT EDIT REMOVAL: EMOTES
+/* - NOVA EDIT REMOVAL: EMOTES
 /datum/emote/living/carbon/human/scream/get_sound(mob/living/carbon/human/user)
 	if(!istype(user))
 		return
@@ -119,6 +119,7 @@
 	message = "salutes."
 	message_param = "salutes to %t."
 	hands_use_check = TRUE
+	sound = 'sound/misc/salute.ogg'
 
 /datum/emote/living/carbon/human/shrug
 	key = "shrug"

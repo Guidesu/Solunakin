@@ -2,7 +2,7 @@
 	name = "laser"
 	icon_state = "laser"
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
-	damage = 22 // SKYRAT EDIT: 20
+	damage = 22 // NOVA EDIT: 20
 	damage_type = BURN
 	hitsound = 'sound/weapons/sear.ogg'
 	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
@@ -179,7 +179,7 @@
 	if(pierce_hits <= 0)
 		projectile_piercing = NONE
 	pierce_hits -= 1
-	..()
+	return ..()
 
 /obj/projectile/beam/emitter
 	name = "emitter beam"

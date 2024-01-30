@@ -7,12 +7,12 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	RADIO_CHANNEL_ENGINEERING = RADIO_TOKEN_ENGINEERING,
 	RADIO_CHANNEL_SECURITY = RADIO_TOKEN_SECURITY,
 	RADIO_CHANNEL_CENTCOM = RADIO_TOKEN_CENTCOM,
-	RADIO_CHANNEL_FACTION = RADIO_TOKEN_FACTION, //SKYRAT EDIT ADDITION - Faction
-	RADIO_CHANNEL_CYBERSUN = RADIO_TOKEN_CYBERSUN, //SKYRAT EDIT ADDITION - Mapping
-	RADIO_CHANNEL_INTERDYNE = RADIO_TOKEN_INTERDYNE, //SKYRAT EDIT ADDITION - Mapping
-	RADIO_CHANNEL_GUILD = RADIO_TOKEN_GUILD, //SKYRAT EDIT ADDITION - Mapping
-	RADIO_CHANNEL_TARKON = RADIO_TOKEN_TARKON, //SKYRAT EDIT ADDITION - MAPPING
-	RADIO_CHANNEL_SOLFED = RADIO_TOKEN_SOLFED, //SKYRAT EDIT ADDITION - SOLFED
+	RADIO_CHANNEL_FACTION = RADIO_TOKEN_FACTION, //NOVA EDIT ADDITION - Faction
+	RADIO_CHANNEL_CYBERSUN = RADIO_TOKEN_CYBERSUN, //NOVA EDIT ADDITION - Mapping
+	RADIO_CHANNEL_INTERDYNE = RADIO_TOKEN_INTERDYNE, //NOVA EDIT ADDITION - Mapping
+	RADIO_CHANNEL_GUILD = RADIO_TOKEN_GUILD, //NOVA EDIT ADDITION - Mapping
+	RADIO_CHANNEL_TARKON = RADIO_TOKEN_TARKON, //NOVA EDIT ADDITION - MAPPING
+	RADIO_CHANNEL_SOLFED = RADIO_TOKEN_SOLFED, //NOVA EDIT ADDITION - SOLFED
 	RADIO_CHANNEL_SYNDICATE = RADIO_TOKEN_SYNDICATE,
 	RADIO_CHANNEL_SUPPLY = RADIO_TOKEN_SUPPLY,
 	RADIO_CHANNEL_SERVICE = RADIO_TOKEN_SERVICE,
@@ -23,6 +23,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 /obj/item/radio/headset
 	name = "radio headset"
 	desc = "An updated, modular intercom that fits over the head. Takes encryption keys."
+	icon = 'icons/obj/clothing/headsets.dmi'
 	icon_state = "headset"
 	inhand_icon_state = "headset"
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
@@ -357,7 +358,6 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	make_syndie()
 
 /obj/item/radio/headset/screwdriver_act(mob/living/user, obj/item/tool)
-	user.set_machine(src)
 	if(keyslot || keyslot2)
 		for(var/ch_name in channels)
 			SSradio.remove_object(src, GLOB.radiochannels[ch_name])
@@ -379,8 +379,6 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	return TRUE
 
 /obj/item/radio/headset/attackby(obj/item/W, mob/user, params)
-	user.set_machine(src)
-
 	if(istype(W, /obj/item/encryptionkey))
 		if(keyslot && keyslot2)
 			to_chat(user, span_warning("The headset can't hold another key!"))

@@ -1,9 +1,9 @@
 /datum/preference_middleware/jobs
 	action_delegations = list(
 		"set_job_preference" = PROC_REF(set_job_preference),
-		// SKYRAT EDIT
+		// NOVA EDIT
 		"set_job_title" = PROC_REF(set_job_title),
-		// SKYRAT EDIT END
+		// NOVA EDIT END
 	)
 
 /datum/preference_middleware/jobs/proc/set_job_preference(list/params, mob/user)
@@ -28,7 +28,7 @@
 
 	return TRUE
 
-// SKYRAT EDIT
+// NOVA EDIT
 /datum/preference_middleware/jobs/proc/set_job_title(list/params, mob/user)
 	var/job_title = params["job"]
 	var/new_job_title = params["new_title"]
@@ -44,7 +44,7 @@
 	preferences.alt_job_titles[job_title] = new_job_title
 
 	return TRUE
-// SKYRAT EDIT END
+// NOVA EDIT END
 
 /datum/preference_middleware/jobs/get_constant_data()
 	var/list/data = list()
@@ -53,6 +53,8 @@
 	var/list/jobs = list()
 
 	for (var/datum/job/job as anything in SSjob.joinable_occupations)
+		if (job.job_flags & JOB_LATEJOIN_ONLY)
+			continue
 		var/datum/job_department/department_type = job.department_for_prefs || job.departments_list?[1]
 		if (isnull(department_type))
 			stack_trace("[job] does not have a department set, yet is a joinable occupation!")
@@ -73,8 +75,8 @@
 		jobs[job.title] = list(
 			"description" = job.description,
 			"department" = department_name,
-			"veteran" = job.veteran_only, // SKYRAT EDIT
-			"alt_titles" = job.alt_titles, // SKYRAT EDIT
+			"veteran" = job.veteran_only, // NOVA EDIT
+			"alt_titles" = job.alt_titles, // NOVA EDIT
 		)
 
 	data["departments"] = departments
@@ -84,24 +86,24 @@
 
 /datum/preference_middleware/jobs/get_ui_data(mob/user)
 	var/list/data = list()
-	// SKYRAT EDIT
+	// NOVA EDIT
 	if(isnull(preferences.alt_job_titles))
 		preferences.alt_job_titles = list()
-	// SKYRAT EDIT END
+	// NOVA EDIT END
 	data["job_preferences"] = preferences.job_preferences
-	// SKYRAT EDIT
+	// NOVA EDIT
 	data["job_alt_titles"] = preferences.alt_job_titles
 	data["species_restricted_jobs"] = get_unavailable_jobs_for_species()
-	// SKYRAT EDIT END
+	// NOVA EDIT END
 
 	return data
 
 /datum/preference_middleware/jobs/get_ui_static_data(mob/user)
 	var/list/data = list()
-	// SKYRAT EDIT
+	// NOVA EDIT
 	if(SSplayer_ranks.is_veteran(user.client))
 		data["is_veteran"] = TRUE
-	// SKYRAT EDIT END
+	// NOVA EDIT END
 	var/list/required_job_playtime = get_required_job_playtime(user)
 	if (!isnull(required_job_playtime))
 		data += required_job_playtime
@@ -118,6 +120,8 @@
 	var/list/job_required_experience = list()
 
 	for (var/datum/job/job as anything in SSjob.all_occupations)
+		if (job.job_flags & JOB_LATEJOIN_ONLY)
+			continue
 		var/required_playtime_remaining = job.required_playtime_remaining(user.client)
 		if (required_playtime_remaining)
 			job_required_experience[job.title] = list(
@@ -147,7 +151,7 @@
 
 	return data
 
-//SKYRAT EDIT ADDITION BEGIN - CHECKING FOR INCOMPATIBLE SPECIES
+//NOVA EDIT ADDITION BEGIN - CHECKING FOR INCOMPATIBLE SPECIES
 //This returns a list of jobs that are unavailable for the player's current species
 /datum/preference_middleware/jobs/proc/get_unavailable_jobs_for_species()
 	var/list/data = list()
@@ -158,4 +162,4 @@
 
 	return data
 
-//SKYRAT EDIT ADDITION END
+//NOVA EDIT ADDITION END

@@ -12,7 +12,7 @@
 		post_untipped_callback = CALLBACK(src, PROC_REF(after_righted)), \
 		roleplay_friendly = TRUE, \
 		roleplay_emotes = list(/datum/emote/living/human/buzz, /datum/emote/living/human/buzz2, /datum/emote/living/human/beep, /datum/emote/living/human/beep2), \
-		roleplay_callback = CALLBACK(src, PROC_REF(untip_roleplay))) // SKYRAT EDIT CHANGE
+		roleplay_callback = CALLBACK(src, PROC_REF(untip_roleplay))) // NOVA EDIT CHANGE
 
 	set_wires(new /datum/wires/robot(src))
 	AddElement(/datum/element/empprotection, EMP_PROTECT_WIRES)
@@ -160,7 +160,7 @@
 		to_chat(src,span_userdanger("ERROR: Lockdown is engaged. Please disengage lockdown to pick module."))
 		return
 
-	// SKYRAT EDIT START - Making the cyborg model list static to reduce how many times it's generated.
+	// NOVA EDIT START - Making the cyborg model list static to reduce how many times it's generated.
 	if(!length(GLOB.cyborg_model_list))
 		GLOB.cyborg_model_list = list(
 			"Engineering" = /obj/item/robot_model/engineering,
@@ -184,8 +184,8 @@
 		for(var/option in GLOB.cyborg_model_list)
 			var/obj/item/robot_model/model = GLOB.cyborg_model_list[option]
 			var/model_icon = initial(model.cyborg_base_icon)
-			GLOB.cyborg_base_models_icon_list[option] = image(icon = 'modular_skyrat/master_files/icons/mob/robots.dmi', icon_state = model_icon) // SKYRAT EDIT - CARGO BORGS - ORIGINAL: model_icons[option] = image(icon = 'icons/mob/robots.dmi', icon_state = model_icon)
-	// SKYRAT EDIT END
+			GLOB.cyborg_base_models_icon_list[option] = image(icon = 'modular_nova/master_files/icons/mob/robots.dmi', icon_state = model_icon) // NOVA EDIT - CARGO BORGS - ORIGINAL: model_icons[option] = image(icon = 'icons/mob/robots.dmi', icon_state = model_icon)
+	// NOVA EDIT END
 
 	var/input_model = show_radial_menu(src, src, GLOB.cyborg_base_models_icon_list, radius = 42)
 	if(!input_model || model.type != /obj/item/robot_model)
@@ -349,7 +349,7 @@
 		eye_lights.icon = icon
 		add_overlay(eye_lights)
 
-	if(opened && !(R_TRAIT_UNIQUEPANEL in model.model_features))
+	if(opened && !(TRAIT_R_UNIQUEPANEL in model.model_features))
 		if(wiresexposed)
 			add_overlay("ov-opencover +w")
 		else if(cell)
@@ -734,14 +734,14 @@
 	if (hasExpanded)
 		hasExpanded = FALSE
 		//update_transform(0.5) // Original
-		update_transform(0.8) // SKYRAT EDIT CHANGE
+		update_transform(0.8) // NOVA EDIT CHANGE
 
-	//SKYRAT EDIT ADDITION BEGIN - CYBORG
+	//NOVA EDIT ADDITION BEGIN - CYBORG
 	if (hasShrunk)
 		hasShrunk = FALSE
 		update_transform(4/3)
 	hasAffection = FALSE //Just so they can get the affection modules back if they want them.
-	//SKYRAT EDIT ADDITION END
+	//NOVA EDIT ADDITION END
 
 	logevent("Chassis model has been reset.")
 	log_silicon("CYBORG: [key_name(src)] has reset their cyborg model.")
@@ -1015,6 +1015,9 @@
 	if(.)
 		var/mob/living/silicon/ai/old_ai = .
 		old_ai.connected_robots -= src
+		// if the borg has a malf AI zeroth law and has been unsynced from the malf AI, then remove the law
+		if(isnull(connected_ai) && IS_MALF_AI(old_ai) && !isnull(laws?.zeroth))
+			clear_zeroth_law(FALSE, TRUE)
 	lamp_doom = FALSE
 	if(connected_ai)
 		connected_ai.connected_robots |= src

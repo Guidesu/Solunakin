@@ -5,6 +5,7 @@
 #define RADIO_EXTENSION "department specific"
 #define RADIO_KEY "department specific key"
 #define LANGUAGE_EXTENSION "language specific"
+#define SAY_MOD_VERB "say_mod_verb"
 
 //Message modes. Each one defines a radio channel, more or less.
 //if you use ! as a mode key for some ungodly reason, change the first character for ion_num() so get_message_mode() doesn't freak out with state law prompts - shiz.
@@ -98,7 +99,7 @@
 #define FOLLOW_OR_TURF_LINK(alice, bob, turfy) "<a href=?src=[REF(alice)];follow=[REF(bob)];x=[turfy.x];y=[turfy.y];z=[turfy.z]>(F)</a>"
 
 //Don't set this very much higher then 1024 unless you like inviting people in to dos your server with message spam
-#define MAX_MESSAGE_LEN 2048 //SKYRAT EDIT CHANGE - ORIGINAL 1024 - I SAID DOUBLE IT!! FUCK THE WARNING!
+#define MAX_MESSAGE_LEN 2048 //NOVA EDIT CHANGE - ORIGINAL 1024 - I SAID DOUBLE IT!! FUCK THE WARNING!
 #define MAX_NAME_LEN 42
 #define MAX_BROADCAST_LEN 512
 #define MAX_CHARTER_LEN 80

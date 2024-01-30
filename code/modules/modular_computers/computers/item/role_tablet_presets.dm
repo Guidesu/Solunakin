@@ -47,6 +47,7 @@
 	name = "head of security PDA"
 	greyscale_config = /datum/greyscale_config/tablet/head
 	greyscale_colors = "#EA3232#0000CC"
+	inserted_item = /obj/item/pen/red/security
 	starting_programs = list(
 		/datum/computer_file/program/crew_manifest,
 		/datum/computer_file/program/status,
@@ -102,7 +103,7 @@
 
 /obj/item/modular_computer/pda/heads/quartermaster
 	name = "quartermaster PDA"
-	greyscale_config = /datum/greyscale_config/tablet/stripe_thick
+	greyscale_config = /datum/greyscale_config/tablet/stripe_thick/head
 	greyscale_colors = "#c4b787#18191e#8b4c31"
 	inserted_item = /obj/item/pen/survival
 	stored_paper = 20
@@ -122,6 +123,7 @@
 /obj/item/modular_computer/pda/security
 	name = "security PDA"
 	greyscale_colors = "#EA3232#0000cc"
+	inserted_item = /obj/item/pen/red/security
 	starting_programs = list(
 		/datum/computer_file/program/records/security,
 		/datum/computer_file/program/crew_manifest,
@@ -131,6 +133,7 @@
 /obj/item/modular_computer/pda/detective
 	name = "detective PDA"
 	greyscale_colors = "#805A2F#990202"
+	inserted_item = /obj/item/pen/red/security
 	starting_programs = list(
 		/datum/computer_file/program/records/security,
 		/datum/computer_file/program/crew_manifest,
@@ -141,6 +144,7 @@
 	name = "warden PDA"
 	greyscale_config = /datum/greyscale_config/tablet/stripe_double
 	greyscale_colors = "#EA3232#0000CC#363636"
+	inserted_item = /obj/item/pen/red/security
 	starting_programs = list(
 		/datum/computer_file/program/records/security,
 		/datum/computer_file/program/crew_manifest,
@@ -392,12 +396,12 @@
 		/datum/computer_file/program/newscaster,
 	)
 
-/* // SKYRAT EDIT REMOVAL BEGIN - Mutes the Curator's ringer on spawn
+/* // NOVA EDIT REMOVAL BEGIN - Mutes the Curator's ringer on spawn
 /obj/item/modular_computer/pda/curator/Initialize(mapload)
 	. = ..()
 	for(var/datum/computer_file/program/messenger/msg in stored_files)
 		msg.alert_silenced = TRUE
-*/ // SKYRAT EDIT REMOVAL END
+*/ // NOVA EDIT REMOVAL END
 
 /obj/item/modular_computer/pda/psychologist
 	name = "psychologist PDA"
@@ -410,13 +414,21 @@
 	)
 
 /**
- * No Department
+ * No Department/Station Trait
  */
 
 /obj/item/modular_computer/pda/assistant
 	name = "assistant PDA"
 	starting_programs = list(
 		/datum/computer_file/program/bounty_board,
+	)
+
+/obj/item/modular_computer/pda/bridge_assistant
+	name = "bridge assistant PDA"
+	greyscale_colors = "#374f7e#a92323"
+	starting_programs = list(
+		/datum/computer_file/program/crew_manifest,
+		/datum/computer_file/program/status,
 	)
 
 /**

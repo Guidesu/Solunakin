@@ -29,24 +29,21 @@
 		qdel(src)
 
 /obj/item/implant/freedom/get_data()
-	var/dat = {"
-		<b>Implant Specifications:</b><BR>
-		<b>Name:</b> Freedom Beacon<BR>
-		<b>Life:</b> Optimum [initial(uses)] uses<BR>
-		<b>Important Notes:</b> <font color='red'>Illegal</font><BR>
-		<HR>
-		<b>Implant Details:</b> <BR>
-		<b>Function:</b> Transmits a specialized cluster of signals to override handcuff locking
-		mechanisms. These signals will release any bindings on both the arms and legs.<BR>
-		<b>Disclaimer:</b> Heavy-duty restraints such as straightjackets are deemed "too complex" to release from.
-	"}
-	return dat
+	return "<b>Implant Specifications:</b><BR> \
+		<b>Name:</b> Freedom Beacon<BR> \
+		<b>Life:</b> Optimum [initial(uses)] uses<BR> \
+		<b>Important Notes:</b> <font color='red'>Illegal</font><BR> \
+		<HR> \
+		<b>Implant Details:</b> <BR> \
+		<b>Function:</b> Transmits a specialized cluster of signals to override handcuff locking \
+		mechanisms. These signals will release any bindings on both the arms and legs.<BR> \
+		<b>Disclaimer:</b> Heavy-duty restraints such as straightjackets are deemed \"too complex\" to release from."
 
 /obj/item/implanter/freedom
-	name = "implanter" // Skyrat edit , was implanter (freedom)
+	name = "implanter" // NOVA EDIT , was implanter (freedom)
 	imp_type = /obj/item/implant/freedom
-	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // Skyrat edit
-	special_desc = "A Syndicate implanter used for a freedom implant" // Skyrat edit
+	special_desc_requirement = EXAMINE_CHECK_SYNDICATE // NOVA EDIT
+	special_desc = "A Syndicate implanter used for a freedom implant" // NOVA EDIT
 
 /obj/item/implantcase/freedom
 	name = "implant case - 'Freedom'"
